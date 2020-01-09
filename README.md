@@ -1,4 +1,4 @@
-![drg logo](https://www.drg.de/media/imagedl/8818/original/logo-drg-links-mitschrift-rgb-300dpi.png)
+![drg logo](./assets/img/logo-drg-links-mitschrift-rgb-300dpi.png)
 
 # Arbeitskreis Befundung
 
@@ -12,7 +12,7 @@
 - [ ] Kooptierung FJR Mitglieder in AGIT Vorstand
 - [ ] Sondierung der Möglichkeit eines Round tables mit verschiedenen Herstellern auf dem RöKo 2020
 - [ ] Erstellung einer Liste mit am Thema strukturierte Befundung interessierten Herstellern
-sollte 
+sollte
 - [ ] Erstellen einer Liste mit relevanten Templates
 
 Punkte 1 und 2 sollten mit mit Martin Völker geklärt, idealerweise innerhalb der KW3/4.
