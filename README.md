@@ -21,14 +21,16 @@ Punkt 4 ist vermutlich bis zum RöKo ausreichend.
 
 ## Hersteller Round Table "Strukturierte Befundung"
 
+Für den RöKo-Donnerstag, 14:45-16:15 Uhr, hat Frau Schiedt einen Besprechungsraum für 20 Personen für ein Treffen zum Thema „Befundvorlagen der DRG“ gebucht.
+
 Firma | Ansprechpartner | Zugesagt?
 ------------ | ------------- | -------------
 Smart Reporting | NN | NN
-Sectra | NN | NN
-Aycan | NN | NN
+Sectra | Thomas Jumpertz (Thomas.Jumpertz@sectra.com) | NN
+Aycan | Stephan Popp (spopp@aycan.de) | vorläufig zugesagt, 10.01.2020
 Medavis | NN | NN
 iSolutions | NN | NN
-AGFA | NN | NN
+AGFA | Marcus Muth (marcus.muth@agfa.com) | vorläufig zugesagt, 10.01.2020
 GE | NN | NN
 
 ## Relevante Templates
