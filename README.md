@@ -15,9 +15,9 @@
 sollte
 - [ ] Erstellen einer Liste mit relevanten Templates
 
-Punkte 1 und 2 sollten mit mit Martin Völker geklärt, idealerweise innerhalb der KW3/4.
-Punkt 3 idealerweise bis Ende Januar stehen.
-Punkt 4 ist vermutlich bis zum RöKo ausreichend.
+- Punkte 1 und 2 sollten mit mit Martin Völker geklärt, idealerweise innerhalb der KW3/4.
+- Punkt 3 idealerweise bis Ende Januar stehen.
+- Punkt 4 ist vermutlich bis zum RöKo ausreichend.
 
 ## Hersteller Round Table "Strukturierte Befundung"
 
@@ -32,6 +32,7 @@ Medavis | NN | NN
 iSolutions | NN | NN
 AGFA | Marcus Muth (marcus.muth@agfa.com) | vorläufig zugesagt, 10.01.2020
 GE | NN | NN
+Siemens | NN | fraglich?
 Nexus/Chili | NN | NN
 Mint Medical | Johannes Kast (J.Kast@mint-medical.de) | Kontakt bestand im Mai 2018
 
