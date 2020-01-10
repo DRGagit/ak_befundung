@@ -23,15 +23,17 @@ Punkt 4 ist vermutlich bis zum RöKo ausreichend.
 
 Für den RöKo-Donnerstag, 14:45-16:15 Uhr, hat Frau Schiedt einen Besprechungsraum für 20 Personen für ein Treffen zum Thema „Befundvorlagen der DRG“ gebucht.
 
-Firma | Ansprechpartner | Zugesagt?
+Firma | Ansprechpartner | Bemerkung
 ------------ | ------------- | -------------
 Smart Reporting | NN | NN
-Sectra | Thomas Jumpertz (Thomas.Jumpertz@sectra.com) | NN
+Sectra | Thomas Jumpertz (Thomas.Jumpertz@sectra.com) | Treffen in Köln geplant für Ende Januar
 Aycan | Stephan Popp (spopp@aycan.de) | vorläufig zugesagt, 10.01.2020
 Medavis | NN | NN
 iSolutions | NN | NN
 AGFA | Marcus Muth (marcus.muth@agfa.com) | vorläufig zugesagt, 10.01.2020
 GE | NN | NN
+Nexus/Chili | NN | NN
+Mint Medical | Johannes Kast (J.Kast@mint-medical.de) | Kontakt bestand im Mai 2018
 
 ## Relevante Templates
 
