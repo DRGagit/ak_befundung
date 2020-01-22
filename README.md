@@ -23,9 +23,11 @@ sollte
 
 Für den RöKo-Donnerstag, 14:45-16:15 Uhr, hat Frau Schiedt einen Besprechungsraum für 20 Personen für ein Treffen zum Thema „Befundvorlagen der DRG“ gebucht.
 
+Industrie muss spätestens Anfang März eingeladen werden.
+
 Firma | Ansprechpartner | Bemerkung
 ------------ | ------------- | -------------
-Smart Reporting | NN | NN
+Smart Reporting | Sandra Wilke | s.wilke@smartreporting.de
 Sectra | Thomas Jumpertz (Thomas.Jumpertz@sectra.com) | Treffen in Köln geplant für Ende Januar
 Aycan | Stephan Popp (spopp@aycan.de) | vorläufig zugesagt, 10.01.2020
 Medavis | NN | NN
