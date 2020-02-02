@@ -34,9 +34,9 @@ Medavis | NN | NN
 iSolutions | NN | NN
 AGFA | Marcus Muth (marcus.muth@agfa.com) | vorläufig zugesagt, 10.01.2020
 GE | NN | NN
-Siemens | NN | fraglich?
-Nexus/Chili | NN | NN
-Mint Medical | Johannes Kast (J.Kast@mint-medical.de) | Kontakt bestand im Mai 2018
+Siemens | NN | fraglich? - Welcher Ansprechpartner wäre sinnvoll?
+Nexus/Chili | NN | Nach Rückfrage, aktuell keine Möglichkeit HTML zu importieren, steht wohl auch  nicht auf der Agenda
+Mint Medical | Johannes Kast (J.Kast@mint-medical.de) | Kontakt bestand im Mai 2018 - Kann Kontakt aufnehmen über Geschäftführung
 
 ## Relevante Templates
 
