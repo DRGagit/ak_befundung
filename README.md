@@ -54,13 +54,13 @@ Vorschläge Daniel:
 CT-Felsenbein Johann-Martin Hempel aus Tübingen (jmhempel@posteo.de)
 MS im MRT Jan Kirschke aus München (jan.kirschke@tum.de)
 
+Vorschläge Malte: 
+- Knochentumoren (bereits für SmartRad erstellt)
+- Rö THX
+
 Bereits in Status nascendi: 
 Lungentumor von der AG Thorax
 diverse AG Herz Templates
-
-Übernahme aus vorheriger Zusammenarbeit: 
-- Knochentumoren
-
 
 
 MSK ist aktuell nur von untergeordneter Bedeutung (vor allem weil schwierig zu strukturieren). 
