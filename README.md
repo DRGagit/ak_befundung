@@ -47,8 +47,13 @@ Seitens der DRG werden folgende übergeordnete Themen präferiert:
 - Kardiovaskuläre Bildgebung
 - Onkologische Bildgebung
 
-MSK ist aktuell nur von untergeordneter Bedeutung (vor allem weil schwierig zu strukturieren).
+Vorschläge AMB: 
+Mammographie (Natascha Paltz @AG MAMA)
+
+
+MSK ist aktuell nur von untergeordneter Bedeutung (vor allem weil schwierig zu strukturieren). Braunschweig, Janka @AG BVB Vorstand sehen jedoch Bedarf, diese möchten auch die nächsten Templates in der Mitgliederversammlung der AG BVB auf dem RöKo durch die Mitglieder absegnen lassen/diesen ankündigen. Aktuell Hüfte vor nach TEP, als nächstes sollen große Gelenke folgen. 
 
 Template | Ansprechpartner | Status?
 ------------ | ------------- | -------------
 CT Schlaganfall | Johann Martin Hempel (DGNR) | -
+
