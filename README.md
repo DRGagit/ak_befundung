@@ -9,7 +9,7 @@
 
 ## aktuelle Themen
 
-- [ ] Kooptierung FJR Mitglieder in AGIT Vorstand
+- [ ] Kooptierung FJR Mitglieder in AGIT Vorstand 
 - [ ] Sondierung der Möglichkeit eines Round tables mit verschiedenen Herstellern auf dem RöKo 2020
 - [ ] Erstellung einer Liste mit am Thema strukturierte Befundung interessierten Herstellern
 sollte
@@ -36,7 +36,7 @@ AGFA | Marcus Muth (marcus.muth@agfa.com) | vorläufig zugesagt, 10.01.2020
 GE | NN | NN
 Siemens | NN | fraglich? - Welcher Ansprechpartner wäre sinnvoll?
 Nexus/Chili | NN | Nach Rückfrage, aktuell keine Möglichkeit HTML zu importieren, steht wohl auch  nicht auf der Agenda
-Mint Medical | Johannes Kast (J.Kast@mint-medical.de) | Kontakt bestand im Mai 2018 - Kann Kontakt aufnehmen über Geschäftführung
+Mint Medical | Johannes Kast (J.Kast@mint-medical.de) | Kontakt bestand im Mai 2018 - Kann Kontakt aufnehmen über Geschäftsführung, den haben wir eh eingeladen für den RöKo
 
 ## Relevante Templates
 
@@ -50,8 +50,23 @@ Seitens der DRG werden folgende übergeordnete Themen präferiert:
 Vorschläge AMB: 
 Mammographie (Natascha Paltz @AG MAMA)
 
+Vorschläge Daniel: 
+CT-Felsenbein Johann-Martin Hempel aus Tübingen (jmhempel@posteo.de)
+MS im MRT Jan Kirschke aus München (jan.kirschke@tum.de)
 
-MSK ist aktuell nur von untergeordneter Bedeutung (vor allem weil schwierig zu strukturieren). Braunschweig, Janka @AG BVB Vorstand sehen jedoch Bedarf, diese möchten auch die nächsten Templates in der Mitgliederversammlung der AG BVB auf dem RöKo durch die Mitglieder absegnen lassen/diesen ankündigen. Aktuell Hüfte vor nach TEP, als nächstes sollen große Gelenke folgen. 
+Bereits in Status nascendi: 
+Lungentumor von der AG Thorax
+diverse AG Herz Templates
+
+Übernahme aus vorheriger Zusammenarbeit: 
+- Knochentumoren
+
+
+
+MSK ist aktuell nur von untergeordneter Bedeutung (vor allem weil schwierig zu strukturieren). 
+Braunschweig, Janka @AG BVB Vorstand sehen jedoch Bedarf, diese möchten auch die nächsten Templates in der Mitgliederversammlung der AG BVB auf dem RöKo durch die Mitglieder absegnen lassen/diesen ankündigen. 
+- Aktuell Hüfte vor nach TEP, 
+- als nächstes sollen große Gelenke folgen. 
 
 Template | Ansprechpartner | Status?
 ------------ | ------------- | -------------
