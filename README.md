@@ -9,7 +9,7 @@
 
 ## aktuelle Themen
 
-- [ ] Kooptierung FJR Mitglieder in AGIT Vorstand 
+- [ ] Kooptierung FJR Mitglieder in AGIT Vorstand
 - [ ] Sondierung der Möglichkeit eines Round tables mit verschiedenen Herstellern auf dem RöKo 2020
 - [ ] Erstellung einer Liste mit am Thema strukturierte Befundung interessierten Herstellern
 sollte
@@ -27,8 +27,8 @@ Industrie muss spätestens Anfang März eingeladen werden.
 
 Firma | Ansprechpartner | Bemerkung
 ------------ | ------------- | -------------
-Smart Reporting | Sandra Wilke | s.wilke@smartreporting.de
-Sectra | Thomas Jumpertz (Thomas.Jumpertz@sectra.com) | Treffen in Köln geplant für Ende Januar
+Smart Reporting | Sandra Wilke (s.wilke@smartreporting.de) |
+Sectra | Thomas Jumpertz (Thomas.Jumpertz@sectra.com) | vorläufig zugesagt, 30.01.2020
 Aycan | Stephan Popp (spopp@aycan.de) | vorläufig zugesagt, 10.01.2020
 Medavis | NN | NN
 iSolutions | NN | NN
@@ -47,28 +47,22 @@ Seitens der DRG werden folgende übergeordnete Themen präferiert:
 - Kardiovaskuläre Bildgebung
 - Onkologische Bildgebung
 
-Vorschläge AMB: 
-Mammographie (Natascha Paltz @AG MAMA)
+Vorschläge AMB:
+- Mammographie (Natascha Paltz @AG MAMA)
 
-Vorschläge Daniel: 
-CT-Felsenbein Johann-Martin Hempel aus Tübingen (jmhempel@posteo.de)
-MS im MRT Jan Kirschke aus München (jan.kirschke@tum.de)
+Vorschläge Daniel:
+- CT-Felsenbein & CT Schlaganfall Johann-Martin Hempel aus Tübingen (jmhempel@posteo.de)
+- MS im MRT Jan Kirschke aus München (jan.kirschke@tum.de)
 
-Vorschläge Malte: 
+Vorschläge Malte:
 - Knochentumoren (bereits für SmartRad erstellt)
 - Rö THX
 
-Bereits in Status nascendi: 
-Lungentumor von der AG Thorax
-diverse AG Herz Templates
+Bereits in Status nascendi:
+- Lungentumor von der AG Thorax
+- diverse AG Herz Templates
 
-
-MSK ist aktuell nur von untergeordneter Bedeutung (vor allem weil schwierig zu strukturieren). 
-Braunschweig, Janka @AG BVB Vorstand sehen jedoch Bedarf, diese möchten auch die nächsten Templates in der Mitgliederversammlung der AG BVB auf dem RöKo durch die Mitglieder absegnen lassen/diesen ankündigen. 
-- Aktuell Hüfte vor nach TEP, 
-- als nächstes sollen große Gelenke folgen. 
-
-Template | Ansprechpartner | Status?
------------- | ------------- | -------------
-CT Schlaganfall | Johann Martin Hempel (DGNR) | -
-
+MSK ist aktuell nur von untergeordneter Bedeutung (vor allem weil schwierig zu strukturieren).
+Braunschweig, Janka @AG BVB Vorstand sehen jedoch Bedarf, diese möchten auch die nächsten Templates in der Mitgliederversammlung der AG BVB auf dem RöKo durch die Mitglieder absegnen lassen/diesen ankündigen.
+- Aktuell Hüfte vor nach TEP,
+- als nächstes sollen große Gelenke folgen.
