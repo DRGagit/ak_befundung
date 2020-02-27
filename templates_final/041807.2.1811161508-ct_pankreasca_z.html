@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CT Pankreasläsion (zystisch)</title>
+    <meta charset="UTF-8">
+    <!--Dublin Core metadata elements here-->
+    <meta name="dcterms.title" content="CT Pankreasläsion (zystisch)">
+    <meta name="dcterms.abstract" content="Befundungstemplate für zystische Pankreasläsionen (L2, V1, no JS)">
+    <meta name="dcterms.description" content="Mit AG Onkologie abgestimmtes und konsentiertes Template zur Befundung bei zystischer Pankreasläsion.">
+    <meta name="dcterms.subject" content="CT; ONKO; GI;">
+    <meta name="dcterms.identifier" content="041807.2.1811161508">
+    <meta name="dcterms.type" content="IMAGE_REPORT_TEMPLATE">
+    <meta name="dcterms.language" content="de">
+    <meta name="dcterms.rights" content="Die Deutsche Röntgengesellschaft e.V.(DRG) stellt sämtliche Templates kostenfrei unter der Creative Commons Lizenz  CC BY-NC-ND in der Version 4.0 zur Verfügung. Die Lizenz erlaubt Download und Weiterverteilung des Werkes unter Nennung der DRG als Urheber, jedoch keinerlei Bearbeitung oder kommerzielle Nutzung.">
+    <meta name="dcterms.license" content="http://www.befundung.drg.de/de-DE/3478/creative-commons-lizenz-cc-by-nc-nd">
+    <meta name="dcterms.date" content="2018-11-16">
+    <meta name="dcterms.creator" content="AG Onkologische Bildgebung">
+    <meta name="dcterms.contributor" content="Pinto dos Santos D (Kodierung)">
+    <meta name="dcterms.publisher" content="Deutsche Röntgengesellschaft (DRG)">
+
+    <script type="text/xml">
+        <template_attributes>
+        <top-level-flag>0</top-level-flag>
+        <status>ACTIVE</status>
+        </template_attributes>
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="drg.css">
+
+</head>
+
+<body>
+
+    <section data-section-name="Clinical information">
+        <header class="level1" data-english="Clinical information">Klinische Angaben</header>
+        <p>
+            <textarea name="ct_pankcaz_clininfo" id="ct_pankcaz_clininfo"></textarea>
+        </p>
+    </section>
+
+    <section data-section-name="Clinical question">
+        <header class="level1" data-english="Clinical question">Fragestellung</header>
+        <p>
+            <textarea name="ct_pankcaz_Fragestellung" id="ct_pankcaz_Fragestellung"></textarea>
+        </p>
+    </section>
+
+    <section data-section-name="Findings">
+        <header class="level1" data-english="Findings">Befund</header>
+        <table>
+            <tr>
+                <td><label for="ct_pankcaz_comparison">Vergleichsuntersuchung:</label></td>
+                <td>
+                    <select name="ct_pankcaz_comparison" id="ct_pankcaz_comparison">
+                        <option value="keine">keine</option>
+                        <option value="vorliegend">vorliegend</option>
+                    </select>&nbsp;&nbsp;&nbsp;
+                    <select name="ct_pankcaz_comparison_mod" id="ct_pankcaz_comparison_mod">
+                        <option value="-">-</option>
+                        <option value="CT">CT</option>
+                        <option value="MR">MR</option>
+                    </select>&nbsp;&nbsp;&nbsp;
+                    <input name="ct_pankcaz_comparison_date" id="ct_pankcaz_comparison_date" type="date" data-field-type="DATE">
+                </td>
+            </tr>
+            <tr>
+              <td><label for="ct_pankcaz_histo">Histologie</label></td>
+              <td>
+                <select name="ct_pankcaz_histo" id="ct_pankcaz_histo">
+                  <option value="-">-</option>
+                  <option value="ausstehend">ausstehend</option>
+                  <option value="nachgewiesen">nachgewiesen</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td><label for="ct_pankcaz_igg4">IgG4</label></td>
+              <td>
+                <select name="ct_pankcaz_igg4" id="ct_pankcaz_igg4">
+                  <option value="-">-</option>
+                  <option value="ausstehend">positiv</option>
+                  <option value="nachgewiesen">negativ</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+                <td><label for="ct_pankcaz_quality">Bildqualität:</label></td>
+                <td>
+                    <select name="ct_pankcaz_quality" id="ct_pankcaz_quality">
+                        <option value="exzellent">exzellent</option>
+                        <option value="mittel">mittel</option>
+                        <option value="schlecht">schlecht</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+        </table>
+        <table>
+          <tr>
+            <td><label for="ct_pankcaz_parenchym">Pankreasparenchym</label></td>
+            <td>
+              <select name="ct_pankcaz_parenchym" id="ct_pankcaz_parenchym">
+                <option value="normal">normal</option>
+                <option value="lipotroph">lipotroph</option>
+                <option value="ödematös">ödematös</option>
+                <option value="chron. Pankreatitis">chron. Pankreatitis</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Pankreasläsion
+            </td>
+            <td>
+              <table>
+                <tr>
+                  <td><label for="ct_pankcaz_loc">Tumorlokalisation</label></td>
+                  <td>
+                    <select name="ct_pankcaz_loc" id="ct_pankcaz_loc">
+                      <option value="-">-</option>
+                      <option value="Pankreaskopf">Pankreaskopf</option>
+                      <option value="Pankreasschwanz">Pankreasschwanz</option>
+                      <option value="Pankreaskörper">Pankreaskörper</option>
+                      <option value="Proc. uncinatus">Proc. uncinatus</option>
+                    </select><br />
+                    (Bild <input name="ct_pankcaz_size_ima" id="ct_pankcaz_size_ima" type="number" data-field-type="NUMBER"/>, Serie <input name="ct_pankcaz_size_series" id="ct_pankcaz_size_series" type="number" data-field-type="NUMBER"/>)
+                  </td>
+                </tr>
+                <tr>
+                  <td><label for="ct_pankcaz_charac">Charakterisierung</label></td>
+                  <td>
+                    <select name="ct_pankcaz_charac" id="ct_pankcaz_charac">
+                      <option value="-">-</option>
+                      <option value="zystisch">zystisch</option>
+                      <option value="mikrozystisch">mikrozystisch</option>
+                      <option value="makrozystisch">makrozystisch</option>
+                      <option value="nekrotisch">nekrotisch</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td><label for="ct_pankcaz_anzahl">Anzahl</label></td>
+                  <td>
+                    <select name="ct_pankcaz_anzahl" id="ct_pankcaz_anzahl">
+                      <option value="monozystisch">monozystisch</option>
+                      <option value="oligozystisch">oligozystisch</option>
+                      <option value="polyzystisch">polyzystisch</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td><label for="ct_pankcaz_size">Tumorgröße</label></td>
+                  <td>
+                    <input name="ct_pankcaz_size_1" id="ct_pankcaz_size_1" type="number" data-field-type="NUMBER"/> x <input name="ct_pankcaz_size_2" id="ct_pankcaz_size_2" type="number" data-field-type="NUMBER"/> cm
+                  </td>
+                </tr>
+                <tr>
+                  <td><label for="ct_pankcaz_gangassoc">Gangassoziation</label></td>
+                  <td>
+                    <select name="ct_pankcaz_gangassoc" id="ct_pankcaz_gangassoc">
+                      <option value="keine">keine</option>
+                      <option value="Hauptgang">Hauptgang</option>
+                      <option value="Seitast">Seitast</option>
+                      <option value="kombiniert">kombiniert</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td><label for="ct_pankcaz_kontur">Kontur</label></td>
+                  <td>
+                    <select name="ct_pankcaz_kontur" id="ct_pankcaz_kontur">
+                      <option value="scharf">scharf</option>
+                      <option value="unscharf">unscharf</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td><label for="ct_pankcaz_wand">Wand</label></td>
+                  <td>
+                    <select name="ct_pankcaz_wand" id="ct_pankcaz_wand">
+                      <option value="keine">keine</option>
+                      <option value="dünn">dünn</option>
+                      <option value="dick">dick</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td><label for="ct_pankcaz_sept">Septierungen</label></td>
+                  <td>
+                    <select name="ct_pankcaz_sept" id="ct_pankcaz_sept">
+                      <option value="nein">nein</option>
+                      <option value="ja">ja</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td><label for="ct_pankcaz_solide">solide Komponente</label></td>
+                  <td>
+                    <select name="ct_pankcaz_solide" id="ct_pankcaz_solide">
+                      <option value="nein">nein</option>
+                      <option value="ja - zentral">ja - zentral</option>
+                      <option value="ja - peripher">ja - peripher</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td><label for="ct_pankcaz_enhanc">KM-Enhancement</label></td>
+                  <td>
+                    <select name="ct_pankcaz_enhanc" id="ct_pankcaz_enhanc">
+                      <option value="nein">nein</option>
+                      <option value="ja">ja</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td><label for="ct_pankcaz_kalz">Kalzifikationen</label></td>
+                  <td>
+                    <select name="ct_pankcaz_kalz" id="ct_pankcaz_kalz">
+                      <option value="nein">nein</option>
+                      <option value="ja">ja</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td><label for="ct_pankcaz_infilt">Infiltration</label></td>
+                  <td>
+                    <select name="ct_pankcaz_infilt" id="ct_pankcaz_infilt">
+                      <option value="nein">nein</option>
+                      <option value="ja">ja</option>
+                    </select>
+                    <input name="ct_pankcaz_infilt" id="ct_pankcaz_infilt" type="text" data-field-type="TEXT" /><br />
+                    (Bild <input name="ct_pankcaz_tstage_ima" id="ct_pankcaz_tstage_ima" type="number" data-field-type="NUMBER"/>, Serie <input name="ct_pankcaz_tstage_series" id="ct_pankcaz_tstage_series" type="number" data-field-type="NUMBER"/>)
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Gallenwege
+            </td>
+            <td>
+              <table>
+                <tr>
+                  <td><label for="ct_pankcaz_pancduct">Ductus pancreaticus</label></td>
+                  <td>
+                    <select name="ct_pankcaz_pancduct" id="ct_pankcaz_pancduct">
+                      <option value="-">-</option>
+                      <option value="unauffällig">unauffällig</option>
+                      <option value="dilatiert">dilatiert</option>
+                    </select>&nbsp;
+                    <input name="ct_pankcaz_pancduct_text" id="ct_pankcaz_pancduct_text" type="text" data-field-type="TEXT"/>
+                  </td>
+                </tr>
+                <tr>
+                  <td><label for="ct_pankcaz_dhc">Ductus hepatocholedochus</label></td>
+                  <td>
+                    <select name="ct_pankcaz_dhc" id="ct_pankcaz_dhc">
+                      <option value="-">-</option>
+                      <option value="unauffällig">unauffällig</option>
+                      <option value="dilatiert">dilatiert</option>
+                    </select>&nbsp;
+                    <input name="ct_pankcaz_pancduct_text" id="ct_pankcaz_pancduct_text" type="text" data-field-type="TEXT"/>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Gefäßbezug (arteriell)
+            </td>
+            <td>
+              <table>
+                <tr>
+                  <td><label for="ct_pankcaz_aorta">Aorta</label></td>
+                  <td>
+                    <select name="ct_pankcaz_aorta" id="ct_pankcaz_aorta">
+                      <option value="nein">nein</option>
+                      <option value="< 180°">&lt; 180°</option>
+                      <option value="> 180°">&gt; 180°</option>
+                      <option value="360°">360°</option>
+                      <option value="Deformierung">Deformierung</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td><label for="ct_pankcaz_trcoeliacus">Truncus coeliacus</label></td>
+                  <td>
+                    <select name="ct_pankcaz_trcoeliacus" id="ct_pankcaz_trcoeliacus">
+                      <option value="nein">nein</option>
+                      <option value="< 180°">&lt; 180°</option>
+                      <option value="> 180°">&gt; 180°</option>
+                      <option value="360°">360°</option>
+                      <option value="Deformierung">Deformierung</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td><label for="ct_pankcaz_ahepcom">A. hepatica communis</label></td>
+                  <td>
+                    <select name="ct_pankcaz_ahepcom" id="ct_pankcaz_ahepcom">
+                      <option value="nein">nein</option>
+                      <option value="< 180°">&lt; 180°</option>
+                      <option value="> 180°">&gt; 180°</option>
+                      <option value="360°">360°</option>
+                      <option value="Deformierung">Deformierung</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td><label for="ct_pankcaz_ahepprop">A. hepatica propria</label></td>
+                  <td>
+                    <select name="ct_pankcaz_ahepprop" id="ct_pankcaz_ahepprop">
+                      <option value="nein">nein</option>
+                      <option value="< 180°">&lt; 180°</option>
+                      <option value="> 180°">&gt; 180°</option>
+                      <option value="360°">360°</option>
+                      <option value="Deformierung">Deformierung</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td><label for="ct_pankcaz_gda">A. gastroduodenalis</label></td>
+                  <td>
+                    <select name="ct_pankcaz_gda" id="ct_pankcaz_gda">
+                      <option value="nein">nein</option>
+                      <option value="< 180°">&lt; 180°</option>
+                      <option value="> 180°">&gt; 180°</option>
+                      <option value="360°">360°</option>
+                      <option value="Deformierung">Deformierung</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td><label for="ct_pankcaz_ams">A. mesenterica superior</label></td>
+                  <td>
+                    <select name="ct_pankcaz_ams" id="ct_pankcaz_ams">
+                      <option value="nein">nein</option>
+                      <option value="< 180°">&lt; 180°</option>
+                      <option value="> 180°">&gt; 180°</option>
+                      <option value="360°">360°</option>
+                      <option value="Deformierung">Deformierung</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td><label for="ct_pankcaz_alien">A. lienalis</label></td>
+                  <td>
+                    <select name="ct_pankcaz_alien" id="ct_pankcaz_alien">
+                      <option value="nein">nein</option>
+                      <option value="< 180°">&lt; 180°</option>
+                      <option value="> 180°">&gt; 180°</option>
+                      <option value="360°">360°</option>
+                      <option value="Deformierung">Deformierung</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td><label for="ct_pankcaz_avariant">Anatomische Varianten</label></td>
+                  <td>
+                    <select name="ct_pankcaz_avariant" id="ct_pankcaz_avariant">
+                      <option value="nein">nein</option>
+                      <option value="ja">ja</option>
+                    </select>&nbsp;
+                    <input name="ct_pankcaz_avariant_text" id="ct_pankcaz_avariant_text" type="text" data-field-type="TEXT"/>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Gefäßbezug (venös)
+            </td>
+            <td>
+              <table>
+                <tr>
+                  <td><label for="ct_pankcaz_vms">V. mesenterica superior</label></td>
+                  <td>
+                    <select name="ct_pankcaz_vms" id="ct_pankcaz_vms">
+                      <option value="nein">nein</option>
+                      <option value="< 180°">&lt; 180°</option>
+                      <option value="> 180°">&gt; 180°</option>
+                      <option value="360°">360°</option>
+                      <option value="Deformierung">Deformierung</option>
+                      <option value="1. Jejunalast infiltriert">1. Jejunalast infiltriert</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td><label for="ct_pankcaz_vlien">V. lienalis</label></td>
+                  <td>
+                    <select name="ct_pankcaz_vlien" id="ct_pankcaz_vlien">
+                      <option value="nein">nein</option>
+                      <option value="< 180°">&lt; 180°</option>
+                      <option value="> 180°">&gt; 180°</option>
+                      <option value="360°">360°</option>
+                      <option value="Deformierung">Deformierung</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td><label for="ct_pankcaz_vport">V. portae</label></td>
+                  <td>
+                    <select name="ct_pankcaz_vport" id="ct_pankcaz_vport">
+                      <option value="nein">nein</option>
+                      <option value="< 180°">&lt; 180°</option>
+                      <option value="> 180°">&gt; 180°</option>
+                      <option value="360°">360°</option>
+                      <option value="Deformierung">Deformierung</option>
+                    </select>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Gefäße (sonstiges)
+            </td>
+            <td>
+              <table>
+                <tr>
+                  <td><label for="ct_pankcaz_skleros_trcoeliacus">Atherosklerose Tr. coeliacus</label></td>
+                  <td>
+                    <select name="ct_pankcaz_skleros_trcoeliacus" id="ct_pankcaz_skleros_trcoeliacus">
+                      <option value="nein">nein</option>
+                      <option value="ja">ja</option>
+                    </select>&nbsp;
+                    <input name="ct_pankcaz_skleros_trcoeliacus_text" id="ct_pankcaz_skleros_trcoeliacus_text" type="text" data-field-type="TEXT"/>
+                  </td>
+                </tr>
+                <tr>
+                  <td><label for="ct_pankcaz_skleros_ams">Atherosklerose A. mesenterica superior</label></td>
+                  <td>
+                    <select name="ct_pankcaz_skleros_ams" id="ct_pankcaz_skleros_ams">
+                      <option value="nein">nein</option>
+                      <option value="ja">ja</option>
+                    </select>&nbsp;
+                    <input name="ct_pankcaz_skleros_ams_text" id="ct_pankcaz_skleros_ams_text" type="text" data-field-type="TEXT"/>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Abdomen
+            </td>
+            <td>
+              <table>
+                <tr>
+                  <td><label for="ct_pankcaz_aszites">Aszites</label></td>
+                  <td>
+                    <select name="ct_pankcaz_aszites" id="ct_pankcaz_aszites">
+                      <option value="nein">nein</option>
+                      <option value="ja">wenig</option>
+                      <option value="ja">ausgeprägt</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td><label for="ct_pankcaz_peritoneum">peritoneale Implantate</label></td>
+                  <td>
+                    <select name="ct_pankcaz_peritoneum" id="ct_pankcaz_peritoneum">
+                      <option value="nein">nein</option>
+                      <option value="ja">ja</option>
+                    </select>&nbsp;
+                    <input name="ct_pankcaz_peritoneum_text" id="ct_pankcaz_peritoneum_text" type="text" data-field-type="TEXT"/>
+                  </td>
+                </tr>
+                <tr>
+                  <td><label for="ct_pankcaz_leber">Leber</label></td>
+                  <td>
+                    <select name="ct_pankcaz_leber" id="ct_pankcaz_leber">
+                      <option value="unauffällig">nein</option>
+                      <option value="Lebermetastasen">Lebermetastasen</option>
+                      <option value="sonstiges">sonstiges</option>
+                    </select><br />
+                    <span>
+                      <label for="ct_pankcaz_leber_l01">L01</label>
+                      <input name="ct_pankcaz_leber_l01" id="ct_pankcaz_leber_l01" type="number" data-field-type="NUMBER"/><br />
+                      <label for="ct_pankcaz_leber_l02">L02</label>
+                      <input name="ct_pankcaz_leber_l02" id="ct_pankcaz_leber_l02" type="number" data-field-type="NUMBER"/><br />
+                      <textarea name="ct_pankcaz_leber_other" id="ct_pankcaz_leber_other"></textarea>
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><label for="ct_pankcaz_milz">Milz</label></td>
+                  <td>
+                    <select name="ct_pankcaz_milz" id="ct_pankcaz_milz">
+                      <option value="unauffällig">unauffällig</option>
+                      <option value="auffällig">auffällig</option>
+                    </select>&nbsp;
+                    <input name="ct_pankcaz_milz_text" id="ct_pankcaz_milz_text" type="text" data-field-type="TEXT"/>
+                  </td>
+                </tr>
+                <tr>
+                  <td><label for="ct_pankcaz_nieren">Nieren / Ureteren</label></td>
+                  <td>
+                    <select name="ct_pankcaz_nieren" id="ct_pankcaz_nieren">
+                      <option value="unauffällig">unauffällig</option>
+                      <option value="auffällig">auffällig</option>
+                    </select>&nbsp;
+                    <input name="ct_pankcaz_nieren_text" id="ct_pankcaz_nieren_text" type="text" data-field-type="TEXT"/>
+                  </td>
+                </tr>
+                <tr>
+                  <td><label for="ct_pankcaz_nnieren">Nebennieren</label></td>
+                  <td>
+                    <select name="ct_pankcaz_nnieren" id="ct_pankcaz_nnieren">
+                      <option value="unauffällig">unauffällig</option>
+                      <option value="auffällig">auffällig</option>
+                    </select>&nbsp;
+                    <input name="ct_pankcaz_nnieren_text" id="ct_pankcaz_nnieren_text" type="text" data-field-type="TEXT"/>
+                  </td>
+                </tr>
+                <tr>
+                  <td><label for="ct_pankcaz_lymph">Lymphknoten</label></td>
+                  <td>
+                    <select name="ct_pankcaz_lymph" id="ct_pankcaz_lymph">
+                      <option value="unauffällig">unauffällig</option>
+                      <option value="auffällig">auffällig</option>
+                    </select>&nbsp;
+                    <input name="ct_pankcaz_lymph_text" id="ct_pankcaz_lymph_text" type="text" data-field-type="TEXT"/>
+                  </td>
+                </tr>
+                <tr>
+                  <td><label for="ct_pankcaz_darm">Darm</label></td>
+                  <td>
+                    <select name="ct_pankcaz_darm" id="ct_pankcaz_darm">
+                      <option value="unauffällig">unauffällig</option>
+                      <option value="auffällig">auffällig</option>
+                    </select>&nbsp;
+                    <input name="ct_pankcaz_darm_text" id="ct_pankcaz_darm_text" type="text" data-field-type="TEXT"/>
+                  </td>
+                </tr>
+                <tr>
+                  <td><label for="ct_pankcaz_becken">Beckenorgane</label></td>
+                  <td>
+                    <select name="ct_pankcaz_becken" id="ct_pankcaz_becken">
+                      <option value="unauffällig">unauffällig</option>
+                      <option value="auffällig">auffällig</option>
+                    </select>&nbsp;
+                    <input name="ct_pankcaz_becken_text" id="ct_pankcaz_becken_text" type="text" data-field-type="TEXT"/>
+                  </td>
+                </tr>
+                <tr>
+                  <td><label for="ct_pankcaz_knochen">Knochen</label></td>
+                  <td>
+                    <select name="ct_pankcaz_knochen" id="ct_pankcaz_knochen">
+                      <option value="unauffällig">unauffällig</option>
+                      <option value="auffällig">auffällig</option>
+                    </select>&nbsp;
+                    <input name="ct_pankcaz_knochen_text" id="ct_pankcaz_knochen_text" type="text" data-field-type="TEXT"/>
+                  </td>
+                </tr>
+                <tr>
+                  <td><label for="ct_pankcaz_lunge">Lunge (soweit miterfasst)</label></td>
+                  <td>
+                    <select name="ct_pankcaz_lunge" id="ct_pankcaz_lunge">
+                      <option value="unauffällig">unauffällig</option>
+                      <option value="auffällig">auffällig</option>
+                    </select>&nbsp;
+                    <input name="ct_pankcaz_lunge_text" id="ct_pankcaz_lunge_text" type="text" data-field-type="TEXT"/>
+                  </td>
+                </tr>
+                <tr>
+                  <td><label for="ct_pankcaz_sonstiges">sonstiges</label></td>
+                  <td>
+                    <textarea name="ct_pankcaz_sonstiges" id="ct_pankcaz_sonstiges"></textarea>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+
+    </section>
+
+    <section data-section-name="Beurteilung">
+        <header class="level2" data-english="Impression">Beurteilung</header>
+        <p>
+            <textarea name="ct_pankcaz_Beurteilung" id="ct_pankcaz_Beurteilung" data-english-name="Impression" title="Text bitte entsprechend Befund ergänzen / ändern!">V.a. [Äthiologie] im __ / Bek. [Äthiologie] im __
+bspw. zB seröses Zystandenom / muzinöses Zystadenom / IPMN Typ: Seitast / Hauptast / Mixed</textarea>
+        </p>
+        <p>
+          <label for="ct_pankcaz_TNM">Insgesamt TNM</label>: <input id="ct_pankcaz_TNM" name="ct_pankcaz_TNM" title="Bitte Format: ctT__N__M__" data-field-type="TEXT">
+          <select id="ct_pankcaz_certainty" name="ct_pankcaz_certainty">
+              <option value="-">-</option>
+              <option value="5 - sehr sicher">5 - sehr sicher</option>
+              <option value="4 - sicher">4 - sicher</option>
+              <option value="3 - indifferent">3 - indifferent</option>
+              <option value="2 - unsicher">2 - unsicher</option>
+              <option value="1 - sehr unsicher">1 - sehr unsicher</option>
+          </select>
+        </p>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MRT ARVD</title>
+    <meta charset="UTF-8" />
+    <meta name="dcterms.title" content="MRT ARVD" />
+    <meta name="dcterms.abstract" content="Befundungstemplate für ARVD (L2, V1, no JS)">
+    <meta name="dcterms.description" content="Template zur Befundung von Cardio-MR Untersuchungen bei ARVD.">
+    <meta name="dcterms.subject" content="MR; CARDIO;">
+    <meta name="dcterms.identifier" content="041807.3.1911201810">
+    <meta name="dcterms.type" content="IMAGE_REPORT_TEMPLATE">
+    <meta name="dcterms.language" content="de">
+    <meta name="dcterms.rights" content="Die Deutsche Röntgengesellschaft e.V.(DRG) stellt sämtliche Templates kostenfrei unter der Creative Commons Lizenz  CC BY-NC-ND in der Version 4.0 zur Verfügung. Die Lizenz erlaubt Download und Weiterverteilung des Werkes unter Nennung der DRG als Urheber, jedoch keinerlei Bearbeitung oder kommerzielle Nutzung.">
+    <meta name="dcterms.license" content="http://www.befundung.drg.de/de-DE/3478/creative-commons-lizenz-cc-by-nc-nd">
+    <meta name="dcterms.date" content="2019-11-20">
+    <meta name="dcterms.creator" content="AG Herz- und Gefäßdiagnostik">
+    <meta name="dcterms.contributor" content="Pinto dos Santos D (Kodierung)">
+    <meta name="dcterms.contributor" content="Schausten, Sabrina (Kodierung)">
+    <meta name="dcterms.contributor" content="Maintz, David">
+    <meta name="dcterms.contributor" content="Bunck, Alexander">
+    <meta name="dcterms.publisher" content="Deutsche Röntgengesellschaft (DRG)">
+    <script type="text/xml">
+        <template_attributes>
+            <top-level-flag>0</top-level-flag>
+            <status>DRAFT</status>
+        </template_attributes>
+    </script>
+
+    <!--Link to Stylesheet-->
+    <!-- falscher Link -->
+    <!-- <link class="flag" rel="stylesheet" href="drg.css"> -->
+    <link class="flag" rel="stylesheet" href="drg2.css">
+</head>
+<body>
+    <section data-section-name="Clinical information">
+        <header class="level1">Klinische Angaben</header>
+        <p>
+            <textarea id="mr_arvd_angaben" name="mr_arvd_angaben"></textarea>
+        </p>
+    </section>
+
+    <section data-section-name="Clinical question">
+        <header class="level1">Fragestellung</header>
+        <p>
+            <textarea name="mr_arvd_fragestellung" id="mr_arvd_fragestellung"></textarea>
+        </p>
+    </section>
+
+    <section data-section-name="Befunde">
+        <header class="level1">Befund</header>
+        <table>
+            <tr>
+                <td><label for="mr_arvd_comparison">Vergleichsuntersuchung</label></td>
+                <td>
+                    <select name="mr_arvd_comparison" id="mr_arvd_comparison">
+                        <option value="keine">keine</option>
+                        <option value="vorliegend">vorliegend</option>
+                    </select>
+                    <input name="mr_arvd_comparison_date" id="mr_arvd_comparison_date" type="date" data-field-type="DATE">
+                </td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <td>Technik</td>
+                <td>
+                    <table>
+                        <tr>
+                            <td><label for="mr_arvd_fieldstrength">Feldstärke</label></td>
+                            <td>
+                                <select name="mr_arvd_fieldstrength" id="mr_arvd_fieldstrength">
+                                    <option value="1.5 T">1.5 T</option>
+                                    <option value="3 T">3 T</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_arvd_protocol">MR Protokoll</label></td>
+                            <td>
+                                <input type="text" name="mr_arvd_protocol" id="mr_arvd_protocol" placeholder="Sequenz und Ebenen">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_arvd_software">Auswertesoftware</label></td>
+                            <td>
+                                <input type="text" name="mr_arvd_software" id="mr_arvd_software" placeholder="Name und Version">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_arvd_normwerte_quelle">Quelle der Normwerte</label></td>
+                            <td>
+                                <input type="text" name="mr_arvd_normwerte_quelle" id="mr_arvd_normwerte_quelle">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_arvd_kontrastmittel">KM</label></td>
+                            <td>
+                                <input type="text" name="mr_arvd_kontrastmittel" id="mr_arvd_kontrastmittel" placeholder="Name und Menge">
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>Patientencharakteristik</td>
+                <td>
+                    <table>
+                        <tr>
+                            <td><label for="mr_arvd_patsex">Geschlecht</label></td>
+                            <td>
+                                <select name="mr_arvd_patsex" id="mr_arvd_patsex">
+                                    <option value="männlich">männlich</option>
+                                    <option value="weiblich">weiblich</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_arvd_patweight">Körpergewicht</label></td>
+                            <td>
+                                <input class="small" type="number" name="dumr_arvd_patweightmmy" id="mr_arvd_patweight" data-field-units="kg"> kg
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_arvd_patheight">Körpergröße</label></td>
+                            <td>
+                                <input class="small" type="number" name="mr_arvd_patheight" id="mr_arvd_patheight" data-field-units="m"> m
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_arvd_patbsa">Körperoberlfäche (BSA)</label></td>
+                            <td>
+                                <input class="small" type="number" name="mr_arvd_patbsa" id="mr_arvd_patbsa" data-field-units="m2"> m&sup2;
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <th>Herz</th>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <td>Bildqualität</td>
+                <td>
+                    <table>
+                        <tr>
+                            <td><label for="mr_arvd_einschr">Einschränkung</label></td>
+                            <td>
+                                <select name="mr_arvd_einschr" id="mr_arvd_einschr">
+                                    <option value="-">-</option>
+                                    <option value="nein">nein</option>
+                                    <option value="ja">ja</option>
+                                </select>
+                                <input type="text" name="mr_arvd_einschr_text" id="mr_arvd_einschr_text">
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>Funktionsanalyse LV</td>
+                <td>
+                    <table>
+                        <tr>
+                            <td><label for="mr_arvd_lvedd">LV enddiastolischer Diameter (LV EDD):</label></td>
+                            <td><input class="small" type="number" name="mr_arvd_lvedd" id="mr_arvd_lvedd">&nbsp;mm (Norm: mm)</td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_arvd_lvedvi">LV enddiastolischer Volumenindex (LV EDVi):</label></td>
+                            <td><input class="small" type="number" name="mr_arvd_lvedvi" id="mr_arvd_lvedvi">&nbsp;ml/m&sup2; (Norm: xx ml/m&sup2;)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_arvd_lvesvi">LV endsystolischer  Volumenindex (LV ESVi):</label></td>
+                            <td><input class="small" type="number" name="mr_arvd_lvesvi" id="mr_arvd_lvesvi">&nbsp;ml/m&sup2; (Norm: xx ml/m&sup2;)</td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_arvd_lvef">LV Ejektions-Fraktion (LV EF):</label></td>
+                            <td><input class="small" type="number" name="mr_arvd_lvef" id="mr_arvd_lvef">&nbsp;% (Norm: xx %)</td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_arvd_lvedm">LV ED Masse normiert:</label></td>
+                            <td><input class="small" type="number" name="mr_arvd_lvedm" id="mr_arvd_lvedm">&nbsp;g/m&sup2; (Norm: xx g/m&sup2;)</td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_arvd_lv_wandbwgst">Regionale Wandbewegungsstörungen LV:</label></td>
+                            <td>
+                                <select name="mr_arvd_lv_wandbwgst" id="mr_arvd_lv_wandbwgst">
+                                    <option value="-">-</option>
+                                    <option value="nein">nein</option>
+                                    <option value="ja">ja</option>
+                                </select>
+                                <input type="text" name="mr_arvd_lv_wandbwgst_text" id="mr_arvd_lv_wandbwgst_text">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_arvd_ivsd">Interventrikuläre Septumdicke (IVSD):</label></td>
+                            <td><input class="small" type="number" name="mr_arvd_ivsd" id="mr_arvd_ivsd">&nbsp;mm</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Funktionsanalyse RV</td>
+                <td>
+                    <table>
+                        <tr>
+                            <td><label for="mr_arvd_rvedd">RV enddiastolischer Diameter (RV EDD):</label></td>
+                            <td><input class="small" type="number" name="mr_arvd_rvedd" id="mr_arvd_rvedd">&nbsp;mm (Norm: mm)</td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_arvd_rvedvi">RV enddiastolischer Volumenindex (RV EDVi):</label></td>
+                            <td><input class="small" type="number" name="mr_arvd_rvedvi" id="mr_arvd_rvedvi">&nbsp;ml/m&sup2; (Norm: xx ml/m&sup2;)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_arvd_rvesvi">RV endsystolischer  Volumenindex (RV ESVi):</label></td>
+                            <td><input class="small" type="number" name="mr_arvd_rvesvi" id="mr_arvd_rvesvi">&nbsp;ml/m&sup2; (Norm: xx ml/m&sup2;)</td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_arvd_rvef">RV Ejektions-Fraktion (RV EF):</label></td>
+                            <td><input class="small" type="number" name="mr_arvd_rvef" id="mr_arvd_rvef">&nbsp;% (Norm: xx %)</td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_arvd_rvot_4k">Weite RVOT4 im 3-Kammerblick*:</label></td>
+                            <td><input class="small" type="number" name="mr_arvd_rvot_4k" id="mr_arvd_rvot_4k">&nbsp;mm/m&sup2; (Norm: xx mm/m&sup2;)</td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_arvd_rv_wandbwgst">Regionale Wandbewegungsstörungen RV:</label></td>
+                            <td>
+                                <select name="mr_arvd_rv_wandbwgst" id="mr_arvd_rv_wandbwgst">
+                                    <option value="-">-</option>
+                                    <option value="nein">nein</option>
+                                    <option value="ja">ja</option>
+                                </select>
+                                <input type="text" name="mr_arvd_rv_wandbwgst_text" id="mr_arvd_rv_wandbwgst_text">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_arvd_rv_aneurysm">(Mikro-) aneurysmata RV Wand:</label></td>
+                            <td>
+                                <select name="mr_arvd_rv_aneurysm" id="mr_arvd_rv_aneurysm">
+                                    <option value="-">-</option>
+                                    <option value="nein">nein</option>
+                                    <option value="ja">ja</option>
+                                </select>
+                                <input class="small" type="number" name="mr_arvd_rv_aneurysm_text" id="mr_arvd_rv_aneurysm_text">
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <table>
+                        <tr>
+                            <td>Vorhofgröße endsystolisch im 4-Kammerblick</td>
+                            <td><label for="mr_arvd_vhfed_4k">RA:</label></td>
+                            <td><input class="small" type="number" name="mr_arvd_vhfed_4k" id="mr_arvd_vhfed_4k">&nbsp;mm</td>
+                        </tr>
+                        <tr>
+                            <td>(longitudinal x transversal)</td>
+                            <td><label for="mr_arvd_vhfed_longtrans">LA:</label></td>
+                            <td><input class="small" type="number" name="mr_arvd_vhfed_longtrans" id="mr_arvd_vhfed_longtrans">&nbsp;mm</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        <table>
+
+        <table>
+            <tr>
+                <td><label for="mr_arvd_klappenpath">Herzklappenpathologie:</label></td>
+                <td>
+                    <select name="mr_arvd_klappenpath" id="mr_arvd_klappenpath">
+                        <option value="-">-</option>
+                        <option value="nicht untersucht">nicht untersucht</option>
+                        <option value="nein">nein</option>
+                        <option value="ja">ja</option>
+                    </select>
+                    <input type="text" name="mr_arvd_klappenpath_text" id="mr_arvd_klappenpath_text">
+                </td>
+            </tr>
+            <tr>
+                <td><label for="mr_arvd_thromben">Intracavitäre Thromben:</label></td>
+                <td>
+                    <select name="mr_arvd_thromben" id="mr_arvd_thromben">
+                        <option value="-">-</option>
+                        <option value="nein">nein</option>
+                        <option value="ja">ja</option>
+                    </select>
+                    <input type="text" name="mr_arvd_thromben_text" id="mr_arvd_thromben_text">
+                </td>
+            </tr>
+            <tr>
+                <td><label for="mr_arvd_perikarderg">Perikarderguss:</label></td>
+                <td>
+                    <select name="mr_arvd_perikarderg" id="mr_arvd_perikarderg">
+                        <option value="-">-</option>
+                        <option value="nein">nein</option>
+                        <option value="ja">ja</option>
+                    </select>
+                    max. Saumbreite: <input class="small" type="number" name="mr_arvd_perikarderg_text" id="mr_arvd_perikarderg_text" data-field-units="mm"> mm
+                </td>
+            </tr>
+            <tr>
+                <td><label for="mr_arvd_myofat">Nachweis von Fettsignal im Myokard:</label></td>
+                <td>
+                    <select name="mr_arvd_myofat" id="mr_arvd_myofat">
+                        <option value="-">-</option>
+                        <option value="nein">nein</option>
+                        <option value="ja">ja</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="mr_arvd_lge">Late Gadolinium Enhancement (LGE):</label></td>
+                <td>
+                    <select name="mr_arvd_lge" id="mr_arvd_lge">
+                        <option value="-">-</option>
+                        <option value="nein">nein</option>
+                        <option value="ja">ja</option>
+                    </select>
+                    Verteilungsmuster:
+                    <input type="text" name="mr_arvd_lge_text" id="mr_arvd_lge_text">
+                </td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <th colspan="2">Auswertung nach Task Force Kriterien (revised 2010)</th>
+            </tr>
+            <tr>
+                <td><label for="mr_arvd_major">Majorkriterium</label></td>
+                <td>
+                    <select name="mr_arvd_major" id="mr_arvd_major">
+                        <option value="-">-</option>
+                        <option value="nein">nein</option>
+                        <option value="ja">ja</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <th>Sonstige Auffälligkeiten</th>
+            </tr>
+            <tr>
+                <td>
+                    <textarea class="ta-middle" name="mr_arvd_other" id="mr_arvd_other"></textarea>
+                </td>
+            </tr>
+        </table>
+
+    </section>
+
+    <section data-section-name="Beurteilung">
+        <header class="level1">Beurteilung</header>
+        <table>
+            <tr>
+                <td>
+                    MR-tomographische Hinweise auf ARVC
+                    <select name="mr_arvd_beurt_arvc" id="mr_arvd_beurt_arvc">
+                        <option value="-">-</option>
+                        <option value="nein">nein</option>
+                        <option value="möglich">möglich</option>
+                        <option value="ja">ja</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <p>
+            <textarea name="mr_arvd_beurteilung" id="mr_arvd_beurteilung" data-field-completion-action="ALERT"></textarea>
+        </p>
+    </section>
+</body>
+</html>

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MRT Rektum-Ca</title>
+    <meta charset="UTF-8">
+    <!--Dublin Core metadata elements here-->
+    <meta name="dcterms.title" content="MRT Rektum-Ca">
+    <meta name="dcterms.abstract" content="Befundungstemplate für Rektumkarzinom (L2, V1, no JS)">
+    <meta name="dcterms.description" content="Erstes mit der AG Onkologie abgestimmtes und in einem Konsensusmeeting mit Klinikern besprochenes Template. Das Template enthält alle für Chirurgen und Onkologen wichtigen Items und gibt dem Radiologen einen Leitfaden zu genauen Klassifizierung eines Rektumkarzinoms im TNM-System. Enthält bereits einige RadLex-Terme. Public Comment Phase ausstehend. (L2 - Entwurf zur Abstimmung: AG onkologische Bildgebung - PD Dr. Persigehl, Version 1, kein Javascript)">
+    <meta name="dcterms.subject" content="MR; ONKO; GI;">
+    <meta name="dcterms.identifier" content="041807.3.1706090000">
+    <meta name="dcterms.type" content="IMAGE_REPORT_TEMPLATE">
+    <meta name="dcterms.language" content="de">
+    <meta name="dcterms.rights" content="Die Deutsche Röntgengesellschaft e.V.(DRG) stellt sämtliche Templates kostenfrei unter der Creative Commons Lizenz  CC BY-NC-ND in der Version 4.0 zur Verfügung. Die Lizenz erlaubt Download und Weiterverteilung des Werkes unter Nennung der DRG als Urheber, jedoch keinerlei Bearbeitung oder kommerzielle Nutzung.">
+    <meta name="dcterms.license" content="http://www.befundung.drg.de/de-DE/3478/creative-commons-lizenz-cc-by-nc-nd">
+    <meta name="dcterms.date" content="2017-06-09">
+    <meta name="dcterms.creator" content="Pinto dos Santos D">
+    <meta name="dcterms.contributor" content="Persigehl T">
+    <meta name="dcterms.contributor" content="AG Onkologische Bildgebung">
+    <meta name="dcterms.publisher" content="Deutsche Röntgengesellschaft (DRG)">
+    <!--RadLex entries-->
+    <script type="text/xml">
+        <!--
+        <template_attributes>
+        <top-level-flag>0</top-level-flag>
+        <status>ACTIVE</status>
+        <coding_schemes>
+            <coding_scheme name="RadLex" designator="2.16.840.1.113883.6.256" />
+        </coding_schemes>
+        <coded_content>
+        <entry ORIGTXT="mr_rectalca_clininfo">
+            <term>
+                <code meaning="Clinical information" value="RID13166" scheme="RadLex" />
+            </term>
+        </entry>
+        <entry ORIGTXT="mr_rectalca_postneoadj">
+            <term>
+                <code meaning="Clinical information" value="RID13166" scheme="RadLex" />
+            </term>
+        </entry>
+        <entry ORIGTXT="mr_rectalca_postneoadj_info">
+            <term>
+                <code meaning="Clinical information" value="RID13166" scheme="RadLex" />
+            </term>
+        </entry>
+        <entry ORIGTXT="mr_rectalca_postneoadj">
+            <term>
+                <code meaning="Chemotherapy" value="RID39252" scheme="RadLex" />
+            </term>
+        </entry>
+        <entry ORIGTXT="mr_rectalca_postneoadj_info">
+            <term>
+                <code meaning="Chemotherapy" value="RID39252" scheme="RadLex" />
+            </term>
+        </entry>
+        <entry ORIGTXT="mr_rectalca_comparison">
+            <term>
+                <code meaning="Comparison" value="RID28483" scheme="RadLex" />
+            </term>
+        </entry>
+        <entry ORIGTXT="mr_rectalca_comparison_info">
+            <term>
+                <code meaning="Comparison" value="RID28483" scheme="RadLex" />
+            </term>
+        </entry>
+        <entry ORIGTXT="mr_rectalca_T">
+            <term>
+                <code meaning="colorectal cancer" value="RID45684" scheme="RadLex" />
+            </term>
+        </entry>
+        <entry ORIGTXT="mr_rectalca_T">
+            <term>
+                <code meaning="tumor stage" value="RID39273" scheme="RadLex" />
+            </term>
+        </entry>
+        <entry ORIGTXT="mr_rectalca_lokalisation">
+            <term>
+                <code meaning="location" value="RID39038" scheme="RadLex" />
+            </term>
+        </entry>
+        <entry ORIGTXT="mr_rectalca_stumor">
+            <term>
+                <code meaning="length" value="RID39123" scheme="RadLex" />
+            </term>
+        </entry>
+        </coded_content>
+        </template_attributes>
+		-->
+    </script>
+    <!--Link to Stylesheet-->
+    <link rel="stylesheet" type="text/css" href="drg.css">
+    <style type="text/css">
+        header { font-size: 14pt; font-weight: bold; padding-top: 5px; padding-bottom: 5px; }
+        td { padding-right: 15px; vertical-align: top;}
+    </style>
+</head>
+
+<body>
+
+    <section data-section-name="Clinical information">
+        <header class="level1" data-english="Clinical information">Klinische Angaben</header>
+        <p>
+            <textarea name="mr_rectalca_clininfo" id="mr_rectalca_clininfo"></textarea>
+        </p>
+        <table>
+            <tr>
+                <td><label for="mr_rectalca_histol">Histologie</label></td>
+                <td>
+                    <select name="mr_rectalca_histol" id="mr_rectalca_histol">
+                        <option value="ausstehend">ausstehend</option>
+                        <option value="gesichert">gesichert</option>
+                    </select>
+                </td>
+                <td><input type="text" name="mr_rectalca_histol_info" id="mr_rectalca_histol_info" data-field-type="TEXT"></td>
+            </tr>
+            <tr>
+                <td><label for="mr_rectalca_postneoadj">neoadjuvante Vorbehandlung</label></td>
+                <td>
+                    <select name="mr_rectalca_postneoadj" id="mr_rectalca_postneoadj">
+                        <option value="nein">nein</option>
+                        <option value="ja">ja</option>
+                    </select>
+                </td>
+                <td><input type="text" name="mr_rectalca_postneoadj_info" id="mr_rectalca_postneoadj_info" data-field-type="TEXT"></td>
+            </tr>
+        </table>
+    </section>
+
+    <section data-section-name="Clinical question">
+        <header class="level1" data-english="Clinical question">Fragestellung</header>
+        <p>
+            <textarea name="mr_rectalca_Fragestellung" id="mr_rectalca_Fragestellung"></textarea>
+        </p>
+    </section>
+
+    <section data-section-name="Findings">
+        <header class="level1" data-english="Findings">Befund</header>
+        <table>
+            <tr>
+                <td><label for="mr_rectalca_comparison">Vergleichsuntersuchung:</label></td>
+                <td>
+                    <select name="mr_rectalca_comparison" id="mr_rectalca_comparison">
+                        <option value="keine">keine</option>
+                        <option value="vorliegend">vorliegend</option>
+                    </select>&nbsp;&nbsp;&nbsp;
+                    <select name="mr_rectalca_comparison_mod" id="mr_rectalca_comparison_mod">
+                        <option value="-">-</option>
+                        <option value="CT">CT</option>
+                        <option value="MR">MR</option>
+                    </select>&nbsp;&nbsp;&nbsp;
+                    <input name="mr_rectalca_comparison_date" id="mr_rectalca_comparison_date" type="date" data-field-type="DATE">
+                </td>
+            </tr>
+            <tr>
+                <td><label for="mr_rectalca_quality">Bildqualität:</label></td>
+                <td>
+                    <select name="mr_rectalca_quality" id="mr_rectalca_quality">
+                        <option value="exzellent">exzellent</option>
+                        <option value="mittel">mittel</option>
+                        <option value="schlecht">schlecht</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td>Rektumkarzinom (T)</td>
+                <td>
+                    <table>
+                        <tr id="tlokalisation">
+                            <td>
+                                <label for="mr_rectalca_lokalisation">Tumorlokalisation</label></td>
+                            <td>
+                                <select id="mr_rectalca_lokalisation" name="mr_rectalca_lokalisation">
+                                    <option value="- (keine Angabe)">- (keine Angabe)</option>
+                                    <option value="unteres Drittel (0-6cm ab ano)">unteres Drittel (0-6cm ab ano)</option>
+                                    <option value="mittleres Drittel (6-12cm ab ano)">mittleres Drittel (6-12cm ab ano)</option>
+                                    <option value="oberes Drittel (12-16cm ab ano)">oberes Drittel (12-16cm ab ano)</option>
+                                </select>&nbsp;&nbsp;&nbsp;
+                                <input type="text" id="mr_rectalca_lokalisation_info" name="mr_rectalca_lokalisation_info" title="Ergänzende Informationen (bspw. Serie / Bildnummer)" data-field-type="TEXT">
+                            </td>
+                        </tr>
+                        <tr id="danokutan">
+                            <td>
+                                <label for="mr_rectalca_danokutan">Distanz zur Anokutan-Linie</label>
+                            </td>
+                            <td>
+                                <input id="mr_rectalca_danokutan" name="mr_rectalca_danokutan" type="number" step="0.1" min="0" max="20" title="Distanz zur Unterkante des Spinkter internus/ Anus" data-field-type="NUMBER">cm
+                            </td>
+                        </tr>
+                        <tr id="tumorausd">
+                            <td><label for="mr_rectalca_stumor">Tumorausdehnung (Länge)</label></td>
+                            <td><input id="mr_rectalca_stumor" name="mr_rectalca_stumor" type="number" step="0.1" min="0" max="20" data-field-type="NUMBER">cm</td>
+                        </tr>
+                        <tr id="tzirkum">
+                            <td><label for="mr_rectalca_zirkumvon">Zirkumferenz in SSL</label></td>
+                            <td>
+                                von <input id="mr_rectalca_zirkumvon" name="mr_rectalca_zirkumvon" type="number" step="1" min="1" max="12" data-field-type="NUMBER">h bis <input id="mr_rectalca_zirkumbis" name="mr_rectalca_zirkumbis" type="number" step="1" min="1" max="12" data-field-type="NUMBER">h SSL
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_rectalca_T">Tumorinfiltration</label></td>
+                            <td>
+                                <select id="mr_rectalca_T" name="mr_rectalca_T" title="Besonderheit Spinkterkomplex im unteren Drittel!!
+T2: Infiltration M. sphincter internus / T3: Infiltration M. sphincter externus und/oder M. levator ani / T4: Infiltration von benachtbarten Beckenstrukturen">
+                                    <option value="Tx (Tumor nicht beurteilbar)">Tx (Tumor nicht beurteilbar)</option>
+                                    <option value="T0 (kein Anhalt für Tumor)">T0 (kein Anhalt für Tumor)</option>
+                                    <option value="T1 (Infiltration Submukosa)">T1 (Infiltration Submukosa)</option>
+                                    <option value="T2 (Infiltration Muscularis propria)">T2 (Infiltration Muscularis propria)</option>
+                                    <option value="T3ab (Infiltration Mesorektum &lt;5mm)">T3ab (Infiltration Mesorektum &lt;5mm)</option>
+                                    <option value="T3cd (Infiltration Mesorektum &gt;5mm)">T3cd (Infiltration Mesorektum &gt;5mm)</option>
+                                    <option value="T4a (Infiltration viszerales Peritoneum)">T4a (Infiltration viszerales Peritoneum)</option>
+                                    <option value="T4b (Infiltration Nachbarorgane)">T4b (Infiltration Nachbarorgane)</option>
+                                </select>
+                                <br />
+                                bei <input id="mr_rectalca_T_text_ssl" name="mr_rectalca_T_text_ssl" type="number" step="1" min="1" max="12" data-field-type="NUMBER">h SSL&nbsp;&nbsp;&nbsp;
+                                <input id="mr_rectalca_T_text" name="mr_rectalca_T_text" title="Ergänzende Informationen (bspw. Serie / Bildnummer oder bei T4b Infiltration von Dünndarm / Harnblase / Ureter rechts links / Samenblase rechts links / Prostata / Uterus / Ovar/Adnexe rechts links / Vagina / M. obturatorius internus rechts links / M. levator ani rechts links / A.V. iliaca internus rechts links / A.V. iliaca externus rechts links / Os sacrum / Andere)" data-field-type="TEXT">
+                            </td>
+                        </tr>
+                        <tr id="T+_crm">
+                            <td><label for="mr_rectalca_CRMT">Abstand zur mesorektalen Faszie</label></td>
+                            <td>
+                                <select id="mr_rectalca_CRMT" name="mr_rectalca_CRMT">
+                                    <option value="CRMx (Resektionsrand nicht beurteilbar)">CRMx (Resektionsrand nicht beurteilbar)</option>
+                                    <option value="CRM- (&gt; 1mm, nach CTX/RTX &gt; 2mm)">CRM- (&gt; 1mm, nach CTX/RTX &gt; 2mm)</option>
+                                    <option value="CRM+ (&le; 1mm, nach CTX/RTX &le; 2mm)">CRM+ (&le; 1mm, nach CTX/RTX &le; 2mm)</option>
+                                </select>
+                                <br />
+                                bei <input id="mr_rectalca_CRMT_text_ssl" name="mr_rectalca_CRMT_text_ssl" type="number" step="1" min="1" max="12" data-field-type="NUMBER">h SSL&nbsp;&nbsp;&nbsp;
+                                <input id="mr_rectalca_CRMT_text" name="mr_rectalca_CRMT_text" title="Ergänzende Informationen (bspw. Serie / Bildnummer)" data-field-type="TEXT">
+                            </td>
+                        </tr>
+                        <tr id="T+_venen">
+                            <td><label for="mr_rectalca_venenT">Veneninfiltration</label></td>
+                            <td>
+                                <select id="mr_rectalca_venenT" name="mr_rectalca_venenT">
+                                    <option value="nicht beurteilbar">nicht beurteilbar</option>
+                                    <option value="nein">nein</option>
+                                    <option value="ja">ja</option>
+                                </select>&nbsp;&nbsp;&nbsp;
+                                <input id="mr_rectalca_venenT_text" name="mr_rectalca_venenT_text" title="Ergänzende Informationen (bspw. Serie / Bildnummer)" data-field-type="TEXT">
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>Lymphknoten lokal (N)</td>
+                <td>
+                    <table>
+                        <tr>
+                            <td><label for="mr_rectalca_N">mesorektal / präsakral</label></td>
+                            <td>
+                                <select id="mr_rectalca_N" name="mr_rectalca_N">
+                                    <option value="Nx (Lymphknoten nicht beurteilbar)">Nx (Lymphknoten nicht beurteilbar)</option>
+                                    <option value="N0 (keine suspekten Lymphknoten)">N0 (keine suspekten Lymphknoten)</option>
+                                    <option value="N+ (suspekte Lymphknoten mesorektal &lt;3)">N+ (suspekte Lymphknoten mesorektal &lt;3)</option>
+                                    <option value="N+ (suspekte Lymphknoten mesorektal &gt;3)">N+ (suspekte Lymphknoten mesorektal &gt;3)</option>
+                                </select>
+                                <br />
+                                max. <input id="imr_rectalca_N_maxD" name="imr_rectalca_N_maxD" type="number" step="0.1" min="0" max="10" data-field-type="NUMBER">cm bei <input id="imr_rectalca_N_ssl" name="imr_rectalca_N_ssl" type="number" step="1" min="1" max="12" data-field-type="NUMBER">h SSL &nbsp;&nbsp;&nbsp;
+                                <input id="mr_rectalca_N_text" name="mr_rectalca_N_text" title="Ergänzende Informationen (bspw. Serie / Bildnummer)" data-field-type="TEXT">
+                            </td>
+                        </tr>
+                        <tr id="N+_crm">
+                            <td><label for="mr_rectalca_CRMN">Abstand zur mesorektalen Faszie</label></td>
+                            <td>
+                                <select id="mr_rectalca_CRMN" name="mr_rectalca_CRMN">
+                                    <option value="CRMx (Resektionsrand nicht beurteilbar)">CRMx (Resektionsrand nicht beurteilbar)</option>
+                                    <option value="CRM- (&gt; 1mm, nach CTX/RTX &gt; 2mm)">CRM- (&gt; 1mm, nach CTX/RTX &gt; 2mm)</option>
+                                    <option value="CRM+ (&le; 1mm, nach CTX/RTX &le; 2mm)">CRM+ (&le; 1mm, nach CTX/RTX &le; 2mm)</option>
+                                </select>
+                                <br />
+                                bei <input id="mr_rectalca_CRMN_text_ssl" name="mr_rectalca_CRMN_text_ssl" type="number" step="1" min="1" max="12" data-field-type="TEXT">h SSL&nbsp;&nbsp;&nbsp;
+                                <input id="mr_rectalca_CRMN_text" name="mr_rectalca_CRMN_text" title="Ergänzende Informationen (bspw. Serie / Bildnummer)" data-field-type="TEXT">
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>Fernmetastasen (M)</td>
+                <td>
+                    <table>
+                        <tr>
+                            <td><label for="mr_rectalca_LKextra">Lymphknoten extramesorektal</label></td>
+                            <td>
+                                <select id="mr_rectalca_LKextra" name="mr_rectalca_LKextra">
+                                    <option value="- (keine Angaben)">- (keine Angaben)</option>
+                                    <option value="nicht suspekt">nicht suspekt</option>
+                                    <option value="metastasensuspekt (M1)">metastasensuspekt (M1)</option>
+                                </select>&nbsp;&nbsp;&nbsp;
+                                <input id="mr_rectalca_LKextra_text" name="mr_rectalca_LKextra_text" title="Ergänzende Informationen (bspw. Serie / Bildnummer oder hier rechts / links: parailiakal interna / externa / retroperitoneal)" data-field-type="TEXT">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_rectalca_Aszites">Aszitis</label></td>
+                            <td>
+                                <select name="mr_rectalca_Aszites" id="mr_rectalca_Aszites">
+                                    <option value="- (keine Angaben)">- (keine Angaben)</option>
+                                    <option value="nein">nein</option>
+                                    <option value="ja">ja</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_rectalca_Periton">Peritoneum</label></td>
+                            <td>
+                                <select id="mr_rectalca_Periton" name="mr_rectalca_Periton" onchange="createTNM()">
+                                    <option value="- (keine Angaben)">- (keine Angaben)</option>
+                                    <option value="normal">normal</option>
+                                    <option value="Peritonealkarzinose (M1c)">Peritonealkarzinose (M1c)</option>
+                                </select>&nbsp;&nbsp;&nbsp;
+                                <input id="mr_rectalca_Periton_text" name="mr_rectalca_Periton_text" title="Ergänzende Informationen (bspw. Serie / Bildnummer oder hier Lokalisation)" data-field-type="TEXT">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_rectalca_becken">Beckenstrukturen</label></td>
+                            <td>
+                                <select name="mr_rectalca_becken" id="mr_rectalca_becken" onchange="createTNM()">
+                                    <option value="- (keine Angaben)">- (keine Angaben)</option>
+                                    <option value="unauffällig">unauffällig</option>
+                                    <option value="auffällig (siehe unten)">auffällig (siehe unten)</option>
+                                    <option value="metastasensuspekt (M1)">metastasensuspekt (M1)</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_rectalca_skelett">Skelett</label></td>
+                            <td>
+                                <select name="mr_rectalca_skelett" id="mr_rectalca_skelett" onchange="createTNM()">
+                                    <option value="- (keine Angaben)">- (keine Angaben)</option>
+                                    <option value="unauffällig">unauffällig</option>
+                                    <option value="auffällig (siehe unten)">auffällig (siehe unten)</option>
+                                    <option value="metastasensuspekt (M1)">metastasensuspekt (M1)</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="mr_rectalca_sonstiges">Sonstige Befunde</label></td>
+                <td>
+                    <textarea name="mr_rectalca_sonstiges" id="mr_rectalca_sonstiges"></textarea>
+                </td>
+            </tr>
+        </table>
+
+    </section>
+
+    <section data-section-name="Beurteilung">
+        <header class="level2" data-english="Impression">Beurteilung</header>
+        <table>
+            <tr>
+                <td></td>
+                <td>
+                    <select id="mr_rectalca_certainty" name="mr_rectalca_certainty">
+                        <option value="-">-</option>
+                        <option value="5 - sehr sicher">5 - sehr sicher</option>
+                        <option value="4 - sicher">4 - sicher</option>
+                        <option value="3 - indifferent">3 - indifferent</option>
+                        <option value="2 - unsicher">2 - unsicher</option>
+                        <option value="1 - sehr unsicher">1 - sehr unsicher</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <p>
+            <textarea name="mr_rectalca_Beurteilung" id="mr_rectalca_Beurteilung" data-english-name="Impression" title="Text bitte entsprechend Befund ergänzen / ändern!"></textarea>
+        </p>
+        <p><label for="mr_rectalca_TNM">Insgesamt TNM</label>: <input id="mr_rectalca_TNM" name="mr_rectalca_TNM" title="Bitte Format: mrT__N__M__ (CRM+/-)" data-field-type="TEXT"></p>
+    </section>
+
+</body>
+</html>

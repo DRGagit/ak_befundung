@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CT-Thorax Lungenembolie</title>
+        <meta charset="UTF-8">
+        <!--Dublin Core metadata elements here-->
+        <meta name="dcterms.title" content="CT-Thorax Lungenembolie">
+        <meta name="dcterms.abstract" content="Befundungstemplate für Lungenembolie (L3, V1, JS)">
+        <meta name="dcterms.description" content="Erstes mit der AG Thoraxdiagnostik abgestimmtes und im Konsensus verabschiedetes Template. Das Template alle wichtigen Items und gibt dem Radiologen einen Leitfaden zu genauen Beschreibung einer Lungenembolie an die Hand. (L2 - Entwurf zur Abstimmung: AG Thoraxdiagnostik - Prof. Dr. Vogel-Claussen, Version 1, kein Javascript)">
+        <meta name="dcterms.subject" content="CT; THX; CARDIO;">
+        <meta name="dcterms.identifier" content="041807.2.1806120000">
+        <meta name="dcterms.references" content="041807.2.18050400">
+        <meta name="dcterms.type" content="IMAGE_REPORT_TEMPLATE">
+        <meta name="dcterms.language" content="de">
+        <meta name="dcterms.rights" content="Die Deutsche Röntgengesellschaft e.V.(DRG) stellt sämtliche Templates kostenfrei unter der Creative Commons Lizenz  CC BY-NC-ND in der Version 4.0 zur Verfügung. Die Lizenz erlaubt Download und Weiterverteilung des Werkes unter Nennung der DRG als Urheber, jedoch keinerlei Bearbeitung oder kommerzielle Nutzung.">
+        <meta name="dcterms.license" content="http://www.befundung.drg.de/de-DE/3478/creative-commons-lizenz-cc-by-nc-nd">
+        <meta name="dcterms.date" content="2018-06-12">
+        <meta name="dcterms.creator" content="AG Thoraxdiagnostik">
+        <meta name="dcterms.contributor" content="Vogel-Claussen J">
+        <meta name="dcterms.contributor" content="Pinto dos Santos D">
+        <meta name="dcterms.publisher" content="Deutsche Röntgengesellschaft (DRG)">
+        <!--Link to Stylesheet-->
+        <script type="text/xml">
+            <!--
+            <template_attributes>
+            <top-level-flag>0</top-level-flag>
+            <status>ACTIVE</status>
+            </template_attributes>
+                    -->
+        </script>
+
+        <!--Link to Stylesheet-->
+        <style type="text/css">
+            textarea { width:500px; height: 50px; }
+            td { padding-left: 15px; vertical-align: top; }
+            input.short { width: 150px }
+            #ct_le_Pleura { width: 500px }
+            #ct_le_Lungenparenchym { width: 500px }
+            #ct_le_Atemwege { width: 500px }
+            #ct_le_Lymphknoten { width: 500px }
+            #ct_le_HerzGefaesse { width: 500px }
+            #ct_le_Oberbauch { width: 500px }
+            #ct_le_Knochen { width: 500px }
+            select { min-width: 100px }
+        </style>
+    </head>
+    <body onload="disableAll(); le_calculator()">
+
+        <script type="text/javascript">
+
+            function rvlvratio() {
+                var rvdia = document.getElementById('ct_le_rvdiam').value;
+                var rvdia = Number(rvdia);
+                var lvdia = document.getElementById('ct_le_lvdiam').value;
+                var lvdia = Number(lvdia);
+
+                var ratiorvlv = rvdia / lvdia;
+
+                if (isFinite(ratiorvlv) && ratiorvlv > 1) {
+                    document.getElementById('ct_le_rvlvratio').value = ratiorvlv.toFixed(2);
+                    document.getElementById('ct_le_rvlvratioRisk').value = "hohes Risiko";
+                } else if (isFinite(ratiorvlv) && ratiorvlv > 0) {
+                    document.getElementById('ct_le_rvlvratio').value = ratiorvlv.toFixed(2);
+                    document.getElementById('ct_le_rvlvratioRisk').value = "niedriges Risiko";
+                } else {
+                    document.getElementById('ct_le_rvlvratio').value = "-";
+                    document.getElementById('ct_le_rvlvratioRisk').value = "-";
+                }
+            }
+
+        </script>
+
+        <section data-section-name="Clinical information">
+            <header class="level1" data-english="Clinical information">Klinische Angaben</header>
+            <table>
+                <tr>
+                    <td>
+                        <textarea id="ct_le_Angaben" name="ct_le_Angaben"></textarea>
+                        <table>
+                            <tr>
+                                <td><label for="ct_le_ddimer">D-Dimer:&nbsp;</label></td>
+                                <td><input data-field-type="NUMBER" type="number" id="ct_le_ddimer" name="ct_le_ddimer" data-field-units="mg/l" class="short">&nbsp;mg/l FEU</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+
+
+
+        </section>
+
+        <hr>
+
+        <section data-section-name="Clinical question">
+            <header class="level1" data-english="Clinical question">Fragestellung</header>
+            <p>
+                <textarea name="ct_le_Fragestellung" id="ct_le_Fragestellung">Lungenembolie?</textarea>
+            </p>
+        </section>
+
+        <hr>
+
+        <section data-section-name="Befunde">
+            <header class="level1" data-english="Findings">Befund</header>
+            <table>
+                <tr>
+                    <td>
+                        <label for="ct_le_vergleich">Vergleichsuntersuchung:&nbsp;</label>
+                    </td>
+                    <td>
+                        <select name="ct_le_vergleich_select" id="ct_le_vergleich_select">
+                            <option value="keine">keine</option>
+                            <option value="vorliegend">vorliegend</option>
+                        </select>
+                        &nbsp;
+                        <input data-field-type="DATE" name="ct_le_vergleich" id="ct_le_vergleich" type="date">
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td><label for="ct_le_lungenembolie_select">Lungenembolie:</label>&nbsp;</td>
+                    <td>
+                        <select name="ct_le_lungenembolie_select" id="ct_le_lungenembolie_select">
+                            <option value="-">-</option>
+                            <option value="ja">ja</option>
+                            <option value="nein">nein</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Lokalisation:</td>
+                    <td>
+                        <input type="checkbox" name="ct_le_loc_zentral" id="ct_le_loc_zentral"><label for="ct_le_loc_zentral">zentral</label>&nbsp;
+                        <input type="checkbox" name="ct_le_loc_lobär" id="ct_le_loc_lobär"><label for="ct_le_loc_lobär">lob&auml;r</label>&nbsp;
+                        <input type="checkbox" name="ct_le_loc_segmental" id="ct_le_loc_segmental"><label for="ct_le_loc_segmental">segmental</label>&nbsp;
+                        <input type="checkbox" name="ct_le_loc_subsegmental" id="ct_le_loc_subsegmental"><label for="ct_le_loc_subsegmental">subsegmental</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Beteiligte Abschnitte:</td>
+                    <td>
+                        <label>Truncus pulmonalis</label>&nbsp;re:<input type="checkbox" name="ct_le_trpulm_re" id="ct_le_trpulm_re">&nbsp;li:<input  type="checkbox" name="ct_le_trpulm_li" id="ct_le_trpulm_li"><br>
+                        <label>Oberlappen</label>&nbsp;re:<input  type="checkbox" name="ct_le_ol_re" id="ct_le_ol_re">&nbsp;li:<input  type="checkbox" name="ct_le_ol_li" id="ct_le_ol_li"><br>
+                        <label>Mittellappen</label>&nbsp;re:<input  type="checkbox" name="ct_le_ml_re" id="ct_le_ml_re"><br>
+                        <label>Unterlappen</label>&nbsp;re:<input  type="checkbox" name="ct_le_ul_re" id="ct_le_ul_re">&nbsp;li:<input  type="checkbox" name="ct_le_ul_re" id="ct_le_ul_re"><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Zeichen älterer Embolien</td>
+                    <td>
+                        <input  type="checkbox" name="ct_le_dilbroncha" id="ct_le_dilbroncha"><label for="ct_le_dilbroncha">Dil. Bronchialarterien</label>&nbsp;
+                        <input  type="checkbox" name="ct_le_wandthr" id="ct_le_wandthr"><label for="ct_le_wandthr">wandst&auml:ndige Thromben</label>&nbsp;
+                        <input  type="checkbox" name="ct_le_wbsbnds" id="ct_le_wbsbnds"><label for="ct_le_wbsbnds">Webs/Bands</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="ct_le_Rechtsherzbelastung">Rechtsherzbelastung:&nbsp;</label>
+                    </td>
+                    <td>
+                        <table>
+                            <tr>
+                                <td><label for="ct_le_rvdiam">RV diameter</label></td>
+                                <td><input data-field-type="NUMBER" type="number" id="ct_le_rvdiam" name="ct_le_rvdiam" data-field-units="mm" class="short" onchange="rvlvratio()">&nbsp;mm</td>
+                            </tr>
+                            <tr>
+                                <td><label for="ct_le_lvdiam">LV diameter</label></td>
+                                <td><input data-field-type="NUMBER" type="number" id="ct_le_lvdiam" name="ct_le_lvdiam" data-field-units="mm" class="short" onchange="rvlvratio()">&nbsp;mm</td>
+                            </tr>
+                        </table>
+                        <select name="ct_le_Rechtsherzbelastung" id="ct_le_Rechtsherzbelastung">
+                            <option value="keine">keine</option>
+                            <option value="leichte Rechtsherzbelastung">leichte Rechtsherzbelastung</option>
+                            <option value="deutliche Rechtsherzbelastung">deutliche Rechtsherzbelastung</option>
+                        </select>
+                        <label for="ct_le_kmstau">Kontrastmittelrückstau:</label>
+                        <select name="ct_le_kmstau" id="ct_le_kmstau">
+                            <option value="kein">kein</option>
+                            <option value="VCI">VCI</option>
+                            <option value="Lebervenen">Lebervenen</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="ct_le_Arterien">Lungenarterien:&nbsp;</label>
+                    </td>
+                    <td>
+                        <label>Durchmesser Tr. pulmonalis:</label>&nbsp;<input data-field-type="NUMBER" type="number"><br>
+                        <select name="ct_le_Arterien" id="ct_le_Arterien">
+                            <option value="normal">normal</option>
+                            <option value="leicht dilatiert">leicht dilatiert</option>
+                            <option value="deutlich dilatiert">deutlich dilatiert</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="ct_le_Pleura">Pleura:&nbsp;</label>
+                    </td>
+                    <td>
+                        <input data-field-type="TEXT" name="ct_le_Pleura" id="ct_le_Pleura" value="unauffällig">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="ct_le_Lungenparenchym">Lungenparenchym:&nbsp;</label>
+                    </td>
+                    <td>
+                        <input data-field-type="TEXT" name="ct_le_Lungenparenchym" id="ct_le_Lungenparenchym" value="unauffällig">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="ct_le_Atemwege">Zentrale Atemwege:&nbsp;</label>
+                    </td>
+                    <td>
+                        <input data-field-type="TEXT" name="ct_le_Atemwege" id="ct_le_Atemwege" value="unauffällig">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="ct_le_Lymphknoten">Lymphknoten:&nbsp;</label>
+                    </td>
+                    <td>
+                        <input data-field-type="TEXT" name="ct_le_Lymphknoten" id="ct_le_Lymphknoten" value="unauffällig">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="ct_le_HerzGefaesse">Herz und übrige Gefäße:&nbsp;</label>
+                    </td>
+                    <td>
+                        <input data-field-type="TEXT" name="ct_le_HerzGefaesse" id="ct_le_HerzGefaesse" value="unauffällig">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="ct_le_Oberbauch">Oberbauch:&nbsp;</label>
+                    </td>
+                    <td>
+                        <input data-field-type="TEXT" name="ct_le_Oberbauch" id="ct_le_Oberbauch" value="unauffällig">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="ct_le_Knochen">Knochen:&nbsp;</label>
+                    </td>
+                    <td>
+                        <input data-field-type="TEXT" name="ct_le_Knochen" id="ct_le_Knochen" value="unauffällig">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="ct_le_sonstiges">Sonstiges:&nbsp;</label>
+                    </td>
+                    <td>
+                        <textarea name="ct_le_sonstiges" id="ct_le_sonstiges">-</textarea>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <hr>
+
+        <section data-section-name="Beurteilung">
+            <header class="level1" data-english="Impression">Beurteilung</header>
+            <table>
+                <tr>
+                    <td colspan="2">
+                        <textarea name="ct_le_Beurteilung" id="ct_le_Beurteilung" data-english-name="Impression" data-field-completion-action="PROHIBIT"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="ct_le_rvlvratio">RV/LV ratio</label></td>
+                    <td>
+                        <input type="number" id="ct_le_rvlvratio" name="ct_le_rvlvratio" step="0.01" class="short">&nbsp;
+                        <input id="ct_le_rvlvratioRisk" name="ct_le_rvlvratioRisk" value="-" class="short">
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+    </body>
+</html>

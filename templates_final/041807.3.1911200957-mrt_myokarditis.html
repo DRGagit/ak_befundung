@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MRT Myokarditis</title>
+    <meta charset="UTF-8" />
+    <!--Dublin Core metadata elements here-->
+    <meta name="dcterms.title" content="MRT Myokarditis" />
+    <meta name="dcterms.abstract" content="Befundungstemplate für Myokarditis (L2, V1, no JS)">
+    <meta name="dcterms.description" content="Template zur Befundung von Cardio-MR Untersuchungen bei Myokarditis.">
+    <meta name="dcterms.subject" content="MR; CARDIO;">
+    <meta name="dcterms.identifier" content="041807.3.1911200957">
+    <meta name="dcterms.type" content="IMAGE_REPORT_TEMPLATE">
+    <meta name="dcterms.language" content="de">
+    <meta name="dcterms.rights" content="Die Deutsche Röntgengesellschaft e.V.(DRG) stellt sämtliche Templates kostenfrei unter der Creative Commons Lizenz  CC BY-NC-ND in der Version 4.0 zur Verfügung. Die Lizenz erlaubt Download und Weiterverteilung des Werkes unter Nennung der DRG als Urheber, jedoch keinerlei Bearbeitung oder kommerzielle Nutzung.">
+    <meta name="dcterms.license" content="http://www.befundung.drg.de/de-DE/3478/creative-commons-lizenz-cc-by-nc-nd">
+    <meta name="dcterms.date" content="2019-11-20">
+    <meta name="dcterms.creator" content="AG Herz- und Gefäßdiagnostik">
+    <meta name="dcterms.contributor" content="Pinto dos Santos D (Kodierung)">
+    <meta name="dcterms.contributor" content="Schausten, Sabrina (Kodierung)">
+    <meta name="dcterms.contributor" content="Maintz, David">
+    <meta name="dcterms.contributor" content="Bunck, Alexander">
+    <meta name="dcterms.publisher" content="Deutsche Röntgengesellschaft (DRG)">
+    <script type="text/xml">
+        <template_attributes>
+            <top-level-flag>0</top-level-flag>
+            <status>ACTIVE</status>
+        </template_attributes>
+    </script>
+
+    <!--Link to Stylesheet-->
+    <!-- falscher Link -->
+    <!-- <link class="flag" rel="stylesheet" href="drg.css"> -->
+    <link class="flag" rel="stylesheet" href="drg2.css">
+</head>
+<body>
+    <section data-section-name="Clinical information">
+        <header class="level1">Klinische Angaben</header>
+        <p>
+            <textarea id="mr_myokadritis_angaben" name="mr_myokadritis_angaben"></textarea>
+        </p>
+    </section>
+
+    <section data-section-name="Clinical question">
+        <header class="level1">Fragestellung</header>
+        <p>
+            <textarea name="mr_myokarditis_fragestellung" id="mr_myokarditis_fragestellung"></textarea>
+        </p>
+    </section>
+
+    <section data-section-name="Befunde">
+        <header class="level1">Befund</header>
+
+        <table>
+            <tr>
+                <td>Technik</td>
+                <td>
+                    <table>
+                        <tr>
+                            <td><label for="mr_myokarditis_fieldstrength">Feldstärke</label></td>
+                            <td>
+                                <select name="mr_myokarditis_fieldstrength" id="mr_myokarditis_fieldstrength">
+                                    <option value="1.5 T">1.5 T</option>
+                                    <option value="3 T">3 T</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_myokarditis_protocol">MR Protokoll</label></td>
+                            <td>
+                                <input type="text" name="mr_myokarditis_protocol" id="mr_myokarditis_protocol" placeholder="Sequenz und Ebenen">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_myokarditis_software">Auswertesoftware</label></td>
+                            <td>
+                                <input type="text" name="mr_myokarditis_software" id="mr_myokarditis_software" placeholder="Name und Version">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_myokarditis_normwerte_quelle">Quelle der Normwerte</label></td>
+                            <td>
+                                <input type="text" name="mr_myokarditis_normwerte_quelle" id="mr_myokarditis_normwerte_quelle">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_myokarditis_kontrastmittel">KM</label></td>
+                            <td>
+                                <input type="text" name="mr_myokarditis_kontrastmittel" id="mr_myokarditis_kontrastmittel" placeholder="Name und Menge">
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>Patientencharakteristik</td>
+                <td>
+                    <table>
+                        <tr>
+                            <td><label for="mr_myokarditis_patsex">Geschlecht</label></td>
+                            <td>
+                                <select name="mr_myokarditis_patsex" id="mr_myokarditis_patsex">
+                                    <option value="männlich">männlich</option>
+                                    <option value="weiblich">weiblich</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_myokarditis_patweight">Körpergewicht</label></td>
+                            <td>
+                                <input class="small" type="number" name="mr_myokarditis_patweight" id="mr_myokarditis_patweight" data-field-units="kg"> kg
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_myokarditis_patheight">Körpergröße</label></td>
+                            <td>
+                                <input class="small" type="number" name="mr_myokarditis_patheight" id="mr_myokarditis_patheight" data-field-units="m"> m
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_myokarditis_patbsa">Körperoberlfäche (BSA)</label></td>
+                            <td>
+                                <input class="small" type="number" name="mr_myokarditis_patbsa" id="mr_myokarditis_patbsa" data-field-units="m2"> m&sup2;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_myokarditis_pathkt">Hämatokrit</label></td>
+                            <td>
+                                <input class="small" type="number" name="mr_myokarditis_pathkt" id="mr_myokarditis_pathkt">
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <td><label for="mr_myokarditis_comparison">Vergleichsuntersuchung</label></td>
+                <td>
+                    <select name="mr_myokarditis_comparison" id="mr_myokarditis_comparison">
+                        <option value="keine">keine</option>
+                        <option value="vorliegend">vorliegend</option>
+                    </select>
+                    <input name="mr_myokarditis_comparison_date" id="mr_myokarditis_comparison_date" type="date" data-field-type="DATE">
+                </td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <th>Herz</th>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <td>Bildqualität</td>
+                <td>
+                    <table>
+                        <tr>
+                            <td><label for="mr_myokarditis_einschr">Einschränkung</label></td>
+                            <td>
+                                <select name="mr_myokarditis_einschr" id="mr_myokarditis_einschr">
+                                    <option value="-">-</option>
+                                    <option value="nein">nein</option>
+                                    <option value="ja">ja</option>
+                                </select>
+                                <input type="text" name="mr_myokarditis_einschr_text" id="mr_myokarditis_einschr_text">
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>Funktionsanalyse LV</td>
+                <td>
+                    <table>
+                        <tr>
+                            <td><label for="mr_myokarditis_lvedd">LV enddiastolischer Diameter (LV EDD):</label></td>
+                            <td><input class="small" type="number" name="mr_myokarditis_lvedd" id="mr_myokarditis_lvedd">&nbsp;mm</td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_myokarditis_lvedvi">LV enddiastolischer Volumenindex (LV EDVi):</label></td>
+                            <td><input class="small" type="number" name="mr_myokarditis_lvedvi" id="mr_myokarditis_lvedvi">&nbsp;ml/m&sup2; (Norm: xx ml/m&sup2;)</td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_myokarditis_lvesvi">LV endsystolischer  Volumenindex (LV ESVi):</label></td>
+                            <td><input class="small" type="number" name="mr_myokarditis_lvesvi" id="mr_myokarditis_lvesvi">&nbsp;ml/m&sup2; (Norm: xx ml/m&sup2;)</td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_myokarditis_lvef">LV Ejektions-Fraktion (LV EF):</label></td>
+                            <td><input class="small" type="number" name="mr_myokarditis_lvef" id="mr_myokarditis_lvef">&nbsp;% (Norm: xx %)</td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_myokarditis_lvedm">LV ED Masse normiert:</label></td>
+                            <td><input class="small" type="number" name="mr_myokarditis_lvedm" id="mr_myokarditis_lvedm">&nbsp;g/m&sup2; (Norm: xx g/m&sup2;)</td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_myokarditis_lv_wandbwgst">Regionale Wandbewegungsstörungen LV:</label></td>
+                            <td>
+                                <select name="mr_myokarditis_lv_wandbwgst" id="mr_myokarditis_lv_wandbwgst">
+                                    <option value="-">-</option>
+                                    <option value="nein">nein</option>
+                                    <option value="ja">ja</option>
+                                </select>
+                                <input type="text" name="mr_myokarditis_lv_wandbwgst_text" id="mr_myokarditis_lv_wandbwgst_text">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_myokarditis_ivsd">Interventrikuläre Septumdicke (IVSD):</label></td>
+                            <td><input class="small" type="number" name="mr_myokarditis_ivsd" id="mr_myokarditis_ivsd">&nbsp;mm</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Funktionsanalyse RV</td>
+                <td>
+                    <table>
+                        <tr>
+                            <td><label for="mr_myokarditis_rvedd">RV enddiastolischer Diameter (RV EDD):</label></td>
+                            <td><input class="small" type="number" name="mr_myokarditis_rvedd" id="mr_myokarditis_rvedd">&nbsp;mm</td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_myokarditis_rvedvi">RV enddiastolischer Volumenindex (RV EDVi):</label></td>
+                            <td><input class="small" type="number" name="mr_myokarditis_rvedvi" id="mr_myokarditis_rvedvi">&nbsp;ml/m&sup2; (Norm: xx ml/m&sup2;)</td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_myokarditis_rvesvi">RV endsystolischer  Volumenindex (RV ESVi):</label></td>
+                            <td><input class="small" type="number" name="mr_myokarditis_rvesvi" id="mr_myokarditis_rvesvi">&nbsp;ml/m&sup2; (Norm: xx ml/m&sup2;)</td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_myokarditis_rvef">RV Ejektions-Fraktion (RV EF):</label></td>
+                            <td><input class="small" type="number" name="mr_myokarditis_rvef" id="mr_myokarditis_rvef">&nbsp;% (Norm: xx %)</td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_myokarditis_rv_wandbwgst">Regionale Wandbewegungsstörungen RV:</label></td>
+                            <td>
+                                <select name="mr_myokarditis_rv_wandbwgst" id="mr_myokarditis_rv_wandbwgst">
+                                    <option value="-">-</option>
+                                    <option value="nein">nein</option>
+                                    <option value="ja">ja</option>
+                                </select>
+                                <input type="text" name="mr_myokarditis_rv_wandbwgst_text" id="mr_myokarditis_rv_wandbwgst_text">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_myokarditis_ivsd">Interventrikuläre Septumdicke (IVSD):</label></td>
+                            <td><input class="small" type="number" name="mr_myokarditis_ivsd" id="mr_myokarditis_ivsd">&nbsp;mm</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Morphologie</td>
+                <td>
+                    <table>
+                        <tr>
+                            <td>Vorhofgröße endsystolisch im 4-Kammerblick</td>
+                            <td><label for="mr_myokarditis_vhfed_4k">RA:</label></td>
+                            <td><input class="small" type="number" name="mr_myokarditis_vhfed_4k" id="mr_myokarditis_vhfed_4k">&nbsp;mm</td>
+                        </tr>
+                        <tr>
+                            <td>(longitudinal x transversal)</td>
+                            <td><label for="mr_myokarditis_vhfed_longtrans">LA:</label></td>
+                            <td><input class="small" type="number" name="mr_myokarditis_vhfed_longtrans" id="mr_myokarditis_vhfed_longtrans">&nbsp;mm</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <table>
+                        <tr>
+                            <td><label for="mr_myokarditis_klappenpath">Herzklappenpathologie:</label></td>
+                            <td>
+                                <select name="mr_myokarditis_klappenpath" id="mr_myokarditis_klappenpath">
+                                    <option value="-">-</option>
+                                    <option value="nicht untersucht">nicht untersucht</option>
+                                    <option value="nein">nein</option>
+                                    <option value="ja">ja</option>
+                                </select>
+                                <input type="text" name="mr_myokarditis_klappenpath_text" id="mr_myokarditis_klappenpath_text">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_myokarditis_thromben">Intracavitäre Thromben:</label></td>
+                            <td>
+                                <select name="mr_myokarditis_thromben" id="mr_myokarditis_thromben">
+                                    <option value="-">-</option>
+                                    <option value="nein">nein</option>
+                                    <option value="ja">ja</option>
+                                </select>
+                                <input type="text" name="mr_myokarditis_thromben_text" id="mr_myokarditis_thromben_text">
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Gewebecharakterisierung<br>(Lake Louise Kriterien)</td>
+                <td>
+                    <table>
+                        <tr>
+                            <td><label for="mr_myokarditis_oedem_reg">Myokardödem regional:</label></td>
+                            <td>
+                                <select name="mr_myokarditis_oedem_reg" id="mr_myokarditis_oedem_reg">
+                                    <option value="-">-</option>
+                                    <option value="nein">nein</option>
+                                    <option value="ja">ja</option>
+                                </select>
+                                <input type="text" name="mr_myokarditis_oedem_reg_text" id="mr_myokarditis_oedem_reg_text">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_myokarditis_oedem_glob">Myokardödem global:</label></td>
+                            <td>
+                                <select name="mr_myokarditis_oedem_glob" id="mr_myokarditis_oedem_glob">
+                                    <option value="-">-</option>
+                                    <option value="nein">nein</option>
+                                    <option value="ja">ja</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_myokarditis_lge_myo">Late Gadolinium Enhancement (LGE) Myokard:</label></td>
+                            <td>
+                                <select name="mr_myokarditis_lge_myo" id="mr_myokarditis_lge_myo">
+                                    <option value="-">-</option>
+                                    <option value="nein">nein</option>
+                                    <option value="ja">ja</option>
+                                </select>
+                                <input type="text" name="mr_myokarditis_lge_myo_text" id="mr_myokarditis_lge_myo_text">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_myokarditis_lge_peri">Late Gadolinium Enhancement (LGE) Perikard:</label></td>
+                            <td>
+                                <select name="mr_myokarditis_lge_peri" id="mr_myokarditis_lge_peri">
+                                    <option value="-">-</option>
+                                    <option value="nein">nein</option>
+                                    <option value="ja">ja</option>
+                                </select>
+                                <input type="text" name="mr_myokarditis_lge_peri_text" id="mr_myokarditis_lge_peri_text">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_myokarditis_perikarderg">Perikarderguss:</label></td>
+                            <td>
+                                <select name="mr_myokarditis_perikarderg" id="mr_myokarditis_perikarderg">
+                                    <option value="-">-</option>
+                                    <option value="nein">nein</option>
+                                    <option value="ja">ja</option>
+                                </select>
+                                max. Saumbreite: <input class="small" type="text" name="mr_myokarditis_perikarderg_text" id="mr_myokarditis_perikarderg_text" data-field-units="mm"> mm
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_myokarditis_t2map">T2-Mapping:</label></td>
+                            <td>
+                                <input type="text" name="mr_myokarditis_t2map" id="mr_myokarditis_t2map"> ms
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_myokarditis_t1map">T1-Mapping nativ:</label></td>
+                            <td>
+                                <input type="text" name="mr_myokarditis_t1map" id="mr_myokarditis_t1map"> ms
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_myokarditis_t1cemap">T1-Mapping post KM:</label></td>
+                            <td>
+                                <input type="text" name="mr_myokarditis_t1cemap" id="mr_myokarditis_t1cemap"> ms
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_myokarditis_ecv">ECV:</label></td>
+                            <td>
+                                <input type="text" name="mr_myokarditis_ecv" id="mr_myokarditis_ecv"> %
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">(Mit Angabe der verwendeten Referenzwerte, Sequenznamen und Durchführung – aus eigenem Pool)</td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <th>Sonstige Auffälligkeiten</th>
+            </tr>
+            <tr>
+                <td>
+                    <textarea class="ta-middle" name="mr_myokarditis_other" id="mr_myokarditis_other"></textarea>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <section data-section-name="Beurteilung">
+        <header class="level1">Beurteilung</header>
+        <table>
+            <tr>
+                <td><label for="mr_myokarditis_beurt_myok">MR-tomographisch Myokarditis:</label></td>
+                <td>
+                    <select name="mr_myokarditis_beurt_myok" id="mr_myokarditis_beurt_myok">
+                        <option value="-">-</option>
+                        <option value="nein">nein</option>
+                        <option value="möglich">möglich</option>
+                        <option value="ja">ja</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <p>
+            <textarea name="mr_myokarditis_beurteilung" id="mr_myokarditis_beurteilung" data-field-completion-action="ALERT"></textarea>
+        </p>
+    </section>
+</body>
+</html>

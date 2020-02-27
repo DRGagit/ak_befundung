@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<!-- Version: 2018-06-25 -->
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Befundbericht nach DIN25300-1</title>
+        <!--Dublin Core metadata elements here-->
+        <meta name="dcterms.title" content="Befundbericht nach DIN25300-1" />
+        <meta name="dcterms.abstract" content="Befundbericht nach DIN25300-1 (L1, V1, no JS)" />
+        <meta name="dcterms.description" content="Vorlage für einen Befundbericht gemäß DIN25300-1" />
+        <meta name="dcterms.subject" content="US; PET; CR; CT; MR; NM;" />
+        <meta name="dcterms.identifier" content="041807.5.1806281203" />
+        <meta name="dcterms.date" content="2018-06-25" />
+        <meta name="dcterms.publisher" content="Deutsche Röntgengesellschaft (DRG)" />
+        <meta name="dcterms.creator" content="AG Informationstechnologie der DRG" />
+        <meta name="dcterms.contributor" content="Hackländer, Thomas [Kodierung]" />
+        <meta name="dcterms.type" content="IMAGE_REPORT_TEMPLATE" />
+        <meta name="dcterms.language" content="de" />
+        <meta name="dcterms.rights" content="(c) Deutsche Röntgengesellschaft e.V.(DRG). Die Vorlage kann kostenfrei unter der Creative Commons Lizenz  CC BY-NC-ND in der Version 4.0 verwendet werden." />
+        <meta name="dcterms.license" content="http://www.befundung.drg.de/de-DE/3478/creative-commons-lizenz-cc-by-nc-nd" />
+
+        <!--non-Dublin Core metadata attributes and term elements here-->
+        <script type="text/xml">
+             <template_attributes>
+                <top-level-flag>true</top-level-flag>
+                <status>ACTIVE</status>
+                <user-list></user-list>
+                <provider-grouplist></provider-grouplist>
+                <coded_content>
+                    <coding_schemes>
+                        <!-- See: https://www.hl7.org/fhir/terminologies-systems.html -->
+                        <coding_scheme name="RADLEX" designator="2.16.840.1.113883.6.256" />
+                        <coding_scheme name="LOINC" designator="2.16.840.1.113883.6.1" />
+                        <entry ORIGTXT="S001">
+                            <term>
+                                <code meaning="History" value="11329-0" scheme="LOINC" />
+                            </term>
+                        </entry>
+                        <entry ORIGTXT="S002">
+                            <term>
+                                <code meaning="Indications for Procedure" value="18785-6" scheme="LOINC" />
+                            </term>
+                        </entry>
+                        <entry ORIGTXT="S003">
+                            <term>
+                                <code meaning="Request" value="55115-0" scheme="LOINC" />
+                            </term>
+                        </entry>
+                        <entry ORIGTXT="S004">
+                            <term>
+                                <code meaning="Findings" value="59776-5" scheme="LOINC" />
+                            </term>
+                        </entry>
+                        <entry ORIGTXT="S005">
+                            <term>
+                                <code meaning="Impressions" value="19005-8" scheme="LOINC" />
+                            </term>
+                        </entry>
+                        <entry ORIGTXT="S006">
+                            <term>
+                                <code meaning="Recommendations" value="18783-1" scheme="LOINC" />
+                            </term>
+                        </entry>
+                    </coding_schemes>
+                </coded_content>
+            </template_attributes>
+        </script>
+
+        <!-- Do not use bold labels -->
+        <style>
+            label {font-weight: normal;}
+        </style>
+
+        <!--Link to Stylesheet-->
+        <link rel="stylesheet" type="text/css" href="drg.css" />
+
+    </head>
+
+    <body>
+
+        <section id="S001" data-section-name="Klinische Angaben" data-section-required="true">
+            <header class="level1"><strong>Klinische Angaben</strong></header>
+            <p/>
+            <table>
+                <tr>
+                    <td></td>
+                    <td> <textarea id="TA001" class="ta-middle" rows="3" cols="80"></textarea> </td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="S002" data-section-name="Medizinische Fragestellung" data-section-required="false">
+            <header class="level1"><strong>Medizinische Fragestellung</strong></header>
+            <p/>
+            <table>
+                <tr>
+                    <td></td>
+                    <td> <textarea id="TA002" class="ta-small" rows="3" cols="80"></textarea> </td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="S003" data-section-name="Befundungsfragestellung" data-section-required="true">
+            <header class="level1"><strong>Befundungsfragestellung</strong></header>
+            <p/>
+            <table>
+                <tr>
+                    <td></td>
+                    <td> <textarea id="TA003" class="ta-small" rows="3" cols="80"></textarea> </td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="S004" data-section-name="Beschreibung" data-section-required="false">
+            <header class="level1"><strong>Beschreibung</strong></header>
+            <p/>
+            <table>
+                <tr>
+                    <td></td>
+                    <td> <textarea id="TA004" class="ta-big" rows="3" cols="80"></textarea> </td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="S005" data-section-name="Beurteilung" data-section-required="true">
+            <header class="level1"><strong>Beurteilung</strong></header>
+            <p/>
+            <table>
+                <tr>
+                    <td></td>
+                    <td> <textarea id="TA005" class="ta-middle" rows="3" cols="80"></textarea> </td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="S006" data-section-name="Empfehlung" data-section-required="false">
+            <header class="level1"><strong>Empfehlung</strong></header>
+            <p/>
+            <table>
+                <tr>
+                    <td></td>
+                    <td> <textarea id="TA006" class="ta-small" rows="3" cols="80"></textarea> </td>
+                </tr>
+            </table>
+        </section>
+
+    </body>
+
+</html>

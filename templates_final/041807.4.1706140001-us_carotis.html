@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ultraschall Carotis</title>
+    <meta charset="UTF-8">
+    <!--Dublin Core metadata elements here-->
+    <meta name="dcterms.title" content="Ultraschall Carotis">
+    <meta name="dcterms.abstract" content="Befundungstemplate für Ultraschall der Carotiden (L1, V1, JS)">
+    <meta name="dcterms.description" content="Einfaches Template zur Befundung von Dopplersonographischen Untersuchungen der Carotiden. Enthält Javascript zur automatischen Klassifizierung der Stenosegrade der A. carotis interna gemäß DEGUM/NASCET. (L1 - von Einzelperson formulierter Vorschlag, Version 1, inkl. Javascript)">
+    <meta name="dcterms.subject" content="US; CARDIO; NEURO;">
+    <meta name="dcterms.identifier" content="041807.4.1706140001">
+    <meta name="dcterms.type" content="IMAGE_REPORT_TEMPLATE">
+    <meta name="dcterms.language" content="de">
+    <meta name="dcterms.rights" content="Die Deutsche Röntgengesellschaft e.V.(DRG) stellt sämtliche Templates kostenfrei unter der Creative Commons Lizenz  CC BY-NC-ND in der Version 4.0 zur Verfügung. Die Lizenz erlaubt Download und Weiterverteilung des Werkes unter Nennung der DRG als Urheber, jedoch keinerlei Bearbeitung oder kommerzielle Nutzung.">
+    <meta name="dcterms.license" content="http://www.befundung.drg.de/de-DE/3478/creative-commons-lizenz-cc-by-nc-nd">
+    <meta name="dcterms.date" content="2017-06-14">
+    <meta name="dcterms.creator" content="Pinto dos Santos D">
+    <meta name="dcterms.contributor" content="Oberle R, Mildenberger P, Arnhold G">
+    <meta name="dcterms.publisher" content="Deutsche Röntgengesellschaft (DRG)">
+    <!--Link to Stylesheet-->
+    <script type="text/xml">
+        <!--
+        <template_attributes>
+        <top-level-flag>0</top-level-flag>
+        <status>ACTIVE</status>
+        </template_attributes>
+		-->
+    </script>
+    <!--Link to Stylesheet-->
+    <style type="text/css">
+        header { font-size: 14pt; font-weight: bold; padding-top: 5px; padding-bottom: 5px; }
+        td { padding-right: 15px; vertical-align: top;}
+    </style>
+</head>
+<body onload="templateOnload()">
+
+    <script type="text/javascript">
+        function calcStenosis(side) {
+            if (document.getElementById('us_ac_'+ side +'aci_psv').value == "")
+                return false;
+
+            var velocity = document.getElementById('us_ac_'+ side +'aci_psv').value;
+
+            if (velocity == 0)
+                document.getElementById('us_ac_' + side + 'aci_stenosis').selectedIndex = 5;
+            else if (velocity < 200)
+                document.getElementById('us_ac_' + side + 'aci_stenosis').selectedIndex = 1;
+            else if (velocity < 250)
+                document.getElementById('us_ac_' + side + 'aci_stenosis').selectedIndex = 2;
+            else if (velocity < 300)
+                document.getElementById('us_ac_' + side + 'aci_stenosis').selectedIndex = 3;
+            else if (velocity >= 300)
+                document.getElementById('us_ac_' + side + 'aci_stenosis').selectedIndex = 4;
+        }
+
+        function templateOnload () {
+            calcStenosis('r');
+            calcStenosis('l');
+        }
+
+        if (window.jQuery) {
+            $(document).ready(function(){
+                templateOnload();
+            });
+        }
+    </script>
+
+    <section data-section-name="Clinical information">
+        <header class="level1" data-english="Clinical information">Klinische Angaben</header>
+        <p>
+            <textarea id="us_ac_Angaben" name="us_ac_Angaben"></textarea>
+        </p>
+    </section>
+
+    <section data-section-name="Clinical question">
+        <header class="level1" data-english="Clinical question">Fragestellung</header>
+        <p>
+            <textarea name="us_ac_Fragestellung" id="us_ac_Fragestellung"></textarea>
+        </p>
+    </section>
+
+    <section data-section-name="Befunde">
+        <header class="level1" data-english="Findings">Befund</header>
+        <table>
+            <tr>
+                <td>
+                    <label for="us_ac_vergleich">Voruntersuchung:</label>
+                </td>
+                <td>
+                    <select name="us_ac_vergleich_select" id="us_ac_vergleich_select">
+                        <option value="keine">keine</option>
+                        <option value="vorliegend">vorliegend</option>
+                    </select>
+                    <input type="date" name="us_ac_vergleich" id="us_ac_vergleich" data-field-type="DATE">
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+        Rechts:
+        <table>
+            <tr>
+                <td>Gefäß</td>
+                <td>PSV</td>
+                <td>EDV</td>
+                <td>Ergänzung</td>
+            </tr>
+            <tr>
+                <td>A. carotis communis</td>
+                <td><input class="input_short" type="number" step="0.01" name="us_ac_racc_psv" id="us_ac_racc_psv" data-field-type="NUMBER">&nbsp;cm/s</td>
+                <td><input class="input_short" type="number" step="0.01" name="us_ac_racc_edv" id="us_ac_racc_edv" data-field-type="NUMBER">&nbsp;cm/s</td>
+                <td>
+                    <select id="us_ac_racc_plaque" name="us_ac_racc_plaque">
+                        <option value="-">-</option>
+                        <option value="keine Auffälligkeiten">keine Auffälligkeiten</option>
+                        <option value="atheromatöse Plaques">atheromatöse Plaques</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>A. carotis interna</td>
+                <td><input class="input_short" type="number" step="0.01" name="us_ac_raci_psv" id="us_ac_raci_psv" onchange="calcStenosis('r')" data-field-type="NUMBER">&nbsp;cm/s</td>
+                <td><input class="input_short" type="number" step="0.01" name="us_ac_raci_edv" id="us_ac_raci_edv" data-field-type="NUMBER">&nbsp;cm/s</td>
+                <td>
+                    <select id="us_ac_raci_plaque" name="us_ac_raci_plaque" onchange="calcStenosis('r')">
+                        <option value="-">-</option>
+                        <option value="keine Auffälligkeiten">keine Auffälligkeiten</option>
+                        <option value="atheromatöse Plaques">atheromatöse Plaques</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>A. carotis externa</td>
+                <td><input class="input_short" type="number" step="0.01" name="us_ac_race_psv" id="us_ac_race_psv" data-field-type="NUMBER">&nbsp;cm/s</td>
+                <td><input class="input_short" type="number" step="0.01" name="us_ac_race_edv" id="us_ac_race_edv" data-field-type="NUMBER">&nbsp;cm/s</td>
+                <td>
+                    <select id="us_ac_race_plaque" name="us_ac_race_plaque">
+                        <option value="-">-</option>
+                        <option value="keine Auffälligkeiten">keine Auffälligkeiten</option>
+                        <option value="atheromatöse Plaques">atheromatöse Plaques</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>A. vertebralis</td>
+                <td><input class="input_short" type="number" step="0.01" name="us_ac_rvert_psv" id="us_ac_rvert_psv" data-field-type="NUMBER">&nbsp;cm/s</td>
+                <td><input class="input_short" type="number" step="0.01" name="us_ac_rvert_edv" id="us_ac_rvert_edv" data-field-type="NUMBER">&nbsp;cm/s</td>
+                <td>
+                    <select id="us_ac_rvert_flow" name="us_ac_rvert_flow">
+                        <option value="-">-</option>
+                        <option value="kein Fluss">kein Fluss</option>
+                        <option value="antegrader Fluss">antegrader Fluss</option>
+                        <option value="retrograder Fluss">retrograder Fluss</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+        Links:
+        <table>
+            <tr>
+                <td>Gefäß</td>
+                <td>PSV</td>
+                <td>EDV</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>A. carotis communis</td>
+                <td><input class="input_short" type="number" step="0.01" name="us_ac_lacc_psv" id="us_ac_lacc_psv" data-field-type="NUMBER">&nbsp;cm/s</td>
+                <td><input class="input_short" type="number" step="0.01" name="us_ac_lacc_edv" id="us_ac_lacc_edv" data-field-type="NUMBER">&nbsp;cm/s</td>
+                <td>
+                    <select id="us_ac_lacc_plaque" name="us_ac_lacc_plaque">
+                        <option value="-1" label="-">-</option>
+                        <option value="0" label="keine Auffälligkeiten">0</option>
+                        <option value="1" label="atheromatöse Plaques">1</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>A. carotis interna</td>
+                <td><input class="input_short" type="number" step="0.01" name="us_ac_laci_psv" id="us_ac_laci_psv" onchange="calcStenosis('l')" data-field-type="NUMBER">&nbsp;cm/s</td>
+                <td><input class="input_short" type="number" step="0.01" name="us_ac_laci_edv" id="us_ac_laci_edv" data-field-type="NUMBER">&nbsp;cm/s</td>
+                <td>
+                    <select id="us_ac_laci_plaque" name="us_ac_laci_plaque" onchange="calcStenosis('l')">
+                        <option value="-">-</option>
+                        <option value="keine Auffälligkeiten">keine Auffälligkeiten</option>
+                        <option value="atheromatöse Plaques">atheromatöse Plaques</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>A. carotis externa</td>
+                <td><input class="input_short" type="number" step="0.01" name="us_ac_lace_psv" id="us_ac_lace_psv" data-field-type="NUMBER">&nbsp;cm/s</td>
+                <td><input class="input_short" type="number" step="0.01" name="us_ac_lace_edv" id="us_ac_lace_edv" data-field-type="NUMBER">&nbsp;cm/s</td>
+                <td>
+                    <select id="us_ac_lace_plaque" name="us_ac_lace_plaque">
+                        <option value="-">-</option>
+                        <option value="keine Auffälligkeiten">keine Auffälligkeiten</option>
+                        <option value="atheromatöse Plaques">atheromatöse Plaques</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>A. vertebralis</td>
+                <td><input class="input_short" type="number" step="0.01" name="us_ac_lvert_psv" id="us_ac_lvert_psv" data-field-type="NUMBER">&nbsp;cm/s</td>
+                <td><input class="input_short" type="number" step="0.01" name="us_ac_lvert_edv" id="us_ac_lvert_edv" data-field-type="NUMBER">&nbsp;cm/s</td>
+                <td>
+                    <select id="us_ac_lvert_flow" name="us_ac_lvert_flow">
+                        <option value="-">-</option>
+                        <option value="kein Fluss">kein Fluss</option>
+                        <option value="antegrader Fluss">antegrader Fluss</option>
+                        <option value="retrograder Fluss">retrograder Fluss</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <section data-section-name="Beurteilung">
+        <header class="level1" data-english="Impression">Beurteilung</header>
+        <table>
+            <tr>
+                <td>A. carotis interna rechts</td>
+                <td>
+                    <select id="us_ac_raci_stenosis" name="us_ac_raci_stenosis">
+                        <option value="-">-</option>
+                        <option value="keine relevante Stenose">keine relevante Stenose</option>
+                        <option value="50&#37; bis 59&#37;">50&#37; bis 59&#37;</option>
+                        <option value="60&#37; bis 69&#37;">60&#37; bis 69&#37;</option>
+                        <option value="über 70&#37;">über 70&#37;</option>
+                        <option value="vollständiger Verschluss">vollständiger Verschluss</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>A. carotis interna links</td>
+                <td>
+                    <select id="us_ac_laci_stenosis" name="us_ac_laci_stenosis">
+                        <option value="-">-</option>
+                        <option value="keine relevante Stenose">keine relevante Stenose</option>
+                        <option value="50&#37; bis 59&#37;">50&#37; bis 59&#37;</option>
+                        <option value="60&#37; bis 69&#37;">60&#37; bis 69&#37;</option>
+                        <option value="über 70&#37;">über 70&#37;</option>
+                        <option value="vollständiger Verschluss">vollständiger Verschluss</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <textarea name="us_ac_Beurteilung" id="us_ac_Beurteilung" data-english-name="Impression"></textarea>
+    </section>
+</body>
+</html>

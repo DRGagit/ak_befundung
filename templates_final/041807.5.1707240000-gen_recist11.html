@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RECIST 1.1</title>
+    <meta charset="UTF-8">
+    <!--Dublin Core metadata elements here-->
+    <meta name="dcterms.title" content="RECIST 1.1">
+    <meta name="dcterms.abstract" content="Befundungstemplate für einfache RECIST1.1 Berechnungen (L1, V1, JS)">
+    <meta name="dcterms.description" content="Befundungstemplate für einfache RECIST1.1 Berechnungen. Unterstützung der Einschätzung des Therapieansprechens mittels automatischer Berechnungen. Die endgültige Entscheidung über die Kategorisierung des Therapieansprechens liegt jedoch beim jeweiligen Radiologen (L1 - svon Einzelperson formulierter Vorschlag, Version 1, inkl. Javascript)">
+    <meta name="dcterms.subject" content="OT; ONKO;">
+    <meta name="dcterms.identifier" content="041807.5.1707240000">
+    <meta name="dcterms.type" content="IMAGE_REPORT_TEMPLATE">
+    <meta name="dcterms.language" content="de">
+    <meta name="dcterms.rights" content="Die Deutsche Röntgengesellschaft e.V.(DRG) stellt sämtliche Templates kostenfrei unter der Creative Commons Lizenz  CC BY-NC-ND in der Version 4.0 zur Verfügung. Die Lizenz erlaubt Download und Weiterverteilung des Werkes unter Nennung der DRG als Urheber, jedoch keinerlei Bearbeitung oder kommerzielle Nutzung.">
+    <meta name="dcterms.license" content="http://www.befundung.drg.de/de-DE/3478/creative-commons-lizenz-cc-by-nc-nd">
+    <meta name="dcterms.date" content="2017-07-24">
+    <meta name="dcterms.creator" content="Pinto dos Santos D">
+    <meta name="dcterms.contributor" content="Persigehl T, AG Onkologische Bildgebung">
+    <meta name="dcterms.publisher" content="Deutsche Röntgengesellschaft (DRG)">
+    <!--Link to Stylesheet-->
+    <script type="text/xml">
+        <!--
+        <template_attributes>
+        <top-level-flag>0</top-level-flag>
+        <status>ACTIVE</status>
+        </template_attributes>
+		-->
+    </script>
+    <!--Link to Stylesheet-->
+    <style type="text/css">
+        body { font-family: sans-serif; font-size: 10pt; }
+        header { font-size: 14pt; font-weight: bold; padding-top: 5px; padding-bottom: 5px; }
+        td { padding-right: 15px; vertical-align: top; }
+        input[type="number"] { width: 50px; }
+        .topLine { border-top: 2px solid black; padding-top: 5px; }
+    </style>
+</head>
+<body onload="templateOnload()">
+
+    <script type="text/javascript">
+
+        var NTXarray = ["gen_recist11_NtL01present", "gen_recist11_NtL02present", "gen_recist11_NtL03present", "gen_recist11_NtL04present", "gen_recist11_NtL05present", "gen_recist11_NtL06present", "gen_recist11_NtL07present", "gen_recist11_NtL08present", "gen_recist11_NtL09present", "gen_recist11_NtL10present"]
+
+        function templateOnload () {
+            toggelFU();
+            enableRecistButton();
+        }
+
+        function toggelFU () {
+            if ( document.getElementById("gen_recist11_BaseOrFollowup").value == "Follow-up" ) {
+                document.getElementById("table_PreviousValues").style.display = "table";
+                document.getElementById("row_TLrelBase").style.display = "table-row";
+                document.getElementById("row_TLrelNadir").style.display = "table-row";
+                document.getElementById("row_TLrelLast").style.display = "table-row";
+                document.getElementById("row_relEmpty").style.display = "table-row";
+                document.getElementById("row_TLresp").style.display = "table-row";
+                document.getElementById("row_NTresp").style.display = "table-row";
+                document.getElementById("row_OverallResp").style.display = "table-row";
+                document.getElementById("gen_recist11_NonTargets").options[3].style.display = "initial";
+                document.getElementById("gen_recist11_NonTargets").options[4].style.display = "initial";
+                for ( i = 0; i < NTXarray.length; i++ ) {
+                    document.getElementById(NTXarray[i]).options[2].style.display = "initial";
+                    document.getElementById(NTXarray[i]).options[3].style.display = "initial";
+                }
+            } else {
+                document.getElementById("table_PreviousValues").style.display = "none";
+                document.getElementById("row_TLrelBase").style.display = "none";
+                document.getElementById("row_TLrelNadir").style.display = "none";
+                document.getElementById("row_TLrelLast").style.display = "none";
+                document.getElementById("row_relEmpty").style.display = "none";
+                document.getElementById("row_TLresp").style.display = "none";
+                document.getElementById("row_NTresp").style.display = "none";
+                document.getElementById("row_OverallResp").style.display = "none";
+                document.getElementById("gen_recist11_NonTargets").options[3].style.display = "none";
+                document.getElementById("gen_recist11_NonTargets").options[4].style.display = "none";
+                for ( i = 0; i < NTXarray.length; i++ ) {
+                    document.getElementById(NTXarray[i]).options[2].style.display = "none";
+                    document.getElementById(NTXarray[i]).options[3].style.display = "none";
+                }
+            }
+        }
+
+        function enableRecistButton () {
+            document.getElementById('cell_relEmpty_Button').innerHTML = "<mark><button type='button' onclick='calcRECIST()'>Vorschlag</button></mark>";
+        }
+
+        function calcSums () {
+            // initialize Variables
+            var TargetSum = 0;
+            var BaseSum = document.getElementById("gen_recist11_SumBase").value;
+            var NadirSum = document.getElementById("gen_recist11_SumNadir").value;
+            var LastSum = document.getElementById("gen_recist11_SumLast").value;
+
+            // sum Target Lesions
+            TargetSum = Number(document.getElementById("gen_recist11_TL1diam").value);
+            TargetSum += Number(document.getElementById("gen_recist11_TL2diam").value);
+            TargetSum += Number(document.getElementById("gen_recist11_TL3diam").value);
+            TargetSum += Number(document.getElementById("gen_recist11_TL4diam").value);
+            TargetSum += Number(document.getElementById("gen_recist11_TL5diam").value);
+
+            // display target sum
+            document.getElementById("gen_recist11_SumTarget").value = TargetSum;
+
+            // check for previous values and compute relative differences
+            if ( BaseSum != "" ) {
+                document.getElementById("gen_recist11_TLrelBase").value = Number((TargetSum*100 / BaseSum) - 100).toFixed(0);
+            }
+            if ( NadirSum != "" ) {
+                document.getElementById("gen_recist11_TLrelNadir").value = Number((TargetSum*100 / NadirSum) - 100).toFixed(0);
+            }
+            if ( LastSum != "" ) {
+                document.getElementById("gen_recist11_TLrelLast").value = Number((TargetSum*100 / LastSum) - 100).toFixed(0);
+            }
+        }
+
+        function checkNT () {
+            var NTStatus = 1;
+            for ( i = 0; i < NTXarray.length; i++ ) {
+                if (document.getElementById(NTXarray[i]).value == "verschwunden") {
+                    NTStatus = 3;
+                    continue;
+                }
+            }
+            for ( i = 0; i < NTXarray.length; i++ ) {
+                if (document.getElementById(NTXarray[i]).value == "vorhanden") {
+                    NTStatus = 2;
+                    break;
+                }
+            }
+            for ( i = 0; i < NTXarray.length; i++ ) {
+                if (document.getElementById(NTXarray[i]).value == "eindeutig progredient") {
+                    NTStatus = 4;
+                    break;
+                }
+            }
+            document.getElementById("gen_recist11_NonTargets").options[NTStatus].selected = "selected";
+        }
+
+        function calcRECIST () {
+
+            checkNT();
+
+            var TargetSum = document.getElementById("gen_recist11_SumTarget").value;
+            var BaseSum = document.getElementById("gen_recist11_SumBase").value;
+            var NadirSum = document.getElementById("gen_recist11_SumNadir").value;
+
+            if ( NadirSum == "" )
+                NadirSum = BaseSum;
+
+            var TargetResponse = "";
+            var NonTargetResponse = "";
+            //var OverallResponse = "";
+
+            if ( TargetSum == "" || BaseSum == "" ) {
+                //do nothing
+            } else if ( TargetSum == 0 && BaseSum > 0 ) {
+                TargetResponse = "CR";
+                document.getElementById("gen_recist11_TargetResp").options[1].selected = "selected";
+            } else if ( TargetSum >= NadirSum * 1.2 && TargetSum - NadirSum > 0.5 ) {
+                TargetResponse = "PD";
+                document.getElementById("gen_recist11_TargetResp").options[4].selected = "selected";
+            } else if ( TargetSum <= BaseSum * 0.7 ) {
+                TargetResponse = "PR";
+                document.getElementById("gen_recist11_TargetResp").options[2].selected = "selected";
+            } else {
+                TargetResponse = "SD";
+                document.getElementById("gen_recist11_TargetResp").options[3].selected = "selected";
+            }
+
+            if ( document.getElementById("gen_recist11_NonTargets").selectedIndex <= 1 ) {
+                //do nothing
+            } else if ( document.getElementById("gen_recist11_NonTargets").selectedIndex == 2 ) {
+                NonTargetResponse = "SD";
+                document.getElementById("gen_recist11_NonTargetResp").selectedIndex = 2;
+            } else if ( document.getElementById("gen_recist11_NonTargets").selectedIndex == 3 ) {
+                NonTargetResponse = "CR";
+                document.getElementById("gen_recist11_NonTargetResp").selectedIndex = 1;
+            } else if ( document.getElementById("gen_recist11_NonTargets").selectedIndex == 4 ) {
+                NonTargetResponse = "PD";
+                document.getElementById("gen_recist11_NonTargetResp").selectedIndex = 3;
+            }
+
+            if ( TargetResponse == "CR" && NonTargetResponse == "CR" ) {
+                //OverallResponse = "CR";
+                document.getElementById("gen_recist11_OverallResp").options[1].selected = "selected";
+            } else if ( TargetResponse == "CR" && NonTargetResponse == "SD" ) {
+                //OverallResponse = "PR";
+                document.getElementById("gen_recist11_OverallResp").options[2].selected = "selected";
+            } else if ( TargetResponse == "PR" && NonTargetResponse != "PD" ) {
+                //OverallResponse = "PR";
+                document.getElementById("gen_recist11_OverallResp").options[2].selected = "selected";
+            } else if ( TargetResponse == "SD" && NonTargetResponse != "PD" ) {
+                //OverallResponse = "SD";
+                document.getElementById("gen_recist11_OverallResp").options[3].selected = "selected";
+            } else if ( TargetResponse == "PD" || NonTargetResponse == "PD" ) {
+                //OverallResponse = "PD";
+                document.getElementById("gen_recist11_OverallResp").options[4].selected = "selected";
+            }
+
+        }
+
+    </script>
+
+    <section data-section-name="Befunde">
+        <header class="level2" data-english="Findings">Befund</header>
+        <p>
+            <label for="gen_recist11_BaseOrFollowup">Untersuchung:</label>
+            <select name="gen_recist11_BaseOrFollowup" id="gen_recist11_BaseOrFollowup" onchange="toggelFU()">
+                <option value="Baseline">Baseline</option>
+                <option value="Follow-up">Follow-up</option>
+            </select>
+        </p>
+        <table id="table_PreviousValues">
+            <tr>
+                <td><label for="gen_recist11_SumBase">Summe Baseline</label></td>
+                <td><input id="gen_recist11_SumBase" name="gen_recist11_SumBase" data-field-type="NUMBER" type="number" onchange="calcSums()"> cm</td>
+            </tr>
+            <tr>
+                <td><label for="gen_recist11_SumNadir">Summe Nadir</label></td>
+                <td><input id="gen_recist11_SumNadir" name="gen_recist11_SumNadir" data-field-type="NUMBER" type="number" onchange="calcSums()"> cm</td>
+            </tr>
+            <tr>
+                <td><label for="gen_recist11_SumLast">Summe letzte Messung</label></td>
+                <td><input id="gen_recist11_SumLast" name="gen_recist11_SumLast" data-field-type="NUMBER" type="number" onchange="calcSums()"> cm</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td>Target-Lesions</td>
+                <td>
+                    <table>
+                        <tr>
+                            <td>ID</td>
+                            <td>Name</td>
+                            <td>größter Durchmesser</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td><input id="gen_recist11_TL1name" name="gen_recist11_TL1name" data-field-type="TEXT" type="text"></td>
+                            <td><input id="gen_recist11_TL1diam" name="gen_recist11_TL1diam" data-field-type="NUMBER" type="number" onchange="calcSums()"> cm</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><input id="gen_recist11_TL2name" name="gen_recist11_TL2name" data-field-type="TEXT" type="text"></td>
+                            <td><input id="gen_recist11_TL2diam" name="gen_recist11_TL2diam" data-field-type="NUMBER" type="number" onchange="calcSums()"> cm</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><input id="gen_recist11_TL3name" name="gen_recist11_TL3name" data-field-type="TEXT" type="text"></td>
+                            <td><input id="gen_recist11_TL3diam" name="gen_recist11_TL3diam" data-field-type="NUMBER" type="number" onchange="calcSums()"> cm</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><input id="gen_recist11_TL4name" name="gen_recist11_TL4name" data-field-type="TEXT" type="text"></td>
+                            <td><input id="gen_recist11_TL4diam" name="gen_recist11_TL4diam" data-field-type="NUMBER" type="number" onchange="calcSums()"> cm</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td><input id="gen_recist11_TL5name" name="gen_recist11_TL5name" data-field-type="TEXT" type="text"></td>
+                            <td><input id="gen_recist11_TL5diam" name="gen_recist11_TL5diam" data-field-type="NUMBER" type="number" onchange="calcSums()"> cm</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>Non-Target-Lesions</td>
+                <td>
+                    <table>
+                        <tr>
+                            <td>ID</td>
+                            <td>Name</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td><input id="gen_recist11_NtL01name" name="gen_recist11_NtL01name" data-field-type="TEXT" type="text"></td>
+                            <td>
+                                <select id="gen_recist11_NtL01present" name="gen_recist11_NtL01present" onchange="checkNT()">
+                                    <option value="-">-</option>
+                                    <option value="vorhanden">vorhanden</option>
+                                    <option value="verschwunden">verschwunden</option>
+                                    <option value="eindeutig progredient">eindeutig progredient</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><input id="gen_recist11_NtL02name" name="gen_recist11_NtL02name" data-field-type="TEXT" type="text"></td>
+                            <td>
+                                <select id="gen_recist11_NtL02present" name="gen_recist11_NtL02present" onchange="checkNT()">
+                                    <option value="-">-</option>
+                                    <option value="vorhanden">vorhanden</option>
+                                    <option value="verschwunden">verschwunden</option>
+                                    <option value="eindeutig progredient">eindeutig progredient</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><input id="gen_recist11_NtL03name" name="gen_recist11_NtL03name" data-field-type="TEXT" type="text"></td>
+                            <td>
+                                <select id="gen_recist11_NtL03present" name="gen_recist11_NtL03present" onchange="checkNT()">
+                                    <option value="-">-</option>
+                                    <option value="vorhanden">vorhanden</option>
+                                    <option value="verschwunden">verschwunden</option>
+                                    <option value="eindeutig progredient">eindeutig progredient</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><input id="gen_recist11_NtL04name" name="gen_recist11_NtL04name" data-field-type="TEXT" type="text"></td>
+                            <td>
+                                <select id="gen_recist11_NtL04present" name="gen_recist11_NtL04present" onchange="checkNT()">
+                                    <option value="-">-</option>
+                                    <option value="vorhanden">vorhanden</option>
+                                    <option value="verschwunden">verschwunden</option>
+                                    <option value="eindeutig progredient">eindeutig progredient</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td><input id="gen_recist11_NtL05name" name="gen_recist11_NtL05name" data-field-type="TEXT" type="text"></td>
+                            <td>
+                                <select id="gen_recist11_NtL05present" name="gen_recist11_NtL05present" onchange="checkNT()">
+                                    <option value="-">-</option>
+                                    <option value="vorhanden">vorhanden</option>
+                                    <option value="verschwunden">verschwunden</option>
+                                    <option value="eindeutig progredient">eindeutig progredient</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td><input id="gen_recist11_NtL06name" name="gen_recist11_NtL06name" data-field-type="TEXT" type="text"></td>
+                            <td>
+                                <select id="gen_recist11_NtL06present" name="gen_recist11_NtL06present" onchange="checkNT()">
+                                    <option value="-">-</option>
+                                    <option value="vorhanden">vorhanden</option>
+                                    <option value="verschwunden">verschwunden</option>
+                                    <option value="eindeutig progredient">eindeutig progredient</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td><input id="gen_recist11_NtL07name" name="gen_recist11_NtL07name" data-field-type="TEXT" type="text"></td>
+                            <td>
+                                <select id="gen_recist11_NtL07present" name="gen_recist11_NtL07present" onchange="checkNT()">
+                                    <option value="-">-</option>
+                                    <option value="vorhanden">vorhanden</option>
+                                    <option value="verschwunden">verschwunden</option>
+                                    <option value="eindeutig progredient">eindeutig progredient</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td><input id="gen_recist11_NtL08name" name="gen_recist11_NtL08name" data-field-type="TEXT" type="text"></td>
+                            <td>
+                                <select id="gen_recist11_NtL08present" name="gen_recist11_NtL08present" onchange="checkNT()">
+                                    <option value="-">-</option>
+                                    <option value="vorhanden">vorhanden</option>
+                                    <option value="verschwunden">verschwunden</option>
+                                    <option value="eindeutig progredient">eindeutig progredient</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td><input id="gen_recist11_NtL09name" name="gen_recist11_NtL09name" data-field-type="TEXT" type="text"></td>
+                            <td>
+                                <select id="gen_recist11_NtL09present" name="gen_recist11_NtL09present" onchange="checkNT()">
+                                    <option value="-">-</option>
+                                    <option value="vorhanden">vorhanden</option>
+                                    <option value="verschwunden">verschwunden</option>
+                                    <option value="eindeutig progredient">eindeutig progredient</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td><input id="gen_recist11_NtL10name" name="gen_recist11_NtL10name" data-field-type="TEXT" type="text"></td>
+                            <td>
+                                <select id="gen_recist11_NtL10present" name="gen_recist11_NtL10present" onchange="checkNT()">
+                                    <option value="-">-</option>
+                                    <option value="vorhanden">vorhanden</option>
+                                    <option value="verschwunden">verschwunden</option>
+                                    <option value="eindeutig progredient">eindeutig progredient</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <section data-section-name="Beurteilung">
+
+        <header class="level2" data-english="Impression">Beurteilung</header>
+        <table>
+            <tr>
+                <td><label for="gen_recist11_SumTarget">Target Summe</label></td>
+                <td><input id="gen_recist11_SumTarget" name="gen_recist11_SumTarget" data-field-type="NUMBER" type="number"> cm</td>
+            </tr>
+            <tr id="row_TLrelBase">
+                <td><label for="gen_recist11_TLrelBase">- relativ zur Baseline</label></td>
+                <td><input id="gen_recist11_TLrelBase" name="gen_recist11_TLrelBase" data-field-type="NUMBER" type="number"> %</td>
+            </tr>
+            <tr id="row_TLrelNadir">
+                <td><label for="gen_recist11_TLrelNadir">- relativ zum Nadir</label></td>
+                <td><input id="gen_recist11_TLrelNadir" name="gen_recist11_TLrelNadir" data-field-type="NUMBER" type="number"> %</td>
+            </tr>
+            <tr id="row_TLrelLast">
+                <td><label for="gen_recist11_TLrelLast">- relativ zur letzten Messung</label></td>
+                <td><input id="gen_recist11_TLrelLast" name="gen_recist11_TLrelLast" data-field-type="NUMBER" type="number"> %</td>
+            </tr>
+            <tr>
+                <td><label for="gen_recist11_NonTargets">Non-Targets</label></td>
+                <td>
+                    <select id="gen_recist11_NonTargets" name="gen_recist11_NonTargets">
+                        <option value="-">-</option>
+                        <option value="keine">keine</option>
+                        <option value="vorhanden">vorhanden</option>
+                        <option value="verschwunden">verschwunden</option>
+                        <option value="eindeutig progredient">eindeutig progredient</option>
+                    </select>
+                </td>
+            </tr>
+            <tr id="row_relEmpty">
+                <td class="topLine">&nbsp;</td>
+                <td class="topLine" id="cell_relEmpty_Button">&nbsp;</td>
+            </tr>
+            <tr id="row_TLresp">
+                <td><label for="gen_recist11_TargetResp">- Target response</label></td>
+                <td>
+                    <select id="gen_recist11_TargetResp" name="gen_recist11_TargetResp">
+                        <option value="-">-</option>
+                        <option value="Complete Response">Complete Response</option>
+                        <option value="Partial response">Partial response</option>
+                        <option value="Stable disease">Stable disease</option>
+                        <option value="Progressive disease">Progressive disease</option>
+                    </select>
+                </td>
+            </tr>
+            <tr id="row_NTresp">
+                <td><label for="gen_recist11_NonTargetResp">- Non-Target response</label></td>
+                <td>
+                    <select id="gen_recist11_NonTargetResp" name="gen_recist11_NonTargetResp">
+                        <option>-</option>
+                        <option value="Complete Response">Complete Response</option>
+                        <option value="Stable disease">Stable disease</option>
+                        <option value="Progressive disease">Progressive disease</option>
+                    </select>
+                </td>
+            </tr>
+            <tr id="row_OverallResp">
+                <td><label for="gen_recist11_OverallResp">Gesamt Response</label></td>
+                <td id="cell_OverallResp_select">
+                    <select id="gen_recist11_OverallResp" name="gen_recist11_OverallResp">
+                        <option value="-">-</option>
+                        <option value="Complete Response">Complete Response</option>
+                        <option value="Partial response">Partial response</option>
+                        <option value="Stable disease">Stable disease</option>
+                        <option value="Progressive disease">Progressive disease</option>
+                    </select>
+                </td>
+            </tr>
+
+        </table>
+
+    </section>
+
+</body>
+</html>

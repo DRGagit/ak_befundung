@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Röntgen-Thorax auf Station</title>
+    <meta charset="UTF-8">
+    <!--Dublin Core metadata elements here-->
+    <meta name="dcterms.title" content="Ultraschall nach FAST-Protokoll">
+    <meta name="dcterms.abstract" content="Befundungstemplate für Ultraschall nach FAST-Protokoll (L1, V1, JS)">
+    <meta name="dcterms.description" content="Einfaches Befundtemplate für FAST-Ultraschall im Rahmen einer Schockraumversorgung. (L1 - von Einzelperson formulierter Vorschlag, Version 1, inkl. Javascript)">
+    <meta name="dcterms.subject" content="US; ER;">
+    <meta name="dcterms.identifier" content="041807.4.1706140000">
+    <meta name="dcterms.type" content="IMAGE_REPORT_TEMPLATE">
+    <meta name="dcterms.language" content="de">
+    <meta name="dcterms.rights" content="Die Deutsche Röntgengesellschaft e.V.(DRG) stellt sämtliche Templates kostenfrei unter der Creative Commons Lizenz  CC BY-NC-ND in der Version 4.0 zur Verfügung. Die Lizenz erlaubt Download und Weiterverteilung des Werkes unter Nennung der DRG als Urheber, jedoch keinerlei Bearbeitung oder kommerzielle Nutzung.">
+    <meta name="dcterms.license" content="http://www.befundung.drg.de/de-DE/3478/creative-commons-lizenz-cc-by-nc-nd">
+    <meta name="dcterms.date" content="2017-06-14">
+    <meta name="dcterms.creator" content="Pinto dos Santos D">
+    <meta name="dcterms.contributor" content="Arnhold G, Oberle R, Mildenberger P [editor]">
+    <meta name="dcterms.publisher" content="Deutsche Röntgengesellschaft (DRG)">
+    <!--Link to Stylesheet-->
+    <script type="text/xml">
+        <!--
+        <template_attributes>
+        <top-level-flag>0</top-level-flag>
+        <status>ACTIVE</status>
+        </template_attributes>
+		-->
+    </script>
+    <!--Link to Stylesheet-->
+    <style type="text/css">
+        header { font-size: 14pt; font-weight: bold; padding-top: 5px; padding-bottom: 5px; }
+        td { padding-right: 15px; vertical-align: top;}
+    </style>
+</head>
+<body>
+
+    <section data-section-name="Clinical information">
+        <header class="level2" data-english="Clinical information">Klinische Angaben</header>
+        <p>
+            <textarea name="mz_us_fast_Angaben" id="mz_us_fast_Angaben"></textarea>
+        </p>
+    </section>
+
+    <section data-section-name="Clinical question">
+        <header class="level1" data-english="Clinical question">Fragestellung</header>
+        <p>
+            <textarea name="mz_us_fast_Fragestellung" id="mz_us_fast_Fragestellung"></textarea>
+        </p>
+    </section>
+
+    <section data-section-name="Befunde">
+        <header class="level2" data-english="Findings">Befund</header>
+        <table>
+
+            <tr>
+                <td>
+                    <label for="mz_us_fast_vergleich">Voruntersuchung:</label>
+                </td>
+                <td>
+                    <select name="mz_us_fast_vergleich_select" id="mz_us_fast_vergleich_select">
+                        <option value="keine">keine</option>
+                        <option value="vorliegend">vorliegend</option>
+                    </select>
+                    &nbsp;
+                    <input name="mz_us_fast_vergleich" id="mz_us_fast_vergleich" data-field-type="TEXT">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="mz_us_fast_Perikard">Perikard</label>
+                </td>
+                <td>
+                    <select name="mz_us_fast_Perikard" id="mz_us_fast_Perikard">
+                        <option value="unauffällig">unauffällig</option>
+                        <option value="Perikarderguss">Perikarderguss</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="mz_us_fast_Pleura">Pleura</label>
+                </td>
+                <td>
+                    <select name="mz_us_fast_Pleura" id="mz_us_fast_Pleura">
+                        <option value="unauffällig">unauffällig</option>
+                        <option value="Pleuraerguß rechts">Pleuraerguß rechts</option>
+                        <option value="Pleuraerguß links">Pleuraerguß links</option>
+                        <option value="Pleuraerguß beidseits">Pleuraerguß beidseits</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="mz_us_fast_Morison">Morison-Pouch</label>
+                </td>
+                <td>
+                    <select name="mz_us_fast_Morison" id="mz_us_fast_Morison">
+                        <option value="unauffällig">unauffällig</option>
+                        <option value="freie Flüssigkeit">freie Flüssigkeit</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="mz_us_fast_Koller">Koller-Pouch</label>
+                </td>
+                <td>
+                    <select name="mz_us_fast_Koller" id="mz_us_fast_Koller">
+                        <option value="unauffällig">unauffällig</option>
+                        <option value="freie Flüssigkeit">freie Flüssigkeit</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="mz_us_fast_Becken">Douglas-Raum / Recessus rectovesicalis</label>
+                </td>
+                <td>
+                    <select name="mz_us_fast_Becken" id="mz_us_fast_Becken">
+                        <option value="unauffällig">unauffällig</option>
+                        <option value="freie Flüssigkeit">freie Flüssigkeit</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="mz_us_fast_Sonstiges">Sonstiges</label>
+                </td>
+                <td>
+                    <textarea name="mz_us_fast_Sonstiges" id="mz_us_fast_Sonstiges"></textarea>
+                </td>
+            </tr>
+
+        </table>
+
+    </section>
+
+    <section data-section-name="Beurteilung">
+
+        <header class="level2" data-english="Impression">Beurteilung</header>
+        <p>
+            <textarea name="mz_us_fast_Beurteilung" id="mz_us_fast_Beurteilung" data-field-completion-action="ALERT"></textarea>
+        </p>
+
+    </section>
+
+</body>
+</html>

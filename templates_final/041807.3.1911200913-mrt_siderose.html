@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MRT Siderose</title>
+    <meta charset="UTF-8" />
+    <!--Dublin Core metadata elements here-->
+    <meta name="dcterms.title" content="MRT Siderose" />
+    <meta name="dcterms.abstract" content="Befundungstemplate für Siderose des Herzens (L2, V1, no JS)">
+    <meta name="dcterms.description" content="Template zur Befundung von Cardio-MR Untersuchungen bei Siderose.">
+    <meta name="dcterms.subject" content="MR; CARDIO;">
+    <meta name="dcterms.identifier" content="041807.3.1911200913">
+    <meta name="dcterms.type" content="IMAGE_REPORT_TEMPLATE">
+    <meta name="dcterms.language" content="de">
+    <meta name="dcterms.rights" content="Die Deutsche Röntgengesellschaft e.V.(DRG) stellt sämtliche Templates kostenfrei unter der Creative Commons Lizenz  CC BY-NC-ND in der Version 4.0 zur Verfügung. Die Lizenz erlaubt Download und Weiterverteilung des Werkes unter Nennung der DRG als Urheber, jedoch keinerlei Bearbeitung oder kommerzielle Nutzung.">
+    <meta name="dcterms.license" content="http://www.befundung.drg.de/de-DE/3478/creative-commons-lizenz-cc-by-nc-nd">
+    <meta name="dcterms.date" content="2019-11-20">
+    <meta name="dcterms.creator" content="AG Herz- und Gefäßdiagnostik">
+    <meta name="dcterms.contributor" content="Pinto dos Santos D (Kodierung)">
+    <meta name="dcterms.contributor" content="Schausten, Sabrina (Kodierung)">
+    <meta name="dcterms.contributor" content="Maintz, David">
+    <meta name="dcterms.contributor" content="Bunck, Alexander">
+    <meta name="dcterms.publisher" content="Deutsche Röntgengesellschaft (DRG)">
+    <script type="text/xml">
+        <template_attributes>
+            <top-level-flag>0</top-level-flag>
+            <status>ACTIVE</status>
+        </template_attributes>
+    </script>
+
+    <!--Link to Stylesheet-->
+    <link class="flag" rel="stylesheet" href="drg.css">
+</head>
+<body>
+    <section data-section-name="Clinical information">
+        <header class="level1">Klinische Angaben</header>
+        <p>
+            <textarea id="mr_siderose_angaben" name="mr_siderose_angaben"></textarea>
+        </p>
+    </section>
+
+    <section data-section-name="Clinical question">
+        <header class="level1">Fragestellung</header>
+        <p>
+            <textarea name="mr_siderose_fragestellung" id="mr_siderose_fragestellung"></textarea>
+        </p>
+    </section>
+
+    <section data-section-name="Befunde">
+        <header class="level1">Befund</header>
+
+        <table>
+            <tr>
+                <td>Technik</td>
+                <td>
+                    <table>
+                        <tr>
+                            <td><label for="mr_siderose_fieldstrength">Feldstärke</label></td>
+                            <td>
+                                <select name="mr_siderose_fieldstrength" id="mr_siderose_fieldstrength">
+                                    <option value="1.5 T">1.5 T</option>
+                                    <option value="3 T">3 T</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_siderose_protocol_herz">MR Protokoll Herz</label></td>
+                            <td>
+                                <input type="text" name="mr_siderose_protocol_herz" id="mr_siderose_protocol_herz" placeholder="Sequenz und Ebenen">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_siderose_protocol_leber">MR Protokoll Leber</label></td>
+                            <td>
+                                <input type="text" name="mr_siderose_protocol_leber" id="mr_siderose_protocol_leber">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_siderose_software">Auswertesoftware</label></td>
+                            <td>
+                                <input type="text" name="mr_siderose_software" id="mr_siderose_software" placeholder="Name und Version">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_siderose_normwerte_quelle">Quelle der Normwerte</label></td>
+                            <td>
+                                <input type="text" name="mr_siderose_normwerte_quelle" id="mr_siderose_normwerte_quelle">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_siderose_kontrastmittel">KM</label></td>
+                            <td>
+                                <input type="text" name="mr_siderose_kontrastmittel" id="mr_siderose_kontrastmittel" placeholder="Name und Menge">
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>Patientencharakteristik</td>
+                <td>
+                    <table>
+                        <tr>
+                            <td><label for="mr_siderose_patsex">Geschlecht</label></td>
+                            <td>
+                                <select name="mr_siderose_patsex" id="mr_siderose_patsex">
+                                    <option value="männlich">männlich</option>
+                                    <option value="weiblich">weiblich</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_siderose_patweight">Körpergewicht</label></td>
+                            <td>
+                                <input class="small" type="number" name="mr_siderose_patweight" id="mr_siderose_patweight" data-field-units="kg"> kg
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_siderose_patheight">Körpergröße</label></td>
+                            <td>
+                                <input class="small" type="number" name="mr_siderose_patheight" id="mr_siderose_patheight" data-field-units="m"> m
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_siderose_patbsa">Körperoberlfäche (BSA)</label></td>
+                            <td>
+                                <input class="small" type="number" name="mr_siderose_patbsa" id="mr_siderose_patbsa" data-field-units="m2"> m&sup2;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_siderose_pathkt">Hämatokrit</label></td>
+                            <td>
+                                <input class="small" type="number" name="mr_siderose_pathkt" id="mr_siderose_pathkt">
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <td><label for="mr_siderose_comparison">Vergleichsuntersuchung</label></td>
+                <td>
+                    <select name="mr_siderose_comparison" id="mr_siderose_comparison">
+                        <option value="keine">keine</option>
+                        <option value="vorliegend">vorliegend</option>
+                    </select>
+                    <input name="mr_siderose_comparison_date" id="mr_siderose_comparison_date" type="date" data-field-type="DATE">
+                </td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <th>Herz</th>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <td>Bildqualität</td>
+                <td>
+                    <table>
+                        <tr>
+                            <td><label for="mr_siderose_einschr">Einschränkung</label></td>
+                            <td>
+                                <select name="mr_siderose_einschr" id="mr_siderose_einschr">
+                                    <option value="-">-</option>
+                                    <option value="nein">nein</option>
+                                    <option value="ja">ja</option>
+                                </select>
+                                <input type="text" name="mr_siderose_einschr_text" id="mr_siderose_einschr_text">
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>Funktionsanalyse LV</td>
+                <td>
+                    <table>
+                        <tr>
+                            <td><label for="mr_siderose_lvedd">LV enddiastolischer Diameter (LV EDD):</label></td>
+                            <td><input class="small" type="number" name="mr_siderose_lvedd" id="mr_siderose_lvedd">&nbsp;mm</td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_siderose_lvedvi">LV enddiastolischer Volumenindex (LV EDVi):</label></td>
+                            <td><input class="small" type="number" name="mr_siderose_lvedvi" id="mr_siderose_lvedvi">&nbsp;ml/m&sup2; (Norm: xx ml/m&sup2;)</td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_siderose_lvesvi">LV endsystolischer  Volumenindex (LV ESVi):</label></td>
+                            <td><input class="small" type="number" name="mr_siderose_lvesvi" id="mr_siderose_lvesvi">&nbsp;ml/m&sup2; (Norm: xx ml/m&sup2;)</td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_siderose_lvef">LV Ejektions-Fraktion (LV EF):</label></td>
+                            <td><input class="small" type="number" name="mr_siderose_lvef" id="mr_siderose_lvef">&nbsp;% (Norm: xx %)</td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_siderose_lvedm">LV ED Masse normiert:</label></td>
+                            <td><input class="small" type="number" name="mr_siderose_lvedm" id="mr_siderose_lvedm">&nbsp;g/m&sup2; (Norm: xx g/m&sup2;)</td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_siderose_lv_wandbwgst">Regionale Wandbewegungsstörungen LV:</label></td>
+                            <td>
+                                <select name="mr_siderose_lv_wandbwgst" id="mr_siderose_lv_wandbwgst">
+                                    <option value="-">-</option>
+                                    <option value="nein">nein</option>
+                                    <option value="ja">ja</option>
+                                </select>
+                                <input type="text" name="mr_siderose_lv_wandbwgst_text" id="mr_siderose_lv_wandbwgst_text">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_siderose_ivsd">Interventrikuläre Septumdicke (IVSD):</label></td>
+                            <td><input class="small" type="number" name="mr_siderose_ivsd" id="mr_siderose_ivsd">&nbsp;mm</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Funktionsanalyse RV</td>
+                <td>
+                    <table>
+                        <tr>
+                            <td><label for="mr_siderose_rvedd">RV enddiastolischer Diameter (RV EDD):</label></td>
+                            <td><input class="small" type="number" name="mr_siderose_rvedd" id="mr_siderose_rvedd">&nbsp;mm</td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_siderose_rvedvi">RV enddiastolischer Volumenindex (RV EDVi):</label></td>
+                            <td><input class="small" type="number" name="mr_siderose_rvedvi" id="mr_siderose_rvedvi">&nbsp;ml/m&sup2; (Norm: xx ml/m&sup2;)</td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_siderose_rvesvi">RV endsystolischer  Volumenindex (RV ESVi):</label></td>
+                            <td><input class="small" type="number" name="mr_siderose_rvesvi" id="mr_siderose_rvesvi">&nbsp;ml/m&sup2; (Norm: xx ml/m&sup2;)</td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_siderose_rvef">RV Ejektions-Fraktion (RV EF):</label></td>
+                            <td><input class="small" type="number" name="mr_siderose_rvef" id="mr_siderose_rvef">&nbsp;% (Norm: xx %)</td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_siderose_rv_wandbwgst">Regionale Wandbewegungsstörungen RV:</label></td>
+                            <td>
+                                <select name="mr_siderose_rv_wandbwgst" id="mr_siderose_rv_wandbwgst">
+                                    <option value="-">-</option>
+                                    <option value="nein">nein</option>
+                                    <option value="ja">ja</option>
+                                </select>
+                                <input type="text" name="mr_siderose_rv_wandbwgst_text" id="mr_siderose_rv_wandbwgst_text">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_siderose_ivsd">Interventrikuläre Septumdicke (IVSD):</label></td>
+                            <td><input class="small" type="number" name="mr_siderose_ivsd" id="mr_siderose_ivsd">&nbsp;mm</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <table>
+                        <tr>
+                            <td>Vorhofgröße endsystolisch im 4-Kammerblick</td>
+                            <td><label for="mr_siderose_vhfed_4k">RA:</label></td>
+                            <td><input class="small" type="number" name="mr_siderose_vhfed_4k" id="mr_siderose_vhfed_4k">&nbsp;mm</td>
+                        </tr>
+                        <tr>
+                            <td>(longitudinal x transversal)</td>
+                            <td><label for="mr_siderose_vhfed_longtrans">LA:</label></td>
+                            <td><input class="small" type="number" name="mr_siderose_vhfed_longtrans" id="dumr_siderose_vhfed_longtransmmy">&nbsp;mm</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <table>
+                        <tr>
+                            <td><label for="mr_siderose_kappenpath">Herzklappenpathologie:</label></td>
+                            <td>
+                                <select name="mr_siderose_kappenpath" id="mr_siderose_kappenpath">
+                                    <option value="-">-</option>
+                                    <option value="nicht untersucht">nicht untersucht</option>
+                                    <option value="nein">nein</option>
+                                    <option value="ja">ja</option>
+                                </select>
+                                <input type="text" name="mr_siderose_kappenpath_text" id="mr_siderose_kappenpath_text">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_siderose_thromben">Intracavitäre Thromben:</label></td>
+                            <td>
+                                <select name="mr_siderose_thromben" id="mr_siderose_thromben">
+                                    <option value="-">-</option>
+                                    <option value="nein">nein</option>
+                                    <option value="ja">ja</option>
+                                </select>
+                                <input type="text" name="mr_siderose_thromben_text" id="mr_siderose_thromben_text">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_siderose_perikerguss">Perikarderguss:</label></td>
+                            <td>
+                                <select name="mr_siderose_perikerguss" id="mr_siderose_perikerguss">
+                                    <option value="-">-</option>
+                                    <option value="nein">nein</option>
+                                    <option value="ja">ja</option>
+                                </select>
+                                max. Saumbreite: <input class="small" type="number" name="mr_siderose_perikerguss_d" id="mr_siderose_perikerguss_d" data-field-units="mm"> mm
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <th>Quantitative Gewebecharakterisierung Herz</th>
+            </tr>
+            <tr>
+                <td>
+                    <table>
+                        <tr>
+                            <td><label for="mr_siderose_t2s_septum">T2*-Mapping (Septum):</label></td>
+                            <td>
+                                <input class="small" type="text" name="mr_siderose_t2s_septum" id="mr_siderose_t2s_septum" data-field-units="ms"> ms (Norm: 23.9 -33.3 ms)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_siderose_t1_septum">T1-Mapping nativ (Septum):</label></td>
+                            <td>
+                                <input class="small" type="text" name="mr_siderose_t1_septum" id="mr_siderose_t1_septum" data-field-units="ms"> ms (Norm: 961 – 985 ms)
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <th>Befund Leber</th>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <td><label for="mr_siderose_leber">Leberparenchym</label></td>
+                <td>
+                    <select name="mr_siderose_leber" id="mr_siderose_leber">
+                        <option value="-">-</option>
+                        <option value="unauffällige Lebertextur">unauffällige Lebertextur</option>
+                        <option value="retikuläre Lebertextur">retikuläre Lebertextur</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="mr_siderose_gg">Gallenwege/ Gallenblase</label></td>
+                <td>
+                    <select name="mr_siderose_gg" id="mr_siderose_gg">
+                        <option value="-">-</option>
+                        <option value="unauffällig">unauffällig</option>
+                        <option value="Cholestase">Cholestase</option>
+                        <option value="Cholezystolithiasis">Cholezystolithiasis</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="mr_siderose_lk">Lymphknoten</label></td>
+                <td>
+                    <select name="mr_siderose_lk" id="mr_siderose_lk">
+                        <option value="-">-</option>
+                        <option value="Keine suspekten LK">Keine suspekten LK</option>
+                        <option value="Suspekte LK">Suspekte LK</option>
+                    </select>
+                </td>
+                <td>
+                    LK <input class="small" type="text" name="mr_siderose_lk_d" id="mr_siderose_lk_d">, ca. <input class="small" type="text" name="dummy" id="dummy" data-field-units="mm"> mm
+                </td>
+            </tr>
+            <tr>
+                <td><label for="mr_siderose_milz">Milz</label></td>
+                <td>
+                    <select name="mr_siderose_milz" id="mr_siderose_milz">
+                        <option value="-">-</option>
+                        <option value="unauffällig">unauffällig</option>
+                        <option value="Splenomegalie">Splenomegalie</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="mr_siderose_aszites">Aszites</label></td>
+                <td>
+                    <select name="mr_siderose_aszites" id="mr_siderose_aszites">
+                        <option value="-">-</option>
+                        <option value="kein">kein</option>
+                        <option value="gering">gering</option>
+                        <option value="moderat">moderat</option>
+                        <option value="ausgeprägt">ausgeprägt</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <th>Quantitative Gewebecharakterisierung Leber</th>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td><label for="mr_siderose_t2s_leber">T2*-Mapping:</label></td>
+                <td>
+                    <input class="small" type="text" name="mr_siderose_t2s_leber" id="mr_siderose_t2s_leber" data-field-units="ms"> ms
+                </td>
+            </tr>
+            <tr>
+                <td><label for="mr_siderose_t1_leber">T1-Mapping nativ:</label></td>
+                <td>
+                    <input class="small" type="text" name="mr_siderose_t1_leber" id="mr_siderose_t1_leber" data-field-units="ms"> ms
+                </td>
+            </tr>
+            <tr>
+                <td><label for="mr_siderose_fatfrac_leber">Fett-Fraktion:</label></td>
+                <td>
+                    <input class="small" type="text" name="mr_siderose_fatfrac_leber" id="mr_siderose_fatfrac_leber" data-field-units="%"> %
+                </td>
+            </tr>
+        </table>
+
+
+        <table>
+            <tr>
+                <th>Sonstige Auffälligkeiten:</th>
+            </tr>
+            <tr>
+                <td>
+                    <textarea class="ta-middle" name="mr_siderose_other" id="mr_siderose_other"></textarea>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <section data-section-name="Beurteilung">
+        <header class="level1">Beurteilung</header>
+        <table>
+            <tr>
+                <th>Herz</th>
+            </tr>
+            <tr>
+                <td>
+                    <select name="mr_siderose_beurt_herzeisen" id="mr_siderose_beurt_herzeisen">
+                        <option value="-">-</option>
+                        <option value="milden kardialen Eisenüberladung">Zeichen der milden kardialen Eisenüberladung.</option>
+                        <option value="moderaten kardialen Eisenüberladung">Zeichen der moderaten kardialen Eisenüberladung.</option>
+                        <option value="schweren kardialen Eisenüberladung">Zeichen der schweren kardialen Eisenüberladung.</option>
+                        <option value="Kein Hinweis auf eine kardiale Eisenüberladung">Kein Hinweis auf eine kardiale Eisenüberladung.</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <select name="mr_siderose_beurt_herzfunc" id="mr_siderose_beurt_herzfunc">
+                        <option value="-">-</option>
+                        <option value="Unauffällige Funktion von rechtem und linkem Ventrikel">Unauffällige Funktion von rechtem und linkem Ventrikel</option>
+                        <option value="Gering eingeschränkte systolische LV/RV Funktion.">Gering eingeschränkte systolische LV/RV Funktion.</option>
+                        <option value="Mittelgradig eingeschränkte systolische LV/RV Funktion.">Mittelgradig eingeschränkte systolische LV/RV Funktion.</option>
+                        <option value="Schwer eingeschränkte systolische LV/RV Funktion.">Schwer eingeschränkte systolische LV/RV Funktion.</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <th>Leber</th>
+            </tr>
+            <tr>
+                <td>MR-tomographisch
+                    <select name="mr_siderose_beurt_lebereisen" id="mr_siderose_beurt_lebereisen">
+                        <option value="-">-</option>
+                        <option value="unauffällige">unauffällige</option>
+                        <option value="geringe">geringe</option>
+                        <option value="moderate">moderate</option>
+                        <option value="ausgeprägte">ausgeprägte</option>
+                    </select>
+                    Eisenspeicherung.
+                </td>
+            </tr>
+            <tr>
+                <td>Sekundären Zeichen der
+                    <select name="mr_siderose_beurt_leberzirr" id="mr_siderose_beurt_leberzirr">
+                        <option value="-">-</option>
+                        <option value="milden">milden</option>
+                        <option value="ausgeprägten">ausgeprägten</option>
+                    </select>
+                    Leberzirrhose.
+                </td>
+            </tr>
+        </table>
+
+        <p>
+            <textarea name="mr_siderose_beurteilung" id="mr_siderose_beurteilung" data-field-completion-action="NONE"></textarea>
+        </p>
+    </section>
+</body>
+</html>

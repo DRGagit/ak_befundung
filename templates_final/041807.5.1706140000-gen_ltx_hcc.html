@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LTx-Evaluation HCC</title>
+    <meta charset="UTF-8">
+    <!--Dublin Core metadata elements here-->
+    <meta name="dcterms.title" content="LTx-Evaluation HCC" />
+    <meta name="dcterms.abstract" content="Befundungstemplate für LTx-Evaluation bei HCC (L1, V1, JS)" />
+    <meta name="dcterms.description" content="Umsetzung des standardisierten Befundungsbogens aus der Richtlinie zu §16 TPG. Enthält Javascript zur besseren Übersichtlichkeit und Unterstützung der Befundung. Enthält RadLex-Terme soweit möglich. (L1 - von Einzelperson formulierter Vorschlag, Version 1, inkl. Javascript)" />
+    <meta name="dcterms.subject" content="OT; ONKO;" />
+    <meta name="dcterms.identifier" content="041807.5.1706140000" />
+    <meta name="dcterms.type" content="IMAGE_REPORT_TEMPLATE" />
+    <meta name="dcterms.language" content="de" />
+    <meta name="dcterms.rights" content="Die Deutsche Röntgengesellschaft e.V.(DRG) stellt sämtliche Templates kostenfrei unter der Creative Commons Lizenz  CC BY-NC-ND in der Version 4.0 zur Verfügung. Die Lizenz erlaubt Download und Weiterverteilung des Werkes unter Nennung der DRG als Urheber, jedoch keinerlei Bearbeitung oder kommerzielle Nutzung." />
+    <meta name="dcterms.license" content="http://www.befundung.drg.de/de-DE/3478/creative-commons-lizenz-cc-by-nc-nd" />
+    <meta name="dcterms.date" content="2017-06-14" />
+    <meta name="dcterms.creator" content="Pinto dos Santos D" />
+    <meta name="dcterms.contributor" content="Mildenberger P, Klos G" />
+    <meta name="dcterms.publisher" content="Deutsche Röntgengesellschaft (DRG)" />
+    <!--Link to Stylesheet-->
+    <script type="text/xml">
+        <script type="text/xml">
+        <!--
+        <template_attributes>
+        <top-level-flag>0</top-level-flag>
+        <status>ACTIVE</status>
+        </template_attributes>
+        <coding_schemes>
+            <coding_scheme name="RadLex" designator="2.16.840.1.113883.6.256" />
+        </coding_schemes>
+        <entry ORIGTXT="gen_hccltx_Angaben">
+            <term>
+                <code meaning="Clinical information" value="RID13166" scheme="RadLex">
+            </term>
+        </entry>
+        <entry ORIGTXT="gen_hccltx_hcc_dx_yes">
+            <term>
+                <code meaning="hepatocellular carcinoma" value="RID4271" scheme="RadLex">
+            </term>
+        </entry>
+        <entry ORIGTXT="gen_hccltx_lci_dx_yes">
+            <term>
+                <code meaning="cirrhosis" value="RID3822" scheme="RadLex">
+            </term>
+        </entry>
+        <entry ORIGTXT="gen_hccltx_aktverfahren">
+            <term>
+                <code meaning="procedure" value="RID1559" scheme="RadLex">
+            </term>
+        </entry>
+        <entry ORIGTXT="gen_hccltx_zwverfahren">
+            <term>
+                <code meaning="procedure" value="RID1559" scheme="RadLex">
+            </term>
+        </entry>
+        <entry ORIGTXT="gen_hccltx_l1_dimension">
+            <term>
+                <code meaning="diameter" value="RID13432" scheme="RadLex">
+            </term>
+        </entry>
+        <entry ORIGTXT="gen_hccltx_l2_dimension">
+            <term>
+                <code meaning="diameter" value="RID13432" scheme="RadLex">
+            </term>
+        </entry>
+        <entry ORIGTXT="gen_hccltx_l3_dimension">
+            <term>
+                <code meaning="diameter" value="RID13432" scheme="RadLex">
+            </term>
+        </entry>
+        <entry ORIGTXT="gen_hccltx_l4_dimension">
+            <term>
+                <code meaning="diameter" value="RID13432" scheme="RadLex">
+            </term>
+        </entry>
+        <entry ORIGTXT="gen_hccltx_l5_dimension">
+            <term>
+                <code meaning="diameter" value="RID13432" scheme="RadLex">
+            </term>
+        </entry>
+        <entry ORIGTXT="gen_hccltx_l1_segment">
+            <term>
+                <code meaning="segment of liver" value="RID29237" scheme="RadLex">
+            </term>
+        </entry>
+        <entry ORIGTXT="gen_hccltx_l2_segment">
+            <term>
+                <code meaning="segment of liver" value="RID29237" scheme="RadLex">
+            </term>
+        </entry>
+        <entry ORIGTXT="gen_hccltx_l3_segment">
+            <term>
+                <code meaning="segment of liver" value="RID29237" scheme="RadLex">
+            </term>
+        </entry>
+        <entry ORIGTXT="gen_hccltx_l4_segment">
+            <term>
+                <code meaning="segment of liver" value="RID29237" scheme="RadLex">
+            </term>
+        </entry>
+        <entry ORIGTXT="gen_hccltx_l5_segment">
+            <term>
+                <code meaning="segment of liver" value="RID29237" scheme="RadLex">
+            </term>
+        </entry>
+        <entry ORIGTXT="gen_hccltx_l1_art_yes">
+            <term>
+                <code meaning="arterial phase hyperenhancement" value="RID43355" scheme="RadLex">
+            </term>
+        </entry>
+        <entry ORIGTXT="gen_hccltx_l2_art_yes">
+            <term>
+                <code meaning="arterial phase hyperenhancement" value="RID43355" scheme="RadLex">
+            </term>
+        </entry>
+        <entry ORIGTXT="gen_hccltx_l3_art_yes">
+            <term>
+                <code meaning="arterial phase hyperenhancement" value="RID43355" scheme="RadLex">
+            </term>
+        </entry>
+        <entry ORIGTXT="gen_hccltx_l4_art_yes">
+            <term>
+                <code meaning="arterial phase hyperenhancement" value="RID43355" scheme="RadLex">
+            </term>
+        </entry>
+        <entry ORIGTXT="gen_hccltx_l5_art_yes">
+            <term>
+                <code meaning="arterial phase hyperenhancement" value="RID43355" scheme="RadLex">
+            </term>
+        </entry>
+        <entry ORIGTXT="gen_hccltx_l1_pvwash_yes">
+            <term>
+                <code meaning="portal venous phase hypoenhancement" value="RID43353" scheme="RadLex">
+            </term>
+        </entry>
+        <entry ORIGTXT="gen_hccltx_l2_pvwash_yes">
+            <term>
+                <code meaning="portal venous phase hypoenhancement" value="RID43353" scheme="RadLex">
+            </term>
+        </entry>
+        <entry ORIGTXT="gen_hccltx_l3_pvwash_yes">
+            <term>
+                <code meaning="portal venous phase hypoenhancement" value="RID43353" scheme="RadLex">
+            </term>
+        </entry>
+        <entry ORIGTXT="gen_hccltx_l4_pvwash_yes">
+            <term>
+                <code meaning="portal venous phase hypoenhancement" value="RID43353" scheme="RadLex">
+            </term>
+        </entry>
+        <entry ORIGTXT="gen_hccltx_l5_pvwash_yes">
+            <term>
+                <code meaning="portal venous phase hypoenhancement" value="RID43353" scheme="RadLex">
+            </term>
+        </entry>
+        <entry ORIGTXT="gen_hccltx_l1_pvcaps_yes">
+            <term>
+                <code meaning="pseudocapsule (liver)" value="RID39477" scheme="RadLex">
+            </term>
+        </entry>
+        <entry ORIGTXT="gen_hccltx_l2_pvcaps_yes">
+            <term>
+                <code meaning="pseudocapsule (liver)" value="RID39477" scheme="RadLex">
+            </term>
+        </entry>
+        <entry ORIGTXT="gen_hccltx_l3_pvcaps_yes">
+            <term>
+                <code meaning="pseudocapsule (liver)" value="RID39477" scheme="RadLex">
+            </term>
+        </entry>
+        <entry ORIGTXT="gen_hccltx_l4_pvcaps_yes">
+            <term>
+                <code meaning="pseudocapsule (liver)" value="RID39477" scheme="RadLex">
+            </term>
+        </entry>
+        <entry ORIGTXT="gen_hccltx_l5_pvcaps_yes">
+            <term>
+                <code meaning="pseudocapsule (liver)" value="RID39477" scheme="RadLex">
+            </term>
+        </entry>
+        <entry ORIGTXT="gen_hccltx_l1_latewash_yes">
+            <term>
+                <code meaning="delayed phase hypoenhancement" value="RID39477" scheme="RadLex">
+            </term>
+        </entry>
+        <entry ORIGTXT="gen_hccltx_l2_latewash_yes">
+            <term>
+                <code meaning="delayed phase hypoenhancement" value="RID39477" scheme="RadLex">
+            </term>
+        </entry>
+        <entry ORIGTXT="gen_hccltx_l3_latewash_yes">
+            <term>
+                <code meaning="delayed phase hypoenhancement" value="RID39477" scheme="RadLex">
+            </term>
+        </entry>
+        <entry ORIGTXT="gen_hccltx_l4_latewash_yes">
+            <term>
+                <code meaning="delayed phase hypoenhancement" value="RID39477" scheme="RadLex">
+            </term>
+        </entry>
+        <entry ORIGTXT="gen_hccltx_l5_latewash_yes">
+            <term>
+                <code meaning="delayed phase hypoenhancement" value="RID39477" scheme="RadLex">
+            </term>
+        </entry>
+        <entry ORIGTXT="gen_hccltx_l1_latecaps_yes">
+            <term>
+                <code meaning="pseudocapsule (liver)" value="RID39477" scheme="RadLex">
+            </term>
+        </entry>
+        <entry ORIGTXT="gen_hccltx_l2_latecaps_yes">
+            <term>
+                <code meaning="pseudocapsule (liver)" value="RID39477" scheme="RadLex">
+            </term>
+        </entry>
+        <entry ORIGTXT="gen_hccltx_l3_latecaps_yes">
+            <term>
+                <code meaning="pseudocapsule (liver)" value="RID39477" scheme="RadLex">
+            </term>
+        </entry>
+        <entry ORIGTXT="gen_hccltx_l4_latecaps_yes">
+            <term>
+                <code meaning="pseudocapsule (liver)" value="RID39477" scheme="RadLex">
+            </term>
+        </entry>
+        <entry ORIGTXT="gen_hccltx_l5_latecaps_yes">
+            <term>
+                <code meaning="pseudocapsule (liver)" value="RID39477" scheme="RadLex">
+            </term>
+        </entry>
+		-->
+    </script>
+    <!--Link to Stylesheet-->
+    <style type="text/css">
+        header { font-size: 14pt; font-weight: bold; padding-top: 5px; padding-bottom: 5px; }
+        td { padding-left: 15px; vertical-align: top }
+        th { padding-left: 15px; text-align: left }
+        input.checkbox { width: auto }
+        select { min-width: 100px }
+    </style>
+</head>
+
+<body onload="showlesions(); showverf(); enablehelpbutton();">
+
+    <script type="text/javascript">
+
+        function radiobuttonize(boxCalling, boxAffected) {
+            if (document.getElementById(boxCalling).checked) {
+                document.getElementById(boxAffected).checked = false;
+            }
+        }
+
+        function showverf () {
+            document.getElementById("zwverfahren").style.display = "none"
+            if ( document.getElementById("gen_hccltx_zwverfahren_yes").checked ) {
+                document.getElementById("zwverfahren").style.display = "table-row";
+            } else {
+                document.getElementById("zwverfahren").style.display = "none"
+            }
+        }
+
+        function showlesions () {
+            var nlesions = document.getElementById('gen_hccltx_nnodules').value;
+            var nlesions = Number(nlesions);
+
+            document.getElementById("lesion1").style.display = "none"
+            document.getElementById("lesion2").style.display = "none"
+            document.getElementById("lesion3").style.display = "none"
+            document.getElementById("lesion4").style.display = "none"
+            document.getElementById("lesion5").style.display = "none"
+
+            if ( nlesions <= 0 || nlesions > 6)
+                return;
+            if ( nlesions >= 1 )
+                document.getElementById("lesion1").style.display = "table";
+            if ( nlesions >= 2 )
+                document.getElementById("lesion2").style.display = "table";
+            if ( nlesions >= 3 )
+                document.getElementById("lesion3").style.display = "table";
+            if ( nlesions >= 4 )
+                document.getElementById("lesion4").style.display = "table";
+            if ( nlesions >= 5 )
+                document.getElementById("lesion5").style.display = "table";
+        }
+
+        function calcMilan () {
+            var Milan = true;
+            // check extrahepatic
+            if ( document.getElementById('gen_hccltx_hcc_ex_yes').checked )
+                Milan = false;
+            // check solitary nodule size
+            if ( Number(document.getElementById('gen_hccltx_nnodules').value) == 1 && Number(document.getElementById('gen_hccltx_l1_dimension').value) > 50 )
+                Milan = false;
+            // check multiple nodules size
+            if ( Number(document.getElementById('gen_hccltx_nnodules').value) > 1 && Number(document.getElementById('gen_hccltx_nnodules').value) <= 3) {
+                if ( Number(document.getElementById('gen_hccltx_l1_dimension').value) <= 30 && Number(document.getElementById('gen_hccltx_l2_dimension').value) <= 30 && Number(document.getElementById('gen_hccltx_l3_dimension').value) <= 30 )
+                    Milan = true;
+                else
+                    Milan = false;
+            }
+            if ( Number(document.getElementById('gen_hccltx_nnodules').value) > 3 )
+                Milan = false;
+            // check vascular invasion
+            if ( document.getElementById('gen_hccltx_l1_lateinvas_yes').checked || document.getElementById('gen_hccltx_l2_lateinvas_yes').checked || document.getElementById('gen_hccltx_l3_lateinvas_yes').checked )
+                Milan = false;
+            //Output
+            if ( Milan )
+                document.getElementById('gen_hccltx_milan_in').selectedIndex = 1;
+            else
+                document.getElementById('gen_hccltx_milan_in').selectedIndex = 2;
+        }
+
+        function enablehelpbutton () {
+            document.getElementById('gen_hccltx_milanhelp').innerHTML += "&nbsp;<mark><button type='button' onclick='calcMilan()'>Vorschlag</button></mark>";
+            document.getElementById('gen_hccltx_nnodules').insertAdjacentHTML('afterend', "&nbsp;<mark><a href=\"https://nrdr.acr.org/lirads/\" target=\"_blank\"><button type=\"button\">LI-RADS Hilfe</button></a></mark>");
+        }
+
+        if (window.jQuery) {
+            $(document).ready(function(){
+                showlesions();
+                showverf();
+                enablehelpbutton();
+            });
+        }
+
+    </script>
+
+    <section data-section-name="Clinical information">
+        <header class="level1" data-english="Clinical information">Klinische Angaben</header>
+        <p>
+            <textarea name="gen_hccltx_Angaben" id="gen_hccltx_Angaben"></textarea>
+        </p>
+        <table>
+            <tr>
+                <td><label for="gen_hccltx_ETNr">ET-Nummer</label></td>
+                <td><input data-field-type="TEXT" id="gen_hccltx_ETNr" name="gen_hccltx_ETNr" title="Eurotransplant-Nummer des Patienten, muss von Transplantbüro bei Anmeldung mitgegeben werden." /></td>
+            </tr>
+            <tr>
+                <td>initiales HCC</td>
+                <td>
+                    <input type="checkbox" id="gen_hccltx_ini_hcc_yes" name="gen_hccltx_ini_hcc_yes" onchange="radiobuttonize('gen_hccltx_ini_hcc_yes', 'gen_hccltx_ini_hcc_no')" title="ja, falls Erstdiagnose des Patienten oder auch im Rezidivfall sofern Tumorfreiheit über &gt;24 Monate bestanden hat" value="ja" /><label for="gen_hccltx_ini_hcc_yes">ja</label>
+                    <input type="checkbox" id="gen_hccltx_ini_hcc_no" name="gen_hccltx_ini_hcc_no" onchange="radiobuttonize('gen_hccltx_ini_hcc_no', 'gen_hccltx_ini_hcc_yes')" title="ja, falls Erstdiagnose des Patienten oder auch im Rezidivfall sofern Tumorfreiheit über &gt;24 Monate bestanden hat" value="nein" /><label for="gen_hccltx_ini_hcc_no">nein</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Verlaufsbericht</td>
+                <td>
+                    <input type="checkbox" id="gen_hccltx_verlauf_yes" name="gen_hccltx_verlauf_yes" onchange="radiobuttonize('gen_hccltx_verlauf_yes', 'gen_hccltx_verlauf_no')" title="ja, falls Patient bereits auf Liste und aktuelle Untersuchung Follow-up" value="ja" /><label for="gen_hccltx_verlauf_yes">ja</label>
+                    <input type="checkbox" id="gen_hccltx_verlauf_no" name="gen_hccltx_verlauf_no" onchange="radiobuttonize('gen_hccltx_verlauf_no', 'gen_hccltx_verlauf_yes')" title="ja, falls Patient bereits auf Liste und aktuelle Untersuchung Follow-up" value="nein" /><label for="gen_hccltx_verlauf_no">nein</label>
+                </td>
+            </tr>
+            <tr>
+                <td>HCC gesichert</td>
+                <td>
+                    <input type="checkbox" id="gen_hccltx_hcc_dx_yes" name="gen_hccltx_hcc_dx_yes" onchange="radiobuttonize('gen_hccltx_hcc_dx_yes', 'gen_hccltx_hcc_dx_no')" title="ja, falls HCC-Diagnose gesichert (muss nicht histologisch sein)" value="ja" /><label for="gen_hccltx_hcc_dx_yes">ja</label>
+                    <input type="checkbox" id="gen_hccltx_hcc_dx_no" name="gen_hccltx_hcc_dx_no" onchange="radiobuttonize('gen_hccltx_hcc_dx_no', 'gen_hccltx_hcc_dx_yes')" title="ja, falls HCC-Diagnose gesichert (muss nicht histologisch sein)" value="nein" /><label for="gen_hccltx_hcc_dx_no">nein</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Leberzirrhose gesichert</td>
+                <td>
+                    <input type="checkbox" id="gen_hccltx_lci_dx_yes" name="gen_hccltx_lci_dx_yes" onchange="radiobuttonize('gen_hccltx_lci_dx_yes', 'gen_hccltx_lci_dx_no')" title="ja, nur falls Leberzirrhose histologisch gesichert" value="ja" /><label for="gen_hccltx_lci_dx_yes">ja</label>
+                    <input type="checkbox" id="gen_hccltx_lci_dx_no" name="gen_hccltx_lci_dx_no" onchange="radiobuttonize('gen_hccltx_lci_dx_no', 'gen_hccltx_lci_dx_yes')" title="ja, nur falls Leberzirrhose histologisch gesichert" value="nein" /><label for="gen_hccltx_lci_dx_no">nein</label>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>aktuell eingesetztes Verfahren</td>
+                <td>
+                    <select name="gen_hccltx_aktverfahren" id="gen_hccltx_verfahren" title="bitte Modalität der aktuellen Bildgebung auswählen">
+                        <option value="-">-</option>
+                        <option value="CT">CT</option>
+                        <option value="MRT">MRT</option>
+                    </select>
+                    vom
+                    <input data-field-type="DATE" id="gen_hccltx_aktverfahren_date" name="gen_hccltx_aktverfahren_date" title="bitte Datum der aktuellen Bildgebung eingeben">
+                </td>
+            </tr>
+            <tr>
+                <td>zusätzlich zweites Verfahren</td>
+                <td>
+                    <input type="checkbox" id="gen_hccltx_zwverfahren_yes" name="gen_hccltx_zwverfahren_yes" onchange="radiobuttonize('gen_hccltx_zwverfahren_yes', 'gen_hccltx_zwverfahren_no'); showverf()" title="ja, falls ein bildgebendes Verfahren zur Diagnosestellung nicht ausreichend (d.h. Herde zwischen 1 und 2 cm)" value="ja" /><label for="gen_hccltx_zwverfahren_yes">ja</label>
+                    <input type="checkbox" id="gen_hccltx_zwverfahren_no" name="gen_hccltx_zwverfahren_no" onchange="radiobuttonize('gen_hccltx_zwverfahren_no', 'gen_hccltx_zwverfahren_yes'); showverf()" title="ja, falls ein bildgebendes Verfahren zur Diagnosestellung nicht ausreichend (d.h. Herde zwischen 1 und 2 cm)" value="nein" checked /><label for="gen_hccltx_zwverfahren_no">nein</label>
+                </td>
+            </tr>
+            <tr id="zwverfahren"  data-mrrt-condition="#gen_hccltx_zwverfahren_yes eq true">
+                <td>&nbsp;</td>
+                <td>
+                    <select name="gen_hccltx_zwverfahren" id="gen_hccltx_zwverfahren" title="falls zusätzlich zweites Verfahren, entsprechende Modalität (muss unterschiedlich zur aktuellsten sein) und Untersuchungsdatum auswählen">
+                        <option value="-">-</option>
+                        <option value="CT">CT</option>
+                        <option value="MRT">MRT</option>
+                    </select>
+                    &nbsp;vom&nbsp;
+                    <input data-field-type="DATE" name="gen_hccltx_zwverfahrendate"  id="gen_hccltx_zwverfahrendate" title="falls zusätzlich zweites Verfahren, entsprechende Modalität (muss unterschiedlich zur aktuellsten sein) und Untersuchungsdatum auswählen" />
+                </td>
+            </tr>
+            <tr>
+                <td><label for="gen_hccltx_nnodules">Anzahl HCC-Knoten</label></td>
+                <td>
+                    <select id="gen_hccltx_nnodules" name="gen_hccltx_nnodules" onchange="showlesions()" title="Anzahl der sicheren HCC-Herde, 0 falls kein Herd sicher, diffus falls Herde nicht eindeutig messbar. &#10;Als sichere Herde gelten (analog Li-Rads) im Sinne der Leitlinie solche &gt;2 cm mit typischem KM-Verhalten (arteriell hypervaskularisiert mit Washout, bzw. Herde zwischen 1 und 2 cm mit typischem Verhalten in zwei Bildgebungen. Herde &lt;1 cm werden nicht berücksichtigt, es sei denn es liegt eine eindeutige Histologie aus diesem Herd vor. &#10;&#10;- Nach TACE gilt ein vormals HCC-typischer Herd weiterhin als Herd im Sinne der Richtlinie. &#10;- kurativ behandelte Herde (Resektion, lokale Ablation) gelten nicht mehr als Herde.">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="&gt;5">&gt;5</option>
+                        <option value="diffus">diffus</option>
+                        <option value="-">-</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>extrahepatische Manifestation</td>
+                <td>
+                    <input type="checkbox" id="gen_hccltx_hcc_ex_yes" name="gen_hccltx_hcc_ex_yes" onchange="radiobuttonize('gen_hccltx_hcc_ex_yes', 'gen_hccltx_hcc_ex_no')" title="ja, falls CT- bzw. MR-morphologisch extrahepatische HCC-Manifestion mit 100%iger Sicherheit, sonst nein" value="ja" /><label for="gen_hccltx_hcc_ex_yes">ja</label>
+                    <input type="checkbox" id="gen_hccltx_hcc_ex_no" name="gen_hccltx_hcc_ex_no" onchange="radiobuttonize('gen_hccltx_hcc_ex_no', 'gen_hccltx_hcc_ex_yes')" title="ja, falls CT- bzw. MR-morphologisch extrahepatische HCC-Manifestion mit 100%iger Sicherheit, sonst nein" value="nein" /><label for="gen_hccltx_hcc_ex_no">nein</label>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <section data-section-name="Befunde">
+        <header class="level1" data-english="Lesions">Läsionen</header>
+        <table id="lesion1" data-mrrt-condition="#gen_hccltx_nnodules ge 1">
+            <tr><th>Läsion 1</th></tr>
+            <tr>
+                <td>Größe der Läsion</td>
+                <td><input data-field-type="NUMBER" id="gen_hccltx_l1_dimension" name="gen_hccltx_l1_dimension" title="im axialen Schnitt in mm &#10;- Nach TACE wird weiterhin der Herd soweit identifizierbar ausgemessen (nur hypervaskularisiertem Anteil, analog mRECIST)">&nbsp;mm</td>
+            </tr>
+            <tr>
+                <td>Segment</td>
+                <td><input data-field-type="TEXT" id="gen_hccltx_l1_segment" name="gen_hccltx_l1_segment" title="Lebersegment I-VIII"></td>
+            </tr>
+            <tr>
+                <td>Seriennummer</td>
+                <td><input data-field-type="NUMBER" id="gen_hccltx_l1_serie" name="gen_hccltx_l1_serie" title="Nummer der Serie, in der die jeweilige Läsion ausgemessen wurde"></td>
+            </tr>
+            <tr>
+                <td>Bildnummer</td>
+                <td><input data-field-type="NUMBER" id="gen_hccltx_l1_bild" name="gen_hccltx_l1_bild" title="Nummer des Bildes, in der die jeweilige Läsion ausgemessen wurde"></td>
+            </tr>
+            <tr>
+                <td>Kontrastphase der Messung</td>
+                <td>
+                    <select id="gen_hccltx_l1_contrast" name="gen_hccltx_l1_contrast" title="Angabe welche Kontrastphase (nativ, arteriell, portalvenös, verzögert) zur Messung verwandt wurde. 'verzögert' beschreibt hier die spätvenös aquirierte Serie nach &gt;180 Sekunden.">
+                        <option value="-">-</option>
+                        <option value="nativ">nativ</option>
+                        <option value="arteriell">arteriell</option>
+                        <option value="portalvenös">portalvenös</option>
+                        <option value="verzögert">verzögert</option>
+                    </select>
+                </td>
+            </tr>
+            <tr title="Angabe ob in arterieller Kontrastierungsphase eine starke Kontrastmittelanreicherung vorliegt &#10;Sollte im Regelfall ja sein, da nur solche Herde ausgemessen werden sollten, die typisches KM-Verhalten zeigen. Kann (im Sinne der Leitlinie) nur nein sagen, falls histologische Sicherung eines bildgebend atypischen Herdes vorliegt.">
+                <td>Verhalten arteriell</td>
+                <td>stark anreichernd</td>
+                <td>
+                    <input type="checkbox" id="gen_hccltx_l1_art_yes" name="gen_hccltx_l1_art_yes" onchange="radiobuttonize('gen_hccltx_l1_art_yes', 'gen_hccltx_l1_art_no')" value="ja" /><label for="gen_hccltx_l1_art_yes">ja</label>
+                    <input type="checkbox" id="gen_hccltx_l1_art_no" name="gen_hccltx_l1_art_no" onchange="radiobuttonize('gen_hccltx_l1_art_no', 'gen_hccltx_l1_art_yes')" value="nein" /><label for="gen_hccltx_l1_art_no">nein</label>
+                </td>
+            </tr>
+            <!--- HIER WEITER XXXXX -->
+            <tr title="Angabe ob in portalvenöser Kontrastierungsphase ein Kontrastmittelauswaschen bzw. eine Pseudokapsel zu beobachten ist.">
+                <td>Verhalten portalvenös</td>
+                <td>früh auswaschend</td>
+                <td>
+                    <input type="checkbox" id="gen_hccltx_l1_pvwash_yes" name="gen_hccltx_l1_pvwash_yes" onchange="radiobuttonize('gen_hccltx_l1_pvwash_yes', 'gen_hccltx_l1_pvwash_no')" value="ja" /><label for="gen_hccltx_l1_pvwash_yes">ja</label>
+                    <input type="checkbox" id="gen_hccltx_l1_pvwash_no" name="gen_hccltx_l1_pvwash_no" onchange="radiobuttonize('gen_hccltx_l1_pvwash_no', 'gen_hccltx_l1_pvwash_yes')" value="nein"><label for="gen_hccltx_l1_pvwash_no">nein</label>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>Pseudokapsel</td>
+                <td>
+                    <input type="checkbox" id="gen_hccltx_l1_pvcaps_yes" name="gen_hccltx_l1_pvcaps_yes" onchange="radiobuttonize('gen_hccltx_l1_pvcaps_yes', 'gen_hccltx_l1_pvcaps_no')" value="ja"><label for="gen_hccltx_l1_pvcaps_yes">ja</label>
+                    <input type="checkbox" id="gen_hccltx_l1_pvcaps_no" name="gen_hccltx_l1_pvcaps_no" onchange="radiobuttonize('gen_hccltx_l1_pvcaps_no', 'gen_hccltx_l1_pvcaps_yes')" value="nein"><label for="gen_hccltx_l1_pvcaps_yes">nein</label>
+                </td>
+            </tr>
+            <tr title="Angabe ob in spätvenöser Kontrastierungsphase ein Kontrastmittelauswaschen, eine Pseudokapsel oder eine Gefäßinvasion zu beobachten ist. &#10;Kontrastmittelauswaschen sollte im Regelfall ja sein, da nur Herde mit typischem KM-Verhalten ausgemessen werden sollten. Kann nur nein sagen, falls histologische Sicherung eines bildgebend atypischen Herdes vorliegt.">
+                <td>Verhalten verzögert</td>
+                <td>auswaschend</td>
+                <td>
+                    <input type="checkbox" id="gen_hccltx_l1_latewash_yes" name="gen_hccltx_l1_latewash_yes" onchange="radiobuttonize('gen_hccltx_l1_latewash_yes', 'gen_hccltx_l1_latewash_no')" value="ja"><label for="gen_hccltx_l1_latewash_yes">ja</label>
+                    <input type="checkbox" id="gen_hccltx_l1_latewash_no" name="gen_hccltx_l1_latewash_no" onchange="radiobuttonize('gen_hccltx_l1_latewash_no', 'gen_hccltx_l1_latewash_yes')" value="nein"><label for="gen_hccltx_l1_latewash_no">nein</label>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>Pseudokapsel</td>
+                <td>
+                    <input type="checkbox" id="gen_hccltx_l1_latecaps_yes" name="gen_hccltx_l1_latecaps_yes" onchange="radiobuttonize('gen_hccltx_l1_latecaps_yes', 'gen_hccltx_l1_latecaps_no')" value="ja"><label for="gen_hccltx_l1_latecaps_yes">ja</label>
+                    <input type="checkbox" id="gen_hccltx_l1_latecaps_no" name="gen_hccltx_l1_latecaps_no" onchange="radiobuttonize('gen_hccltx_l1_latecaps_no', 'gen_hccltx_l1_latecaps_yes')" value="nein"><label for="gen_hccltx_l1_latecaps_no">nein</label>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>makrovaskuläre Invasion</td>
+                <td>
+                    <input type="checkbox" id="gen_hccltx_l1_lateinvas_yes" name="gen_hccltx_l1_lateinvas_yes" onchange="radiobuttonize('gen_hccltx_l1_lateinvas_yes', 'gen_hccltx_l1_lateinvas_no')" value="ja"><label for="gen_hccltx_l1_lateinvas_yes">ja</label>
+                    <input type="checkbox" id="gen_hccltx_l1_lateinvas_no" name="gen_hccltx_l1_lateinvas_no" onchange="radiobuttonize('gen_hccltx_l1_lateinvas_no', 'gen_hccltx_l1_lateinvas_yes')" value="nein"><label for="gen_hccltx_l1_lateinvas_no">nein</label>
+                </td>
+            </tr>
+        </table>
+
+        <table id="lesion2" data-mrrt-condition="#gen_hccltx_nnodules ge 2">
+            <tr><th>Läsion 2</th></tr>
+            <tr>
+                <td>Größe der Läsion</td>
+                <td><input data-field-type="NUMBER" id="gen_hccltx_l2_dimension" name="gen_hccltx_l2_dimension" title="im axialen Schnitt in mm &#10;- Nach TACE wird weiterhin der Herd soweit identifizierbar ausgemessen (nur hypervaskularisiertem Anteil, analog mRECIST)">&nbsp;mm</td>
+            </tr>
+            <tr>
+                <td>Segment</td>
+                <td><input data-field-type="TEXT" id="gen_hccltx_l2_segment" name="gen_hccltx_l2_segment" title="Lebersegment I-VIII"></td>
+            </tr>
+            <tr>
+                <td>Seriennummer</td>
+                <td><input data-field-type="NUMBER" id="gen_hccltx_l2_serie" name="gen_hccltx_l2_serie" title="Nummer der Serie, in der die jeweilige Läsion ausgemessen wurde"></td>
+            </tr>
+            <tr>
+                <td>Bildnummer</td>
+                <td><input data-field-type="NUMBER" id="gen_hccltx_l2_bild" name="gen_hccltx_l2_bild" title="Nummer des Bildes, in der die jeweilige Läsion ausgemessen wurde"></td>
+            </tr>
+            <tr>
+                <td>Kontrastphase der Messung</td>
+                <td>
+                    <select id="gen_hccltx_l2_contrast" name="gen_hccltx_l2_contrast" title="Angabe welche Kontrastphase (nativ, arteriell, portalvenös, verzögert) zur Messung verwandt wurde. 'verzögert' beschreibt hier die spätvenös aquirierte Serie nach &gt;180 Sekunden.">
+                        <option value="-">-</option>
+                        <option value="nativ">nativ</option>
+                        <option value="arteriell">arteriell</option>
+                        <option value="portalvenös">portalvenös</option>
+                        <option value="verzögert">verzögert</option>
+                    </select>
+                </td>
+            </tr>
+            <tr title="Angabe ob in arterieller Kontrastierungsphase eine starke Kontrastmittelanreicherung vorliegt &#10;Sollte im Regelfall ja sein, da nur solche Herde ausgemessen werden sollten, die typisches KM-Verhalten zeigen. Kann (im Sinne der Leitlinie) nur nein sagen, falls histologische Sicherung eines bildgebend atypischen Herdes vorliegt.">
+                <td>Verhalten arteriell</td>
+                <td>stark anreichernd</td>
+                <td>
+                    <input type="checkbox" id="gen_hccltx_l2_art_yes" name="gen_hccltx_l2_art_yes" onchange="radiobuttonize('gen_hccltx_l2_art_yes', 'gen_hccltx_l2_art_no')" value="ja" /><label for="gen_hccltx_l2_art_yes">ja</label>
+                    <input type="checkbox" id="gen_hccltx_l2_art_no" name="gen_hccltx_l2_art_no" onchange="radiobuttonize('gen_hccltx_l2_art_no', 'gen_hccltx_l2_art_yes')" value="nein" /><label for="gen_hccltx_l2_art_no">nein</label>
+                </td>
+            </tr>
+            <!--- HIER WEITER XXXXX -->
+            <tr title="Angabe ob in portalvenöser Kontrastierungsphase ein Kontrastmittelauswaschen bzw. eine Pseudokapsel zu beobachten ist.">
+                <td>Verhalten portalvenös</td>
+                <td>früh auswaschend</td>
+                <td>
+                    <input type="checkbox" id="gen_hccltx_l2_pvwash_yes" name="gen_hccltx_l2_pvwash_yes" onchange="radiobuttonize('gen_hccltx_l2_pvwash_yes', 'gen_hccltx_l2_pvwash_no')" value="ja" /><label for="gen_hccltx_l2_pvwash_yes">ja</label>
+                    <input type="checkbox" id="gen_hccltx_l2_pvwash_no" name="gen_hccltx_l2_pvwash_no" onchange="radiobuttonize('gen_hccltx_l2_pvwash_no', 'gen_hccltx_l2_pvwash_yes')" value="nein"><label for="gen_hccltx_l2_pvwash_no">nein</label>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>Pseudokapsel</td>
+                <td>
+                    <input type="checkbox" id="gen_hccltx_l2_pvcaps_yes" name="gen_hccltx_l2_pvcaps_yes" onchange="radiobuttonize('gen_hccltx_l2_pvcaps_yes', 'gen_hccltx_l2_pvcaps_no')" value="ja"><label for="gen_hccltx_l2_pvcaps_yes">ja</label>
+                    <input type="checkbox" id="gen_hccltx_l2_pvcaps_no" name="gen_hccltx_l2_pvcaps_no" onchange="radiobuttonize('gen_hccltx_l2_pvcaps_no', 'gen_hccltx_l2_pvcaps_yes')" value="nein"><label for="gen_hccltx_l2_pvcaps_yes">nein</label>
+                </td>
+            </tr>
+            <tr title="Angabe ob in spätvenöser Kontrastierungsphase ein Kontrastmittelauswaschen, eine Pseudokapsel oder eine Gefäßinvasion zu beobachten ist. &#10;Kontrastmittelauswaschen sollte im Regelfall ja sein, da nur Herde mit typischem KM-Verhalten ausgemessen werden sollten. Kann nur nein sagen, falls histologische Sicherung eines bildgebend atypischen Herdes vorliegt.">
+                <td>Verhalten verzögert</td>
+                <td>auswaschend</td>
+                <td>
+                    <input type="checkbox" id="gen_hccltx_l2_latewash_yes" name="gen_hccltx_l2_latewash_yes" onchange="radiobuttonize('gen_hccltx_l2_latewash_yes', 'gen_hccltx_l2_latewash_no')" value="ja"><label for="gen_hccltx_l2_latewash_yes">ja</label>
+                    <input type="checkbox" id="gen_hccltx_l2_latewash_no" name="gen_hccltx_l2_latewash_no" onchange="radiobuttonize('gen_hccltx_l2_latewash_no', 'gen_hccltx_l2_latewash_yes')" value="nein"><label for="gen_hccltx_l2_latewash_no">nein</label>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>Pseudokapsel</td>
+                <td>
+                    <input type="checkbox" id="gen_hccltx_l2_latecaps_yes" name="gen_hccltx_l2_latecaps_yes" onchange="radiobuttonize('gen_hccltx_l2_latecaps_yes', 'gen_hccltx_l2_latecaps_no')" value="ja"><label for="gen_hccltx_l2_latecaps_yes">ja</label>
+                    <input type="checkbox" id="gen_hccltx_l2_latecaps_no" name="gen_hccltx_l2_latecaps_no" onchange="radiobuttonize('gen_hccltx_l2_latecaps_no', 'gen_hccltx_l2_latecaps_yes')" value="nein"><label for="gen_hccltx_l2_latecaps_no">nein</label>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>makrovaskuläre Invasion</td>
+                <td>
+                    <input type="checkbox" id="gen_hccltx_l2_lateinvas_yes" name="gen_hccltx_l2_lateinvas_yes" onchange="radiobuttonize('gen_hccltx_l2_lateinvas_yes', 'gen_hccltx_l2_lateinvas_no')" value="ja"><label for="gen_hccltx_l2_lateinvas_yes">ja</label>
+                    <input type="checkbox" id="gen_hccltx_l2_lateinvas_no" name="gen_hccltx_l2_lateinvas_no" onchange="radiobuttonize('gen_hccltx_l2_lateinvas_no', 'gen_hccltx_l2_lateinvas_yes')" value="nein"><label for="gen_hccltx_l2_lateinvas_no">nein</label>
+                </td>
+            </tr>
+        </table>
+
+        <table id="lesion3" data-mrrt-condition="#gen_hccltx_nnodules ge 3">
+            <tr><th>Läsion 3</th></tr>
+            <tr>
+                <td>Größe der Läsion</td>
+                <td><input data-field-type="NUMBER" id="gen_hccltx_l3_dimension" name="gen_hccltx_l3_dimension" title="im axialen Schnitt in mm &#10;- Nach TACE wird weiterhin der Herd soweit identifizierbar ausgemessen (nur hypervaskularisiertem Anteil, analog mRECIST)">&nbsp;mm</td>
+            </tr>
+            <tr>
+                <td>Segment</td>
+                <td><input data-field-type="TEXT" id="gen_hccltx_l3_segment" name="gen_hccltx_l3_segment" title="Lebersegment I-VIII"></td>
+            </tr>
+            <tr>
+                <td>Seriennummer</td>
+                <td><input data-field-type="NUMBER" id="gen_hccltx_l3_serie" name="gen_hccltx_l3_serie" title="Nummer der Serie, in der die jeweilige Läsion ausgemessen wurde"></td>
+            </tr>
+            <tr>
+                <td>Bildnummer</td>
+                <td><input data-field-type="NUMBER" id="gen_hccltx_l3_bild" name="gen_hccltx_l3_bild" title="Nummer des Bildes, in der die jeweilige Läsion ausgemessen wurde"></td>
+            </tr>
+            <tr>
+                <td>Kontrastphase der Messung</td>
+                <td>
+                    <select id="gen_hccltx_l3_contrast" name="gen_hccltx_l3_contrast" title="Angabe welche Kontrastphase (nativ, arteriell, portalvenös, verzögert) zur Messung verwandt wurde. 'verzögert' beschreibt hier die spätvenös aquirierte Serie nach &gt;180 Sekunden.">
+                        <option value="-">-</option>
+                        <option value="nativ">nativ</option>
+                        <option value="arteriell">arteriell</option>
+                        <option value="portalvenös">portalvenös</option>
+                        <option value="verzögert">verzögert</option>
+                    </select>
+                </td>
+            </tr>
+            <tr title="Angabe ob in arterieller Kontrastierungsphase eine starke Kontrastmittelanreicherung vorliegt &#10;Sollte im Regelfall ja sein, da nur solche Herde ausgemessen werden sollten, die typisches KM-Verhalten zeigen. Kann (im Sinne der Leitlinie) nur nein sagen, falls histologische Sicherung eines bildgebend atypischen Herdes vorliegt.">
+                <td>Verhalten arteriell</td>
+                <td>stark anreichernd</td>
+                <td>
+                    <input type="checkbox" id="gen_hccltx_l3_art_yes" name="gen_hccltx_l3_art_yes" onchange="radiobuttonize('gen_hccltx_l3_art_yes', 'gen_hccltx_l3_art_no')" value="ja" /><label for="gen_hccltx_l3_art_yes">ja</label>
+                    <input type="checkbox" id="gen_hccltx_l3_art_no" name="gen_hccltx_l3_art_no" onchange="radiobuttonize('gen_hccltx_l3_art_no', 'gen_hccltx_l3_art_yes')" value="nein" /><label for="gen_hccltx_l3_art_no">nein</label>
+                </td>
+            </tr>
+            <!--- HIER WEITER XXXXX -->
+            <tr title="Angabe ob in portalvenöser Kontrastierungsphase ein Kontrastmittelauswaschen bzw. eine Pseudokapsel zu beobachten ist.">
+                <td>Verhalten portalvenös</td>
+                <td>früh auswaschend</td>
+                <td>
+                    <input type="checkbox" id="gen_hccltx_l3_pvwash_yes" name="gen_hccltx_l3_pvwash_yes" onchange="radiobuttonize('gen_hccltx_l3_pvwash_yes', 'gen_hccltx_l3_pvwash_no')" value="ja" /><label for="gen_hccltx_l3_pvwash_yes">ja</label>
+                    <input type="checkbox" id="gen_hccltx_l3_pvwash_no" name="gen_hccltx_l3_pvwash_no" onchange="radiobuttonize('gen_hccltx_l3_pvwash_no', 'gen_hccltx_l3_pvwash_yes')" value="nein"><label for="gen_hccltx_l3_pvwash_no">nein</label>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>Pseudokapsel</td>
+                <td>
+                    <input type="checkbox" id="gen_hccltx_l3_pvcaps_yes" name="gen_hccltx_l3_pvcaps_yes" onchange="radiobuttonize('gen_hccltx_l3_pvcaps_yes', 'gen_hccltx_l3_pvcaps_no')" value="ja"><label for="gen_hccltx_l3_pvcaps_yes">ja</label>
+                    <input type="checkbox" id="gen_hccltx_l3_pvcaps_no" name="gen_hccltx_l3_pvcaps_no" onchange="radiobuttonize('gen_hccltx_l3_pvcaps_no', 'gen_hccltx_l3_pvcaps_yes')" value="nein"><label for="gen_hccltx_l3_pvcaps_yes">nein</label>
+                </td>
+            </tr>
+            <tr title="Angabe ob in spätvenöser Kontrastierungsphase ein Kontrastmittelauswaschen, eine Pseudokapsel oder eine Gefäßinvasion zu beobachten ist. &#10;Kontrastmittelauswaschen sollte im Regelfall ja sein, da nur Herde mit typischem KM-Verhalten ausgemessen werden sollten. Kann nur nein sagen, falls histologische Sicherung eines bildgebend atypischen Herdes vorliegt.">
+                <td>Verhalten verzögert</td>
+                <td>auswaschend</td>
+                <td>
+                    <input type="checkbox" id="gen_hccltx_l3_latewash_yes" name="gen_hccltx_l3_latewash_yes" onchange="radiobuttonize('gen_hccltx_l3_latewash_yes', 'gen_hccltx_l3_latewash_no')" value="ja"><label for="gen_hccltx_l3_latewash_yes">ja</label>
+                    <input type="checkbox" id="gen_hccltx_l3_latewash_no" name="gen_hccltx_l3_latewash_no" onchange="radiobuttonize('gen_hccltx_l3_latewash_no', 'gen_hccltx_l3_latewash_yes')" value="nein"><label for="gen_hccltx_l3_latewash_no">nein</label>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>Pseudokapsel</td>
+                <td>
+                    <input type="checkbox" id="gen_hccltx_l3_latecaps_yes" name="gen_hccltx_l3_latecaps_yes" onchange="radiobuttonize('gen_hccltx_l3_latecaps_yes', 'gen_hccltx_l3_latecaps_no')" value="ja"><label for="gen_hccltx_l3_latecaps_yes">ja</label>
+                    <input type="checkbox" id="gen_hccltx_l3_latecaps_no" name="gen_hccltx_l3_latecaps_no" onchange="radiobuttonize('gen_hccltx_l3_latecaps_no', 'gen_hccltx_l3_latecaps_yes')" value="nein"><label for="gen_hccltx_l3_latecaps_no">nein</label>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>makrovaskuläre Invasion</td>
+                <td>
+                    <input type="checkbox" id="gen_hccltx_l3_lateinvas_yes" name="gen_hccltx_l3_lateinvas_yes" onchange="radiobuttonize('gen_hccltx_l3_lateinvas_yes', 'gen_hccltx_l3_lateinvas_no')" value="ja"><label for="gen_hccltx_l3_lateinvas_yes">ja</label>
+                    <input type="checkbox" id="gen_hccltx_l3_lateinvas_no" name="gen_hccltx_l3_lateinvas_no" onchange="radiobuttonize('gen_hccltx_l3_lateinvas_no', 'gen_hccltx_l3_lateinvas_yes')" value="nein"><label for="gen_hccltx_l3_lateinvas_no">nein</label>
+                </td>
+            </tr>
+        </table>
+
+        <table id="lesion4" data-mrrt-condition="#gen_hccltx_nnodules ge 4">
+            <tr><th>Läsion 4</th></tr>
+            <tr>
+                <td>Größe der Läsion</td>
+                <td><input data-field-type="NUMBER" id="gen_hccltx_l4_dimension" name="gen_hccltx_l4_dimension" title="im axialen Schnitt in mm &#10;- Nach TACE wird weiterhin der Herd soweit identifizierbar ausgemessen (nur hypervaskularisiertem Anteil, analog mRECIST)">&nbsp;mm</td>
+            </tr>
+            <tr>
+                <td>Segment</td>
+                <td><input data-field-type="TEXT" id="gen_hccltx_l4_segment" name="gen_hccltx_l4_segment" title="Lebersegment I-VIII"></td>
+            </tr>
+            <tr>
+                <td>Seriennummer</td>
+                <td><input data-field-type="NUMBER" id="gen_hccltx_l4_serie" name="gen_hccltx_l4_serie" title="Nummer der Serie, in der die jeweilige Läsion ausgemessen wurde"></td>
+            </tr>
+            <tr>
+                <td>Bildnummer</td>
+                <td><input data-field-type="NUMBER" id="gen_hccltx_l4_bild" name="gen_hccltx_l4_bild" title="Nummer des Bildes, in der die jeweilige Läsion ausgemessen wurde"></td>
+            </tr>
+            <tr>
+                <td>Kontrastphase der Messung</td>
+                <td>
+                    <select id="gen_hccltx_l4_contrast" name="gen_hccltx_l4_contrast" title="Angabe welche Kontrastphase (nativ, arteriell, portalvenös, verzögert) zur Messung verwandt wurde. 'verzögert' beschreibt hier die spätvenös aquirierte Serie nach &gt;180 Sekunden.">
+                        <option value="-">-</option>
+                        <option value="nativ">nativ</option>
+                        <option value="arteriell">arteriell</option>
+                        <option value="portalvenös">portalvenös</option>
+                        <option value="verzögert">verzögert</option>
+                    </select>
+                </td>
+            </tr>
+            <tr title="Angabe ob in arterieller Kontrastierungsphase eine starke Kontrastmittelanreicherung vorliegt &#10;Sollte im Regelfall ja sein, da nur solche Herde ausgemessen werden sollten, die typisches KM-Verhalten zeigen. Kann (im Sinne der Leitlinie) nur nein sagen, falls histologische Sicherung eines bildgebend atypischen Herdes vorliegt.">
+                <td>Verhalten arteriell</td>
+                <td>stark anreichernd</td>
+                <td>
+                    <input type="checkbox" id="gen_hccltx_l4_art_yes" name="gen_hccltx_l4_art_yes" onchange="radiobuttonize('gen_hccltx_l4_art_yes', 'gen_hccltx_l4_art_no')" value="ja" /><label for="gen_hccltx_l4_art_yes">ja</label>
+                    <input type="checkbox" id="gen_hccltx_l4_art_no" name="gen_hccltx_l4_art_no" onchange="radiobuttonize('gen_hccltx_l4_art_no', 'gen_hccltx_l4_art_yes')" value="nein" /><label for="gen_hccltx_l4_art_no">nein</label>
+                </td>
+            </tr>
+            <!--- HIER WEITER XXXXX -->
+            <tr title="Angabe ob in portalvenöser Kontrastierungsphase ein Kontrastmittelauswaschen bzw. eine Pseudokapsel zu beobachten ist.">
+                <td>Verhalten portalvenös</td>
+                <td>früh auswaschend</td>
+                <td>
+                    <input type="checkbox" id="gen_hccltx_l4_pvwash_yes" name="gen_hccltx_l4_pvwash_yes" onchange="radiobuttonize('gen_hccltx_l4_pvwash_yes', 'gen_hccltx_l4_pvwash_no')" value="ja" /><label for="gen_hccltx_l4_pvwash_yes">ja</label>
+                    <input type="checkbox" id="gen_hccltx_l4_pvwash_no" name="gen_hccltx_l4_pvwash_no" onchange="radiobuttonize('gen_hccltx_l4_pvwash_no', 'gen_hccltx_l4_pvwash_yes')" value="nein"><label for="gen_hccltx_l4_pvwash_no">nein</label>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>Pseudokapsel</td>
+                <td>
+                    <input type="checkbox" id="gen_hccltx_l4_pvcaps_yes" name="gen_hccltx_l4_pvcaps_yes" onchange="radiobuttonize('gen_hccltx_l4_pvcaps_yes', 'gen_hccltx_l4_pvcaps_no')" value="ja"><label for="gen_hccltx_l4_pvcaps_yes">ja</label>
+                    <input type="checkbox" id="gen_hccltx_l4_pvcaps_no" name="gen_hccltx_l4_pvcaps_no" onchange="radiobuttonize('gen_hccltx_l4_pvcaps_no', 'gen_hccltx_l4_pvcaps_yes')" value="nein"><label for="gen_hccltx_l4_pvcaps_yes">nein</label>
+                </td>
+            </tr>
+            <tr title="Angabe ob in spätvenöser Kontrastierungsphase ein Kontrastmittelauswaschen, eine Pseudokapsel oder eine Gefäßinvasion zu beobachten ist. &#10;Kontrastmittelauswaschen sollte im Regelfall ja sein, da nur Herde mit typischem KM-Verhalten ausgemessen werden sollten. Kann nur nein sagen, falls histologische Sicherung eines bildgebend atypischen Herdes vorliegt.">
+                <td>Verhalten verzögert</td>
+                <td>auswaschend</td>
+                <td>
+                    <input type="checkbox" id="gen_hccltx_l4_latewash_yes" name="gen_hccltx_l4_latewash_yes" onchange="radiobuttonize('gen_hccltx_l4_latewash_yes', 'gen_hccltx_l4_latewash_no')" value="ja"><label for="gen_hccltx_l4_latewash_yes">ja</label>
+                    <input type="checkbox" id="gen_hccltx_l4_latewash_no" name="gen_hccltx_l4_latewash_no" onchange="radiobuttonize('gen_hccltx_l4_latewash_no', 'gen_hccltx_l4_latewash_yes')" value="nein"><label for="gen_hccltx_l4_latewash_no">nein</label>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>Pseudokapsel</td>
+                <td>
+                    <input type="checkbox" id="gen_hccltx_l4_latecaps_yes" name="gen_hccltx_l4_latecaps_yes" onchange="radiobuttonize('gen_hccltx_l4_latecaps_yes', 'gen_hccltx_l4_latecaps_no')" value="ja"><label for="gen_hccltx_l4_latecaps_yes">ja</label>
+                    <input type="checkbox" id="gen_hccltx_l4_latecaps_no" name="gen_hccltx_l4_latecaps_no" onchange="radiobuttonize('gen_hccltx_l4_latecaps_no', 'gen_hccltx_l4_latecaps_yes')" value="nein"><label for="gen_hccltx_l4_latecaps_no">nein</label>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>makrovaskuläre Invasion</td>
+                <td>
+                    <input type="checkbox" id="gen_hccltx_l4_lateinvas_yes" name="gen_hccltx_l4_lateinvas_yes" onchange="radiobuttonize('gen_hccltx_l4_lateinvas_yes', 'gen_hccltx_l4_lateinvas_no')" value="ja"><label for="gen_hccltx_l4_lateinvas_yes">ja</label>
+                    <input type="checkbox" id="gen_hccltx_l4_lateinvas_no" name="gen_hccltx_l4_lateinvas_no" onchange="radiobuttonize('gen_hccltx_l4_lateinvas_no', 'gen_hccltx_l4_lateinvas_yes')" value="nein"><label for="gen_hccltx_l4_lateinvas_no">nein</label>
+                </td>
+            </tr>
+        </table>
+
+        <table id="lesion5" data-mrrt-condition="#gen_hccltx_nnodules ge 5">
+            <tr><th>Läsion 5</th></tr>
+            <tr>
+                <td>Größe der Läsion</td>
+                <td><input data-field-type="NUMBER" id="gen_hccltx_l5_dimension" name="gen_hccltx_l5_dimension" title="im axialen Schnitt in mm &#10;- Nach TACE wird weiterhin der Herd soweit identifizierbar ausgemessen (nur hypervaskularisiertem Anteil, analog mRECIST)">&nbsp;mm</td>
+            </tr>
+            <tr>
+                <td>Segment</td>
+                <td><input data-field-type="TEXT" id="gen_hccltx_l5_segment" name="gen_hccltx_l5_segment" title="Lebersegment I-VIII"></td>
+            </tr>
+            <tr>
+                <td>Seriennummer</td>
+                <td><input data-field-type="NUMBER" id="gen_hccltx_l5_serie" name="gen_hccltx_l5_serie" title="Nummer der Serie, in der die jeweilige Läsion ausgemessen wurde"></td>
+            </tr>
+            <tr>
+                <td>Bildnummer</td>
+                <td><input data-field-type="NUMBER" id="gen_hccltx_l5_bild" name="gen_hccltx_l5_bild" title="Nummer des Bildes, in der die jeweilige Läsion ausgemessen wurde"></td>
+            </tr>
+            <tr>
+                <td>Kontrastphase der Messung</td>
+                <td>
+                    <select id="gen_hccltx_l5_contrast" name="gen_hccltx_l5_contrast" title="Angabe welche Kontrastphase (nativ, arteriell, portalvenös, verzögert) zur Messung verwandt wurde. 'verzögert' beschreibt hier die spätvenös aquirierte Serie nach &gt;180 Sekunden.">
+                        <option value="-">-</option>
+                        <option value="nativ">nativ</option>
+                        <option value="arteriell">arteriell</option>
+                        <option value="portalvenös">portalvenös</option>
+                        <option value="verzögert">verzögert</option>
+                    </select>
+                </td>
+            </tr>
+            <tr title="Angabe ob in arterieller Kontrastierungsphase eine starke Kontrastmittelanreicherung vorliegt &#10;Sollte im Regelfall ja sein, da nur solche Herde ausgemessen werden sollten, die typisches KM-Verhalten zeigen. Kann (im Sinne der Leitlinie) nur nein sagen, falls histologische Sicherung eines bildgebend atypischen Herdes vorliegt.">
+                <td>Verhalten arteriell</td>
+                <td>stark anreichernd</td>
+                <td>
+                    <input type="checkbox" id="gen_hccltx_l5_art_yes" name="gen_hccltx_l5_art_yes" onchange="radiobuttonize('gen_hccltx_l5_art_yes', 'gen_hccltx_l5_art_no')" value="ja" /><label for="gen_hccltx_l5_art_yes">ja</label>
+                    <input type="checkbox" id="gen_hccltx_l5_art_no" name="gen_hccltx_l5_art_no" onchange="radiobuttonize('gen_hccltx_l5_art_no', 'gen_hccltx_l5_art_yes')" value="nein" /><label for="gen_hccltx_l5_art_no">nein</label>
+                </td>
+            </tr>
+            <!--- HIER WEITER XXXXX -->
+            <tr title="Angabe ob in portalvenöser Kontrastierungsphase ein Kontrastmittelauswaschen bzw. eine Pseudokapsel zu beobachten ist.">
+                <td>Verhalten portalvenös</td>
+                <td>früh auswaschend</td>
+                <td>
+                    <input type="checkbox" id="gen_hccltx_l5_pvwash_yes" name="gen_hccltx_l5_pvwash_yes" onchange="radiobuttonize('gen_hccltx_l5_pvwash_yes', 'gen_hccltx_l5_pvwash_no')" value="ja" /><label for="gen_hccltx_l5_pvwash_yes">ja</label>
+                    <input type="checkbox" id="gen_hccltx_l5_pvwash_no" name="gen_hccltx_l5_pvwash_no" onchange="radiobuttonize('gen_hccltx_l5_pvwash_no', 'gen_hccltx_l5_pvwash_yes')" value="nein"><label for="gen_hccltx_l5_pvwash_no">nein</label>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>Pseudokapsel</td>
+                <td>
+                    <input type="checkbox" id="gen_hccltx_l5_pvcaps_yes" name="gen_hccltx_l5_pvcaps_yes" onchange="radiobuttonize('gen_hccltx_l5_pvcaps_yes', 'gen_hccltx_l5_pvcaps_no')" value="ja"><label for="gen_hccltx_l5_pvcaps_yes">ja</label>
+                    <input type="checkbox" id="gen_hccltx_l5_pvcaps_no" name="gen_hccltx_l5_pvcaps_no" onchange="radiobuttonize('gen_hccltx_l5_pvcaps_no', 'gen_hccltx_l5_pvcaps_yes')" value="nein"><label for="gen_hccltx_l5_pvcaps_yes">nein</label>
+                </td>
+            </tr>
+            <tr title="Angabe ob in spätvenöser Kontrastierungsphase ein Kontrastmittelauswaschen, eine Pseudokapsel oder eine Gefäßinvasion zu beobachten ist. &#10;Kontrastmittelauswaschen sollte im Regelfall ja sein, da nur Herde mit typischem KM-Verhalten ausgemessen werden sollten. Kann nur nein sagen, falls histologische Sicherung eines bildgebend atypischen Herdes vorliegt.">
+                <td>Verhalten verzögert</td>
+                <td>auswaschend</td>
+                <td>
+                    <input type="checkbox" id="gen_hccltx_l5_latewash_yes" name="gen_hccltx_l5_latewash_yes" onchange="radiobuttonize('gen_hccltx_l5_latewash_yes', 'gen_hccltx_l5_latewash_no')" value="ja"><label for="gen_hccltx_l5_latewash_yes">ja</label>
+                    <input type="checkbox" id="gen_hccltx_l5_latewash_no" name="gen_hccltx_l5_latewash_no" onchange="radiobuttonize('gen_hccltx_l5_latewash_no', 'gen_hccltx_l5_latewash_yes')" value="nein"><label for="gen_hccltx_l5_latewash_no">nein</label>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>Pseudokapsel</td>
+                <td>
+                    <input type="checkbox" id="gen_hccltx_l5_latecaps_yes" name="gen_hccltx_l5_latecaps_yes" onchange="radiobuttonize('gen_hccltx_l5_latecaps_yes', 'gen_hccltx_l5_latecaps_no')" value="ja"><label for="gen_hccltx_l5_latecaps_yes">ja</label>
+                    <input type="checkbox" id="gen_hccltx_l5_latecaps_no" name="gen_hccltx_l5_latecaps_no" onchange="radiobuttonize('gen_hccltx_l5_latecaps_no', 'gen_hccltx_l5_latecaps_yes')" value="nein"><label for="gen_hccltx_l5_latecaps_no">nein</label>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>makrovaskuläre Invasion</td>
+                <td>
+                    <input type="checkbox" id="gen_hccltx_l5_lateinvas_yes" name="gen_hccltx_l5_lateinvas_yes" onchange="radiobuttonize('gen_hccltx_l5_lateinvas_yes', 'gen_hccltx_l5_lateinvas_no')" value="ja"><label for="gen_hccltx_l5_lateinvas_yes">ja</label>
+                    <input type="checkbox" id="gen_hccltx_l5_lateinvas_no" name="gen_hccltx_l5_lateinvas_no" onchange="radiobuttonize('gen_hccltx_l5_lateinvas_no', 'gen_hccltx_l5_lateinvas_yes')" value="nein"><label for="gen_hccltx_l5_lateinvas_no">nein</label>
+                </td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td><label for="gen_hccltx_lesion_bemerkungen">Bemerkungen:</label></td>
+                <td>
+                    <textarea id="gen_hccltx_lesion_bemerkungen" name="gen_hccltx_lesion_bemerkungen" title="Hier können und sollten zusätzliche erwähnenswerte und für das LTx-Board relevante Angaben gemacht werden. Insbesondere können hier nicht eindeutige Herde beschrieben werden."></textarea>
+                </td>
+            </tr>
+        </table>
+
+    </section>
+
+    <section data-section-name="Beurteilung">
+        <header class="level1" data-english="Impression">Beurteilung</header>
+        <table>
+            <tr>
+                <td id="gen_hccltx_milanhelp">Mailand erfüllt</td>
+                <td>
+                    <select id="gen_hccltx_milan_in" name="gen_hccltx_milan_in" title="Bitte festlegen ob Patient für aktuelle Untersuchung innerhalb oder außerhalb Mailand (es muss nicht der gesamte Verlauf berücksichtigt werden). Der Vorschlag-Button sollte in der Regel zum korrekten Ergebnis führen. Es verbleibt jedoch die Verantwortung des Radiologen die Richtigkeit zu prüfen. &#10;(CAVE: Patient einmal außerhalb = immer außerhalb)">
+                        <option value="-">-</option>
+                        <option value="ja">ja</option>
+                        <option value="nein">nein</option>
+                    </select>
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+    </section>
+
+</body>
+</html>

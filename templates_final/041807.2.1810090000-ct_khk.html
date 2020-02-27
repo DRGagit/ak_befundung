@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CT KHK</title>
+    <meta charset="UTF-8">
+    <!--Dublin Core metadata elements here-->
+    <meta name="dcterms.title" content="CT KHK">
+    <meta name="dcterms.abstract" content="Befundungstemplate für KHK-Evalutation im CT (L2, V1, no JS)">
+    <meta name="dcterms.description" content="Template zur Befundung von Cardio-CT Untersuchungen zur KHK.">
+    <meta name="dcterms.subject" content="CT; CARDIO;">
+    <meta name="dcterms.identifier" content="041807.2.1811161431">
+    <meta name="dcterms.type" content="IMAGE_REPORT_TEMPLATE">
+    <meta name="dcterms.language" content="de">
+    <meta name="dcterms.rights" content="Die Deutsche Röntgengesellschaft e.V.(DRG) stellt sämtliche Templates kostenfrei unter der Creative Commons Lizenz  CC BY-NC-ND in der Version 4.0 zur Verfügung. Die Lizenz erlaubt Download und Weiterverteilung des Werkes unter Nennung der DRG als Urheber, jedoch keinerlei Bearbeitung oder kommerzielle Nutzung.">
+    <meta name="dcterms.license" content="http://www.befundung.drg.de/de-DE/3478/creative-commons-lizenz-cc-by-nc-nd">
+    <meta name="dcterms.date" content="2018-11-16">
+    <meta name="dcterms.creator" content="AG Herz- und Gefäßdiagnostik">
+    <meta name="dcterms.contributor" content="Pinto dos Santos D (Kodierung)">
+    <meta name="dcterms.publisher" content="Deutsche Röntgengesellschaft (DRG)">
+
+    <script type="text/xml">
+        <template_attributes>
+        <top-level-flag>0</top-level-flag>
+        <status>ACTIVE</status>
+        </template_attributes>
+    </script>
+
+    <!--Link to Stylesheet-->
+    <link rel="stylesheet" type="text/css" href="drg.css">
+
+</head>
+
+<body>
+
+    <section data-section-name="Clinical information">
+        <header class="level1" data-english="Clinical information">Klinische Angaben</header>
+        <p>
+            <textarea name="ct_khk_clininfo" id="ct_khk_clininfo"></textarea>
+        </p>
+    </section>
+
+    <section data-section-name="Clinical question">
+        <header class="level1" data-english="Clinical question">Fragestellung</header>
+        <p>
+            <textarea name="ct_khk_clinquest" id="ct_khk_clinquest"></textarea>
+        </p>
+    </section>
+
+    <section data-section-name="Method">
+        <header class="level1" data-english="Method">Methodik</header>
+        <table>
+          <td>
+            <label for="ct_khk_praemed">Prämedikation</label>
+          </td>
+          <td>
+            <input name="ct_khk_praemed" id="ct_khk_praemed" type="text" data-field-type="TEXT"/>
+          </td>
+          <tr>
+            <td>
+              <label for="ct_khk_aquisitiontech">Aquisitionstechnik</label>
+            </td>
+            <td>
+              <input name="ct_khk_aquisitiontech" id="ct_khk_aquisitiontech" type="text" data-field-type="TEXT"/>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="ct_khk_rekonstr">Rekonstruktion / Nachbearbeitung</label>
+            </td>
+            <td>
+              <input name="ct_khk_rekonstr" id="ct_khk_rekonstr" type="text" data-field-type="TEXT"/>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="ct_khk_dlp">DLP</label>
+            </td>
+            <td>
+              <input name="ct_khk_dlp" id="ct_khk_dlp" type="number" data-field-type="NUMBER" />
+            </td>
+          </tr>
+        </table>
+    </section>
+
+    <section>
+      <header class="level1" data-english="Patient characteristics">Patientencharakteristika</header>
+      <table>
+        <tr>
+          <td>
+            <label for="ct_khk_patsex">Geschlecht</label>
+          </td>
+          <td>
+            <select name="ct_khk_patsex" id="ct_khk_patsex">
+              <option value="weiblich">weiblich</option>
+              <option value="männlich">männlich</option>
+              <option value="andere">andere</option>
+            </select>
+          </td>
+          <td>
+            <label for="ct_khk_patweight">Körpergewicht</label>
+          </td>
+          <td>
+            <input name="ct_khk_patweight" id="ct_khk_patweight" type="number" data-field-type="NUMBER" /> kg
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="ct_khk_patheight">Körpergröße</label>
+          </td>
+          <td>
+            <input name="ct_khk_patheight" id="ct_khk_patheight" type="number" data-field-type="NUMBER" /> m
+          </td>
+          <td>
+            <label for="ct_pat_bsa">Körperoberfläche (BSA)</label>
+          </td>
+          <td>
+            <input name="ct_pat_bsa" id="ct_pat_bsa" type="number" data-field-type="NUMBER" /> m&sup2;
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="ct_khk_paceryn">Herzschrittmacher</label>
+          </td>
+          <td>
+            <select name="ct_khk_paceryn">
+              <option value="nein">nein</option>
+              <option value="ja">ja</option>
+            </select>
+          </td>
+          <td>
+            &nbsp;
+          </td>
+          <td>
+            &nbsp;
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="ct_khk_EKGfreq">Mittlere Frequenz</label>
+          </td>
+          <td>
+            <input name="ct_khk_EKGfreq" id="ct_khk_EKGfreq" type="number" data-field-type="NUMBER" />&nbsp;/min
+          </td>
+          <td>
+            <label for="ct_khk_EKGarryth">Arrythmie</label>
+          </td>
+          <td>
+            <select name="ct_khk_EKGarryth" id="ct_khk_EKGarryth">
+              <option value="nein">nein</option>
+              <option value="ja">ja</option>
+            </select>
+          </td>
+        </tr>
+      </table>
+    </section>
+
+    <section data-section-name="Befunde">
+        <header class="level1" data-english="Findings">Befund</header>
+        <table>
+          <tr>
+            <td>
+              <label for="ct_khk_vudate">Voruntersuchung:</label>
+            </td>
+            <td>
+              <input type="date" name="ct_khk_vudate" id="ct_khk_vudate" data-field-type="DATE"/>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="ct_khk_quali">Eingeschränkte Bildqualität</label>
+            </td>
+            <td>
+              <select name="ct_khk_quali" id="ct_khk_quali">
+                <option value="nein">nein</option>
+                <option value="ja">ja</option>
+              </select>
+              <input name="ct_khk_quali_text" id="ct_khk_quali_text" type="text" data-field-type="TEXT"/>
+            </td>
+          </tr>
+        </table>
+
+        <table>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>
+                <label for="ct_khk_calciumscore">Agatson Score (optional)</label>
+              </td>
+              <td>
+                <input name="ct_khk_calciumscore" id="ct_khk_calciumscore" type="number" data-field-type="NUMBER" />
+              </td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>
+                <label for="ct_khk_dominantcoro">Dominanter Versorgungstyp</label>
+              </td>
+              <td>
+                <select name="ct_khk_dominantcoro" id="ct_khk_dominantcoro">
+                  <option value="rechts">rechts</option>
+                  <option value="links">links</option>
+                  <option value="co-dominant">co-dominant</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="ct_khk_verlaufcoro">Abgang und Verlauf Koronarien</label>
+              </td>
+              <td>
+                <input name="ct_khk_verlaufcoro" id="ct_khk_verlaufcoro" type="text" data-field-type="TEXT" />
+              </td>
+            </tr>
+          </table>
+
+          <table>
+            <tr>
+              <td>&nbsp;</td>
+              <td>Plaques</td>
+              <td>Stenosegrad</td>
+              <td>Stent</td>
+              <td>Bemerkungen</td>
+            </tr>
+            <tr>
+              <td>LCA</td>
+              <td>
+                <select name="ct_khk_lca_plaque" id="ct_khk_lca_plaque">
+                  <option value="keine">keine</option>
+                  <option value="verkalkt">verkalkt</option>
+                  <option value="nicht-verkalkt">nicht-verkalkt</option>
+                  <option value="mixed">mixed</option>
+                </select>
+              </td>
+              <td>
+                <select name="ct_khk_lca_stenosis" id="ct_khk_lca_stenosis">
+                  <option value="keine">keine</option>
+                  <option value="minimal (1-24%)">minimal (1-24%)</option>
+                  <option value="mild (25-49%)">mild (25-49%)</option>
+                  <option value="moderat (50-69%)">moderat (50-69%)</option>
+                  <option value="hochgradig (70-99%)">hochgradig (70-99%)</option>
+                  <option value="verschlossen">verschlossen</option>
+                </select>
+              </td>
+              <td>
+                <select name="ct_khk_lca_stent" id="ct_khk_lca_stent">
+                  <option value="nein">nein</option>
+                  <option value="ja">ja</option>
+                </select>
+              </td>
+              <td>
+                <input name="ct_khk_lca_text" id="ct_khk_lca_text" type="text" data-field-type="TEXT"/>
+              </td>
+            </tr>
+            <tr>
+              <td>RIVA</td>
+              <td>
+                <select name="ct_khk_riva_plaque" id="ct_khk_riva_plaque">
+                  <option value="keine">keine</option>
+                  <option value="verkalkt">verkalkt</option>
+                  <option value="nicht-verkalkt">nicht-verkalkt</option>
+                  <option value="mixed">mixed</option>
+                </select>
+              </td>
+              <td>
+                <select name="ct_khk_riva_stenosis" id="ct_khk_riva_stenosis">
+                  <option value="keine">keine</option>
+                  <option value="minimal (1-24%)">minimal (1-24%)</option>
+                  <option value="mild (25-49%)">mild (25-49%)</option>
+                  <option value="moderat (50-69%)">moderat (50-69%)</option>
+                  <option value="hochgradig (70-99%)">hochgradig (70-99%)</option>
+                  <option value="verschlossen">verschlossen</option>
+                </select>
+              </td>
+              <td>
+                <select name="ct_khk_riva_stent" id="ct_khk_riva_stent">
+                  <option value="nein">nein</option>
+                  <option value="ja">ja</option>
+                </select>
+              </td>
+              <td>
+                <input name="ct_khk_riva_text" id="ct_khk_riva_text" type="text" data-field-type="TEXT"/>
+              </td>
+            </tr>
+            <tr>
+              <td>LCx</td>
+              <td>
+                <select name="ct_khk_lcx_plaque" id="ct_khk_lcx_plaque">
+                  <option value="keine">keine</option>
+                  <option value="verkalkt">verkalkt</option>
+                  <option value="nicht-verkalkt">nicht-verkalkt</option>
+                  <option value="mixed">mixed</option>
+                </select>
+              </td>
+              <td>
+                <select name="ct_khk_lcx_stenosis" id="ct_khk_lcx_stenosis">
+                  <option value="keine">keine</option>
+                  <option value="minimal (1-24%)">minimal (1-24%)</option>
+                  <option value="mild (25-49%)">mild (25-49%)</option>
+                  <option value="moderat (50-69%)">moderat (50-69%)</option>
+                  <option value="hochgradig (70-99%)">hochgradig (70-99%)</option>
+                  <option value="verschlossen">verschlossen</option>
+                </select>
+              </td>
+              <td>
+                <select name="ct_khk_lcx_stent" id="ct_khk_lcx_stent">
+                  <option value="nein">nein</option>
+                  <option value="ja">ja</option>
+                </select>
+              </td>
+              <td>
+                <input name="ct_khk_lcx_text" id="ct_khk_lcx_text" type="text" data-field-type="TEXT"/>
+              </td>
+            </tr>
+            <tr>
+              <td>R. intermedius</td>
+              <td>
+                <select name="ct_khk_rint_plaque" id="ct_khk_rint_plaque">
+                  <option value="keine">keine</option>
+                  <option value="verkalkt">verkalkt</option>
+                  <option value="nicht-verkalkt">nicht-verkalkt</option>
+                  <option value="mixed">mixed</option>
+                </select>
+              </td>
+              <td>
+                <select name="ct_khk_rint_stenosis" id="ct_khk_rint_stenosis">
+                  <option value="keine">keine</option>
+                  <option value="minimal (1-24%)">minimal (1-24%)</option>
+                  <option value="mild (25-49%)">mild (25-49%)</option>
+                  <option value="moderat (50-69%)">moderat (50-69%)</option>
+                  <option value="hochgradig (70-99%)">hochgradig (70-99%)</option>
+                  <option value="verschlossen">verschlossen</option>
+                </select>
+              </td>
+              <td>
+                <select name="ct_khk_rint_stent" id="ct_khk_rint_stent">
+                  <option value="nein">nein</option>
+                  <option value="ja">ja</option>
+                </select>
+              </td>
+              <td>
+                <input name="ct_khk_rint_text" id="ct_khk_rint_text" type="text" data-field-type="TEXT"/>
+              </td>
+            </tr>
+            <tr>
+              <td>RCA</td>
+              <td>
+                <select name="ct_khk_rca_plaque" id="ct_khk_rca_plaque">
+                  <option value="keine">keine</option>
+                  <option value="verkalkt">verkalkt</option>
+                  <option value="nicht-verkalkt">nicht-verkalkt</option>
+                  <option value="mixed">mixed</option>
+                </select>
+              </td>
+              <td>
+                <select name="ct_khk_rca_stenosis" id="ct_khk_rca_stenosis">
+                  <option value="keine">keine</option>
+                  <option value="minimal (1-24%)">minimal (1-24%)</option>
+                  <option value="mild (25-49%)">mild (25-49%)</option>
+                  <option value="moderat (50-69%)">moderat (50-69%)</option>
+                  <option value="hochgradig (70-99%)">hochgradig (70-99%)</option>
+                  <option value="verschlossen">verschlossen</option>
+                </select>
+              </td>
+              <td>
+                <select name="ct_khk_rca_stent" id="ct_khk_rca_stent">
+                  <option value="nein">nein</option>
+                  <option value="ja">ja</option>
+                </select>
+              </td>
+              <td>
+                <input name="ct_khk_rca_text" id="ct_khk_rca_text" type="text" data-field-type="TEXT"/>
+              </td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+          </table>
+
+          <table>
+            <tr>
+              <td>
+                <label for="ct_khk_atria">Atria</label>
+              </td>
+              <td>
+                <input name="ct_khk_atria" id="ct_khk_atria" type="text" data-field-type="TEXT" value="unauffällig"/>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="ct_khk_ventrikel">Ventrikel</label>
+              </td>
+              <td>
+                <input name="ct_khk_ventrikel" id="ct_khk_ventrikel" type="text" data-field-type="TEXT" value="unauffällig"/>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="ct_khk_herzklappen">Herzklappen</label>
+              </td>
+              <td>
+                <input name="ct_khk_herzklappen" id="ct_khk_herzklappen" type="text" data-field-type="TEXT" value="unauffällig"/>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="ct_khk_paaorta">Pulmonalarterien/Aorta</label>
+              </td>
+              <td>
+                <input name="ct_khk_paaorta" id="ct_khk_paaorta" type="text" data-field-type="TEXT" value="unauffällig"/>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="ct_khk_luvenen">Lungenvenen</label>
+              </td>
+              <td>
+                <input name="ct_khk_luvenen" id="ct_khk_luvenen" type="text" data-field-type="TEXT" value="unauffällig"/>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="ct_khk_perikard">Perikard</label>
+              </td>
+              <td>
+                <input name="ct_khk_perikard" id="ct_khk_perikard" type="text" data-field-type="TEXT" value="unauffällig"/>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="ct_khk_sonstiges">Sonstige Auffälligkeiten</label>
+              </td>
+              <td>
+                <textarea name="ct_khk_sonstiges" id="ct_khk_sonstiges">keine</textarea>
+              </td>
+            </tr>
+          </table>
+    </section>
+
+    <section data-section-name="Beurteilung">
+        <header class="level1" data-english="Impression">Beurteilung</header>
+        <p>
+          <textarea name="ct_khk_impress" id="ct_khk_impress" data-english-name="Impression" data-field-completion-action="PROHIBIT">1.	CT-angiographisch unauffällige Koronarien mit Ausschluss einer KHK/ KHK mit milder Plaquelast/ KHK mit nicht hochgradiger Stenosierung / KHK mit hochgradiger Stenosierung____
+2.	Der ermittelte Agatston Score von XXX, entsprecht der XX. Perzentile einer alters- und geschlechts-gematchen Vergleichskohorte (Raggi et al. Circulation 2006).
+3.	CADRADS (siehe Cury et al. Journal of Cardiovascular CT, 2016):
+4.	__________________
+</textarea>
+          <label for="ct_khk_suggestions">Handlungsempfehlungen</label> <input name="ct_khk_suggestions" id="ct_khk_suggestions" type="text" data-field-type="TEXT" />
+        </p>
+    </section>
+
+</body>
+</html>
