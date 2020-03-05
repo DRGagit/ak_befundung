@@ -14,7 +14,7 @@ Für Rückfragen stehen wir natürlich jederzeit zur Verfügung und würden uns 
 
 Mit freundlichen Grüßen
 
-Dr. Daniel Pinto dos Santos
-Dr. Andreas Bucher
-Dr. Malte Sieren
+Dr. Daniel Pinto dos Santos  
+Dr. Andreas Bucher  
+Dr. Malte Sieren  
 für den AK Strukturierte Befundung der AGIT der DRG
