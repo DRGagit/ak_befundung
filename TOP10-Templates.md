@@ -3,8 +3,8 @@
 1. CT TAVI
 2. MR Kardio Stress
 3. CT Koronarangiographie
-4. CT Primästaging Lungenkarzinom
-5. MR Prostatakrazinom
+4. CT Primärstaging Lungenkarzinom
+5. MR Prostatakarzinom
 6. CT Becken-Bein-Angio
 7. MR Wirbelsäule degenerativ
 8. Röntgen Hüfte vor TEP
