@@ -70,13 +70,13 @@ Braunschweig, Janka @AG BVB Vorstand sehen jedoch Bedarf, diese möchten auch di
 
 ## Top 10 Templates
 
-CT TAVI
-MR Kardio Stress
-CT Koronarangiographie
-CT Primärstaging Lungenkarzinom
-MR Prostatakarzinom
-CT Becken-Bein-Angio
-MR Wirbelsäule degenerativ
-Röntgen Hüfte vor TEP
-CT Schlaganfall ischäm
-MR Schädel MS
+- CT TAVI
+- MR Kardio Stress
+- CT Koronarangiographie
+- CT Primärstaging Lungenkarzinom
+- MR Prostatakarzinom
+- CT Becken-Bein-Angio
+- MR Wirbelsäule degenerativ
+- Röntgen Hüfte vor TEP
+- CT Schlaganfall ischäm
+- MR Schädel MS
