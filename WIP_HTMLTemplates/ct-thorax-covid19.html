@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CT Thorax Stufe 1 (Covid-19)</title>
+    <meta charset="UTF-8">
+    <!--Dublin Core metadata elements here-->
+    <meta name="dcterms.title" content="CT Thorax Stufe 1 (Covid-19)">
+    <meta name="dcterms.abstract" content="Befundungstemplate für Thorax mit Covid-19 spezifischen Datenstrukturierung (L3, V1, no JS)">
+    <meta name="dcterms.description" content="XXXXXXXXXXXXXXXXXXXXX">
+    <meta name="dcterms.subject" content="XXXXXXXXXXXXXXXXXXXXX">
+    <meta name="dcterms.identifier" content="XXXXXXXXXXXXXXXXXXXXX">
+    <meta name="dcterms.type" content="IMAGE_REPORT_TEMPLATE">
+    <meta name="dcterms.language" content="de">
+    <meta name="dcterms.rights" content="Die Deutsche Röntgengesellschaft e.V.(DRG) stellt sämtliche Templates kostenfrei unter der Creative Commons Lizenz  CC BY-NC-ND in der Version 4.0 zur Verfügung. Die Lizenz erlaubt Download und Weiterverteilung des Werkes unter Nennung der DRG als Urheber, jedoch keinerlei Bearbeitung oder kommerzielle Nutzung.">
+    <meta name="dcterms.license" content="http://www.befundung.drg.de/de-DE/3478/creative-commons-lizenz-cc-by-nc-nd">
+    <meta name="dcterms.date" content="2020-05-03">
+    <meta name="dcterms.creator" content="AG Thorax">
+    <meta name="dcterms.contributor" content="Pinto dos Santos D (Kodierung)">
+    <meta name="dcterms.publisher" content="Deutsche Röntgengesellschaft (DRG)">
+
+    <script type="text/xml">
+        <template_attributes>
+        <top-level-flag>0</top-level-flag>
+        <status>ACTIVE</status>
+        </template_attributes>
+    </script>
+
+    <link rel="stylesheet" href="drg.css">
+
+</head>
+
+<body>
+
+    <section data-section-name="Clinical information">
+        <header class="level1" data-english="Clinical information">Klinische Angaben</header>
+        <p>
+            <textarea name="ct_thorax_clininfo" id="ct_thorax_clininfo"></textarea>
+        </p>
+        
+        <table>
+            <tr>
+                <td><label for="dummy">Aufnahme-Status</label></td>
+                <td>
+                    <select name="dummy" id="dummy">
+                        <option value="Intensivstation">Intensivstation</option>
+                        <option value="Stationär">Stationär</option>
+                        <option value="Notaufnahme">Notaufnahme</option>
+                        <option value="Ambulant">Ambulant</option>
+                        <option value="Unbekannt">Unbekannt</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="dummy">Intubiert</label></td>
+                <td>
+                    <select name="dummy" id="dummy">
+                        <option value="nein">nein</option>
+                        <option value="ja">ja</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="dummy">COVID-PCR Status</label></td>
+                <td>
+                    <select name="dummy" id="dummy">
+                      	<option value="positiv">positiv</option>
+                        <option value="negativ">negativ</option>
+                        <option value="unbekannt">unbekannt</option>
+                    </select>
+                    &nbsp;
+                    <label for="dummy">am:</label>
+                    &nbsp;
+                    <input type="date" name="dummy" id="dummy" data-field-type="DATE"/>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <section data-section-name="Clinical question">
+        <header class="level1" data-english="Clinical question">Fragestellung</header>
+        <p>
+            <textarea name="ct_thorax_Fragestellung" id="ct_thorax_Fragestellung"></textarea>
+        </p>
+    </section>
+
+    <section data-section-name="Findings">
+        <header class="level1" data-english="Findings">Befund</header>
+
+        <table>
+            <tr>
+                <td><label for="dummy">Zum Vergleich</label></td>
+                <td>
+                    <select name="dummy" id="dummy">
+                      	<option value="liegt keine Voruntersuchung vor">liegt keine Voruntersuchung vor</option>
+                        <option value="die CT">die CT</option>
+                        <option value="ein Röntgen-Thorax">ein Röntgen-Thorax</option>
+                    </select>
+                    &nbsp;
+                    <label for="dummy">vom:</label>
+                    &nbsp;
+                    <input type="date" name="dummy" id="dummy" data-field-type="DATE"/>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="dummy">CT-Protokoll</label></td>
+                <td>
+                    <select name="dummy" id="dummy">
+                        <option value="CT Thorax Full-dose ohne KM">CT Thorax Full-dose ohne KM</option>
+                        <option value="CT Thorax Low-dose ohne KM">CT Thorax Low-dose ohne KM</option>
+                        <option value="CT Thorax nativ und KM">CT Thorax nativ und KM</option>
+                        <option value="CT Thorax mit KM (keine native Phase verfügbar)">CT Thorax mit KM (keine native Phase verfügbar)</option>
+                        <option value="CT Thorax-Abdomen mit KM (keine native Phase Thorax)">CT Thorax-Abdomen mit KM (keine native Phase Thorax)</option>
+                        <option value="CT Thorax-Abdomen nativ">CT Thorax-Abdomen nativ</option>
+                        <option value="CT Thorax Pulmonalisangiographie">CT Thorax Pulmonalisangiographie</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+    
+        <table>
+            <tr>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+
+        
+        <table>
+            <tr>
+                <td>Lungenparenchym/Atemwege</td>
+                <td>
+                    <select name="dummy" id="dummy">
+                      	<option value="altersentsprechend unauffällig">altersentsprechend unauffällig</option>
+                        <option value="es liegen pathologische, pulmonale Veränderungen vor">es liegen pathologische, pulmonale Veränderungen vor</option>
+                        <option value="Kein ARDS-typischer Befall">Kein ARDS-typischer Befall</option>
+                        <option value="Lungenbefall qualitativ  vereinbar mit ARDS im Stadium ">Lungenbefall qualitativ  vereinbar mit ARDS im Stadium </option>
+                        <option value="Keine Verlaufsbeurteilung möglich">Keine Verlaufsbeurteilung möglich</option>
+                        <option value="Lungenbeteiligung, im Vergleich zur Voruntersuchung ">Lungenbeteiligung, im Vergleich zur Voruntersuchung </option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>
+                    <table>
+                        <tr>
+                            <td><label for="dummy">Milchglastrübung</label></td>
+                            <td>
+                                <select name="dummy" id="dummy">
+                                    <option value="Keine">Keine</option>
+                                    <option value="Multiple/Multifokal">Multiple/Multifokal</option>
+                                    <option value="Einzeln">Einzeln</option>
+                                    <option value="Diffuse Verteilung">Diffuse Verteilung</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="dummy">Dominantes Milchglasmuster</label></td>
+                            <td>
+                                <select name="dummy" id="dummy">
+                                    <option value="Mosaikmuster">Mosaikmuster</option>
+                                    <option value="Crazy-paving Muster">Crazy-paving Muster</option>
+                                    <option value="Reverse Halo/Atoll-Zeichen">Reverse Halo/Atoll-Zeichen</option>
+                                    <option value="nur Milchglas">nur Milchglas</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="dummy">Morphologie der Milchglastrübungen</label></td>
+                            <td>
+                                <select name="dummy" id="dummy">
+                                    <option value="rundlich/geographisch">rundlich/geographisch</option>
+                                    <option value="nicht rundlich/geographisch">nicht rundlich/geographisch</option>
+                                    <option value="konfluierend/diffus">konfluierend/diffus</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="dummy">Verteilungsmuster der Milchglastrübungen</label></td>
+                            <td>
+                                <select name="dummy" id="dummy">
+                                    <option value="peripher">peripher</option>
+                                    <option value="zentral">zentral</option>
+                                    <option value="multifokal ohne spezifische Verteilung">multifokal ohne spezifische Verteilung</option>
+                                    <option value="multifokal in folgender Verteilung">multifokal in folgender Verteilung</option>
+                                </select>
+                                <!-- TODO: was gehört alles dazu?? -->
+                                <select name="dummy" id="dummy">
+                                    <option value="nein">nein</option>
+                                    <option value="nein">nein</option>
+                                    <option value="nein">nein</option>
+                                    <option value="nein">nein</option>
+                                    <option value="nein">nein</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="dummy">Seiten-Ausprägung der Milchglastrübungen</label></td>
+                            <td>
+                                <select name="dummy" id="dummy">
+                                    <option value="bilateral">bilateral</option>
+                                    <option value="links">links</option>
+                                    <option value="rechts">rechts</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="dummy">Dominates Lungenfeld der Milchglastrübungen</label></td>
+                            <td>
+                                <select name="dummy" id="dummy">
+                                    <option value="kein dominantes Lungenfeld">kein dominantes Lungenfeld</option>
+                                    <option value="alle Felder vergleichbar betroffen">alle Felder vergleichbar betroffen</option>
+                                    <option value="oben ">oben </option>
+                                    <option value="mitte">mitte</option>
+                                    <option value="unten">unten</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="dummy">Ausdehnung/Severity des Lungenbefalls quantitativ</label></td>
+                            <td>
+                                <select name="dummy" id="dummy">
+                                    <option value="leicht (weniger als 3 Milchglasareale, diese kleiner als 3 cm)">leicht (weniger als 3 Milchglasareale, diese kleiner als 3 cm)</option>
+                                    <option value="mittelgradig (mehr als 3 Milchglasareale oder Größe > 3 cm; Konsolidierungen)">mittelgradig (mehr als 3 Milchglasareale oder Größe > 3 cm; Konsolidierungen)</option>
+                                    <option value="ausgeprägt (diffuse Milchglasverteilung, organisierende Pneumonie, Coexistenz mit anderen Lungenerkrankungen)">ausgeprägt (diffuse Milchglasverteilung, organisierende Pneumonie, Coexistenz mit anderen Lungenerkrankungen)</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="dummy">Konsolidierungs-Muster</label></td>
+                            <td>
+                                <select name="dummy" id="dummy">
+                                    <option value="keine Konsolidierungen">keine Konsolidierungen</option>
+                                    <option value="Konsolidierungen lobär (Lobärpneumonie)">Konsolidierungen lobär (Lobärpneumonie)</option>
+                                    <option value="Konsolidierungen segmental">Konsolidierungen segmental</option>
+                                    <option value="Konsolidierungen peribronchial">Konsolidierungen peribronchial</option>
+                                    <option value="unspezifische Konsolidierungen">unspezifische Konsolidierungen</option>
+                                </select>
+                                <select name="dummy" id="dummy">
+                                    <option value="rundlich ">rundlich </option>
+                                    <option value="sonstige">sonstige</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="dummy">Zentrilobuläre Noduli/Tree in bud</label></td>
+                            <td>
+                                <select name="dummy" id="dummy">
+                                    <option value="nein">nein</option>
+                                    <option value="ja">ja</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <!-- TODO: checkboxen?? -->
+                            <td><label for="dummy">Lungengerüstveränderungen (Mehrfachauswahl)</label></td>
+                            <td>
+                                <select size="3" multiple="multiple" name="dummy" id="dummy">
+                                    <option value="keine">keine</option>
+                                    <option value="Emphysem">Emphysem</option>
+                                    <option value="Fibrose">Fibrose</option>
+                                </select>
+                                <select name="dummy" id="dummy">
+                                    <option value="Leichte Ausprägung">Leichte Ausprägung</option>
+                                    <option value="Mittlere Ausprägung">Mittlere Ausprägung</option>
+                                    <option value="Schwere Ausprägung">Schwere Ausprägung</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>
+                    <!-- TODO: weiß nicht auf welche Ebene das hier gehört -->
+                    <table>
+                        <tr>
+                            <td>
+                                <select name="dummy" id="dummy">
+                                    <option value="Frühphase (Milchglastrübungen, Konsolidierungen)">Frühphase (Milchglastrübungen, Konsolidierungen)</option>
+                                    <option value="Fibroproliferative Phase (Milchglastrübungen mit Retikulationen, Traktionsbronchiektasen, Atelektasen, Honeycombing)">Fibroproliferative Phase (Milchglastrübungen mit Retikulationen, Traktionsbronchiektasen, Atelektasen, Honeycombing)</option>
+                                    <option value="Schwerer Verlauf (Fibrosierungen ventral, in den nicht abhängigen Segmenten">Schwerer Verlauf (Fibrosierungen ventral, in den nicht abhängigen Segmenten</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>
+                    <!-- TODO: weiß nicht auf welche Ebene das hier gehört // ●	Lungenbeteiligung, im Vergleich zur Voruntersuchung vom XX.XX.XXXX -->
+                    <table>
+                        <tr>
+                            <td>
+                                <select name="dummy" id="dummy">
+                                    <option value="neu aufgetreten">neu aufgetreten</option>
+                                    <option value="progredient, aktuell bestehen Zeichen einer Superinfektion">progredient, aktuell bestehen Zeichen einer Superinfektion</option>
+                                    <option value="progredient, keine Zeichen einer Superinfektion">progredient, keine Zeichen einer Superinfektion</option>
+                                    <option value="regredient">regredient</option>
+                                    <option value="unverändert">unverändert</option>
+                                    <option value="vollständig regredient">vollständig regredient</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+
+
+        <table>
+            <tr>
+                <td><label for="dummy">Pleuraerguss</label></td>
+                <td>
+                    <select name="dummy" id="dummy">
+                        <option value="liegt nicht vor">liegt nicht vor</option>
+                        <option value="vorhanden">vorhanden</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <table>
+                        <tr>
+                            <td><label for="dummy">links</label></td>
+                            <td>
+                                <!-- TODO: negative Auswahl? Sollen mm hier eingegeben werden? -->
+                                <select name="dummy" id="dummy">
+                                    <option value="kleinvolumig [<1cm]">kleinvolumig [<1cm]</option>
+                                    <option value="Maximale Saumbreite [X mm]">Maximale Saumbreite [X mm]</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="dummy">rechts</label></td>
+                            <td>
+                                <select name="dummy" id="dummy">
+                                    <option value="kleinvolumig [<1cm]">kleinvolumig [<1cm]</option>
+                                    <option value="Maximale Saumbreite [X mm]">Maximale Saumbreite [X mm]</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="dummy">Mediastinum</label></td>
+                <td>
+                    <!-- TODO: Lympthknoten? -->
+                    <select name="dummy" id="dummy">
+                        <option value="Keine Lymphknotenvergrößerung">Keine Lymphknotenvergrößerung</option>
+                        <option value="Hiläre Lymphadenopathie">Hiläre Lymphadenopathie</option>
+                        <option value="Mediastinale Lymphadenopathie">Mediastinale Lymphadenopathie</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="dummy">Weitere Auffälligkeiten</label></td>
+                <td>
+                    <select name="dummy" id="dummy">
+                        <option value="keine">keine</option>
+                        <option value="ergänzende Angabe zu ">ergänzende Angabe zu </option>
+                        <option value="Freitext">Freitext</option>
+                    </select>
+                    <select name="dummy" id="dummy">
+                        <option value="Lungenparenchym/Atemwege">Lungenparenchym/Atemwege</option>
+                        <option value="Mediastinum">Mediastinum</option>
+                        <option value="Architekturstörungen">Architekturstörungen</option>
+                        <option value="Pleuraerguss">Pleuraerguss</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><textarea name="dummy" id="dummy" cols="30" rows="10"></textarea></td>
+            </tr>
+        </table>
+    </section>
+
+    <section data-section-name="Beurteilung">
+        <header class="level2" data-english="Impression">Beurteilung</header>
+        <table>
+            <tr>
+                <td><label for="dummy">Klassifikation des Lungenbefalls</label></td>
+            </tr>
+            <tr>
+                <td>
+                    <!-- TODO: oder soll das in das Textfeld? -->
+                    <select name="dummy" id="dummy">
+                        <option value="1">1. [Cov19Typ] CT-Veränderungen suggestiv für COVID-19 Pneumonie (bei hoher lokaler Prävalenz und/oder individueller Prätest-Wahrscheinlichkeit)</option>
+                        <option value="2">2. [Cov19Ind] CT-Veränderungen unklar, COVID-19 Pneumonie jedoch möglich</option>
+                        <option value="3">3. [Cov19Aty] CT-Veränderungen suggestiv für eine alternative Diagnose (z.B. bakterielles Erregerspektrum)</option>
+                        <option value="4">4. [Cov19Neg] CT-morphologisch kein Hinweis auf pneumonische Verdichtungen</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <td>
+                    <select name="dummy" id="dummy">
+                        <option value="Keine relevanten Zusatzbefunde">Keine relevanten Zusatzbefunde</option>
+                        <option value="Relevante Zusatzbefunde ">Relevante Zusatzbefunde </option>
+                    </select>
+                </td>
+                <td>
+                    <select size="4" multiple="multiple" name="dummy" id="dummy">
+                        <option value="Lungenemphysem">Lungenemphysem</option>
+                        <option value="Lungenfibrose">Lungenfibrose</option>
+                        <option value="Artherosklerose">Artherosklerose</option>
+                        <option value="Freitext">Freitext</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <p>
+            <textarea name="ct_thorax_Beurteilung" id="ct_thorax_Beurteilung" data-english-name="Impression" title="Text bitte entsprechend Befund ergänzen/ ändern!"></textarea>
+        </p>
+    </section>
+
+</body>
+</html>

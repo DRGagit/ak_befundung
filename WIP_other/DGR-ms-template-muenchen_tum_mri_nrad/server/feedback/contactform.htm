@@ -1,0 +1,200 @@
+<!--
+URL: www.freecontactform.com
+Version: FreeContactForm Free V2.2
+Copyright (c) 2013 Stuart Cochrane
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Feedback SB Neurorad</title>
+	<script src="freecontactformvalidation.js"></script>
+	<script>
+	required.add('Full_Name','NOT_EMPTY','Full Name');
+	//required.add('Email_Address','EMAIL','Email Address');
+	required.add('Your_Message','NOT_EMPTY','Your Message');
+	//required.add('AntiSpam','NOT_EMPTY','Anti-Spam Question');
+	</script>
+	<link rel="stylesheet" type="text/css" href="freecontactform.css">
+	</head>
+	<body>
+	
+	<form name="freecontactform" method="post" action="freecontactformprocess.php" onsubmit="return validate.check(this)">
+	<table width="750px" class="freecontactform">
+	<tr>
+	 <td colspan="2">
+	  
+	 <div class="freecontactformheader">Feedback Strukturierte Befundung Template Neuroradiologie<br></div>
+	 <em>(über Fragen, Antworten, Fließtext Generierung usw; <u>Keine Patientendaten einschließen!</u>; wird per E-mail geschickt)</em> 
+	  
+	 </td>
+	</tr>
+	<tr>
+	 <td valign="top">
+	  <label for="Full_Name" class="required">Name<span class="required_star"> * </span>          </label>
+	 </td>
+	 <td valign="top">
+	  <input type="text" name="Full_Name" id="Full_Name" maxlength="80" style="width:500px">
+	 </td>
+	</tr>
+	<tr style="display:none">
+	 <td valign="top">
+	  <label for="Email_Address" class="not-required">Email Address</label>
+	 </td>
+	 <td valign="top">
+	  <input type="text" name="Email_Address" id="Email_Address" maxlength="100" style="width:230px" value="tiberiu.andrisan@mri.tum.de">
+	 </td>
+	</tr>
+	<tr style="display:none;">
+	 <td valign="top">
+	  <label for="Telephone_Number" class="not-required">Telephone Number</label>
+	 </td>
+	 <td valign="top">
+	  <input type="text" name="Telephone_Number" id="Telephone_Number" maxlength="100" style="width:230px">
+	 </td>
+	</tr>
+	<tr>
+	 <td valign="top">
+	  <label for="Your_Message" class="required">Meldung/Wunsch<span class="required_star">*</span>  </label>
+	 </td>
+	 <td valign="top">
+	  <textarea style="width:500px;height:200px" name="Your_Message" id="Your_Message" maxlength="2000"></textarea>
+	 </td>
+	</tr>
+	<tr style="display:none;">
+	 <td colspan="2" style="text-align:center" >
+	  <div class="antispammessage">
+	  To help prevent automated spam, please answer this question
+	  <br /><br />
+		  <div class="antispamquestion">
+		   <span class="required_star"> * </span>
+		   Using only numbers, what is 10 plus 15? &nbsp; 
+		   <input type="text" name="AntiSpam" id="AntiSpam" maxlength="100" style="width:30px">
+		  </div>
+	  </div>
+	 </td>
+	</tr>
+	<tr>
+	 <td colspan="2" style="text-align:center" >
+	 <br /><br />
+	  <input type="submit" value=" Senden " style="width:200px;height:40px">
+	  </td>
+	</tr>
+	</table>
+	</form>
+	<script>
+function GetURLParameter(sParam)
+{
+    var sPageURL = window.location.search.substring(1);
+    var sURLVariables = sPageURL.split('&');
+    for (var i = 0; i < sURLVariables.length; i++) 
+    {
+        var sParameterName = sURLVariables[i].split('=');
+        if (sParameterName[0] == sParam) 
+        {
+            return sParameterName[1];
+        }
+    }
+}
+var arguments3 = GetURLParameter('t');
+var ww = GetURLParameter('ww');
+var wh = GetURLParameter('wh');
+	
+var nVer = navigator.appVersion;
+var nAgt = navigator.userAgent;
+var browserName  = navigator.appName;
+var fullVersion  = ''+parseFloat(navigator.appVersion); 
+var majorVersion = parseInt(navigator.appVersion,10);
+var nameOffset,verOffset,ix;
+
+// In Opera, the true version is after "Opera" or after "Version"
+if ((verOffset=nAgt.indexOf("Opera"))!=-1) {
+ browserName = "Opera";
+ fullVersion = nAgt.substring(verOffset+6);
+ if ((verOffset=nAgt.indexOf("Version"))!=-1) 
+   fullVersion = nAgt.substring(verOffset+8);
+}
+// In MSIE, the true version is after "MSIE" in userAgent
+else if ((verOffset=nAgt.indexOf("MSIE"))!=-1) {
+ browserName = "Microsoft Internet Explorer";
+ fullVersion = nAgt.substring(verOffset+5);
+}
+// In Chrome, the true version is after "Chrome" 
+else if ((verOffset=nAgt.indexOf("Chrome"))!=-1) {
+ browserName = "Chrome";
+ fullVersion = nAgt.substring(verOffset+7);
+}
+// In Safari, the true version is after "Safari" or after "Version" 
+else if ((verOffset=nAgt.indexOf("Safari"))!=-1) {
+ browserName = "Safari";
+ fullVersion = nAgt.substring(verOffset+7);
+ if ((verOffset=nAgt.indexOf("Version"))!=-1) 
+   fullVersion = nAgt.substring(verOffset+8);
+}
+// In Firefox, the true version is after "Firefox" 
+else if ((verOffset=nAgt.indexOf("Firefox"))!=-1) {
+ browserName = "Firefox";
+ fullVersion = nAgt.substring(verOffset+8);
+}
+// In most other browsers, "name/version" is at the end of userAgent 
+else if ( (nameOffset=nAgt.lastIndexOf(' ')+1) < 
+          (verOffset=nAgt.lastIndexOf('/')) ) 
+{
+ browserName = nAgt.substring(nameOffset,verOffset);
+ fullVersion = nAgt.substring(verOffset+1);
+ if (browserName.toLowerCase()==browserName.toUpperCase()) {
+  browserName = navigator.appName;
+ }
+}
+// trim the fullVersion string at semicolon/space if present
+if ((ix=fullVersion.indexOf(";"))!=-1)
+   fullVersion=fullVersion.substring(0,ix);
+if ((ix=fullVersion.indexOf(" "))!=-1)
+   fullVersion=fullVersion.substring(0,ix);
+
+majorVersion = parseInt(''+fullVersion,10);
+if (isNaN(majorVersion)) {
+ fullVersion  = ''+parseFloat(navigator.appVersion); 
+ majorVersion = parseInt(navigator.appVersion,10);
+}
+
+var w = window.innerWidth;
+var h = window.innerHeight;
+
+var browserinfo ='\n\n\n\n'+'----------\nTemplate: '+arguments3+', '+ww+'x'+wh;
+
+
+document.getElementById("Your_Message").value =browserinfo;
+document.getElementById("AntiSpam").value ='25';
+
+function setSelectionRange(input, selectionStart, selectionEnd) {
+  if (input.setSelectionRange) {
+    input.focus();
+    input.setSelectionRange(selectionStart, selectionEnd);
+  }
+  else if (input.createTextRange) {
+    var range = input.createTextRange();
+    range.collapse(true);
+    range.moveEnd('character', selectionEnd);
+    range.moveStart('character', selectionStart);
+    range.select();
+  }
+}
+
+function setCaretToPos (input, pos) {
+  setSelectionRange(input, pos, pos);
+}
+
+setCaretToPos(document.getElementById("Your_Message"), 0);
+document.getElementById("Full_Name").focus();
+
+	</script>
+</body>
+</html>

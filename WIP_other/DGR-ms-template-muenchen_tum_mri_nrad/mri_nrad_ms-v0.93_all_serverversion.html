@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multiple Sklerose MRT</title>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--Dublin Core metadata elements here-->
+    <meta name="dcterms.title" content="Multiple Sklerose MRT v0.93" />
+    <meta name="dcterms.description" content="Befundungstemplate für Multiple Sklerose MRT" />
+    <meta name="dcterms.identifier" content="MRI.nrad.ms" />
+    <meta name="dcterms.type" content="IMAGE_REPORT_TEMPLATE" />
+    <meta name="dcterms.language" content="de" />
+    <meta name="dcterms.rights" content="May be used freely, subject to license agreement" />
+    <meta name="dcterms.license" content="http://www.radreport.org/license.pdf" />
+    <meta name="dcterms.date" content="2018-12-21" />
+    <meta name="dcterms.creator" content="Andrisan T" />
+    <meta name="dcterms.contributor" content="Kirsche J" />
+	<meta name="dcterms.contributor" content="Andrisan T" />
+    <meta name="dcterms.contributor" content="Valentinitsch A" />
+    <meta name="dcterms.publisher" content="Klinikum rechts der Isar, Abteilung für Diagnostische und Interventionelle Neuroradiologie" />
+    <script type="text/xml">
+        <template_attributes>
+        <top-level-flag>0</top-level-flag>
+        <status>ACTIVE</status>
+		<context>Hauptbefund</context>
+        </template_attributes>
+        </script>
+
+</head>
+<body>
+
+<section data-section-name="Template" id="title" style="display:none;">
+	<header class="level1">Multiple Sklerose MRT</header>
+	<div class="hide-from-xml-output"><input type="checkbox" id="nradms_touched" name="nradms_touched"/><label for="nradms_touched">DO NOT DELETE THIS FIELD. Is this the first time opening this form? If yes we will apply some default values through js</label></div>
+	</section>
+
+
+	
+<section data-section-name="Clinical information">
+		<header class="level1" data-english="Clinical information">Klinische Angaben</header>
+		<div style="display: none;"><textarea id="nradms_angaben" name="nradms_angaben"></textarea></div>
+		<div class="hide-from-xml-output"><table><tr><td><strong>Diagnose</strong></td><td>
+            <input type="checkbox" id="nradms_ka_diag_kis" name="nradms_ka_diag_kis" data-group="ka_diag" data-value="Diagnose: Klinisch isoliertes Syndrom" class="radiobutonnized" /><label for="nradms_ka_diag_kis">Klinisch isoliertes Syndrom. </label><br>
+            <input type="checkbox" id="nradms_ka_diag_rrms" name="nradms_ka_diag_rrms" data-group="ka_diag" data-value="Diagnose: Schubförmige MS (RRMS)" class="radiobutonnized" /><label for="nradms_ka_diag_rrms">Schubförmige MS (RRMS)</label><br>
+			<input type="checkbox" id="nradms_ka_diag_spms" name="nradms_ka_diag_spms" data-group="ka_diag" data-value="Diagnose: Sekundär progrediente MS (SPMS)" class="radiobutonnized" /><label for="nradms_ka_diag_spms">Sekundär progrediente MS (SPMS)</label><br>
+			<input type="checkbox" id="nradms_ka_diag_ppms" name="nradms_ka_diag_ppms" data-group="ka_diag" data-value="Diagnose: Primär progrediente MS (PPMS)" class="radiobutonnized" /><label for="nradms_ka_diag_ppms">Primär progrediente MS (PPMS)</label><br>
+			<input type="checkbox" id="nradms_ka_diag_nbws" name="nradms_ka_diag_nbws" data-group="ka_diag" data-value="Diagnose: Nicht bestimmbar" class="radiobutonnized" /><label for="nradms_ka_diag_nbws">Nicht bestimmbar</label><br>
+			<input type="checkbox" id="nradms_ka_diag_sonst" name="nradms_ka_diag_sonst" data-value="" class="radiobutonnized"/><label for="nradms_ka_diag_sonst">Sonstiges</label>
+			<input type="text" id="nradms_ka_diag_sonst_text" name="nradms_ka_diag_sonst_text" placeholder="Welche?"/></td></tr></table></div>
+		<div id="nradms_divanamnese" class="fliesstext"><textarea id='nradms_anamnese' name='nradms_anamnese' rows=3 style='display:block'></textarea></div>
+	</section>
+	
+
+<section data-section-name="Clinical question" style="display: none;">
+		<header class="level1" data-english="Clinical question">Fragestellung</header>
+		<div id="nradms_fragestellung_div"><textarea name="nradms_fragestellung" id="nradms_fragestellung"></textarea></div>
+	</section>
+	
+	
+<section data-section-name="Comparison">
+		<header class="level1" data-english="Comparison">Voraufnahmen</header>
+		<div class="hide-from-xml-output"><table><tr><td><label for="nradms_va_ja"><strong>Voruntersuchungen MRT</strong></label>
+			<input type="checkbox" id="nradms_va_ja" name="nradms_va_ja" data-group="va" data-value="" class="radiobutonnized"/><label for="nradms_va_ja">ja</label>
+	        <input type="checkbox" id="nradms_va_nein" name="nradms_va_nein" data-group="va" data-value="Es liegen keine vergleichbaren MRT-Voruntersuchungen vor." class="radiobutonnized" /><label for="nradms_va_nein">keine</label></td><td>
+				<label for="nradms_va_anz" style="float:left; margin-left: 15px;">Anzahl</label><input type="number" id="nradms_va_anz" name="nradms_va_anz" min="1" size="2" style="float:left; margin:-5px 5px 0 5px;" value="1"/></td></tr><tr id="nradms_va_lv_tr"><td></td><td>
+				<label for="nradms_va_lv_int">Letzte Voruntersuchung</label></td><td>
+					<input type="checkbox" id="nradms_va_lv_int" name="nradms_va_lv_int" data-group="va_lv" data-value="MRT-Voruntersuchung aus dem Haus" class="radiobutonnized" /><label for="nradms_va_lv_int">Intern</label>
+					<input type="checkbox" id="nradms_va_lv_ext" name="nradms_va_lv_ext" data-group="va_lv" data-value="auswärtige MRT-Voruntersuchung" class="radiobutonnized"/><label for="nradms_va_lv_ext">Extern</label>
+					<input type="checkbox" id="nradms_va_lv_sonst" name="nradms_va_lv_sonst" data-group="va_lv" data-value="" class="radiobutonnized"/><label for="nradms_va_lv_sonst">Sonstiges</label><br>
+					<input type="text" id="nradms_va_lv_sonst_text" name="nradms_va_lv_sonst_text" placeholder="Woher?" value=""/><br>
+				<label for="nradms_va_lv_vom" style="float:left;margin-top:5px;">vom</label><input type="text" id="nradms_va_lv_vom" name="nradms_va_lv_vom" placeholder="tt.mm.jjjj" style="float:left;"/></td></tr><tr id="nradms_va_sonst_tr"><td></td><td colspan="2">
+				<label for="nradms_va_sonst">Sonstiges</label><input type="text" id="nradms_va_sonst" name="nradms_va_sonst" placeholder="" /></td></tr></table></div>	
+		<div id="nradms_divva" class="fliesstext"><textarea id='nradms_va' name='nradms_va' rows=3 style='display:block'></textarea></div>
+	 </section>
+	
+	
+<section data-section-name="Befunde">
+        <header class="level1" data-english="Findings">Befund</header>
+       	<div class="hide-from-xml-output"><table><tr><td><strong>Abgebildet</strong></td><td>
+			<input type="checkbox" id="nradms_bef_seq_abg_kopf" name="nradms_bef_seq_abg_kopf" data-group="bef_seq_eh" class="" data-value="Kopf" /><label for="nradms_bef_seq_abg_kopf">Kopf</label><br>
+			<input type="checkbox" id="nradms_bef_seq_abg_hws" name="nradms_bef_seq_abg_hws" data-group="bef_seq_eh" class="" data-value="Halswirbelsäule" /><label for="nradms_bef_seq_abg_hws">HWS</label><br>
+			<input type="checkbox" id="nradms_bef_seq_abg_blws" name="nradms_bef_seq_abg_blws" data-group="bef_seq_eh" class="" data-value="Brust- und Lendenwirbelsäule" /><label for="nradms_bef_seq_abg_blws">BWS/LWS</label></td></tr></table></div>
+		<div class="hide-from-xml-output" id="nradms_bef_seq"><table><tr><td><strong>Sequenzen</strong></td><td>
+			<input type="checkbox" id="nradms_bef_seq_3dflair" name="nradms_bef_seq_3dflair" data-group="seq_kopf" data-value="3D-Flair" /><label for="nradms_bef_seq_3dflair">3D-Flair</label>
+			<input type="checkbox" id="nradms_bef_seq_3ddir" name="nradms_bef_seq_3ddir" data-group="seq_kopf" data-value="3D-DIR" /><label for="nradms_bef_seq_3ddir">3D-DIR</label>
+			<input type="checkbox" id="nradms_bef_seq_isot2" name="nradms_bef_seq_isot2" data-group="seq_kopf" data-value="3D-T2" /><label for="nradms_bef_seq_isot2">3D-T2</label>
+			<input type="checkbox" id="nradms_bef_seq_swi" name="nradms_bef_seq_swi" data-group="seq_kopf" data-value="SWI" /><label for="nradms_bef_seq_swi">SWI</label>
+			<input type="checkbox" id="nradms_bef_seq_dti" name="nradms_bef_seq_dti" data-group="seq_kopf" data-value="DTI/DWI" /><label for="nradms_bef_seq_dti">DTI/DWI</label>
+			<input type="checkbox" id="nradms_bef_seq_mprage" name="nradms_bef_seq_mprage" data-group="seq_kopf" data-value="MPRage nativ" /><label for="nradms_bef_seq_mprage">MPRage</label>
+			<input type="checkbox" id="nradms_bef_seq_mpragekm" name="nradms_bef_seq_mpragekm" data-group="seq_kopf" data-value="MPRage + KM" /><label for="nradms_bef_seq_mpragekm">MPRage + KM</label>
+			
+				<br id="nradms_bef_seq_ws_br">
+			<input type="checkbox" id="nradms_bef_seq_sagT2" name="nradms_bef_seq_sagT2" data-group="seq_ws" data-value="Sagittale T2" /><label for="nradms_bef_seq_sagT2">Sagittale T2</label>
+			<input type="checkbox" id="nradms_bef_seq_sagSTIR" name="nradms_bef_seq_sagSTIR" data-group="seq_ws" data-value="Sagittale STIR"/><label for="nradms_bef_seq_sagSTIR">Sagittale STIR</label>
+			<input type="checkbox" id="nradms_bef_seq_sagT1" name="nradms_bef_seq_sagT1" data-group="seq_ws" data-value="Sagittale T1" /><label for="nradms_bef_seq_sagT1">Sagittale T1</label>
+			<input type="checkbox" id="nradms_bef_seq_sagT1KM" name="nradms_bef_seq_sagT1KM" data-group="seq_ws" data-value="Sagittale T1 + KM"/><label for="nradms_bef_seq_sagT1KM">Sagittale T1 + KM</label>
+			<input type="checkbox" id="nradms_bef_seq_axT2" name="nradms_bef_seq_axT2" data-group="seq_ws" data-value="Axiale T2" /><label for="nradms_bef_seq_axT2">Axiale T2</label>
+			<input type="checkbox" id="nradms_bef_seq_axT2KM" name="nradms_bef_seq_axT2KM" data-group="seq_ws" data-value="Axiale T2 + KM"/><label for="nradms_bef_seq_axT2KM">Axiale T2 + KM</label>
+			<input type="checkbox" id="nradms_bef_seq_sonst" name="nradms_bef_seq_sonst" data-group="seq_ws" data-value="" class=""/><label for="nradms_bef_seq_sonst">Sonstiges</label>
+			<input type="text" id="nradms_bef_seq_sonst_text" name="nradms_bef_seq_sonst_text" placeholder="Welche?" class=""/></td></tr></table></div>
+		<div class="hide-from-xml-output" id="nradms_bef_seq_bildq"><table><tr><td><strong>Bildqualität</strong></td><td>
+            <input type="checkbox" id="nradms_bef_seq_bildq_gut" name="nradms_bef_seq_bildq_gut" data-group="bef_seq_bildq" class="radiobutonnized" data-value="Gute Bildqualität" /><label for="nradms_bef_seq_bildq_gut">Gut</label><br>
+            <input type="checkbox" id="nradms_bef_seq_bildq_art" name="nradms_bef_seq_bildq_art" data-group="bef_seq_bildq" class="radiobutonnized" data-value="Bildqualität: Artefaktüberlagert aber verwertbar"/><label for="nradms_bef_seq_bildq_art">Artefaktüberlagert aber verwertbar</label><br>
+			<input type="checkbox" id="nradms_bef_seq_bildq_nvw" name="nradms_bef_seq_bildq_nvw" data-group="bef_seq_bildq" class="radiobutonnized" data-value="Bildqualität: Nicht verwertbar, Wiederholung empfohlen"/><label for="nradms_bef_seq_bildq_nvw">Nicht verwertbar, Wiederholung empfohlen</label></td></tr></table>
+			<br><br></div>
+		 
+		<div id="nradms_divsequenzen" class="fliesstext"><textarea id='nradms_sequenzen' name='nradms_sequenzen' style='display:block' rows=3></textarea></div>
+		
+		<div class="hide-from-xml-output" id="nradms_bef_kopf"><br><br><table><tr class=""><td class=""><label><strong>Läsionen Kopf</strong></label></td><td id="nradms_bef_kopf_okm">
+				<label for="nradms_bef_kopf_anz"><u>nativ</u><br></label>
+				<label for="nradms_bef_kopf_anz">Anzahl <u>spez.</u></label>
+				<select id="nradms_bef_kopf_anz" name="nradms_bef_kopf_anz">
+					<option value="0">0 </option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="11-20">11 - 20</option>
+					<option value="&gt;20">>20</option></select><br>
+				<fieldset id="nradms_bef_kopf_hoh" class="required">
+					<label for="nradms_bef_kopf_hoh_pv" style="display: none;"><br></label>
+					<input type="checkbox" id="nradms_bef_kopf_hoh_pv" name="nradms_bef_kopf_hoh_pv" data-group="bef_kopf_hoh_s" data-group2='bef_kopf_hoh_s2' data-value="periventrikulär" /><label for="nradms_bef_kopf_hoh_pv">Periventrikulär<br></label>
+					<input type="checkbox" id="nradms_bef_kopf_hoh_kjk" name="nradms_bef_kopf_hoh_kjk" data-group="bef_kopf_hoh_s" data-group2='bef_kopf_hoh_s2' data-value="kortikal/juxtakortikal" /><label for="nradms_bef_kopf_hoh_kjk">Kortikal / Juxtakortikal<br></label>
+					<input type="checkbox" id="nradms_bef_kopf_hoh_ift" name="nradms_bef_kopf_hoh_ift" data-group="bef_kopf_hoh_s" data-value="infratentoriell" /><label for="nradms_bef_kopf_hoh_ift">Infratentoriell</label></fieldset>
+
+				<fieldset id="nradms_bef_kopf_reg" class="required" style="margin-top: 32px;">
+					<table><tr><td>
+					<label for="nradms_bef_kopf_reg_fr">frontal</label></td><td>
+						<input type="checkbox" id="nradms_bef_kopf_reg_fr" name="nradms_bef_kopf_reg_fr" data-group="bef_kopf_reg" data-value="frontal rechts" /><label for="nradms_bef_kopf_reg_fr">re</label></td><td>
+						<input type="checkbox" id="nradms_bef_kopf_reg_fl" name="nradms_bef_kopf_reg_fl" data-group="bef_kopf_reg" data-value="frontal links" /><label for="nradms_bef_kopf_reg_fl">li</label></td></tr><tr><td>
+					<label for="nradms_bef_kopf_reg_tr">temporal</label></td><td>
+						<input type="checkbox" id="nradms_bef_kopf_reg_tr" name="nradms_bef_kopf_reg_tr" data-group="bef_kopf_reg" data-value="temporal rechts" /><label for="nradms_bef_kopf_reg_tr">re</label></td><td>
+						<input type="checkbox" id="nradms_bef_kopf_reg_tl" name="nradms_bef_kopf_reg_tl" data-group="bef_kopf_reg" data-value="temporal links" /><label for="nradms_bef_kopf_reg_tl">li</label></td></tr><tr><td>
+					<label for="nradms_bef_kopf_reg_ir">insulär</label></td><td>
+						<input type="checkbox" id="nradms_bef_kopf_reg_ir" name="nradms_bef_kopf_reg_ir" data-group="bef_kopf_reg" data-value="insulär rechts" /><label for="nradms_bef_kopf_reg_ir">re</label></td><td>
+						<input type="checkbox" id="nradms_bef_kopf_reg_il" name="nradms_bef_kopf_reg_il" data-group="bef_kopf_reg" data-value="insulär links" /><label for="nradms_bef_kopf_reg_il">li</label></td></tr><tr><td>
+					<label for="nradms_bef_kopf_reg_pr">parietal</label></td><td>
+						<input type="checkbox" id="nradms_bef_kopf_reg_pr" name="nradms_bef_kopf_reg_pr" data-group="bef_kopf_reg" data-value="parietal rechts" /><label for="nradms_bef_kopf_reg_pr">re</label></td><td>
+						<input type="checkbox" id="nradms_bef_kopf_reg_pl" name="nradms_bef_kopf_reg_pl" data-group="bef_kopf_reg" data-value="parietal links" /><label for="nradms_bef_kopf_reg_pl">li</label></td></tr><tr><td>
+					<label for="nradms_bef_kopf_reg_or">occipital</label></td><td>
+						<input type="checkbox" id="nradms_bef_kopf_reg_or" name="nradms_bef_kopf_reg_or" data-group="bef_kopf_reg" data-value="occipital rechts" /><label for="nradms_bef_kopf_reg_or">re</label></td><td>
+						<input type="checkbox" id="nradms_bef_kopf_reg_ol" name="nradms_bef_kopf_reg_ol" data-group="bef_kopf_reg" data-value="occipital links" /><label for="nradms_bef_kopf_reg_ol">li</label></td></tr></table></fieldset>							
+
+
+					</td>
+			<td id="nradms_bef_kopf_neu"><br>
+				<label for="nradms_bef_kopf_neu_anz">Gesamtzahl neue</label>
+					<select id="nradms_bef_kopf_neu_anz" name="nradms_bef_kopf_neu_anz">
+					<option value="0">0 </option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="11-20">11 - 20</option>
+					<option value="&gt;20">>20</option></select><br>
+				<fieldset id="nradms_bef_kopf_neu_hoh" class="required">
+					<label for="nradms_bef_kopf_neu_hoh_pv" style="display: none;"><br></label>
+					<input type="checkbox" id="nradms_bef_kopf_neu_hoh_pv" name="nradms_bef_kopf_neu_hoh_pv" data-group="bef_kopf_neu_hoh_s" data-group2="bef_kopf_neu_hoh_s2" data-value="periventrikulär" /><label for="nradms_bef_kopf_neu_hoh_pv">Periventrikulär<br></label>
+					<input type="checkbox" id="nradms_bef_kopf_neu_hoh_kjk" name="nradms_bef_kopf_neu_hoh_kjk" data-group="bef_kopf_neu_hoh_s" data-group2="bef_kopf_neu_hoh_s2" data-value="kortikal / juxtakortikal" /><label for="nradms_bef_kopf_neu_hoh_kjk">Kortikal / Juxtakortikal<br></label>
+					<input type="checkbox" id="nradms_bef_kopf_neu_hoh_ift" name="nradms_bef_kopf_neu_hoh_ift" data-group="bef_kopf_neu_hoh_s" data-value="infratentoriell" /><label for="nradms_bef_kopf_neu_hoh_ift">Infratentoriell<br></label>
+					<input type="checkbox" id="nradms_bef_kopf_neu_hoh_sk" name="nradms_bef_kopf_neu_hoh_sk" data-group="bef_kopf_neu_hoh_s" data-group2="bef_kopf_neu_hoh_s2" data-value="subkortikal" /><label for="nradms_bef_kopf_neu_hoh_sk">Subkortikal<br></label></fieldset><br>
+				
+				<fieldset id="nradms_bef_kopf_neu_reg" class="required" style="margin-top: 4px;">
+					<table><tr><td>
+					<label for="nradms_bef_kopf_neu_reg_fr">frontal</label></td><td>
+						<input type="checkbox" id="nradms_bef_kopf_neu_reg_fr" name="nradms_bef_kopf_neu_reg_fr" data-group="bef_kopf_neu_reg" data-value="frontal rechts" /><label for="nradms_bef_kopf_neu_reg_fr">re</label></td><td>
+						<input type="checkbox" id="nradms_bef_kopf_neu_reg_fl" name="nradms_bef_kopf_neu_reg_fl" data-group="bef_kopf_neu_reg" data-value="frontal links" /><label for="nradms_bef_kopf_neu_reg_fl">li</label></td></tr><tr><td>
+					<label for="nradms_bef_kopf_neu_reg_tr">temporal</label></td><td>
+						<input type="checkbox" id="nradms_bef_kopf_neu_reg_tr" name="nradms_bef_kopf_neu_reg_tr" data-group="bef_kopf_neu_reg" data-value="temporal rechts" /><label for="nradms_bef_kopf_neu_reg_tr">re</label></td><td>
+						<input type="checkbox" id="nradms_bef_kopf_neu_reg_tl" name="nradms_bef_kopf_neu_reg_tl" data-group="bef_kopf_neu_reg" data-value="temporal links" /><label for="nradms_bef_kopf_neu_reg_tl">li</label></td></tr><tr><td>
+					<label for="nradms_bef_kopf_neu_reg_ir">insulär</label></td><td>
+						<input type="checkbox" id="nradms_bef_kopf_neu_reg_ir" name="nradms_bef_kopf_neu_reg_ir" data-group="bef_kopf_neu_reg" data-value="insulär rechts" /><label for="nradms_bef_kopf_neu_reg_ir">re</label></td><td>
+						<input type="checkbox" id="nradms_bef_kopf_neu_reg_il" name="nradms_bef_kopf_neu_reg_il" data-group="bef_kopf_neu_reg" data-value="insulär links" /><label for="nradms_bef_kopf_neu_reg_il">li</label></td></tr><tr><td>
+					<label for="nradms_bef_kopf_neu_reg_pr">parietal</label></td><td>
+						<input type="checkbox" id="nradms_bef_kopf_neu_reg_pr" name="nradms_bef_kopf_neu_reg_pr" data-group="bef_kopf_neu_reg" data-value="parietal rechts" /><label for="nradms_bef_kopf_neu_reg_pr">re</label></td><td>
+						<input type="checkbox" id="nradms_bef_kopf_neu_reg_pl" name="nradms_bef_kopf_neu_reg_pl" data-group="bef_kopf_neu_reg" data-value="parietal links" /><label for="nradms_bef_kopf_neu_reg_pl">li</label></td></tr><tr><td>
+					<label for="nradms_bef_kopf_neu_reg_or">occipital</label></td><td>
+						<input type="checkbox" id="nradms_bef_kopf_neu_reg_or" name="nradms_bef_kopf_neu_reg_or" data-group="bef_kopf_neu_reg" data-value="occipital rechts" /><label for="nradms_bef_kopf_neu_reg_or">re</label></td><td>
+						<input type="checkbox" id="nradms_bef_kopf_neu_reg_ol" name="nradms_bef_kopf_neu_reg_ol" data-group="bef_kopf_neu_reg" data-value="occipital links" /><label for="nradms_bef_kopf_neu_reg_ol">li</label></td></tr></table></fieldset>	
+
+				</td>
+			
+			<td id="nradms_bef_kopf_km">
+			<label for="nradms_bef_kopf_km_anz"><u>mit KM-Aufnahme</u><br></label>
+			<label for="nradms_bef_kopf_km_anz">Gesamtzahl</label>
+				<select id="nradms_bef_kopf_km_anz" name="nradms_bef_kopf_km_anz">
+					<option value="0">0 </option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="11-20">11 - 20</option>
+					<option value="&gt;20">>20</option></select><br>
+				<fieldset id="nradms_bef_kopf_km_hoh" class="required">
+					<label for="nradms_bef_kopf_km_hoh_pv" style="display: none;">><br></label>
+					<input type="checkbox" id="nradms_bef_kopf_km_hoh_pv" name="nradms_bef_kopf_km_hoh_pv" data-group="bef_kopf_km_hoh_s" data-group2="bef_kopf_km_hoh_s2" data-value="periventrikulär" /><label for="nradms_bef_kopf_km_hoh_pv">Periventrikulär<br></label>
+					<input type="checkbox" id="nradms_bef_kopf_km_hoh_kjk" name="nradms_bef_kopf_km_hoh_kjk" data-group="bef_kopf_km_hoh_s" data-group2="bef_kopf_km_hoh_s2" data-value="kortikal / juxtakortikal" /><label for="nradms_bef_kopf_km_hoh_kjk">Kortikal / Juxtakortikal<br></label>
+					<input type="checkbox" id="nradms_bef_kopf_km_hoh_ift" name="nradms_bef_kopf_km_hoh_ift" data-group="bef_kopf_km_hoh_s" data-value="infratentoriell" /><label for="nradms_bef_kopf_km_hoh_ift">Infratentoriell<br></label>
+					<input type="checkbox" id="nradms_bef_kopf_km_hoh_sk" name="nradms_bef_kopf_km_hoh_sk" data-group="bef_kopf_km_hoh_s" data-group2="bef_kopf_km_hoh_s2" data-value="subkortikal" /><label for="nradms_bef_kopf_km_hoh_sk">Subkortikal<br></label></fieldset>	<br>
+
+				<fieldset id="nradms_bef_kopf_km_reg" class="required">
+					<table><tr><td>
+					<label for="nradms_bef_kopf_km_reg_fr">frontal</label></td><td>
+						<input type="checkbox" id="nradms_bef_kopf_km_reg_fr" name="nradms_bef_kopf_km_reg_fr" data-group="bef_kopf_km_reg" data-value="frontal rechts" /><label for="nradms_bef_kopf_km_reg_fr">re</label></td><td>
+						<input type="checkbox" id="nradms_bef_kopf_km_reg_fl" name="nradms_bef_kopf_km_reg_fl" data-group="bef_kopf_km_reg" data-value="frontal links" /><label for="nradms_bef_kopf_km_reg_fl">li</label></td></tr><tr><td>
+					<label for="nradms_bef_kopf_km_reg_tr">temporal</label></td><td>
+						<input type="checkbox" id="nradms_bef_kopf_km_reg_tr" name="nradms_bef_kopf_km_reg_tr" data-group="bef_kopf_km_reg" data-value="temporal rechts" /><label for="nradms_bef_kopf_km_reg_tr">re</label></td><td>
+						<input type="checkbox" id="nradms_bef_kopf_km_reg_tl" name="nradms_bef_kopf_km_reg_tl" data-group="bef_kopf_km_reg" data-value="temporal links" /><label for="nradms_bef_kopf_km_reg_tl">li</label></td></tr><tr><td>
+					<label for="nradms_bef_kopf_km_reg_ir">insulär</label></td><td>
+						<input type="checkbox" id="nradms_bef_kopf_km_reg_ir" name="nradms_bef_kopf_km_reg_ir" data-group="bef_kopf_km_reg" data-value="insulär rechts" /><label for="nradms_bef_kopf_km_reg_ir">re</label></td><td>
+						<input type="checkbox" id="nradms_bef_kopf_km_reg_il" name="nradms_bef_kopf_km_reg_il" data-group="bef_kopf_km_reg" data-value="insulär links" /><label for="nradms_bef_kopf_km_reg_il">li</label></td></tr><tr><td>
+					<label for="nradms_bef_kopf_km_reg_pr">parietal</label></td><td>
+						<input type="checkbox" id="nradms_bef_kopf_km_reg_pr" name="nradms_bef_kopf_km_reg_pr" data-group="bef_kopf_km_reg" data-value="parietal rechts" /><label for="nradms_bef_kopf_km_reg_pr">re</label></td><td>
+						<input type="checkbox" id="nradms_bef_kopf_km_reg_pl" name="nradms_bef_kopf_km_reg_pl" data-group="bef_kopf_km_reg" data-value="parietal links" /><label for="nradms_bef_kopf_km_reg_pl">li</label></td></tr><tr><td>
+					<label for="nradms_bef_kopf_km_reg_or">occipital</label></td><td>
+						<input type="checkbox" id="nradms_bef_kopf_km_reg_or" name="nradms_bef_kopf_km_reg_or" data-group="bef_kopf_km_reg" data-value="occipital rechts" /><label for="nradms_bef_kopf_km_reg_or">re</label></td><td>
+						<input type="checkbox" id="nradms_bef_kopf_km_reg_ol" name="nradms_bef_kopf_km_reg_ol" data-group="bef_kopf_km_reg" data-value="occipital links" /><label for="nradms_bef_kopf_km_reg_ol">li</label></td></tr></table></fieldset>		
+				</td>
+				
+			<td id="nradms_bef_kopf_km_neu"><br>
+				<label for="nradms_bef_kopf_km_neu_anz">davon neue</label>
+					<select id="nradms_bef_kopf_km_neu_anz" name="nradms_bef_kopf_km_neu_anz">
+					<option value="0">0 </option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="11-20">11 - 20</option>
+					<option value="&gt;20">>20</option></select><br>
+				<fieldset id="nradms_bef_kopf_km_neu_hoh" class="required">
+					<label for="nradms_bef_kopf_km_neu_hoh_pv" style="display: none;">><br></label>
+					<input type="checkbox" id="nradms_bef_kopf_km_neu_hoh_pv" name="nradms_bef_kopf_km_neu_hoh_pv" data-group="bef_kopf_km_neu_hoh_s" data-group2="bef_kopf_km_neu_hoh_s2" data-value="periventrikulär" /><label for="nradms_bef_kopf_km_neu_hoh_pv">Periventrikulär<br></label>
+					<input type="checkbox" id="nradms_bef_kopf_km_neu_hoh_kjk" name="nradms_bef_kopf_km_neu_hoh_kjk" data-group="bef_kopf_km_neu_hoh_s" data-group2="bef_kopf_km_neu_hoh_s2" data-value="kortikal / juxtakortikal" /><label for="nradms_bef_kopf_km_neu_hoh_kjk">Kortikal / Juxtakortikal<br></label>
+					<input type="checkbox" id="nradms_bef_kopf_km_neu_hoh_ift" name="nradms_bef_kopf_km_neu_hoh_ift" data-group="bef_kopf_km_neu_hoh_s" data-value="infratentoriell" /><label for="nradms_bef_kopf_km_neu_hoh_ift">Infratentoriell<br></label>
+					<input type="checkbox" id="nradms_bef_kopf_km_neu_hoh_sk" name="nradms_bef_kopf_km_neu_hoh_sk" data-group="bef_kopf_km_neu_hoh_s" data-group2="bef_kopf_km_neu_hoh_s2" data-value="subkortikal" /><label for="nradms_bef_kopf_km_neu_hoh_sk">Subkortikal<br></label></fieldset><br>
+
+				<fieldset id="nradms_bef_kopf_km_neu_reg" class="required" style="margin-top: 4px;">
+					<table><tr><td>
+					<label for="nradms_bef_kopf_km_neu_reg_fr">frontal</label></td><td>
+						<input type="checkbox" id="nradms_bef_kopf_km_neu_reg_fr" name="nradms_bef_kopf_km_neu_reg_fr" data-group="bef_kopf_km_neu_reg" data-value="frontal rechts" /><label for="nradms_bef_kopf_km_neu_reg_fr">re</label></td><td>
+						<input type="checkbox" id="nradms_bef_kopf_km_neu_reg_fl" name="nradms_bef_kopf_km_neu_reg_fl" data-group="bef_kopf_km_neu_reg" data-value="frontal links" /><label for="nradms_bef_kopf_km_neu_reg_fl">li</label></td></tr><tr><td>
+					<label for="nradms_bef_kopf_km_neu_reg_tr">temporal</label></td><td>
+						<input type="checkbox" id="nradms_bef_kopf_km_neu_reg_tr" name="nradms_bef_kopf_km_neu_reg_tr" data-group="bef_kopf_km_neu_reg" data-value="temporal rechts" /><label for="nradms_bef_kopf_km_neu_reg_tr">re</label></td><td>
+						<input type="checkbox" id="nradms_bef_kopf_km_neu_reg_tl" name="nradms_bef_kopf_km_neu_reg_tl" data-group="bef_kopf_km_neu_reg" data-value="temporal links" /><label for="nradms_bef_kopf_km_neu_reg_tl">li</label></td></tr><tr><td>
+					<label for="nradms_bef_kopf_km_neu_reg_ir">insulär</label></td><td>
+						<input type="checkbox" id="nradms_bef_kopf_km_neu_reg_ir" name="nradms_bef_kopf_km_neu_reg_ir" data-group="bef_kopf_km_neu_reg" data-value="insulär rechts" /><label for="nradms_bef_kopf_km_neu_reg_ir">re</label></td><td>
+						<input type="checkbox" id="nradms_bef_kopf_km_neu_reg_il" name="nradms_bef_kopf_km_neu_reg_il" data-group="bef_kopf_km_neu_reg" data-value="insulär links" /><label for="nradms_bef_kopf_km_neu_reg_il">li</label></td></tr><tr><td>
+					<label for="nradms_bef_kopf_km_neu_reg_pr">parietal</label></td><td>
+						<input type="checkbox" id="nradms_bef_kopf_km_neu_reg_pr" name="nradms_bef_kopf_km_neu_reg_pr" data-group="bef_kopf_km_neu_reg" data-value="parietal rechts" /><label for="nradms_bef_kopf_km_neu_reg_pr">re</label></td><td>
+						<input type="checkbox" id="nradms_bef_kopf_km_neu_reg_pl" name="nradms_bef_kopf_km_neu_reg_pl" data-group="bef_kopf_km_neu_reg" data-value="parietal links" /><label for="nradms_bef_kopf_km_neu_reg_pl">li</label></td></tr><tr><td>
+					<label for="nradms_bef_kopf_km_neu_reg_or">occipital</label></td><td>
+						<input type="checkbox" id="nradms_bef_kopf_km_neu_reg_or" name="nradms_bef_kopf_km_neu_reg_or" data-group="bef_kopf_km_neu_reg" data-value="occipital rechts" /><label for="nradms_bef_kopf_km_neu_reg_or">re</label></td><td>
+						<input type="checkbox" id="nradms_bef_kopf_km_neu_reg_ol" name="nradms_bef_kopf_km_neu_reg_ol" data-group="bef_kopf_km_neu_reg" data-value="occipital links" /><label for="nradms_bef_kopf_km_neu_reg_ol">li</label></td></tr></table></fieldset>		
+				</td></tr><tr><td> </td></tr><tr><td></td><td>
+			<label for="nradms_bef_kopf_skl_ja">Subkortikale/unspezifische Läsionen</label></td><td>
+				<input type="checkbox" id="nradms_bef_kopf_skl_ja" name="nradms_bef_kopf_skl_ja" data-group="bef_kopf_skl" data-value="- subkortikale/unspezifische Läsionen." class="radiobutonnized" /><label for="nradms_bef_kopf_skl_ja">Ja</label>
+				<input type="checkbox" id="nradms_bef_kopf_skl_nein" name="nradms_bef_kopf_skl_nein" data-group="bef_kopf_skl" data-value="Subkortikale/unspezifische Läsionen nicht vorhanden." class="radiobutonnized" /><label for="nradms_bef_kopf_skl_nein">Nein</label></td></tr><tr id="nradms_bef_kopf_konf"><td></td><td>				
+			
+			<label for="nradms_bef_kopf_konf_nk">Konfiguration der Läsionen</label></td><td colspan=2>
+				<input type="checkbox" id="nradms_bef_kopf_konf_nk" name="nradms_bef_kopf_konf_nk" data-group="bef_kopf_konf" data-value="Die Läsionen stellen sich nicht konfluierend dar." class="radiobutonnized"/><label for="nradms_bef_kopf_konf_nk">Nicht konfluierend<br></label>				
+				<input type="checkbox" id="nradms_bef_kopf_konf_le" name="nradms_bef_kopf_konf_le" data-group="bef_kopf_konf" data-value="Die Läsionen stellen sich konfluierend dar." class="radiobutonnized"/><label for="nradms_bef_kopf_konf_le">Konfluierend</label></td></tr>
+				<tr id="nradms_bef_kopf_sl"><td></td></tr><tr><td>&nbsp;</td></tr><tr><td></td><td>
+			
+
+			<label for="nradms_bef_kopf_sp_niv">Spinal erfasst bis</label></td><td>
+				<select id="nradms_bef_kopf_sp_niv" name="nradms_bef_kopf_sp_niv">
+					<option value="C1">C1</option>
+					<option value="C2">C2</option>
+					<option value="C3">C3</option>
+					<option value="C4">C4</option>
+					<option value="C5">C5</option>
+					<option value="C6">C6</option>
+					<option value="C7">C7</option>
+					<option value="T1">T1</option>
+					<option value="T2">T2</option>
+					<option value="T3">T3</option>
+					<option value="T4">T4</option>
+					<option value="T5">T5</option>
+					<option value="T6">T6</option>
+					<option value="T7">T7</option>
+					<option value="T8">T8</option>
+					<option value="T9">T9</option>
+					<option value="T10">T10</option>
+					<option value="T11">T11</option>
+					<option value="T12">T12</option>
+					<option value="L1">L1</option>
+					<option value="L2">L2</option></select></td></tr>
+			
+			<tr id="testrid"><td></td><td><label for="nradms_bef_kopf_hoh_sp_ja">Spinale Läsionen nachweisbar</label></td><td>
+				<input type="checkbox" id="nradms_bef_kopf_hoh_sp_ja" name="nradms_bef_kopf_hoh_sp_ja" data-group="bef_kopf_hoh_sp" data-value="Spinale Läsionen sind nachweisbar" class="radiobutonnized"/><label for="nradms_bef_kopf_hoh_sp_ja">Ja</label>				
+				<input type="checkbox" id="nradms_bef_kopf_hoh_sp_nein" name="nradms_bef_kopf_hoh_sp_nein" data-group="bef_kopf_hoh_sp" data-value="Spinale Läsionen sind nicht nachweisbar" class="radiobutonnized"/><label for="nradms_bef_kopf_hoh_sp_nein">Nein</label></td><td>
+					<input type="checkbox" id="nradms_bef_kopf_neu_hoh_sp" name="nradms_bef_kopf_neu_hoh_sp" data-group="bef_kopf_hoh_sp" data-group2="bef_kopf_hoh_spl" data-value="neu" /><label for="nradms_bef_kopf_neu_hoh_sp">neu</label>
+					<input type="checkbox" id="nradms_bef_kopf_km_hoh_sp" name="nradms_bef_kopf_km_hoh_sp" data-group="bef_kopf_hoh_sp" data-group2="bef_kopf_hoh_spl" data-value="KM-affin" /><label for="nradms_bef_kopf_km_hoh_sp">KM-Aufnehmend</label></td></tr><tr><td></td><td>
+
+			<label for="nradms_bef_kopf_spvu_ja">Spinale Läsionen aus VU bekannt</label></td><td>
+				<input type="checkbox" id="nradms_bef_kopf_spvu_ja" name="nradms_bef_kopf_spvu_ja" data-group="bef_kopf_spvu" data-value="Spinale Läsionen sind aus der Voruntersuchung bekannt." class="radiobutonnized"/><label for="nradms_bef_kopf_spvu_ja">Ja</label>				
+				<input type="checkbox" id="nradms_bef_kopf_spvu_nein" name="nradms_bef_kopf_spvu_nein" data-group="bef_kopf_spvu" data-value="Spinale Läsionen sind nicht aus der Voruntersuchung bekannt." class="radiobutonnized"/><label for="nradms_bef_kopf_spvu_nein">Nein</label></td></tr><tr><td></td><td>
+
+			<label for="nradms_bef_kopf_sonst">Sonstiges</label></td><td><input type="text" id="nradms_bef_kopf_sonst" name="nradms_bef_kopf_sonst" data-group="bef_kopf_sonst" placeholder=""/></td></tr></table></div>
+		
+
+		<div class="hide-from-xml-output" id="nradms_bef_hws"><table><tr><td><label><strong>Läsionen HWS</strong></label></td><td id="nradms_bef_hws_okm">
+				<label for="nradms_bef_hws_anz"><u>nativ</u><br></label>
+				<label for="nradms_bef_hws_anz">Gesamtzahl</label>
+				<select id="nradms_bef_hws_anz" name="nradms_bef_hws_anz">
+					<option value="0">0 </option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="11-20">11 - 20</option>
+					<option value="&gt;20">>20</option></select>
+				<fieldset id="nradms_bef_hws_hoh" class="required">
+					<label for="nradms_bef_hws_hoh_hw1"><br></label>
+					<input type="checkbox" id="nradms_bef_hws_hoh_hw1" name="nradms_bef_hws_hoh_hw1" data-group="bef_hws_hoh" data-value="HW1" /><label for="nradms_bef_hws_hoh_hw1">HW1<br></label>
+					<input type="checkbox" id="nradms_bef_hws_hoh_hw2" name="nradms_bef_hws_hoh_hw2" data-group="bef_hws_hoh" data-value="HW2" /><label for="nradms_bef_hws_hoh_hw2">HW2<br></label>
+					<input type="checkbox" id="nradms_bef_hws_hoh_hw3" name="nradms_bef_hws_hoh_hw3" data-group="bef_hws_hoh" data-value="HW3" /><label for="nradms_bef_hws_hoh_hw3">HW3<br></label>
+					<input type="checkbox" id="nradms_bef_hws_hoh_hw4" name="nradms_bef_hws_hoh_hw4" data-group="bef_hws_hoh" data-value="HW4" /><label for="nradms_bef_hws_hoh_hw4">HW4<br></label>
+					<input type="checkbox" id="nradms_bef_hws_hoh_hw5" name="nradms_bef_hws_hoh_hw5" data-group="bef_hws_hoh" data-value="HW5" /><label for="nradms_bef_hws_hoh_hw5">HW5<br></label>
+					<input type="checkbox" id="nradms_bef_hws_hoh_hw6" name="nradms_bef_hws_hoh_hw6" data-group="bef_hws_hoh" data-value="HW6" /><label for="nradms_bef_hws_hoh_hw6">HW6<br></label>
+					<input type="checkbox" id="nradms_bef_hws_hoh_hw7" name="nradms_bef_hws_hoh_hw7" data-group="bef_hws_hoh" data-value="HW7" /><label for="nradms_bef_hws_hoh_hw7">HW7<br><br></label></fieldset></td>
+			<td id="nradms_bef_hws_neu">
+				<label><br></label>
+				<label for="nradms_bef_hws_neu_anz">Neue</label>
+					<select id="nradms_bef_hws_neu_anz" name="nradms_bef_hws_neu_anz">
+					<option value="0">0 </option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="11-20">11 - 20</option>
+					<option value="&gt;20">>20</option></select>
+				<fieldset id="nradms_bef_hws_neu_hoh" class="required">
+					<label for="nradms_bef_hws_neu_hoh_hw1"><br></label>
+					<input type="checkbox" id="nradms_bef_hws_neu_hoh_hw1" name="nradms_bef_hws_neu_hoh_hw1" data-group="bef_hws_neu_hoh" data-value="HW1" /><label for="nradms_bef_hws_neu_hoh_hw1">HW1<br></label>
+					<input type="checkbox" id="nradms_bef_hws_neu_hoh_hw2" name="nradms_bef_hws_neu_hoh_hw2" data-group="bef_hws_neu_hoh" data-value="HW2" /><label for="nradms_bef_hws_neu_hoh_hw2">HW2<br></label>
+					<input type="checkbox" id="nradms_bef_hws_neu_hoh_hw3" name="nradms_bef_hws_neu_hoh_hw3" data-group="bef_hws_neu_hoh" data-value="HW3" /><label for="nradms_bef_hws_neu_hoh_hw3">HW3<br></label>
+					<input type="checkbox" id="nradms_bef_hws_neu_hoh_hw4" name="nradms_bef_hws_neu_hoh_hw4" data-group="bef_hws_neu_hoh" data-value="HW4" /><label for="nradms_bef_hws_neu_hoh_hw4">HW4<br></label>
+					<input type="checkbox" id="nradms_bef_hws_neu_hoh_hw5" name="nradms_bef_hws_neu_hoh_hw5" data-group="bef_hws_neu_hoh" data-value="HW5" /><label for="nradms_bef_hws_neu_hoh_hw5">HW5<br></label>
+					<input type="checkbox" id="nradms_bef_hws_neu_hoh_hw6" name="nradms_bef_hws_neu_hoh_hw6" data-group="bef_hws_neu_hoh" data-value="HW6" /><label for="nradms_bef_hws_neu_hoh_hw6">HW6<br></label>
+					<input type="checkbox" id="nradms_bef_hws_neu_hoh_hw7" name="nradms_bef_hws_neu_hoh_hw7" data-group="bef_hws_neu_hoh" data-value="HW7" /><label for="nradms_bef_hws_neu_hoh_hw7">HW7<br><br></label></fieldset>
+				</td>
+			
+			<td id="nradms_bef_hws_km">
+			<label for="nradms_bef_hws_km_anz"><u>mit KM-Aufnahme</u><br></label>
+			<label for="nradms_bef_hws_km_anz">Gesamtzahl</label>
+				<select id="nradms_bef_hws_km_anz" name="nradms_bef_hws_km_anz">
+					<option value="0">0 </option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="11-20">11 - 20</option>
+					<option value="&gt;20">>20</option></select>
+				<fieldset id="nradms_bef_hws_km_hoh" class="required">
+					<label for="nradms_bef_hws_km_hoh_hw1"><br></label>
+					<input type="checkbox" id="nradms_bef_hws_km_hoh_hw1" name="nradms_bef_hws_km_hoh_hw1" data-group="bef_hws_km_hoh" data-value="HW1" /><label for="nradms_bef_hws_km_hoh_hw1">HW1<br></label>
+					<input type="checkbox" id="nradms_bef_hws_km_hoh_hw2" name="nradms_bef_hws_km_hoh_hw2" data-group="bef_hws_km_hoh" data-value="HW2" /><label for="nradms_bef_hws_km_hoh_hw2">HW2<br></label>
+					<input type="checkbox" id="nradms_bef_hws_km_hoh_hw3" name="nradms_bef_hws_km_hoh_hw3" data-group="bef_hws_km_hoh" data-value="HW3" /><label for="nradms_bef_hws_km_hoh_hw3">HW3<br></label>
+					<input type="checkbox" id="nradms_bef_hws_km_hoh_hw4" name="nradms_bef_hws_km_hoh_hw4" data-group="bef_hws_km_hoh" data-value="HW4" /><label for="nradms_bef_hws_km_hoh_hw4">HW4<br></label>
+					<input type="checkbox" id="nradms_bef_hws_km_hoh_hw5" name="nradms_bef_hws_km_hoh_hw5" data-group="bef_hws_km_hoh" data-value="HW5" /><label for="nradms_bef_hws_km_hoh_hw5">HW5<br></label>
+					<input type="checkbox" id="nradms_bef_hws_km_hoh_hw6" name="nradms_bef_hws_km_hoh_hw6" data-group="bef_hws_km_hoh" data-value="HW6" /><label for="nradms_bef_hws_km_hoh_hw6">HW6<br></label>
+					<input type="checkbox" id="nradms_bef_hws_km_hoh_hw7" name="nradms_bef_hws_km_hoh_hw7" data-group="bef_hws_km_hoh" data-value="HW7" /><label for="nradms_bef_hws_km_hoh_hw7">HW7<br><br></label></fieldset>
+					</td>
+				
+			<td id="nradms_bef_hws_km_neu">
+			<label><br></label>
+				<label for="nradms_bef_hws_km_neu_anz">Neue</label>
+					<select id="nradms_bef_hws_km_neu_anz" name="nradms_bef_hws_km_neu_anz">
+					<option value="0">0 </option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="11-20">11 - 20</option>
+					<option value="&gt;20">>20</option></select>
+				<fieldset id="nradms_bef_hws_km_neu_hoh" class="required">
+					<label for="nradms_bef_hws_km_neu_hoh_hw1"><br></label>
+					<input type="checkbox" id="nradms_bef_hws_km_neu_hoh_hw1" name="nradms_bef_hws_km_neu_hoh_hw1" data-group="bef_hws_km_neu_hoh" data-value="HW1" /><label for="nradms_bef_hws_km_neu_hoh_hw1">HW1<br></label>
+					<input type="checkbox" id="nradms_bef_hws_km_neu_hoh_hw2" name="nradms_bef_hws_km_neu_hoh_hw2" data-group="bef_hws_km_neu_hoh" data-value="HW2" /><label for="nradms_bef_hws_km_neu_hoh_hw2">HW2<br></label>
+					<input type="checkbox" id="nradms_bef_hws_km_neu_hoh_hw3" name="nradms_bef_hws_km_neu_hoh_hw3" data-group="bef_hws_km_neu_hoh" data-value="HW3" /><label for="nradms_bef_hws_km_neu_hoh_hw3">HW3<br></label>
+					<input type="checkbox" id="nradms_bef_hws_km_neu_hoh_hw4" name="nradms_bef_hws_km_neu_hoh_hw4" data-group="bef_hws_km_neu_hoh" data-value="HW4" /><label for="nradms_bef_hws_km_neu_hoh_hw4">HW4<br></label>
+					<input type="checkbox" id="nradms_bef_hws_km_neu_hoh_hw5" name="nradms_bef_hws_km_neu_hoh_hw5" data-group="bef_hws_km_neu_hoh" data-value="HW5" /><label for="nradms_bef_hws_km_neu_hoh_hw5">HW5<br></label>
+					<input type="checkbox" id="nradms_bef_hws_km_neu_hoh_hw6" name="nradms_bef_hws_km_neu_hoh_hw6" data-group="bef_hws_km_neu_hoh" data-value="HW6" /><label for="nradms_bef_hws_km_neu_hoh_hw6">HW6<br></label>
+					<input type="checkbox" id="nradms_bef_hws_km_neu_hoh_hw7" name="nradms_bef_hws_km_neu_hoh_hw7" data-group="bef_hws_km_neu_hoh" data-value="HW7" /><label for="nradms_bef_hws_km_neu_hoh_hw7">HW7<br><br></label></fieldset>
+				</td>	
+				
+				
+				</tr><tr><td> </td></tr><tr id="nradms_bef_hws_konf"><td></td><td>				
+		
+		
+			<label for="nradms_bef_hws_konf_nk">Konfiguration der Läsionen</label></td><td colspan=2>
+				<input type="checkbox" id="nradms_bef_hws_konf_nk" name="nradms_bef_hws_konf_nk" data-group="bef_hws_konf" data-value="Die Läsionen stellen sich nicht konfluierend dar." class="radiobutonnized"/><label for="nradms_bef_hws_konf_nk">Nicht konfluierend<br></label>				
+				<input type="checkbox" id="nradms_bef_hws_konf_le" name="nradms_bef_hws_konf_le" data-group="bef_hws_konf" data-value="Die Läsionen stellen sich longitudinal extensiv dar." class="radiobutonnized"/><label for="nradms_bef_hws_konf_le">Longitudinal extensiv</label></td></tr><tr><td></td><td>
+			
+			<label for="nradms_bef_hws_sonst">Sonstiges</label></td><td><input type="text" id="nradms_bef_hws_sonst" name="nradms_bef_hws_sonst" data-group="bef_hws_sonst" placeholder=""/></td></tr></table></div>
+		
+		<div class="hide-from-xml-output" id="nradms_bef_blws"><table><tr><td><label><strong>Läsionen BWS/LWS</strong></label></td>
+			
+			<td id="nradms_bef_blws_okm">
+			<label for="nradms_bef_blws_anz"><u>nativ</u><br></label>	
+				<label for="nradms_bef_blws_anz">Gesamtzahl</label>
+					<select id="nradms_bef_blws_anz" name="nradms_bef_blws_anz">
+					<option value="0">0 </option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="11-20">11 - 20</option>
+					<option value="&gt;20">>20</option></select>
+				<fieldset id="nradms_bef_blws_hoh" class="required">
+					<label for="nradms_bef_blws_hoh_bw1"></label><br>
+					<input type="checkbox" id="nradms_bef_blws_hoh_bw1" name="nradms_bef_blws_hoh_bw1" data-group="bef_blws_hoh" data-value="BW1" /><label for="nradms_bef_blws_hoh_bw1">BW1<br></label>
+					<input type="checkbox" id="nradms_bef_blws_hoh_bw2" name="nradms_bef_blws_hoh_bw2" data-group="bef_blws_hoh" data-value="BW2" /><label for="nradms_bef_blws_hoh_bw2">BW2<br></label>
+					<input type="checkbox" id="nradms_bef_blws_hoh_bw3" name="nradms_bef_blws_hoh_bw3" data-group="bef_blws_hoh" data-value="BW3" /><label for="nradms_bef_blws_hoh_bw3">BW3<br></label>
+					<input type="checkbox" id="nradms_bef_blws_hoh_bw4" name="nradms_bef_blws_hoh_bw4" data-group="bef_blws_hoh" data-value="BW4" /><label for="nradms_bef_blws_hoh_bw4">BW4<br></label>
+					<input type="checkbox" id="nradms_bef_blws_hoh_bw5" name="nradms_bef_blws_hoh_bw5" data-group="bef_blws_hoh" data-value="BW5" /><label for="nradms_bef_blws_hoh_bw5">BW5<br></label>
+					<input type="checkbox" id="nradms_bef_blws_hoh_bw6" name="nradms_bef_blws_hoh_bw6" data-group="bef_blws_hoh" data-value="BW6" /><label for="nradms_bef_blws_hoh_bw6">BW6<br></label>
+					<input type="checkbox" id="nradms_bef_blws_hoh_bw7" name="nradms_bef_blws_hoh_bw7" data-group="bef_blws_hoh" data-value="BW7" /><label for="nradms_bef_blws_hoh_bw7">BW7<br></label>
+					<input type="checkbox" id="nradms_bef_blws_hoh_bw8" name="nradms_bef_blws_hoh_bw8" data-group="bef_blws_hoh" data-value="BW8" /><label for="nradms_bef_blws_hoh_bw8">BW8<br></label>
+					<input type="checkbox" id="nradms_bef_blws_hoh_bw9" name="nradms_bef_blws_hoh_bw9" data-group="bef_blws_hoh" data-value="BW9" /><label for="nradms_bef_blws_hoh_bw9">BW9<br></label>
+					<input type="checkbox" id="nradms_bef_blws_hoh_bw10" name="nradms_bef_blws_hoh_bw10" data-group="bef_blws_hoh" data-value="BW10" /><label for="nradms_bef_blws_hoh_bw10">BW10<br></label>
+					<input type="checkbox" id="nradms_bef_blws_hoh_bw11" name="nradms_bef_blws_hoh_bw11" data-group="bef_blws_hoh" data-value="BW11" /><label for="nradms_bef_blws_hoh_bw11">BW11<br></label>
+					<input type="checkbox" id="nradms_bef_blws_hoh_bw12" name="nradms_bef_blws_hoh_bw12" data-group="bef_blws_hoh" data-value="BW12" /><label for="nradms_bef_blws_hoh_bw12">BW12<br></label>
+					<input type="checkbox" id="nradms_bef_blws_hoh_lw1" name="nradms_bef_blws_hoh_lw1" data-group="bef_blws_hoh" data-value="LW1" /><label for="nradms_bef_blws_hoh_lw1">LW1<br></label>
+					<input type="checkbox" id="nradms_bef_blws_hoh_lw2" name="nradms_bef_blws_hoh_lw2" data-group="bef_blws_hoh" data-value="LW2" /><label for="nradms_bef_blws_hoh_lw2">LW2<br><br></label></fieldset></td>
+			
+			<td id="nradms_bef_blws_neu">
+				<label for="nradms_bef_blws_neu_anz"><br></label>
+				<label for="nradms_bef_blws_neu_anz">Neue</label>
+					<select id="nradms_bef_blws_neu_anz" name="nradms_bef_blws_neu_anz">
+						<option value="0">0 </option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+						<option value="11-20">11 - 20</option>
+						<option value="&gt;20">>20</option></select>
+					<fieldset id="nradms_bef_blws_neu_hoh" class="required">
+						<label for="nradms_bef_blws_neu_hoh_bw1"><br></label>
+						<input type="checkbox" id="nradms_bef_blws_neu_hoh_bw1" name="nradms_bef_blws_neu_hoh_bw1" data-group="bef_blws_neu_hoh" data-value="BW1" /><label for="nradms_bef_blws_neu_hoh_bw1">BW1<br></label>
+						<input type="checkbox" id="nradms_bef_blws_neu_hoh_bw2" name="nradms_bef_blws_neu_hoh_bw2" data-group="bef_blws_neu_hoh" data-value="BW2" /><label for="nradms_bef_blws_neu_hoh_bw2">BW2<br></label>
+						<input type="checkbox" id="nradms_bef_blws_neu_hoh_bw3" name="nradms_bef_blws_neu_hoh_bw3" data-group="bef_blws_neu_hoh" data-value="BW3" /><label for="nradms_bef_blws_neu_hoh_bw3">BW3<br></label>
+						<input type="checkbox" id="nradms_bef_blws_neu_hoh_bw4" name="nradms_bef_blws_neu_hoh_bw4" data-group="bef_blws_neu_hoh" data-value="BW4" /><label for="nradms_bef_blws_neu_hoh_bw4">BW4<br></label>
+						<input type="checkbox" id="nradms_bef_blws_neu_hoh_bw5" name="nradms_bef_blws_neu_hoh_bw5" data-group="bef_blws_neu_hoh" data-value="BW5" /><label for="nradms_bef_blws_neu_hoh_bw5">BW5<br></label>
+						<input type="checkbox" id="nradms_bef_blws_neu_hoh_bw6" name="nradms_bef_blws_neu_hoh_bw6" data-group="bef_blws_neu_hoh" data-value="BW6" /><label for="nradms_bef_blws_neu_hoh_bw6">BW6<br></label>
+						<input type="checkbox" id="nradms_bef_blws_neu_hoh_bw7" name="nradms_bef_blws_neu_hoh_bw7" data-group="bef_blws_neu_hoh" data-value="BW7" /><label for="nradms_bef_blws_neu_hoh_bw7">BW7<br></label>
+						<input type="checkbox" id="nradms_bef_blws_neu_hoh_bw8" name="nradms_bef_blws_neu_hoh_bw8" data-group="bef_blws_neu_hoh" data-value="BW8" /><label for="nradms_bef_blws_neu_hoh_bw8">BW8<br></label>
+						<input type="checkbox" id="nradms_bef_blws_neu_hoh_bw9" name="nradms_bef_blws_neu_hoh_bw9" data-group="bef_blws_neu_hoh" data-value="BW9" /><label for="nradms_bef_blws_neu_hoh_bw9">BW9<br></label>
+						<input type="checkbox" id="nradms_bef_blws_neu_hoh_bw10" name="nradms_bef_blws_neu_hoh_bw10" data-group="bef_blws_neu_hoh" data-value="BW10" /><label for="nradms_bef_blws_neu_hoh_bw10">BW10<br></label>
+						<input type="checkbox" id="nradms_bef_blws_neu_hoh_bw11" name="nradms_bef_blws_neu_hoh_bw11" data-group="bef_blws_neu_hoh" data-value="BW11" /><label for="nradms_bef_blws_neu_hoh_bw11">BW11<br></label>
+						<input type="checkbox" id="nradms_bef_blws_neu_hoh_bw12" name="nradms_bef_blws_neu_hoh_bw12" data-group="bef_blws_neu_hoh" data-value="BW12" /><label for="nradms_bef_blws_neu_hoh_bw12">BW12<br></label>
+						<input type="checkbox" id="nradms_bef_blws_neu_hoh_lw1" name="nradms_bef_blws_neu_hoh_lw1" data-group="bef_blws_neu_hoh" data-value="LW1" /><label for="nradms_bef_blws_neu_hoh_lw1">LW1<br></label>
+						<input type="checkbox" id="nradms_bef_blws_neu_hoh_lw2" name="nradms_bef_blws_neu_hoh_lw2" data-group="bef_blws_neu_hoh" data-value="LW2" /><label for="nradms_bef_blws_neu_hoh_lw2">LW2<br><br></label></fieldset>
+				</td>	
+					
+					
+			<td id="nradms_bef_blws_km">
+			<label for="nradms_bef_blws_km_anz"><u>mit KM-Aufnahme</u><br></label>
+					<label for="nradms_bef_blws_km_anz">Gesamtzahl</label>
+						<select id="nradms_bef_blws_km_anz" name="nradms_bef_blws_km_anz">
+							<option value="0">0 </option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+							<option value="11-20">11 - 20</option>
+							<option value="&gt;20">>20</option></select>
+						<fieldset id="nradms_bef_blws_km_hoh" class="required">
+							<label for="nradms_bef_blws_km_hoh_bw1"><br></label>
+							<input type="checkbox" id="nradms_bef_blws_km_hoh_bw1" name="nradms_bef_blws_km_hoh_bw1" data-group="bef_blws_km_hoh" data-value="BW1" /><label for="nradms_bef_blws_km_hoh_bw1">BW1<br></label>
+							<input type="checkbox" id="nradms_bef_blws_km_hoh_bw2" name="nradms_bef_blws_km_hoh_bw2" data-group="bef_blws_km_hoh" data-value="BW2" /><label for="nradms_bef_blws_km_hoh_bw2">BW2<br></label>
+							<input type="checkbox" id="nradms_bef_blws_km_hoh_bw3" name="nradms_bef_blws_km_hoh_bw3" data-group="bef_blws_km_hoh" data-value="BW3" /><label for="nradms_bef_blws_km_hoh_bw3">BW3<br></label>
+							<input type="checkbox" id="nradms_bef_blws_km_hoh_bw4" name="nradms_bef_blws_km_hoh_bw4" data-group="bef_blws_km_hoh" data-value="BW4" /><label for="nradms_bef_blws_km_hoh_bw4">BW4<br></label>
+							<input type="checkbox" id="nradms_bef_blws_km_hoh_bw5" name="nradms_bef_blws_km_hoh_bw5" data-group="bef_blws_km_hoh" data-value="BW5" /><label for="nradms_bef_blws_km_hoh_bw5">BW5<br></label>
+							<input type="checkbox" id="nradms_bef_blws_km_hoh_bw6" name="nradms_bef_blws_km_hoh_bw6" data-group="bef_blws_km_hoh" data-value="BW6" /><label for="nradms_bef_blws_km_hoh_bw6">BW6<br></label>
+							<input type="checkbox" id="nradms_bef_blws_km_hoh_bw7" name="nradms_bef_blws_km_hoh_bw7" data-group="bef_blws_km_hoh" data-value="BW7" /><label for="nradms_bef_blws_km_hoh_bw7">BW7<br></label>
+							<input type="checkbox" id="nradms_bef_blws_km_hoh_bw8" name="nradms_bef_blws_km_hoh_bw8" data-group="bef_blws_km_hoh" data-value="BW8" /><label for="nradms_bef_blws_km_hoh_bw8">BW8<br></label>
+							<input type="checkbox" id="nradms_bef_blws_km_hoh_bw9" name="nradms_bef_blws_km_hoh_bw9" data-group="bef_blws_km_hoh" data-value="BW9" /><label for="nradms_bef_blws_km_hoh_bw9">BW9<br></label>
+							<input type="checkbox" id="nradms_bef_blws_km_hoh_bw10" name="nradms_bef_blws_km_hoh_bw10" data-group="bef_blws_km_hoh" data-value="BW10" /><label for="nradms_bef_blws_km_hoh_bw10">BW10<br></label>
+							<input type="checkbox" id="nradms_bef_blws_km_hoh_bw11" name="nradms_bef_blws_km_hoh_bw11" data-group="bef_blws_km_hoh" data-value="BW11" /><label for="nradms_bef_blws_km_hoh_bw11">BW11<br></label>
+							<input type="checkbox" id="nradms_bef_blws_km_hoh_bw12" name="nradms_bef_blws_km_hoh_bw12" data-group="bef_blws_km_hoh" data-value="BW12" /><label for="nradms_bef_blws_km_hoh_bw12">BW12<br></label>
+							<input type="checkbox" id="nradms_bef_blws_km_hoh_lw1" name="nradms_bef_blws_km_hoh_lw1" data-group="bef_blws_km_hoh" data-value="LW1" /><label for="nradms_bef_blws_km_hoh_lw1">LW1<br></label>
+							<input type="checkbox" id="nradms_bef_blws_km_hoh_lw2" name="nradms_bef_blws_km_hoh_lw2" data-group="bef_blws_km_hoh" data-value="LW2" /><label for="nradms_bef_blws_km_hoh_lw2">LW2<br><br></label></fieldset></td>
+				
+			<td id="nradms_bef_blws_km_neu">
+				<label for="nradms_bef_blws_km_neu_anz"><br></label>
+				<label for="nradms_bef_blws_km_neu_anz">Neue</label>
+					<select id="nradms_bef_blws_km_neu_anz" name="nradms_bef_blws_km_neu_anz">
+						<option value="0">0 </option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+						<option value="11-20">11 - 20</option>
+						<option value="&gt;20">>20</option></select>
+					<fieldset id="nradms_bef_blws_km_neu_hoh" class="required">
+						<label for="nradms_bef_blws_km_neu_hoh_bw1"><br></label>
+						<input type="checkbox" id="nradms_bef_blws_km_neu_hoh_bw1" name="nradms_bef_blws_km_neu_hoh_bw1" data-group="bef_blws_km_neu_hoh" data-value="BW1" /><label for="nradms_bef_blws_km_neu_hoh_bw1">BW1<br></label>
+						<input type="checkbox" id="nradms_bef_blws_km_neu_hoh_bw2" name="nradms_bef_blws_km_neu_hoh_bw2" data-group="bef_blws_km_neu_hoh" data-value="BW2" /><label for="nradms_bef_blws_km_neu_hoh_bw2">BW2<br></label>
+						<input type="checkbox" id="nradms_bef_blws_km_neu_hoh_bw3" name="nradms_bef_blws_km_neu_hoh_bw3" data-group="bef_blws_km_neu_hoh" data-value="BW3" /><label for="nradms_bef_blws_km_neu_hoh_bw3">BW3<br></label>
+						<input type="checkbox" id="nradms_bef_blws_km_neu_hoh_bw4" name="nradms_bef_blws_km_neu_hoh_bw4" data-group="bef_blws_km_neu_hoh" data-value="BW4" /><label for="nradms_bef_blws_km_neu_hoh_bw4">BW4<br></label>
+						<input type="checkbox" id="nradms_bef_blws_km_neu_hoh_bw5" name="nradms_bef_blws_km_neu_hoh_bw5" data-group="bef_blws_km_neu_hoh" data-value="BW5" /><label for="nradms_bef_blws_km_neu_hoh_bw5">BW5<br></label>
+						<input type="checkbox" id="nradms_bef_blws_km_neu_hoh_bw6" name="nradms_bef_blws_km_neu_hoh_bw6" data-group="bef_blws_km_neu_hoh" data-value="BW6" /><label for="nradms_bef_blws_km_neu_hoh_bw6">BW6<br></label>
+						<input type="checkbox" id="nradms_bef_blws_km_neu_hoh_bw7" name="nradms_bef_blws_km_neu_hoh_bw7" data-group="bef_blws_km_neu_hoh" data-value="BW7" /><label for="nradms_bef_blws_km_neu_hoh_bw7">BW7<br></label>
+						<input type="checkbox" id="nradms_bef_blws_km_neu_hoh_bw8" name="nradms_bef_blws_km_neu_hoh_bw8" data-group="bef_blws_km_neu_hoh" data-value="BW8" /><label for="nradms_bef_blws_km_neu_hoh_bw8">BW8<br></label>
+						<input type="checkbox" id="nradms_bef_blws_km_neu_hoh_bw9" name="nradms_bef_blws_km_neu_hoh_bw9" data-group="bef_blws_km_neu_hoh" data-value="BW9" /><label for="nradms_bef_blws_km_neu_hoh_bw9">BW9<br></label>
+						<input type="checkbox" id="nradms_bef_blws_km_neu_hoh_bw10" name="nradms_bef_blws_km_neu_hoh_bw10" data-group="bef_blws_km_neu_hoh" data-value="BW10" /><label for="nradms_bef_blws_km_neu_hoh_bw10">BW10<br></label>
+						<input type="checkbox" id="nradms_bef_blws_km_neu_hoh_bw11" name="nradms_bef_blws_km_neu_hoh_bw11" data-group="bef_blws_km_neu_hoh" data-value="BW11" /><label for="nradms_bef_blws_km_neu_hoh_bw11">BW11<br></label>
+						<input type="checkbox" id="nradms_bef_blws_km_neu_hoh_bw12" name="nradms_bef_blws_km_neu_hoh_bw12" data-group="bef_blws_km_neu_hoh" data-value="BW12" /><label for="nradms_bef_blws_km_neu_hoh_bw12">BW12<br></label>
+						<input type="checkbox" id="nradms_bef_blws_km_neu_hoh_lw1" name="nradms_bef_blws_km_neu_hoh_lw1" data-group="bef_blws_km_neu_hoh" data-value="LW1" /><label for="nradms_bef_blws_km_neu_hoh_lw1">LW1<br></label>
+						<input type="checkbox" id="nradms_bef_blws_km_neu_hoh_lw2" name="nradms_bef_blws_km_neu_hoh_lw2" data-group="bef_blws_km_neu_hoh" data-value="LW2" /><label for="nradms_bef_blws_km_neu_hoh_lw2">LW2<br><br></label></fieldset>
+				</td></tr><tr id="nradms_bef_blws_konf"><td></td><td>				
+			<label for="nradms_bef_blws_konf_nk">Konfiguration der Läsionen</label></td><td colspan=2>
+				<input type="checkbox" id="nradms_bef_blws_konf_nk" name="nradms_bef_blws_konf_nk" data-group="bef_blws_konf_nk" data-value="Die Läsionen stellen sich nicht konfluierend dar." class="radiobutonnized"/><label for="nradms_bef_blws_konf_nk">Nicht konfluierend<br></label>			
+				<input type="checkbox" id="nradms_bef_blws_konf_le" name="nradms_bef_blws_konf_le" data-group="bef_blws_konf_le" data-value="Die Läsionen stellen sich longitudinal extensiv dar." class="radiobutonnized"/><label for="nradms_bef_blws_konf_le">Longitudinal extensiv</label></td></tr><tr><td></td><td>
+			<label for="nradms_bef_blws_sonst">Sonstiges</label></td><td><input type="text" id="nradms_bef_blws_sonst" name="nradms_bef_blws_sonst" data-group="bef_blws_sonst" placeholder=""/></td></tr></table></div>
+		
+		<div id="nradms_divlesions" class="fliesstext"><textarea id='nradms_lesions' name='nradms_lesions' style='display:block' rows=3></textarea></div>
+		
+		
+		
+		
+		<div class="hide-from-xml-output" id="nradms_bef_nbk" ><table><tr><td><strong>Nebenbefunde Kopf</strong></td></tr>
+			
+			<tbody><tr><td><label for="nradms_bef_nbk_nor_ja">N. opticus rechts auffällig</label></td><td>
+				<input type="checkbox" id="nradms_bef_nbk_nor_ja" name="nradms_bef_nbk_nor_ja" data-group="bef_nbk_nor" data-group2="bef_nbk_nor" data-value="N. opticus rechts: " class="radiobutonnized" /><label for="nradms_bef_nbk_nor_ja">Ja</label>
+				<input type="checkbox" id="nradms_bef_nbk_nor_nein" name="nradms_bef_nbk_nor_nein" data-group="bef_nbk_nor" data-group2="bef_nbk_nor" data-value="N. opticus rechts: unauffällig." class="radiobutonnized cleartr" /><label for="nradms_bef_nbk_nor_nein">Nein</label>
+				</td><td><fieldset class="required" id="nradms_bef_nbk_nor"><table><tr><td>
+				<label for="nradms_bef_nbk_nor_t2h_ja">T2 hyperintens </label></td><td><input type="checkbox" id="nradms_bef_nbk_nor_t2h_ja" name="nradms_bef_nbk_nor_t2h_ja" data-group="bef_nbk_nor" data-value="T2 hyperintens." class="radiobutonnized" /><label for="nradms_bef_nbk_nor_t2h_ja">Ja</label>
+				<input type="checkbox" id="nradms_bef_nbk_nor_t2h_nein" name="nradms_bef_nbk_nor_t2h_nein" data-group="bef_nbk_nor" data-value="Nicht T2 hyperintens." class="radiobutonnized" /><label for="nradms_bef_nbk_nor_t2h_nein">Nein</label></td></tr><tr><td>
+
+				<label for="nradms_bef_nbk_nor_scw_ja">Schwellung </label></td><td><input type="checkbox" id="nradms_bef_nbk_nor_scw_ja" name="nradms_bef_nbk_nor_scw_ja" data-group="bef_nbk_nor" data-value="Schwellung." class="radiobutonnized" /><label for="nradms_bef_nbk_nor_scw_ja">Ja</label>
+				<input type="checkbox" id="nradms_bef_nbk_nor_scw_nein" name="nradms_bef_nbk_nor_scw_nein" data-group="bef_nbk_nor" data-value="Keine Schwellung." class="radiobutonnized" /><label for="nradms_bef_nbk_nor_scw_nein">Nein</label></td></tr><tr><td>
+
+
+				<label for="nradms_bef_nbk_nor_km_ja">KM-Aufnahme </label></td><td><input type="checkbox" id="nradms_bef_nbk_nor_km_ja" name="nradms_bef_nbk_nor_km_ja" data-group="bef_nbk_nor" data-value="Kontrastmittelaufnahme." class="radiobutonnized" /><label for="nradms_bef_nbk_nor_km_ja">Ja</label>
+				<input type="checkbox" id="nradms_bef_nbk_nor_km_nein" name="nradms_bef_nbk_nor_km_nein" data-group="bef_nbk_nor" data-value="Keine Kontrastmittelaufnahme." class="radiobutonnized" /><label for="nradms_bef_nbk_nor_km_nein">Nein</label></td></tr><tr><td colspan="2">
+
+				<label for="nradms_bef_nbk_nor_sonst">Sonstiges</label><input type="text" id="nradms_bef_nbk_nor_sonst" name="nradms_bef_nbk_nor_sonst" data-group="" placeholder=""/></td></tr></table></fieldset></td></tr></tbody>
+				
+				
+			<tbody><tr><td><label for="nradms_bef_nbk_nol_ja">N. opticus links auffällig</label></td><td>
+				<input type="checkbox" id="nradms_bef_nbk_nol_ja" name="nradms_bef_nbk_nol_ja" data-group="bef_nbk_nol" data-group2="bef_nbk_nol" data-value="N. opticus links: " class="radiobutonnized" /><label for="nradms_bef_nbk_nol_ja">Ja</label>
+				<input type="checkbox" id="nradms_bef_nbk_nol_nein" name="nradms_bef_nbk_nol_nein" data-group="bef_nbk_nol" data-group2="bef_nbk_nol" data-value="N. opticus links: unauffällig." class="radiobutonnized cleartr" /><label for="nradms_bef_nbk_nol_nein">Nein</label>
+				</td><td><fieldset class="required" id="nradms_bef_nbk_nol"><table><tr><td>
+				<label for="nradms_bef_nbk_nol_t2h_ja">T2 hyperintens </label></td><td><input type="checkbox" id="nradms_bef_nbk_nol_t2h_ja" name="nradms_bef_nbk_nol_t2h_ja" data-group="bef_nbk_nol" data-value="T2 hyperintens." class="radiobutonnized" /><label for="nradms_bef_nbk_nol_t2h_ja">Ja</label>
+				<input type="checkbox" id="nradms_bef_nbk_nol_t2h_nein" name="nradms_bef_nbk_nol_t2h_nein" data-group="bef_nbk_nol" data-value="Nicht T2 hyperintens." class="radiobutonnized" /><label for="nradms_bef_nbk_nol_t2h_nein">Nein</label></td></tr><tr><td>
+
+				<label for="nradms_bef_nbk_nol_scw_ja">Schwellung </label></td><td><input type="checkbox" id="nradms_bef_nbk_nol_scw_ja" name="nradms_bef_nbk_nol_scw_ja" data-group="bef_nbk_nol" data-value="Schwellung." class="radiobutonnized" /><label for="nradms_bef_nbk_nol_scw_ja">Ja</label>
+				<input type="checkbox" id="nradms_bef_nbk_nol_scw_nein" name="nradms_bef_nbk_nol_scw_nein" data-group="bef_nbk_nol" data-value="Keine Schwellung." class="radiobutonnized" /><label for="nradms_bef_nbk_nol_scw_nein">Nein</label></td></tr><tr><td>
+
+
+				<label for="nradms_bef_nbk_nol_km_ja">KM-Aufnahme </label></td><td><input type="checkbox" id="nradms_bef_nbk_nol_km_ja" name="nradms_bef_nbk_nol_km_ja" data-group="bef_nbk_nol" data-value="Kontrastmittelaufnahme." class="radiobutonnized" /><label for="nradms_bef_nbk_nol_km_ja">Ja</label>
+				<input type="checkbox" id="nradms_bef_nbk_nol_km_nein" name="nradms_bef_nbk_nol_km_nein" data-group="bef_nbk_nol" data-value="Keine Kontrastmittelaufnahme." class="radiobutonnized" /><label for="nradms_bef_nbk_nol_km_nein">Nein</label></td></tr><tr><td colspan="2">
+
+				<label for="nradms_bef_nbk_nol_sonst">Sonstiges</label><input type="text" id="nradms_bef_nbk_nol_sonst" name="nradms_bef_nbk_nol_sonst" data-group="" placeholder=""/></td></tr></table></fieldset></td></tr></tbody><tr><td>&nbsp;</td></tr><tr><td>
+			<label for="nradms_bef_nbk_atr_ja">Hirnatrophie visuell vorhanden</label></td><td colspan='2'>
+				<input type="checkbox" id="nradms_bef_nbk_atr_ja" name="nradms_bef_nbk_atr_ja" data-group="bef_nbk_atr" data-value="Hirnatrophie visuell: Zeichen einer Hirnatrophie." class="radiobutonnized" /><label for="nradms_bef_nbk_atr_ja">Ja</label>
+				<input type="checkbox" id="nradms_bef_nbk_atr_nein" name="nradms_bef_nbk_atr_nein" data-group="bef_nbk_atr" data-value="Hirnatrophie visuell: keine Zeichen einer Hirnatrophie." class="radiobutonnized" /><label for="nradms_bef_nbk_atr_nein">Nein</label></td></tr><tr><td>
+			<label for="nradms_bef_nbk_liq_ja">Liquorsystem pathologisch verändert</label></td><td colspan='2'>
+				<input type="checkbox" id="nradms_bef_nbk_liq_ja" name="nradms_bef_nbk_liq_ja" data-group="bef_nbk_liq" data-value="Liquorsystem: " class="radiobutonnized" /><label for="nradms_bef_nbk_liq_ja">Ja</label>
+				<input type="checkbox" id="nradms_bef_nbk_liq_nein" name="nradms_bef_nbk_liq_nein" data-group="bef_nbk_liq" data-value="Liquorsystem: alterskorreliert normal weites, mittelständiges und symmetrisches Liquorsystem ohne Hinweis auf Liquorzirkulationsstörung." class="radiobutonnized" /><label for="nradms_bef_nbk_liq_nein">Nein</label>
+				<input type="text" id="nradms_bef_nbk_liq_sonst" name="nradms_bef_nbk_liq_sonst" data-group="" placeholder="" style="width:400px"/></td></tr><tr><td>
+			<label for="nradms_bef_nbk_mrd_ja">Mark-Rinden-Differenzierung (partiell) aufgehoben</label></td><td colspan='2'>
+				<input type="checkbox" id="nradms_bef_nbk_mrd_ja" name="nradms_bef_nbk_mrd_ja" data-group="bef_nbk_mrd" data-value="" class="radiobutonnized" /><label for="nradms_bef_nbk_mrd_ja">Ja</label>
+				<input type="checkbox" id="nradms_bef_nbk_mrd_nein" name="nradms_bef_nbk_mrd_nein" data-group="bef_nbk_mrd" data-value="Mark-Rinden-Differenzierung: gute kortikomedulläre Differenzierung. " class="radiobutonnized" /><label for="nradms_bef_nbk_mrd_nein">Nein</label>
+				<input type="text" id="nradms_bef_nbk_mrd_sonst" name="nradms_bef_nbk_mrd_sonst" data-group="" placeholder="" style="width:400px"/></td></tr>
+			<tr><td>
+			<label for="nradms_bef_nbk_pml_ja">PML-typische Veränderungen vorhanden</label></td><td colspan='2'>
+				<input type="checkbox" id="nradms_bef_nbk_pml_ja" name="nradms_bef_nbk_pml_ja" data-group="bef_nbk_pml" data-value="" class="radiobutonnized" /><label for="nradms_bef_nbk_pml_ja">Ja</label>
+				<input type="checkbox" id="nradms_bef_nbk_pml_nein" name="nradms_bef_nbk_pml_nein" data-group="bef_nbk_pml" data-value="PML-typische Veränderungen: nein." class="radiobutonnized" /><label for="nradms_bef_nbk_pml_nein">Nein</label>
+				<input type="text" id="nradms_bef_nbk_pml_sonst" name="nradms_bef_nbk_pml_sonst" data-group="" placeholder="" style="width:400px"/></td></tr><tr><td>&nbsp;</td></tr><tr><td>
+			<label for="nradms_bef_nbk_orb_ja">Orbita auffällig</label></td><td colspan='2'>
+				<input type="checkbox" id="nradms_bef_nbk_orb_ja" name="nradms_bef_nbk_orb_ja" data-group="bef_nbk_orb" data-value="" class="radiobutonnized" /><label for="nradms_bef_nbk_orb_ja">Ja</label>
+				<input type="checkbox" id="nradms_bef_nbk_orb_nein" name="nradms_bef_nbk_orb_nein" data-group="bef_nbk_orb" data-value="Orbita: unauffällig." class="radiobutonnized" /><label for="nradms_bef_nbk_orb_nein">Nein</label>
+				<input type="text" id="nradms_bef_nbk_orb_sonst" name="nradms_bef_nbk_orb_sonst" data-group="" placeholder="" style="width:400px"/></td></tr><tr><td>
+			<label for="nradms_bef_nbk_nnh_ja">NNH auffällig</label></td><td colspan='2'>
+				<input type="checkbox" id="nradms_bef_nbk_nnh_ja" name="nradms_bef_nbk_nnh_ja" data-group="bef_nbk_nnh" data-value="" class="radiobutonnized" /><label for="nradms_bef_nbk_nnh_ja">Ja</label>
+				<input type="checkbox" id="nradms_bef_nbk_nnh_nein" name="nradms_bef_nbk_nnh_nein" data-group="bef_nbk_nnh" data-value="Nasennebenhöhlen: unauffällig." class="radiobutonnized" /><label for="nradms_bef_nbk_nnh_nein">Nein</label>
+				<input type="text" id="nradms_bef_nbk_nnh_sonst" name="nradms_bef_nbk_nnh_sonst" data-group="" placeholder="" style="width:400px"/></td></tr><tr><td>
+			<label for="nradms_bef_nbk_sm_ja">Sella- und Mastoidregion auffällig</label></td><td colspan='2'>
+				<input type="checkbox" id="nradms_bef_nbk_sm_ja" name="nradms_bef_nbk_sm_ja" data-group="bef_nbk_sm" data-value="" class="radiobutonnized" /><label for="nradms_bef_nbk_sm_ja">Ja</label>
+				<input type="checkbox" id="nradms_bef_nbk_sm_nein" name="nradms_bef_nbk_sm_nein" data-group="bef_nbk_sm" data-value="Sella- und Mastoidregion: unauffällig." class="radiobutonnized" /><label for="nradms_bef_nbk_sm_nein">Nein</label>
+				<input type="text" id="nradms_bef_nbk_sm_sonst" name="nradms_bef_nbk_sm_sonst" data-group="" placeholder="" style="width:400px"/></td></tr><tr><td>
+			<label for="nradms_bef_nbk_sonst">Sonstiges</label></td><td colspan='2'>
+				<input type="text" id="nradms_bef_nbk_sonst" name="nradms_bef_nbk_sonst" data-group="bef_nbk_sonst" /></td></tr></table></div>
+		
+		
+		<div class="hide-from-xml-output" id="nradms_bef_nbws" ><table><tr><td><strong>Nebenbefunde WS</strong></td></tr><tr><td>
+			<label for="nradms_bef_nbws_t2h_ja">Diffuse T2-Hyperintensität des gesamten Myelons</label></td><td>
+				<input type="checkbox" id="nradms_bef_nbws_t2h_ja" name="nradms_bef_nbws_t2h_ja" data-group="bef_nbws_t2h" data-value="Es zeigt sich eine diffuse T2-Hyperintensität des gesamten Myelons." class="radiobutonnized" /><label for="nradms_bef_nbws_t2h_ja">Ja</label>
+				<input type="checkbox" id="nradms_bef_nbws_t2h_nein" name="nradms_bef_nbws_t2h_nein" data-group="bef_nbws_t2h" data-value="Es zeigt sich keine diffuse T2-Hyperintensität des gesamten Myelons." class="radiobutonnized" /><label for="nradms_bef_nbws_t2h_nein">Nein</label></td></tr><tr><td>
+			<label for="nradms_bef_nbws_am_ja">Atrophie des Myelons</label></td><td>
+				<input type="checkbox" id="nradms_bef_nbws_am_ja" name="nradms_bef_nbws_am_ja" data-group="bef_nbws_am" data-value="Das Myelon erscheint atroph." class="radiobutonnized"/><label for="nradms_bef_nbws_am_ja">Ja</label>
+				<input type="checkbox" id="nradms_bef_nbws_am_nein" name="nradms_bef_nbws_am_nein" data-group="bef_nbws_am" data-value="Das Myelon erscheint nicht atroph." class="radiobutonnized" /><label for="nradms_bef_nbws_am_nein">Nein</label></td></tr><tr><td>
+			<label for="nradms_bef_nbws_dae_ja">Dorsales Alignement gestört</label></td><td>
+				<input type="checkbox" id="nradms_bef_nbws_dae_ja" name="nradms_bef_nbws_dae_ja" data-group="bef_nbws_dae" data-value="" class="radiobutonnized" /><label for="nradms_bef_nbws_dae_ja">Ja</label>
+				<input type="checkbox" id="nradms_bef_nbws_dae_nein" name="nradms_bef_nbws_dae_nein" data-group="bef_nbws_dae" data-value="Dorsales Alignement erhalten." class="radiobutonnized" /><label for="nradms_bef_nbws_dae_nein">Nein</label>
+				<input type="text" id="nradms_bef_nbws_dae_sonst" name="nradms_bef_nbws_dae_sonst" data-group="" style="width:400px"/></td></tr><tr><td>
+			<label for="nradms_bef_nbws_rc_ja">Conusstand auffällig</label></td><td>
+				<input type="checkbox" id="nradms_bef_nbws_rc_ja" name="nradms_bef_nbws_rc_ja" data-group="bef_nbws_rc" data-value="" class="radiobutonnized"/><label for="nradms_bef_nbws_rc_ja">Ja</label>
+				<input type="checkbox" id="nradms_bef_nbws_rc_nein" name="nradms_bef_nbws_rc_nein" data-group="bef_nbws_rc" data-value="Regelrechter Conusstand." class="radiobutonnized" /><label for="nradms_bef_nbws_rc_nein">Nein</label>
+				<input type="text" id="nradms_bef_nbws_rc_sonst" name="nradms_bef_nbws_rc_sonst" data-group="bef_nbws_rc_text" style="width:400px"/></td></tr><tr><td>
+			<label for="nradms_bef_nbws_bsp_pts">Bandscheibenpathologie</label></td><td>
+				<input type="checkbox" id="nradms_bef_nbws_bsp_pts" name="nradms_bef_nbws_bsp_pts" data-group="bef_nbws_bsp" data-value="" /><label for="nradms_bef_nbws_bsp_pts">Protrusionen</label>
+				<label for="nradms_bef_nbws_bsp_pts_text">auf Höhe:</label><input type="text" id="nradms_bef_nbws_bsp_pts_text" name="nradms_bef_nbws_bsp_pts_text" data-group="bef_nbws_bsp_pts_text" /><br>
+				<input type="checkbox" id="nradms_bef_nbws_bsp_ets" name="nradms_bef_nbws_bsp_ets" data-group="bef_nbws_bsp" data-value="" /><label for="nradms_bef_nbws_bsp_ets">Extrusionen</label>
+				<label for="nradms_bef_nbws_bsp_ets_text">auf Höhe:</label><input type="text" id="nradms_bef_nbws_bsp_ets_text" name="nradms_bef_nbws_bsp_ets_text" data-group="bef_nbws_bsp_ets_text" /></td></tr><tr><td>
+			<label for="nradms_bef_nbws_skw_ja">Spinalkanalstenose</label></td><td>
+				<input type="checkbox" id="nradms_bef_nbws_skw_ja" name="nradms_bef_nbws_skw_ja" data-group="bef_nbws_skw" data-value="" class="radiobutonnized" /><label for="nradms_bef_nbws_skw_ja">Ja</label>
+				<input type="checkbox" id="nradms_bef_nbws_skw_nein" name="nradms_bef_nbws_skw_nein" data-group="bef_nbws_skw" data-value="Spinalkanal ausreichend weit." class="radiobutonnized" /><label for="nradms_bef_nbws_skw_nein">Nein</label>
+				<input type="text" id="nradms_bef_nbws_skw_sonst" name="nradms_bef_nbws_skw_sonst" data-group="bef_nbws_skw_text" style="width:400px"/></td></tr><tr><td>
+			<label for="nradms_bef_nbws_nfw_ja">Neuroforamenstenose</label></td><td>
+				<input type="checkbox" id="nradms_bef_nbws_nfw_ja" name="nradms_bef_nbws_nfw_ja" data-group="bef_nbws_nfw" data-value="" class="radiobutonnized" /><label for="nradms_bef_nbws_nfw_ja">Ja</label>
+				<input type="checkbox" id="nradms_bef_nbws_nfw_nein" name="nradms_bef_nbws_nfw_nein" data-group="bef_nbws_nfw" data-value="Neuroforamen ausreichend weit." class="radiobutonnized" /><label for="nradms_bef_nbws_nfw_nein">Nein</label>
+				<input type="text" id="nradms_bef_nbws_nfw_sonst" name="nradms_bef_nbws_nfw_sonst" data-group="bef_nbws_nfw_text" style="width:400px"/></td></tr><tr><td>
+			<label for="nradms_bef_nbws_ksu_ja">Knöcherne Strukturen auffällig</label></td><td>
+				<input type="checkbox" id="nradms_bef_nbws_ksu_ja" name="nradms_bef_nbws_ksu_ja" data-group="bef_nbws_ksu" data-value="" class="radiobutonnized" /><label for="nradms_bef_nbws_ksu_ja">Ja</label>
+				<input type="checkbox" id="nradms_bef_nbws_ksu_nein" name="nradms_bef_nbws_ksu_nein" data-group="bef_nbws_ksu" data-value="Knöcherne Strukturen unauffällig." class="radiobutonnized" /><label for="nradms_bef_nbws_ksu_nein">Nein</label>
+				<input type="text" id="nradms_bef_nbws_ksu_sonst" name="nradms_bef_nbws_ksu_sonst" data-group="bef_nbws_ksu_text" style="width:400px"/></td></tr><tr><td>
+			<label for="nradms_bef_nbws_sonst">Sonstiges</label></td><td>
+				<input type="text" id="nradms_bef_nbws_sonst" name="nradms_bef_nbws_sonst" data-group="bef_nbws_sonst" style="width:400px"/></td></tr></table></div>
+			
+		<div id="nradms_divnebenbefunde" class="fliesstext"><textarea id='nradms_nebenbefunde' name='nradms_nebenbefunde' style='display:block' rows=3></textarea></div>	
+		</section>
+
+<section data-section-name="Beurteilung">
+        <header class="level1" data-english="Impression">Beurteilung</header>
+			
+		<div class="hide-from-xml-output"><table><tr><td><strong>Vergleich zur Voruntersuchung</strong></td><td><fieldset id="nradms_beur_vv">
+			<input type="checkbox" id="nradms_beur_vv_kvv" name="nradms_beur_vv_kvv" data-group="beur_vv" data-value="Keine Voruntersuchung zum Vergleich vorliegend." class="radiobutonnized" /><label for="nradms_beur_vv_kvv">Keine Voruntersuchung zum Vergleich vorliegend.</label><br>
+			<input type="checkbox" id="nradms_beur_vv_bb" name="nradms_beur_vv_bb" data-group="beur_vv" data-value="Im Vergleich zur Voruntersuchung zeigt sich eine Befundbesserung." class="radiobutonnized" /><label for="nradms_beur_vv_bb">Befundbesserung</label><br>
+			<input type="checkbox" id="nradms_beur_vv_sb" name="nradms_beur_vv_sb" data-group="beur_vv" data-value="Im Vergleich zur Voruntersuchung zeigt sich ein stabiler Befund. Keine neuen Läsionen." class="radiobutonnized" /><label for="nradms_beur_vv_sb">Stabiler Befund</label><br>
+			<input type="checkbox" id="nradms_beur_vv_bs" name="nradms_beur_vv_bs" data-group="beur_vv" data-value="Im Vergleich zur Voruntersuchung zeigt sich eine Befundschlechterung." class="radiobutonnized" /><label for="nradms_beur_vv_bs">Befundschlechterung</label><br>
+			<input type="checkbox" id="nradms_beur_vv_sonst" name="nradms_beur_vv_sonst" data-group="beur_vv" data-value="" class="radiobutonnized" /><label for="nradms_beur_vv_sonst">Sonstiges</label>
+				<input type="text" id="nradms_beur_vv_sonst_text" name="nradms_beur_vv_sonst_text" data-group="beur_vv_sonst_text" /></fieldset></td></tr></table></div>
+
+		<div class="hide-from-xml-output" id="nradms_beur_digb"><table style="padding: 10px 0;background-color:#fbfbfb;"><tr><td style="background-color:#fbfbfb;font-style:italic;">
+			Die MR-Kriterien für eine räumliche Dissemination</td><td style="background-color:#fbfbfb;font-style:italic;">
+			<input type="checkbox" id="nradms_beur_dis_ja" name="nradms_beur_dis_ja" data-group="beur_dis" data-value="Die MR-Kriterien für eine räumliche Dissemination sind erfüllt. " class="radiobutonnized" /><label for="nradms_beur_dis_ja" style="font-style:italic;">erfüllt</label>
+			<input type="checkbox" id="nradms_beur_dis_nein" name="nradms_beur_dis_nein" data-group="beur_dis" data-value="Die MR-Kriterien für eine räumliche Dissemination sind nicht erfüllt." class="radiobutonnized" /><label for="nradms_beur_dis_nein" style="font-style:italic;">nicht erfüllt</label></td><td id="nradms_beur_dis_summary" style="background-color:#fbfbfb;font-style:italic;font-weight:bold;"></td></tr><tr><td style="background-color:#fbfbfb;font-style:italic;">
+			Die MR-Kriterien für eine zeitliche Dissemination</td><td style="background-color:#fbfbfb;font-style:italic;">
+			<input type="checkbox" id="nradms_beur_dit_ja" name="nradms_beur_dit_ja" data-group="beur_dit" data-value="Die MR-Kriterien für eine zeitliche Dissemination sind erfüllt. " class="radiobutonnized" /><label for="nradms_beur_dit_ja" style="font-style:italic;">erfüllt</label>
+			<input type="checkbox" id="nradms_beur_dit_nein" name="nradms_beur_dit_nein" data-group="beur_dit" data-value="Die MR-Kriterien für eine zeitliche Dissemination sind nicht erfüllt." class="radiobutonnized" /><label for="nradms_beur_dit_nein" style="font-style:italic;">nicht erfüllt</label>
+			</td><td id="nradms_beur_dit_summary" style="background-color:#fbfbfb;font-style:italic;font-weight:bold;"></td></tr><tr><td style="background-color:#fbfbfb;font-style:italic;">
+			Gesamtbeurteilung</td><td style="background-color:#fbfbfb;font-style:italic;">
+			<input type="checkbox" id="nradms_beur_gb_typ" name="nradms_beur_gb_typ" data-group="beur_gb" data-value="Der Befund ist typisch pathologisch für eine chronisch-entzündliche ZNS-Erkrankung im Sinne einer MS." class="radiobutonnized" /><label for="nradms_beur_gb_typ" style="font-style:italic;">typisch für MS</label><br>
+			<input type="checkbox" id="nradms_beur_gb_ver" name="nradms_beur_gb_ver" data-group="beur_gb" data-value="Der Befund ist vereinbar mit einer chronisch-entzündlichen ZNS-Erkrankung im Sinne einer MS." class="radiobutonnized" /><label for="nradms_beur_gb_ver" style="font-style:italic;">vereinbar mit MS</label><br>
+			<input type="checkbox" id="nradms_beur_gb_ut" name="nradms_beur_gb_ut" data-group="beur_gb" data-value="Der Befund ist untypisch für eine chronisch-entzündliche ZNS-Erkrankung im Sinne einer MS." class="radiobutonnized" /><label for="nradms_beur_gb_ut" style="font-style:italic;">untypisch für MS</label><br>
+			<input type="checkbox" id="nradms_beur_gb_sonst" name="nradms_beur_gb_sonst" data-group="beur_gb" data-value="" class="radiobutonnized" /><label for="nradms_beur_gb_sonst" style="font-style:italic;">Sonstiges</label>
+				<input type="text" id="nradms_beur_gb_sonst_text" name="nradms_beur_gb_sonst_text" data-group="beur_gb_sonst_text" /></td><td id="nradms_beur_gb_summary" style="background-color:#fbfbfb;font-style:italic;"></td></tr></table></div>
+	
+		<div class="hide-from-xml-output" id="nradms_beur_ml"><table><tr><td><strong>Die Myelon-Läsionen sind</strong></td><td>
+			<input type="checkbox" id="nradms_beur_ml_nv" name="nradms_beur_ml_nv" data-group="beur_ml" data-value="Keine Myelon-Läsionen vorhanden." class="radiobutonnized" /><label for="nradms_beur_ml_nv">Nicht vorhanden</label><br>
+			<input type="checkbox" id="nradms_beur_ml_veg" name="nradms_beur_ml_veg" data-group="beur_ml" data-value="Die Myelon-Läsionen passen am ehesten zu einer chronisch-entzündlichen ZNS-Erkrankung." class="radiobutonnized" /><label for="nradms_beur_ml_veg">Vorhanden, entzündliche Genese</label><br>
+			<input type="checkbox" id="nradms_beur_ml_vneg" name="nradms_beur_ml_vneg" data-group="beur_ml" data-value="Die Myelon-Läsionen sind untypisch für eine chronisch-entzündliche ZNS-Erkrankung." class="radiobutonnized" /><label for="nradms_beur_ml_vneg">Vorhanden, nicht entzündliche Genese</label><br>
+			<input type="checkbox" id="nradms_beur_ml_nvw" name="nradms_beur_ml_nvw" data-group="beur_ml" data-value="Die Myelon Läsionen sind nicht eindeutig zu werten." class="radiobutonnized" /><label for="nradms_beur_ml_nvw">Nicht wertbar</label><br>
+			<input type="checkbox" id="nradms_beur_ml_sonst" name="nradms_beur_ml_sonst" data-group="beur_ml" data-value="" class="radiobutonnized" /><label for="nradms_beur_ml_sonst">Sonstiges</label>
+				<input type="text" id="nradms_beur_ml_sonst_text" name="nradms_beur_ml_sonst_text" data-group="beur_ml_sonst_text" /></td></tr></table></div>
+		
+
+
+	
+		<div class="hide-from-xml-output"><table><tr><td><strong>Sonstiges  </strong><input type="text" id="nradms_beur_sonst" name="nradms_beur_sonst" data-group="beur_sonst"/></td></tr></table></div>
+		<div id="nradms_divbeurteilung" class="fliesstext">
+		<textarea id='nradms_beurteilung' name='nradms_beurteilung' style='display:block' rows=10></textarea></div>
+		</section>
+		
+<section id="rightcolumn" style="display:none;">
+        <header class="level1" data-english="Report">Bericht</header>
+		<div id="rightcolumn-content" class="">
+		<p><strong>Klinische Angaben</strong></p>
+			<p><span id="nradms_bericht_angaben"></span><span id="nradms_bericht_anamnese"><span id="nradms_ber_diag"></span><span id="nradms_ber_diag_sonst"></span></span></p>
+		<p><strong>Fragestellung</strong></p>
+			<p><span id="nradms_bericht_fragestellung"></span></p>
+		<p><strong>Voraufnahmen</strong></p>
+			<p><span id="nradms_bericht_voraufnahmen"><span id="nradms_ber_va"></span><span id="nradms_ber_va_sonst"></span></span></p>
+		<p><strong>Befund</strong></p>
+			<p><span id="nradms_bericht_sequenzen"><span id="nradms_ber_seq"></span><span id="nradms_ber_bef_seq_bildq"></span><span id="nradms_ber_bef_seq_eq"></span></span></p>
+			<div id="nradms_bericht_lesions">
+			<p><span id="nradms_ber_kopf"></span><span id="nradms_ber_kopf_skl"></span><span id="nradms_ber_kopf_konf"></span><span id="nradms_ber_kopf_sp_niv"></span><span id="nradms_ber_kopf_hoh_sp"></span><span id="nradms_ber_kopf_spvu"></span><span id="nradms_ber_kopf_sonst"></span></p>
+			<p><span id="nradms_ber_hws"></span><span id="nradms_ber_hws_konf"></span><span id="nradms_ber_hws_sonst"></span></p>
+			<p><span id="nradms_ber_blws"></span><span id="nradms_ber_blws_konf"></span><span id="nradms_ber_blws_sonst"></span></p></div>
+			<div id="nradms_bericht_nebenbefunde"><p><span id="nradms_nebenbefunde_t"><u>Nebenbefunde</u>:</span><span id="nradms_ber_nbk_nor"></span><span id="nradms_ber_nbk_nol"></span><span id="nradms_ber_nbk_atr"></span><span id="nradms_ber_nbk_liq"></span><span id="nradms_ber_nbk_mrd"></span><span id="nradms_ber_nbk_pml"></span><span id="nradms_ber_nbk_orb"></span><span id="nradms_ber_nbk_nnh"></span><span id="nradms_ber_nbk_sm"></span><span id="nradms_ber_nbk_sonst"></span>
+				<span id="nradms_ber_nbws_t2h"></span><span id="nradms_ber_nbws_am"></span><span id="nradms_ber_nbws_dae"></span><span id="nradms_ber_nbws_rc"></span><span id="nradms_ber_nbws_bsp_pts"></span><span id="nradms_ber_nbws_bsp_ets"></span><span id="nradms_ber_nbws_skw"></span><span id="nradms_ber_nbws_nfw"></span><span id="nradms_ber_nbws_ksu"></span><span id="nradms_ber_nbws_sonst"></span></p></div>
+		<p><strong>Beurteilung</strong></p>
+			<p><span id="nradms_bericht_beurteilung"><span class='count'></span><span id="nradms_ber_vv" class="tocount"></span><span class='count'></span><span id="nradms_ber_di" class="tocount"></span><span class='count'></span><span id="nradms_ber_gb" class="tocount"></span><span class='count'></span><span id="nradms_ber_ml" class="tocount"></span><span class='count'></span><span id="nradms_ber_sonst" class="tocount"></span></span></p>
+		</div>
+		</section>
+
+	<div class="hide-from-xml-output" style="float:right; margin-top:-10px; padding-right:300px; font-size:0.7em;" id="templateinfo"></div>
+
+<link href="server/jquery_ui.1.12.1.css" media="screen" rel="stylesheet" type="text/css">
+<link href="server/mri_nrad_str_bef.css" media="screen" rel="stylesheet" type="text/css">
+
+<!-- include jquery only if not loaded already (by MRRE for example). it needs to be a https address -->
+<script type="text/javascript">if(typeof jQuery == 'undefined'){document.write('<script type="text/javascript" src="server/jquery-3.3.1.min.js"></'+'script>');}</script>
+<script type="text/javascript" src="server/jquery_dependson_1.5.1.js"></script>
+<script type="text/javascript" src="server/mri_nrad_ms_html.js"></script>
+<script type="text/javascript" src="server/jquery_ui.1.12.1.js"></script>
+<script type="text/javascript" src="server/mri_nrad_str_bef.js"></script>
+<script type="text/javascript" src="server/mri_nrad_ms_intel.js"></script>
+</body>
+</html>
