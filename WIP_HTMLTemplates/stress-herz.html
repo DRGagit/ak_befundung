@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stress-Herz</title>
+    <meta charset="UTF-8">
+    <!--Dublin Core metadata elements here-->
+    <meta name="dcterms.title" content="Stress-Herz">
+    <meta name="dcterms.abstract" content="Strukturierte Befundvorlage: Stress-Herz (männlich, 8-17 Jahre) ">
+    <meta name="dcterms.description" content="XXXXXXXXXXXXXXXXXXXXX">
+    <meta name="dcterms.subject" content="XXXXXXXXXXXXXXXXXXXXX">
+    <meta name="dcterms.identifier" content="XXXXXXXXXXXXXXXXXXXXX">
+    <meta name="dcterms.type" content="IMAGE_REPORT_TEMPLATE">
+    <meta name="dcterms.language" content="de">
+    <meta name="dcterms.rights" content="Die Deutsche Röntgengesellschaft e.V.(DRG) stellt sämtliche Templates kostenfrei unter der Creative Commons Lizenz  CC BY-NC-ND in der Version 4.0 zur Verfügung. Die Lizenz erlaubt Download und Weiterverteilung des Werkes unter Nennung der DRG als Urheber, jedoch keinerlei Bearbeitung oder kommerzielle Nutzung.">
+    <meta name="dcterms.license" content="http://www.befundung.drg.de/de-DE/3478/creative-commons-lizenz-cc-by-nc-nd">
+    <meta name="dcterms.date" content="2020-05-03">
+    <meta name="dcterms.creator" content="AG Thorax">
+    <meta name="dcterms.contributor" content="Pinto dos Santos D (Kodierung)">
+    <meta name="dcterms.publisher" content="Deutsche Röntgengesellschaft (DRG)">
+
+    <script type="text/xml">
+        <template_attributes>
+        <top-level-flag>0</top-level-flag>
+        <status>ACTIVE</status>
+        </template_attributes>
+    </script>
+
+    <link rel="stylesheet" href="drg.css">
+
+</head>
+
+<body>
+
+    <section data-section-name="Clinical information">
+        <header class="level1" data-english="Clinical information">Klinische Angaben</header>
+        <p>
+            <textarea name="ct_thorax_clininfo" id="ct_thorax_clininfo"></textarea>
+        </p>
+    </section>
+
+    <section data-section-name="Clinical question">
+        <header class="level1" data-english="Clinical question">Fragestellung</header>
+        <p>
+            <textarea name="ct_thorax_Fragestellung" id="ct_thorax_Fragestellung"></textarea>
+        </p>
+    </section>
+
+    <section data-section-name="Findings">
+		<header class="level1" data-english="Findings">Befund</header>
+		
+		<table>
+			<tr>
+				<th>Technik</th>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<table>
+						<tr>
+							<td><label for="dummy">T1 BB single shot</label></td>
+							<td>
+								<select name="dummy" id="dummy">
+									<option value="axial">axial</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td><label for="dummy">Cine</label></td>
+							<td>
+								<select name="dummy" id="dummy">
+									<option value="2CH">2CH</option>
+									<option value="3CH">3CH</option>
+									<option value="4CH">4CH</option>
+									<option value="SAX">SAX</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td><label for="dummy">T2w BB SPIR</label></td>
+							<td>
+								<select name="dummy" id="dummy">
+									<option value="3 Schichten SAX">3 Schichten SAX</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td><label for="dummy">First-Pass Perfusion</label></td>
+							<td>
+								<select name="dummy" id="dummy">
+									<option value="3 Schichten SAX unter Adenosin-Stress">3 Schichten SAX unter Adenosin-Stress</option>
+								</select>
+								&nbsp;
+								(140μg/kg KG/min, Aufnahme 4min nach Infusionsbeginn) 
+							</td>
+						</tr>
+						<tr>
+							<td><label for="dummy">LGE</label></td>
+							<td>
+								<select name="dummy" id="dummy">
+									<option value="2CH">2CH</option>
+									<option value="3CH">3CH</option>
+									<option value="4CH">4CH</option>
+									<option value="SAX">SAX</option>
+								</select>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<th>Patientencharakteristik</th>
+				<!-- TODO: - Units? - steps? -->
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<table>
+						<tr>
+							<td><label for="dummy">Körpergewicht:</label></td>
+							<td><input type="number" name="dummy" id="dummy" data-field-type="number"/>&nbsp;kg</td>
+						</tr>
+						<tr>
+							<td><label for="dummy">Körpergröße:</label></td>
+							<td><input type="number" name="dummy" id="dummy" data-field-type="number"/>&nbsp;m</td>
+						</tr>
+						<tr>
+							<td><label for="dummy">Körperoberfläche (BSA)::</label></td>
+							<td><input type="number" name="dummy" id="dummy" data-field-type="number"/>&nbsp;m<sup>2</sup></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+
+        <table><tr><td>&nbsp;</td></tr></table>
+
+		<table>
+			<tr>
+				<th>Funktionsanalyse LV (blood volume)</th>
+			</tr>
+			<tr>
+				<td>
+					<table>
+						<tr>
+							<td><label for="dummy">LV enddiastolisches Volumen normiert (LV EDV/BSA):</label></td>
+							<td><input type="number" name="dummy" id="dummy" data-field-type="number"/>&nbsp;ml/m<sup>2</sup> (Norm: 56-104 ml/m<sup>2</sup>)</td>
+						</tr>
+						<tr>
+							<td><label for="dummy">LV endsystolisches Volumen normiert (LV ESV/BSA):</label></td>
+							<td><input type="number" name="dummy" id="dummy" data-field-type="number"/>&nbsp;ml/m2 (Norm: 16-40 ml/m2)</td>
+						</tr>
+						<tr>
+							<td><label for="dummy">LV Ejektions-Fraktion (LV EF):</label></td>
+							<td><input type="number" name="dummy" id="dummy" data-field-type="number"/>&nbsp;% (Norm: 56-76 %)</td>
+						</tr>
+						<tr>
+							<td><label for="dummy">LV ED Masse normiert:</label></td>
+							<td><input type="number" name="dummy" id="dummy" data-field-type="number"/>&nbsp;g/m2 (Norm: 38-86 g/m2)</td>
+						</tr>
+						<tr>
+							<td><label for="dummy">IVSD:</label></td>
+							<td><input type="number" name="dummy" id="dummy" data-field-type="number"/>&nbsp;mm</td>
+						</tr>
+						<tr>
+							<td>Normale kardiale Anatomie</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+
+        <table><tr><td>&nbsp;</td></tr></table>
+
+		<table>
+			<tr>
+				<th>Adenosin Stress- und Ruhe-Perfusion</th>
+			</tr>
+			<tr>
+				<td>
+					<table>
+						<tr>
+							<td><label for="dummy">Perfusionsstörung unter Adenosin:</label></td>
+							<td>
+								<select name="dummy" id="dummy">
+								  <option value="nein">nein</option>
+								  <option value="ja">ja</option>
+								</select>
+								&nbsp;
+								<label for="dummy">Segmente</label>
+								<input type="text" name="dummy" id="dummy" data-field-type="text">
+							</td>
+						</tr>
+						<tr>
+							<td><label for="dummy">Ruhe-Perfusion:</label></td>
+							<td>
+								<select name="dummy" id="dummy">
+								  <option value="normal">normal</option>
+								</select>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+
+        <table><tr><td>&nbsp;</td></tr></table>
+		
+		<table>
+			<tr>
+				<td>
+					<table>
+						<tr>
+							<td><label for="dummy">Regionale Wandbewegungsstörungen LV:</label></td>
+							<td>
+								<select name="dummy" id="dummy">
+								  <option value="keine">keine</option>
+								  <option value="global">global</option>
+								  <option value="regional">regional</option>
+								</select>
+								<!-- TODO: Hypo--, A-, Dyskinesie, Asynchronie -->
+							</td>
+						</tr>
+						<tr>
+							<td><label for="dummy">Intracavitäre Thromben:</label></td>
+							<td>
+								<select name="dummy" id="dummy">
+								  <option value="ja">ja</option>
+								  <option value="nein">nein</option>
+								</select>
+								&nbsp;
+								<label for="dummy">wenn ja: wo?</label>
+								<input type="text" name="dummy" id="dummy" data-field-type="text">
+							</td>
+						</tr>
+						<tr>
+							<td><label for="dummy">Perikarderguss:</label></td>
+							<td>
+								<select name="dummy" id="dummy">
+									<option value="ja">ja</option>
+									<option value="nein">nein</option>
+								</select>
+								&nbsp;
+								<label for="dummy">max. Saumbreite:</label>
+								<input type="number" name="dummy" id="dummy" data-field-type="number">&nbsp;mm
+							</td>
+						</tr>
+						<tr>
+							<td><label for="dummy">AV-Klappen:</label></td>
+							<td>
+								<select name="dummy" id="dummy">
+									<option value="kompetent">kompetent</option>
+									<option value="insuffizient">insuffizient</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td><label for="dummy">Trikuspide Aortenklappe:</label></td>
+							<td>
+								<select name="dummy" id="dummy">
+									<option value="ja">ja</option>
+									<option value="nein">nein</option>
+									<option value="nicht beurteilbar">nicht beurteilbar</option>
+								</select>
+								<select name="dummy" id="dummy">
+									<option value="kompetent">kompetent</option>
+									<option value="stenosiert">stenosiert</option>
+									<option value="insuffizient">insuffizient</option>
+								</select>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+
+        <table><tr><td>&nbsp;</td></tr></table>
+
+		<table>
+			<tr>
+				<th>Gewebecharakterisierung</th>
+			</tr>
+			<tr>
+				<td>
+					<table>
+						<tr>
+							<td><label for="dummy">Late Enhancement (LGE):</label></td>
+							<td>
+								<select name="dummy" id="dummy">
+								  <option value="nein">nein</option>
+								  <option value="ja">ja</option>
+								</select>
+							</td>
+						</tr>
+						<!-- TODO: subendokardial ???? -->
+						<tr>
+							<td><label for="dummy">Segmente</label></td>
+							<td><input type="text" name="dummy" id="dummy" data-field-type="text"></td>
+						</tr>
+						<tr>
+							<td><label for="dummy">transmural Segmente</label></td>
+							<td><input type="text" name="dummy" id="dummy" data-field-type="text"></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+
+		<table><tr><td>&nbsp;</td></tr></table>
+		
+		<table>
+			<tr>
+				<th>Extrakardiale Auffälligkeiten</th>
+			</tr>
+			<tr>
+				<td>
+				  <textarea name="ct_pankcas_sonstiges" id="ct_pankcas_sonstiges"></textarea>
+				</td>
+			</tr>
+		</table>
+
+    </section>
+
+    <section data-section-name="Beurteilung">
+		<header class="level2" data-english="Impression">Beurteilung</header>
+        <p>
+			<textarea name="ct_thorax_Beurteilung" id="ct_thorax_Beurteilung" data-english-name="Impression" title="Text bitte entsprechend Befund ergänzen/ ändern!">Im Adenosin-Stress MRT kein Nachweis einer Perfusionsstörung.
+			
+Im Adenosin-Stress MRT belastungsinduzierte Perfusionsstörung __ als Hinweis auf eine hämodynamisch relevante Koronarstenose im RCA / LAD / RCX Versorgungsgebiet.
+			
+MR-tomograpisch Z.n. Myokardinfakt mit "late enhancement" __.</textarea>
+        </p>
+    </section>
+
+</body>
+</html>
