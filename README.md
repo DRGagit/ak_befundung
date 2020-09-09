@@ -31,7 +31,7 @@ CT COVID                    |
 
 ## Fertige Befundvorlagen
 
-Die folgenden Befundvorlagen sind bereits erstellt worden und sind hier im Ordner [`templates_final`](https://github.com/DRGagit/ak_befundung/tree/master/templates_final) zu finden. Sowohl die sonstigen Befundungvorlagen als auch die Befundvorlagen zu Ultraschalluntersuchungen sind nicht formell konsentiert worden, sondern aus einer vergangenen Initiative übernommen worden. In Zukunft werden jedoch nur mit den jeweiligen AGs abgesprochene und in einem entsprechenden Konsensprozess abgestimmte Befundvorlagen aufgenommen werden.
+Die folgenden Befundvorlagen sind bereits erstellt worden und sind hier im Ordner **[`templates_final`]**(https://github.com/DRGagit/ak_befundung/tree/master/templates_final) zu finden. Sowohl die sonstigen Befundungvorlagen als auch die Befundvorlagen zu Ultraschalluntersuchungen sind nicht formell konsentiert worden, sondern aus einer vergangenen Initiative übernommen worden. In Zukunft werden jedoch nur mit den jeweiligen AGs abgesprochene und in einem entsprechenden Konsensprozess abgestimmte Befundvorlagen aufgenommen werden.
 
 Der Arbeitskreis kooperiert eng mit den entsprechenden Initiativen der ESR und der RSNA, die Befundvorlagen werden daher im weiteren Verlauf auch auf der gemeinsamen Webseite von ESR und RSNA www.radreport.org veröffentlicht.
 
