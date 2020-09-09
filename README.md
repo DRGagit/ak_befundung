@@ -31,7 +31,7 @@ CT COVID                    |
 
 ### Computertomographie
 Titel             | Link auf befundung.drg.de | Link auf radreport.org
-------------------|-------------------------------------
+------------------|---------------------------|---------
 KHK            | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/041807.2.1810090000-ct_khk.html/) | [Link](https://radreport.org/home/RPT50784/2020-06-19%2010:44:15)
 Pankreaskarzinom solide | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/041807.2.1810250618-ct_pankreasca_s.html/) | [Link](https://radreport.org/home/RPT50785/2020-06-19%2010:43:34)
 Pankreaskarzinom zystisch | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/041807.2.1811161508-ct_pankreasca_z.html/) |
