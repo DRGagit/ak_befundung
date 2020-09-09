@@ -19,7 +19,7 @@ Weitere Informationen stehen auch unter www.befundung.drg.de zur Verfügung.
 ## Roadmap
 
 bis Q2/2021                 | bis Q2/2022
---------------------------------------------------------
+----------------------------|---------------------------
 CT TAVI                     | CT Primärstaging Lungenkarzinom
 MR Kardio Stress            | MR Prostatakarzinom
 CT Koronarangiographie      | CT Becken-Bein-Angio
@@ -31,7 +31,7 @@ CT COVID                    |
 
 ### Computertomographie
 Titel             | Links
---------------------------------------------------------
+------------------|-------------------------------------
 KHK            | [Link DRG](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/041807.2.1810090000-ct_khk.html/) [Link radreport](https://radreport.org/home/RPT50784/2020-06-19%2010:44:15)
 Pankreaskarzinom solide | [Link DRG](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/041807.2.1810250618-ct_pankreasca_s.html/)
 Pankreaskarzinom zystisch | [Link DRG](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/041807.2.1811161508-ct_pankreasca_z.html/)
