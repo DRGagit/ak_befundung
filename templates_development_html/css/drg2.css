@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+table {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+input, textarea, select {
+  border: 1px solid #aaaaaa;
+  color: #3f3f3f;
+  width: auto;
+  padding: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 28px;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  background-color: #f4f8fcc0;
+  border: 1px solid #1071b6;
+  color: #000000;
+  outline: none;
+}
+
+textarea {
+  outline: none;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  line-height: 20px;
+  width: 100% !important;
+  min-width: 500px !important;
+  height: 120px !important;
+}
+
+body {
+  color: #3f3f3f;
+  padding: 5px;
+}
+
+header.level1 {
+  font-size: 22px;
+  margin-bottom: 5px;
+  padding: 5px;
+  color: #095285;
+  font-weight: bold;
+  display: block;
+  line-height: 30px;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+label {
+  font-weight: 600;
+}
+
+table + table {
+  margin-top: 20px;
+}
+
+th {
+  text-align: left;
+  vertical-align: top;
+  height: 28px;
+  text-decoration: underline;
+  padding-right: 15px;
+}
+
+td {
+  padding-right: 5px;
+  vertical-align: top;
+  height: 30px;
+}
+
+input.small {
+  width: 60px;
+}
+
+input.middle {
+  width: 100px;
+}
+
+input.big {
+  width: 220px;
+}
+
+/* Modified:  height: 40px */
+textarea.ta-small {
+  width: 100% !important;
+  min-width: 500px !important;
+  height: 40px !important;
+}
+
+/* Modified:  height: 80px */
+textarea.ta-middle {
+  width: 100% !important;
+  min-width: 500px !important;
+  height: 80px !important;
+}
+
+/* Modified:  height: 120px */
+textarea.ta-big {
+  width: 100% !important;
+  min-width: 500px !important;
+  height: 120px !important;
+}
+
+tr.inner > td:nth-child(2) {
+  border-left: 2px solid #1071b6;
+  padding-left: 8px;
+}

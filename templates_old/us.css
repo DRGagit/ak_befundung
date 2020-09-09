@@ -1,0 +1,54 @@
+﻿@charset "UTF-8";
+/*
+	urbanstudio EasyRad FormStyles
+	URI: http://www.urbanstudio.de
+	Author: Oli Feiler
+*/
+/* -- STANDARD ---------------------------------------------------------------------- */
+/*td{padding:0 15px 10px 0 !important;vertical-align:middle !important;}*/
+th{padding-right:15px !important;text-align:left !important;}
+section header{display:block;font-weight:bold;font-size:18px;color:#337ab7;margin:0 0 10px 0 !important;padding:0;}
+label{color:#333333;padding-right:10px;font-weight:bold;}
+/* -- INPUT ------------------------------------------------------------------------- */
+input, textarea{border:1px solid #D3D3D3;width:auto;padding:5px;color:#666;background:#FFFFFF;font-size:14px;font-family:'Open Sans', sans-serif;font-weight:400;box-sizing:border-box;}
+input,
+input[type="text"],
+input[type="tel"],
+input[type="date"],
+input[type="email"],
+input[type="password"],
+textarea{min-width:100px;outline:none;transition:all 0.2s ease-in-out;}
+textarea{width:100% !important;min-width:500px !important;height:120px !important;}
+input:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus{background-color:#FFFFFF;border:1px solid #019CDE;color:#000000;outline:none;}
+/* -- RADIO & CHECKBOX -------------------------------------------------------------- */
+input[type='checkbox'],
+input[type='radio']{-webkit-appearance:none;-moz-appearance:none;appearance:none;border:none;border-radius:0;font-size:16px;width:100%;min-width:inherit;}
+input[type='checkbox'],input[type='radio']{width:auto;margin-right:12px;background:transparent;border:none;}
+input[type='checkbox']:checked,
+input[type='checkbox']:not(:checked),
+input[type='radio']:checked,
+input[type='radio']:not(:checked){background:transparent;position:relative;visibility:hidden;margin:0;padding:0;}
+input[type='checkbox']:checked + label::before,
+input[type='checkbox']:not(:checked) + label::before,
+input[type='radio']:checked + label::before,
+input[type='radio']:not(:checked) + label::before{content:' ';display:inline-block;width:14px;height:14px;position:relative;top:3px;border:1px solid #bbb;background:white;margin-right:10px;box-shadow:inset 0 1px 1px 0 rgba(0,0,0,.1);}
+input[type=radio]:checked + label::before,
+input[type=radio]:not(:checked) + label::before{border-radius:30px;}
+input[type='checkbox']:hover  + label::before,
+input[type='radio']:hover  + label::before{background:#ddd;box-shadow:inset 0 0 0 2px white;}
+input[type='checkbox']:checked  + label::before,
+input[type='radio']:checked  + label::before{background:#337ab7;box-shadow:inset 0 0 0 2px white;}
+input[type='checkbox']:checked  + label,
+input[type='radio']:checked  + label{color:#337ab7;font-weight:bold !important;}
+/* -- SELECT ------------------------------------------------------------------------ */
+select{border:1px solid #D3D3D3;width:auto;min-width:100px;max-width:600px;height:32px;padding:5px;color:#666;background:#FFFFFF;font-size:14px;font-family:'Open Sans', sans-serif;font-weight:400;box-sizing:border-box;outline:none;}
+select[multiple], select[size]{height:auto;}
+select[size] option:checked{background-color:#337ab7 !important;}
+/* -- BUTTON(S) --------------------------------------------------------------------- */
+button{display:inline-block;color:#FFFFFF;font-size:14px;font-weight:normal;padding:6px 10px 6px 10px;margin:0;width:auto;text-align:center;border-radius:3px;text-decoration:none;transition:all 0.2s ease-in-out;box-shadow:inset 0 1px 0 0 rgba(255,255,255,.15);cursor:pointer;background:#337ab7;text-shadow:0 -1px 0 rgba(0,0,0,.1);border:1px solid #2e6da4;} button:hover{background:#286090;border-color:#122b40;}

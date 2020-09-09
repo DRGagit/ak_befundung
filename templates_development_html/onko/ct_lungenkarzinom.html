@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CT Lungenkarzinom</title>
+    <meta charset="UTF-8" />
+    <!--Dublin Core metadata elements here-->
+    <meta name="dcterms.title" content="CT Lungenkarzinom" />
+    <meta name="dcterms.description" content="Lungenkarzinom Primärstaging" />
+    <meta name="dcterms.identifier" content="IDENTIFIER" />
+    <meta name="dcterms.type" content="IMAGE_REPORT_TEMPLATE" />
+    <meta name="dcterms.language" content="de" />
+    <meta name="dcterms.rights" content="May be used freely, subject to license agreement" />
+    <meta name="dcterms.license" content="http://www.radreport.org/license.pdf" />
+    <meta name="dcterms.date" content="2019-08-13" />
+    <meta name="dcterms.creator" content="Schausten, Sabrina" />
+    <meta name="dcterms.publisher" content="Universitaetsmedizin Mainz, Klinik und Poliklinik fuer Diagnostische und Interventionelle Radiologie" />
+    <script type="text/xml">
+        <template_attributes>
+            <top-level-flag>0</top-level-flag>
+            <status>DRAFT</status>
+        </template_attributes>
+    </script>
+
+    <style>
+        .flag {
+            background-color: rgb(255, 118, 118);
+            color: white;
+        }
+
+    </style>
+
+    <!--Link to Stylesheet-->
+    <!-- falscher Link -->
+    <!-- <link class="flag" rel="stylesheet" href="drg.css"> -->
+    <link class="flag" rel="stylesheet" href="drg2.css">
+</head>
+<body>
+    <section data-section-name="Clinical information">
+        <header class="level1">Klinische Angaben</header>
+        <p>
+            <textarea id="ct_lungenkarzinom_angaben" name="ct_lungenkarzinom_angaben"></textarea>
+        </p>
+    </section>
+
+    <section data-section-name="Clinical question">
+        <header class="level1">Fragestellung</header>
+        <p>
+            <textarea name="ct_lungenkarzinom_fragestellung" id="ct_lungenkarzinom_fragestellung"></textarea>
+        </p>
+    </section>
+
+    <section data-section-name="Findings">
+        <header class="level1">Befund</header>
+        <table>
+            <tr>
+                <td><label for="comparison">Vergleichsuntersuchung</label></td>
+                <td>
+                    <select name="comparison" id="comparison">
+                        <option value="keine">keine</option>
+                        <option value="vorliegend">vorliegend</option>
+                    </select>
+                    <input name="comparison_date" id="comparison_date" type="date" data-field-type="DATE">
+                </td>
+            </tr>
+            <tr>
+              <td><label for="histo">Histologie</label></td>
+              <td>
+                <select name="histo" id="histo">
+                  <option value="-">-</option>
+                  <option value="ausstehend">ausstehend</option>
+                  <option value="nachgewiesen">nachgewiesen</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td><label for="dummy">Lungenparenchym allgemein</label></td>
+              <td>
+                <select name="dummy" id="dummy">
+                  <option value="-">-</option>
+                  <option value="normal">normal</option>
+                  <option value="Emphysem">Emphysem</option>
+                  <option value="Lungenfibrose">Lungenfibrose</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+                <td><label for="quality">Bildqualität</label></td>
+                <td>
+                    <select name="quality" id="quality">
+                        <option value="exzellent">exzellent</option>
+                        <option value="mittel">mittel</option>
+                        <option value="schlecht">schlecht</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <th>Index-Lungenläsion</th>
+                <td>
+                    <table>
+                        <tr>
+                            <td><label for="dummy">Lokalisation</label></td>
+                            <td>
+                                <select name="dummy" id="dummy">
+                                    <option value="-">-</option>
+                                    <option value="OL">OL</option>
+                                    <option value="ML">ML</option>
+                                    <option value="UL">UL</option>
+                                </select>
+                                <select name="dummy" id="dummy">
+                                    <option value="-">-</option>
+                                    <option value="rechts">rechts</option>
+                                    <option value="links">links</option>
+                                </select>
+                                &nbsp;im Segment&nbsp;
+                                <input class="small" type="text" name="dummy" id="dummy">
+                            </td>
+                            <td class="flag">number/text? - würde eher sagen text, obwohl number besser wäre, aber wenn es irgendwie zwischen zwei segmenten wäre, müssten die leute das ja irgendwie sagen können</td>
+                        </tr>
+                        <tr>
+                            <td><label for="dummy">Größe</label></td>
+                            <td>
+                                <input class="small" type="number" name="dummy" id="dummy" data-field-units="mm"> mm
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="dummy">Form</label></td>
+                            <td>
+                                <select name="dummy" id="dummy">
+                                    <option value="-">-</option>
+                                    <option value="rund">rund</option>
+                                    <option value="spikuliert">spikuliert</option>
+                                    <option value="irregulär">irregulär</option>
+                                    <option value="lobuliert">lobuliert</option>
+                                    <option value="endobronchial">endobronchial</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="dummy">Charakterisierung</label></td>
+                            <td>
+                                <select name="dummy" id="dummy">
+                                    <option value="-">-</option>
+                                    <option value="solide">solide</option>
+                                    <option value="subsolide">subsolide</option>
+                                    <option value="ground glass">ground glass</option>
+                                    <option value="Nekrose">Nekrose</option>
+                                    <option value="Kalzifikation">Kalzifikation</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr class="inner">
+                            <td>Infiltration <div class="flag">Wieso ist da dieser blaue Strich? und obwohl ich die nicht mag, müssten hier wohl multiple select sein</div></td>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <select name="dummy" id="dummy">
+                                                <option value="-">-</option>
+                                                <option value="Pleura visceralis">Pleura visceralis</option>
+                                                <option value="Bronchus">Bronchus</option>
+                                            </select>
+                                            <!-- T2 -->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <select name="dummy" id="dummy">
+                                                <option value="-">-</option>
+                                                <option value="Pleura parietalis">Pleura parietalis</option>
+                                                <option value="mediastinales Fett">mediastinales Fett</option>
+                                                <option value="Perikard">Perikard</option>
+                                                <option value="Thoraxwand">Thoraxwand</option>
+                                            </select>
+                                            <!-- T3 -->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <select name="dummy" id="dummy">
+                                                <option value="-">-</option>
+                                                <option value="Carina">Carina</option>
+                                                <option value="Pulmonalarterie">Pulmonalarterie</option>
+                                                <option value="Pulmonalvene">Pulmonalvene</option>
+                                                <option value="Herz">Herz</option>
+                                                <option value="Aorta">Aorta</option>
+                                                <option value="VCS">VCS</option>
+                                                <option value="Ösophagus">Ösophagus</option>
+                                                <option value="Trachea">Trachea</option>
+                                                <option value="Spinalkanal">Spinalkanal</option>
+                                                <option value="Wirbelkörper">Wirbelkörper</option>
+                                                <option value="Zwerchfell">Zwerchfell</option>
+                                            </select>
+                                            <!-- T4 -->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><label for="dummy">Atelektase</label>
+                                            <select name="dummy" id="dummy">
+                                                <option value="-">-</option>
+                                                <option value="nein">nein</option>
+                                                <option value="ja">ja</option>
+                                            </select>
+                                            <!-- T2 -->
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="dummy">Pleura</label></td>
+                            <td>
+                                <select name="dummy" id="dummy">
+                                    <option value="-">-</option>
+                                    <option value="unauffällig">unauffällig</option>
+                                    <option value="Verdickung">Verdickung</option>
+                                    <option value="Pleuraplaque verkalkt">Pleuraplaque verkalkt</option>
+                                    <option value="Pleuraplaque nicht verkalkt">Pleuraplaque nicht verkalkt</option>
+                                    <option value="Pleuraerguss">Pleuraerguss</option>
+                                    <!-- M1a, wenn maligne -->
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="dummy">Zwerchfellhochstand</label></td>
+                            <td>
+                                <select name="dummy" id="dummy">
+                                    <option value="-">-</option>
+                                    <option value="nein">nein</option>
+                                    <option value="ja">ja</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="dummy">Stimmbandlähmung</label></td>
+                            <td>
+                                <select name="dummy" id="dummy">
+                                    <option value="-">-</option>
+                                    <option value="nein">nein</option>
+                                    <option value="ja">ja</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+            </tr>
+            <tr>
+                <th>Weitere Lungenläsionen</th>
+                <td>
+                    <table>
+                        <tr>
+                            <td>Lokalisation</td>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <label for="dummy">OL Anzahl:</label></td>
+                                        <td>
+                                            <input class="small" type="number" name="dummy" id="dummy">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label for="dummy">ML Anzahl:</label></td>
+                                        <td>
+                                            <input class="small" type="number" name="dummy" id="dummy">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label for="dummy">UL Anzahl:</label></td>
+                                        <td>
+                                            <input class="small" type="number" name="dummy" id="dummy">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label for="dummy">im Segment</label></td>
+                                        <td>
+                                            <input class="small" type="text" name="dummy" id="dummy">
+                                            <select name="dummy" id="dummy">
+                                                <option value="-">-</option>
+                                                <option value="rechts">rechts</option>
+                                                <option value="links">links</option>
+                                            </select>
+                                        </td>
+                                        <td class="flag">Reihenfolge - würde hier ehrlich gesagt nur sagen "Segmente" und das input text und das select weglassen</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label for="dummy">Max. Größe</label></td>
+                                        <td>
+                                            <input class="small" type="number" name="dummy" id="dummy" data-field-units="mm"> mm
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="dummy">Charakterisierung</label></td>
+                            <td>
+                                <select name="dummy" id="dummy">
+                                    <option value="-">-</option>
+                                    <option value="solide">solide</option>
+                                    <option value="subsolide">subsolide</option>
+                                    <option value="ground glass">ground glass</option>
+                                    <option value="Nekrose">Nekrose</option>
+                                    <option value="Kalzifikation">Kalzifikation</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="dummy">Lymphknoten regionär</label></td>
+                <td>
+                    <select name="dummy" id="dummy">
+                        <option value="Keine suspekten LK">Keine suspekten LK</option>
+                        <option value="Suspekte LK">Suspekte LK</option>
+                    </select>
+                </td>
+            </tr>
+            <tr class="inner">
+                <td></td>
+                <td>
+                    <table>
+                        <tr>
+                            <td>
+                                <select name="dummy" id="dummy">
+                                    <option value="-">-</option>
+                                    <option value="ipsilateral hilär">ipsilateral hilär</option>
+                                    <option value="intrapulmonal">intrapulmonal</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select name="dummy" id="dummy">
+                                    <option value="unauffällig">unauffällig</option>
+                                    <option value="auffällig">auffällig</option>
+                                </select>
+                            </td>
+                            <td>
+                                Anzahl: <input class="small" type="number" name="dummy" id="dummy">&nbsp;
+                                Querdurchmesser: <input class="small" type="number" name="dummy" id="dummy" data-field-units="mm">&nbsp;mm
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="dummy">Lymphknoten distant</label></td>
+                <td>
+                  <div class="flag">auch das müsste wohl multiple sein</div>
+                    <select name="dummy" id="dummy">
+                        <option value="zervikal">zervikal</option>
+                        <option value="axillär">axillär</option>
+                        <option value="abdominell">abdominell</option>
+                    </select>
+                </td>
+            </tr>
+            <tr class="inner">
+                <td></td>
+                <td>
+                    <table>
+                        <tr>
+                            <td>
+                              <div class="flag">glaube das kann weg</div>
+                                <select name="dummy" id="dummy">
+                                    <option value="-">-</option>
+                                    <option value="ipsilateral hilär">ipsilateral hilär</option>
+                                    <option value="intrapulmonal">intrapulmonal</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select name="dummy" id="dummy">
+                                    <option value="unauffällig">unauffällig</option>
+                                    <option value="auffällig">auffällig</option>
+                                </select>
+                            </td>
+                            <td>
+                                Anzahl: <input class="small" type="number" name="dummy" id="dummy">&nbsp;
+                                Querdurchmesser: <input class="small" type="number" name="dummy" id="dummy" data-field-units="mm">&nbsp;mm
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="dummy">Leber</label></td>
+                <td>
+                    <select name="dummy" id="dummy">
+                        <option value="-">-</option>
+                        <option value="unauffällig">unauffällig</option>
+                        <option value="Lebermetastasen">Lebermetastasen</option>
+                    </select>
+                </td>
+            </tr>
+            <tr class="inner">
+                <td></td>
+                <td>
+                    <table>
+                        <tr>
+                            <td>
+                                Anzahl: <input class="small" type="number" name="dummy" id="dummy">&nbsp;
+                                in Segment <input class="small" type="text" name="dummy" id="dummy">&nbsp;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Messung von max. 2 Läsionen (RECIST1.1)</td>
+                        </tr>
+                        <tr>
+                            <td>L01: <input class="small" type="number" name="dummy" id="dummy" data-field-units="mm">&nbsp;mm</td>
+                        </tr>
+                        <tr>
+                            <td>L02: <input class="small" type="number" name="dummy" id="dummy" data-field-units="mm">&nbsp;mm</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+            </tr>
+            <tr>
+                <th>Sonstige Leberläsionen</th>
+                <td>
+                    <table>
+                        <tr>
+                            <td>
+                                Anzahl: <input class="small" type="number" name="dummy" id="dummy">&nbsp;
+                                in Segment <input class="small" type="text" name="dummy" id="dummy">&nbsp;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <textarea class="ta-middle" name="dummy" id="dummy"></textarea>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <td><label for="dummy">Nebennieren</label></td>
+                <td>
+                    <select name="dummy" id="dummy">
+                        <option value="-">-</option>
+                        <option value="unauffällig">unauffällig</option>
+                        <option value="Raumforderung">Raumforderung</option>
+                    </select>
+                </td>
+                <td>
+                    <input class="big" type="text" name="dummy" id="dummy">
+                </td>
+            </tr>
+            <tr>
+                <td><label for="dummy">Knochen</label></td>
+                <td>
+                    <select name="dummy" id="dummy">
+                        <option value="-">-</option>
+                        <option value="unauffällig">unauffällig</option>
+                        <option value="Läsion">Läsion</option>
+                    </select>
+                </td>
+                <td>
+                    <input class="big" type="text" name="dummy" id="dummy">
+                </td>
+            </tr>
+            <tr>
+                <td><label for="dummy">Gehirn</label></td>
+                <td>
+                    <select name="dummy" id="dummy">
+                        <option value="-">-</option>
+                        <option value="unauffällig">unauffällig</option>
+                        <option value="Metastase">Metastase</option>
+                    </select>
+                </td>
+                <td>
+                    <input class="big" type="text" name="dummy" id="dummy">
+                </td>
+            </tr>
+        </table>
+
+
+    </section>
+
+    <section data-section-name="Beurteilung">
+        <header class="level1">Beurteilung</header>
+        <p>
+            <textarea name="ct_lungenkarzinom_beurteilung" id="ct_lungenkarzinom_beurteilung" data-field-completion-action="ALERT">V.a. Bronchialkarzinom/ Bek. Bronchialkarzinom im _</textarea>
+        </p>
+        <p>
+            Nach den vorliegenden Untersuchungen:
+
+            cT_N_M_
+            <div class="flag">denke man müsste hier bei den _ jeweils ein kleines input text machen</div>
+            <select name="dummy" id="dummy">
+                <option value="-">-</option>
+                <option value="pulmonal">pulmonal</option>
+                <option value="ossär">ossär</option>
+                <option value="lymphogen">lymphogen</option>
+                <option value="cerebral">cerebral</option>
+            </select>
+        </p>
+    </section>
+</body>
+</html>

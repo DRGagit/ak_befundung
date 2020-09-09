@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Titel hier</title>
+    <meta charset="UTF-8">
+    <!--Dublin Core metadata elements here-->
+    <meta name="dcterms.title" content="Titel hier">
+    <meta name="dcterms.abstract" content="Kurzbeschreibung hier (Templateinfo hier)">
+    <meta name="dcterms.description" content="Lange Beschreibung hier">
+    <meta name="dcterms.subject" content="Schlagwörter hier">
+    <meta name="dcterms.identifier" content="041807.xxxxx">
+    <meta name="dcterms.type" content="IMAGE_REPORT_TEMPLATE">
+    <meta name="dcterms.language" content="de">
+    <meta name="dcterms.rights" content="Die Deutsche Röntgengesellschaft e.V.(DRG) stellt sämtliche Templates kostenfrei unter der Creative Commons Lizenz  CC BY-NC-ND in der Version 4.0 zur Verfügung. Die Lizenz erlaubt Download und Weiterverteilung des Werkes unter Nennung der DRG als Urheber, jedoch keinerlei Bearbeitung oder kommerzielle Nutzung.">
+    <meta name="dcterms.license" content="http://www.befundung.drg.de/de-DE/3478/creative-commons-lizenz-cc-by-nc-nd">
+    <meta name="dcterms.date" content="2018-xx-xx">
+    <meta name="dcterms.creator" content="Ersteller hier">
+    <meta name="dcterms.contributor" content="Mitarbeiter hier">
+    <meta name="dcterms.contributor" content="ggf. AG hier">
+    <meta name="dcterms.publisher" content="Deutsche Röntgengesellschaft (DRG)">
+    <!--RadLex entries-->
+    <script type="text/xml">
+        <!--
+        <template_attributes>
+        <top-level-flag>0</top-level-flag>
+        <status>ACTIVE</status>
+        <coding_schemes>
+            <coding_scheme name="RadLex" designator="2.16.840.1.113883.6.256" />
+        </coding_schemes>
+        <coded_content>
+        <entry ORIGTXT="feld_id hier">
+            <term>
+                <code meaning="meaning hier" value="RID hier" scheme="RadLex" />
+            </term>
+        </entry>
+        </coded_content>
+        </template_attributes>
+		-->
+    </script>
+    <!--Link to Stylesheet-->
+    <link rel="stylesheet" type="text/css" href="us.css"> <!-- DRG Default Stylesheet-->
+    <style type="text/css">
+        /* extra styles hier */
+    </style>
+</head>
+
+
+<body>
+
+<section data-section-name="Clinical information">
+  <header class="level1" data-english="Clinical information">Klinische Angaben</header>
+  <p>
+    Hier können diverse Inhalte stehen.
+  </p>
+</section>
+
+<section data-section-name="Clinical question">
+  <header class="level1" data-english="Clinical question">Fragestellung</header>
+  <p>
+    Hier können diverse Inhalte stehen.
+  </p>
+</section>
+
+<section data-section-name="Findings">
+  <header class="level1" data-english="Findings">Befund</header>
+
+  <p>
+    Jedes Feld benötigt ein zugehöriges label<br />
+    <label for="">Label-Text:&nbsp;</label>
+  </p>
+
+  <textarea id="" name="" data-field-type="TEXTAREA">Dies ist ein Freitextfeld</textarea>
+
+  <p>
+    Dies ist ein Feld für numerische Werte:<br />
+    <code> &lt;input id="" name="" data-field-type="NUMBER" /&gt;</code><br />
+    <input id="" name="" data-field-type="NUMBER" />
+  </p>
+
+  <p>
+    Dies ist ein Feld für kurze Texte:<br />
+    <code> &lt;input id="" name="" data-field-type="TEXT" /&gt;</code><br />
+    <input id="" name="" data-field-type="TEXT" />
+  </p>
+
+</section>

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CT Bronchialkarzinom</title>
+    <meta charset="UTF-8">
+    <!--Dublin Core metadata elements here-->
+    <meta name="dcterms.title" content="CT Bronchialkarzinom">
+    <meta name="dcterms.abstract" content="Befundungstemplate für Bronchialkarzinom (L3, V1, noJS)">
+    <meta name="dcterms.description" content="Gemeinsam mit der AG Thoraxdiagnostik abgestimmtes und im Konsensus verabschiedetes Template. (L3 - AG Thoraxdiagnostik, Version 1, kein Javascript)">
+    <meta name="dcterms.subject" content="CT; ONKO; THX">
+    <meta name="dcterms.identifier" content="041807.1903071337">
+    <meta name="dcterms.type" content="IMAGE_REPORT_TEMPLATE">
+    <meta name="dcterms.language" content="de">
+    <meta name="dcterms.rights" content="Die Deutsche Röntgengesellschaft e.V.(DRG) stellt sämtliche Templates kostenfrei unter der Creative Commons Lizenz  CC BY-NC-ND in der Version 4.0 zur Verfügung. Die Lizenz erlaubt Download und Weiterverteilung des Werkes unter Nennung der DRG als Urheber, jedoch keinerlei Bearbeitung oder kommerzielle Nutzung.">
+    <meta name="dcterms.license" content="http://www.befundung.drg.de/de-DE/3478/creative-commons-lizenz-cc-by-nc-nd">
+    <meta name="dcterms.date" content="2019-03-07">
+    <meta name="dcterms.creator" content="AG Thoraxdiagnostik">
+    <meta name="dcterms.contributor" content="D. Pinto dos Santos">
+    <meta name="dcterms.publisher" content="Deutsche Röntgengesellschaft (DRG)">
+    <!--RadLex entries-->
+    <script type="text/xml">
+        <!--
+        <template_attributes>
+        <top-level-flag>0</top-level-flag>
+        <status>ACTIVE</status>
+        <coding_schemes>
+            <coding_scheme name="RadLex" designator="2.16.840.1.113883.6.256" />
+        </coding_schemes>
+        </template_attributes>
+		-->
+    </script>
+    <!--Link to Stylesheet-->
+    <link rel="stylesheet" type="text/css" href="./drg.css"> <!-- DRG Default Stylesheet-->
+    <style type="text/css">
+        /* extra styles hier */
+        td { border: 1px solid black; vertical-align: top;}
+    </style>
+</head>
+
+
+<body>
+
+<section data-section-name="Clinical information">
+  <header class="level1" data-english="Clinical information">Klinische Angaben</header>
+  <p>
+      <textarea name="ct_bc_Angaben" id="ct_bc_Angaben"></textarea>
+  </p>
+  <table>
+    <tr>
+      <td><label for="ct_bc_histol">Histologie</label></td>
+      <td>
+          <select name="ct_bc_histol" id="ct_bc_histol">
+              <option value="ausstehend">ausstehend</option>
+              <option value="gesichert">gesichert</option>
+          </select>
+      </td>
+      <td><input type="text" name="mr_rectalca_histol_info" id="mr_rectalca_histol_info" data-field-type="TEXT"></td>
+    </tr>
+  </table>
+</section>
+
+<section data-section-name="Clinical question">
+  <header class="level1" data-english="Clinical question">Fragestellung</header>
+  <p>
+      <textarea name="ct_bc_Fragestellung" id="ct_bc_Fragestellung"></textarea>
+  </p>
+</section>
+
+<section data-section-name="Findings">
+  <header class="level1" data-english="Findings">Befund</header>
+  <table>
+      <tr>
+          <td><label for="ct_bc_comparison">Vergleichsuntersuchung:</label></td>
+          <td>
+              <select name="ct_bc_comparison" id="ct_bc_comparison">
+                  <option value="keine">keine</option>
+                  <option value="vorliegend">vorliegend</option>
+              </select>&nbsp;&nbsp;&nbsp;
+              <input name="ct_bc_comparison_date" id="ct_bc_comparison_date" type="date" data-field-type="DATE">
+          </td>
+      </tr>
+      <tr>
+          <td><label for="mr_rectalca_quality">Bildqualität:</label></td>
+          <td>
+              <select name="mr_rectalca_quality" id="mr_rectalca_quality">
+                  <option value="exzellent">exzellent</option>
+                  <option value="mittel">mittel</option>
+                  <option value="schlecht">schlecht</option>
+              </select>
+          </td>
+      </tr>
+  </table>
+  <table>
+    <tr>
+      <td>
+        <label>Lungenparenchym allgemein</label>
+      </td>
+      <td colspan="2">
+        <select>
+          <option>normal</option>
+          <option>Emphysem</option>
+          <option>Fibrose</option>
+          <option>andere</option>
+        </select>&nbsp;&nbsp;&nbsp;
+        <input />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Index-Lungenläsion
+      </td>
+      <td>
+        Lokalisation
+      </td>
+      <td>
+        <select>
+          <option>Oberlappen</option>
+          <option>Mittellappen</option>
+          <option>Unterlappen</option>
+        </select>&nbsp;
+        <select>
+          <option>rechts</option>
+          <option>links</option>
+        </select>&nbsp;
+        <select>
+          <option>Segment I</option>
+          <option>Segment II</option>
+          <option>Segment III</option>
+          <option>Segment IV</option>
+          <option>Segment V</option>
+          <option>Segment VI</option>
+          <option>Segment VII</option>
+          <option>Segment VIII</option>
+          <option>Segment IV</option>
+          <option>Segment X</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        &nbsp;
+      </td>
+      <td>
+        Größe
+      </td>
+      <td>
+        <input />mm - S/B<input />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        &nbsp;
+      </td>
+      <td>
+        Form
+      </td>
+      <td>
+        <select>
+          <option>rund</option>
+          <option>spikuliert</option>
+          <option>irregulär</option>
+          <option>lobuliert</option>
+          <option>endobronchial</option>
+          <option>sonstige</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        &nbsp;
+      </td>
+      <td>
+        Charakterisierung
+      </td>
+      <td>
+        <select>
+          <option>solide</option>
+          <option>subsolide</option>
+          <option>ground glass</option>
+          <option>nekrotisch</option>
+          <option>kalzifiziert</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        &nbsp;
+      </td>
+      <td>
+        Infiltration
+      </td>
+      <td>
+        <input type="checkbox" />Pleura viszeralis / Bronchus<br />
+        <input type="checkbox" />Pleura parietalis / mediastinales Fett / Perikard / Thoraxwand<br />
+        <input type="checkbox" />Trachea / Carina / große Gefäße / Herz<br />
+        <input type="checkbox" /> Ösophagus / Spinalkanal / Wirbelkörper / Zwerchfell
+      </td>
+    </tr>
+    <tr>
+      <td>
+        &nbsp;
+      </td>
+      <td>
+        Pleura
+      </td>
+      <td>
+        <select>
+          <option>unauffällig</option>
+          <option>verdickt</option>
+          <option>verkalkte Plaques</option>
+          <option>nicht verkalkte Plaques</option>
+        </select>&nbsp;
+        <select>
+          <option>kein Pleuraerguss</option>
+          <option>Pleuraerguss</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        &nbsp;
+      </td>
+      <td>
+        Zwerchfellhochstand
+      </td>
+      <td>
+        <select>
+          <option>nein</option>
+          <option>ja - Phrenicusparese</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        &nbsp;
+      </td>
+      <td>
+        Stimmbandlähmung
+      </td>
+      <td>
+        <select>
+          <option>nein</option>
+          <option>ja - Recurrensparese</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        weitere Lungenläsionen
+      </td>
+      <td>
+        Lokalisation
+      </td>
+      <td>
+        ipsilateral: OL
+        <select>
+          <option>keine</option>
+          <option>1-3</option>
+          <option>>3</option>
+        </select>
+        ML
+        <select>
+         <option>keine</option>
+         <option>1-3</option>
+         <option>>3</option>
+       </select>
+       UL
+       <select>
+        <option>keine</option>
+        <option>1-3</option>
+        <option>>3</option>
+      </select><br />
+      kontralateral: OL
+      <select>
+        <option>keine</option>
+        <option>1-3</option>
+        <option>>3</option>
+      </select>
+      ML
+      <select>
+       <option>keine</option>
+       <option>1-3</option>
+       <option>>3</option>
+     </select>
+     UL
+     <select>
+      <option>keine</option>
+      <option>1-3</option>
+      <option>>3</option>
+    </select>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        &nbsp;
+      </td>
+      <td>
+        Max. Größe
+      </td>
+    </tr>
+    <tr>
+      <td>
+        &nbsp;
+      </td>
+      <td>
+        Charakterisierung
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Lymphknoten regionär
+      </td>
+      <td>
+        ipsilateral hilär / intrapulmonal
+      </td>
+    </tr>
+    <tr>
+      <td>
+        &nbsp;
+      </td>
+      <td>
+        ipsilateral subkarinal
+      </td>
+    </tr>
+    <tr>
+      <td>
+        &nbsp;
+      </td>
+      <td>
+        ipsilateral mediastinal
+      </td>
+    </tr>
+    <tr>
+      <td>
+        &nbsp;
+      </td>
+      <td>
+        kontralateral hilär
+      </td>
+    </tr>
+    <tr>
+      <td>
+        &nbsp;
+      </td>
+      <td>
+        kontralateral mediastinal
+      </td>
+    </tr>
+    <tr>
+      <td>
+        &nbsp;
+      </td>
+      <td>
+        supraclavikulär inkl. Skalenus
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Lymphknoten distant
+      </td>
+      <td>
+        <input />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Leber
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Nebenniere
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Knochen
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Gehirn
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Sonstiges
+      </td>
+      <td colspan="2">
+        <textarea></textarea>
+      </td>
+    </tr>
+  </table>
+</section>
+
+<section data-section-name="Beurteilung">
+    <header class="level1" data-english="Impression">Beurteilung</header>
+    <p>
+        <textarea name="ct_bc_Beurteilung" id="ct_bc_Beurteilung" data-english-name="Impression" title="Text bitte entsprechend Befund ergänzen / ändern!"></textarea>
+    </p>
+    <p><label for="ct_bc_TNM">Insgesamt TNM</label>: <input id="ct_bc_TNM" name="ct_bc_TNM" title="Bitte Format: ctT__N__M__ " data-field-type="TEXT"></p>
+</section>
+
+
+</body>
+</html>
