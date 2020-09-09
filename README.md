@@ -36,35 +36,35 @@ Die folgenden Befundvorlagen sind bereits erstellt worden und sind hier im Ordne
 Der Arbeitskreis kooperiert eng mit den entsprechenden Initiativen der ESR und der RSNA, die Befundvorlagen werden daher im weiteren Verlauf auch auf der gemeinsamen Webseite von ESR und RSNA www.radreport.org veröffentlicht.
 
 ### CT
-             | Kategorie | befundung.drg.de | radreport.org | Publikation
+Titel             | Kategorie | befundung.drg.de | radreport.org | Publikation
 ------------------|---------------------------|---------|---------|--------
-**KHK**            | Cardio | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/041807.2.1810090000-ct_khk.html/) | [Link](https://radreport.org/home/RPT50784/2020-06-19%2010:44:15) |
-**Pankreaskarzinom solide** | Onko | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/041807.2.1810250618-ct_pankreasca_s.html/) | [Link](https://radreport.org/home/RPT50785/2020-06-19%2010:43:34) | [RöFo](https://doi.org/10.1055/a-1150-8217)
-**Pankreaskarzinom zystisch** | Onko | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/041807.2.1811161508-ct_pankreasca_z.html/) | | [RöFo](https://doi.org/10.1055/a-1150-8217) |
-**Lungenembolie**   | Thorax | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/CT-Thorax_Lungenembolie.html/ ) | [Link](https://radreport.org/home/RPT50783/2020-06-19%2010:44:53) | |
+_**KHK**_            | Cardio | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/041807.2.1810090000-ct_khk.html/) | [Link](https://radreport.org/home/RPT50784/2020-06-19%2010:44:15) |
+_**Pankreaskarzinom solide**_ | Onko | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/041807.2.1810250618-ct_pankreasca_s.html/) | [Link](https://radreport.org/home/RPT50785/2020-06-19%2010:43:34) | [RöFo](https://doi.org/10.1055/a-1150-8217)
+_**Pankreaskarzinom zystisch**_ | Onko | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/041807.2.1811161508-ct_pankreasca_z.html/) | | [RöFo](https://doi.org/10.1055/a-1150-8217) |
+_**Lungenembolie**_  | Thorax | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/CT-Thorax_Lungenembolie.html/ ) | [Link](https://radreport.org/home/RPT50783/2020-06-19%2010:44:53) | |
 
 ### MRT
-             | Kategorie | befundung.drg.de | radreport.org | Publikation
+Titel             | Kategorie | befundung.drg.de | radreport.org | Publikation
 ------------------|---------------------------|---------|---------|----------
-**ARVD**              | Cardio | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/041807.3.1911201810-mrt_arvd.html) | | [RöFo](https://doi.org/10.1055/a-0998-4116) |
-**Siderose**          | Cardio | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/041807.3.1911200913-mrt_siderose.html) | | [RöFo](https://doi.org/10.1055/a-0998-4116) |
-**Myokarditis**       | Cardio | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/041807.3.1911200957-mrt_myokarditis.html) | | [RöFo](https://doi.org/10.1055/a-0998-4116) |
-**HCM / HOCM**        | Cardio | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/041807.3.1911201758-mrt_hocm.html) | | [RöFo](https://doi.org/10.1055/a-0998-4116) |
-**Rektum-Ca**         | Onko   | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/041807.00001-mrt_rectalca.html) | [Link](https://radreport.org/home/RPT50786/2020-06-19%2010:40:33) |
+_**ARVD**_              | Cardio | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/041807.3.1911201810-mrt_arvd.html) | | [RöFo](https://doi.org/10.1055/a-0998-4116) |
+_**Siderose**_          | Cardio | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/041807.3.1911200913-mrt_siderose.html) | | [RöFo](https://doi.org/10.1055/a-0998-4116) |
+_**Myokarditis**_       | Cardio | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/041807.3.1911200957-mrt_myokarditis.html) | | [RöFo](https://doi.org/10.1055/a-0998-4116) |
+_**HCM / HOCM**_        | Cardio | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/041807.3.1911201758-mrt_hocm.html) | | [RöFo](https://doi.org/10.1055/a-0998-4116) |
+_**Rektum-Ca**_         | Onko   | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/041807.00001-mrt_rectalca.html) | [Link](https://radreport.org/home/RPT50786/2020-06-19%2010:40:33) |
 
 ### US
-             | Kategorie | befundung.drg.de | radreport.org
+Titel             | Kategorie | befundung.drg.de | radreport.org
 ------------------|---------------------------|---------|---------
-**Carotis**              | Cardio | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/041807.00002-us_carotis.html) |
-**FAST**                | Trauma | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/041807.00004-us_fast.html) |
-**Hüftscreening**     | Kinder | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/041807.00003-us_hueftscreening.html) | [Link](https://radreport.org/home/RPT50787/2020-06-19%2010:41:21)
+_**Carotis**_              | Cardio | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/041807.00002-us_carotis.html) |
+_**FAST**_                | Trauma | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/041807.00004-us_fast.html) |
+_**Hüftscreening**_     | Kinder | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/041807.00003-us_hueftscreening.html) | [Link](https://radreport.org/home/RPT50787/2020-06-19%2010:41:21)
 
 ### Sonstige
-             | Kategorie | befundung.drg.de | radreport.org
+Titel             | Kategorie | befundung.drg.de | radreport.org
 ------------------|---------------------------|---------|---------
-**LTx-Evaluation** | Onko | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/041807.00005-gen_ltx_hcc.html) |
-**RECIST 1.1** | Onko | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/041807.00006-gen_recist11.html) |
-**Generischer Befund** | allgemein | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/din25300.html) |
+_**LTx-Evaluation**_ | Onko | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/041807.00005-gen_ltx_hcc.html) |
+_**RECIST 1.1**_ | Onko | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/041807.00006-gen_recist11.html) |
+_**Generischer Befund**_ | allgemein | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/din25300.html) |
 
 
 [cc-by]: http://creativecommons.org/licenses/by/4.0/
