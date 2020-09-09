@@ -18,6 +18,8 @@ Weitere Informationen stehen auch unter www.befundung.drg.de zur Verfügung.
 
 ## Roadmap
 
+Als Teil einer neuen klareren Strategie wurden seitens der DRG in Abstimmung mit dem Arbeitskreis die folgenden Befundvorlagen priorisiert. Der Arbeitskreis wird aktiv auf die entsprechenden organ- bzw. pathologiespezifischen AGs zugehen und entsprechend konsentierte Befundvorlagen in ein interoperables HTML-Format nach IHE MRRT überführen.
+
 bis Q2/2021                 | bis Q2/2022
 ----------------------------|---------------------------
 CT TAVI                     | CT Primärstaging Lungenkarzinom
@@ -29,21 +31,25 @@ CT COVID                    |
 
 ## Fertige Befundvorlagen
 
+Die folgenden Befundvorlagen sind bereits erstellt worden. Sowohl die sonstigen Befundungvorlagen als auch die Befundvorlagen zu Ultraschalluntersuchungen sind nicht formell konsentiert worden, sondern aus einer vergangenen Initiative übernommen worden. In Zukunft werden jedoch nur mit den jeweiligen AGs abgesprochene und in einem entsprechenden Konsensprozess abgestimmte Befundvorlagen aufgenommen werden.
+
+Der Arbeitskreis kooperiert eng mit den entsprechenden Initiativen der ESR und der RSNA, die Befundvorlagen werden daher im weiteren Verlauf auch auf der gemeinsamen Webseite von ESR und RSNA www.radreport.org veröffentlicht.
+
 ### CT
-Titel             | Kategorie | Link auf befundung.drg.de | Link auf radreport.org
-------------------|---------------------------|---------|---------
-KHK            | Cardio | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/041807.2.1810090000-ct_khk.html/) | [Link](https://radreport.org/home/RPT50784/2020-06-19%2010:44:15)
-Pankreaskarzinom solide | Onko | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/041807.2.1810250618-ct_pankreasca_s.html/) | [Link](https://radreport.org/home/RPT50785/2020-06-19%2010:43:34)
-Pankreaskarzinom zystisch | Onko | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/041807.2.1811161508-ct_pankreasca_z.html/) |
-Lungenembolie   | Thorax | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/CT-Thorax_Lungenembolie.html/ ) | [Link](https://radreport.org/home/RPT50783/2020-06-19%2010:44:53)
+Titel             | Kategorie | befundung.drg.de | radreport.org | Publikation
+------------------|---------------------------|---------|---------|--------
+KHK            | Cardio | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/041807.2.1810090000-ct_khk.html/) | [Link](https://radreport.org/home/RPT50784/2020-06-19%2010:44:15) |
+Pankreaskarzinom solide | Onko | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/041807.2.1810250618-ct_pankreasca_s.html/) | [Link](https://radreport.org/home/RPT50785/2020-06-19%2010:43:34) | [RöFo](https://doi.org/10.1055/a-1150-8217)
+Pankreaskarzinom zystisch | Onko | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/041807.2.1811161508-ct_pankreasca_z.html/) | [RöFo](https://doi.org/10.1055/a-1150-8217) |
+Lungenembolie   | Thorax | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/CT-Thorax_Lungenembolie.html/ ) | [Link](https://radreport.org/home/RPT50783/2020-06-19%2010:44:53) |
 
 ### MRT
-Titel             | Kategorie | Link auf befundung.drg.de | Link auf radreport.org
-------------------|---------------------------|---------|---------
-ARVD              | Cardio | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/041807.3.1911201810-mrt_arvd.html) |
-Siderose          | Cardio | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/041807.3.1911200913-mrt_siderose.html) |
-Myokarditis       | Cardio | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/041807.3.1911200957-mrt_myokarditis.html) |
-HCM / HOCM        | Cardio | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/041807.3.1911201758-mrt_hocm.html) |
+Titel             | Kategorie | Link auf befundung.drg.de | Link auf radreport.org | Publikation
+------------------|---------------------------|---------|---------|----------
+ARVD              | Cardio | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/041807.3.1911201810-mrt_arvd.html) | [RöFo](https://doi.org/10.1055/a-0998-4116) |
+Siderose          | Cardio | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/041807.3.1911200913-mrt_siderose.html) | [RöFo](https://doi.org/10.1055/a-0998-4116) |
+Myokarditis       | Cardio | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/041807.3.1911200957-mrt_myokarditis.html) | [RöFo](https://doi.org/10.1055/a-0998-4116) |
+HCM / HOCM        | Cardio | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/041807.3.1911201758-mrt_hocm.html) | [RöFo](https://doi.org/10.1055/a-0998-4116) |
 Rektum-Ca         | Onko   | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/041807.00001-mrt_rectalca.html) | [Link](https://radreport.org/home/RPT50786/2020-06-19%2010:40:33)
 
 ### US
