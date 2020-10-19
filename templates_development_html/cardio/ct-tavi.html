@@ -7,7 +7,7 @@
     <meta name="dcterms.abstract" content="Strukturierte Befundvorlage: CT TAVI-Evaluation" />
     <meta name="dcterms.description" content="Template zur Befundung von CT TAVI-Evaluationen" />
     <meta name="dcterms.subject" content="CT; CARDIO;" />
-    <meta name="dcterms.identifier" content="041807.2.2010062340" />
+    <meta name="dcterms.identifier" content="041807.2.2010192108" />
     <meta name="dcterms.type" content="IMAGE_REPORT_TEMPLATE" />
     <meta name="dcterms.language" content="de" />
     <meta name="dcterms.rights" content="Die Deutsche Röntgengesellschaft e. V. (DRG) stellt sämtliche Templates kostenfrei unter der Creative Commons Lizenz CC BY-NC-ND in der Version 4.0 zur Verfügung. Die Lizenz erlaubt Download und Weiterverteilung des Werkes unter Nennung der DRG als Urheber, jedoch keinerlei Bearbeitung oder kommerzielle Nutzung." />
@@ -36,14 +36,14 @@
 	/*]]>*/
     </style>
     <script type="text/javascript">
-    /*<![CDATA[*/
-    function linkCheckboxNumberField(checkboxId, numberFieldId)
-    {
+	/*<![CDATA[*/
+	function linkCheckboxNumberField(checkboxId, numberFieldId)
+	{
 		document.getElementById(numberFieldId).onchange = function(e)
 		{
 			document.getElementById(checkboxId).checked = e.target.value != 0;
 		};
-    }
+	}
 	window.onload = function(e)
 	{
 		linkCheckboxNumberField("ct_tavi_premedication_nitro_applied", "ct_tavi_premedication_nitro_dose");
