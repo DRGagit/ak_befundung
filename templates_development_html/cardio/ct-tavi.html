@@ -24,15 +24,33 @@
     </script>
     <link rel="stylesheet" href="drg.css" />
     <style type="text/css">
-        /* TODO Consider merging style definitions into drg.css if proven generally useful. */
-		table { box-sizing: border-box; width: 100%; }
-		th { vertical-align: top; padding: 0 15px 0 0; }
-		.baselinesensitive { vertical-align: baseline; }
-		td > label { white-space: nowrap; }
-		tr > td { width: 1px; }
-		tr > td:last-child { width: 100%; padding: 0; }
-		input.longtext { width: 100%; }
+    /*<![CDATA[*/
+	/* TODO Consider merging style definitions into drg.css if proven generally useful. */
+	table { box-sizing: border-box; width: 100%; }
+	th { vertical-align: top; padding: 0 15px 0 0; }
+	.baselinesensitive { vertical-align: baseline; }
+	td > label { white-space: nowrap; }
+	tr > td { width: 1px; }
+	tr > td:last-child { width: 100%; padding: 0; }
+	input.longtext { width: 100%; }
+	/*]]>*/
     </style>
+    <script type="text/javascript">
+    /*<![CDATA[*/
+    function linkCheckboxNumberField(checkboxId, numberFieldId)
+    {
+		document.getElementById(numberFieldId).onchange = function(e)
+		{
+			document.getElementById(checkboxId).checked = e.target.value != 0;
+		};
+    }
+	window.onload = function(e)
+	{
+		linkCheckboxNumberField("ct_tavi_premedication_nitro_applied", "ct_tavi_premedication_nitro_dose");
+		linkCheckboxNumberField("ct_tavi_premedication_metoprolol_applied", "ct_tavi_premedication_metoprolol_dose");
+	}
+	/*]]>*/
+    </script>
   </head>
   <body>
     <section data-section-name="Klinische Angaben" data-section-required="true">
@@ -53,8 +71,33 @@
     <section data-section-name="Method" data-section-required="true">
       <header class="level1" data-english="Method">Methodik</header>
       <table>
-        <tr><td><label for="ct_tavi_premedication">Prämedikation:</label></td><td><textarea id="ct_tavi_premedication" name="ct_tavi_premedication" data-field-type="TEXTAREA">Die Untersuchung wurde mit Nitraten (2 Hübe Nitro sublingual) durchgeführt. Gabe von x mg Metoprolol i. v. zur Frequenzkontrolle.</textarea></td></tr>
-        <tr><td><label for="ct_tavi_method">Technik:</label></td><td><textarea id="ct_tavi_method" name="ct_tavi_method" data-field-type="TEXTAREA">Standard retrospektives Gating. Herzphase: Nachbearbeitung: 3D-Rekonstruktion, 4D-Rekonstruktion und separate koronare MPRs.</textarea></td></tr>
+        <tr>
+          <th>
+            Prämedikation
+          </th>
+          <td>
+            Die Untersuchung wurde unter folgender Medikation durchgeführt:
+            <table>
+              <tr>
+                <td>
+                  <input id="ct_tavi_premedication_nitro_applied" name="ct_tavi_premedication_nitro_applied" type="checkbox" value="Nitro sublingual" data-field-type="CHECKBOX" /><label for="ct_tavi_premedication_nitro_applied">Nitro sublingual</label>
+                </td>
+                <td><input id="ct_tavi_premedication_nitro_dose" name="ct_tavi_premedication_nitro_dose" type="number" min="0" max="100" step="1" value="0" data-field-type="NUMBER"> Hübe.</td>
+              </tr>
+              <tr>
+                <td>
+                  <input id="ct_tavi_premedication_metoprolol_applied" name="ct_tavi_premedication_metoprolol_applied" type="checkbox" value="Metoprolol" data-field-type="CHECKBOX" /><label for="ct_tavi_premedication_metoprolol_applied">Metoprolol</label>
+                </td>
+                <td><input id="ct_tavi_premedication_metoprolol_dose" name="ct_tavi_premedication_metoprolol_dose" type="number" min="0" max="1000" step="1" value="0" data-field-units="mg" data-field-type="NUMBER"> mg zur Frequenzkontrolle.</td>
+              </tr>
+            </table>
+            <textarea id="ct_tavi_premedication_comment" name="ct_tavi_premedication_comment" data-field-type="TEXTAREA"></textarea>
+          </td>
+        </tr>
+        <tr><td><label for="ct_tavi_method">Technik:</label></td><td><textarea id="ct_tavi_method" name="ct_tavi_method" data-field-type="TEXTAREA">Standard retrospektives Gating.
+Herzphase:
+Nachbearbeitung:
+3D-Rekonstruktion, 4D-Rekonstruktion und separate koronare MPRs.</textarea></td></tr>
       </table>
     </section>
     <section data-section-name="Befund" data-section-required="true">
@@ -161,7 +204,7 @@
         </tr>
         <tr>
           <td><label for="ct_tavi_area">Fläche:</label></td>
-          <td><input type="number" id="ct_tavi_area" name="ct_tavi_area" min="0" max="100" step="0.1" data-field-units="mm²" data-field-type="NUMBER" /> mm<sup>2</sup></td>
+          <td><input type="number" id="ct_tavi_area" name="ct_tavi_area" min="0" max="100" step="0.1" data-field-units="mm2" data-field-type="NUMBER" /> mm<sup>2</sup></td>
         </tr>
         <tr>
           <td><label for="ct_tavi_rca_distance">Abstand zum Abgang der RCA:</label></td>
@@ -172,29 +215,37 @@
           <td><input type="number" id="ct_tavi_lca_distance" name="ct_tavi_lca_distance" min="0" max="1000" step="0.1" data-field-units="mm" data-field-type="NUMBER" /> mm</td>
         </tr>
         <tr>
-          <th colspan="2">Annulus-Angulation orthograd auf RCA:</th>
+          <th>Annulus-Angulation orthograd auf RCA:</th>
+          <td>
+            <table>
+              <tr>
+                <td><label for="ct_tavi_angulation_rao">RAO:</label></td>
+                <td><input type="number" id="ct_tavi_angulation_rao" name="ct_tavi_angulation_rao" min="0" max="360" step="0.1" data-field-units="deg" data-field-type="NUMBER" /> °</td>
+              </tr>
+              <tr>
+                <td><label for="ct_tavi_angulation_caudal">Caudal:</label></td>
+                <td><input type="number" id="ct_tavi_angulation_caudal" name="ct_tavi_angulation_caudal" min="0" max="360" step="0.1" data-field-units="deg" data-field-type="NUMBER" /> °</td>
+            </tr>
+            </table>
+          </td>
         </tr>
         <tr>
-          <td><label for="ct_tavi_angulation_rao">RAO:</label></td>
-          <td><input type="number" id="ct_tavi_angulation_rao" name="ct_tavi_angulation_rao" min="0" max="360" step="0.1" data-field-units="deg" data-field-type="NUMBER" /> °</td>
+          <th>Arterieller Zugangsweg mit minimalem Gefäßdurchmesser:</th>
+          <td>
+            <table>
+              <tr>
+                <td><label for="ct_tavi_right_iliofemoral_access_least_caliber">Rechts iliofemoral:</label></td>
+                <td><input type="number" id="ct_tavi_right_iliofemoral_access_least_caliber" name="ct_tavi_right_iliofemoral_access_least_caliber" min="0" max="100" step="0.1" data-field-units="mm" data-field-type="NUMBER" /> mm</td>
+              </tr>
+              <tr>
+                <td><label for="ct_tavi_left_iliofemoral_access_least_caliber">Links iliofemoral:</label></td>
+                <td><input type="number" id="ct_tavi_left_iliofemoral_access_least_caliber" name="ct_tavi_left_iliofemoral_access_least_caliber" min="0" max="100" step="0.1" data-field-units="mm" data-field-type="NUMBER" /> mm</td>
+              </tr>
+            </table>
+          </td>
         </tr>
         <tr>
-          <td><label for="ct_tavi_angulation_caudal">Caudal:</label></td>
-          <td><input type="number" id="ct_tavi_angulation_caudal" name="ct_tavi_angulation_caudal" min="0" max="360" step="0.1" data-field-units="deg" data-field-type="NUMBER" /> °</td>
-        </tr>
-        <tr>
-          <th colspan="2">Arterieller Zugangsweg mit minimalem Gefäßdurchmesser:</th>
-        </tr>
-        <tr>
-          <td><label for="ct_tavi_right_iliofemoral_access_least_caliber">Rechts iliofemoral:</label></td>
-          <td><input type="number" id="ct_tavi_right_iliofemoral_access_least_caliber" name="ct_tavi_right_iliofemoral_access_least_caliber" min="0" max="100" step="0.1" data-field-units="mm" data-field-type="NUMBER" /> mm</td>
-        </tr>
-        <tr>
-          <td><label for="ct_tavi_left_iliofemoral_access_least_caliber">Links iliofemoral:</label></td>
-          <td><input type="number" id="ct_tavi_left_iliofemoral_access_least_caliber" name="ct_tavi_left_iliofemoral_access_least_caliber" min="0" max="100" step="0.1" data-field-units="mm" data-field-type="NUMBER" /> mm</td>
-        </tr>
-        <tr>
-          <td class="textarealabel"><label for="ct_tavi_impression_comment">Weitere Bemerkungen:</label></td>
+          <td class="textarealabel"><label for="ct_tavi_impression_comment">Weitere Beurteilung:</label></td>
           <td><textarea id="ct_tavi_impression_comment" name="ct_tavi_impression_comment" data-field-type="TEXTAREA"></textarea></td>
         </tr>
       </table>
