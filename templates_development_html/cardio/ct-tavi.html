@@ -23,35 +23,6 @@
       </template_attributes>
     </script>
     <link rel="stylesheet" href="drg.css" />
-    <style type="text/css">
-	/*<![CDATA[*/
-	/* TODO Consider merging style definitions into drg.css if proven generally useful. */
-	table { box-sizing: border-box; width: 100%; }
-	th { vertical-align: top; padding: 0 15px 0 0; }
-	.baseline { vertical-align: baseline; }
-	td > label { white-space: nowrap; }
-	tr > td { width: 1px; }
-	tr > td:last-child { width: 100%; padding: 0; }
-	input.longtext { width: 100%; }
-	textarea.autoheight { height: auto !important; }
-	/*]]>*/
-    </style>
-    <script type="text/javascript">
-	/*<![CDATA[*/
-	function linkCheckboxNumberField(checkboxId, numberFieldId)
-	{
-		document.getElementById(numberFieldId).onchange = function(e)
-		{
-			document.getElementById(checkboxId).checked = e.target.value != 0;
-		};
-	}
-	window.onload = function(e)
-	{
-		linkCheckboxNumberField("ct_tavi_premedication_nitro_applied", "ct_tavi_premedication_nitro_dose");
-		linkCheckboxNumberField("ct_tavi_premedication_metoprolol_applied", "ct_tavi_premedication_metoprolol_dose");
-	}
-	/*]]>*/
-    </script>
   </head>
   <body>
     <section data-section-name="Klinische Angaben" data-section-required="true">
@@ -59,7 +30,7 @@
       <textarea name="ct_tavi_clinical_information" data-field-type="TEXTAREA"></textarea>
       <table>
         <tr><th>EKG</th><th></th></tr>
-        <tr><td><label for="ct_tavi_ekg_mean_hf">Mittlere Herzfrequenz:</label></td><td><input type="number" id="ct_tavi_ekg_mean_hf" name="ct_tavi_ekg_mean_hf" min="1" max="400" step="1" data-field-unit="per minute" data-field-type="NUMBER" />/min</td>
+        <tr><td><label for="ct_tavi_ekg_mean_hf">Mittlere Herzfrequenz:</label></td><td><input type="number" id="ct_tavi_ekg_mean_hf" name="ct_tavi_ekg_mean_hf" min="1" max="400" step="1" data-field-units="/min" data-field-type="NUMBER" />/min</td>
         <tr><td><label for="ct_tavi_ekg_notes">EKG-Befund/Kommentar:</label><td><textarea id="ct_tavi_ekg_notes" name="ct_tavi_ekg_notes" data-field-type="TEXTAREA"></textarea></td></tr>
       </table>
     </section>
@@ -77,18 +48,13 @@
             Prämedikation
           </th>
           <td>
-            Die Untersuchung wurde unter folgender Medikation durchgeführt:
             <table>
               <tr>
-                <td>
-                  <input id="ct_tavi_premedication_nitro_applied" name="ct_tavi_premedication_nitro_applied" type="checkbox" value="Nitro sublingual" data-field-type="CHECKBOX" /><label for="ct_tavi_premedication_nitro_applied">Nitro sublingual</label>
-                </td>
+                <td><label for="ct_tavi_premedication_nitro_dose">Nitro sublingual:</label></td>
                 <td><input id="ct_tavi_premedication_nitro_dose" name="ct_tavi_premedication_nitro_dose" type="number" min="0" max="100" step="1" value="0" data-field-type="NUMBER"> Hübe.</td>
               </tr>
               <tr>
-                <td>
-                  <input id="ct_tavi_premedication_metoprolol_applied" name="ct_tavi_premedication_metoprolol_applied" type="checkbox" value="Metoprolol" data-field-type="CHECKBOX" /><label for="ct_tavi_premedication_metoprolol_applied">Metoprolol</label>
-                </td>
+                <td><label for="ct_tavi_premedication_metoprolol_dose">Metoprolol:</label></td>
                 <td><input id="ct_tavi_premedication_metoprolol_dose" name="ct_tavi_premedication_metoprolol_dose" type="number" min="0" max="1000" step="1" value="0" data-field-units="mg" data-field-type="NUMBER"> mg zur Frequenzkontrolle.</td>
               </tr>
             </table>
@@ -166,9 +132,6 @@ Nachbearbeitung:
               </tr>
             </table>
           </td>
-        </tr>
-        <tr>
-          <th class="baseline">TAVI-Parameter:</th><td class="baseline">Siehe Beurteilung.</td>
         </tr>
         <tr>
           <td class="textarealabel"><label for="ct_tavi_findings_coronar_arteries">Koronararterien:</label></td>
