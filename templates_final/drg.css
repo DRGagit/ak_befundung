@@ -5,14 +5,14 @@
         Author: Oli Feiler
 
     Modified to format DRG templates.
+    Modified by Daniel Pinto dos Santos (last update 30-Oct-2020)
 
-    @date 2018-06-07
 */
 
 /* -- STANDARD ---------------------------------------------------------------------- */
 /*td{padding:0 15px 10px 0 !important;vertical-align:middle !important;}*/
 td{padding:0 15px 10px 0; vertical-align:top}
-th{padding-right:15px !important;text-align:left !important;}
+th{padding-right:15px !important;text-align:left !important; vertical-align:top}
 section header.level1{display:block;font-weight:bold;font-size:20px;color:#337ab7;margin:0 0 10px 0 !important;padding:0;} /* Class secetor inserted */
 section header.level2{display:block;font-size:16px;color:#337ab7;margin:0 0 10px 0 !important;padding:0;} /* Added */
 section header.level3{display:block;font-size:14px;color:#337ab7;margin:0 0 10px 0 !important;padding:0;} /* Added */
