@@ -10,66 +10,56 @@
     <meta name="dcterms.identifier" content="041807.2.2210200920" />
     <meta name="dcterms.type" content="IMAGE_REPORT_TEMPLATE" />
     <meta name="dcterms.language" content="de" />
-    <meta name="dcterms.rights" content="Die Deutsche Röntgengesellschaft e. V. (DRG) stellt sämtliche Templates kostenfrei unter der Creative Commons Lizenz CC BY-NC-ND in der Version 4.0 zur Verfügung. Die Lizenz erlaubt Download und Weiterverteilung des Werkes unter Nennung der DRG als Urheber, jedoch keinerlei Bearbeitung oder kommerzielle Nutzung." />
-    <meta name="dcterms.license" content="http://www.befundung.drg.de/de-DE/3478/creative-commons-lizenz-cc-by-nc-nd" />
-    <meta name="dcterms.date" content="2020-10-22" />
+    <meta name="dcterms.rights" content="Die Deutsche Röntgengesellschaft e. V. (DRG) stellt sämtliche Templates kostenfrei unter der Creative Commons Lizenz CC BY in der Version 4.0 zur Verfügung. Die Lizenz erlaubt Download und Weiterverteilung des Werkes unter Nennung der DRG als Urheber" />
+    <meta name="dcterms.license" content="https://github.com/DRGagit/ak_befundung/blob/master/LICENSE" />
+    <meta name="dcterms.date" content="2020-10-30" />
     <meta name="dcterms.creator" content="AG Herz- und Gefäßdiagnostik" />
     <meta name="dcterms.contributor" content="Jan Preuss (Kodierung)" />
     <meta name="dcterms.publisher" content="Deutsche Röntgengesellschaft (DRG)" />
+    
     <script type="text/xml">
       <template_attributes>
         <top-level-flag>0</top-level-flag>
         <status>ACTIVE</status>
       </template_attributes>
     </script>
+    
+    <!--Link to Stylesheet-->
     <link rel="stylesheet" href="drg.css" />
-    <!-- <style type="text/css">
-	/*<![CDATA[*/
-	/* TODO Consider merging style definitions into drg.css if proven generally useful. */
-	table { box-sizing: border-box; width: 100%; }
-	th { vertical-align: top; padding: 0 15px 0 0; }
-	.baseline { vertical-align: baseline; }
-	td > label { white-space: nowrap; }
-	tr > td { width: 1px; }
-	tr > td:last-child { width: 100%; padding: 0; }
-	input.longtext { width: 100%; }
-	textarea.autoheight { height: auto !important; }
-	/*]]>*/
-    </style>
-    <script type="text/javascript">
-	/*<![CDATA[*/
-	function linkCheckboxNumberField(checkboxId, numberFieldId)
-	{
-		document.getElementById(numberFieldId).onchange = function(e)
-		{
-			document.getElementById(checkboxId).checked = e.target.value != 0;
-		};
-	}
-	window.onload = function(e)
-	{
-		linkCheckboxNumberField("ct_tavi_premedication_nitro_applied", "ct_tavi_premedication_nitro_dose");
-		linkCheckboxNumberField("ct_tavi_premedication_metoprolol_applied", "ct_tavi_premedication_metoprolol_dose");
-	}
-	/*]]>*/
-    </script> -->
+  
   </head>
   <body>
     <section data-section-name="Klinische Angaben" data-section-required="true">
       <header class="level1" data-english="Clinical information">Klinische Angaben</header>
-      <textarea name="ct_tavi_clinical_information" data-field-type="TEXTAREA"></textarea>
+        
+        <p>
+            <textarea name="ct_tavi_clinical_information" id = "ct_tavi_clinical_information" data-field-type="TEXTAREA"></textarea>
+        </p>
+      
       <table>
-        <tr><th>EKG</th><th></th></tr>
-        <tr><td><label for="ct_tavi_ekg_mean_hf">Mittlere Herzfrequenz:</label></td><td><input type="number" id="ct_tavi_ekg_mean_hf" name="ct_tavi_ekg_mean_hf" min="1" max="400" step="1" data-field-units="/min" data-field-type="NUMBER" />/min</td>
-        <tr><td><label for="ct_tavi_ekg_notes">EKG-Befund/Kommentar:</label><td><textarea id="ct_tavi_ekg_notes" name="ct_tavi_ekg_notes" data-field-type="TEXTAREA"></textarea></td></tr>
+        <tr>
+            <th>EKG</th>
+            <th>&nbsp;</th>
+        </tr>
+        <tr>
+            <td><label for="ct_tavi_ekg_mean_hf">Mittlere Herzfrequenz:</label></td>
+            <td><input type="number" id="ct_tavi_ekg_mean_hf" name="ct_tavi_ekg_mean_hf" min="1" max="400" step="1" data-field-units="/min" data-field-type="NUMBER" />/min</td>
+          </tr>
+        <tr>
+            <td><label for="ct_tavi_ekg_notes">EKG-Befund/Kommentar:</label></td>
+            <td><textarea id="ct_tavi_ekg_notes" name="ct_tavi_ekg_notes" data-field-type="TEXTAREA"></textarea></td>
+          </tr>
       </table>
     </section>
-    <section data-section-name="Klinische Fragestellung" data-section-required="true">
+      
+    <section data-section-name="Klinische Fragestellung">
       <header class="level1" data-english="Clinical question">Klinische Fragestellung</header>
       <p>
         <textarea name="ct_tavi_clinical_question" data-field-type="TEXTAREA"></textarea>
       </p>
     </section>
-    <section data-section-name="Method" data-section-required="true">
+      
+    <section data-section-name="Method">
       <header class="level1" data-english="Method">Methodik</header>
       <table>
         <tr>
@@ -86,31 +76,49 @@
                 <td><label for="ct_tavi_premedication_metoprolol_dose">Metoprolol:</label></td>
                 <td><input id="ct_tavi_premedication_metoprolol_dose" name="ct_tavi_premedication_metoprolol_dose" type="number" min="0" max="1000" step="1" value="0" data-field-units="mg" data-field-type="NUMBER"> mg zur Frequenzkontrolle.</td>
               </tr>
+                <tr>
+                    <td><label for="ct_tavi_premedication_sonstiges">Sonstiges:</label></td>
+                    <td><input id="ct_tavi_premedication_sonstiges" name="ct_tavi_premedication_sonstiges" type="text" data-field-type="TEXT"></td>
+                </tr>
             </table>
-            <textarea id="ct_tavi_premedication_comment" name="ct_tavi_premedication_comment" data-field-type="TEXTAREA"></textarea>
           </td>
         </tr>
-        <tr><td><label for="ct_tavi_method">Technik:</label></td><td><textarea id="ct_tavi_method" name="ct_tavi_method" data-field-type="TEXTAREA">Standard retrospektives Gating.
+        <tr>
+            <td><label for="ct_tavi_method">Technik:</label></td>
+            <td>
+                <textarea id="ct_tavi_method" name="ct_tavi_method" data-field-type="TEXTAREA">Standard retrospektives Gating.
 Herzphase:
 Nachbearbeitung:
-3D-Rekonstruktion, 4D-Rekonstruktion und separate koronare MPRs.</textarea></td></tr>
+3D-Rekonstruktion, 4D-Rekonstruktion und separate koronare MPRs.</textarea>
+            </td>
+          </tr>
       </table>
     </section>
+      
     <section data-section-name="Befund" data-section-required="true">
       <header class="level1">Befund</header>
       <table>
-        </tr><td><label for="ct_tavi_quality">Qualität</label></td><td><input type="text" id="ct_tavi_quality" name="ct_tavi_quality" class="longtext" data-field-type="TEXT" value="perfekt / eingeschränkt bei Bewegungsartefakten" /></td></tr>
         <tr>
-          <th class="baseline">Herzmorphologie</th>
+            <td><label for="ct_tavi_quality">Qualität</label></td>
+            <td>
+                <select name="ct_tavi_quality" id="ct_tavi_quality">
+                    <option value="gut">gut</option>
+                    <option value="ausreichend">ausreichend</option>
+                    <option value="eingeschränkt">eingeschränkt</option>
+                </select>
+            </td>
+          </tr>
+        <tr>
+          <th>Herzmorphologie</th>
           <td>
             <table>
               <tr>
                 <td><label for="ct_tavi_morphology_right_atrium">Rechter Vorhof:</label></td>
                 <td>
                   <select id="ct_tavi_morphology_right_atrium" name="ct_tavi_morphology_right_atrium" data-field-type="SELECTION_LIST">
-                    <option value="undefined">&mdash;</option>
+                    <option value="-">-</option>
                     <option value="normal">normal</option>
-                    <option value="dilated">dilatiert</option>
+                    <option value="dilatiert">dilatiert</option>
                   </select>
                 </td>
                 <td><input type="text" name="ct_tavi_morphology_right_atrium_comment" class="longtext" title="Kommentar zum rechten Vorhof" data-field-type="TEXT" /></td>
@@ -119,9 +127,9 @@ Nachbearbeitung:
               <td><label for="ct_tavi_morphology_right_ventriculus">Rechter Ventrikel:</label></td>
                 <td>
                   <select id="ct_tavi_morphology_right_ventriculus" name="ct_tavi_morphology_right_ventriculus" data-field-type="SELECTION_LIST">
-                    <option value="undefined">&mdash;</option>
+                    <option value="-">-</option>
                     <option value="normal">normal</option>
-                    <option valeu="dilated">dilatiert</option>
+                    <option valeu="dilatiert">dilatiert</option>
                   </select>
                 </td>
                 <td><input type="text" name="ct_tavi_morphology_right_ventriculus_comment" class="longtext" title="Kommentar zum rechter Ventrikel" data-field-type="TEXT" /></td>
@@ -130,9 +138,9 @@ Nachbearbeitung:
                 <td><label for="ct_tavi_morphology_left_atrium">Linker Vorhof:</label></td>
                 <td>
                   <select id="ct_tavi_morphology_left_atrium" name="ct_tavi_morphology_left_atrium" data-field-type="SELECTION_LIST">
-                    <option value="undefined">&mdash;</option>
+                    <option value="-">-</option>
                     <option value="normal">normal</option>
-                    <option valeu="dilated">dilatiert</option>
+                    <option valeu="dilatiert">dilatiert</option>
                   </select>
                 </td>
                 <td><input type="text" name="ct_tavi_morphology_left_atrium_comment" class="longtext" title="Kommentar zum linken Vorhof" data-field-type="TEXT" /></td>
@@ -141,9 +149,9 @@ Nachbearbeitung:
                 <td><label for="ct_tavi_morphology_left_ventriculus">Linker Ventrikel:</label></td>
                 <td>
                   <select id="ct_tavi_morphology_left_ventriculus" name="ct_tavi_morphology_left_ventriculus" data-field-type="SELECTION_LIST">
-                    <option value="undefined">&mdash;</option>
+                    <option value="-">-</option>
                   <option value="normal">normal</option>
-                  <option valeu="dilated">dilatiert</option>
+                  <option valeu="dilatiert">dilatiert</option>
                 </select>
               </td>
               <td><input type="text" name="ct_tavi_morphology_left_ventriculus_comment" class="longtext" title="Kommentar zum linken Ventrikel" data-field-type="TEXT" /></td>
@@ -152,9 +160,9 @@ Nachbearbeitung:
               <td><label for="ct_tavi_morphology_pacemaker">Herzschrittmacher/ICD:</label></td>
                 <td>
                   <select id="ct_tavi_morphology_left_pacemaker_present" name="ct_tavi_morphology_pacemaker_present" data-field-type="SELECTION_LIST">
-                    <option value="undefined">&mdash;</option>
-                    <option value="no">nein</option>
-                    <option value="yes">ja</option>
+                    <option value="-">-</option>
+                    <option value="nein">nein</option>
+                    <option value="ja">ja</option>
                   </select>
                 </td>
                 <td><input type="text" name="ct_tavi_morphology_pacemaker_comment" class="longtext" title="Kommentar zum Schrittmacher" data-field-type="TEXT" /></td>
@@ -163,31 +171,36 @@ Nachbearbeitung:
           </td>
         </tr>
         <tr>
-          <td class="textarealabel"><label for="ct_tavi_findings_coronar_arteries">Koronararterien:</label></td>
-          <td><textarea id="ct_tavi_findings_coronar_arteries" name="ct_tavi_findings_coronar_arteries" rows="2" class="autoheight" data-field-type="TEXTAREA">unauffällig / Coronarsklerose</textarea></td>
+          <td><label for="ct_tavi_findings_coronar_arteries">Koronararterien:</label></td>
+          <td><textarea id="ct_tavi_findings_coronar_arteries" name="ct_tavi_findings_coronar_arteries" data-field-type="TEXTAREA"></textarea></td>
         </tr>
         <tr>
-          <td class="textarealabel"><label for="ct_tavi_findings_thorax">Thorax:</label></td>
-          <td><textarea id="ct_tavi_findings_thorax" name="ct_tavi_findings_thorax" rows="2" class="autoheight" data-field-type="TEXTAREA"></textarea></td>
+          <td><label for="ct_tavi_findings_thorax">Thorax:</label></td>
+          <td><textarea id="ct_tavi_findings_thorax" name="ct_tavi_findings_thorax" data-field-type="TEXTAREA"></textarea></td>
         </tr>
         <tr>
-          <td class="textarealabel"><label for="ct_tavi_findings_abdomen">Abdomen:</label></td>
-        <td><textarea id="ct_tavi_findings_abdomen" name="ct_tavi_findings_abdomen" rows="2" class="autoheight" data-field-type="TEXTAREA"></textarea></td>
+          <td><label for="ct_tavi_findings_abdomen">Abdomen:</label></td>
+        <td><textarea id="ct_tavi_findings_abdomen" name="ct_tavi_findings_abdomen" data-field-type="TEXTAREA"></textarea></td>
         </tr>
         <tr>
-          <td class="textarealabel"><label for="ct_tavi_findings_skeleton">Skelett:</label></td>
-          <td><textarea id="ct_tavi_findings_skeleton" name="ct_tavi_findings_skeleton" rows="2" class="autoheight" data-field-type="TEXTAREA"></textarea></td>
+          <td><label for="ct_tavi_findings_skeleton">Skelett:</label></td>
+          <td><textarea id="ct_tavi_findings_skeleton" name="ct_tavi_findings_skeleton" data-field-type="TEXTAREA"></textarea></td>
         </tr>
         <tr>
-          <td class="textarealabel"><label for="ct_tavi_findings_comment">Weitere Bemerkungen:</label></td>
+          <td><label for="ct_tavi_findings_comment">Weitere Bemerkungen:</label></td>
           <td><textarea id="ct_tavi_findings_comment" name="ct_tavi_findings_comment" rows="2" class="autoheight" data-field-type="TEXTAREA"></textarea></td>
         </tr>
       </table>
     </section>
+      
     <section data-section-name="Beurteilung" data-section-required="true">
       <header class="level1" data-english="Impression">Beurteilung</header>
       <table>
-        <tr>
+          <tr>
+              <th>Anulus Messungen:</th>
+              <td>
+                  <table>
+                      <tr>
           <td><label for="ct_tavi_annulus">Annulus:</label></td>
           <td><input type="number" id="ct_tavi_annulus" name="ct_tavi_annulus" min="0" max="100" step="0.1" data-field-units="mm" data-field-type="NUMBER" /> mm</td>
         </tr>
@@ -207,8 +220,11 @@ Nachbearbeitung:
           <td><label for="ct_tavi_lca_distance">Abstand zum Abgang der LCA:</label></td>
           <td><input type="number" id="ct_tavi_lca_distance" name="ct_tavi_lca_distance" min="0" max="1000" step="0.1" data-field-units="mm" data-field-type="NUMBER" /> mm</td>
         </tr>
+                  </table>
+              </td>
+          </tr>
         <tr>
-          <th>Annulus-Angulation orthograd auf RCA:</th>
+          <th>Annulus Angulation:</th>
           <td>
             <table>
               <tr>
@@ -223,22 +239,22 @@ Nachbearbeitung:
           </td>
         </tr>
         <tr>
-          <th>Arterieller Zugangsweg mit minimalem Gefäßdurchmesser:</th>
+          <th>Arterieller Zugangsweg:</th>
           <td>
             <table>
               <tr>
-                <td><label for="ct_tavi_right_iliofemoral_access_least_caliber">Rechts iliofemoral:</label></td>
+                <td><label for="ct_tavi_right_iliofemoral_access_least_caliber">Rechts iliofemoral minimal:</label></td>
                 <td><input type="number" id="ct_tavi_right_iliofemoral_access_least_caliber" name="ct_tavi_right_iliofemoral_access_least_caliber" min="0" max="100" step="0.1" data-field-units="mm" data-field-type="NUMBER" /> mm</td>
               </tr>
               <tr>
-                <td><label for="ct_tavi_left_iliofemoral_access_least_caliber">Links iliofemoral:</label></td>
+                <td><label for="ct_tavi_left_iliofemoral_access_least_caliber">Links iliofemoral minimal:</label></td>
                 <td><input type="number" id="ct_tavi_left_iliofemoral_access_least_caliber" name="ct_tavi_left_iliofemoral_access_least_caliber" min="0" max="100" step="0.1" data-field-units="mm" data-field-type="NUMBER" /> mm</td>
               </tr>
             </table>
           </td>
         </tr>
         <tr>
-          <td class="textarealabel"><label for="ct_tavi_impression_comment">Weitere Beurteilung:</label></td>
+          <td class="textarealabel"><label for="ct_tavi_impression_comment">Sonstiges:</label></td>
           <td><textarea id="ct_tavi_impression_comment" name="ct_tavi_impression_comment" data-field-type="TEXTAREA"></textarea></td>
         </tr>
       </table>
