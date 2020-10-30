@@ -22,7 +22,7 @@ Als Teil einer neuen klareren Strategie wurden seitens der DRG in Abstimmung mit
 
 bis Q2/2021                 | bis Q2/2022
 ----------------------------|---------------------------
-CT TAVI                     | CT Primärstaging Lungenkarzinom
+~~CT TAVI~~                 | CT Primärstaging Lungenkarzinom
 MR Kardio Stress            | MR Prostatakarzinom
 ~~CT Koronarangiographie~~  | CT Becken-Bein-Angio
 MR Wirbelsäule degenerativ  | CT Schlaganfall ischäm
