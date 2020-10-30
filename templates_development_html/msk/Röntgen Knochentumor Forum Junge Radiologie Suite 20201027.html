@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Röntgen | Knochentumor | Forum Junge Radiologie Suite</title>
+    <meta charset="UTF-8">
+    <!--Dublin Core metadata elements here-->
+    <meta name="dcterms.title" content="Röntgen | Knochentumor | Forum Junge Radiologie Suite">
+    <meta name="dcterms.abstract" content="">
+    <meta name="dcterms.description" content="">
+    <meta name="dcterms.subject" content="Smart; Staging; Thorax; Röntgen; ">
+    <meta name="dcterms.identifier" content="x.x.x">
+    <meta name="dcterms.type" content="SMART_RADIOLOGY_TEMPLATE">
+    <meta name="dcterms.language" content="de">
+    <meta name="dcterms.rights" content="Die Deutsche Röntgengesellschaft e.V.(DRG) stellt sämtliche Templates 
+    kostenfrei unter der Creative Commons Lizenz  CC BY-NC-ND in der Version 4.0 zur 
+    Verfügung. Die Lizenz erlaubt Download und Weiterverteilung des Werkes unter Nennung 
+    der DRG als Urheber, jedoch keinerlei Bearbeitung oder kommerzielle Nutzung.">
+    <meta name="dcterms.licence" content="http://www.befundung.drg.de/de-DE/3478/creative-commons-lizenz-cc-by-nc-nd">
+    <meta name="dcterms.date" content="2020-08-27">
+    <meta name="dcterms.creator" content="Deutsche Röntgengesellschaft (DRG), Smart Reporting GmbH">
+    <meta name="dcterms.contributor"
+        content="Rolls, MarissaNörenberg, DominikSieren, MalteBucher, AndreasEngel, HannesLuitjens, JohannaSindermann, KatjaRöhrle, NicolasHüttinger, KristinaWeidner, AnjaMezger, Eva">
+    <meta name="dcterms.publisher" content="Deutsche Röntgengesellschaft (DRG)">
+    <script type="text/xml"><template_attributes><top-level-flag>0
+    </top-level-flag><status>DRAFT
+    </status></template_attributes></script>
+    <!--Link to Stylesheet-->
+    <link class="flag" rel="stylesheet" href="drg2.css">
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <section data-section-name="Procedure">
+        <header class="level1">Prozedur</header>
+        <p><textarea id="sr__prozedure" name="sr__prozedure"></textarea></p>
+    </section>
+    <section data-section-name="Clinical Information">
+        <header class="level1">Klinische Angaben</header>
+        <p><textarea id="sr__angaben" name="sr__angaben"></textarea></p>
+    </section>
+    <section data-section-name="Comparison">
+        <header class="level1">Voruntersuchung</header>
+        <p><textarea id="sr__voruntersuchung" name="sr__voruntersuchung"></textarea></p>
+    </section>
+    <section data-section-name="Findings">
+        <header class="level1">Befund</header>
+        <table>
+            <tr>
+                <td>Knöcherne Läsion / Raumforderung</td>
+                <td>
+                    <table>
+                        <tr>
+                            <td><label for="sr_Knöcherne Läsion / Raumforderung">Knöcherne Läsion /
+                                    Raumforderung</label></td>
+                            <td><select id="sr_Knöcherne Läsion / Raumforderung"
+                                    name="sr_Knöcherne Läsion / Raumforderung">
+                                    <option value="Keine Angabe">Keine Angabe</option>
+                                    <option value="Nicht vorhanden">Nicht vorhanden</option>
+                                    <option value="Vorhanden">Vorhanden</option>
+                                </select></td>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td><label for="sr_Seitenangabe">Seitenangabe</label></td>
+                                        <td><select id="sr_Seitenangabe" name="sr_Seitenangabe">
+                                                <option value="Keine Angabe">Keine Angabe</option>
+                                                <option value="Rechts">Rechts</option>
+                                                <option value="Links">Links</option>
+                                                <option value="Sonstiges">Sonstiges</option>
+                                            </select></td>
+                                        <td>
+                                            <table>
+                                                <tr>
+                                                    <td><label for="sr_Beschreibung">Beschreibung</label></td>
+                                                    <td><input type="text" name="sr_Beschreibung" id="sr_Beschreibung"
+                                                            placeholder="Beschreibung"></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><label for="sr_Wachstum (zentral, peripher, juxtakortikal)">Wachstum
+                                                (zentral, peripher, juxtakortikal)</label></td>
+                                        <td><select id="sr_Wachstum (zentral, peripher, juxtakortikal)"
+                                                name="sr_Wachstum (zentral, peripher, juxtakortikal)">
+                                                <option value="Keine Angabe">Keine Angabe</option>
+                                                <option value="Zentral">Zentral</option>
+                                                <option value="Peripher (exzentrisch)">Peripher (exzentrisch)</option>
+                                                <option value="Juxtakortikal">Juxtakortikal</option>
+                                                <option value="Sonstiges">Sonstiges</option>
+                                            </select></td>
+                                        <td>
+                                            <table>
+                                                <tr>
+                                                    <td><label for="sr_Sonstiges">Sonstiges</label></td>
+                                                    <td><input type="text" name="sr_Sonstiges" id="sr_Sonstiges"
+                                                            placeholder="Sonstiges"></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><label for="sr_Max. Durchmesser der Läsion [cm]">Max. Durchmesser der Läsion
+                                                [cm]</label></td>
+                                        <td><input class="small" type="number"
+                                                name="sr_Max. Durchmesser der Läsion [cm]"
+                                                id="sr_Max. Durchmesser der Läsion [cm]"
+                                                placeholder="Max. Durchmesser der Läsion [cm]"
+                                                data-field-units="cm ( >= 0)">&nbsp;cm ( >= 0)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><label for="sr_Morphologie">Morphologie</label></td>
+                                        <td><select id="sr_Morphologie" name="sr_Morphologie">
+                                                <option value="Keine Angabe">Keine Angabe</option>
+                                                <option value="Osteolytisch">Osteolytisch</option>
+                                                <option value="Osteosklerotisch">Osteosklerotisch</option>
+                                            </select></td>
+                                        <td>
+                                            <table>
+                                                <tr>
+                                                    <td><label for="sr_Morphologische Charakteristika">Morphologische
+                                                            Charakteristika</label></td>
+                                                    <td><select id="sr_Morphologische Charakteristika"
+                                                            name="sr_Morphologische Charakteristika" multiple>
+                                                            <option value="Keine Angabe">Keine Angabe</option>
+                                                            <option value="Lytisch (glatt begrenzt)">Lytisch (glatt
+                                                                begrenzt)</option>
+                                                            <option value="Lytisch (irregulär begrenzt)">Lytisch
+                                                                (irregulär begrenzt)</option>
+                                                            <option value="Vollständiger Sklerosesaum">Vollständiger
+                                                                Sklerosesaum</option>
+                                                            <option value="Unvollständiger Sklerosesaum">Unvollständiger
+                                                                Sklerosesaum</option>
+                                                            <option value="Ohne Randsklerose">Ohne Randsklerose</option>
+                                                            <option value="Sonstiges">Sonstiges</option>
+                                                        </select></td>
+                                                    <td>
+                                                        <table>
+                                                            <tr>
+                                                                <td><label for="sr_Sonstiges">Sonstiges</label></td>
+                                                                <td><input type="text" name="sr_Sonstiges"
+                                                                        id="sr_Sonstiges" placeholder="Sonstiges"></td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><label for="sr_Destruktionsmuster">Destruktionsmuster</label>
+                                                    </td>
+                                                    <td><select id="sr_Destruktionsmuster" name="sr_Destruktionsmuster">
+                                                            <option value="Keine Angabe">Keine Angabe</option>
+                                                            <option value="Geographisch">Geographisch</option>
+                                                            <option value="Permeativ">Permeativ</option>
+                                                            <option value="Mottenfraßosteolysen">Mottenfraßosteolysen
+                                                            </option>
+                                                            <option value="Sonstiges">Sonstiges</option>
+                                                        </select></td>
+                                                    <td>
+                                                        <table>
+                                                            <tr>
+                                                                <td><label for="sr_Sonstiges">Sonstiges</label></td>
+                                                                <td><input type="text" name="sr_Sonstiges"
+                                                                        id="sr_Sonstiges" placeholder="Sonstiges"></td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><label for="sr_Beschreibung">Beschreibung</label></td>
+                                                    <td><input type="text" name="sr_Beschreibung" id="sr_Beschreibung"
+                                                            placeholder="Beschreibung"></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><label for="sr_Charakteristika">Charakteristika</label></td>
+                                        <td><select id="sr_Charakteristika" name="sr_Charakteristika" multiple>
+                                                <option value="Keine Angabe">Keine Angabe</option>
+                                                <option value="Knorpelmatrix">Knorpelmatrix</option>
+                                                <option value="Verkalkungen">Verkalkungen</option>
+                                                <option value="Flüssigkeitsspiegel">Flüssigkeitsspiegel</option>
+                                                <option value="Sonstiges">Sonstiges</option>
+                                            </select></td>
+                                        <td>
+                                            <table>
+                                                <tr>
+                                                    <td><label for="sr_Beschreibung">Beschreibung</label></td>
+                                                    <td><input type="text" name="sr_Beschreibung" id="sr_Beschreibung"
+                                                            placeholder="Beschreibung"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><label for="sr_Beschreibung">Beschreibung</label></td>
+                                                    <td><input type="text" name="sr_Beschreibung" id="sr_Beschreibung"
+                                                            placeholder="Beschreibung"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><label for="sr_Beschreibung">Beschreibung</label></td>
+                                                    <td><input type="text" name="sr_Beschreibung" id="sr_Beschreibung"
+                                                            placeholder="Beschreibung"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><label for="sr_Sonstiges">Sonstiges</label></td>
+                                                    <td><input type="text" name="sr_Sonstiges" id="sr_Sonstiges"
+                                                            placeholder="Sonstiges"></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><label for="sr_Tumormineralisation">Tumormineralisation</label></td>
+                                        <td><select id="sr_Tumormineralisation" name="sr_Tumormineralisation">
+                                                <option value="Keine Angabe">Keine Angabe</option>
+                                                <option value="Metaplastisch">Metaplastisch</option>
+                                                <option value="Chondral">Chondral</option>
+                                                <option value="Dystroph">Dystroph</option>
+                                                <option value="Reaktiv">Reaktiv</option>
+                                            </select></td>
+                                    </tr>
+                                    <tr>
+                                        <td><label for="sr_Komplikationen">Komplikationen</label></td>
+                                        <td><select id="sr_Komplikationen" name="sr_Komplikationen" multiple>
+                                                <option value="Keine Angabe">Keine Angabe</option>
+                                                <option value="Pathologische Fraktur">Pathologische Fraktur</option>
+                                                <option value="Gelenkinfiltration">Gelenkinfiltration</option>
+                                                <option value="Sonstiges">Sonstiges</option>
+                                            </select></td>
+                                        <td>
+                                            <table>
+                                                <tr>
+                                                    <td><label for="sr_Beschreibung">Beschreibung</label></td>
+                                                    <td><input type="text" name="sr_Beschreibung" id="sr_Beschreibung"
+                                                            placeholder="Beschreibung"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><label for="sr_Gelenkbezeichnung">Gelenkbezeichnung</label></td>
+                                                    <td><input type="text" name="sr_Gelenkbezeichnung"
+                                                            id="sr_Gelenkbezeichnung" placeholder="Gelenkbezeichnung">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><label for="sr_Freitext">Freitext</label></td>
+                                                    <td><input type="text" name="sr_Freitext" id="sr_Freitext"
+                                                            placeholder="Freitext"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><label for="sr_Sonstiges">Sonstiges</label></td>
+                                                    <td><input type="text" name="sr_Sonstiges" id="sr_Sonstiges"
+                                                            placeholder="Sonstiges"></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><label for="sr_Weitere Knochenläsion(en)">Weitere Knochenläsion(en)</label>
+                                        </td>
+                                        <td><select id="sr_Weitere Knochenläsion(en)"
+                                                name="sr_Weitere Knochenläsion(en)">
+                                                <option value="Keine Angabe">Keine Angabe</option>
+                                                <option value="Nein">Nein</option>
+                                                <option value="Ja">Ja</option>
+                                            </select></td>
+                                        <td>
+                                            <table>
+                                                <tr>
+                                                    <td><label for="sr_Freitext">Freitext</label></td>
+                                                    <td><input type="text" name="sr_Freitext" id="sr_Freitext"
+                                                            placeholder="Freitext"></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><label for="sr_Sonstiges">Sonstiges</label></td>
+                                        <td><input type="text" name="sr_Sonstiges" id="sr_Sonstiges"
+                                                placeholder="Sonstiges"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>→ Hier besteht im Folgenden die Möglichkeit, die vorliegende Untersuchung
+                                            mit Voraufnahmen anderer Modalitäten zu korrelieren.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><label for="sr_Korrelation (Röntgen)">Korrelation (Röntgen)</label></td>
+                                        <td><select id="sr_Korrelation (Röntgen)" name="sr_Korrelation (Röntgen)">
+                                                <option value="Keine Angabe">Keine Angabe</option>
+                                                <option value="Nicht vorhanden">Nicht vorhanden</option>
+                                                <option value="Befundkorrelation">Befundkorrelation</option>
+                                            </select></td>
+                                        <td>
+                                            <table>
+                                                <tr>
+                                                    <td><label for="sr_Freitext">Freitext</label></td>
+                                                    <td><input type="text" name="sr_Freitext" id="sr_Freitext"
+                                                            placeholder="Freitext"></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><label for="sr_Korrelation (CT)">Korrelation (CT)</label></td>
+                                        <td><select id="sr_Korrelation (CT)" name="sr_Korrelation (CT)">
+                                                <option value="Keine Angabe">Keine Angabe</option>
+                                                <option value="Nicht vorhanden">Nicht vorhanden</option>
+                                                <option value="Befundkorrelation">Befundkorrelation</option>
+                                            </select></td>
+                                        <td>
+                                            <table>
+                                                <tr>
+                                                    <td><label for="sr_Freitext">Freitext</label></td>
+                                                    <td><input type="text" name="sr_Freitext" id="sr_Freitext"
+                                                            placeholder="Freitext"></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><label for="sr_Korrelation (MRT)">Korrelation (MRT)</label></td>
+                                        <td><select id="sr_Korrelation (MRT)" name="sr_Korrelation (MRT)">
+                                                <option value="Keine Angabe">Keine Angabe</option>
+                                                <option value="Nicht vorhanden">Nicht vorhanden</option>
+                                                <option value="Befundkorrelation">Befundkorrelation</option>
+                                            </select></td>
+                                        <td>
+                                            <table>
+                                                <tr>
+                                                    <td><label for="sr_Freitext">Freitext</label></td>
+                                                    <td><input type="text" name="sr_Freitext" id="sr_Freitext"
+                                                            placeholder="Freitext"></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td>Weichteilmantel / Sonstiges</td>
+                <td>
+                    <table>
+                        <tr>
+                            <td><label for="sr_Weichteilmantel / Sonstiges">Weichteilmantel / Sonstiges</label></td>
+                            <td><select id="sr_Weichteilmantel / Sonstiges" name="sr_Weichteilmantel / Sonstiges">
+                                    <option value="Keine Angabe">Keine Angabe</option>
+                                    <option value="Unauffällig">Unauffällig</option>
+                                    <option value="Auffällig">Auffällig</option>
+                                </select></td>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td><label for="sr_Freitext">Freitext</label></td>
+                                        <td><input type="text" name="sr_Freitext" id="sr_Freitext"
+                                                placeholder="Freitext"></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </section>
+    <section data-section-name="Impression">
+        <header class="level1">Beurteilung</header>
+        <p><textarea id="sr__beurteilung" name="sr__beurteilung"></textarea></p>
+    </section>
+</body>
+
+</html>
