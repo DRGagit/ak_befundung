@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MRT Herz Adenosin-Stress (m, 8-17)</title>
+    <meta charset="UTF-8">
+    <!--Dublin Core metadata elements here-->
+    <meta name="dcterms.title" content="MRT Herz Adenosin-Stress (m, 8-17)">
+    <meta name="dcterms.abstract" content="Strukturierte Befundvorlage: Stress-Herz (männlich, 8-17 Jahre)">
+    <meta name="dcterms.description" content="Template zur Befundung von Cardio-MR Untersuchungen unter Adenosin-Stress (männlich, 8-17 Jahre)">
+    <meta name="dcterms.subject" content="MR; CARDIO">
+    <meta name="dcterms.identifier" content="041807.3.2011102103">
+    <meta name="dcterms.type" content="IMAGE_REPORT_TEMPLATE">
+    <meta name="dcterms.language" content="de">
+    <meta name="dcterms.rights" content="Die Deutsche Röntgengesellschaft e. V. (DRG) stellt sämtliche Templates kostenfrei unter der Creative Commons Lizenz CC BY in der Version 4.0 zur Verfügung. Die Lizenz erlaubt Download und Weiterverteilung des Werkes unter Nennung der DRG als Urheber" />
+    <meta name="dcterms.license" content="https://github.com/DRGagit/ak_befundung/blob/master/LICENSE" />
+    <meta name="dcterms.date" content="2020-11-10" />
+    <meta name="dcterms.creator" content="AG Herz- und Gefäßdiagnostik" />
+    <meta name="dcterms.contributor" content="Pinto dos Santos D (Kodierung)">
+    <meta name="dcterms.publisher" content="Deutsche Röntgengesellschaft (DRG)">
+
+    <script type="text/xml">
+        <template_attributes>
+        <top-level-flag>0</top-level-flag>
+        <status>ACTIVE</status>
+        </template_attributes>
+    </script>
+
+    <link rel="stylesheet" href="drg.css">
+
+</head>
+
+<body>
+
+    <section data-section-name="Clinical information">
+        <header class="level1" data-english="Clinical information">Klinische Angaben</header>
+        <p>
+            <textarea name="mr_stressherz_clininfo" id="mr_stressherz_clininfo"></textarea>
+        </p>
+        <table>
+
+			<tr>
+				<th>Patientencharakteristik</th>
+                <td>
+					<table>
+						<tr>
+							<td><label for="mr_stressherz_gewicht">Körpergewicht:</label></td>
+							<td><input type="number" name="mr_stressherz_gewicht" id="mr_stressherz_gewicht" min="0" max="250" step="0.1" value="0" data-field-type="NUMBER"/>&nbsp;kg</td>
+						</tr>
+						<tr>
+							<td><label for="dummy">Körpergröße:</label></td>
+							<td><input type="number" name="mr_stressherz_groesse" id="mr_stressherz_groesse" min="0" max="3" step="0.01" value="0" data-field-type="NUMBER"/>&nbsp;m</td>
+						</tr>
+						<tr>
+							<td><label for="dummy">Körperoberfläche (BSA)::</label></td>
+							<td><input type="number" name="mr_stressherz_kof" id="mr_stressherz_kof" min="0" max="9" step="0.01" value="0" data-field-type="NUMBER"/>&nbsp;m<sup>2</sup></td>
+						</tr>
+					</table>
+				</td>
+            </tr>
+		
+		</table>
+    </section>
+
+    <section data-section-name="Clinical question">
+        <header class="level1" data-english="Clinical question">Fragestellung</header>
+        <p>
+            <textarea name="mr_stressherz_Fragestellung" id="mr_stressherz_Fragestellung"></textarea>
+        </p>
+    </section>
+    
+    <section data-section-name="Method">
+      <header class="level1" data-english="Method">Methodik</header>
+        <table>
+            <tr>
+            <td><label for="mr_stressherz_method">Technik:</label></td>
+            <td>
+                <textarea id="mr_stressherz_method" name="mr_stressherz_method" data-field-type="TEXTAREA">T1 BB single shot: axial;
+Cine: 2CH, 3CH, 4CH, SAX;
+T2w BB SPIR: 3 Schichten SAX;
+First-Pass Perfusion: 3 Schichten SAX unter Adenosin-Stress (140μg/kg KG/min, Aufnahme 4min nach Infusionsbeginn) und in Ruhe;
+LGE: 2CH, 3CH, 4CH, SAX</textarea>
+            </td>
+          </tr>
+        </table>
+    </section>
+
+    <section data-section-name="Findings">
+		<header class="level1" data-english="Findings">Befund</header>
+		
+		
+
+        <table>
+            <tr>
+                <td><label for="mr_stressherz_comparison">Vergleichsuntersuchung</label></td>
+                <td>
+                    <select name="mr_stressherz_comparison" id="mr_stressherz_comparison">
+                        <option value="keine">keine</option>
+                        <option value="vorliegend">vorliegend</option>
+                    </select>
+                    <input name="mr_stressherz_comparison_date" id="mr_stressherz_comparison_date" type="date" data-field-type="DATE">
+                </td>
+            </tr>
+        </table>
+
+		<table>
+			<tr>
+				<th>Funktionsanalyse LV (blood volume)</th>
+                <td>
+					<table>
+						<tr>
+							<td><label for="mr_stressherz_lvedv_bsa">LV enddiastolisches Volumen normiert (LV EDV/BSA):</label></td>
+							<td><input type="number" name="mr_stressherz_lvedv_bsa" id="mr_stressherz_lvedv_bsa" data-field-type="number"/>&nbsp;ml/m<sup>2</sup> (Norm: 56-104 ml/m<sup>2</sup>)</td>
+						</tr>
+						<tr>
+							<td><label for="mr_stressherz_lvesv_bsa">LV endsystolisches Volumen normiert (LV ESV/BSA):</label></td>
+							<td><input type="number" name="mr_stressherz_lvesv_bsa" id="mr_stressherz_lvesv_bsa" data-field-type="number"/>&nbsp;ml/m2 (Norm: 16-40 ml/m2)</td>
+						</tr>
+						<tr>
+							<td><label for="mr_stressherz_lvef">LV Ejektions-Fraktion (LV EF):</label></td>
+							<td><input type="number" name="mr_stressherz_lvef" id="mr_stressherz_lvef" data-field-type="number"/>&nbsp;% (Norm: 56-76 %)</td>
+						</tr>
+						<tr>
+							<td><label for="mr_stressherz_lv_mass">LV ED Masse normiert:</label></td>
+							<td><input type="number" name="mr_stressherz_lv_mass" id="mr_stressherz_lv_mass" data-field-type="number"/>&nbsp;g/m2 (Norm: 38-86 g/m2)</td>
+						</tr>
+						<tr>
+							<td><label for="mr_stressherz_ivsd">IVSD:</label></td>
+							<td><input type="number" name="mr_stressherz_ivsd" id="mr_stressherz_ivsd" data-field-type="number"/>&nbsp;mm</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+            <tr>
+                <th><label for="mr_stressherz_anatomie">Anatomie</label></th>
+                <td><textarea name="mr_stressherz_anatomie" id="mr_stressherz_anatomie" data-field-type="TEXTAREA">Normale kardiale Anatomie.</textarea></td>
+            </tr>
+            <tr>
+				<th>Adenosin Stress- und Ruhe-Perfusion</th>
+                <td>
+					<table>
+						<tr>
+							<td><label for="mr_stressherz_perfusion_stress">Perfusionsstörung unter Adenosin:</label></td>
+							<td>
+								<select name="mr_stressherz_perfusion_stress" id="mr_stressherz_perfusion_stress">
+								  <option value="nein">nein</option>
+								  <option value="ja">ja</option>
+								</select>
+								&nbsp;
+								<label for="mr_stressherz_perfusion_stress_segmente">Segmente</label>
+								<input type="text" name="mr_stressherz_perfusion_stress_segmente" id="mr_stressherz_perfusion_stress_segmente" data-field-type="text">
+							</td>
+						</tr>
+						<tr>
+							<td><label for="mr_stressherz_perfusion_ruhe">Ruhe-Perfusion:</label></td>
+							<td>
+								<select name="mr_stressherz_perfusion_ruhe" id="mr_stressherz_perfusion_ruhe">
+                                    <option value="normal">normal</option>
+                                    <option value="pathologisch">pathologisch</option>
+								</select>
+							</td>
+						</tr>
+					</table>
+				</td>
+            </tr>
+            <tr>
+                <th><label for="mr_stressherz_regbewegung">Regionale Wandbewegungsstörungen LV:</label></th>
+                <td>
+                    <select name="mr_stressherz_regbewegung" id="mr_stressherz_regbewegung">
+                        <option value="keine">keine</option>
+                        <option value="global">global</option>
+                        <option value="regional">regional</option>
+                    </select>
+                    <input type="text" name="mr_stressherz_regbewegung_text" id="mr_stressherz_regbewegung_text" data-field-type="text">
+                </td>
+            </tr>
+            <tr>
+                <th>Weitere kardiale Befunde</th>
+				<td>
+					<table>
+						<tr>
+							
+						</tr>
+						<tr>
+							<td><label for="mr_stressherz_thromben">Intracavitäre Thromben:</label></td>
+							<td>
+								<select name="mr_stressherz_thromben" id="mr_stressherz_thromben">
+								  <option value="nein">nein</option>
+								  <option value="ja">ja</option>
+								</select>
+								&nbsp;
+								<input type="text" name="mr_stressherz_thromben_text" id="mr_stressherz_thromben_text" data-field-type="text">
+							</td>
+						</tr>
+						<tr>
+							<td><label for="mr_stressherz_perikarderg">Perikarderguss:</label></td>
+							<td>
+								<select name="mr_stressherz_perikarderg" id="mr_stressherz_perikarderg">
+									<option value="nein">nein</option>
+									<option value="ja">ja</option>
+								</select>
+								&nbsp;
+								<input type="number" name="mr_stressherz_perikarderg_size" id="mr_stressherz_perikarderg_size" min="0" max="100" step="1" value="0" data-field-type="number">&nbsp;mm
+							</td>
+						</tr>
+						<tr>
+							<td><label for="mr_stressherz_avklappen">AV-Klappen:</label></td>
+							<td>
+								<select name="mr_stressherz_avklappen" id="mr_stressherz_avklappen">
+									<option value="kompetent">kompetent</option>
+									<option value="insuffizient">insuffizient</option>
+								</select>
+                                <input type="text" name="mr_stressherz_avklappen_text" id="mr_stressherz_avklappen_text" data-field-type="text">
+							</td>
+						</tr>
+						<tr>
+							<td><label for="mr_stressherz_aortenklappe">Trikuspide Aortenklappe:</label></td>
+							<td>
+								<select name="mr_stressherz_aortenklappe" id="mr_stressherz_aortenklappe">
+									<option value="ja">ja</option>
+									<option value="nein">nein</option>
+									<option value="nicht beurteilbar">nicht beurteilbar</option>
+								</select>
+								<select name="mr_stressherz_aortenklappe_status" id="mr_stressherz_aortenklappe_status">
+									<option value="-">-</option>
+                                    <option value="kompetent">kompetent</option>
+									<option value="stenosiert">stenosiert</option>
+									<option value="insuffizient">insuffizient</option>
+								</select>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+            <tr>
+				<th>Gewebecharakterisierung</th>
+                <td>
+					<table>
+						<tr>
+							<td><label for="mr_stressherz_lge">Late Enhancement (LGE):</label></td>
+							<td>
+								<select name="mr_stressherz_lge" id="mr_stressherz_lge">
+								  <option value="nein">nein</option>
+								  <option value="ja, subendokardial &lt; 50%">ja, subendokardial &lt; 50%</option>
+                                  <option value="ja, subendokardial &ge; 50%">ja, subendokardial &ge; 50%</option>
+                                  <option value="ja, transmural">ja, transmural</option>
+								</select>
+                                &nbsp;
+								<label for="mr_stressherz_lge_segmente">Segmente</label>
+								<input type="text" name="mr_stressherz_lge_segmente" id="mr_stressherz_lge_segmente" data-field-type="text">
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+            <tr>
+				<th><label for="mr_stressherz_sonstiges">Extrakardiale Auffälligkeiten</label></th>
+				<td>
+				  <textarea name="mr_stressherz_sonstiges" id="mr_stressherz_sonstiges"></textarea>
+				</td>
+			</tr>
+		</table>
+		
+    </section>
+
+    <section data-section-name="Beurteilung">
+		<header class="level1" data-english="Impression">Beurteilung</header>
+        <p>
+			<textarea name="mr_stressherz_Beurteilung" id="mr_stressherz_Beurteilung" data-english-name="Impression" title="Text bitte entsprechend Befund ergänzen/ ändern!">Im Adenosin-Stress MRT kein Nachweis einer Perfusionsstörung.
+			
+Im Adenosin-Stress MRT belastungsinduzierte Perfusionsstörung __ als Hinweis auf eine hämodynamisch relevante Koronarstenose im RCA / LAD / RCX Versorgungsgebiet.
+			
+MR-tomograpisch Z.n. Myokardinfakt mit "late enhancement" __.</textarea>
+        </p>
+    </section>
+
+</body>
+</html>
