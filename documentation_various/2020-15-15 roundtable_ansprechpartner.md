@@ -17,3 +17,4 @@ Image Systems | Arpad Bischoff |
 Siemens | Gerhard Kohl |
 Nexus/Chili | NN | Nach Rückfrage, aktuell keine Möglichkeit HTML zu importieren, steht wohl auch  nicht auf der Agenda
 Mint Medical | Johannes Kast (J.Kast@mint-medical.de) | (alternativ Tobias Gottmann)
+RadioReport | NN |
