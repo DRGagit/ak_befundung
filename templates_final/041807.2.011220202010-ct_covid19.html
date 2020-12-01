@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CT-Thorax COVID-19</title>
+    <meta charset="UTF-8">
+    <!--Dublin Core metadata elements here-->
+    <meta name="dcterms.title" content="CT-Thorax COVID-19">
+    <meta name="dcterms.abstract" content="Strukturierte Befundvorlage: COVID-19">
+    <meta name="dcterms.description" content="Template zur Befundung einer CT-Thorax bei COVID-19">
+    <meta name="dcterms.subject" content="CT; THX;">
+    <meta name="dcterms.identifier" content="041807.2.011220202010">
+    <meta name="dcterms.type" content="IMAGE_REPORT_TEMPLATE">
+    <meta name="dcterms.language" content="de">
+    <meta name="dcterms.rights" content="Die Deutsche Röntgengesellschaft e. V. (DRG) stellt sämtliche Templates kostenfrei unter der Creative Commons Lizenz CC BY in der Version 4.0 zur Verfügung. Die Lizenz erlaubt Download und Weiterverteilung des Werkes unter Nennung der DRG als Urheber" />
+    <meta name="dcterms.license" content="https://github.com/DRGagit/ak_befundung/blob/master/LICENSE" />
+    <meta name="dcterms.date" content="2020-12-01">
+    <meta name="dcterms.creator" content="AG Thorax">
+    <meta name="dcterms.contributor" content="Pinto dos Santos D (Kodierung)">
+    <meta name="dcterms.publisher" content="Deutsche Röntgengesellschaft (DRG)">
+
+    <script type="text/xml">
+        <template_attributes>
+        <top-level-flag>0</top-level-flag>
+        <status>ACTIVE</status>
+        </template_attributes>
+    </script>
+
+    <link rel="stylesheet" href="../../templates_final/drg.css">
+
+</head>
+
+<body>
+
+    <section data-section-name="Clinical information">
+        <header class="level1" data-english="Clinical information">Klinische Angaben</header>
+        <p>
+            <textarea name="ct_covid_clininfo" id="ct_covid_clininfo"></textarea>
+        </p>
+        
+        <table>
+            <tr>
+                <td><label for="ct_covid_status">Aufnahme-Status</label></td>
+                <td>
+                    <select name="ct_covid_status" id="ct_covid_status">
+                        <option value="Intensivstation">Intensivstation</option>
+                        <option value="Stationär">Stationär</option>
+                        <option value="Notaufnahme">Notaufnahme</option>
+                        <option value="Ambulant">Ambulant</option>
+                        <option value="Unbekannt">Unbekannt</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="ct_covid_intubiert">Intubiert</label></td>
+                <td>
+                    <select name="ct_covid_intubiert" id="ct_covid_intubiert">
+                        <option value="nein">nein</option>
+                        <option value="ja">ja</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="ct_covid_pcr">COVID-PCR Status</label></td>
+                <td>
+                    <select name="ct_covid_pcr" id="ct_covid_pcr">
+                      	<option value="positiv">positiv</option>
+                        <option value="negativ">negativ</option>
+                        <option value="unbekannt">unbekannt</option>
+                    </select>
+                    &nbsp;
+                    <label for="ct_covid_pcr_date">am:</label>
+                    &nbsp;
+                    <input type="date" name="ct_covid_pcr_date" id="ct_covid_pcr_date" data-field-type="DATE"/>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <section data-section-name="Clinical question">
+        <header class="level1" data-english="Clinical question">Fragestellung</header>
+        <p>
+            <textarea name="ct_covid_fragestellung" id="ct_covid_fragestellung"></textarea>
+        </p>
+    </section>
+
+    <section data-section-name="Findings">
+        <header class="level1" data-english="Findings">Befund</header>
+
+        <table>
+            <tr>
+                <td><label for="ct_covid_vergleich">Zum Vergleich</label></td>
+                <td>
+                    <select name="ct_covid_vergleich" id="ct_covid_vergleich">
+                      	<option value="liegt keine Voruntersuchung vor">liegt keine Voruntersuchung vor</option>
+                        <option value="die CT">die CT</option>
+                        <option value="ein Röntgen-Thorax">ein Röntgen-Thorax</option>
+                    </select>
+                    &nbsp;
+                    <label for="ct_covid_vergleich_date">vom:</label>
+                    &nbsp;
+                    <input type="date" name="ct_covid_vergleich_date" id="ct_covid_vergleich_date" data-field-type="DATE"/>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="ct_covid_protokoll">CT-Protokoll</label></td>
+                <td>
+                    <select name="ct_covid_protokoll" id="ct_covid_protokoll">
+                        <option value="CT Thorax Low-dose ohne KM">CT Thorax Low-dose ohne KM</option>
+                        <option value="CT Thorax Full-dose ohne KM">CT Thorax Full-dose ohne KM</option>
+                        <option value="CT Thorax nativ und KM">CT Thorax nativ und KM</option>
+                        <option value="CT Thorax mit KM (keine native Phase verfügbar)">CT Thorax mit KM (keine native Phase verfügbar)</option>
+                        <option value="CT Thorax-Abdomen mit KM (keine native Phase Thorax)">CT Thorax-Abdomen mit KM (keine native Phase Thorax)</option>
+                        <option value="CT Thorax-Abdomen nativ">CT Thorax-Abdomen nativ</option>
+                        <option value="CT Thorax Pulmonalisangiographie">CT Thorax Pulmonalisangiographie</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+    
+        <table>
+            <tr>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+
+        
+        <table>
+            <tr>
+                <th>Lungenparenchym/Atemwege</th>
+                <td>
+                    <table>
+                        <tr>
+                            <td><label for="ct_covid_milchglas">Milchglastrübung</label></td>
+                            <td>
+                                <select name="ct_covid_milchglas" id="ct_covid_milchglas">
+                                    <option value="-">-</option>
+                                    <option value="Keine">Keine</option>
+                                    <option value="Multiple/Multifokal">Multiple/Multifokal</option>
+                                    <option value="Einzeln">Einzeln</option>
+                                    <option value="Diffuse Verteilung">Diffuse Verteilung</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="ct_covid_milchglasmuster">Dominantes Milchglasmuster</label></td>
+                            <td>
+                                <select name="ct_covid_milchglasmuster" id="ct_covid_milchglasmuster">
+                                    <option value="-">-</option>
+                                    <option value="Mosaikmuster">Mosaikmuster</option>
+                                    <option value="Crazy-paving Muster">Crazy-paving Muster</option>
+                                    <option value="Reverse Halo/Atoll-Zeichen">Reverse Halo/Atoll-Zeichen</option>
+                                    <option value="nur Milchglas">nur Milchglas</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="ct_covid_milchglasmorpho">Morphologie der Milchglastrübungen</label></td>
+                            <td>
+                                <select name="ct_covid_milchglasmorpho" id="ct_covid_milchglasmorpho">
+                                    <option value="-">-</option>
+                                    <option value="rundlich/geographisch">rundlich/geographisch</option>
+                                    <option value="nicht rundlich/geographisch">nicht rundlich/geographisch</option>
+                                    <option value="konfluierend/diffus">konfluierend/diffus</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="ct_covid_milchglasverteilung">Verteilungsmuster der Milchglastrübungen</label></td>
+                            <td>
+                                <select name="ct_covid_milchglasverteilung" id="ct_covid_milchglasverteilung">
+                                    <option value="-">-</option>
+                                    <option value="peripher">peripher</option>
+                                    <option value="zentral">zentral</option>
+                                    <option value="multifokal ohne spezifische Verteilung">multifokal ohne spezifische Verteilung</option>
+                                    <option value="multifokal in folgender Verteilung">multifokal in folgender Verteilung</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="ct_covid_milchglasseite">Seiten-Ausprägung der Milchglastrübungen</label></td>
+                            <td>
+                                <select name="ct_covid_milchglasseite" id="ct_covid_milchglasseite">
+                                    <option value="-">-</option>
+                                    <option value="bilateral">bilateral</option>
+                                    <option value="links">links</option>
+                                    <option value="rechts">rechts</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="ct_covid_milchglasfeld">Dominates Lungenfeld der Milchglastrübungen</label></td>
+                            <td>
+                                <select name="ct_covid_milchglasfeld" id="ct_covid_milchglasfeld">
+                                    <option value="-">-</option>
+                                    <option value="kein dominantes Lungenfeld">kein dominantes Lungenfeld</option>
+                                    <option value="alle Felder vergleichbar betroffen">alle Felder vergleichbar betroffen</option>
+                                    <option value="oben ">oben </option>
+                                    <option value="mitte">mitte</option>
+                                    <option value="unten">unten</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="ct_covid_milchglasgrad">Ausdehnung/Severity des Lungenbefalls quantitativ</label></td>
+                            <td>
+                                <select name="ct_covid_milchglasgrad" id="ct_covid_milchglasgrad">
+                                    <option value="-">-</option>
+                                    <option value="leicht (weniger als 3 Milchglasareale, diese kleiner als 3 cm)">leicht (weniger als 3 Milchglasareale, diese kleiner als 3 cm)</option>
+                                    <option value="mittelgradig (mehr als 3 Milchglasareale oder Größe > 3 cm; Konsolidierungen)">mittelgradig (mehr als 3 Milchglasareale oder Größe > 3 cm; Konsolidierungen)</option>
+                                    <option value="ausgeprägt (diffuse Milchglasverteilung, organisierende Pneumonie, Coexistenz mit anderen Lungenerkrankungen)">ausgeprägt (diffuse Milchglasverteilung, organisierende Pneumonie, Coexistenz mit anderen Lungenerkrankungen)</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="ct_covid_konsolidierung">Konsolidierungs-Muster</label></td>
+                            <td>
+                                <select name="ct_covid_konsolidierung" id="ct_covid_konsolidierung">
+                                    <option value="-">-</option>
+                                    <option value="keine Konsolidierungen">keine Konsolidierungen</option>
+                                    <option value="Konsolidierungen lobär (Lobärpneumonie)">Konsolidierungen lobär (Lobärpneumonie)</option>
+                                    <option value="Konsolidierungen segmental">Konsolidierungen segmental</option>
+                                    <option value="Konsolidierungen peribronchial">Konsolidierungen peribronchial</option>
+                                    <option value="unspezifische Konsolidierungen">unspezifische Konsolidierungen</option>
+                                </select>
+                                <select name="ct_covid_konsolidierungmuster" id="ct_covid_konsolidierungmuster">
+                                    <option value="-">-</option>
+                                    <option value="rundlich ">rundlich </option>
+                                    <option value="sonstige">sonstige</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="ct_covid_noduli">Zentrilobuläre Noduli/Tree in bud</label></td>
+                            <td>
+                                <select name="ct_covid_noduli" id="ct_covid_noduli">
+                                    <option value="-">-</option>
+                                    <option value="nein">nein</option>
+                                    <option value="ja">ja</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <!-- TODO: checkboxen?? -->
+                            <td><label for="ct_covid_lungengerüst">Lungengerüstveränderungen</label></td>
+                            <td>
+                                <select name="ct_covid_lungengerüst" id="ct_covid_lungengerüst">
+                                    <option value="-">-</option>
+                                    <option value="ja">ja</option>
+                                    <option value="nein">nein</option>
+                                </select>
+                                <input type="text" name="ct_covid_lungengerüst_text" id="ct_covid_lungengerüst_text">
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <th>Weitere Befunde</th>
+                <td>
+                    <table>
+                        <tr>
+                            <td><label for="ct_covid_ple_li">Pleuraerguss links</label></td>
+                            <td>
+                                <select name="ct_covid_ple_li" id="ct_covid_ple_li">
+                                    <option value="-">-</option>
+                                    <option value="liegt nicht vor">liegt nicht vor</option>
+                                    <option value="kleinvolumig [<1cm]">kleinvolumig [&le;1cm]</option>
+                                    <option value="großvolumig [<1cm]">großvolumig [&gt;1cm]</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="ct_covid_ple_re">Pleuraerguss rechts</label></td>
+                            <td>
+                                <select name="ct_covid_ple_re" id="ct_covid_ple_re">
+                                    <option value="-">-</option>
+                                    <option value="liegt nicht vor">liegt nicht vor</option>
+                                    <option value="kleinvolumig [<1cm]">kleinvolumig [&le;1cm]</option>
+                                    <option value="großvolumig [<1cm]">großvolumig [&gt;1cm]</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="ct_covid_lk">Lymphknoten</label></td>
+                            <td>
+                                <select name="ct_covid_lk" id="ct_covid_lk">
+                                    <option value="-">-</option>
+                                    <option value="Keine Lymphknotenvergrößerung">Keine Lymphknotenvergrößerung</option>
+                                    <option value="Hiläre Lymphadenopathie">Hiläre Lymphadenopathie</option>
+                                    <option value="Mediastinale Lymphadenopathie">Mediastinale Lymphadenopathie</option>
+                                    <option value="Generalisierte Lymphadenopathie">Generalisierte Lymphadenopathie</option>
+                                </select>
+                                <input type="text" name="ct_covid_lk_text" id="ct_covid_lk_text">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="ct_covid_other">Sonstiges</label></td>
+                            <td>
+                                <textarea name="ct_covid_other" id="ct_covid_other"></textarea>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <section data-section-name="Beurteilung">
+        <header class="level1" data-english="Impression">Beurteilung</header>
+        <table>
+            <tr>
+                <td><label for="ct_covid_class">Klassifikation des Lungenbefalls</label></td>
+                <td>
+                    <select name="ct_covid_class" id="ct_covid_class">
+                        <option value="-">-</option>
+                        <option value="1">1. [Cov19Typ] CT-Veränderungen suggestiv für COVID-19 Pneumonie (bei hoher lokaler Prävalenz und/oder individueller Prätest-Wahrscheinlichkeit)</option>
+                        <option value="2">2. [Cov19Ind] CT-Veränderungen unklar, COVID-19 Pneumonie jedoch möglich</option>
+                        <option value="3">3. [Cov19Aty] CT-Veränderungen suggestiv für eine alternative Diagnose (z.B. bakterielles Erregerspektrum)</option>
+                        <option value="4">4. [Cov19Neg] CT-morphologisch kein Hinweis auf pneumonische Verdichtungen</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+
+        <p>
+            <textarea name="ct_covid_Beurteilung" id="ct_covid_Beurteilung" data-english-name="Impression" ></textarea>
+        </p>
+    </section>
+
+</body>
+</html>
