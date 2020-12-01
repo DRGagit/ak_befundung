@@ -41,7 +41,8 @@ Titel             | Kategorie | befundung.drg.de | radreport.org | Publikation
 _**KHK**_            | Cardio | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/041807.2.1810090000-ct_khk.html/) | [Link](https://radreport.org/home/RPT50784/2020-06-19%2010:44:15) |
 _**Pankreaskarzinom solide**_ | Onko | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/041807.2.1810250618-ct_pankreasca_s.html/) | [Link](https://radreport.org/home/RPT50785/2020-06-19%2010:43:34) | [RöFo](https://doi.org/10.1055/a-1150-8217)
 _**Pankreaskarzinom zystisch**_ | Onko | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/041807.2.1811161508-ct_pankreasca_z.html/) | | [RöFo](https://doi.org/10.1055/a-1150-8217) |
-_**Lungenembolie**_  | Thorax | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/CT-Thorax_Lungenembolie.html/ ) | [Link](https://radreport.org/home/RPT50783/2020-06-19%2010:44:53) | |
+_**Lungenembolie**_  | Thorax | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/CT-Thorax_Lungenembolie.html/) | [Link](https://radreport.org/home/RPT50783/2020-06-19%2010:44:53) | |
+_**TAVI**_  | Cardio | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/041807.2.2010301038-ct-tavi.html/) | | |
 
 ### MRT
 Titel             | Kategorie | befundung.drg.de | radreport.org | Publikation
@@ -51,6 +52,7 @@ _**Siderose**_          | Cardio | [Link](https://www.befundung.drg.de/de-DE/319
 _**Myokarditis**_       | Cardio | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/041807.3.1911200957-mrt_myokarditis.html) | | [RöFo](https://doi.org/10.1055/a-0998-4116) |
 _**HCM / HOCM**_        | Cardio | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/041807.3.1911201758-mrt_hocm.html) | | [RöFo](https://doi.org/10.1055/a-0998-4116) |
 _**Rektum-Ca**_         | Onko   | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/041807.00001-mrt_rectalca.html) | [Link](https://radreport.org/home/RPT50786/2020-06-19%2010:40:33) |
+_**Stress-Herz**_       | Cardio | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/041807.3.2011102103-mrt_adenosinstress.html/) | | |
 
 ### US
 Titel             | Kategorie | befundung.drg.de | radreport.org
