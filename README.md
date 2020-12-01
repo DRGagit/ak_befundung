@@ -27,7 +27,7 @@ bis Q2/2021                 | bis Q2/2022
 ~~CT Koronarangiographie~~  | CT Becken-Bein-Angio
 MR Wirbelsäule degenerativ  | CT Schlaganfall ischäm
 MR Knie (degenerativ)       | MR Schädel MS
-CT COVID                    |
+~~CT COVID~~                |
 
 ## Fertige Befundvorlagen
 
