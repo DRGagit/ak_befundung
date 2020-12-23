@@ -8,12 +8,12 @@
     <meta name="dcterms.abstract" content="Strukturierte Befundvorlage: Kardiale Vitalitätsdiagnostik" />
     <meta name="dcterms.description" content="Template zur kardialen Vitalitätsdiagnostik" />
     <meta name="dcterms.subject" content="MR; CA;" />
-    <meta name="dcterms.identifier" content="041807.3.2012221038" />
+    <meta name="dcterms.identifier" content="041807.3.2012231220" />
     <meta name="dcterms.type" content="IMAGE_REPORT_TEMPLATE" />
     <meta name="dcterms.language" content="de" />
     <meta name="dcterms.rights" content="Die Deutsche Röntgengesellschaft e. V. (DRG) stellt sämtliche Templates kostenfrei unter der Creative Commons Lizenz CC BY in der Version 4.0 zur Verfügung. Die Lizenz erlaubt Download und Weiterverteilung des Werkes unter Nennung der DRG als Urheber" />
     <meta name="dcterms.license" content="https://github.com/DRGagit/ak_befundung/blob/master/LICENSE" />
-    <meta name="dcterms.date" content="2020-12-22" />
+    <meta name="dcterms.date" content="2020-12-23" />
     <meta name="dcterms.creator" content="AG Herz- und Gefäßdiagnostik" />
     <meta name="dcterms.contributor" content="Jan Preuss (Kodierung)" />
     <meta name="dcterms.publisher" content="Deutsche Röntgengesellschaft (DRG)" />
@@ -32,6 +32,9 @@
   <body>
     <section data-section-name="Klinische Angaben" data-section-required="true">
       <header class="level1" data-english="Clinical information">Klinische Angaben</header>
+      <p>
+       <textarea name="clinical_information" id="clinical_information" data-field-type="TEXTAREA"></textarea>
+      </p>
       <table>
         <tr>
           <th>Patientencharakteristik</th>
@@ -49,22 +52,18 @@
               </tr>
               <tr>
                 <th><label for="patient_body_weight">Körpergewicht:</label></th>
-                <td><input type="number" id="patient_body_weight" name="patient_body_weight" value="50" min="0.1" max="600" step="0.1" data-field-units="kg" data-field-type="NUMBER" /> kg</td>
+                <td><input type="number" id="patient_body_weight" name="patient_body_weight" min="0.1" max="600" step="0.1" data-field-units="kg" data-field-type="NUMBER" /> kg</td>
               </tr>
               <tr>
                 <th><label for="patient_body_weight">Körpergröße:</label></th>
-                <td><input type="number" id="patient_body_height" name="patient_body_height" value="1.7" min="0.1" max="3" step="0.001" data-field-units="m" data-field-type="NUMBER" /> m</td>
+                <td><input type="number" id="patient_body_height" name="patient_body_height" min="0.100" max="3" step="0.001" data-field-units="m" data-field-type="NUMBER" /> m</td>
               </tr>
               <tr>
                 <th><label for="patient_body_surface_area">Körperoberfläche (BSA):</label></th>
-                <td><input type="number" id="patient_body_surface_area" name="patient_body_surface_area" value="1.7" min="0.1" max="3" step="0.01" data-field-units="m2" data-field-type="NUMBER" /> m<sup>2</sup></td>
+                <td><input type="number" id="patient_body_surface_area" name="patient_body_surface_area" min="0.10" max="9" step="0.01" data-field-units="m2" data-field-type="NUMBER" /> m<sup>2</sup></td>
               </tr>
             </table>
           </td>
-        </tr>
-        <tr>
-          <th><label for="further_clinical_information">Weitere klinische Angaben:</label></th>
-          <td><textarea name="further_clinical_information" id="further_clinical_information" data-field-type="TEXTAREA"></textarea></td>
         </tr>
       </table>
     </section>
@@ -80,49 +79,42 @@
       <header class="level1" data-english="Method">Methodik</header>
       <table>
         <tr>
-          <th>Technik</th>
-          <td>
-             <table>
-               <tr>
-                 <th><label for="magnetic_flux_density">Feldstärke (Flussdichte!?):</label></th>
-                 <td><input type="number" id="magnetic_flux_density" name="magnetic_flux_density" value="1.5" min="0.5" max="7" step="0.5" data-field-units="T" data-field-type="NUMBER" /> T</td>
-               </tr>
-               <tr>
-                 <th><label for="mr_protocol">MR-Protokoll:</label></th>
-                 <td><textarea id="mr_protocol" name="mr_protocol" data-field-type="TEXTAREA">Sequenzen und Ebenen:</textarea></td>
-               </tr>
-               <tr>
-                 <th><label for="evaluation_software">Auswertesoftware:</label></th>
-                 <td><input type="text" id="evaluation_software" name="evaluation_software" value="(Name und Version)" data-field-type="TEXT" /></td>
-               </tr>
-               <tr>
-                 <th><label for="standard_value_source">Quelle der Normwerte:</label></th>
-                 <td><textarea id="standard_value_source" name="standard_value_source" data-field-type="TEXTAREA">Referenzwerte für Frauen/Männer &lt; 35 Jahre bzw. &gt; 35 Jahre: Herzog/Greenwood/Plein &ndash; CMR pocket guide. CMR Section of the European Association of Cardiovascular Imaging 2014.
+          <th><label for="magnetic_flux_density">Feldstärke (Flussdichte!?):</label></th>
+          <td><input type="number" id="magnetic_flux_density" name="magnetic_flux_density" value="1.5" min="0.5" max="7" step="0.5" data-field-units="T" data-field-type="NUMBER" /> T</td>
+        </tr>
+        <tr>
+          <th><label for="mr_protocol">MR-Protokoll:</label></th>
+          <td><textarea id="mr_protocol" name="mr_protocol" data-field-type="TEXTAREA">Sequenzen und Ebenen:</textarea></td>
+        </tr>
+        <tr>
+          <th><label for="evaluation_software">Auswertesoftware:</label></th>
+          <td><input type="text" id="evaluation_software" name="evaluation_software" value="(Name und Version)" data-field-type="TEXT" /></td>
+        </tr>
+        <tr>
+          <th><label for="standard_value_source">Quelle der Normwerte:</label></th>
+          <td><textarea id="standard_value_source" name="standard_value_source" data-field-type="TEXTAREA">Referenzwerte für Frauen/Männer &lt; 35 Jahre bzw. &gt; 35 Jahre: Herzog/Greenwood/Plein &ndash; CMR pocket guide. CMR Section of the European Association of Cardiovascular Imaging 2014.
                  
 Referenzwerte für Kinder und Jugendliche 0-18 Jahre,  Mädchen/Jungen: van der Ven et al. European Heart Journal &ndash; Cardiovascular Imaging 2020.
 
 Referenzwerte für Frauen/Männer: Kawel-Boehm et al. 2015</textarea></td>
-               </tr>
-               <tr>
-                 <th>Kontrastmittel</th>
-                 <td>
-                   <table>
-                     <tr>
-                       <th><label for="contrast_agent_name">Name:</label></th>
-                       <td><input type="text" id="contrast_agent_name" name="contrast_agent_name" data-field-type="TEXT" /></td>
-                     </tr>
-                     <tr>
-                       <th><label for="contrast_agent_dose">Menge:</label></th>
-                       <td><input type="number" id="magnetic_flux_density" name="magnetic_flux_density" min="0" max="100" step="0.1" data-field-units="ml" data-field-type="NUMBER" /> ml</td>
-                     </tr>
-                     <tr>
-                       <th><label for="contrast_agent_dose">Flussgeschwindigkeit:</label></th>
-                       <td><input type="number" id="magnetic_flux_density" name="magnetic_flux_density" min="0" max="100" step="0.1" data-field-units="ml/s" data-field-type="NUMBER" /> ml/s</td>
-                     </tr>
-                   </table>
-                 </td>
-               </tr>
-             </table>
+        </tr>
+        <tr>
+          <th>Kontrastmittel</th>
+          <td>
+            <table>
+              <tr>
+                <th><label for="contrast_agent_name">Name:</label></th>
+                <td><input type="text" id="contrast_agent_name" name="contrast_agent_name" data-field-type="TEXT" /></td>
+              </tr>
+              <tr>
+                <th><label for="contrast_agent_dose">Menge:</label></th>
+                <td><input type="number" id="magnetic_flux_density" name="magnetic_flux_density" min="0" max="100" step="0.1" data-field-units="ml" data-field-type="NUMBER" /> ml</td>
+              </tr>
+              <tr>
+                <th><label for="contrast_agent_dose">Flussgeschwindigkeit:</label></th>
+                <td><input type="number" id="magnetic_flux_density" name="magnetic_flux_density" min="0" max="100" step="0.1" data-field-units="ml/s" data-field-type="NUMBER" /> ml/s</td>
+              </tr>
+            </table>
           </td>
         </tr>
       </table>
@@ -132,12 +124,13 @@ Referenzwerte für Frauen/Männer: Kawel-Boehm et al. 2015</textarea></td>
       <header class="level1">Befund</header>
       <table>
         <tr>
-          <th>Voruntersuchung:</th>
+          <th>Vergleichsuntersuchung:</th>
           <td>
-            <input name="preceeding_assessment" id="preceeding_assessment" type="checkbox" checked="false" data-field-type="CHECKBOX" />
-            <label for="preceeding_assessment">vorliegend</label>
-            <label for="preceeding_assessment_date">vom</label>
-            <input name="preceeding_assessment" id="preceeding_assessment" type="date" data-field-type="DATE" />
+            <select name="comparison_assessment" id="comparison_assessment">
+              <option value="no">keine</option>
+              <option value="yes">vorliegend</option>
+            </select>
+            <input name="comparison_assessment_date" id="comparison_assessment_date" type="date" data-field-type="DATE" />
           </td>
         </tr>
         <tr>
@@ -178,6 +171,7 @@ Referenzwerte für Frauen/Männer: Kawel-Boehm et al. 2015</textarea></td>
                     <option value="no">Nein</option>
                     <option value="yes">Ja</option>
                   </select>
+                  <input type="text" id="lv_regional_wall_motion_abnormality_comment" name="lv_regional_wall_motion_abnormality_comment" data-field-type="TEXT" />
                 </td>
               </tr>
               <tr>
@@ -188,6 +182,7 @@ Referenzwerte für Frauen/Männer: Kawel-Boehm et al. 2015</textarea></td>
                     <option value="no">Nein</option>
                     <option value="yes">Ja</option>
                   </select>
+                  <input type="text" id="regional_wall_thinning_comment" name="regional_wall_thinning_comment" data-field-type="TEXT" />
                 </td>
               </tr>
               <tr>
@@ -214,6 +209,7 @@ Referenzwerte für Frauen/Männer: Kawel-Boehm et al. 2015</textarea></td>
                     <option value="no">Nein</option>
                     <option value="yes">Ja</option>
                   </select>
+                  <input type="text" id="rv_regional_wall_motion_abnormality_comment" name="rv_regional_wall_motion_abnormality_comment" data-field-type="TEXT" />
                 </td>
               </tr>
             </table>
@@ -231,6 +227,7 @@ Referenzwerte für Frauen/Männer: Kawel-Boehm et al. 2015</textarea></td>
                     <option value="normal">normal groß</option>
                     <option value="pathologic">pathologisch</option>
                   </select>
+                  <input type="text" id="regional_wall_thinning_comment" name="regional_wall_thinning_comment" data-field-type="TEXT" />
                 </td>
               </tr>
               <tr>
@@ -257,6 +254,7 @@ Referenzwerte für Frauen/Männer: Kawel-Boehm et al. 2015</textarea></td>
                     <option value="normal">normal</option>
                     <option value="abnormal">abnorm</option>
                   </select>
+                  <input type="text" id="atrial_septum_position_comment" name="atrial_septum_position_comment" data-field-type="TEXT" />
                 </td>
               </tr>
             </table>
@@ -270,6 +268,7 @@ Referenzwerte für Frauen/Männer: Kawel-Boehm et al. 2015</textarea></td>
               <option value="no">nein</option>
               <option value="yes">ja</option>
             </select>
+            <input type="text" id="heart_valve_pathology_comment" name="heart_valve_pathology_comment" data-field-type="TEXT" />
           </td>
         </tr>
         <tr>
@@ -280,6 +279,7 @@ Referenzwerte für Frauen/Männer: Kawel-Boehm et al. 2015</textarea></td>
               <option value="no">nein</option>
               <option value="yes">ja</option>
             </select>
+            <input type="text" id="intracavitary_thrombi_comment" name="intracavitary_thrombi_comment" data-field-type="TEXT" />
           </td>
         </tr>
         <tr>
@@ -294,6 +294,7 @@ Referenzwerte für Frauen/Männer: Kawel-Boehm et al. 2015</textarea></td>
                     <option value="no">nein</option>
                     <option value="yes">ja</option>
                   </select>
+                  <input type="text" id="regional_myocardial_edema_comment" name="regional_myocardial_edema_comment" data-field-type="TEXT" />
                 </td>
               </tr>
               <tr>
@@ -330,6 +331,7 @@ Referenzwerte für Frauen/Männer: Kawel-Boehm et al. 2015</textarea></td>
                     <option value="no">nein</option>
                     <option value="yes">ja</option>
                   </select>
+                  <input type="text" id="microvascular_obstruction_comment" name="microvascular_obstruction_comment" data-field-type="TEXT" />
                 </td>
               </tr>
               <tr>
@@ -340,6 +342,7 @@ Referenzwerte für Frauen/Männer: Kawel-Boehm et al. 2015</textarea></td>
                     <option value="no">nein</option>
                     <option value="yes">ja</option>
                   </select>
+                  <input type="text" id="hemorrhage_comment" name="hemorrhage_comment" data-field-type="TEXT" />
                 </td>
               </tr>
               <tr>
