@@ -25,8 +25,8 @@ bis Q2/2021                 | bis Q2/2022
 ~~CT TAVI~~                 | CT Primärstaging Lungenkarzinom
 ~~MR Kardio Stress~~        | MR Prostatakarzinom
 ~~CT Koronarangiographie~~  | CT Becken-Bein-Angio
-MR Wirbelsäule degenerativ  | CT Schlaganfall ischäm
-MR Knie (degenerativ)       | MR Schädel MS
+MR Wirbelsäule degenerativ (erst nach Knochentumoren) | CT Schlaganfall ischäm
+MR Knie (degenerativ) (erst nach Knochentumoren)       | MR Schädel MS
 Priorisieren: Knochentumoren (nach AG MSK Sitzung 11.01.2021)
 ~~CT COVID~~                |
 
