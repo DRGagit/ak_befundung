@@ -27,6 +27,7 @@ bis Q2/2021                 | bis Q2/2022
 ~~CT Koronarangiographie~~  | CT Becken-Bein-Angio
 MR Wirbelsäule degenerativ  | CT Schlaganfall ischäm
 MR Knie (degenerativ)       | MR Schädel MS
+Priorisieren: Knochentumoren (nach AG MSK Sitzung 11.01.2021)
 ~~CT COVID~~                |
 
 ## Fertige Befundvorlagen
