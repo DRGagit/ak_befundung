@@ -12,6 +12,8 @@
 /* -- STANDARD ---------------------------------------------------------------------- */
 /*td{padding:0 15px 10px 0 !important;vertical-align:middle !important;}*/
 td{padding:0 15px 10px 0; vertical-align:top}
+td>p:first-child, td>ul:first-child, td>ol:first-child{margin-top:0;}
+td>p:last-child, td>ul:last-child, td>ol:last-child{margin-bottom:0;}
 th{padding-right:15px !important;text-align:left !important; vertical-align:top}
 section header.level1{display:block;font-weight:bold;font-size:20px;color:#337ab7;margin:0 0 10px 0 !important;padding:0;} /* Class secetor inserted */
 section header.level2{display:block;font-size:16px;color:#337ab7;margin:0 0 10px 0 !important;padding:0;} /* Added */
