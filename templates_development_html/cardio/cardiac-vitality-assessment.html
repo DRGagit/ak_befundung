@@ -8,12 +8,12 @@
     <meta name="dcterms.abstract" content="Strukturierte Befundvorlage: Kardiale Vitalitätsdiagnostik" />
     <meta name="dcterms.description" content="Template zur kardialen Vitalitätsdiagnostik" />
     <meta name="dcterms.subject" content="MR; CA;" />
-    <meta name="dcterms.identifier" content="041807.3.2012231220" />
+    <meta name="dcterms.identifier" content="041807.3.2101131720" />
     <meta name="dcterms.type" content="IMAGE_REPORT_TEMPLATE" />
     <meta name="dcterms.language" content="de" />
     <meta name="dcterms.rights" content="Die Deutsche Röntgengesellschaft e. V. (DRG) stellt sämtliche Templates kostenfrei unter der Creative Commons Lizenz CC BY in der Version 4.0 zur Verfügung. Die Lizenz erlaubt Download und Weiterverteilung des Werkes unter Nennung der DRG als Urheber" />
     <meta name="dcterms.license" content="https://github.com/DRGagit/ak_befundung/blob/master/LICENSE" />
-    <meta name="dcterms.date" content="2020-12-23" />
+    <meta name="dcterms.date" content="2021-01-13" />
     <meta name="dcterms.creator" content="AG Herz- und Gefäßdiagnostik" />
     <meta name="dcterms.contributor" content="Jan Preuss (Kodierung)" />
     <meta name="dcterms.publisher" content="Deutsche Röntgengesellschaft (DRG)" />
@@ -79,8 +79,14 @@
       <header class="level1" data-english="Method">Methodik</header>
       <table>
         <tr>
-          <th><label for="magnetic_flux_density">Feldstärke (Flussdichte!?):</label></th>
-          <td><input type="number" id="magnetic_flux_density" name="magnetic_flux_density" value="1.5" min="0.5" max="7" step="0.5" data-field-units="T" data-field-type="NUMBER" /> T</td>
+          <th><label for="magnetic_flux_density">Flussdichte:</label></th>
+          <td>
+            <select name="magnetic_flux_density" id="magnetic_flux_density">
+              <option value="unspecified">&mdash;</option>
+              <option value="1.5 T">1.5 T</option>
+              <option value="3.0 T">3 T</option>
+            </select>
+          </td>
         </tr>
         <tr>
           <th><label for="mr_protocol">MR-Protokoll:</label></th>
@@ -91,12 +97,25 @@
           <td><input type="text" id="evaluation_software" name="evaluation_software" value="(Name und Version)" data-field-type="TEXT" /></td>
         </tr>
         <tr>
-          <th><label for="standard_value_source">Quelle der Normwerte:</label></th>
-          <td><textarea id="standard_value_source" name="standard_value_source" data-field-type="TEXTAREA">Referenzwerte für Frauen/Männer &lt; 35 Jahre bzw. &gt; 35 Jahre: Herzog/Greenwood/Plein &ndash; CMR pocket guide. CMR Section of the European Association of Cardiovascular Imaging 2014.
-                 
-Referenzwerte für Kinder und Jugendliche 0-18 Jahre,  Mädchen/Jungen: van der Ven et al. European Heart Journal &ndash; Cardiovascular Imaging 2020.
-
-Referenzwerte für Frauen/Männer: Kawel-Boehm et al. 2015</textarea></td>
+          <th>Quelle der Normwerte:</th>
+          <td>
+            <ul>
+              <li>Referenzwerte für Frauen/Männer &lt; 35 Jahre bzw. &GreaterEqual; 35 Jahre: <a href="https://www.escardio.org/Sub-specialty-communities/European-Association-of-Cardiovascular-Imaging-(EACVI)/Research-and-Publications/CMR-Pocket-Guides" target="_blank">Herzog/Greenwood/Plein &ndash; CMR pocket guide. CMR Section of the European Association of Cardiovascular Imaging 2014.</a></li>
+              <li>
+                Referenzwerte für Kinder und Jugendliche 0-18 Jahre, Mädchen/Jungen: <a href="https://doi.org/10.1093/ehjci/jez164" target="_blank">van der Ven et al. European Heart Journal &ndash; Cardiovascular Imaging 2020.</a>
+                <ul>
+                  <li><a href="https://academic.oup.com/view-large/190373375">Referenzwerttabelle</a></li>
+                </ul>
+              </li>
+              <li>
+                Referenzwerte für Frauen/Männer: <a href="https://doi.org/10.1186/s12968-015-0111-7" target="_blank">Kawel-Boehm et al. J Cardiovasc Magn Reson 17, 29 (2015).</a><br />
+                <ul>
+                  <li><a href="https://jcmr-online.biomedcentral.com/articles/10.1186/s12968-015-0111-7/tables/3" target="blank_">Referenzwerttabelle linksventrikulärer Parameter</a></li>
+                  <li><a href="https://jcmr-online.biomedcentral.com/articles/10.1186/s12968-015-0111-7/tables/7" target="blank_">Referenzwerttabelle rechtsventrikulärer Parameter</a></li>
+                </ul>
+              </li>
+            </ul>
+          </td>
         </tr>
         <tr>
           <th>Kontrastmittel</th>
@@ -108,11 +127,11 @@ Referenzwerte für Frauen/Männer: Kawel-Boehm et al. 2015</textarea></td>
               </tr>
               <tr>
                 <th><label for="contrast_agent_dose">Menge:</label></th>
-                <td><input type="number" id="magnetic_flux_density" name="magnetic_flux_density" min="0" max="100" step="0.1" data-field-units="ml" data-field-type="NUMBER" /> ml</td>
+                <td><input type="number" id="contrast_agent_dose" name="contrast_agent_dose" min="0" max="100" step="0.1" data-field-units="ml" data-field-type="NUMBER" /> ml</td>
               </tr>
               <tr>
-                <th><label for="contrast_agent_dose">Flussgeschwindigkeit:</label></th>
-                <td><input type="number" id="magnetic_flux_density" name="magnetic_flux_density" min="0" max="100" step="0.1" data-field-units="ml/s" data-field-type="NUMBER" /> ml/s</td>
+                <th><label for="contrast_agent_flow">Flussgeschwindigkeit:</label></th>
+                <td><input type="number" id="contrast_agent_flow" name="contrast_agent_flow" min="0" max="100" step="0.1" data-field-units="ml/s" data-field-type="NUMBER" /> ml/s</td>
               </tr>
             </table>
           </td>
@@ -148,12 +167,16 @@ Referenzwerte für Frauen/Männer: Kawel-Boehm et al. 2015</textarea></td>
           <td>
             <table>
               <tr>
+                <th><label for="lv_enddiastolic_diameter">LV enddiastolischer Diameter (LV EDD):</label></th>
+                <td><input type="number" id="lv_enddiastolic_diameter" name="lv_enddiastolic_diameter" min="0.1" max="300" step="0.1" data-field-units="mm" data-field-type="NUMBER" /> mm</td>
+              </tr>
+              <tr>
                 <th><label for="lv_enddiastolic_volume_index">LV enddiastolischer Volumenindex (LV EDVi):</label></th>
-                <td><input type="number" id="lv_enddiastolic_volume_index" name="lv_enddiastolic_volume_index" min="0.1" max="20" step="0.1" data-field-units="ml/m2" data-field-type="NUMBER" /> ml/m<sup>2</sup></td>
+                <td><input type="number" id="lv_enddiastolic_volume_index" name="lv_enddiastolic_volume_index" min="1" max="1000" step="1" data-field-units="ml/m2" data-field-type="NUMBER" /> ml/m<sup>2</sup></td>
               </tr>
               <tr>
                 <th><label for="lv_endsystolic_volume_index">LV endsystolischer Volumenindex (LV ESVi):</label></th>
-                <td><input type="number" id="lv_endsystolic_volume_index" name="lv_endsystolic_volume_index" min="0.1" max="20" step="0.1" data-field-units="ml/m2" data-field-type="NUMBER" /> ml/m<sup>2</sup></td>
+                <td><input type="number" id="lv_endsystolic_volume_index" name="lv_endsystolic_volume_index" min="1" max="1000" step="1" data-field-units="ml/m2" data-field-type="NUMBER" /> ml/m<sup>2</sup></td>
               </tr>
               <tr>
                 <th><label for="lv_ejection_fraction">LV Ejektionsfraktion (LV EF):</label></th>
@@ -161,7 +184,7 @@ Referenzwerte für Frauen/Männer: Kawel-Boehm et al. 2015</textarea></td>
               </tr>
               <tr>
                 <th><label for="lv_ed_normalized_mass">LV ED Masse normiert:</label></th>
-                <td><input type="number" id="lv_ed_normalized_mass" name="lv_ed_normalized_mass" min="0" max="2000" step="1" data-field-units="g/m2" data-field-type="NUMBER" /> g/m<sup>2</sup></td>
+                <td><input type="number" id="lv_ed_normalized_mass" name="lv_ed_normalized_mass" min="0" max="5000" step="1" data-field-units="g/m2" data-field-type="NUMBER" /> g/m<sup>2</sup></td>
               </tr>
               <tr>
                 <th><label for="lv_regional_wall_motion_abnormality">LV Regionale Wandbewegungsstörung:</label></th>
@@ -187,15 +210,15 @@ Referenzwerte für Frauen/Männer: Kawel-Boehm et al. 2015</textarea></td>
               </tr>
               <tr>
                 <th><label for="rv_enddiastolic_diameter">RV enddiastolischer Diameter (RV EDD):</label></th>
-                <td><input type="number" id="rv_enddiastolic_diameter" name="rv_enddiastolic_diameter" min="0.1" max="20" step="0.1" data-field-units="mm" data-field-type="NUMBER" /> mm</td>
+                <td><input type="number" id="rv_enddiastolic_diameter" name="rv_enddiastolic_diameter" min="0.1" max="300" step="0.1" data-field-units="mm" data-field-type="NUMBER" /> mm</td>
               </tr>
               <tr>
                 <th><label for="rv_enddiastolic_volume_index">RV enddiastolischer Volumenindex (RV EDVi):</label></th>
-                <td><input type="number" id="rv_enddiastolic_volume_index" name="rv_enddiastolic_volume_index" min="0.1" max="20" step="0.1" data-field-units="ml/m2" data-field-type="NUMBER" /> ml/m<sup>2</sup></td>
+                <td><input type="number" id="rv_enddiastolic_volume_index" name="rv_enddiastolic_volume_index" min="1" max="1000" step="1" data-field-units="ml/m2" data-field-type="NUMBER" /> ml/m<sup>2</sup></td>
               </tr>
               <tr>
                 <th><label for="rv_endsystolic_volume_index">RV endsystolischer Volumenindex (RV ESVi):</label></th>
-                <td><input type="number" id="rv_endsystolic_volume_index" name="rv_endsystolic_volume_index" min="0.1" max="20" step="0.1" data-field-units="ml/m2" data-field-type="NUMBER" /> ml/m<sup>2</sup></td>
+                <td><input type="number" id="rv_endsystolic_volume_index" name="rv_endsystolic_volume_index" min="1" max="1000" step="1" data-field-units="ml/m2" data-field-type="NUMBER" /> ml/m<sup>2</sup></td>
               </tr>
               <tr>
                 <th><label for="rv_ejection_fraction">RV Ejektionsfraktion:</label></th>
