@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TNM Oropharynx</title>
+        <meta charset="UTF-8" />
+        <meta name="dcterms.identifier" content="02b5cb3e-5345-41ea-902a-4893ffd528bd" />
+        <meta name="dcterms.title" content="TNM Oropharynx" />
+        <meta name="dcterms.description" content="Standardisierte Befundvorlage f&uuml;r ein TNM-Staging bei einem Karzinom des Oropharnyx" />
+        <meta name="dcterms.type" content="IMAGE_REPORT_TEMPLATE" />
+        <meta name="dcterms.language" content="de" />
+        <meta name="dcterms.publisher" content="Deutsche R&ouml;ntgengesellschaft (DRG)" />
+        <meta name="dcterms.rights" content="May be used freely, subject to license agreement" />
+        <meta name="dcterms.license" content="http://www.radreport.org/license.pdf" />
+        <meta name="dcterms.date" content="2020-11-27" />
+        <meta name="dcterms.creator" content="Hempel JM" />
+        <meta name="dcterms.contributor" content="Hempel JM, Selo N, Becker S, AG Kopf-Halsdiagnostik der DRG" />
+        <script type="text/xml">
+            <template_attributes>
+                <coded_content>
+                    <coding_schemes>
+                        <coding_scheme name="RADLEX" designator="2.16.840.1.113883.6.256"></coding_scheme>
+                        <coding_scheme name="LOINC" designator="2.16.840.1.113883.6.1"></coding_scheme>
+                    </coding_schemes>
+                    <entry origtxt="findings">
+                        <term>
+                            <code meaning="Procedure Findings" value="59776-5" scheme="LOINC"></code>
+                        </term>
+                    </entry>
+                    <entry origtxt="procedureInformation">
+                        <term>
+                            <code meaning="Current Imaging Procedure Description" value="55111-9" scheme="LOINC"></code>
+                        </term>
+                    </entry>
+                    <entry origtxt="comparisons">
+                        <term>
+                            <code meaning="Radiology Comparison Study" value="18834-2" scheme="LOINC"></code>
+                        </term>
+                    </entry>
+                    <entry origtxt="impression">
+                        <term>
+                            <code meaning="Impressions" value="19005-8" scheme="LOINC"></code>
+                        </term>
+                    </entry>
+                    <entry origtxt="clinicalInformation">
+                        <term>
+                            <code meaning="Clinical Information" value="55752-0" scheme="LOINC"></code>
+                        </term>
+                    </entry>
+                </coded_content>
+            </template_attributes>
+        </script>
+    </head>
+    <body>
+        <section id="procedureInformation" class="level1" data-section-name="Methode">
+            <header class="level1">
+                Methode
+            </header>
+            <section id="SECTION_HEADER_1573549263337" class="level2" data-section-name="Computertomographie des Halses">
+                <header class="level2">
+                    Computertomographie des Halses
+                </header>
+            </section>
+        </section>
+        <section id="clinicalInformation" class="level1" data-section-name="Klinische Information">
+            <header class="level1">
+                Klinische Information
+            </header>
+            <p title="">
+                <label for="clinicalInformationText">Klinische Angaben:</label>
+                <input type="text" id="clinicalInformationText" name="" data-field-type="TEXT" data-field-completion-action="NONE" value="V.a. Plattenepithelkarzinom" />
+            </p>
+            <p title="">
+                <label for="TEXT_1573549263434">Fragestellung:</label>
+                <input type="text" id="TEXT_1573549263434" name="" data-field-type="TEXT" data-field-completion-action="NONE" value="Staging" />
+            </p>
+        </section>
+        <section id="comparisons" class="level1" data-section-name="Vergleich">
+            <header class="level1">
+                Vergleich
+            </header>
+            <p title="">
+                <label for="RADIO_1573549263359">Voraufnahme(n):</label>
+                <span id="RADIO_1573549263359" name="" data-field-type="RADIO" data-field-completion-action="NONE" value="">
+                    <br />
+                    <input id="RADIO_1573549263359_0" type="radio" name="RADIO_1573549263359" value="Keine Voraufnahmen vorliegend." checked="">Keine Voraufnahmen vorliegend.</input>
+                    <br />
+                    <span>
+                        <input id="RADIO_1573549263359_1" type="radio" name="RADIO_1573549263359" value="Letzte Voraufnahme: " />
+                        <input id="RADIO_1573549263359_1_FreeText" type="text" value="Letzte Voraufnahme: " />
+                    </span>
+                </span>
+            </p>
+        </section>
+        <section id="findings" class="level1" data-section-name="Befund">
+            <header class="level1">
+                Befund
+            </header>
+            <p title="" style="float:left;width:45%;overflow:hidden">
+                <label for="RADIO_1594024577147">T - Prim&auml;rtumor p16-negativ</label>
+                <span id="RADIO_1594024577147" name="" data-field-type="RADIO" data-field-completion-action="NONE" value="">
+                    <br />
+                    <input id="RADIO_1594024577147_0" type="radio" name="RADIO_1594024577147" value="TX - Prim&auml;rtumor kann nicht beurteilt werden" checked="">TX - Prim&auml;rtumor kann nicht beurteilt werden</input>
+                    <br />
+                    <input id="RADIO_1594024577147_1" type="radio" name="RADIO_1594024577147" value="T0 - Kein Anhalt f&uuml;r Prim&auml;rtumor">T0 - Kein Anhalt f&uuml;r Prim&auml;rtumor</input>
+                    <br />
+                    <input id="RADIO_1594024577147_2" type="radio" name="RADIO_1594024577147" value="T1 - Tumor &lt; 2 cm max. Ausdehnung">T1 - Tumor &lt; 2 cm max. Ausdehnung</input>
+                    <br />
+                    <input id="RADIO_1594024577147_3" type="radio" name="RADIO_1594024577147" value="T2 - Tumor 2-4 cm max. Ausdehnung">T2 - Tumor 2-4 cm max. Ausdehnung</input>
+                    <br />
+                    <input id="RADIO_1594024577147_4" type="radio" name="RADIO_1594024577147" value="T3 - Tumor &gt; 4 cm max. Ausdehnung oder Ausbreitung bis zur lingualen Oberfl&auml;che der Epiglottis">T3 - Tumor &gt; 4 cm max. Ausdehnung oder Ausbreitung bis zur lingualen Oberfl&auml;che der Epiglottis</input>
+                    <br />
+                    <input id="RADIO_1594024577147_5" type="radio" name="RADIO_1594024577147" value="T4a - Infiltration von Larynx, der &auml;u&szlig;eren Zungenmuskulatur (M. genioglossus, M. hyoglossus, M. palatoglossus und M. styloglossus), Lamina medialis des Proc. pterygoideus, harter Gaumen oder Unterkiefer">T4a - Infiltration von Larynx, der &auml;u&szlig;eren Zungenmuskulatur (M. genioglossus, M. hyoglossus, M. palatoglossus und M. styloglossus), Lamina medialis des Proc. pterygoideus, harter Gaumen oder Unterkiefer</input>
+                    <br />
+                    <input id="RADIO_1594024577147_6" type="radio" name="RADIO_1594024577147" value="T4b - Infiltration von Lamina lateralis des Proc. pterygoideus, Sch&auml;delbasis oder Ummauerung der A. carotis interna">T4b - Infiltration von Lamina lateralis des Proc. pterygoideus, Sch&auml;delbasis oder Ummauerung der A. carotis interna</input>
+                </span>
+            </p>
+            <p title="" style="float:right;width:45%;overflow:hidden">
+                <label for="RADIO_1606471172135">T - Prim&auml;rtumor p16-positiv</label>
+                <span id="RADIO_1606471172135" name="" data-field-type="RADIO" data-field-completion-action="NONE" value="">
+                    <br />
+                    <input id="RADIO_1606471172135_0" type="radio" name="RADIO_1606471172135" value="TX - Prim&auml;rtumor kann nicht beurteilt werden" checked="">TX - Prim&auml;rtumor kann nicht beurteilt werden</input>
+                    <br />
+                    <input id="RADIO_1606471172135_1" type="radio" name="RADIO_1606471172135" value="T0 - Kein Anhalt f&uuml;r Prim&auml;rtumor">T0 - Kein Anhalt f&uuml;r Prim&auml;rtumor</input>
+                    <br />
+                    <input id="RADIO_1606471172135_2" type="radio" name="RADIO_1606471172135" value="T1 - Tumor &lt; 2 cm max. Ausdehnung">T1 - Tumor &lt; 2 cm max. Ausdehnung</input>
+                    <br />
+                    <input id="RADIO_1606471172135_3" type="radio" name="RADIO_1606471172135" value="T2 - Tumor 2-4 cm max. Ausdehnung">T2 - Tumor 2-4 cm max. Ausdehnung</input>
+                    <br />
+                    <input id="RADIO_1606471172135_4" type="radio" name="RADIO_1606471172135" value="T3 - Tumor &gt; 4 cm max. Ausdehnung oder Ausbreitung bis zur lingualen Oberfl&auml;che der Epiglottis">T3 - Tumor &gt; 4 cm max. Ausdehnung oder Ausbreitung bis zur lingualen Oberfl&auml;che der Epiglottis</input>
+                    <br />
+                    <input id="RADIO_1606471172135_5" type="radio" name="RADIO_1606471172135" value="T4 - Infiltration von Larynx, der &auml;u&szlig;eren Zungenmuskulatur (M. genioglossus, M. hyoglossus, M. palatoglossus und M. styloglossus), Lamina medialis des Proc. pterygoideus, harter Gaumen, Unterkiefer, Lamina lateralis des Proc. pterygoideus, lateraler Nasopharynx, Sch&auml;delbasis oder Ummauerung der A. carotis interna">T4 - Infiltration von Larynx, der &auml;u&szlig;eren Zungenmuskulatur (M. genioglossus, M. hyoglossus, M. palatoglossus und M. styloglossus), Lamina medialis des Proc. pterygoideus, harter Gaumen, Unterkiefer, Lamina lateralis des Proc. pterygoideus, lateraler Nasopharynx, Sch&auml;delbasis oder Ummauerung der A. carotis interna</input>
+                </span>
+            </p>
+            <p title="" class="clear">
+                <label for="TEXT_1606471172136">Lokalisation:</label>
+                <input type="text" id="TEXT_1606471172136" name="" data-field-type="TEXT" data-field-completion-action="NONE" value="Freitext" />
+            </p>
+            <section id="SECTION_HEADER_1594024577193" class="level2" data-section-name="Anmerkung: Schleimhautausbreitung zur laryngealen Oberfl&auml;che der Epiglottis von Prim&auml;rtumoren der Zungenbasis und Vallecula gilt nicht als Invasion des Larynx. ">
+                <header class="level2">
+                    Anmerkung: Schleimhautausbreitung zur laryngealen Oberfl&auml;che der Epiglottis von Prim&auml;rtumoren der Zungenbasis und Vallecula gilt nicht als Invasion des Larynx. 
+                </header>
+            </section>
+            <p title="">
+                <label for="CHECKBOX_1606468913068">Relevantes f&uuml;r Therapieplanung</label>
+                <span id="CHECKBOX_1606468913068" name="" data-field-type="CHECKBOX" data-field-completion-action="NONE" value="">
+                    <br />
+                    <input id="CHECKBOX_1606468913068_0" type="checkbox" name="CHECKBOX_1606468913068" value="Arrosion von kn&ouml;chernen Strukturen">Arrosion von kn&ouml;chernen Strukturen</input>
+                    <br />
+                    <input id="CHECKBOX_1606468913068_1" type="checkbox" name="CHECKBOX_1606468913068" value="Mittellinien&uuml;berschreitung am Zungengrund">Mittellinien&uuml;berschreitung am Zungengrund</input>
+                    <br />
+                    <input id="CHECKBOX_1606468913068_2" type="checkbox" name="CHECKBOX_1606468913068" value="Beteiligung der ipsilateralen A. lingualis">Beteiligung der ipsilateralen A. lingualis</input>
+                </span>
+            </p>
+            <p title="" style="float:left;width:45%;overflow:hidden">
+                <label for="RADIO_1594024577174">N - Region&auml;re Lymphknoten f&uuml;r p16-negativen Prim&auml;rtumor</label>
+                <span id="RADIO_1594024577174" name="" data-field-type="RADIO" data-field-completion-action="NONE" value="">
+                    <br />
+                    <input id="RADIO_1594024577174_0" type="radio" name="RADIO_1594024577174" value="NX - Region&auml;re Lymphknoten k&ouml;nnen nicht beurteilt werden" checked="">NX - Region&auml;re Lymphknoten k&ouml;nnen nicht beurteilt werden</input>
+                    <br />
+                    <input id="RADIO_1594024577174_1" type="radio" name="RADIO_1594024577174" value="N0 - Keine region&auml;ren Lymphknotenmetastasen">N0 - Keine region&auml;ren Lymphknotenmetastasen</input>
+                    <br />
+                    <input id="RADIO_1594024577174_2" type="radio" name="RADIO_1594024577174" value="N1 - solit&auml;r, ipsilateral, Gr&ouml;&szlig;e &lt; 3 cm, keine extranodale Ausbreitung">N1 - solit&auml;r, ipsilateral, Gr&ouml;&szlig;e &lt; 3 cm, keine extranodale Ausbreitung</input>
+                    <br />
+                    <input id="RADIO_1594024577174_3" type="radio" name="RADIO_1594024577174" value="N2a - solit&auml;r, ipsilateral, Gr&ouml;&szlig;e 3-6 cm, keine extranodale Ausbreitung">N2a - solit&auml;r, ipsilateral, Gr&ouml;&szlig;e 3-6 cm, keine extranodale Ausbreitung</input>
+                    <br />
+                    <input id="RADIO_1594024577174_4" type="radio" name="RADIO_1594024577174" value="N2b - multipel, ipsilateral, Gr&ouml;&szlig;e &lt; 6 cm, keine extranodale Ausbreitung">N2b - multipel, ipsilateral, Gr&ouml;&szlig;e &lt; 6 cm, keine extranodale Ausbreitung</input>
+                    <br />
+                    <input id="RADIO_1594024577174_5" type="radio" name="RADIO_1594024577174" value="N2c - multipel, bilateral oder kontralateral, &lt; 6 cm, keine extranodale Ausbreitung">N2c - multipel, bilateral oder kontralateral, &lt; 6 cm, keine extranodale Ausbreitung</input>
+                    <br />
+                    <input id="RADIO_1594024577174_6" type="radio" name="RADIO_1594024577174" value="N3a - Gr&ouml;&szlig;e &gt; 6 cm, keine extranodale Ausbreitung">N3a - Gr&ouml;&szlig;e &gt; 6 cm, keine extranodale Ausbreitung</input>
+                    <br />
+                    <input id="RADIO_1594024577174_7" type="radio" name="RADIO_1594024577174" value="N3b - extranodale Ausbreitung, solit&auml;r, Gr&ouml;&szlig;e &gt; 3 cm ">N3b - extranodale Ausbreitung, solit&auml;r, Gr&ouml;&szlig;e &gt; 3 cm </input>
+                    <br />
+                    <input id="RADIO_1594024577174_8" type="radio" name="RADIO_1594024577174" value="N3b - extranodale Ausbreitung, multipel, ipsilateral, kontralateral oder bilateral">N3b - extranodale Ausbreitung, multipel, ipsilateral, kontralateral oder bilateral</input>
+                </span>
+            </p>
+            <p title="" style="float:right;width:45%;overflow:hidden">
+                <label for="RADIO_1606471172154">N - Region&auml;re Lymphknoten f&uuml;r p16-positiven Prim&auml;rtumor</label>
+                <span id="RADIO_1606471172154" name="" data-field-type="RADIO" data-field-completion-action="NONE" value="">
+                    <br />
+                    <input id="RADIO_1606471172154_0" type="radio" name="RADIO_1606471172154" value="NX - Region&auml;re Lymphknoten k&ouml;nnen nicht beurteilt werden" checked="">NX - Region&auml;re Lymphknoten k&ouml;nnen nicht beurteilt werden</input>
+                    <br />
+                    <input id="RADIO_1606471172154_1" type="radio" name="RADIO_1606471172154" value="N0 - Keine region&auml;ren Lymphknotenmetastasen">N0 - Keine region&auml;ren Lymphknotenmetastasen</input>
+                    <br />
+                    <input id="RADIO_1606471172154_2" type="radio" name="RADIO_1606471172154" value="N1 - solit&auml;r oder multipel, ipsilateral, Gr&ouml;&szlig;e &lt; 6 cm">N1 - solit&auml;r oder multipel, ipsilateral, Gr&ouml;&szlig;e &lt; 6 cm</input>
+                    <br />
+                    <input id="RADIO_1606471172154_3" type="radio" name="RADIO_1606471172154" value="N2 - solit&auml;r oder multipel, kontralateral oder bilateral, Gr&ouml;&szlig;e &lt; 6 cm">N2 - solit&auml;r oder multipel, kontralateral oder bilateral, Gr&ouml;&szlig;e &lt; 6 cm</input>
+                    <br />
+                    <input id="RADIO_1606471172154_4" type="radio" name="RADIO_1606471172154" value="N3 - solit&auml;r oder multipel, Gr&ouml;&szlig;e &gt; 6 cm">N3 - solit&auml;r oder multipel, Gr&ouml;&szlig;e &gt; 6 cm</input>
+                </span>
+            </p>
+            <p title="" style="clear: both">
+                <label for="TEXT_1594024577246">Lokalisation:</label>
+                <input type="text" id="TEXT_1594024577246" name="" data-field-type="TEXT" data-field-completion-action="NONE" value="Seite, Level XX" />
+            </p>
+            <section id="SECTION_HEADER_1594024577195" class="level2" data-section-name="Anmerkung: Das Vorhandensein einer Beteiligung (Invasion) der Haut oder der Weichteile oder klinische Zeichen einer Nervenbeteiligung wird als klinische extranodale Ausbreitung angesehen. In der Mittellinie gelegene Lymphknoten gelten als ipsilateral.">
+                <header class="level2">
+                    Anmerkung: Das Vorhandensein einer Beteiligung (Invasion) der Haut oder der Weichteile oder klinische Zeichen einer Nervenbeteiligung wird als klinische extranodale Ausbreitung angesehen. In der Mittellinie gelegene Lymphknoten gelten als ipsilateral.
+                </header>
+            </section>
+            <p title="">
+                <label for="RADIO_1594024577197">M - Fernmetastasen</label>
+                <span id="RADIO_1594024577197" name="" data-field-type="RADIO" data-field-completion-action="NONE" value="">
+                    <br />
+                    <input id="RADIO_1594024577197_0" type="radio" name="RADIO_1594024577197" value="M0 - keine Fernmetastasen" checked="">M0 - keine Fernmetastasen</input>
+                    <br />
+                    <input id="RADIO_1594024577197_1" type="radio" name="RADIO_1594024577197" value="M1 - Fernmetastasen">M1 - Fernmetastasen</input>
+                </span>
+            </p>
+            <p title="">
+                <label for="TEXT_1594024577245">Lokalisation:</label>
+                <input type="text" id="TEXT_1594024577245" name="" data-field-type="TEXT" data-field-completion-action="NONE" value="Freitext" />
+            </p>
+            <p title="">
+                <label for="TEXT_1594024577196">Nebenbefunde:</label>
+                <input type="text" id="TEXT_1594024577196" name="" data-field-type="TEXT" data-field-completion-action="NONE" value="-" />
+            </p>
+            <p title="">
+                <label for="TEXT_1594024577212">Sonstiges:</label>
+                <input type="text" id="TEXT_1594024577212" name="" data-field-type="TEXT" data-field-completion-action="NONE" value="-" />
+            </p>
+        </section>
+        <section id="impression" class="level1" data-section-name="Beurteilung">
+            <header class="level1">
+                Beurteilung
+            </header>
+            <p title="">
+                <label for="impressionText">Beurteilung:</label>
+                <textarea rows="3" cols="100" id="impressionText" name="" data-field-type="TEXTAREA" data-field-completion-action="NONE">Tx Nx Mx Oropharynxkarzinom</textarea>
+            </p>
+        </section>
+    </body>
+</html>
