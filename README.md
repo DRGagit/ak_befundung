@@ -18,7 +18,7 @@ Weitere Informationen stehen auch unter www.befundung.drg.de zur Verfügung.
 
 ### Contact
 
-strukturiert-befundung@drg.de
+strukturierte-befundung@drg.de
 
 ## Roadmap
 
