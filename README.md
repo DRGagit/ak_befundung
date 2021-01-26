@@ -16,6 +16,10 @@ Weitere Informationen stehen auch unter www.befundung.drg.de zur Verfügung.
 - Malte Sieren (Uniklinik Lübeck)
 - Johann Martin Hempel (Uniklink Tübingen)
 
+### Contact
+
+strukturierte-befundung@drg.de
+
 ## Roadmap
 
 Als Teil einer neuen klareren Strategie wurden seitens der DRG in Abstimmung mit dem Arbeitskreis die folgenden Befundvorlagen priorisiert. Der Arbeitskreis wird aktiv auf die entsprechenden organ- bzw. pathologiespezifischen AGs zugehen und entsprechend konsentierte Befundvorlagen in ein interoperables HTML-Format nach IHE MRRT überführen.
@@ -54,6 +58,7 @@ _**Myokarditis**_       | Cardio | [Link](https://www.befundung.drg.de/de-DE/319
 _**HCM / HOCM**_        | Cardio | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/041807.3.1911201758-mrt_hocm.html) | | [RöFo](https://doi.org/10.1055/a-0998-4116) |
 _**Rektum-Ca**_         | Onko   | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/041807.00001-mrt_rectalca.html) | [Link](https://radreport.org/home/RPT50786/2020-06-19%2010:40:33) |
 _**Stress-Herz**_       | Cardio | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/041807.3.2011102103-mrt_adenosinstress.html/) | | |
+_**Vitalitätsdiagnostik-Herz**_  | Cardio |  | | |
 
 ### US
 Titel             | Kategorie | befundung.drg.de | radreport.org
