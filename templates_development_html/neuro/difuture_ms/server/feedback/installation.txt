@@ -1,0 +1,73 @@
+URL: www.freecontactform.com
+
+Version: FreeContactForm Free V2.2
+
+Copyright (c) 2013 Stuart Cochrane
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+
+
+Installation of the Free version:
+
+METHOD 1 (Automatted)
+
+Upload all files to your website.
+In your browser, open the file freecontactforminstall.php and install.
+
+
+
+
+METHOD 2 (Manual)
+
+Create the file 'freecontactformsettings.php' using a code/plain text Editor.
+
+Insert the following code into this file :-
+
+<?php
+
+$email_to = "youremailaddress@yourdomain.com"; // your email address
+$email_subject = "Contact Form Message"; // email subject line
+$thankyou = "thankyou.htm"; // thank you page
+
+// if you update the question on the form -
+// you need to update the questions answer below
+$antispam_answer = "25";
+
+?>
+
+Enter your email address in place of youremailaddress@yourdomain.com
+
+Change the email subject (if you like)
+
+Change your thank you page reference (if you like)
+
+Save the file.
+
+
+Copy ALL files onto your website using an FTP program (filezilla for example)
+
+
+===========
+
+
+Want to incorporate the form into your own design?
+
+Copy the HTML from contactform.htm and paste it into your existing page.
+
+
+===========
+
+Like us on Facebook:
+http://www.facebook.com/FreeContactForm
+
+Follow us on Twitter:
+http://twitter.com/#!/FreeContactForm
+
+===========
