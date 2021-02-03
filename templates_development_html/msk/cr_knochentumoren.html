@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Knochentumoren</title>
+    <meta charset="UTF-8" />
+    <!--Dublin Core metadata elements here-->
+    <meta name="dcterms.title" content="Knochentumoren" />
+    <meta name="dcterms.abstract" content="Strukturierte Befundvorlage: Knochentumoren" />
+    <meta name="dcterms.description" content="Template zu Knochentumoren" />
+    <meta name="dcterms.subject" content="CR; MS; ON" />
+    <meta name="dcterms.identifier" content="041807.1.2102031615" />
+    <meta name="dcterms.type" content="IMAGE_REPORT_TEMPLATE" />
+    <meta name="dcterms.language" content="de" />
+    <meta name="dcterms.rights" content="Die Deutsche Röntgengesellschaft e. V. (DRG) stellt sämtliche Templates kostenfrei unter der Creative Commons Lizenz CC BY in der Version 4.0 zur Verfügung. Die Lizenz erlaubt Download und Weiterverteilung des Werkes unter Nennung der DRG als Urheber" />
+    <meta name="dcterms.license" content="https://github.com/DRGagit/ak_befundung/blob/master/LICENSE" />
+    <meta name="dcterms.date" content="2021-02-03" />
+    <meta name="dcterms.creator" content="" />
+    <meta name="dcterms.contributor" content="Jan Preuss (Kodierung)" />
+    <meta name="dcterms.publisher" content="Deutsche Röntgengesellschaft (DRG)" />
+
+    <script type="text/xml">
+      <template_attributes>
+        <top-level-flag>0</top-level-flag>
+        <status>ACTIVE</status>
+      </template_attributes>
+    </script>
+    
+    <style type="text/css">
+	/*<![CDATA[*/
+	ul.selectable-items-list { padding-left: 0; list-style-type: none; }
+	ul > li > ul.selectable-items-list { padding-left: 26px; list-style-type: none; }
+	/*]]>*/
+    </style>
+
+    <!--Link to Stylesheet-->
+    <link rel="stylesheet" type="text/css" href="../templates_final/drg.css" />
+
+  </head>
+  <body>
+    <section data-section-name="Klinische Angaben" data-section-required="true">
+      <header class="level1" data-english="Clinical information">Klinische Angaben</header>
+      <p>
+       <textarea name="clinical_information" id="clinical_information" data-field-type="TEXTAREA"></textarea>
+      </p>
+    </section>
+
+    <section data-section-name="Klinische Fragestellung">
+      <header class="level1" data-english="Clinical question">Klinische Fragestellung</header>
+      <p>
+        <textarea name="clinical_question" data-field-type="TEXTAREA"></textarea>
+      </p>
+    </section>
+
+    <section data-section-name="Method">
+      <header class="level1" data-english="Method">Methodik</header>
+      <table>
+        <tr>
+          <th><label for="method_technique">Technik:</label></th>
+          <td>
+            <textarea name="method_technique" id="method_technique" data-field-type="TEXTAREA">Es wurden acquiriert:
+[Siehe Protokollempfehlungen AG BVB]</textarea>
+          </td>
+        </tr>
+      </table>
+    </section>
+
+    <section data-section-name="Befund" data-section-required="true">
+      <header class="level1">Befund</header>
+      <table>
+        <tr>
+          <th>Vergleichsuntersuchung:</th>
+          <td>
+            <select name="comparison_assessment" id="comparison_assessment">
+              <option value="no">keine</option>
+              <option value="yes">vorliegend</option>
+            </select>
+            <table>
+              <tr><th>Röntgen vom</th><td><input name="comparison_assessment_cr_date" type="date" data-field-type="DATE" /></td><td><input name="comparison_assessment_cr_comment" type="text" data-field-type="TEXT" /></td></tr>
+              <tr><th>CT vom</th><td><input name="comparison_assessment_ct_date" type="date" data-field-type="DATE" /></td><td><input name="comparison_assessment_ct_comment" type="text" data-field-type="TEXT" /></td></tr>
+              <tr><th>MRT vom</th><td><input name="comparison_assessment_mrt_date" type="date" data-field-type="DATE" /></td><td><input name="comparison_assessment_mrt_comment" type="text" data-field-type="TEXT" /></td></tr>
+              <tr><th>Sonstiges vom</th><td><input name="comparison_assessment_other_date" type="date" data-field-type="DATE" /></td><td><input name="comparison_assessment_other_comment" type="text" data-field-type="TEXT" /></td></tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <th><label for="assessed_region">Erfasste Untersuchungsregion:</label></th>
+          <td><input type="text" name="assessed_region" id="assessed_region" data-field-type="TEXT" /></td>
+        </tr>
+        <tr>
+          <th>Köcherne Läsion / Raumforderung:</th>
+          <td>
+            <select name="bone_lesion_present" id="bone_lesion_present">
+              <option value="unspecified">&mdash;</option>
+              <option value="no">nicht vorhanden</option>
+              <option value="yes">vorhanden</option>
+            </select>
+            <table>
+              <tr>
+                <th><label for="lesion_site">Läsionslokalisation:</label></th>
+                <td>
+                  <select name="lesion_site" id="lesion_site">
+                    <option value="unspecified">&mdash;</option>
+                    <option value="proximal_epiphysis">epiphysär proximal</option>
+                    <option value="distal_epiphysis">epiphysär distal</option>
+                    <option value="proximal_metaphysis">metaphysär proximal</option>
+                    <option value="distal_metaphysis">metaphysär distal</option>
+                    <option value="proximal_diaphysis">diaphysär proximal</option>
+                    <option value="distal_diaphysis">diaphysär distal</option>
+                  </select>
+                  <input type="text" name="lesion_site_comment" data-field-type="TEXT" />
+                </td>
+              </tr>
+              <tr>
+                <th><label for="lesion_side">Seitenangabe:</label></th>
+                <td>
+                  <select name="lesion_side" id="lesion_side">
+                    <option value="unspecified">&mdash;</option>
+                    <option value="right">rechts</option>
+                    <option value="left">links</option>
+                    <option value="both">beidseits</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <th><label for="lesion_growth">Wachstum:</label></th>
+                <td>
+                  <select name="lesion_growth" id="lesion_growth">
+                    <option value="unspecified">&mdash;</option>
+                    <option value="central">zentral</option>
+                    <option value="peripheral">peripher</option>
+                    <option value="juxtacortical">juxtakortikal</option>
+                    <option value="other">Sonstiges:</option>
+                  </select>
+                  <input type="text" name="lesion_growth_comment" data-field-type="TEXT" />
+                </td>
+              </tr>
+              <tr>
+                <th><label for="maximum_lesion_diameter">Max. Durchmesser der Läsion:</label></th>
+                <td><input type="number" id="maximum_lesion_diameter" name="maximum_lesion_diameter" min="0.0" max="100.0" step="0.1" data-field-units="cm" data-field-type="NUMBER" /> cm</td>
+              </tr>
+              <tr>
+                <th>Morphologie</th>
+                <td>
+                  <ul class="selectable-items-list">
+                    <li>
+                      <input type="radio" id="lesion_morphology_osteolytic" name="lesion_morphology" value="osteolytic" data-field-type="RADIO" /><label for="lesion_morphology_osteolytic">Osteolytisch</label>
+                      <ul class="selectable-items-list">
+                        <li>
+                          <input type="checkbox" id="lesion_morphology_lytic_smooth" name="lesion_morphology_lytic_smooth" value="yes" data-field-type="CHECKBOX" /><label for="lesion_morphology_lytic_smooth">Lytisch (glatt begrenzt)</label>
+                          <ul class="selectable-items-list"><li><input type="checkbox" id="lesion_morphology_expansive" name="lesion_morphology_expansive" value="yes" data-field-type="CHECKBOX" /><label for="lesion_morphology_expansive">expansiv</label></li></ul>
+                        </li>
+                        <li>
+                          <input type="checkbox" id="lesion_morphology_lytic_irregular" name="lesion_morphology_lytic_irregular" value="yes" data-field-type="CHECKBOX" /><label for="lesion_morphology_lytic_irregular">Lytisch (irregulär)</label>
+                          <ul class="selectable-items-list"><li><input type="checkbox" id="lesion_morphology_invasive" name="lesion_morphology_invasive" value="yes" data-field-type="CHECKBOX" /><label for="lesion_morphology_invasive">invasiv</label></li></ul>
+                        </li>
+                        <li>
+                          <label for="sclerotic_border">Sklerosesaum:</label>
+                          <select id="sclerotic_border" name="sclerotic_border">
+                            <option value="unspecified">&mdash;</option>
+                            <option value="complete">Vollständig</option>
+                            <option value="incomplete">Unvollständig</option>
+                            <option value="none">Ohne Randsklerose</option>
+                          </select>
+                        </li>
+                        <li>
+                          <label for="lesion_morphology_comment">Sonstiges:</label>
+                          <input type="text" name="lesion_morphology_comment" data-field-type="TEXT" />
+                        </li>
+                      </ul>
+                    </li>
+                    <li><input type="radio" id="lesion_morphology_osteosclerotic" name="lesion_morphology" value="osteosclerotic" data-field-type="RADIO" /><label for="lesion_morphology_osteosclerotic">Osteosklerotisch</label> <input type="text" name="osteosclerotic_lesion_comment" data-field-type="TEXT" /></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th>Periostale Reaktion</th>
+                <td>
+                  <ul class="selectable-items-list">
+                    <li><input type="checkbox" id="periostal_reaction_none" name="periostal_reaction_none" value="yes" data-field-type="CHECKBOX" /><label for="periostal_reaction_none">Keine</label></li>
+                    <li><input type="checkbox" id="periostal_reaction_corticalis_penetration" name="periostal_reaction_corticalis_penetration" value="yes" data-field-type="CHECKBOX" /><label for="periostal_reaction_corticalis_penetration">Kortikalisdurchbruch</label></li>
+                    <li><input type="checkbox" id="periostal_reaction_solid" name="periostal_reaction_solid" value="yes" data-field-type="CHECKBOX" /><label for="periostal_reaction_solid">Solide</label></li>
+                    <li><input type="checkbox" id="periostal_reaction_lamellar" name="periostal_reaction_lamellar" value="yes" data-field-type="CHECKBOX" /><label for="periostal_reaction_lamellar">Lamelliert</label></li>
+                    <li><input type="checkbox" id="periostal_reaction_spicular" name="periostal_reaction_spicular" value="yes" data-field-type="CHECKBOX" /><label for="periostal_reaction_spicular">Spikuliert</label></li>
+                    <li><input type="checkbox" id="periostal_reaction_destructive" name="periostal_reaction_destructive" value="yes" data-field-type="CHECKBOX" /><label for="periostal_reaction_destructive">Destruierend (Codman's Dreieck)</label></li>
+                    <li><label for="periostal_reaction_comment">Sonstiges:</label> <input type="text" id="periostal_reaction_comment" name="periostal_reaction_comment" data-field-type="TEXT" /></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th>Binnenstruktur</th>
+                <td>
+                  <table>
+                    <tr><th><label for="inner_structure_cartilage_matrix">Knorpelmatrix:</label></th><td><input type="text" id="inner_structure_cartilage_matrix" name="inner_structure_cartilage_matrix" data-field-type="TEXT" /></td></tr>
+                    <tr><th><label for="inner_structure_bone_matrix">Knochenmatrix:</label></th><td><input type="text" id="inner_structure_bone_matrix" name="inner_structure_bone_matrix" data-field-type="TEXT" /></td></tr>
+                    <tr><th><label for="inner_structure_fluid_level">Flüssigkeitsspiegel:</label></th><td><input type="text" id="inner_structure_fluid_level" name="inner_structure_fluid_level" data-field-type="TEXT" /></td></tr>
+                    <tr><th><label for="inner_structure_comment">Sonstiges:</label></th><td><input type="text" id="inner_structure_comment" name="inner_structure_comment" data-field-type="TEXT" /></td></tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <th>Komplikationen</th>
+                <td>
+                  <ul class="selectable-items-list">
+                    <li>
+                      <input type="checkbox" id="complication_pathologic_fracture" name="complication_pathologic_fracture" value="yes" data-field-type="CHECKBOX" /><label for="complication_pathologic_fracture">Pathologische Fraktur</label>
+                      <ul class="selectable-items-list">
+                        <li><label for="complication_pathologic_fracture_description">Beschreibung:</label> <input type="text" id="complication_pathologic_fracture_description" name="complication_pathologic_fracture_description" data-field-type="TEXT" /></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <input type="checkbox" id="complication_joint_infiltration" name="complication_joint_infiltration" value="yes" data-field-type="CHECKBOX" /><label for="complication_joint_infiltration">Gelenkinfiltration</label>
+                      <ul class="selectable-items-list">
+                        <li><label for="complication_infiltrated_joint_name">Gelenkbezeichnung:</label> <input type="text" id="complication_infiltrated_joint_name" name="complication_infiltrated_joint_name" data-field-type="TEXT" /></li>
+                        <li><label for="complication_joint_infiltration_description">Beschreibung:</label> <input type="text" id="complication_joint_infiltration_description" name="complication_joint_infiltration_description" data-field-type="TEXT" /></li>
+                      </ul>
+                    </li>
+                    <li><label for="complication_comment">Sonstiges:</label> <input type="text" id="complication_comment" name="complication_comment" data-field-type="TEXT" /></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th><label for="other_bone_lesions">Weitere Knochenläsionen:</label></th>
+                <td>
+                  <select id="other_bone_lesions">
+                    <option value="unspecified">&mdash;</option>
+                    <option value="none">keine</option>
+                    <option value="similar_morphology">Ja, ähnliche Morphologie</option>
+                    <option value="different_morphology">Ja, unterschiedliche Morphologie</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <th><label for="bone_lesion_comment">Sonstiges:</label></th>
+                <td><textarea name="bone_lesion_comment" data-field-type="TEXTAREA"></textarea></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <th>Weichteilmantel:</th>
+          <td>
+            <table>
+              <tr>
+                <th><label for="surrounding_tissue_volume">Volumen:</label></th>
+                <td>
+                  <select name="surrounding_tissue_volume" id="surrounding_tissue_volume">
+                    <option value="unspecified">&mdash;</option>
+                    <option value="unconspicuous">unauffällig</option>
+                    <option value="increased">Volumenvermehrung</option>
+                    <option value="decreased">Volumenminderung</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <th><label for="surrounding_tissue_density">Dichte:</label></th>
+                <td>
+                  <select name="surrounding_tissue_density" id="surrounding_tissue_density">
+                    <option value="unspecified">&mdash;</option>
+                    <option value="unconspicuous">unauffällig</option>
+                    <option value="hyperdense">Hyperdensität</option>
+                    <option value="hypodense">Hypodensität</option>
+                  </select>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <th>Ergänzungen:</th>
+          <td><textarea name="findings_comment" data-field-type="TEXTAREA"></textarea></td>
+        </tr>
+      </table>
+    </section>
+
+    <section data-section-name="Beurteilung" data-section-required="true">
+      <header class="level1" data-english="Impression">Beurteilung</header>
+      <table>
+        <tr>
+          <th><label for="bone_lesion_impression">Knöcherne Läsion / Raumforderung:</label></th>
+          <td>
+            <select name="bone_lesion_impression" id="bone_lesion_impression">
+              <option value="unspecified">&mdash;</option>
+              <option value="no_malignancy_suspect_lesion">Kein Nachweis einer malignomsuspekten ossären Läsion</option>
+              <option value="benignly_presenting_lesion">Es liegt eine benigne imponierende Läsion in folgender Lokalisation vor:</option>
+              <option value="multiple_benignly_presenting_lesions">Es liegen mehrere benigne imponierende Läsionen in folgenden Lokalisationen vor:</option>
+              <option value="malignancy_suspect_lesion">Es liegt eine malignomsuspekte Läsion in folgender Lokalisation vor:</option>
+              <option value="multiple_malignancy_suspect_lesions">Es liegen mehrere malignomsuspekte Läsionen in folgenden Lokalisationen vor:</option>
+            </select>
+            <br />
+            <textarea name="bone_lesion_impression_comment" data-field-type="TEXTAREA"></textarea>
+          </td>
+        </tr>
+        <tr>
+          <th><label for="surrounding_tissue_impression">Weichteilmantel:</label></th>
+          <td>
+            <select name="surrounding_tissue_impression" id="surrounding_tissue_impression">
+              <option value="unspecified">&mdash;</option>
+              <option value="unconspicuous">unauffällig</option>
+              <option value="malignancy_suspect_involvement">Suspekte Weichteilbeteiligung:</option>
+              <option value="malignancy_suspect_findings">Suspekte Weichteilbefund:</option>
+            </select>
+            <br />
+            <textarea name="surrounding_tissue_impression_comment" data-field-type="TEXTAREA"></textarea>
+          </td>
+        </tr>
+        <tr>
+          <th><label for="differential_diagnostic_comment">Differentialdiagnostisch wäre vordergründig anzuführen:</label></th>
+          <td><textarea name="differential_diagnostic_comment" data-field-type="TEXTAREA"></textarea></td>
+        </tr>
+      </table>
+    </section>
+    
+    <section data-section-name="Empfehlungen" data-section-required="true">
+      <header class="level1" data-english="Recommendations">Empfehlungen / Procedere</header>
+      <table>
+        <tr>
+          <th><label for="recommended_additional_imaging">Ergänzende Bildgebung empfohlen:</label></th>
+          <td>
+            <select name="recommended_additional_imaging">
+              <option value="none">keine</option>
+              <option value="CT">CT</option>
+              <option value="MRT">MRT</option>
+              <option value="scintigraphy">CT</option>
+              <option value="PET-CT">PET-CT</option>
+              <option value="other">Sonstiges:</option>
+            </select>
+            <input type="text" name="recommended_additional_imaging_comment" data-field-type="TEXT" />
+          </td>
+        </tr>
+        <tr>
+          <th><label for="months_before_follow_up_examination">Verlaufskontrolle empfohlen:</label></th>
+          <td>in <input type="number" name="months_before_follow_up_examination" min="1" max="120" step="1" data-field-units="mo" data-field-type="NUMBER" /> Monaten</td>
+        </tr>
+        <tr>
+          <th><label for="histological_examination_recommended">Histologische Sicherung empfohlen:</label></th>
+          <td>
+            <select id="histological_examination_recommended" name="histological_examination_recommended">
+              <option value="unspecified">&mdash;</option>
+              <option value="no">Nein</option>
+              <option value="yes">Ja</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <th><label for="recommendations_comment">Sonstiges:</label></th>
+          <td><textarea id="recommendations_comment" name="recommendations_comment" data-field-type="TEXTAREA"></textarea></td>
+        </tr>
+      </table>
+    </section>
+  </body>
+</html>
