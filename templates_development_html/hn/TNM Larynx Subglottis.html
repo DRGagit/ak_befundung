@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>TNM NNH</title>
+        <title>TNM Larynx Subglottis</title>
         <meta charset="UTF-8" />
-        <meta name="dcterms.identifier" content="02b5cb3e-5345-41ea-902a-4893ffd528bd" />
-        <meta name="dcterms.title" content="TNM NN" />
-        <meta name="dcterms.description" content="Standardisierte Befundvorlage f&uuml;r ein TNM-Staging bei einem Karzinom der NNH" />
+        <meta name="dcterms.identifier" content="932238ed-4933-4c79-b653-48f0076cd4c7" />
+        <meta name="dcterms.title" content="TNM Larynx Supraglottis" />
+        <meta name="dcterms.description" content="Standardisierte Befundvorlage f&uuml;r ein TNM-Staging bei einem subglottischen Larnyxkarzinom" />
         <meta name="dcterms.type" content="IMAGE_REPORT_TEMPLATE" />
         <meta name="dcterms.language" content="de" />
         <meta name="dcterms.publisher" content="Deutsche R&ouml;ntgengesellschaft (DRG)" />
@@ -49,13 +49,6 @@
                 </coded_content>
             </template_attributes>
         </script>
-        <style>
-            .left25 { float: left; width: 25%; overflow:hidden}
-            .right25 { float: right; width: 25%; overflow:hidden}
-            .left45 { float: left; width: 45%; overflow:hidden}
-            .right45 { float: right; width: 45%; overflow:hidden}
-            .clear { clear: both}
-        </style>     
         <!--Link to Stylesheet-->
         <link rel="stylesheet" href="drg.css"/>
     </head>
@@ -101,85 +94,43 @@
             </p>
         </section>
         <section id="findings" class="level1" data-section-name="Befund">
-<hr>
             <header class="level1">
                 Befund
             </header>
-
-            <table>
-                <tr>
-                    <td>
-                        <label for="tnm_t">T - Primärtumor Kieferhöhle</label>
-                    </td>
-                    <td>
-                        <label for="tnm_t">T - Primärtumor Nasenhaupthöhle und Siebbeinzellen</label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <input id="tnm_t_0" type="radio" name="tnm_t" value="TX" checked="">TX - Primärtumor kann nicht beurteilt werden.
-                    </td>
-                    <td>
-                        <input id="tnm_t_1" type="radio" name="tnm_t" value="TX">TX - Primärtumor kann nicht beurteilt werden.
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <input id="tnm_t_2" type="radio" name="tnm_t" value="T0">T0 - Kein Anhalt für Primärtumor.
-                    </td>
-                    <td>
-                        <input id="tnm_t_3" type="radio" name="tnm_t" value="T0">T0 - Kein Anhalt für Primärtumor.
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <input id="tnm_t_4" type="radio" name="tnm_t" value="T1">T1 - Tumor auf die antrale Schleimhaut begrenzt ohne Arrosion oder Destruktion des Knochens.
-                    </td>
-                    <td>
-                        <input id="tnm_t_5" type="radio" name="tnm_t" value="T1">T1 - Tumor auf einen Unterbezirk der Nasenhöhle oder Siebbeinzellen beschränkt, mit oder ohne Arrosion des Knochens.
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <input id="tnm_t_6" type="radio" name="tnm_t" value="T2">T2 - Tumor mit Arrosion oder Destruktion des Knochens (ausgenommen die posteriore Wand), einschließlich Ausdehnung auf harten Gaumen und/oder mittleren Nasengang.
-                    </td>
-                    <td>
-                        <input id="tnm_t_7" type="radio" name="tnm_t" value="T2">T2 - Tumor in zwei Unterbezirken eines Bezirkes oder Ausbreitung auf einen Nachbarbezirk innerhalb des Nasenhöhlen-Siebbeinzellen-Areals, mit oder ohne Arrosion des Knochens.
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <input id="tnm_t_8" type="radio" name="tnm_t" value="T3">T3 - Infiltration eine oder mehrere der folgenden Strukturen: Knochen der dorsalen Wand der Kieferhöhle, Subkutangewebe, Boden oder mediale Wand der Orbita, Fossa pterygoidea, Sinus ethmoidalis.
-                    </td>
-                    <td>
-                        <input id="tnm_t_9" type="radio" name="tnm_t" value="T3">T3 - Ausbreitung des Tumors in die mediale Orbita, den Orbitaboden, die Kieferhöhle, den harten Gaumen oder die Lamina cribrosa.
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <input id="tnm_t_10" type="radio" name="tnm_t" value="T4a">T4a - Infiltration von Larynx, der äußeren Zungenmuskulatur (M. genioglossus, M. hyoglossus, M. palatoglossus und M. styloglossus), Lamina medialis des Proc. pterygoideus, harter Gaumen oder Unterkiefer.
-
-                    </td>
-                    <td>
-                        <input id="tnm_t_11" type="radio" name="tnm_t" value="T4a">T4a - Infiltration einer oder mehrerer der folgenden Strukturen: Inhalt der vorderen Orbita, Haut von Nase oder Wange, minimale Ausbreitung in die vordere Schädelgrube, Proc. pterygoideus, Keilbeinhöhle oder Stirnhöhle.
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <input id="tnm_t_12" type="radio" name="tnm_t" value="T4b">T4b - Infiltration von Lamina lateralis des Proc. pterygoideus, Schädelbasis oder Ummauerung der A. carotis interna.
-
-                    </td>
-                    <td>
-                        <input id="tnm_t_13" type="radio" name="tnm_t" value="T4b">T4b - Infiltration einer oder mehrerer der folgenden Strukturen: Orbitaspitze, Dura, Gehirn, mittlere Schädelgrube, Hirnnerven ausgeonmmen den maxillären Ast des N. trigeminus (V2), Nasopharynx, Clivus.
-                    </td>
-                </tr>
-            </table>
             <p title="">
-                <label for="tnm_t_text">Lokalisation:</label>
-                <input type="text" id="tnm_t_text" name="" data-field-type="TEXT" data-field-completion-action="NONE" value="Freitext" />
+                <label for="RADIO_1594024577147">T - Prim&auml;rtumor</label>
+                <span id="RADIO_1594024577147" name="" data-field-type="RADIO" data-field-completion-action="NONE" value="">
+                    <br />
+                    <input id="RADIO_1594024577147_0" type="radio" name="RADIO_1594024577147" value="TX - Prim&auml;rtumor kann nicht beurteilt werden" checked="">TX - Prim&auml;rtumor kann nicht beurteilt werden</input>
+                    <br />
+                    <input id="RADIO_1594024577147_1" type="radio" name="RADIO_1594024577147" value="T0 - Kein Anhalt f&uuml;r Prim&auml;rtumor">T0 - Kein Anhalt f&uuml;r Prim&auml;rtumor</input>
+                    <br />
+                    <input id="RADIO_1594024577147_2" type="radio" name="RADIO_1594024577147" value="T1 - Tumor auf Subglottis begrenzt">T1 - Tumor auf Subglottis begrenzt</input>
+                    <br />
+                    <input id="RADIO_1594024577147_3" type="radio" name="RADIO_1594024577147" value="T2 - Infiltration: eine oder beide Stimmlippen, keine Stimmlippenfixation">T2 - Infiltration: eine oder beide Stimmlippen, keine Stimmlippenfixation</input>
+                    <br />
+                    <input id="RADIO_1594024577147_4" type="radio" name="RADIO_1594024577147" value="T3 - Infiltration: Larynx, mit Stimmlippenfixation ">T3 - Infiltration: Larynx, mit Stimmlippenfixation </input>
+                    <br />
+                    <input id="RADIO_1594024577147_5" type="radio" name="RADIO_1594024577147" value="T4a - Infiltration: Schildknorpel, jenseits Larynx, z.B. Trachea, &auml;u&szlig;ere Zungenmuskulatur (M. genioglossus, M. hyoglossus, M. palatoglossus und M. styloglossus), gerade Halsmuskulatur, Schilddr&uuml;se oder &Ouml;sophagus">T4a - Infiltration: Schildknorpel, jenseits Larynx, z.B. Trachea, &auml;u&szlig;ere Zungenmuskulatur (M. genioglossus, M. hyoglossus, M. palatoglossus und M. styloglossus), gerade Halsmuskulatur, Schilddr&uuml;se oder &Ouml;sophagus</input>
+                    <br />
+                    <input id="RADIO_1594024577147_6" type="radio" name="RADIO_1594024577147" value="T4b - Infiltration: Pr&auml;vertebralraum, Strukturen des Mediastinums oder Ummauerung der A. carotis interna">T4b - Infiltration: Pr&auml;vertebralraum, Strukturen des Mediastinums oder Ummauerung der A. carotis interna</input>
+                </span>
+            </p>
+            <p title="">
+                <label for="TEXT_1606471172136">Lokalisation:</label>
+                <input type="text" id="TEXT_1606471172136" name="" data-field-type="TEXT" data-field-completion-action="NONE" value="Freitext" />
+            </p>
+            <p title="">
+                <label for="CHECKBOX_subglklin">Relevante Informationen f&uuml;r eine Operation:&nbsp;</label>
+                <span id="CHECKBOX_subglklin" name="" data-field-type="CHECKBOX" data-field-completion-action="NONE" value="">
+                    <br />
+                    <input id="CHECKBOX_subglklin_0" type="checkbox" name="CHECKBOX_subglklin" value="Knorpelinfiltration">Knorpelinfiltration: </br>- nur bedingter Zugang von endoluminal für laserchirurgisches Konzept möglich </br>- erhöhte Wahrscheinlichkeit für Einsatz weitreichender chirurgischer Verfahren wie z.B. Laryngektomie.</input>
+                    <br />
+                <input id="CHECKBOX_subglklin_1" type="checkbox" name="CHECKBOX_subglklin" value="Infiltration Aryhöher oder Interaryregion">Infiltration der Aryhöcker sowie der Interaryregion: </br>- laserchirurgische Resektion meist gut möglich, jedoch erhöhte Gefahr von nachträglichen ausgeprägten Vernarbungen mit Immobilisation der Aryhöcker und deutlicher Funktionseinschränkung des Kehlkopfes</br>- Auch der Tumorbefall eines Aryhöckers lässt sich zwar tumorchirurgisch meist sehr gut beherrschen, jedoch können gerade bei älteren Patienten > 60 Jahre massive Schluckprobleme auftreten, die unter Umständen eine längerfristige Versorgung mit einer Trachealkanüle zur Verhinderung einer Aspirationspneumonie erforderlich machen.</input>
+                </span>
             </p>
 
-             <p title="">
+            <p title="">
                 <label for="RADIO_1594024577174">N - Region&auml;re Lymphknoten</label>
                 <span id="RADIO_1594024577174" name="" data-field-type="RADIO" data-field-completion-action="NONE" value="">
                     <br />
@@ -193,20 +144,22 @@
                     <br />
                     <input id="RADIO_1594024577174_4" type="radio" name="RADIO_1594024577174" value="N2b - multipel, ipsilateral, Gr&ouml;&szlig;e &lt; 6 cm, keine extranodale Ausbreitung">N2b - multipel, ipsilateral, Gr&ouml;&szlig;e &lt; 6 cm, keine extranodale Ausbreitung</input>
                     <br />
-                    <input id="RADIO_1594024577174_5" type="radio" name="RADIO_1594024577174" value="N2c - multipel, bilateral oder kontralateral, &lt; 6 cm, keine extranodale Ausbreitung">N2c - multipel, bilateral oder kontralateral, &lt; 6 cm, keine extranodale Ausbreitung</input>
+                    <input id="RADIO_1594024577174_5" type="radio" name="RADIO_1594024577174" value="N2c - kontralateral, bilateral, Gr&ouml;&szlig;e &lt; 6 cm, keine extranodale Ausbreitung">N2c - kontralateral, bilateral, Gr&ouml;&szlig;e &lt; 6 cm, keine extranodale Ausbreitung</input>
                     <br />
                     <input id="RADIO_1594024577174_6" type="radio" name="RADIO_1594024577174" value="N3a - Gr&ouml;&szlig;e &gt; 6 cm, keine extranodale Ausbreitung">N3a - Gr&ouml;&szlig;e &gt; 6 cm, keine extranodale Ausbreitung</input>
                     <br />
-                    <input id="RADIO_1594024577174_7" type="radio" name="RADIO_1594024577174" value="N3b - extranodale Ausbreitung, solit&auml;r, Gr&ouml;&szlig;e &gt; 3 cm ">N3b - extranodale Ausbreitung, solit&auml;r, Gr&ouml;&szlig;e &gt; 3 cm </input>
-                    <br />
-                    <input id="RADIO_1594024577174_8" type="radio" name="RADIO_1594024577174" value="N3b - extranodale Ausbreitung, multipel, ipsilateral, kontralateral oder bilateral">N3b - extranodale Ausbreitung, multipel, ipsilateral, kontralateral oder bilateral</input>
+                    <input id="RADIO_1594024577174_7" type="radio" name="RADIO_1594024577174" value="N3b - extranodale Ausbreitung">N3b - extranodale Ausbreitung</input>
                 </span>
             </p>
             <p title="">
                 <label for="TEXT_1594024577246">Lokalisation:</label>
                 <input type="text" id="TEXT_1594024577246" name="" data-field-type="TEXT" data-field-completion-action="NONE" value="Seite, Level XX" />
             </p>
-
+            <section id="SECTION_HEADER_1594024577195" class="level2" data-section-name="Anmerkung: Das Vorhandensein einer Beteiligung (Invasion) der Haut oder der Weichteile oder klinische Zeichen einer Nervenbeteiligung wird als klinische extranodale Ausbreitung angesehen. In der Mittellinie gelegene Lymphknoten gelten als ipsilateral.">
+                <header class="level2">
+                    Anmerkung: Das Vorhandensein einer Beteiligung (Invasion) der Haut oder der Weichteile oder klinische Zeichen einer Nervenbeteiligung wird als klinische extranodale Ausbreitung angesehen. In der Mittellinie gelegene Lymphknoten gelten als ipsilateral.
+                </header>
+            </section>
             <p title="">
                 <label for="RADIO_1594024577197">M - Fernmetastasen</label>
                 <span id="RADIO_1594024577197" name="" data-field-type="RADIO" data-field-completion-action="NONE" value="">
@@ -235,7 +188,7 @@
             </header>
             <p title="">
                 <label for="impressionText">Beurteilung:</label>
-                <textarea rows="3" cols="100" id="impressionText" name="" data-field-type="TEXTAREA" data-field-completion-action="NONE">Tx Nx Mx NNH-Karzinom</textarea>
+                <textarea rows="3" cols="100" id="impressionText" name="" data-field-type="TEXTAREA" data-field-completion-action="NONE">Tx Nx Mx subglottisches Larynxkarzinom</textarea>
             </p>
         </section>
     </body>

@@ -49,6 +49,15 @@
                 </coded_content>
             </template_attributes>
         </script>
+        <style>
+            .left25 { float: left; width: 25%; overflow:hidden}
+            .right25 { float: right; width: 25%; overflow:hidden}
+            .left45 { float: left; width: 45%; overflow:hidden}
+            .right45 { float: right; width: 45%; overflow:hidden}
+            .clear { clear: both}
+        </style>  
+        <!--Link to Stylesheet-->
+        <link rel="stylesheet" href="drg.css"/>
     </head>
     <body>
         <section id="procedureInformation" class="level1" data-section-name="Methode">
@@ -95,7 +104,7 @@
             <header class="level1">
                 Befund
             </header>
-            <p title="" style="float:left;width:45%;overflow:hidden">
+            <p title="" class="left45">
                 <label for="RADIO_1594024577147">T - Prim&auml;rtumor p16-negativ</label>
                 <span id="RADIO_1594024577147" name="" data-field-type="RADIO" data-field-completion-action="NONE" value="">
                     <br />
@@ -114,7 +123,7 @@
                     <input id="RADIO_1594024577147_6" type="radio" name="RADIO_1594024577147" value="T4b - Infiltration von Lamina lateralis des Proc. pterygoideus, Sch&auml;delbasis oder Ummauerung der A. carotis interna">T4b - Infiltration von Lamina lateralis des Proc. pterygoideus, Sch&auml;delbasis oder Ummauerung der A. carotis interna</input>
                 </span>
             </p>
-            <p title="" style="float:right;width:45%;overflow:hidden">
+            <p title="" class="right45">
                 <label for="RADIO_1606471172135">T - Prim&auml;rtumor p16-positiv</label>
                 <span id="RADIO_1606471172135" name="" data-field-type="RADIO" data-field-completion-action="NONE" value="">
                     <br />
@@ -141,17 +150,17 @@
                 </header>
             </section>
             <p title="">
-                <label for="CHECKBOX_1606468913068">Relevantes f&uuml;r Therapieplanung</label>
+                <label for="CHECKBOX_1606468913068">Relevante Informationen f&uuml;r die Therapieplanung:</label>
                 <span id="CHECKBOX_1606468913068" name="" data-field-type="CHECKBOX" data-field-completion-action="NONE" value="">
                     <br />
-                    <input id="CHECKBOX_1606468913068_0" type="checkbox" name="CHECKBOX_1606468913068" value="Arrosion von kn&ouml;chernen Strukturen">Arrosion von kn&ouml;chernen Strukturen</input>
+                    <input id="CHECKBOX_1606468913068_0" type="checkbox" name="CHECKBOX_1606468913068" value="Arrosion von kn&ouml;chernen Strukturen">Arrosion von kn&ouml;chernen Strukturen: häufig Indikation zur partiellen Ober- oder Unterkieferresektion mit ggf. notwendiger Rekonstruktion</input>
                     <br />
                     <input id="CHECKBOX_1606468913068_1" type="checkbox" name="CHECKBOX_1606468913068" value="Mittellinien&uuml;berschreitung am Zungengrund">Mittellinien&uuml;berschreitung am Zungengrund</input>
-                    <br />
-                    <input id="CHECKBOX_1606468913068_2" type="checkbox" name="CHECKBOX_1606468913068" value="Beteiligung der ipsilateralen A. lingualis">Beteiligung der ipsilateralen A. lingualis</input>
+                    oder
+                    <input id="CHECKBOX_1606468913068_2" type="checkbox" name="CHECKBOX_1606468913068" value="Beteiligung der ipsilateralen A. lingualis">Beteiligung der ipsilateralen A. lingualis</input>: Bevorzugung einer prim&auml;ren Radiochemotherapie
                 </span>
             </p>
-            <p title="" style="float:left;width:45%;overflow:hidden">
+          <p title="" class="left45">
                 <label for="RADIO_1594024577174">N - Region&auml;re Lymphknoten f&uuml;r p16-negativen Prim&auml;rtumor</label>
                 <span id="RADIO_1594024577174" name="" data-field-type="RADIO" data-field-completion-action="NONE" value="">
                     <br />
@@ -174,7 +183,7 @@
                     <input id="RADIO_1594024577174_8" type="radio" name="RADIO_1594024577174" value="N3b - extranodale Ausbreitung, multipel, ipsilateral, kontralateral oder bilateral">N3b - extranodale Ausbreitung, multipel, ipsilateral, kontralateral oder bilateral</input>
                 </span>
             </p>
-            <p title="" style="float:right;width:45%;overflow:hidden">
+            <p title="" class="right45">
                 <label for="RADIO_1606471172154">N - Region&auml;re Lymphknoten f&uuml;r p16-positiven Prim&auml;rtumor</label>
                 <span id="RADIO_1606471172154" name="" data-field-type="RADIO" data-field-completion-action="NONE" value="">
                     <br />
@@ -189,7 +198,7 @@
                     <input id="RADIO_1606471172154_4" type="radio" name="RADIO_1606471172154" value="N3 - solit&auml;r oder multipel, Gr&ouml;&szlig;e &gt; 6 cm">N3 - solit&auml;r oder multipel, Gr&ouml;&szlig;e &gt; 6 cm</input>
                 </span>
             </p>
-            <p title="" style="clear: both">
+            <p title="" class="clear">
                 <label for="TEXT_1594024577246">Lokalisation:</label>
                 <input type="text" id="TEXT_1594024577246" name="" data-field-type="TEXT" data-field-completion-action="NONE" value="Seite, Level XX" />
             </p>

@@ -49,6 +49,15 @@
                 </coded_content>
             </template_attributes>
         </script>
+       <style>
+            .left25 { float: left; width: 25%; overflow:hidden}
+            .right25 { float: right; width: 25%; overflow:hidden}
+            .left45 { float: left; width: 45%; overflow:hidden}
+            .right45 { float: right; width: 45%; overflow:hidden}
+            .clear { clear: both}
+        </style>  
+        <!--Link to Stylesheet-->
+        <link rel="stylesheet" href="drg.css"/>
     </head>
     <body>
         <section id="procedureInformation" class="level1" data-section-name="Methode">
@@ -118,12 +127,21 @@
                 <label for="TEXT_1606471172136">Lokalisation:</label>
                 <input type="text" id="TEXT_1606471172136" name="" data-field-type="TEXT" data-field-completion-action="NONE" value="Freitext" />
             </p>
+           <p title="">
+                <label for="CHECKBOX_hypopharynx_rel">Relevante Informationen f&uuml;r die Therapieplanung:</label>
+                <span id="CHECKBOX_hypopharynx_rel" name="" data-field-type="CHECKBOX" data-field-completion-action="NONE" value="">
+                    <br />
+                    <input id="CHECKBOX_hypopharynx_rel_0" type="checkbox" name="CHECKBOX_hypopharynx_rel" value="Infiltration des oberen &Ouml;sophagussphinkters">Infiltration des oberen &Ouml;sophagussphinkers</input>
+                    <br />
+                    <input id="CHECKBOX_hypopharynx_rel_1" type="checkbox" name="CHECKBOX_hypopharynx_rel" value="Infiltration des Larynx">Infiltration des Larynx: ggf. Laryngektomie erforderlich</input>
+                </span>
+            </p>
             <section id="SECTION_HEADER_1594024577193" class="level2" data-section-name="Anmerkung: Die zentralen Weichteile des Halses schlie&szlig;en die gerade Halsmuskulatur und das subkutane Fett ein.">
                 <header class="level2">
                     Anmerkung: Die zentralen Weichteile des Halses schlie&szlig;en die gerade Halsmuskulatur und das subkutane Fett ein.
                 </header>
             </section>
-            <p title="" style="float:left;width:45%;overflow:hidden">
+            <p title="" class="left45">
                 <label for="RADIO_1594024577174">N - Region&auml;re Lymphknoten f&uuml;r p16-negativen Prim&auml;rtumor</label>
                 <span id="RADIO_1594024577174" name="" data-field-type="RADIO" data-field-completion-action="NONE" value="">
                     <br />
@@ -146,7 +164,7 @@
                     <input id="RADIO_1594024577174_8" type="radio" name="RADIO_1594024577174" value="N3b - extranodale Ausbreitung, multipel, ipsilateral, kontralateral oder bilateral">N3b - extranodale Ausbreitung, multipel, ipsilateral, kontralateral oder bilateral</input>
                 </span>
             </p>
-            <p title="" style="float:right;width:45%;overflow:hidden">
+            <p title="" class="right45">
                 <label for="RADIO_1606471172154">N - Region&auml;re Lymphknoten f&uuml;r p16-positiven Prim&auml;rtumor</label>
                 <span id="RADIO_1606471172154" name="" data-field-type="RADIO" data-field-completion-action="NONE" value="">
                     <br />
@@ -161,7 +179,7 @@
                     <input id="RADIO_1606471172154_4" type="radio" name="RADIO_1606471172154" value="N3 - solit&auml;r oder multipel, Gr&ouml;&szlig;e &gt; 6 cm">N3 - solit&auml;r oder multipel, Gr&ouml;&szlig;e &gt; 6 cm</input>
                 </span>
             </p>
-            <p title="" style="clear: both">
+            <p title="" class="clear">
                 <label for="TEXT_1594024577246">Lokalisation:</label>
                 <input type="text" id="TEXT_1594024577246" name="" data-field-type="TEXT" data-field-completion-action="NONE" value="Seite, Level XX" />
             </p>
