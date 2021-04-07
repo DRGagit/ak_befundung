@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MRT Aortenisthmusstenose</title>
+    <meta charset="UTF-8" />
+    <!--Dublin Core metadata elements here-->
+    <meta name="dcterms.title" content="MRT Aortenisthmusstenose" />
+    <meta name="dcterms.abstract" content="Strukturierte Befundvorlage: Aortenisthmusstenose" />
+    <meta name="dcterms.description" content="Template zur Aortenisthmusstenose (ISTA)" />
+    <meta name="dcterms.subject" content="MR; CA;" />
+    <meta name="dcterms.identifier" content="041807.3.2103151002" />
+    <meta name="dcterms.type" content="IMAGE_REPORT_TEMPLATE" />
+    <meta name="dcterms.language" content="de" />
+    <meta name="dcterms.rights" content="Die Deutsche Röntgengesellschaft e. V. (DRG) stellt sämtliche Templates kostenfrei unter der Creative Commons Lizenz CC BY in der Version 4.0 zur Verfügung. Die Lizenz erlaubt Download und Weiterverteilung des Werkes unter Nennung der DRG als Urheber" />
+    <meta name="dcterms.license" content="https://github.com/DRGagit/ak_befundung/blob/master/LICENSE" />
+    <meta name="dcterms.date" content="2021-03-15" />
+    <meta name="dcterms.creator" content="AG Herz- und Gefäßdiagnostik" />
+    <meta name="dcterms.contributor" content="Jan Preuss (Kodierung)" />
+    <meta name="dcterms.publisher" content="Deutsche Röntgengesellschaft (DRG)" />
+
+    <script type="text/xml">
+      <template_attributes>
+        <top-level-flag>0</top-level-flag>
+        <status>ACTIVE</status>
+      </template_attributes>
+    </script>
+
+    <!--Link to Stylesheet-->
+    <link rel="stylesheet" type="text/css" href="../../templates_final/drg.css" />
+
+  </head>
+  <body>
+    <section data-section-name="Klinische Angaben" data-section-required="true">
+      <header class="level1" data-english="Clinical information">Klinische Angaben</header>
+      <p>
+       <textarea name="clinical_information" id="clinical_information" data-field-type="TEXTAREA"></textarea>
+      </p>
+      <table>
+        <tr>
+          <th>Patientencharakteristik</th>
+          <td>
+            <table>
+              <tr>
+                <th><label for="patient_sex">Geschlecht:</label></th>
+                <td>
+                  <select name="patient_sex" id="patient_sex">
+                    <option value="female">W</option>
+                    <option value="male">M</option>
+                    <option value="other/unknown">O</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <th><label for="patient_body_weight">Körpergewicht:</label></th>
+                <td><input type="number" id="patient_body_weight" name="patient_body_weight" min="0.1" max="600" step="0.1" data-field-units="kg" data-field-type="NUMBER" /> kg</td>
+              </tr>
+              <tr>
+                <th><label for="patient_body_weight">Körpergröße:</label></th>
+                <td><input type="number" id="patient_body_height" name="patient_body_height" min="0.100" max="3" step="0.001" data-field-units="m" data-field-type="NUMBER" /> m</td>
+              </tr>
+              <tr>
+                <th><label for="patient_body_surface_area">Körperoberfläche (BSA):</label></th>
+                <td><input type="number" id="patient_body_surface_area" name="patient_body_surface_area" min="0.01" max="9" step="0.01" data-field-units="m2" data-field-type="NUMBER" /> m<sup>2</sup></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </section>
+
+    <section data-section-name="Klinische Fragestellung">
+      <header class="level1" data-english="Clinical question">Klinische Fragestellung</header>
+      <p>
+        <textarea name="clinical_question" data-field-type="TEXTAREA"></textarea>
+      </p>
+    </section>
+
+    <section data-section-name="Method">
+      <header class="level1" data-english="Method">Methodik</header>
+      <table>
+        <tr>
+          <th><label for="magnetic_flux_density">Flussdichte:</label></th>
+          <td>
+            <select name="magnetic_flux_density" id="magnetic_flux_density">
+              <option value="unspecified">&mdash;</option>
+              <option value="1.5 T">1.5 T</option>
+              <option value="3.0 T">3 T</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <th><label for="mr_protocol">MR-Protokoll:</label></th>
+          <td><textarea id="mr_protocol" name="mr_protocol" data-field-type="TEXTAREA">Sequenzen und Ebenen:</textarea></td>
+        </tr>
+        <tr>
+          <th><label for="evaluation_software">Auswertesoftware:</label></th>
+          <td><input type="text" id="evaluation_software" name="evaluation_software" value="(Name und Version)" data-field-type="TEXT" /></td>
+        </tr>
+        <tr>
+          <th>Kontrastmittel</th>
+          <td>
+            <table>
+              <tr>
+                <th><label for="contrast_agent_name">Name:</label></th>
+                <td><input type="text" id="contrast_agent_name" name="contrast_agent_name" data-field-type="TEXT" /></td>
+              </tr>
+              <tr>
+                <th><label for="contrast_agent_dose">Menge:</label></th>
+                <td><input type="number" id="contrast_agent_dose" name="contrast_agent_dose" min="0" max="100" step="0.1" data-field-units="ml" data-field-type="NUMBER" /> ml</td>
+              </tr>
+              <tr>
+                <th><label for="contrast_agent_flow">Flussgeschwindigkeit:</label></th>
+                <td><input type="number" id="contrast_agent_flow" name="contrast_agent_flow" min="0" max="100" step="0.1" data-field-units="ml/s" data-field-type="NUMBER" /> ml/s</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </section>
+
+    <section data-section-name="Befund" data-section-required="true">
+      <header class="level1">Befund</header>
+      <table>
+        <tr>
+          <th>Vergleichsuntersuchung:</th>
+          <td>
+            <select name="comparison_assessment" id="comparison_assessment">
+              <option value="no">keine</option>
+              <option value="yes">vorliegend</option>
+            </select>
+            <input name="comparison_assessment_date" id="comparison_assessment_date" type="date" data-field-type="DATE" />
+          </td>
+        </tr>
+        <tr>
+          <th><label for="image_quality">Bildqualität:</label></th>
+          <td>
+            <select name="image_quality" id="image_quality">
+              <option value="excellent">gut</option>
+              <option value="sufficient">ausreichend</option>
+              <option value="reduced">eingeschränkt</option>
+            </select>
+            <input type="text" name="image_quality_comment" data-field-type="TEXT" />
+          </td>
+        </tr>
+        <tr>
+          <th>Quelle der Normwerte:</th>
+          <td>
+            <textarea name="normal_values_references" data-field-type="TEXTAREA"></textarea>
+          </td>
+        </tr>
+        <tr>
+          <th>Messwerte Aorta</th>
+          <td>
+            <table>
+              <tr>
+                <th>Sinus valsalvae (2 Ebenen):</th>
+                <td><input type="number" name="sinus_valsalvae_plane_1" min="0" max="200" step="0.1" data-field-units="mm" data-field-type="NUMBER" /> mm, <input type="number" name="sinus_valsalvae_plane_2" min="0" max="200" step="0.1" data-field-units="mm" data-field-type="NUMBER" /> mm (cusp to commissure)</td>
+              </tr>
+              <tr>
+                <th>Sinutubulärer Übergang (2 Ebenen):</th>
+                <td><input type="number" name="sinutubular_junction_plane_1" min="0" max="200" step="0.1" data-field-units="mm" data-field-type="NUMBER" /> mm, <input type="number" name="sinutubular_junction_plane_2" min="0" max="200" step="0.1" data-field-units="mm" data-field-type="NUMBER" /> mm</td>
+              </tr>
+              <tr>
+                <th><label for="ascendent_aorta">Aorta ascendens (Höhe PA-Bifurkation):</label></th>
+                <td><input type="number" name="ascendent_aorta" id="ascendent_aorta" min="0" max="200" step="0.1" data-field-units="mm" data-field-type="NUMBER" /> mm</td>
+              </tr>
+              <tr>
+                <th>Proximaler Aortenbogen (vor TBC)</th>
+                <td><label for="proximal_aortic_arch_min">min:</label> <input type="number" name="proximal_aortic_arch_min" id="proximal_aortic_arch_min" min="0" max="200" step="0.1" data-field-units="mm" data-field-type="NUMBER" /> mm, <label for="proximal_aortic_arch_max">max:</label> <input type="number" name="proximal_aortic_arch_max" id="proximal_aortic_arch_max" min="0" max="200" step="0.1" data-field-units="mm" data-field-type="NUMBER" /> mm</td>
+              </tr>
+              <tr>
+                <th>Mittlerer Aortenbogen (TBC – ACC sin.)</th>
+                <td><label for="intermediate_aortic_arch_min">min:</label> <input type="number" name="intermediate_aortic_arch_min" id="intermediate_aortic_arch_min" min="0" max="200" step="0.1" data-field-units="mm" data-field-type="NUMBER" /> mm, <label for="intermediate_aortic_arch_max">max:</label> <input type="number" name="intermediate_aortic_arch_max" id="intermediate_aortic_arch_max" min="0" max="200" step="0.1" data-field-units="mm" data-field-type="NUMBER" /> mm</td>
+              </tr>
+              <tr>
+                <th>Distaler Aortenbogen (ACC sin. – ASS)</th>
+                <td><label for="distal_aortic_arch_min">min:</label> <input type="number" name="distal_aortic_arch_min" id="distal_aortic_arch_min" min="0" max="200" step="0.1" data-field-units="mm" data-field-type="NUMBER" /> mm, <label for="distal_aortic_arch_max">max:</label> <input type="number" name="distal_aortic_arch_max" id="distal_aortic_arch_max" min="0" max="200" step="0.1" data-field-units="mm" data-field-type="NUMBER" /> mm</td>
+              </tr>
+              <tr>
+                <th>Isthmus</th>
+                <td><label for="isthmus_min">min:</label> <input type="number" name="isthmus_min" id="isthmus_min" min="0" max="200" step="0.1" data-field-units="mm" data-field-type="NUMBER" /> mm, <label for="isthmus_max">max:</label> <input type="number" name="isthmus_max" id="isthmus_max" min="0" max="200" step="0.1" data-field-units="mm" data-field-type="NUMBER" /> mm</td>
+              </tr>
+              <tr>
+                <th><label for="descendent_aorta_level_pa_bifurcation">Aorta descendens (Höhe PA-Bifurkation):</label></th>
+                <td><input type="number" name="descendent_aorta_level_pa_bifurcation" id="descendent_aorta_level_pa_bifurcation" min="0" max="200" step="0.1" data-field-units="mm" data-field-type="NUMBER" /> mm</td>
+              </tr>
+              <tr>
+                <th><label for="descendent_aorta_level_diaphragm">Aorta descendens (Höhe Zwerchfell):</label></th>
+                <td><input type="number" name="descendent_aorta_level_diaphragm" id="descendent_aorta_level_diaphragm" min="0" max="200" step="0.1" data-field-units="mm" data-field-type="NUMBER" /> mm</td>
+              </tr>
+              <tr>
+                <th><label for="mr_sequences_used_for_measurement">Für die Messungen verwendete Sequenzen:</label></th>
+                <td><input type="text" name="mr_sequences_used_for_measurement" id="mr_sequences_used_for_measurement" data-field-type="TEXT" /></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <th>Aorten-Morphologie</th>
+          <td>
+            <table>
+              <tr>
+                <th><label for="aortic_stenosis">Stenose(n):</label></th>
+                <td>
+                  <select name="aortic_stenosis" id="aortic_stenosis">
+                    <option value="unspecified">&mdash;</option>
+                    <option value="no">Nein</option>
+                    <option value="yes">Ja</option>
+                  </select>
+                  <input type="text" id="aortic_stenosis_comment" name="aortic_stenosis_comment" data-field-type="TEXT" />
+                </td>
+              </tr>
+              <tr>
+                <th><label for="aortic_aneurysm">Aneurysma:</label></th>
+                <td>
+                  <select name="aortic_aneurysm" id="aortic_aneurysm">
+                    <option value="unspecified">&mdash;</option>
+                    <option value="no">Nein</option>
+                    <option value="yes">Ja</option>
+                  </select>
+                  <input type="text" id="aortic_aneurysm_comment" name="aortic_aneurysm_comment" data-field-type="TEXT" />
+                </td>
+              </tr>
+              <tr>
+                <th><label for="dissection_indicators">Dissektionshinweise:</label></th>
+                <td>
+                  <select name="dissection_indicators" id="dissection_indicators">
+                    <option value="unspecified">&mdash;</option>
+                    <option value="no">Nein</option>
+                    <option value="yes">Ja</option>
+                  </select>
+                  <input type="text" id="dissection_indicators_comment" name="dissection_indicators_comment" data-field-type="TEXT" />
+                </td>
+              </tr>
+              <tr>
+                <th><label for="aortic_arch_hypoplasia">Aortenbogenhypoplasie:</label></th>
+                <td>
+                  <select name="aortic_arch_hypoplasia" id="aortic_arch_hypoplasia">
+                    <option value="unspecified">&mdash;</option>
+                    <option value="no">Nein</option>
+                    <option value="yes">Ja</option>
+                  </select>
+                  <input type="text" id="aortic_arch_hypoplasia_comment" name="aortic_arch_hypoplasia_comment" data-field-type="TEXT" />
+                </td>
+              </tr>
+              <tr>
+                <th><label for="aortic_kinking">Kinking:</label></th>
+                <td>
+                  <select name="aortic_kinking" id="aortic_kinking">
+                    <option value="unspecified">&mdash;</option>
+                    <option value="no">Nein</option>
+                    <option value="yes">Ja</option>
+                  </select>
+                  <input type="text" id="aortic_kinking_comment" name="aortic_kinking_comment" data-field-type="TEXT" />
+                </td>
+              </tr>
+              <tr>
+                <th><label for="aortic_stent">Stent:</label></th>
+                <td>
+                  <select name="aortic_stent" id="aortic_stent">
+                    <option value="unspecified">&mdash;</option>
+                    <option value="no">Nein</option>
+                    <option value="yes">Ja</option>
+                  </select>
+                  <input type="text" id="aortic_stent_comment" name="aortic_stent_comment" data-field-type="TEXT" />
+                </td>
+              </tr>
+              <tr>
+                <th><label for="supraaortic_vessels_anomaly">Anomalien supraaortaler Gefäße:</label></th>
+                <td>
+                  <select name="supraaortic_vessels_anomaly" id="supraaortic_vessels_anomaly">
+                    <option value="unspecified">&mdash;</option>
+                    <option value="no">Nein</option>
+                    <option value="yes">Ja</option>
+                  </select>
+                  <input type="text" id="supraaortic_vessels_anomaly_comment" name="supraaortic_vessels_anomaly_comment" data-field-type="TEXT" />
+                </td>
+              </tr>
+              <tr>
+                <th><label for="ductus_arteriosus_apertus">PDA (Ductus arteriosus apertus):</label></th>
+                <td>
+                  <select name="ductus_arteriosus_apertus" id="ductus_arteriosus_apertus">
+                    <option value="unspecified">&mdash;</option>
+                    <option value="no">Nein</option>
+                    <option value="yes">Ja</option>
+                  </select>
+                  <input type="text" id="ductus_arteriosus_apertus_comment" name="ductus_arteriosus_apertus_comment" data-field-type="TEXT" />
+                </td>
+              </tr>
+              <tr>
+                <th><label for="collaterals">Kollateralen:</label></th>
+                <td>
+                  <select name="collaterals" id="collaterals">
+                    <option value="unspecified">&mdash;</option>
+                    <option value="no">Nein</option>
+                    <option value="yes">Ja</option>
+                  </select>
+                  <input type="text" id="collaterals_comment" name="collaterals_comment" data-field-type="TEXT" />
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <th>Linksventrikulärer Ausflusstrakt und Aortenklappe</th>
+          <td>
+            <table>
+              <tr>
+                <th>LVOT Diameter (2 Ebenen):</th>
+                <td><input type="number" name="lvot_diameter_plane_1" min="0" max="200" step="0.1" data-field-units="mm" data-field-type="NUMBER" /> mm, <input type="number" name="lvot_diameter_plane_2" min="0" max="200" step="0.1" data-field-units="mm" data-field-type="NUMBER" /> mm</td>
+              </tr>
+              <tr>
+                <th>Annulus (2 Ebenen):</th>
+                <td><input type="number" name="annulus_plane_1" min="0" max="200" step="0.1" data-field-units="mm" data-field-type="NUMBER" /> mm, <input type="number" name="annulus_plane_2" min="0" max="200" step="0.1" data-field-units="mm" data-field-type="NUMBER" /> mm</td>
+              </tr>
+              <tr>
+                <th><label for="aortic_valve">Aortenklappe:</label></th>
+                <td>
+                  <select name="aortic_valve" id="collaterals">
+                    <option value="unspecified">&mdash;</option>
+                    <option value="tricuspid">trikuspide</option>
+                    <option value="bicuspid">bikuspide</option>
+                  </select>
+                  <input type="text" id="aortic_valve_comment" name="aortic_valve_comment" data-field-type="TEXT" />
+                </td>
+              </tr>
+              <tr>
+                <th><label for="aortic_valve_function">Aortenklappenfunktion:</label></th>
+                <td>
+                  <select name="aortic_valve_function" id="aortic_valve_function">
+                    <option value="unspecified">&mdash;</option>
+                    <option value="normal">normal</option>
+                    <option value="pathologic">pathologisch</option>
+                  </select>
+                  <input type="text" id="aortic_valve_function_comment" name="aortic_valve_function_comment" data-field-type="TEXT" />
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <th>Flussmessungen <i>(optional)</i></th>
+          <td>
+            <table>
+              <tr>
+                <th>Aorta ascendens</th>
+                <td>
+                  <table>
+                    <tr>
+                      <th><label for="effective_stroke_volume">Schlagvolumen eff.:</label></th>
+                      <td><input type="number" id="effective_stroke_volume" name="effective_stroke_volume" min="0" max="1000" step="0.1" data-field-units="ml" data-field-type="NUMBER" /> ml</td>
+                    </tr>
+                    <tr>
+                      <th><label for="ascendent_aorta_cardiac_index">Cardiac Index:</label></th>
+                      <td><input type="number" id="ascendent_aorta_cardiac_index" name="ascendent_aorta_cardiac_index" min="0" max="100" step="0.1" data-field-units="l/min/m2" data-field-type="NUMBER" /> l/(min·m<sup>2</sup>)</td>
+                    </tr>
+                    <tr>
+                      <th><label for="ascendent_aorta_max_flow_velocity"><i>v</i><sub>max</sub> =</label></th>
+                      <td><input type="number" id="ascendent_aorta_max_flow_velocity" name="ascendent_aorta_max_flow_velocity" min="0" max="100" step="0.1" data-field-units="m/s" data-field-type="NUMBER" /> m/s</td>
+                    </tr>
+                    <tr>
+                      <th><label for="ascendent_aorta_regurgitation_fraction">Regurgitationsfraktion:</label></th>
+                      <td><input type="number" id="ascendent_aorta_regurgitation_fraction" name="ascendent_aorta_regurgitation_fraction" min="0" max="100" step="1" data-field-units="%" data-field-type="NUMBER" /> %</td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <th>Auf Höhe ISTA</th>
+                <td>
+                  <table>
+                    <tr>
+                      <th><label for="ista_level_max_flow_velocity"><i>v</i><sub>max</sub> =</label></th>
+                      <td><input type="number" id="ista_level_max_flow_velocity" name="ista_level_max_flow_velocity" min="0" max="100" step="0.1" data-field-units="m/s" data-field-type="NUMBER" /> m/s</td>
+                    </tr>
+                    <tr>
+                      <th><label for="ista_level_diastolic_antegrade_flow">Diastolischer antegrader Fluss:</label></th>
+                      <td><input type="number" id="ista_level_diastolic_antegrade_flow" name="ista_level_diastolic_antegrade_flow" min="0" max="100" step="0.1" data-field-units="l/min" data-field-type="NUMBER" /> l/min</td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <th>Kollateralfluss</th>
+                <td>
+                  <table>
+                    <tr>
+                      <th><label for="cardiac_index_before_ista">Cardiac Index vor ISTA:</label></th>
+                      <td><input type="number" id="cardiac_index_before_ista" name="cardiac_index_before_ista" min="0" max="100" step="0.1" data-field-units="l/min/m2" data-field-type="NUMBER" /> l/(min·m<sup>2</sup>)</td>
+                    </tr>
+                    <tr>
+                      <th><label for="cardiac_index_at_diaphragm_level">Cardiac Index auf Höhe Zwechfell:</label></th>
+                      <td><input type="number" id="cardiac_index_at_diaphragm_level" name="cardiac_index_at_diaphragm_level" min="0" max="100" step="0.1" data-field-units="l/min/m2" data-field-type="NUMBER" /> l/(min·m<sup>2</sup>)</td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <th>Morphologie und Funktionsanalyse</th>
+          <td>
+            <table>
+              <tr>
+                <th><label for="lv_enddiastolic_diameter">LV enddiastolischer Diameter (LV EDD):</label></th>
+                <td><input type="number" id="lv_enddiastolic_diameter" name="lv_enddiastolic_diameter" min="0.1" max="300" step="0.1" data-field-units="mm" data-field-type="NUMBER" /> mm</td>
+              </tr>
+              <tr>
+                <th><label for="lv_enddiastolic_volume_index">LV enddiastolischer Volumenindex (LV EDVi):</label></th>
+                <td><input type="number" id="lv_enddiastolic_volume_index" name="lv_enddiastolic_volume_index" min="1" max="1000" step="1" data-field-units="ml/m2" data-field-type="NUMBER" /> ml/m<sup>2</sup></td>
+              </tr>
+              <tr>
+                <th><label for="lv_endsystolic_volume_index">LV endsystolischer Volumenindex (LV ESVi):</label></th>
+                <td><input type="number" id="lv_endsystolic_volume_index" name="lv_endsystolic_volume_index" min="1" max="1000" step="1" data-field-units="ml/m2" data-field-type="NUMBER" /> ml/m<sup>2</sup></td>
+              </tr>
+              <tr>
+                <th><label for="lv_ejection_fraction">LV Ejektionsfraktion (LV EF):</label></th>
+                <td><input type="number" id="lv_ejection_fraction" name="lv_ejection_fraction" min="0" max="100" step="1" data-field-units="%" data-field-type="NUMBER" /> %</td>
+              </tr>
+              <tr>
+                <th><label for="lv_ed_normalized_mass">LV ED Masse normiert:</label></th>
+                <td><input type="number" id="lv_ed_normalized_mass" name="lv_ed_normalized_mass" min="0" max="5000" step="1" data-field-units="g/m2" data-field-type="NUMBER" /> g/m<sup>2</sup></td>
+              </tr>
+              <tr>
+                <th><label for="lv_regional_wall_motion_abnormality">LV Regionale Wandbewegungsstörung:</label></th>
+                <td>
+                  <select name="lv_regional_wall_motion_abnormality" id="lv_regional_wall_motion_abnormality">
+                    <option value="unspecified">&mdash;</option>
+                    <option value="no">Nein</option>
+                    <option value="yes">Ja</option>
+                  </select>
+                  <input type="text" id="lv_regional_wall_motion_abnormality_comment" name="lv_regional_wall_motion_abnormality_comment" data-field-type="TEXT" />
+                </td>
+              </tr>
+              <tr>
+                <th>RV <i>(optional)</i>:</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th><label for="rv_enddiastolic_diameter">RV enddiastolischer Diameter (RV EDD im 4KB):</label></th>
+                <td><input type="number" id="rv_enddiastolic_diameter" name="rv_enddiastolic_diameter" min="0.1" max="300" step="0.1" data-field-units="mm" data-field-type="NUMBER" /> mm</td>
+              </tr>
+              <tr>
+                <th><label for="rv_enddiastolic_volume_index">RV enddiastolischer Volumenindex (RV EDVi):</label></th>
+                <td><input type="number" id="rv_enddiastolic_volume_index" name="rv_enddiastolic_volume_index" min="1" max="1000" step="1" data-field-units="ml/m2" data-field-type="NUMBER" /> ml/m<sup>2</sup></td>
+              </tr>
+              <tr>
+                <th><label for="rv_endsystolic_volume_index">RV endsystolischer Volumenindex (RV ESVi):</label></th>
+                <td><input type="number" id="rv_endsystolic_volume_index" name="rv_endsystolic_volume_index" min="1" max="1000" step="1" data-field-units="ml/m2" data-field-type="NUMBER" /> ml/m<sup>2</sup></td>
+              </tr>
+              <tr>
+                <th><label for="rv_ejection_fraction">RV Ejektionsfraktion:</label></th>
+                <td><input type="number" id="rv_ejection_fraction" name="rv_ejection_fraction" min="0" max="100" step="1" data-field-units="%" data-field-type="NUMBER" /> %</td>
+              </tr>
+              <tr>
+                <th><label for="rv_regional_wall_motion_abnormality">RV Regionale Wandbewegungsstörung:</label></th>
+                <td>
+                  <select name="rv_regional_wall_motion_abnormality" id="rv_regional_wall_motion_abnormality">
+                    <option value="unspecified">&mdash;</option>
+                    <option value="no">Nein</option>
+                    <option value="yes">Ja</option>
+                  </select>
+                  <input type="text" id="rv_regional_wall_motion_abnormality_comment" name="rv_regional_wall_motion_abnormality_comment" data-field-type="TEXT" />
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <th>Vorhof</th>
+          <td>
+            <table>
+              <tr>
+                <th><label for="atrium_size_visual">Vorhofgröße visuell:</label></th>
+                <td>
+                  <select name="atrium_size_visual" id="atrium_size_visual">
+                    <option value="unspecified">&mdash;</option>
+                    <option value="normal">normal groß</option>
+                    <option value="pathologic">pathologisch</option>
+                  </select>
+                  <input type="text" id="regional_wall_thinning_comment" name="regional_wall_thinning_comment" data-field-type="TEXT" />
+                </td>
+              </tr>
+              <tr>
+                <th><label for="la_size_longitudinal">LA im Vierkammerblick longitudinal:</label></th>
+                <td><input type="number" id="la_size_longitudinal" name="la_size_longitudinal" min="0" max="200" step="0.1" data-field-units="mm" data-field-type="NUMBER" /> mm</td>
+              </tr>
+              <tr>
+                <th><label for="la_size_transversal">LA im Vierkammerblick transversal:</label></th>
+                <td><input type="number" id="la_size_transversal" name="la_size_transversal" min="0" max="200" step="0.1" data-field-units="mm" data-field-type="NUMBER" /> mm</td>
+              </tr>
+              <tr>
+                <th><label for="ra_size_longitudinal">RA im Vierkammerblick longitudinal:</label></th>
+                <td><input type="number" id="ra_size_longitudinal" name="ra_size_longitudinal" min="0" max="200" step="0.1" data-field-units="mm" data-field-type="NUMBER" /> mm</td>
+              </tr>
+              <tr>
+                <th><label for="ra_size_transversal">RA im Vierkammerblick transversal:</label></th>
+                <td><input type="number" id="ra_size_transversal" name="ra_size_transversal" min="0" max="200" step="0.1" data-field-units="mm" data-field-type="NUMBER" /> mm</td>
+              </tr>
+              <tr>
+                <th><label for="atrial_septum_position">Vorhofseptumstellung:</label></th>
+                <td>
+                  <select name="atrial_septum_position" id="atrial_septum_position">
+                    <option value="unspecified">&mdash;</option>
+                    <option value="normal">normal</option>
+                    <option value="abnormal">abnorm</option>
+                  </select>
+                  <input type="text" id="atrial_septum_position_comment" name="atrial_septum_position_comment" data-field-type="TEXT" />
+                </td>
+              </tr>
+              <tr>
+                <th><label for="atrial_septal_defect">Vorhofseptumdefekt/PFO:</label></th>
+                <td>
+                  <select name="atrial_septal_defect" id="atrial_septal_defect">
+                    <option value="unassessed">nicht untersucht</option>
+                    <option value="no">nein</option>
+                    <option value="yes">ja</option>
+                  </select>
+                  <input type="text" id="atrial_septal_defect_comment" name="atrial_septal_defect_comment" data-field-type="TEXT" />
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <th><label for="valve_pathology">Sonstige Herzklappenpathologie:</label></th>
+          <td>
+            <select name="valve_pathology" id="valve_pathology">
+              <option value="unassessed">nicht untersucht</option>
+              <option value="no">nein</option>
+              <option value="yes">ja</option>
+            </select>
+            <input type="text" id="valve_pathology_comment" name="valve_pathology_comment" data-field-type="TEXT" />
+          </td>
+        </tr>
+        <tr>
+          <th><label for="other_findings">Sonstiges:</label></th>
+          <td><textarea name="other_findings" data-field-type="TEXTAREA"></textarea></td>
+        </tr>
+      </table>
+    </section>
+
+    <section data-section-name="Beurteilung" data-section-required="true">
+      <header class="level1" data-english="Impression">Beurteilung</header>
+      <p>
+        <textarea name="impression" data-field-type="TEXTAREA"></textarea>
+      </p>
+    </section>
+  </body>
+</html>

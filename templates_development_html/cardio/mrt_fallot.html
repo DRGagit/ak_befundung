@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MRT Fallotsche Tetralogie</title>
+    <meta charset="UTF-8" />
+    <!--Dublin Core metadata elements here-->
+    <meta name="dcterms.title" content="MRT Fallotsche Tetralogie" />
+    <meta name="dcterms.abstract" content="Strukturierte Befundvorlage: Fallotsche Tetralogie" />
+    <meta name="dcterms.description" content="Template zur Fallotschen Tetralogie" />
+    <meta name="dcterms.subject" content="MR; CA;" />
+    <meta name="dcterms.identifier" content="041807.3.2102271425" />
+    <meta name="dcterms.type" content="IMAGE_REPORT_TEMPLATE" />
+    <meta name="dcterms.language" content="de" />
+    <meta name="dcterms.rights" content="Die Deutsche Röntgengesellschaft e. V. (DRG) stellt sämtliche Templates kostenfrei unter der Creative Commons Lizenz CC BY in der Version 4.0 zur Verfügung. Die Lizenz erlaubt Download und Weiterverteilung des Werkes unter Nennung der DRG als Urheber" />
+    <meta name="dcterms.license" content="https://github.com/DRGagit/ak_befundung/blob/master/LICENSE" />
+    <meta name="dcterms.date" content="2021-02-27" />
+    <meta name="dcterms.creator" content="AG Herz- und Gefäßdiagnostik" />
+    <meta name="dcterms.contributor" content="Jan Preuss (Kodierung)" />
+    <meta name="dcterms.publisher" content="Deutsche Röntgengesellschaft (DRG)" />
+
+    <script type="text/xml">
+      <template_attributes>
+        <top-level-flag>0</top-level-flag>
+        <status>ACTIVE</status>
+      </template_attributes>
+    </script>
+
+    <!--Link to Stylesheet-->
+    <link rel="stylesheet" type="text/css" href="../../templates_final/drg.css" />
+
+  </head>
+  <body>
+    <section data-section-name="Klinische Angaben" data-section-required="true">
+      <header class="level1" data-english="Clinical information">Klinische Angaben</header>
+      <p>
+       <textarea name="clinical_information" id="clinical_information" data-field-type="TEXTAREA"></textarea>
+      </p>
+      <table>
+        <tr>
+          <th>Patientencharakteristik</th>
+          <td>
+            <table>
+              <tr>
+                <th><label for="patient_sex">Geschlecht:</label></th>
+                <td>
+                  <select name="patient_sex" id="patient_sex">
+                    <option value="female">W</option>
+                    <option value="male">M</option>
+                    <option value="other/unknown">O</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <th><label for="patient_body_weight">Körpergewicht:</label></th>
+                <td><input type="number" id="patient_body_weight" name="patient_body_weight" min="0.1" max="600" step="0.1" data-field-units="kg" data-field-type="NUMBER" /> kg</td>
+              </tr>
+              <tr>
+                <th><label for="patient_body_weight">Körpergröße:</label></th>
+                <td><input type="number" id="patient_body_height" name="patient_body_height" min="0.100" max="3" step="0.001" data-field-units="m" data-field-type="NUMBER" /> m</td>
+              </tr>
+              <tr>
+                <th><label for="patient_body_surface_area">Körperoberfläche (BSA):</label></th>
+                <td><input type="number" id="patient_body_surface_area" name="patient_body_surface_area" min="0.01" max="9" step="0.01" data-field-units="m2" data-field-type="NUMBER" /> m<sup>2</sup></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </section>
+
+    <section data-section-name="Klinische Fragestellung">
+      <header class="level1" data-english="Clinical question">Klinische Fragestellung</header>
+      <p>
+        <textarea name="clinical_question" data-field-type="TEXTAREA"></textarea>
+      </p>
+    </section>
+
+    <section data-section-name="Method">
+      <header class="level1" data-english="Method">Methodik</header>
+      <table>
+        <tr>
+          <th><label for="magnetic_flux_density">Flussdichte:</label></th>
+          <td>
+            <select name="magnetic_flux_density" id="magnetic_flux_density">
+              <option value="unspecified">&mdash;</option>
+              <option value="1.5 T">1.5 T</option>
+              <option value="3.0 T">3 T</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <th><label for="mr_protocol">MR-Protokoll:</label></th>
+          <td><textarea id="mr_protocol" name="mr_protocol" data-field-type="TEXTAREA">Sequenzen und Ebenen:</textarea></td>
+        </tr>
+        <tr>
+          <th><label for="evaluation_software">Auswertesoftware:</label></th>
+          <td><input type="text" id="evaluation_software" name="evaluation_software" value="(Name und Version)" data-field-type="TEXT" /></td>
+        </tr>
+        <tr>
+          <th>Kontrastmittel</th>
+          <td>
+            <table>
+              <tr>
+                <th><label for="contrast_agent_name">Name:</label></th>
+                <td><input type="text" id="contrast_agent_name" name="contrast_agent_name" data-field-type="TEXT" /></td>
+              </tr>
+              <tr>
+                <th><label for="contrast_agent_dose">Menge:</label></th>
+                <td><input type="number" id="contrast_agent_dose" name="contrast_agent_dose" min="0" max="100" step="0.1" data-field-units="ml" data-field-type="NUMBER" /> ml</td>
+              </tr>
+              <tr>
+                <th><label for="contrast_agent_flow">Flussgeschwindigkeit:</label></th>
+                <td><input type="number" id="contrast_agent_flow" name="contrast_agent_flow" min="0" max="100" step="0.1" data-field-units="ml/s" data-field-type="NUMBER" /> ml/s</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </section>
+
+    <section data-section-name="Befund" data-section-required="true">
+      <header class="level1">Befund</header>
+      <table>
+        <tr>
+          <th>Vergleichsuntersuchung:</th>
+          <td>
+            <select name="comparison_assessment" id="comparison_assessment">
+              <option value="no">keine</option>
+              <option value="yes">vorliegend</option>
+            </select>
+            <input name="comparison_assessment_date" id="comparison_assessment_date" type="date" data-field-type="DATE" />
+          </td>
+        </tr>
+        <tr>
+          <th><label for="image_quality">Bildqualität:</label></th>
+          <td>
+            <select name="image_quality" id="image_quality">
+              <option value="excellent">gut</option>
+              <option value="sufficient">ausreichend</option>
+              <option value="reduced">eingeschränkt</option>
+            </select>
+            <input type="text" name="image_quality_comment" data-field-type="TEXT" />
+          </td>
+        </tr>
+        <tr>
+          <th>Quelle der Normwerte:</th>
+          <td>
+            <textarea name="normal_values_references" data-field-type="TEXTAREA"></textarea>
+          </td>
+        </tr>
+        <tr>
+          <th>Anatomie:</th>
+          <td>
+            <label for="normal_cardiovascular_arrangement">Normales kardiovaskuläres Arrangement:</label>
+            <select name="normal_cardiovascular_arrangement" id="normal_cardiovascular_arrangement">
+              <option value="unspecified">&mdash;</option>
+              <option value="no">Nein</option>
+              <option value="yes">Ja</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <th>Morphologie und Funktionsanalyse</th>
+          <td>
+            <table>
+              <tr>
+                <th><label for="lv_enddiastolic_diameter">LV enddiastolischer Diameter (LV EDD):</label></th>
+                <td><input type="number" id="lv_enddiastolic_diameter" name="lv_enddiastolic_diameter" min="0.1" max="300" step="0.1" data-field-units="mm" data-field-type="NUMBER" /> mm</td>
+              </tr>
+              <tr>
+                <th><label for="lv_enddiastolic_volume_index">LV enddiastolischer Volumenindex (LV EDVi):</label></th>
+                <td><input type="number" id="lv_enddiastolic_volume_index" name="lv_enddiastolic_volume_index" min="1" max="1000" step="1" data-field-units="ml/m2" data-field-type="NUMBER" /> ml/m<sup>2</sup></td>
+              </tr>
+              <tr>
+                <th><label for="lv_endsystolic_volume_index">LV endsystolischer Volumenindex (LV ESVi):</label></th>
+                <td><input type="number" id="lv_endsystolic_volume_index" name="lv_endsystolic_volume_index" min="1" max="1000" step="1" data-field-units="ml/m2" data-field-type="NUMBER" /> ml/m<sup>2</sup></td>
+              </tr>
+              <tr>
+                <th><label for="lv_ejection_fraction">LV Ejektionsfraktion (LV EF):</label></th>
+                <td><input type="number" id="lv_ejection_fraction" name="lv_ejection_fraction" min="0" max="100" step="1" data-field-units="%" data-field-type="NUMBER" /> %</td>
+              </tr>
+              <tr>
+                <th><label for="lv_cardiac_index">LV Herzindex (LV CI):</label></th>
+                <td><input type="number" id="lv_cardiac_index" name="lv_cardiac_index" min="0" max="100" step="0.1" data-field-units="l/min/m2" data-field-type="NUMBER" /> l/(min·m<sup>2</sup>)</td>
+              </tr>
+              <tr>
+                <th><label for="lv_ed_normalized_mass">LV ED Masse normiert:</label></th>
+                <td><input type="number" id="lv_ed_normalized_mass" name="lv_ed_normalized_mass" min="0" max="5000" step="1" data-field-units="g/m2" data-field-type="NUMBER" /> g/m<sup>2</sup></td>
+              </tr>
+              <tr>
+                <th><label for="lv_regional_wall_motion_abnormality">LV Regionale Wandbewegungsstörung:</label></th>
+                <td>
+                  <select name="lv_regional_wall_motion_abnormality" id="lv_regional_wall_motion_abnormality">
+                    <option value="unspecified">&mdash;</option>
+                    <option value="no">Nein</option>
+                    <option value="yes">Ja</option>
+                  </select>
+                  <input type="text" id="lv_regional_wall_motion_abnormality_comment" name="lv_regional_wall_motion_abnormality_comment" data-field-type="TEXT" />
+                </td>
+              </tr>
+              <tr>
+                <th><label for="interventricular_septal_thickness">Interventrikuläre Septumdicke (IVSD):</label></th>
+                <td><input type="number" id="interventricular_septal_thickness" name="interventricular_septal_thickness" min="0" max="100.0" step="0.1" data-field-units="mm" data-field-type="NUMBER" /> mm</td>
+              </tr>
+              <tr>
+                <th><label for="rv_enddiastolic_diameter">RV enddiastolischer Diameter (RV EDD im 4KB):</label></th>
+                <td><input type="number" id="rv_enddiastolic_diameter" name="rv_enddiastolic_diameter" min="0.1" max="300" step="0.1" data-field-units="mm" data-field-type="NUMBER" /> mm</td>
+              </tr>
+              <tr>
+                <th><label for="rv_enddiastolic_volume_index">RV enddiastolischer Volumenindex (RV EDVi):</label></th>
+                <td><input type="number" id="rv_enddiastolic_volume_index" name="rv_enddiastolic_volume_index" min="1" max="1000" step="1" data-field-units="ml/m2" data-field-type="NUMBER" /> ml/m<sup>2</sup></td>
+              </tr>
+              <tr>
+                <th><label for="rv_endsystolic_volume_index">RV endsystolischer Volumenindex (RV ESVi):</label></th>
+                <td><input type="number" id="rv_endsystolic_volume_index" name="rv_endsystolic_volume_index" min="1" max="1000" step="1" data-field-units="ml/m2" data-field-type="NUMBER" /> ml/m<sup>2</sup></td>
+              </tr>
+              <tr>
+                <th><label for="rv_ejection_fraction">RV Ejektionsfraktion:</label></th>
+                <td><input type="number" id="rv_ejection_fraction" name="rv_ejection_fraction" min="0" max="100" step="1" data-field-units="%" data-field-type="NUMBER" /> %</td>
+              </tr>
+              <tr>
+                <th><label for="rv_cardiac_index">RV Herzindex (RV CI):</label></th>
+                <td><input type="number" id="rv_cardiac_index" name="rv_cardiac_index" min="0" max="100" step="0.1" data-field-units="l/min/m2" data-field-type="NUMBER" /> l/(min·m<sup>2</sup>)</td>
+              </tr>
+              <tr>
+                <th><label for="rv_regional_wall_motion_abnormality">RV Regionale Wandbewegungsstörung:</label></th>
+                <td>
+                  <select name="rv_regional_wall_motion_abnormality" id="rv_regional_wall_motion_abnormality">
+                    <option value="unspecified">&mdash;</option>
+                    <option value="no">Nein</option>
+                    <option value="yes">Ja</option>
+                  </select>
+                  <input type="text" id="rv_regional_wall_motion_abnormality_comment" name="rv_regional_wall_motion_abnormality_comment" data-field-type="TEXT" />
+                </td>
+              </tr>
+              <tr>
+                <th><label for="la_endsystolic_size_longitudinal">LA endsystolisch im Vierkammerblick longitudinal:</label></th>
+                <td><input type="number" id="la_endsystolic_size_longitudinal" name="la_endsystolic_size_longitudinal" min="0" max="200" step="0.1" data-field-units="mm" data-field-type="NUMBER" /> mm</td>
+              </tr>
+              <tr>
+                <th><label for="la_endsystolic_size_transversal">LA endsystolisch im Vierkammerblick transversal:</label></th>
+                <td><input type="number" id="la_endsystolic_size_transversal" name="la_endsystolic_size_transversal" min="0" max="200" step="0.1" data-field-units="mm" data-field-type="NUMBER" /> mm</td>
+              </tr>
+              <tr>
+                <th><label for="ra_endsystolic_size_longitudinal">RA endsystolisch im Vierkammerblick longitudinal:</label></th>
+                <td><input type="number" id="ra_size_longitudinal" name="ra_endsystolic_size_longitudinal" min="0" max="200" step="0.1" data-field-units="mm" data-field-type="NUMBER" /> mm</td>
+              </tr>
+              <tr>
+                <th><label for="ra_endsystolic_size_transversal">RA endsystolisch im Vierkammerblick transversal:</label></th>
+                <td><input type="number" id="ra_endsystolic_size_transversal" name="ra_endsystolic_size_transversal" min="0" max="200" step="0.1" data-field-units="mm" data-field-type="NUMBER" /> mm</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <th>Flussmessungen</th>
+          <td>
+            <table>
+              <tr>
+                <th>Truncus pulmonalis</th>
+                <td>
+                  <table>
+                    <tr>
+                      <th><label for="pulmonary_trunk_max_flow_velocity"><i>v</i><sub>max</sub> =</label></th>
+                      <td><input type="number" id="pulmonary_trunk_max_flow_velocity" name="pulmonary_trunk_max_flow_velocity" min="0" max="10" step="0.1" data-field-units="m/s" data-field-type="NUMBER" /> m/s</td>
+                    </tr>
+                    <tr>
+                      <th><label for="pulmonary_trunk_cardiac_output">Herzzeitvolumen:</label></th>
+                      <td><input type="number" id="pulmonary_trunk_cardiac_output" name="pulmonary_trunk_cardiac_output" min="0" max="100" step="0.1" data-field-units="l/min" data-field-type="NUMBER" /> l/min</td>
+                    </tr>
+                    <tr>
+                      <th><label for="pulmonary_trunk_antegrade_flow">Antegrader Fluss:</label></th>
+                      <td><input type="number" id="pulmonary_trunk_antegrade_flow" name="pulmonary_trunk_antegrade_flow" min="0" max="100" step="0.1" data-field-units="l/min" data-field-type="NUMBER" /> l/min</td>
+                    </tr>
+                    <tr>
+                      <th><label for="pulmonary_trunk_retrograde_flow">Retrograder Fluss:</label></th>
+                      <td><input type="number" id="pulmonary_trunk_retrograde_flow" name="pulmonary_trunk_retrograde_flow" min="0" max="100" step="0.1" data-field-units="l/min" data-field-type="NUMBER" /> l/min</td>
+                    </tr>
+                    <tr>
+                      <th><label for="pulmonary_trunk_regurgitation_fraction">Regurgitationsfraktion:</label></th>
+                      <td><input type="number" id="pulmonary_trunk_regurgitation_fraction" name="pulmonary_trunk_regurgitation_fraction" min="0" max="100" step="1" data-field-units="%" data-field-type="NUMBER" /> %</td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <th>LPA <i>(optional)</i></th>
+                <td>
+                  <table>
+                    <tr>
+                      <th><label for="left_pulmonary_artery_max_flow_velocity"><i>v</i><sub>max</sub> =</label></th>
+                      <td><input type="number" id="left_pulmonary_artery_max_flow_velocity" name="left_pulmonary_artery_max_flow_velocity" min="0" max="10" step="0.1" data-field-units="m/s" data-field-type="NUMBER" /> m/s</td>
+                    </tr>
+                    <tr>
+                      <th><label for="left_pulmonary_artery_cardiac_output">Herzzeitvolumen:</label></th>
+                      <td><input type="number" id="left_pulmonary_artery_cardiac_output" name="left_pulmonary_artery_cardiac_output" min="0" max="100" step="0.1" data-field-units="l/min" data-field-type="NUMBER" /> l/min</td>
+                    </tr>
+                    <tr>
+                      <th><label for="left_pulmonary_artery_antegrade_flow">Antegrader Fluss:</label></th>
+                      <td><input type="number" id="left_pulmonary_artery_antegrade_flow" name="left_pulmonary_artery_antegrade_flow" min="0" max="100" step="0.1" data-field-units="l/min" data-field-type="NUMBER" /> l/min</td>
+                    </tr>
+                    <tr>
+                      <th><label for="left_pulmonary_artery_retrograde_flow">Retrograder Fluss:</label></th>
+                      <td><input type="number" id="left_pulmonary_artery_retrograde_flow" name="left_pulmonary_artery_retrograde_flow" min="0" max="100" step="0.1" data-field-units="l/min" data-field-type="NUMBER" /> l/min</td>
+                    </tr>
+                    <tr>
+                      <th><label for="left_pulmonary_artery_regurgitation_fraction">Regurgitationsfraktion:</label></th>
+                      <td><input type="number" id="left_pulmonary_artery_regurgitation_fraction" name="left_pulmonary_artery_regurgitation_fraction" min="0" max="100" step="1" data-field-units="%" data-field-type="NUMBER" /> %</td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <th>RPA <i>(optional)</i></th>
+                <td>
+                  <table>
+                    <tr>
+                      <th><label for="right_pulmonary_artery_max_flow_velocity"><i>v</i><sub>max</sub> =</label></th>
+                      <td><input type="number" id="right_pulmonary_artery_max_flow_velocity" name="right_pulmonary_artery_max_flow_velocity" min="0" max="10" step="0.1" data-field-units="m/s" data-field-type="NUMBER" /> m/s</td>
+                    </tr>
+                    <tr>
+                      <th><label for="right_pulmonary_artery_cardiac_output">Herzzeitvolumen:</label></th>
+                      <td><input type="number" id="right_pulmonary_artery_cardiac_output" name="right_pulmonary_artery_cardiac_output" min="0" max="100" step="0.1" data-field-units="l/min" data-field-type="NUMBER" /> l/min</td>
+                    </tr>
+                    <tr>
+                      <th><label for="right_pulmonary_artery_antegrade_flow">Antegrader Fluss:</label></th>
+                      <td><input type="number" id="right_pulmonary_artery_antegrade_flow" name="right_pulmonary_artery_antegrade_flow" min="0" max="100" step="0.1" data-field-units="l/min" data-field-type="NUMBER" /> l/min</td>
+                    </tr>
+                    <tr>
+                      <th><label for="right_pulmonary_artery_retrograde_flow">Retrograder Fluss:</label></th>
+                      <td><input type="number" id="right_pulmonary_artery_retrograde_flow" name="right_pulmonary_artery_retrograde_flow" min="0" max="100" step="0.1" data-field-units="l/min" data-field-type="NUMBER" /> l/min</td>
+                    </tr>
+                    <tr>
+                      <th><label for="right_pulmonary_artery_regurgitation_fraction">Regurgitationsfraktion:</label></th>
+                      <td><input type="number" id="right_pulmonary_artery_regurgitation_fraction" name="right_pulmonary_artery_regurgitation_fraction" min="0" max="100" step="1" data-field-units="%" data-field-type="NUMBER" /> %</td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <th>Aorta ascendens</th>
+                <td>
+                  <table>
+                    <tr>
+                      <th><label for="ascending_aorta_max_flow_velocity"><i>v</i><sub>max</sub> =</label></th>
+                      <td><input type="number" id="ascending_aorta_max_flow_velocity" name="ascending_aorta_max_flow_velocity" min="0" max="10" step="0.1" data-field-units="m/s" data-field-type="NUMBER" /> m/s</td>
+                    </tr>
+                    <tr>
+                      <th><label for="ascending_aorta_cardiac_output">Herzzeitvolumen:</label></th>
+                      <td><input type="number" id="ascending_aorta_cardiac_output" name="ascending_aorta_cardiac_output" min="0" max="100" step="0.1" data-field-units="l/min" data-field-type="NUMBER" /> l/min</td>
+                    </tr>
+                    <tr>
+                      <th><label for="ascending_aorta_antegrade_flow">Antegrader Fluss:</label></th>
+                      <td><input type="number" id="ascending_aorta_antegrade_flow" name="ascending_aorta_antegrade_flow" min="0" max="100" step="0.1" data-field-units="l/min" data-field-type="NUMBER" /> l/min</td>
+                    </tr>
+                    <tr>
+                      <th><label for="ascending_aorta_retrograde_flow">Retrograder Fluss:</label></th>
+                      <td><input type="number" id="ascending_aorta_retrograde_flow" name="ascending_aorta_retrograde_flow" min="0" max="100" step="0.1" data-field-units="l/min" data-field-type="NUMBER" /> l/min</td>
+                    </tr>
+                    <tr>
+                      <th><label for="ascending_aorta_regurgitation_fraction">Regurgitationsfraktion:</label></th>
+                      <td><input type="number" id="ascending_aorta_regurgitation_fraction" name="ascending_aorta_regurgitation_fraction" min="0" max="100" step="1" data-field-units="%" data-field-type="NUMBER" /> %</td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <th><label for="shunt_fraction"><i>Qp:Qs =</i></label></th>
+                <td><input type="number" id="shunt_fraction" name="shunt_fraction" min="0" max="100" step="0.01" data-field-type="NUMBER" /></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <th>Pulmonalarterien</th>
+          <td>
+            <table>
+              <tr>
+                <th><label for="pulmonary_valve_sufficiency">Pulmonalklappe:</label></th>
+                <td>
+                  <select name="pulmonary_valve_sufficiency" id="pulmonary_valve_sufficiency">
+                    <option value="unspecified">&mdash;</option>
+                    <option value="sufficient">kompetent</option>
+                    <option value="insufficient">insuffizient</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <th><label for="pulmonary_valve_regurgitation_fraction">Regurgitationsfraktion:</label></th>
+                <td><input type="number" id="pulmonary_valve_regurgitation_fraction" name="pulmonary_valve_regurgitation_fraction" min="0" max="100" step="1" data-field-units="%" data-field-type="NUMBER" /> %</td>
+              </tr>
+              <tr>
+                <th><label for="pulmonary_stenosis">Pulmonalstenose:</label></th>
+                <td>
+                  <select name="pulmonary_stenosis" id="pulmonary_stenosis">
+                    <option value="unspecified">&mdash;</option>
+                    <option value="none">keine</option>
+                    <option value="subvalvular">subvalvulär</option>
+                    <option value="valvular">valvular</option>
+                    <option value="supravalvular_trunk">supravalvulär PA-Stamm</option>
+                    <option value="supravalvular_branches">supravalvulär PA-Äste</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <th><label for="origin_stenoses_lpa_rpa">Abgangsstenosen der LPA/RPA:</label></th>
+                <td><input type="text" id="origin_stenoses_lpa_rpa" name="origin_stenoses_lpa_rpa" data-field-type="TEXT"></td>
+              </tr>
+              <tr>
+                <th><label for="flow_relation_right_to_left_lung">Flussverhältnis rechte / linke Lunge <i>(optional)</i>:</label></th>
+                <td><input type="number" id="flow_relation_right_to_left_lung" name="flow_relation_right_to_left_lung" min="0" max="100" step="0.01" data-field-type="NUMBER" /></td>
+              </tr>
+              <tr>
+                <th>Diameter (RVOT-Blick / 3D MR-Angio)</th>
+                <td>
+                  <table>
+                    <tr>
+                      <th><label for="rvot_diameter_sagittal">RVOT sagittal:</label></th>
+                      <td><input type="number" id="rvot_diameter_sagittal" name="rvot_diameter_sagittal" min="0" max="100" step="0.1" data-field-units="mm" data-field-type="NUMBER" /> mm</td>
+                    </tr>
+                    <tr>
+                      <th><label for="rvot_diameter_coronar">RVOT coronar:</label></th>
+                      <td><input type="number" id="rvot_diameter_coronar" name="rvot_diameter_coronar" min="0" max="100" step="0.1" data-field-units="mm" data-field-type="NUMBER" /> mm</td>
+                    </tr>
+                    <tr>
+                      <th><label for="rvot_valvular_diameter_sagittal">Valvulär sagittal:</label></th>
+                      <td><input type="number" id="rvot_valvular_diameter_sagittal" name="rvot_valvular_diameter_sagittal" min="0" max="100" step="0.1" data-field-units="mm" data-field-type="NUMBER" /> mm</td>
+                    </tr>
+                    <tr>
+                      <th><label for="rvot_valvular_diameter_coronar">Valvulär coronar:</label></th>
+                      <td><input type="number" id="rvot_valvular_diameter_coronar" name="rvot_valvular_diameter_coronar" min="0" max="100" step="0.1" data-field-units="mm" data-field-type="NUMBER" /> mm</td>
+                    </tr>
+                    <tr>
+                      <th><label for="rvot_diameter_pulmonary_trunk_saggital">Truncus pulmonalis sagittal:</label></th>
+                      <td><input type="number" id="rvot_diameter_pulmonary_trunk_saggital" name="rvot_diameter_pulmonary_trunk_saggital" min="0" max="100" step="0.1" data-field-units="mm" data-field-type="NUMBER" /> mm</td>
+                    </tr>
+                    <tr>
+                      <th><label for="rvot_diameter_pulmonary_trunk_coronar">Truncus pulmonalis coronar:</label></th>
+                      <td><input type="number" id="rvot_diameter_pulmonary_trunk_coronar" name="rvot_diameter_pulmonary_trunk_coronar" min="0" max="100" step="0.1" data-field-units="mm" data-field-type="NUMBER" /> mm</td>
+                    </tr>
+                    <tr>
+                      <th><label for="rvot_diameter_right_pulmonary_artery_saggital">RPA sagittal:</label></th>
+                      <td><input type="number" id="rvot_diameter_right_pulmonary_artery_saggital" name="rvot_diameter_right_pulmonary_artery_saggital" min="0" max="100" step="0.1" data-field-units="mm" data-field-type="NUMBER" /> mm</td>
+                    </tr>
+                    <tr>
+                      <th><label for="rvot_diameter_right_pulmonary_artery_coronar">RPA coronar:</label></th>
+                      <td><input type="number" id="rvot_diameter_right_pulmonary_artery_coronar" name="rvot_diameter_right_pulmonary_artery_coronar" min="0" max="100" step="0.1" data-field-units="mm" data-field-type="NUMBER" /> mm</td>
+                    </tr>
+                    <tr>
+                      <th><label for="rvot_diameter_left_pulmonary_artery_saggital">LPA sagittal:</label></th>
+                      <td><input type="number" id="rvot_diameter_left_pulmonary_artery_saggital" name="rvot_diameter_left_pulmonary_artery_saggital" min="0" max="100" step="0.1" data-field-units="mm" data-field-type="NUMBER" /> mm</td>
+                    </tr>
+                    <tr>
+                      <th><label for="rvot_diameter_left_pulmonary_artery_coronar">LPA coronar:</label></th>
+                      <td><input type="number" id="rvot_diameter_left_pulmonary_artery_coronar" name="rvot_diameter_left_pulmonary_artery_coronar" min="0" max="100" step="0.1" data-field-units="mm" data-field-type="NUMBER" /> mm</td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+            <table>
+              <tr>
+                <th><label for="relation_coronaria_to_rvot_pulmonary_trunk">Relation Koronarien zu RVOT / PA Stamm vor geplantem interventionellem PKE aus 3D Whole Heart <i>(optional)</i>:</label></th>
+                <td><input type="text" id="relation_coronaria_to_rvot_pulmonary_trunk" name="relation_coronaria_to_rvot_pulmonary_trunk" data-field-type="TEXT" /></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <th>Aorta</th>
+          <td>
+            <table>
+              <tr>
+                <th><label for="aortic_arch_comment">Aortenbogen:</label></th>
+                <td><input type="text" id="aortic_arch_comment" name="aortic_arch_comment" data-field-type="TEXT" /></td>
+              </tr>
+              <tr>
+                <th><label for="descending_aorta_comment">Deszendierende Aorta:</label></th>
+                <td><input type="text" id="descending_aorta_comment" name="descending_aorta_comment" data-field-type="TEXT" /></td>
+              </tr>
+              <tr>
+                <th><label for="regular_origin_of_supraaortic_vessels">Regelrechter Abgang der supraaortalen Gefäße:</label></th>
+                <td>
+                  <select  id="regular_origin_of_supraaortic_vessels" name="regular_origin_of_supraaortic_vessels">
+                    <option value="unspecified">&mdash;</option>
+                    <option value="no">nein</option>
+                    <option value="yes">ja</option>
+                  </select>
+                  <input type="text" name="origin_of_supraaortic_vessels_comment" data-field-type="TEXT" />
+                </td>
+              </tr>
+              <tr>
+                <th><label for="major_aortopulmonary_collateral_arteries">MAPCA:</label></th>
+                <td>
+                  <select  id="major_aortopulmonary_collateral_arteries" name="major_aortopulmonary_collateral_arteries">
+                    <option value="unspecified">&mdash;</option>
+                    <option value="no">nein</option>
+                    <option value="yes">ja</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <th>Diameter (SSFP / 3D MR-Angio)</th>
+                <td>
+                  <table>
+                    <tr>
+                      <th><label for="lvot_diameter_sagittal">LVOT sagittal:</label></th>
+                      <td><input type="number" id="lvot_diameter_sagittal" name="lvot_diameter_sagittal" min="0" max="100" step="0.1" data-field-units="mm" data-field-type="NUMBER" /> mm</td>
+                    </tr>
+                    <tr>
+                      <th><label for="lvot_diameter_coronar">LVOT coronar:</label></th>
+                      <td><input type="number" id="lvot_diameter_coronar" name="lvot_diameter_coronar" min="0" max="100" step="0.1" data-field-units="mm" data-field-type="NUMBER" /> mm</td>
+                    </tr>
+                    <tr>
+                      <th><label for="aortic_annulus_diameter_sagittal">Annulus sagittal:</label></th>
+                      <td><input type="number" id="aorta_annulus_diameter_sagittal" name="aorta_annulus_diameter_sagittal" min="0" max="100" step="0.1" data-field-units="mm" data-field-type="NUMBER" /> mm</td>
+                    </tr>
+                    <tr>
+                      <th><label for="aortic_annulus_diameter_coronar">Annulus coronar:</label></th>
+                      <td><input type="number" id="aorta_annulus_diameter_coronar" name="aorta_annulus_diameter_coronar" min="0" max="100" step="0.1" data-field-units="mm" data-field-type="NUMBER" /> mm</td>
+                    </tr>
+                    <tr>
+                      <th><label for="aortic_arch_diameter_sagittal">Aortensinus sagittal:</label></th>
+                      <td><input type="number" id="aortic_arch_diameter_sagittal" name="aortic_arch_diameter_sagittal" min="0" max="100" step="0.1" data-field-units="mm" data-field-type="NUMBER" /> mm</td>
+                    </tr>
+                    <tr>
+                      <th><label for="aortic_arch_diameter_coronar">Aortensinus coronar:</label></th>
+                      <td><input type="number" id="aortic_arch_diameter_coronar" name="aortic_arch_diameter_coronar" min="0" max="100" step="0.1" data-field-units="mm" data-field-type="NUMBER" /> mm</td>
+                    </tr>
+                    <tr>
+                      <th><label for="sinotubular_junction_diameter_saggital">STJ sagittal:</label></th>
+                      <td><input type="number" id="sinotubular_junction_diameter_saggital" name="sinotubular_junction_diameter_saggital" min="0" max="100" step="0.1" data-field-units="mm" data-field-type="NUMBER" /> mm</td>
+                    </tr>
+                    <tr>
+                      <th><label for="sinotubular_junction_diameter_coronar">STJ coronar:</label></th>
+                      <td><input type="number" id="sinotubular_junction_diameter_coronar" name="sinotubular_junction_diameter_coronar" min="0" max="100" step="0.1" data-field-units="mm" data-field-type="NUMBER" /> mm</td>
+                    </tr>
+                    <tr>
+                      <th><label for="ascendent_aorta_diameter_saggital">Aorta ascendens (Höhe RPA) sagittal:</label></th>
+                      <td><input type="number" id="ascendent_aorta_diameter_saggital" name="ascendent_aorta_diameter_saggital" min="0" max="100" step="0.1" data-field-units="mm" data-field-type="NUMBER" /> mm</td>
+                    </tr>
+                    <tr>
+                      <th><label for="ascendent_aorta_diameter_coronar">Aorta ascendens (Höhe RPA) coronar:</label></th>
+                      <td><input type="number" id="ascendent_aorta_diameter_coronar" name="ascendent_aorta_diameter_coronar" min="0" max="100" step="0.1" data-field-units="mm" data-field-type="NUMBER" /> mm</td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <th>Gewebecharakterisierung <i>(optional)</i></th>
+          <td>
+            <table>
+              <tr>
+                <th><label for="late_gadolinium_enhancement">Late Gadolinium Enhancement (LGE):</label></th>
+                <td>
+                  <select  id="late_gadolinium_enhancement" name="late_gadolinium_enhancement">
+                    <option value="unspecified">&mdash;</option>
+                    <option value="no">nein</option>
+                    <option value="yes">ja</option>
+                  </select>
+                </td>
+                <th><label for="late_gadolinium_enhancement_distribution">Verteilungsmuster:</label></th>
+                <td><input type="text" id="late_gadolinium_enhancement_distribution" name="late_gadolinium_enhancement_distribution" data-field-type="TEXT" /></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <th><label for="other_findings">Sonstiges:</label></th>
+          <td><textarea name="other_findings" data-field-type="TEXTAREA"></textarea></td>
+        </tr>
+      </table>
+    </section>
+
+    <section data-section-name="Beurteilung" data-section-required="true">
+      <header class="level1" data-english="Impression">Beurteilung</header>
+      <p>
+        <textarea name="impression" data-field-type="TEXTAREA"></textarea>
+      </p>
+    </section>
+  </body>
+</html>
