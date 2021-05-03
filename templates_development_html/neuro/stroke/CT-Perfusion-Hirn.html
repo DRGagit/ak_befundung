@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CT-Perfusion Hirn</title>
+        <meta charset="UTF-8" />
+        <meta name="dcterms.identifier" content="74442cf8-7262-4010-969c-1458f2870ff2" />
+        <meta name="dcterms.title" content="CT-Perfusion Hirn" />
+        <meta name="dcterms.description" content="Strukturierte Befundvorlage f&uuml;r eine CT-Perfusion des Neurocraniums." />
+        <meta name="dcterms.type" content="IMAGE_REPORT_TEMPLATE" />
+        <meta name="dcterms.language" content="de" />
+        <meta name="dcterms.publisher" content="DRG, DGNR" />
+        <meta name="dcterms.rights" content="May be used freely, subject to license agreement" />
+        <meta name="dcterms.license" content="http://www.radreport.org/license.pdf" />
+        <meta name="dcterms.date" content="2019-11-13" />
+        <meta name="dcterms.creator" content="Johann-Martin Hempel" />
+        <meta name="dcterms.contributor" content="Hempel JM, Bender B, Huber T, Ernemann U, Kirschke T | DGNR und DRG" />
+        <script type="text/xml">
+            <template_attributes>
+                <coded_content>
+                    <coding_schemes>
+                        <coding_scheme name="RADLEX" designator="2.16.840.1.113883.6.256"></coding_scheme>
+                        <coding_scheme name="LOINC" designator="2.16.840.1.113883.6.1"></coding_scheme>
+                    </coding_schemes>
+                    <entry origtxt="procedureInformation">
+                        <term>
+                            <code meaning="Current Imaging Procedure Description" value="55111-9" scheme="LOINC"></code>
+                        </term>
+                    </entry>
+                    <entry origtxt="clinicalInformation">
+                        <term>
+                            <code meaning="Clinical Information" value="55752-0" scheme="LOINC"></code>
+                        </term>
+                    </entry>
+                    <entry origtxt="clinicalQuestion">
+                        <term>
+                            <code meaning="Indications for Procedure" value="18785-6" scheme="LOINC"></code>
+                        </term>
+                    </entry>
+                    <entry origtxt="findings">
+                        <term>
+                            <code meaning="Procedure Findings" value="59776-5" scheme="LOINC"></code>
+                        </term>
+                    </entry>
+                    <entry origtxt="comparisons">
+                        <term>
+                            <code meaning="Radiology Comparison Study" value="18834-2" scheme="LOINC"></code>
+                        </term>
+                    </entry>
+                    <entry origtxt="impression">
+                        <term>
+                            <code meaning="Impressions" value="19005-8" scheme="LOINC"></code>
+                        </term>
+                    </entry>
+                </coded_content>
+            </template_attributes>
+        </script>
+        <link rel="stylesheet" href="../../../templates_final/drg.css"/>
+
+    </head>
+    <body>
+        <section id="procedureInformation" class="level1" data-section-name="Methode">
+            <header class="level1">
+                Methode
+            </header>
+            <p title="">
+                <label for="TEXT_1573631773611">Durchgef&uuml;hrte Untersuchung:</label>
+                <input type="text" id="TEXT_1573631773611" name="" data-field-type="TEXT" data-field-completion-action="NONE" value="CT-Perfusion" />
+            </p>
+        </section>
+
+        <section id="clinicalInformation" data-section-name="Clinical Information">
+            <header class="level1" data-english="Clinical Information">
+                Klinische Angaben
+            </header>
+            <p>
+                <textarea name="stroke_clininfo" id="stroke_clininfo" data-field-type="TEXTAREA">V.a. Schlaganfall</textarea>
+            </p>
+        </section>
+
+        <section id="clinicalQuestion" data-section-name="Clinical Question">
+            <header class="level1" data-english="Clinical Question">Klinische Fragestellung</header>
+            <p>
+                <textarea name="stroke_clinquest" id="stroke_clinquest" data-field-type="TEXTAREA"></textarea>
+            </p>
+        </section>
+
+        <section id="findings" class="level1" data-section-name="Befund">
+            <header class="level1">
+                Befund
+            </header>
+            <table>
+                <tr id="comparisons">
+                    <th>
+                        <label for="stroke_comparison">Voruntersuchung:</label>
+                    </th>
+                    <td>
+                        <select name="stroke_comparison" id="stroke_comparison">
+                            <option value="keine">keine</option>
+                            <option value="vorliegend">vorliegend</option>
+                        </select>
+                        <input data-field-type="DATE" name="stroke_comparison_date" id="stroke_vu_date" type="date" />
+                    </td>
+                </tr>
+                <tr>
+                    <th>CT-Perfusion</th>
+                    <td>
+                        <table>
+                            <tr>
+                                <th>Verzögerte zerebrale Perfusion (MTT, TTP, TTD):</th>
+                                <td>
+                                    <input type="radio" name="delayed_cerebral_perfusion" value="Nein" id="delayed_cerebral_perfusion_no" data-field-type="RADIO" /><label for="delayed_cerebral_perfusion_no">Nein</label>
+                                </td>
+                                <td>
+                                    <input type="radio" name="delayed_cerebral_perfusion" value="Ja" id="delayed_cerebral_perfusion_yes" data-field-type="RADIO" /><label for="delayed_cerebral_perfusion_yes">Ja, Lokalisation:</label>
+                                    <input type="text" name="delayed_cerebral_perfusion_comment" data-field-type="TEXT" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Verminderter zerebraler Blutfluss (CBF):</th>
+                                <td>
+                                    <input type="radio" name="reduced_cerebral_perfusion" value="Nein" id="reduced_cerebral_perfusion_no" data-field-type="RADIO" /><label for="reduced_cerebral_perfusion_no">Nein</label>
+                                </td>
+                                <td>
+                                    <input type="radio" name="reduced_cerebral_perfusion" value="Ja" id="reduced_cerebral_perfusion_yes" data-field-type="RADIO" /><label for="reduced_cerebral_perfusion_yes">Ja, Lokalisation:</label>
+                                    <input type="text" name="reduced_cerebral_perfusion_comment" data-field-type="TEXT" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Vermindertes zerebrales Blutvolumen (CBV):</th>
+                                <td>
+                                    <input type="radio" name="reduced_cerebral_blood_volume" value="Nein" id="reduced_cerebral_blood_volume_no" data-field-type="RADIO" /><label for="reduced_cerebral_blood_volume_no">Nein</label>
+                                </td>
+                                <td>
+                                    <input type="radio" name="reduced_cerebral_blood_volume" value="Ja" id="reduced_cerebral_blood_volume_yes" data-field-type="RADIO" /><label for="reduced_cerebral_blood_volume_yes">Ja, Lokalisation:</label>
+                                    <input type="text" name="reduced_cerebral_blood_volume_comment" data-field-type="TEXT" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <label for="flow_volume_mismatch">Fluss (CBF) &ndash; Volumen (CBV) &ndash; Mismatch:</label>
+                                </th>
+                                <td>
+                                    <select id="flow_volume_mismatch" name="flow_volume_mismatch">
+                                        <option value="Nein">Nein</option>
+                                        <option value="Ja">Ja</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <label for="time_volume_mismatch">Zeit (MTT/TTP/TTD) &ndash; Volumen (CBV) &ndash; Mismatch:</label>
+                                </th>
+                                <td>
+                                    <select id="time_volume_mismatch" name="time_volume_mismatch">
+                                        <option value="Nein">Nein</option>
+                                        <option value="Ja">Ja</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <label for="time_flow_mismatch">Zeit (MTT/TTP/TTD) &ndash; Fluss (CBF) &ndash; Mismatch:</label>
+                                </th>
+                                <td>
+                                    <select id="time_flow_mismatch" name="time_flow_mismatch">
+                                        <option value="Nein">Nein</option>
+                                        <option value="Ja">Ja</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </section>
+        <section id="impression" class="level1" data-section-name="Beurteilung">
+            <header class="level1">
+                Beurteilung
+            </header>
+            <p>
+                <textarea rows="3" cols="100" id="impressionText" name="" data-field-type="TEXTAREA" data-field-completion-action="PROHIBIT">Symmetrische Hirnperfusion ohne Perfusionsdefizit oder relevantes Mismatch.</textarea>
+            </p>
+        </section>
+    </body>
+</html>
