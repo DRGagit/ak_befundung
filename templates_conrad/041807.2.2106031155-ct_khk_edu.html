@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CT KHK Conrad EDU</title>
+    <meta charset="UTF-8">
+    <!--Dublin Core metadata elements here-->
+    <meta name="dcterms.title" content="CT KHK Conrad EDU">
+    <meta name="dcterms.abstract" content="Befundungstemplate für KHK-Evalutation in CONRAD">
+    <meta name="dcterms.description" content="Template zur Befundung von Cardio-CT Untersuchungen in der Lernplattform CONRAD der DRG">
+    <meta name="dcterms.subject" content="CT; CARDIO;">
+    <meta name="dcterms.identifier" content="041807.2.2106031155">
+    <meta name="dcterms.reference" content="041807.2.1811161431">
+    <meta name="dcterms.type" content="IMAGE_REPORT_TEMPLATE">
+    <meta name="dcterms.language" content="de">
+    <meta name="dcterms.rights" content="Die Deutsche Röntgengesellschaft e.V.(DRG) stellt sämtliche Templates kostenfrei unter der Creative Commons Lizenz  CC BY-NC-ND in der Version 4.0 zur Verfügung. Die Lizenz erlaubt Download und Weiterverteilung des Werkes unter Nennung der DRG als Urheber, jedoch keinerlei Bearbeitung oder kommerzielle Nutzung.">
+    <meta name="dcterms.license" content="http://www.befundung.drg.de/de-DE/3478/creative-commons-lizenz-cc-by-nc-nd">
+    <meta name="dcterms.date" content="2018-11-16">
+    <meta name="dcterms.creator" content="AG Herz- und Gefäßdiagnostik">
+    <meta name="dcterms.contributor" content="Pinto dos Santos D (Kodierung)">
+    <meta name="dcterms.publisher" content="Deutsche Röntgengesellschaft (DRG)">
+
+    <script type="text/xml">
+        <template_attributes>
+        <top-level-flag>0</top-level-flag>
+        <status>ACTIVE</status>
+        </template_attributes>
+    </script>
+
+    <!--Link to Stylesheet-->
+    <link rel="stylesheet" type="text/css" href="../../templates_final/drg.css">
+
+</head>
+
+<body>
+
+    <section data-section-name="Method">
+        <header class="level1" data-english="Method">Methodik</header>
+        <table>
+          <tr>
+            <td>
+              <label for="ct_khk_aquisitiontech_edu">Aquisitionstechnik</label>
+            </td>
+            <td>
+              <select name="ct_khk_aquisitiontech_edu" id="ct_khk_aquisitiontech_edu" type="text" data-field-type="TEXT">
+                <option value="High Pinto">High Pitch</option>
+                <option value="EKG-triggered">EKG-triggered</option>
+                <option value="EKG-gated">EKG-gated</option>
+                <option value="sonstige">sonstige</option>
+              </select>
+            </td>
+          </tr>
+        </table>
+    </section>
+
+    <section data-section-name="Befunde">
+        <header class="level1" data-english="Findings">Befund</header>
+        <table>
+            <tr>
+              <td>
+                <label for="ct_khk_dominantcoro_edu">Dominanter Versorgungstyp</label>
+              </td>
+              <td>
+                <select name="ct_khk_dominantcoro_edu" id="ct_khk_dominantcoro_edu">
+                  <option value="rechts">rechts</option>
+                  <option value="links">links</option>
+                  <option value="indifferent">indifferent</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="ct_khk_anomaliecoro_edu">Koronaranomalie</label>
+              </td>
+              <td>
+                <select name="ct_khk_anomaliecoro_edu" id="ct_khk_anomaliecoro_edu">
+                  <option value="nein">nein</option>
+                  <option value="ja - nicht relevant">ja - nicht relevant</option>
+                  <option value="ja - relevant">ja - relevant</option>
+                </select>
+              </td>
+            </tr>
+          </table>
+
+          <table>
+            <tr>
+              <td>&nbsp;</td>
+              <td>Plaques</td>
+              <td>Stenosegrad</td>
+              <td>Stent</td>
+              <td>Bemerkungen</td>
+            </tr>
+            <tr>
+              <td>LCA</td>
+              <td>
+                <select name="ct_khk_lca_plaque_edu" id="ct_khk_lca_plaque_edu">
+                  <option value="keine">keine</option>
+                  <option value="verkalkt">verkalkt</option>
+                  <option value="nicht-verkalkt">nicht-verkalkt</option>
+                  <option value="mixed">mixed</option>
+                </select>
+                <br>
+                <input type="checkbox" name="ct_khk_lca_plaque_edu_napkin" id="ct_khk_lca_plaque_edu_napkin" value="yes"><label for="ct_khk_lca_plaque_edu_napkin"> Napkin-ring sign</label>
+                <br>
+                <input type="checkbox" name="ct_khk_lca_plaque_edu_spotty" id="ct_khk_lca_plaque_edu_spotty" value="yes"><label for="ct_khk_lca_plaque_edu_spotty"> Spotty calcifications</label>
+              </td>
+              <td>
+                <select name="ct_khk_lca_stenosis_edu" id="ct_khk_lca_stenosis_edu">
+                  <option value="keine">keine</option>
+                  <option value="minimal (1-24%)">minimal (1-24%)</option>
+                  <option value="mild (25-49%)">mild (25-49%)</option>
+                  <option value="moderat (50-69%)">moderat (50-69%)</option>
+                  <option value="hochgradig (70-99%)">hochgradig (70-99%)</option>
+                  <option value="verschlossen">verschlossen</option>
+                </select>
+              </td>
+              <td>
+                <select name="ct_khk_lca_stent_edu" id="ct_khk_lca_stent_edu">
+                  <option value="nein">nein</option>
+                  <option value="ja">ja</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>RIVA</td>
+              <td>
+                <select name="ct_khk_riva_plaque_edu" id="ct_khk_riva_plaque_edu">
+                  <option value="keine">keine</option>
+                  <option value="verkalkt">verkalkt</option>
+                  <option value="nicht-verkalkt">nicht-verkalkt</option>
+                  <option value="mixed">mixed</option>
+                </select>
+                <br>
+                <input type="checkbox" name="ct_khk_riva_plaque_edu_napkin" id="ct_khk_riva_plaque_edu_napkin" value="yes"><label for="ct_khk_riva_plaque_edu_napkin"> Napkin-ring sign</label>
+                <br>
+                <input type="checkbox" name="ct_khk_riva_plaque_edu_spotty" id="ct_khk_riva_plaque_edu_spotty" value="yes"><label for="ct_khk_riva_plaque_edu_spotty"> Spotty calcifications</label>
+              </td>
+              <td>
+                <select name="ct_khk_riva_stenosis_edu" id="ct_khk_riva_stenosis_edu">
+                  <option value="keine">keine</option>
+                  <option value="minimal (1-24%)">minimal (1-24%)</option>
+                  <option value="mild (25-49%)">mild (25-49%)</option>
+                  <option value="moderat (50-69%)">moderat (50-69%)</option>
+                  <option value="hochgradig (70-99%)">hochgradig (70-99%)</option>
+                  <option value="verschlossen">verschlossen</option>
+                </select>
+              </td>
+              <td>
+                <select name="ct_khk_riva_stent" id="ct_khk_riva_stent">
+                  <option value="nein">nein</option>
+                  <option value="ja">ja</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>LCx</td>
+              <td>
+                <select name="ct_khk_lcx_plaque_edu" id="ct_khk_lcx_plaque_edu">
+                  <option value="keine">keine</option>
+                  <option value="verkalkt">verkalkt</option>
+                  <option value="nicht-verkalkt">nicht-verkalkt</option>
+                  <option value="mixed">mixed</option>
+                </select>
+                <br>
+                <input type="checkbox" name="ct_khk_lcx_plaque_edu_napkin" id="ct_khk_lcx_plaque_edu_napkin" value="yes"><label for="ct_khk_lcx_plaque_edu_napkin"> Napkin-ring sign</label>
+                <br>
+                <input type="checkbox" name="ct_khk_lcx_plaque_edu_spotty" id="ct_khk_lcx_plaque_edu_spotty" value="yes"><label for="ct_khk_lcx_plaque_edu_spotty"> Spotty calcifications</label>
+              </td>
+              <td>
+                <select name="ct_khk_lcx_stenosis_edu" id="ct_khk_lcx_stenosis_edu">
+                  <option value="keine">keine</option>
+                  <option value="minimal (1-24%)">minimal (1-24%)</option>
+                  <option value="mild (25-49%)">mild (25-49%)</option>
+                  <option value="moderat (50-69%)">moderat (50-69%)</option>
+                  <option value="hochgradig (70-99%)">hochgradig (70-99%)</option>
+                  <option value="verschlossen">verschlossen</option>
+                </select>
+              </td>
+              <td>
+                <select name="ct_khk_lcx_stent" id="ct_khk_lcx_stent">
+                  <option value="nein">nein</option>
+                  <option value="ja">ja</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>R. intermedius</td>
+              <td>
+                <select name="ct_khk_rint_plaque_edu" id="ct_khk_rint_plaque_edu">
+                  <option value="keine">keine</option>
+                  <option value="verkalkt">verkalkt</option>
+                  <option value="nicht-verkalkt">nicht-verkalkt</option>
+                  <option value="mixed">mixed</option>
+                </select>
+                <br>
+                <input type="checkbox" name="ct_khk_rint_plaque_edu_napkin" id="ct_khk_rint_plaque_edu_napkin" value="yes"><label for="ct_khk_rint_plaque_edu_napkin"> Napkin-ring sign</label>
+                <br>
+                <input type="checkbox" name="ct_khk_rint_plaque_edu_spotty" id="ct_khk_rint_plaque_edu_spotty" value="yes"><label for="ct_khk_rint_plaque_edu_spotty"> Spotty calcifications</label>
+              </td>
+              <td>
+                <select name="ct_khk_rint_stenosis_edu" id="ct_khk_rint_stenosis_edu">
+                  <option value="keine">keine</option>
+                  <option value="minimal (1-24%)">minimal (1-24%)</option>
+                  <option value="mild (25-49%)">mild (25-49%)</option>
+                  <option value="moderat (50-69%)">moderat (50-69%)</option>
+                  <option value="hochgradig (70-99%)">hochgradig (70-99%)</option>
+                  <option value="verschlossen">verschlossen</option>
+                </select>
+              </td>
+              <td>
+                <select name="ct_khk_rint_stent" id="ct_khk_rint_stent">
+                  <option value="nein">nein</option>
+                  <option value="ja">ja</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>RCA</td>
+              <td>
+                <select name="ct_khk_rca_plaque_edu" id="ct_khk_rca_plaque_edu">
+                  <option value="keine">keine</option>
+                  <option value="verkalkt">verkalkt</option>
+                  <option value="nicht-verkalkt">nicht-verkalkt</option>
+                  <option value="mixed">mixed</option>
+                </select>
+                <br>
+                <input type="checkbox" name="ct_khk_rca_plaque_edu_napkin" id="ct_khk_rca_plaque_edu_napkin" value="yes"><label for="ct_khk_rca_plaque_edu_napkin"> Napkin-ring sign</label>
+                <br>
+                <input type="checkbox" name="ct_khk_rca_plaque_edu_spotty" id="ct_khk_rca_plaque_edu_spotty" value="yes"><label for="ct_khk_rca_plaque_edu_spotty"> Spotty calcifications</label>
+              </td>
+              <td>
+                <select name="ct_khk_rca_stenosis_edu" id="ct_khk_rca_stenosis_edu">
+                  <option value="keine">keine</option>
+                  <option value="minimal (1-24%)">minimal (1-24%)</option>
+                  <option value="mild (25-49%)">mild (25-49%)</option>
+                  <option value="moderat (50-69%)">moderat (50-69%)</option>
+                  <option value="hochgradig (70-99%)">hochgradig (70-99%)</option>
+                  <option value="verschlossen">verschlossen</option>
+                </select>
+              </td>
+              <td>
+                <select name="ct_khk_rca_stent" id="ct_khk_rca_stent">
+                  <option value="nein">nein</option>
+                  <option value="ja">ja</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+          </table>
+
+          <table>
+            <tr>
+              <td>
+                <label for="ct_khk_sonstiges">Sonstige Auffälligkeiten</label>
+              </td>
+              <td>
+                <textarea name="ct_khk_sonstiges" id="ct_khk_sonstiges">keine</textarea>
+              </td>
+            </tr>
+          </table>
+    </section>
+
+    <section data-section-name="Beurteilung">
+        <header class="level1" data-english="Impression">Beurteilung</header>
+        <table>
+          <tr>
+            <td><label for="ct_khk_cadrads_group_edu">CAD-RADS clinical group</label></td>
+            <td>
+              <select name="ct_khk_cadrads_group_edu" id="ct_khk_cadrads_group_edu">
+                <option value="-">-</option>
+                <option value="acute chest pain">acute chest pain</option>
+                <option value="stable chest pain">stable chest pain</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="ct_khk_cadrads_value_edu">CAD-RADS assessment</label></td>
+            <td>
+              <select name="ct_khk_cadrads_value_edu" id="ct_khk_cadrads_value_edu">
+                <option value="-">-</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4A">4A</option>
+                <option value="4B">4B</option>
+                <option value="5">5</option>
+                <option value="N">N</option>
+              </select>
+            </td>
+          </tr>
+        </table>
+    </section>
+
+</body>
+</html>
