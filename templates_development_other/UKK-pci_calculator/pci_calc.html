@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PCI Score Calculator</title>
+    <meta charset="UTF-8">
+    <!--Dublin Core metadata elements here-->
+    <meta name="dcterms.title" content="PCI Score Calculator">
+    <!--Link to Stylesheet-->
+    <script type="text/xml">
+        <!--
+        <template_attributes>
+        <top-level-flag>0</top-level-flag>
+        <status>ACTIVE</status>
+        </template_attributes>
+		-->
+    </script>
+    <!--Link to Stylesheet-->
+    <style type="text/css">
+        body {
+            margin-left:auto;
+            margin-right:auto;
+            max-width: 950px;
+            background: #F7F7F7;
+            padding: 0px 15px 0px 15px;
+            color: #333;
+            border:1px solid #E4E4E4;
+            font-family: sans-serif;
+        }
+
+        td {
+            padding-right: 15px; vertical-align: top;
+        }
+
+        select {
+            border: 1px solid #DADADA;
+            background: #FFF;
+            color: #888;
+            outline: 0 none;
+            padding: 3px 3px 3px 5px;
+            width: 100%;
+        }
+
+        button {
+            background: #E27575;
+            border: none;
+            padding: 10px 25px 10px 25px;
+            color: #FFF;
+            box-shadow: 1px 1px 5px #B6B6B6;
+            border-radius: 3px;
+            text-shadow: 1px 1px 1px #9E3F3F;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #CF7A7A
+        }
+
+        textarea {
+            width: 80%;
+            border: 1px solid #cccccc;
+            padding: 0.5em;
+            font-family: sans-serif;
+        }
+        textarea:focus {
+            background: #FFC;
+        }
+
+        .pci_input td{
+            vertical-align: middle;
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+        }
+        .copyright {
+            font-size: x-small;
+            text-align: right;
+            vertical-align: bottom;
+        }
+    </style>
+</head>
+
+<body onload="calcPCI()">
+
+<script type="text/javascript">
+
+    function calcPCI () {
+        // initialize Variables
+        PCISum = 0;
+        PCIText = "Peritonealkarzinose:\n";
+
+        var PCIsnippets = ["keine sichtbaren Läsionen", "Tumorknoten bis 0,5 cm", "Tumorknoten bis 5 cm", "Tumorknoten größer 5 cm"]
+
+        if (parseInt(document.getElementById("regio_0").value) != 0) {
+            PCISum += parseInt(document.getElementById("regio_0").value)
+            PCIText += "- zentral " + PCIsnippets[parseInt(document.getElementById("regio_0").value)]  + "\n"
+        }
+        if (parseInt(document.getElementById("regio_1").value) != 0) {
+            PCISum += parseInt(document.getElementById("regio_1").value)
+            PCIText += "- rechter Oberbauch " + PCIsnippets[parseInt(document.getElementById("regio_1").value)] + "\n"
+        }
+        if (parseInt(document.getElementById("regio_2").value) != 0) {
+            PCISum += parseInt(document.getElementById("regio_2").value)
+            PCIText += "- mittlerer Oberbauch " + PCIsnippets[parseInt(document.getElementById("regio_2").value)] + "\n"
+        }
+        if (parseInt(document.getElementById("regio_3").value) != 0) {
+            PCISum += parseInt(document.getElementById("regio_3").value)
+            PCIText += "- linker Oberbauch " + PCIsnippets[parseInt(document.getElementById("regio_3").value)] + "\n"
+        }
+        if (parseInt(document.getElementById("regio_4").value) != 0) {
+            PCISum += parseInt(document.getElementById("regio_4").value)
+            PCIText += "- linke Flanke " + PCIsnippets[parseInt(document.getElementById("regio_4").value)] + "\n"
+        }
+        if (parseInt(document.getElementById("regio_5").value) != 0) {
+            PCISum += parseInt(document.getElementById("regio_5").value)
+            PCIText += "- linker Unterbauch " + PCIsnippets[parseInt(document.getElementById("regio_5").value)] + "\n"
+        }
+        if (parseInt(document.getElementById("regio_6").value) != 0) {
+            PCISum += parseInt(document.getElementById("regio_6").value)
+            PCIText += "- mittlerer Unterbauch " + PCIsnippets[parseInt(document.getElementById("regio_6").value)] + "\n"
+        }
+        if (parseInt(document.getElementById("regio_7").value) != 0) {
+            PCISum += parseInt(document.getElementById("regio_7").value)
+            PCIText += "- rechter Unterbauch " + PCIsnippets[parseInt(document.getElementById("regio_7").value)] + "\n"
+        }
+        if (parseInt(document.getElementById("regio_8").value) != 0) {
+            PCISum += parseInt(document.getElementById("regio_8").value)
+            PCIText += "- rechte Flanke " + PCIsnippets[parseInt(document.getElementById("regio_8").value)] + "\n"
+        }
+        if (parseInt(document.getElementById("regio_9").value) != 0) {
+            PCISum += parseInt(document.getElementById("regio_9").value)
+            PCIText += "- orales Jejunum " + PCIsnippets[parseInt(document.getElementById("regio_9").value)] + "\n"
+        }
+        if (parseInt(document.getElementById("regio_10").value) != 0) {
+            PCISum += parseInt(document.getElementById("regio_10").value)
+            PCIText += "- aborales Jejunum " + PCIsnippets[parseInt(document.getElementById("regio_10").value)] + "\n"
+        }
+        if (parseInt(document.getElementById("regio_11").value) != 0) {
+            PCISum += parseInt(document.getElementById("regio_11").value)
+            PCIText += "- orales Ileum " + PCIsnippets[parseInt(document.getElementById("regio_11").value)] + "\n"
+        }
+        if (parseInt(document.getElementById("regio_12").value) != 0) {
+            PCISum += parseInt(document.getElementById("regio_12").value)
+            PCIText += "- aborales Ileum " + PCIsnippets[parseInt(document.getElementById("regio_12").value)] + "\n"
+        }
+
+        PCIText += "PCI-Score (gesamt) = " + PCISum
+        document.getElementById("pci_sum").value = PCIText;
+        document.getElementById("pci_sum").style.height = "";
+        document.getElementById("pci_sum").style.height = document.getElementById("pci_sum").scrollHeight + "px";
+
+    }
+
+    function copyPCI () {
+        copytext = document.getElementById("pci_sum");
+        copytext.select();
+        copytext.setSelectionRange(0, 99999)
+        document.execCommand("copy");
+        alert("Text kopiert: \n----------------\n\n" + copytext.value);
+    }
+
+</script>
+
+<h1>UKK PCI-Calculator</h1>
+
+<table>
+    <tr>
+        <td>
+            <table class="pci_input">
+                <tr><th>Region</th><th>Punkte</th></tr>
+                <tr><td>0 zentral</td><td>
+                    <select id="regio_0" onchange="calcPCI()">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </td></tr>
+                <tr><td>1 rechter Oberbauch</td><td>
+                    <select id="regio_1" onchange="calcPCI()">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </td></tr>
+                <tr><td>2 mittlerer Oberbauch</td><td>
+                    <select id="regio_2" onchange="calcPCI()">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </td></tr>
+                <tr><td>3 linker Oberbauch</td><td>
+                    <select id="regio_3" onchange="calcPCI()">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </td></tr>
+                <tr><td>4 linke Flanke</td><td>
+                    <select id="regio_4" onchange="calcPCI()">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </td></tr>
+                <tr><td>5 linker Unterbauch</td><td>
+                    <select id="regio_5" onchange="calcPCI()">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </td></tr>
+                <tr><td>6 mittlerer Unterbauch</td><td>
+                    <select id="regio_6" onchange="calcPCI()">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </td></tr>
+                <tr><td>7 rechter Unterbauch</td><td>
+                    <select id="regio_7" onchange="calcPCI()">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </td></tr>
+                <tr><td>8 rechte Flanke</td><td>
+                    <select id="regio_8" onchange="calcPCI()">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </td></tr>
+                <tr><td>9 orales Jejunum</td><td>
+                    <select id="regio_9" onchange="calcPCI()">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </td></tr>
+                <tr><td>10 aborales Jejunum</td><td>
+                    <select id="regio_10" onchange="calcPCI()">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </td></tr>
+                <tr><td>11 orales Ileum</td><td>
+                    <select id="regio_11" onchange="calcPCI()">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </td></tr>
+                <tr><td>12 aborales Ileum</td><td>
+                    <select id="regio_12" onchange="calcPCI()">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </td></tr>
+            </table>
+        </td>
+        <td>
+            <table>
+                <tr><th>Punkte pro Läsion</th></tr>
+                <tr><td>0 = keine sichtbaren Läsionen</td></tr>
+                <tr><td>1 = Tumorknoten bis 0,5 cm</td></tr>
+                <tr><td>2 = Tumorknoten bis 5 cm</td></tr>
+                <tr><td>3 = Tumorknoten größer 5 cm</td></tr>
+            </table>
+        </td>
+        <td><img src="Abdomennormal.png"></td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <textarea id="pci_sum" readonly></textarea>
+            <button type="button" style="vertical-align: top" onclick="copyPCI()">kopieren</button>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            Referenz: <a href="http://www.psogi.com/opinion/calculating-the-peritoneal-cancer-index/">Calculating the Peritoneal Cancer Index - PSOGI</a>
+        </td>
+        <td class="copyright">&copy; Daniel Pinto dos Santos</td>
+    </tr>
+</table>
+
+</body>
