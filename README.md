@@ -29,9 +29,9 @@ bis Q2/2021                 | bis Q2/2022
 ~~CT TAVI~~                 | CT Primärstaging Lungenkarzinom
 ~~MR Kardio Stress~~        | AG URO Templates (vorläufige Planung inkl. MR Prostatakarzinom)
 ~~CT Koronarangiographie~~  | CT Becken-Bein-Angio
-Knochentumoren (Umstellung nach AG MSK Sitzung 11.01.2021)  | MR Schädel MS
-Hüfte Röntgen TEP, MR Knie   | CT Schlaganfall ischämie     | MR Wirbelsäule
-~~CT COVID~~         |   
+Knochentumoren (Umstellung nach AG MSK Sitzung 11.01.2021)  
+Hüfte Röntgen TEP, MR Knie   |  MR Wirbelsäule
+~~CT COVID~~         |  MR Schädel MS
 CT Schlaganfall ischämie |
          
 
