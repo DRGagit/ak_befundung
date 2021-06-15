@@ -30,8 +30,8 @@ bis Q2/2021                 | bis Q2/2022
 ~~MR Kardio Stress~~        | AG URO Templates (vorläufige Planung inkl. MR Prostatakarzinom)
 ~~CT Koronarangiographie~~  | CT Becken-Bein-Angio
 Knochentumoren (Umstellung nach AG MSK Sitzung 11.01.2021)  | MR Schädel MS
-Hüfte Röntgen TEP | CT Schlaganfall ischämie     | MR Wirbelsäule
-~~CT COVID~~         | MR Knie   
+Hüfte Röntgen TEP, MR Knie   | CT Schlaganfall ischämie     | MR Wirbelsäule
+~~CT COVID~~         |   
     
          
 
