@@ -32,7 +32,7 @@ bis Q2/2021                 | bis Q2/2022
 Knochentumoren (Umstellung nach AG MSK Sitzung 11.01.2021)  | MR Schädel MS
 Hüfte Röntgen TEP, MR Knie   | CT Schlaganfall ischämie     | MR Wirbelsäule
 ~~CT COVID~~         |   
-    
+CT Schlaganfall ischämie |
          
 
 ## Fertige Befundvorlagen
