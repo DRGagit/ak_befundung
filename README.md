@@ -33,8 +33,8 @@ Knochentumoren              | MR Schädel MS
 Hüfte Röntgen TEP           | MR Wirbelsäule
 ~~CT Schlaganfall ischämie~~| MR Knie
 ~~CT COVID~~                |
-    
-         
+
+
 
 ## Fertige Befundvorlagen
 

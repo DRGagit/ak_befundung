@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CR Hüftendoprothetik</title>
+    <meta charset="UTF-8" />
+    <meta name="dcterms.title" content="CR Hüftendoprothetik" />
+    <meta name="dcterms.abstract" content="Strukturierte Befundvorlage: Projektionsradiographie Hüftendoprothetik, Erstdiagnostik und präoperative Diagnostik" />
+    <meta name="dcterms.description" content="Projektionsradiographie Hüftendoprothetik, Erstdiagnostik und präoperative Diagnostik" />
+    <meta name="dcterms.subject" content="CR; MK;" />
+    <meta name="dcterms.identifier" content="041807.1.2106211852" />
+    <meta name="dcterms.type" content="IMAGE_REPORT_TEMPLATE" />
+    <meta name="dcterms.language" content="de" />
+    <meta name="dcterms.rights" content="Die Deutsche Röntgengesellschaft e. V. (DRG) stellt sämtliche Templates kostenfrei unter der Creative Commons Lizenz CC BY in der Version 2.0 zur Verfügung. Die Lizenz erlaubt Download und Weiterverteilung des Werkes unter Nennung der DRG als Urheber" />
+    <meta name="dcterms.license" content="https://creativecommons.org/licenses/by-nc-nd/2.0/de/" />
+    <meta name="dcterms.date" content="2021-06-21" />
+    <meta name="dcterms.creator" content="AG BVB" />
+    <meta name="dcterms.contributor" content="Jan Preuss (Kodierung)" />
+    <meta name="dcterms.publisher" content="Deutsche Röntgengesellschaft (DRG)" />
+
+    <script type="text/xml">
+      <template_attributes>
+        <coded_content>
+          <coding_schemes>
+            <coding_scheme name="RADLEX" designator="2.16.840.1.113883.6.256"></coding_scheme>
+            <coding_scheme name="LOINC" designator="2.16.840.1.113883.6.1"></coding_scheme>
+          </coding_schemes>
+          <entry origtxt="sec_clinical_information">
+            <term>
+              <code meaning="Clinical Information" value="55752-0" scheme="LOINC"></code>
+            </term>
+          </entry>
+          <entry origtxt="sec_clinical_question">
+            <term>
+              <code meaning="Indications for Procedure" value="18785-6" scheme="LOINC"></code>
+            </term>
+          </entry>
+          <entry origtxt="findings">
+            <term>
+              <code meaning="Procedure Findings" value="59776-5" scheme="LOINC"></code>
+            </term>
+          </entry>
+          <entry origtxt="impression">
+            <term>
+              <code meaning="Impressions" value="19005-8" scheme="LOINC"></code>
+            </term>
+          </entry>
+          <entry origtxt="recommendations">
+            <term>
+              <code meaning="Recommendations" value="18783-1" scheme="LOINC"></code>
+            </term>
+          </entry>
+        </coded_content>
+      </template_attributes>
+    </script>
+
+    <!--Link to Stylesheet-->
+    <link rel="stylesheet" type="text/css" href="../../templates_final/drg.css" />
+    <style type="text/css">/*<![CDATA[*/ td:not(:last-child) > select { width: 100%; } /*]]>*/</style>
+
+  </head>
+  <body>
+    <section id="sec_clinical_information" data-section-name="Klinische Angaben" data-section-required="true">
+      <header class="level1" data-english="Clinical information">Klinische Angaben</header>
+      <p>
+       <textarea name="clinical_information" id="clinical_information" data-field-type="TEXTAREA"></textarea>
+      </p>
+    </section>
+
+    <section id="sec_clinical_question" data-section-name="Klinische Fragestellung" data-section-required="true">
+      <header class="level1" data-english="Clinical question">Klinische Fragestellung</header>
+      <p>
+        <textarea name="clinical_question" data-field-type="TEXTAREA"></textarea>
+      </p>
+    </section>
+
+    <section id="findings" data-section-name="Befund" data-section-required="true">
+      <header class="level1">Befund</header>
+      <table>
+        <tr>
+          <th><label for="image_quality">Bildqualität:</label></th>
+          <td>
+            <select name="image_quality" id="image_quality">
+              <option value="gut">gut</option>
+              <option value="ausreichend">ausreichend</option>
+              <option value="eingeschränkt">eingeschränkt</option>
+            </select>
+            <input type="text" name="image_quality_comment" data-field-type="TEXT" />
+          </td>
+        </tr>
+        <tr>
+          <th>
+            <select name="side" id="side">
+              <option value="Rechtes">Rechtes</option>
+              <option value="Linkes">Linkes</option>
+            </select>
+            Hüftgelenk:
+          </th>
+          <td>
+            <mark>
+              Aufgelistete Kriterien sind wenn möglich. quantitativ zu bewerten 
+              (regelhaft dreistufig: diskret, mittelgradig, ausgeprägt) und ggf. zu klassifizieren.
+            </mark>
+            <table>
+              <tr>
+                <th><label for="joint_position">1. Gelenkstellung:</label></th>
+                <td>
+                  <select name="joint_position" id="joint_position">
+                    <option value="&mdash;">&mdash;</option>
+                    <option value="regelrecht">regelrecht</option>
+                    <option value="mittelgradig inkongruent (varisch)">mittelgradig inkongruent (varisch)</option>
+                    <option value="ausgeprägt inkongruent (varisch)">ausgeprägt inkongruent (varisch)</option>
+                  </select>
+                </td>
+                <td><input type="text" name="joint_position_comment" data-field-type="TEXT" /></td>
+              </tr>
+              <tr>
+                <th><label for="subchondral_sclerosis">2. Subchondrale Sklerosierung:</label></th>
+                <td>
+                  <select name="subchondral_sclerosis" id="subchondral_sclerosis">
+                    <option value="&mdash;">&mdash;</option>
+                    <option value="keine">keine</option>
+                    <option value="gering">gering</option>
+                    <option value="mittelgradig">mittelgradig</option>
+                    <option value="ausgeprägt">ausgeprägt</option>
+                  </select>
+                </td>
+                <td><input type="text" name="subchondral_sclerosis_comment" data-field-type="TEXT" /></td>
+              </tr>
+              <tr>
+                <th><label for="articular_osteophytes">3. Artikuläre Osteophyten:</label></th>
+                <td>
+                  <select name="articular_osteophytes" id="articular_osteophytes">
+                    <option value="&mdash;">&mdash;</option>
+                    <option value="nein">nein</option>
+                    <option value="ja">ja</option>
+                  </select>
+                </td>
+                <td><input type="text" name="articular_osteophytes_comment" data-field-type="TEXT" /></td>
+              </tr>
+              <tr>
+                <th><label for="joint_partner_deformation">4. Deformierungen der Gelenkpartner:</label></th>
+                <td>
+                  <select name="subchondral_sclerosis" id="subchondral_sclerosis">
+                    <option value="&mdash;">&mdash;</option>
+                    <option value="keine">keine</option>
+                    <option value="mittelgradig">mittelgradig</option>
+                    <option value="ausgeprägt">ausgeprägt</option>
+                  </select>
+                </td>
+                <td><input type="text" name="joint_partner_deformation_comment" data-field-type="TEXT" /></td>
+              </tr>
+              <tr>
+                <th><label for="spongiosa_cystic_deformation">5. Spongiosa (zystische Deformierungen in Gelenkpfanne und Hüftkopf):</label></th>
+                <td>
+                  <select name="spongiosa_cystic_deformation" id="spongiosa_cystic_deformation">
+                    <option value="&mdash;">&mdash;</option>
+                    <option value="keine">keine</option>
+                    <option value="geringgradig">geringgradig</option>
+                    <option value="ausgeprägt">ausgeprägt</option>
+                  </select>
+                </td>
+                <td><input type="text" name="spongiosa_cystic_deformation_comment" data-field-type="TEXT" /></td>
+              </tr>
+              <tr>
+                <th><label for="pelvis_dysplasia">6. Beckenarchitektur (Dysplasien):</label></th>
+                <td>
+                  <select name="pelvis_dysplasia" id="pelvis_dysplasia">
+                    <option value="&mdash;">&mdash;</option>
+                    <option value="keine">keine</option>
+                    <option value="ja:">ja:</option>
+                  </select>
+                </td>
+                <td><input type="text" name="pelvis_dysplasia_comment" data-field-type="TEXT" /></td>
+              </tr>
+              <tr>
+                <th><label for="paraarticular_tissue_calcification">7. Paraartikuläre Weichteile (Kalzifikationen):</label></th>
+                <td>
+                  <select name="spongiosa_cystic_deformation" id="spongiosa_cystic_deformation">
+                    <option value="&mdash;">&mdash;</option>
+                    <option value="keine">keine</option>
+                    <option value="vereinzelt">vereinzelt</option>
+                    <option value="ankylosierend">ankylosierend</option>
+                  </select>
+                </td>
+                <td><input type="text" name="paraarticular_tissue_calcification_comment" data-field-type="TEXT" /></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <th><label for="other_findings">Sonstiges:</label></th>
+          <td><textarea name="other_findings" data-field-type="TEXTAREA"></textarea></td>
+        </tr>
+      </table>
+    </section>
+
+    <section id="impression" data-section-name="Beurteilung" data-section-required="true">
+      <header class="level1" data-english="Impression">Beurteilung</header>
+      <table>
+        <tr>
+          <th><label for="age_conforming_findings">1. Alterskonformer Befund:</label></th>
+          <td>
+            <select name="age_conforming_findings" id="age_conforming_findings">
+              <option value="&mdash;">&mdash;</option>
+              <option value="ja">ja</option>
+              <option value="nein">nein</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <th><label for="paraarticular_tissue_calcification">2. Pathologischer Befund:</label> <mark>(Wenn bei 1. nein)</mark></th>
+          <td>
+            <table>
+              <tr>
+                <th><label for="coxarthrosis">Coxarthrose:</label></th>
+                <td>
+                  <select name="coxarthrosis" id="coxarthrosis">
+                    <option value="&mdash;">&mdash;</option>
+                    <option value="dysplastisch">dysplastisch</option>
+                    <option value="degenerativ">degenerativ</option>
+                    <option value="posttraumatisch">posttraumatisch</option>
+                  </select>
+                  <input type="text" name="coxarthrosis_comment" value="(Schweregrad nach Kellgren in der Modifikation nach Braunschweig)" data-field-type="TEXT" />
+                </td>
+              </tr>
+              <tr>
+                <th><label for="pelvis_findings_impression">Befunde des Beckens:</label></th>
+                <td><textarea id="pelvis_findings_impression" name="pelvis_findings_impression" data-field-type="TEXTAREA">(Dysplasien, posttraumatische bzw. postoperative Deformierungen)</textarea></td>
+              </tr>
+              <tr>
+                <th><label for="other_impressions">Sonstiges:</label></th>
+                <td><textarea id="other_impressions" name="other_impressions" data-field-type="TEXTAREA"></textarea></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </section>
+    <section id="recommendations" data-section-name="Empfehlung">
+      <header class="level1" data-english="Recommendations">Empfehlung</header>
+      <table>
+        <tr>
+          <th><label for="further_examination">Weiterführende Diagnostik:</label></th>
+          <td><input type="text" name="further_examination" value="" data-field-type="TEXT" /></td>
+        </tr>
+      </table>
+    </section>
+  </body>
+</html>
