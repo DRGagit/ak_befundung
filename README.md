@@ -29,9 +29,10 @@ bis Q2/2021                 | bis Q2/2022
 ~~CT TAVI~~                 | CT Primärstaging Lungenkarzinom
 ~~MR Kardio Stress~~        | AG URO Templates (vorläufige Planung inkl. MR Prostatakarzinom)
 ~~CT Koronarangiographie~~  | CT Becken-Bein-Angio
-Knochentumoren (Umstellung nach AG MSK Sitzung 11.01.2021)  | MR Schädel MS
-Hüfte Röntgen TEP | CT Schlaganfall ischämie     | MR Wirbelsäule
-~~CT COVID~~         | MR Knie   
+Knochentumoren              | MR Schädel MS
+Hüfte Röntgen TEP           | MR Wirbelsäule
+~~CT Schlaganfall ischämie~~| MR Knie
+~~CT COVID~~                |
     
          
 
@@ -49,6 +50,7 @@ _**Pankreaskarzinom solide**_ | Onko | [Link](https://www.befundung.drg.de/de-DE
 _**Pankreaskarzinom zystisch**_ | Onko | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/041807.2.1811161508-ct_pankreasca_z.html/) | | [RöFo](https://doi.org/10.1055/a-1150-8217) |
 _**Lungenembolie**_  | Thorax | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/CT-Thorax_Lungenembolie.html/) | [Link](https://radreport.org/home/RPT50783/2020-06-19%2010:44:53) | |
 _**TAVI**_  | Cardio | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/041807.2.2010301038-ct-tavi.html/) | | |
+_**Stroke**_ | Neuro | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/041807.2.2104072101-ct_stroke_nativ.html/) | | [RöFo](https://www.thieme-connect.de/products/ejournals/abstract/10.1055/a-1487-6849) |
 
 ### MRT
 Titel             | Kategorie | befundung.drg.de | radreport.org | Publikation
@@ -59,7 +61,7 @@ _**Myokarditis**_       | Cardio | [Link](https://www.befundung.drg.de/de-DE/319
 _**HCM / HOCM**_        | Cardio | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/041807.3.1911201758-mrt_hocm.html) | | [RöFo](https://doi.org/10.1055/a-0998-4116) |
 _**Rektum-Ca**_         | Onko   | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/041807.00001-mrt_rectalca.html) | [Link](https://radreport.org/home/RPT50786/2020-06-19%2010:40:33) |
 _**Stress-Herz**_       | Cardio | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/041807.3.2011102103-mrt_adenosinstress.html/) | | |
-_**Vitalitätsdiagnostik-Herz**_  | Cardio |  | | |
+_**Vitalitätsdiagnostik-Herz**_  | Cardio | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/041807.3.2101131726-mrt_vitalitaetherz.html/) | | |
 
 ### US
 Titel             | Kategorie | befundung.drg.de | radreport.org
@@ -75,6 +77,9 @@ _**LTx-Evaluation**_ | Onko | [Link](https://www.befundung.drg.de/de-DE/3199/bef
 _**RECIST 1.1**_ | Onko | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/041807.00006-gen_recist11.html) |
 _**Generischer Befund**_ | allgemein | [Link](https://www.befundung.drg.de/de-DE/3199/befundvorlagen/din25300.html) |
 
+## Zusätzliche Tools
+
+[PCi-Kalkulator für Peritonealkarzinose](https://www.radiolehre.uni-koeln.de/pci_calc/pci_calc.html)
 
 [cc-by]: http://creativecommons.org/licenses/by/4.0/
 [cc-by-shield]: https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg
