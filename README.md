@@ -8,7 +8,7 @@ Hier werden strukturierte Befundvorlagen entsprechend des [IHE MRRT Profils](htt
 
 Insbesondere wichtig ist aber auch die Kooperation mit Partnern aus der Industrie, die ermutigt werden sollen entsprechende IT-Lösungen zur Verfügung stellen, mithilfe derer Radiologen in Deutschland (und auch darüber hinaus) diese Befundvorlagen nutzen können.
 
-Die strukturierten Befundvorlagen haben teilweise auch Eingang in einschlägige Leitlinien gefunden, so bspw. die Befundvorlage zum Pankreaskarzinom in die [S3-Leitlinie zum exokrinen Pankreaskarzinom](https://www.leitlinienprogramm-onkologie.de/leitlinien/pankreaskarzinom/) ([Langfassung](https://www.leitlinienprogramm-onkologie.de/fileadmin/user_upload/Downloads/Leitlinien/Pankreaskarzinom/Version_2/LL_Pankreaskarzinom_Langversion_2.0.pdf), Tabelle 17, Seite 104).
+Die strukturierten Befundvorlagen haben teilweise auch Eingang in einschlägige Leitlinien gefunden, so bspw. die Befundvorlage zum Pankreaskarzinom in die [S3-Leitlinie zum exokrinen Pankreaskarzinom](https://www.leitlinienprogramm-onkologie.de/leitlinien/pankreaskarzinom/) ([Langfassung](https://www.leitlinienprogramm-onkologie.de/fileadmin/user_upload/Downloads/Leitlinien/Pankreaskarzinom/Version_2/LL_Pankreaskarzinom_Langversion_2.0.pdf), _Tabelle 17, Seite 104_).
 
 Weitere Informationen stehen auch unter www.befundung.drg.de zur Verfügung.
 
