@@ -8,6 +8,8 @@ Hier werden strukturierte Befundvorlagen entsprechend des [IHE MRRT Profils](htt
 
 Insbesondere wichtig ist aber auch die Kooperation mit Partnern aus der Industrie, die ermutigt werden sollen entsprechende IT-Lösungen zur Verfügung stellen, mithilfe derer Radiologen in Deutschland (und auch darüber hinaus) diese Befundvorlagen nutzen können.
 
+Die strukturierten Befundvorlagen haben teilweise auch Eingang in einschlägige Leitlinien gefunden, so bspw. die Befundvorlage zum Pankreaskarzinom in die [S3-Leitlinie zum exokrinen Pankreaskarzinom](https://www.leitlinienprogramm-onkologie.de/leitlinien/pankreaskarzinom/) ([Langfassung](https://www.leitlinienprogramm-onkologie.de/fileadmin/user_upload/Downloads/Leitlinien/Pankreaskarzinom/Version_2/LL_Pankreaskarzinom_Langversion_2.0.pdf), Tabelle 17, Seite 104).
+
 Weitere Informationen stehen auch unter www.befundung.drg.de zur Verfügung.
 
 ## Aktive Mitglieder
@@ -27,14 +29,10 @@ Als Teil einer neuen klareren Strategie wurden seitens der DRG in Abstimmung mit
 bis Q2/2021                 | bis Q2/2022
 ----------------------------|---------------------------
 ~~CT TAVI~~                 | CT Primärstaging Lungenkarzinom
-~~MR Kardio Stress~~        | AG URO Templates (vorläufige Planung inkl. MR Prostatakarzinom)
+~~MR Kardio Stress~~        | MRT Prostatakarzinom
 ~~CT Koronarangiographie~~  | CT Becken-Bein-Angio
-Knochentumoren              | MR Schädel MS
-Hüfte Röntgen TEP           | MR Wirbelsäule
-~~CT Schlaganfall ischämie~~| MR Knie
-~~CT COVID~~                |
-
-
+~~CT Schlaganfall ischämie~~| MR Schädel MS
+~~CT COVID~~                | MR Wirbelsäule
 
 ## Fertige Befundvorlagen
 
