@@ -7,12 +7,12 @@
     <meta name="dcterms.abstract" content="Strukturierte Befundvorlage: Projektionsradiographie Hüftendoprothetik, Erstdiagnostik und präoperative Diagnostik" />
     <meta name="dcterms.description" content="Projektionsradiographie Hüftendoprothetik, Erstdiagnostik und präoperative Diagnostik" />
     <meta name="dcterms.subject" content="CR; MK;" />
-    <meta name="dcterms.identifier" content="041807.1.2201201347" />
+    <meta name="dcterms.identifier" content="041807.1.2202101552" />
     <meta name="dcterms.type" content="IMAGE_REPORT_TEMPLATE" />
     <meta name="dcterms.language" content="de" />
     <meta name="dcterms.rights" content="Die Deutsche Röntgengesellschaft e. V. (DRG) stellt sämtliche Templates kostenfrei unter der Creative Commons Lizenz CC BY in der Version 2.0 zur Verfügung. Die Lizenz erlaubt Download und Weiterverteilung des Werkes unter Nennung der DRG als Urheber" />
     <meta name="dcterms.license" content="https://creativecommons.org/licenses/by-nc-nd/2.0/de/" />
-    <meta name="dcterms.date" content="2022-01-20" />
+    <meta name="dcterms.date" content="2022-02-10" />
     <meta name="dcterms.creator" content="AG BVB" />
     <meta name="dcterms.contributor" content="Jan Preuss (Kodierung)" />
     <meta name="dcterms.publisher" content="Deutsche Röntgengesellschaft (DRG)" />
@@ -42,11 +42,6 @@
           <entry origtxt="impression">
             <term>
               <code meaning="Impressions" value="19005-8" scheme="LOINC"></code>
-            </term>
-          </entry>
-          <entry origtxt="recommendations">
-            <term>
-              <code meaning="Recommendations" value="18783-1" scheme="LOINC"></code>
             </term>
           </entry>
         </coded_content>
@@ -132,8 +127,10 @@
                 <td>
                   <select name="articular_osteophytes" id="articular_osteophytes">
                     <option value="&mdash;">&mdash;</option>
-                    <option value="nein">nein</option>
-                    <option value="ja">ja</option>
+                    <option value="keine">keine</option>
+                    <option value="gering">gering</option>
+                    <option value="mittelgradig">mittelgradig</option>
+                    <option value="ausgeprägt">ausgeprägt</option>
                   </select>
                 </td>
                 <td><input type="text" name="articular_osteophytes_comment" data-field-type="TEXT" /></td>
@@ -178,7 +175,7 @@
               <tr>
                 <th><label for="paraarticular_tissue_calcification">7. Paraartikuläre Weichteile (Kalzifikationen):</label></th>
                 <td>
-                  <select name="spongiosa_cystic_deformation" id="spongiosa_cystic_deformation">
+                  <select name="paraarticular_tissue_calcification" id="paraarticular_tissue_calcification">
                     <option value="&mdash;">&mdash;</option>
                     <option value="keine">keine</option>
                     <option value="vereinzelt">vereinzelt</option>
@@ -201,63 +198,33 @@
       <header class="level1" data-english="Impression">Beurteilung</header>
       <table>
         <tr>
-          <th><label for="age_conforming_findings">1. Alterskonformer Befund:</label></th>
+          <th><label for="coxarthrosis">Coxarthrose:</label></th>
           <td>
-            <select name="age_conforming_findings" id="age_conforming_findings">
+            <select name="coxarthrosis" id="coxarthrosis">
               <option value="&mdash;">&mdash;</option>
-              <option value="ja">ja</option>
-              <option value="nein">nein</option>
+              <option value="keine">keine</option>
+              <option value="dysplastisch">dysplastisch</option>
+              <option value="degenerativ">degenerativ</option>
+              <option value="posttraumatisch">posttraumatisch</option>
             </select>
           </td>
         </tr>
         <tr>
-          <th><label for="paraarticular_tissue_calcification">2. Pathologischer Befund:</label> <mark>(Wenn bei 1. nein)</mark></th>
+          <th><label for="kellgren_score" title="in der Modifikation nach Braunschweig">Kellgren-Score:</label></th>
           <td>
-            <table>
-              <tr>
-                <th><label for="coxarthrosis">Coxarthrose:</label></th>
-                <td>
-                  <select name="coxarthrosis" id="coxarthrosis">
-                    <option value="&mdash;">&mdash;</option>
-                    <option value="dysplastisch">dysplastisch</option>
-                    <option value="degenerativ">degenerativ</option>
-                    <option value="posttraumatisch">posttraumatisch</option>
-                  </select>
-                </td>
-              </tr>
-              <tr>
-                <th><label for="kellgren_score">Kellgren-Score:</label></th>
-                <td>
-                  <select name="kellgren_score" id="kellgren_score">
-                    <option value="&mdash;">&mdash;</option>
-                    <option value="0">0</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                  </select>
-                  in der Modifikation nach Braunschweig
-                </td>
-              </tr>
-              <tr>
-                <th><label for="pelvis_findings_impression">Befunde des Beckens:</label></th>
-                <td><textarea id="pelvis_findings_impression" name="pelvis_findings_impression" data-field-type="TEXTAREA">(Dysplasien, posttraumatische bzw. postoperative Deformierungen)</textarea></td>
-              </tr>
-              <tr>
-                <th><label for="other_impressions">Sonstiges:</label></th>
-                <td><textarea id="other_impressions" name="other_impressions" data-field-type="TEXTAREA"></textarea></td>
-              </tr>
-            </table>
+            <select name="kellgren_score" id="kellgren_score">
+              <option value="&mdash;">&mdash;</option>
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
           </td>
         </tr>
-      </table>
-    </section>
-    <section id="recommendations" data-section-name="Empfehlung">
-      <header class="level1" data-english="Recommendations">Empfehlung</header>
-      <table>
         <tr>
-          <th><label for="further_examination">Weiterführende Diagnostik:</label></th>
-          <td><textarea id="further_examination" name="further_examination" data-field-type="TEXTAREA"></textarea></td>
+          <th><label for="other_impressions">Sonstiges:</label></th>
+          <td><textarea id="other_impressions" name="other_impressions" data-field-type="TEXTAREA"></textarea></td>
         </tr>
       </table>
     </section>
