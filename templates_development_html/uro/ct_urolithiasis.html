@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CT Urolithiasis</title>
+    <meta charset="UTF-8" />
+    <meta name="dcterms.title" content="CT Urolithiasis" />
+    <meta name="dcterms.abstract" content="Strukturierte Befundvorlage: Urolithiasis" />
+    <meta name="dcterms.description" content="CT Urolithiasis" />
+    <meta name="dcterms.subject" content="CT; UR;" />
+    <meta name="dcterms.identifier" content="041807.2.2202171320" />
+    <meta name="dcterms.type" content="IMAGE_REPORT_TEMPLATE" />
+    <meta name="dcterms.language" content="de" />
+    <meta name="dcterms.rights" content="Die Deutsche Röntgengesellschaft e. V. (DRG) stellt sämtliche Templates kostenfrei unter der Creative Commons Lizenz CC BY in der Version 2.0 zur Verfügung. Die Lizenz erlaubt Download und Weiterverteilung des Werkes unter Nennung der DRG als Urheber." />
+    <meta name="dcterms.license" content="https://creativecommons.org/licenses/by-nc-nd/2.0/de/" />
+    <meta name="dcterms.date" content="2022-02-17" />
+    <meta name="dcterms.creator" content="Deutsche Röntgengesellschaft (DRG)" />
+    <meta name="dcterms.contributor" content="Jan Preuss (Kodierung)" />
+    <meta name="dcterms.publisher" content="Deutsche Röntgengesellschaft (DRG)" />
+
+    <script type="text/xml">
+      <template_attributes>
+        <coded_content>
+          <coding_schemes>
+            <coding_scheme name="RADLEX" designator="2.16.840.1.113883.6.256"></coding_scheme>
+            <coding_scheme name="LOINC" designator="2.16.840.1.113883.6.1"></coding_scheme>
+          </coding_schemes>
+          <entry origtxt="sec_clinical_information">
+            <term>
+              <code meaning="Clinical Information" value="55752-0" scheme="LOINC"></code>
+            </term>
+          </entry>
+          <entry origtxt="sec_clinical_question">
+            <term>
+              <code meaning="Indications for Procedure" value="18785-6" scheme="LOINC"></code>
+            </term>
+          </entry>
+          <entry origtxt="findings">
+            <term>
+              <code meaning="Procedure Findings" value="59776-5" scheme="LOINC"></code>
+            </term>
+          </entry>
+          <entry origtxt="impression">
+            <term>
+              <code meaning="Impressions" value="19005-8" scheme="LOINC"></code>
+            </term>
+          </entry>
+          <entry origtxt="recommendations">
+            <term>
+              <code meaning="Recommendations" value="18783-1" scheme="LOINC"></code>
+            </term>
+          </entry>
+        </coded_content>
+      </template_attributes>
+    </script>
+
+    <!--Link to Stylesheet-->
+    <link rel="stylesheet" type="text/css" href="../../templates_final/drg.css" />
+
+  </head>
+  <body>
+    <section id="sec_clinical_information" data-section-name="Klinische Angaben" data-section-required="true">
+      <header class="level1" data-english="Clinical information">Klinische Angaben</header>
+      <p>
+       <textarea name="clinical_information" id="clinical_information" data-field-type="TEXTAREA"></textarea>
+      </p>
+    </section>
+
+    <section id="sec_clinical_question" data-section-name="Klinische Fragestellung" data-section-required="true">
+      <header class="level1" data-english="Clinical question">Klinische Fragestellung</header>
+      <p>
+        <textarea name="clinical_question" data-field-type="TEXTAREA"></textarea>
+      </p>
+    </section>
+
+    <section id="findings" data-section-name="Befund" data-section-required="true">
+      <header class="level1">Befund</header>
+      <table>
+        <tr>
+          <th>Vergleichsuntersuchung:</th>
+          <td>
+            <select name="comparison_assessment" id="comparison_assessment">
+              <option value="no">keine</option>
+              <option value="yes">vorliegend</option>
+            </select>
+            <input name="comparison_assessment_date" id="comparison_assessment_date" type="date" data-field-type="DATE" />
+          </td>
+        </tr>
+        <tr>
+          <th><label for="image_quality">Bildqualität:</label></th>
+          <td>
+            <select name="image_quality" id="image_quality">
+              <option value="gut">gut</option>
+              <option value="ausreichend">ausreichend</option>
+              <option value="eingeschränkt">eingeschränkt</option>
+            </select>
+            <input type="text" name="image_quality_comment" data-field-type="TEXT" />
+          </td>
+        </tr>
+        <tr>
+          <th>Harnaufstau</th>
+          <td>
+            <table>
+              <tr>
+                <th>Aufweitung des Nierenbeckenkelchsystems</th>
+                <td>
+                  <table>
+                    <tr>
+                      <th><label for="renal_pelvis_dilation_left">Links:</label></th>
+                      <td>
+                        <select name="renal_pelvis_dilation_left" id="renal_pelvis_dilation_left">
+                          <option value="&mdash;">&mdash;</option>
+                          <option value="keine">keine</option>
+                          <option value="Grad 1">Grad 1</option>
+                          <option value="Grad 2">Grad 2</option>
+                          <option value="Grad 3">Grad 3</option>
+                          <option value="Grad 4">Grad 4</option>
+                        </select>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th><label for="renal_pelvis_dilation_right">Rechts:</label></th>
+                      <td>
+                        <select name="renal_pelvis_dilation_right" id="renal_pelvis_dilation_right">
+                          <option value="&mdash;">&mdash;</option>
+                          <option value="keine">keine</option>
+                          <option value="Grad 1">Grad 1</option>
+                          <option value="Grad 2">Grad 2</option>
+                          <option value="Grad 3">Grad 3</option>
+                          <option value="Grad 4">Grad 4</option>
+                        </select>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <th>Aufweitung des Ureters</th>
+                <td>
+                  <table>
+                    <tr>
+                      <th><label for="ureter_dilation_left">Links:</label></th>
+                      <td>
+                        <select name="ureter_dilation_left" id="ureter_dilation_left">
+                          <option value="&mdash;">&mdash;</option>
+                          <option value="keine">keine</option>
+                          <option value="Bis auf Höhe des proximalen Drittels">Bis auf Höhe des proximalen Drittels</option>
+                          <option value="Bis auf Höhe des mittleren Drittels">Bis auf Höhe des mittleren Drittels</option>
+                          <option value="Bis auf Höhe des distalen Drittels">Bis auf Höhe des distalen Drittels</option>
+                        </select>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th><label for="ureter_dilation_right">Rechts:</label></th>
+                      <td>
+                        <select name="ureter_dilation_right" id="ureter_dilation_right">
+                          <option value="&mdash;">&mdash;</option>
+                          <option value="keine">keine</option>
+                          <option value="Bis auf Höhe des proximalen Drittels">Bis auf Höhe des proximalen Drittels</option>
+                          <option value="Bis auf Höhe des mittleren Drittels">Bis auf Höhe des mittleren Drittels</option>
+                          <option value="Bis auf Höhe des distalen Drittels">Bis auf Höhe des distalen Drittels</option>
+                        </select>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <th><label for="perirenal_edema">Perirenales Ödem:</label></th>
+          <td>
+            <select name="perirenal_edema" id="perirenal_edema">
+              <option value="&mdash;">&mdash;</option>
+              <option value="keines">keines</option>
+              <option value="links">links</option>
+              <option value="rechts">rechts</option>
+              <option value="beidseits">beidseits</option>
+              <option value="beidseits, links führend">beidseits, links führend</option>
+              <option value="beidseits, rechts führend">beidseits, rechts führend</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <th>Periureterales Ödem</th>
+          <td>
+            <table>
+              <tr>
+                <th>Links:</th>
+                <td>
+                 <ul class="selectable-items-list">
+                  <li><input type="checkbox" name="periureteral_edema_left_proximal" id="periureteral_edema_left_proximal" data-field-type="CHECKBOX" /><label for="periureteral_edema_left_proximal">auf Höhe des proximalen Drittels</label></li>
+                  <li><input type="checkbox" name="periureteral_edema_left_intermediate" id="periureteral_edema_left_intermediate" data-field-type="CHECKBOX" /><label for="periureteral_edema_left_intermediate">auf Höhe des mittleren Drittels</label></li>
+                  <li><input type="checkbox" name="periureteral_edema_left_distal" id="periureteral_edema_left_distal" data-field-type="CHECKBOX" /><label for="periureteral_edema_left_distal">auf Höhe des distalen Drittels</label></li>
+                 </ul>
+                </td>
+              </tr>
+              <tr>
+                <th>Rechts:</th>
+                <td>
+                 <ul class="selectable-items-list">
+                  <li><input type="checkbox" name="periureteral_edema_right_proximal" id="periureteral_edema_right_proximal" data-field-type="CHECKBOX" /><label for="periureteral_edema_right_proximal">auf Höhe des proximalen Drittels</label></li>
+                  <li><input type="checkbox" name="periureteral_edema_right_intermediate" id="periureteral_edema_right_intermediate" data-field-type="CHECKBOX" /><label for="periureteral_edema_right_intermediate">auf Höhe des mittleren Drittels</label></li>
+                  <li><input type="checkbox" name="periureteral_edema_right_distal" id="periureteral_edema_right_distal" data-field-type="CHECKBOX" /><label for="periureteral_edema_right_distal">auf Höhe des distalen Drittels</label></li>
+                 </ul>
+                </td>
+              </tr>
+              <tr>
+                <th><label for="ureteral_edema_bilateral_comparison">Seitenvergleich:</label></th>
+                <td>
+                  <select name="ureteral_edema_bilateral_comparison" id="ureteral_edema_bilateral_comparison">
+                    <option value="&mdash;">&mdash;</option>
+                    <option value="links führend">links führend</option>
+                    <option value="rechts führend">rechts führend</option>
+                    <option value="seitengleich">seitengleich</option>
+                  </select>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <th><label for="urolithiasis">Urolithiasis:</label></th>
+          <td>
+            <select name="urolithiasis" id="urolithiasis">
+              <option value="&mdash;">&mdash;</option>
+              <option value="keine">keine</option>
+              <option value="Konkrement">Konkrement</option>
+              <option value="Konkrementkonglomerat">Konkrementkonglomerat</option>
+            </select>
+            <table>
+              <tr>
+                <th><label for="urolithiasis_position">Lage:</label></th>
+                <td>
+                  <select name="urolithiasis_position" id="urolithiasis_position">
+                    <option value="&mdash;">&mdash;</option>
+                    <option value="Nierenbecken">Nierenbecken</option>
+                    <option value="proximales Ureterdrittel">proximales Ureterdrittel</option>
+                    <option value="mittleres Ureterdrittel">mittleres Ureterdrittel</option>
+                    <option value="distales Ureterdrittel">distales Ureterdrittel</option>
+                    <option value="prävesikal">prävesikal</option>
+                    <option value="prävesikal oder intramural">prävesikal oder intramural</option>
+                    <option value="vesikal">vesikal</option>
+                  </select>
+                  <select name="urolithiasis_side">
+                    <option value="&mdash;">&mdash;</option>
+                    <option value="links">links</option>
+                    <option value="rechts">rechts</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <th><label for="maximum_diameter">Maximaldiameter:</label></th>
+                <td><input type="number" min="0.0" max="100.0" step="0.1" data-field-units="mm" data-field-type="NUMBER" /> mm</td>
+              </tr>
+              <tr>
+                <th><label for="maximum_diameter">Volumen:</label></th>
+                <td><input type="number" min="0" max="1000000" step="1" data-field-units="mm3" data-field-type="NUMBER" /> mm<sup>3</sup></td>
+              </tr>
+              <tr>
+                <th><label for="mean_density">Mittlere Dichte:</label></th>
+                <td><input type="number" min="-1024" max="4096" step="1" data-field-units="[hnsf'U]" data-field-type="NUMBER" /> HU</td>
+              </tr>
+              <tr>
+                <th><label for="spectral_analysis_substance">Substanz nach Röntgensprektrumanalyse:</label></th>
+                <td>
+                  <select name="spectral_analysis_substance" id="spectral_analysis_substance">
+                    <option value="&mdash;">&mdash;</option>
+                    <option value="Calciumkonkrement">Calciumkonkrement</option>
+                    <option value="Harnsäurekonkrement">Harnsäurekonkrement</option>
+                    <option value="anderes">anderes</option>
+                  </select>
+                  <input type="text" name="spectral_analysis_comment" data-field-type="TEXT" />
+                </td>
+              </tr>
+              <tr>
+                <th><label for="soft_tissue_rim_sign">Soft tissue rim sign:</label></th>
+                <td>
+                  <select name="soft_tissue_rim_sign" id="soft_tissue_rim_sign">
+                    <option value="&mdash;">&mdash;</option>
+                    <option value="positiv">positiv</option>
+                    <option value="negativ">negativ</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <th><label for="central_density_reduction">Zentrale Dichteabsenkung:</label></th>
+                <td>
+                  <select name="central_density_reduction" id="central_density_reduction">
+                    <option value="&mdash;">&mdash;</option>
+                    <option value="vorhanden">vorhanden</option>
+                    <option value="nicht vorhanden">nicht vorhanden</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <th><label for="comet_tail_sign">Comet tail sign:</label></th>
+                <td>
+                  <select name="comet_tail_sign" id="comet_tail_sign">
+                    <option value="&mdash;">&mdash;</option>
+                    <option value="positiv">positiv</option>
+                    <option value="negativ">negativ</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <th><label for="other_concrements">Weitere Konkremente:</label></th>
+                <td><textarea name="other_concrements" id="other_concrements" data-field-type="TEXTAREA"></textarea></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <th><label for="abdominal_viscera">Bauchorgane:</label></th>
+          <td><textarea name="abdominal_viscera" data-field-type="TEXTAREA">unauffällig</textarea></td>
+        </tr>
+        <tr>
+          <th><label for="vessels">Gefäße:</label></th>
+          <td><textarea name="vessels" data-field-type="TEXTAREA">unauffällig</textarea></td>
+        </tr>
+        <tr>
+          <th><label for="lymph_nodes">Lymphknoten:</label></th>
+          <td><textarea name="lymph_nodes" data-field-type="TEXTAREA">unauffällig</textarea></td>
+        </tr>
+        <tr>
+          <th><label for="skeleton">Skelett:</label></th>
+          <td><textarea name="skeleton" data-field-type="TEXTAREA">unauffällig</textarea></td>
+        </tr>
+        <tr>
+          <th><label for="basal_thorax">Basaler Thorax:</label></th>
+          <td><textarea name="basal_thorax" data-field-type="TEXTAREA">unauffällig</textarea></td>
+        </tr>
+      </table>
+    </section>
+
+    <section id="impression" data-section-name="Beurteilung" data-section-required="true">
+      <header class="level1" data-english="Impression">Beurteilung</header>
+      <textarea name="impression" data-field-type="TEXTAREA">Z. B.: Keine Urolithiasis und kein Harnaufstau. ODER: Calciumhaltiges Konkrement im proximalen Ureter links mit 4 mm Maximaldurchmesser und vorgeschalteter Harstau des rechten Ureters und Nierenbeckenkelchsystems Grad 2. OPTIONAL: Differentialdiagnostisch ist ein Phlebolith/arteriosklerotischer Plaque möglich.</textarea>
+    </section>
+  </body>
+</html>
