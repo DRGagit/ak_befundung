@@ -83,109 +83,103 @@
           </td>
         </tr>
         <tr>
-          <th>
-            <select name="side" id="side">
-              <option value="Rechtes">Rechtes</option>
-              <option value="Linkes">Linkes</option>
-            </select>
-            Hüftgelenk:
-          </th>
+          <th><label id="side", data-section-name="side", data-section-required="true">Beurteiltes Hüftgelenk:</label></th>
           <td>
-            <mark>
-              Aufgelistete Kriterien sind wenn möglich quantitativ zu bewerten 
-              (regelhaft dreistufig: gering, mittelgradig, ausgeprägt) und ggf. zu klassifizieren.
-            </mark>
-            <table>
-              <tr>
-                <th><label for="joint_position">1. Gelenkstellung:</label></th>
-                <td>
-                  <select name="joint_position" id="joint_position">
-                    <option value="&mdash;">&mdash;</option>
-                    <option value="regelrecht">regelrecht</option>
-                    <option value="gering inkongruent (varisch)">gering inkongruent (varisch)</option>
-                    <option value="mittelgradig inkongruent (varisch)">mittelgradig inkongruent (varisch)</option>
-                    <option value="ausgeprägt inkongruent (varisch)">ausgeprägt inkongruent (varisch)</option>
-                  </select>
-                </td>
-                <td><input type="text" name="joint_position_comment" data-field-type="TEXT" /></td>
-              </tr>
-              <tr>
-                <th><label for="subchondral_sclerosis">2. Subchondrale Sklerosierung:</label></th>
-                <td>
-                  <select name="subchondral_sclerosis" id="subchondral_sclerosis">
-                    <option value="&mdash;">&mdash;</option>
-                    <option value="keine">keine</option>
-                    <option value="gering">gering</option>
-                    <option value="mittelgradig">mittelgradig</option>
-                    <option value="ausgeprägt">ausgeprägt</option>
-                  </select>
-                </td>
-                <td><input type="text" name="subchondral_sclerosis_comment" data-field-type="TEXT" /></td>
-              </tr>
-              <tr>
-                <th><label for="articular_osteophytes">3. Artikuläre Osteophyten:</label></th>
-                <td>
-                  <select name="articular_osteophytes" id="articular_osteophytes">
-                    <option value="&mdash;">&mdash;</option>
-                    <option value="keine">keine</option>
-                    <option value="gering">gering</option>
-                    <option value="mittelgradig">mittelgradig</option>
-                    <option value="ausgeprägt">ausgeprägt</option>
-                  </select>
-                </td>
-                <td><input type="text" name="articular_osteophytes_comment" data-field-type="TEXT" /></td>
-              </tr>
-              <tr>
-                <th><label for="joint_partner_deformation">4. Deformierungen der Gelenkpartner:</label></th>
-                <td>
-                  <select name="subchondral_sclerosis" id="subchondral_sclerosis">
-                    <option value="&mdash;">&mdash;</option>
-                    <option value="keine">keine</option>
-                    <option value="gering">gering</option>
-                    <option value="mittelgradig">mittelgradig</option>
-                    <option value="ausgeprägt">ausgeprägt</option>
-                  </select>
-                </td>
-                <td><input type="text" name="joint_partner_deformation_comment" data-field-type="TEXT" /></td>
-              </tr>
-              <tr>
-                <th><label for="spongiosa_cystic_deformation">5. Spongiosa (zystische Deformierungen in Gelenkpfanne und Hüftkopf):</label></th>
-                <td>
-                  <select name="spongiosa_cystic_deformation" id="spongiosa_cystic_deformation">
-                    <option value="&mdash;">&mdash;</option>
-                    <option value="keine">keine</option>
-                    <option value="gering">gering</option>
-                    <option value="mittelgradig">mittelgradig</option>
-                    <option value="ausgeprägt">ausgeprägt</option>
-                  </select>
-                </td>
-                <td><input type="text" name="spongiosa_cystic_deformation_comment" data-field-type="TEXT" /></td>
-              </tr>
-              <tr>
-                <th><label for="pelvis_dysplasia">6. Beckenarchitektur (Dysplasien):</label></th>
-                <td>
-                  <select name="pelvis_dysplasia" id="pelvis_dysplasia">
-                    <option value="&mdash;">&mdash;</option>
-                    <option value="nein">nein</option>
-                    <option value="ja">ja</option>
-                  </select>
-                </td>
-                <td><input type="text" name="pelvis_dysplasia_comment" data-field-type="TEXT" /></td>
-              </tr>
-              <tr>
-                <th><label for="paraarticular_tissue_calcification">7. Paraartikuläre Weichteile (Kalzifikationen):</label></th>
-                <td>
-                  <select name="paraarticular_tissue_calcification" id="paraarticular_tissue_calcification">
-                    <option value="&mdash;">&mdash;</option>
-                    <option value="keine">keine</option>
-                    <option value="vereinzelt">vereinzelt</option>
-                    <option value="ankylosierend">ankylosierend</option>
-                  </select>
-                </td>
-                <td><input type="text" name="paraarticular_tissue_calcification_comment" data-field-type="TEXT" /></td>
-              </tr>
-            </table>
+            <select name="side" id="side">
+              <option value="rechts">rechts</option>
+              <option value="links">links</option>
+            </select>
           </td>
+        </tr>
+      </table>
+      <table>
+        <tr>
+          <th><label for="joint_position">Gelenkstellung:</label></th>
+          <td>
+            <select name="joint_position" id="joint_position">
+              <option value="&mdash;">&mdash;</option>
+              <option value="regelrecht">regelrecht</option>
+              <option value="gering inkongruent (varisch)">gering inkongruent (varisch)</option>
+              <option value="mittelgradig inkongruent (varisch)">mittelgradig inkongruent (varisch)</option>
+              <option value="ausgeprägt inkongruent (varisch)">ausgeprägt inkongruent (varisch)</option>
+            </select>
+          </td>
+          <td><input type="text" name="joint_position_comment" data-field-type="TEXT" /></td>
+        </tr>
+        <tr>
+          <th><label for="subchondral_sclerosis">Subchondrale Sklerosierung:</label></th>
+          <td>
+            <select name="subchondral_sclerosis" id="subchondral_sclerosis">
+              <option value="&mdash;">&mdash;</option>
+              <option value="keine">keine</option>
+              <option value="gering">gering</option>
+              <option value="mittelgradig">mittelgradig</option>
+              <option value="ausgeprägt">ausgeprägt</option>
+            </select>
+          </td>
+          <td><input type="text" name="subchondral_sclerosis_comment" data-field-type="TEXT" /></td>
+        </tr>
+        <tr>
+          <th><label for="articular_osteophytes">Artikuläre Osteophyten:</label></th>
+          <td>
+            <select name="articular_osteophytes" id="articular_osteophytes">
+              <option value="&mdash;">&mdash;</option>
+              <option value="keine">keine</option>
+              <option value="gering">gering</option>
+              <option value="mittelgradig">mittelgradig</option>
+              <option value="ausgeprägt">ausgeprägt</option>
+            </select>
+          </td>
+          <td><input type="text" name="articular_osteophytes_comment" data-field-type="TEXT" /></td>
+        </tr>
+        <tr>
+          <th><label for="joint_partner_deformation">Deformierungen der Gelenkpartner:</label></th>
+          <td>
+            <select name="subchondral_sclerosis" id="subchondral_sclerosis">
+              <option value="&mdash;">&mdash;</option>
+              <option value="keine">keine</option>
+              <option value="gering">gering</option>
+              <option value="mittelgradig">mittelgradig</option>
+              <option value="ausgeprägt">ausgeprägt</option>
+            </select>
+          </td>
+          <td><input type="text" name="joint_partner_deformation_comment" data-field-type="TEXT" /></td>
+        </tr>
+        <tr>
+          <th><label for="spongiosa_cystic_deformation">Spongiosa (zystische Deformierungen in Gelenkpfanne und Hüftkopf):</label></th>
+          <td>
+            <select name="spongiosa_cystic_deformation" id="spongiosa_cystic_deformation">
+              <option value="&mdash;">&mdash;</option>
+              <option value="keine">keine</option>
+              <option value="gering">gering</option>
+              <option value="mittelgradig">mittelgradig</option>
+              <option value="ausgeprägt">ausgeprägt</option>
+            </select>
+          </td>
+          <td><input type="text" name="spongiosa_cystic_deformation_comment" data-field-type="TEXT" /></td>
+        </tr>
+        <tr>
+          <th><label for="pelvis_dysplasia">Beckenarchitektur (Dysplasien):</label></th>
+          <td>
+            <select name="pelvis_dysplasia" id="pelvis_dysplasia">
+              <option value="&mdash;">&mdash;</option>
+              <option value="nein">nein</option>
+              <option value="ja">ja</option>
+            </select>
+          </td>
+          <td><input type="text" name="pelvis_dysplasia_comment" data-field-type="TEXT" /></td>
+        </tr>
+        <tr>
+          <th><label for="paraarticular_tissue_calcification">Paraartikuläre Weichteile (Kalzifikationen):</label></th>
+          <td>
+            <select name="paraarticular_tissue_calcification" id="paraarticular_tissue_calcification">
+              <option value="&mdash;">&mdash;</option>
+              <option value="keine">keine</option>
+              <option value="vereinzelt">vereinzelt</option>
+              <option value="ankylosierend">ankylosierend</option>
+            </select>
+          </td>
+          <td><input type="text" name="paraarticular_tissue_calcification_comment" data-field-type="TEXT" /></td>
         </tr>
         <tr>
           <th><label for="other_findings">Sonstiges:</label></th>
