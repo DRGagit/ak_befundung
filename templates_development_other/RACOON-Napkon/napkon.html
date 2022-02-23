@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RACOON-Napkon</title>
+    <meta charset="UTF-8">
+    <!--Dublin Core metadata elements here-->
+    <meta name="dcterms.title" content="RACOON-Napkon">
+    <!--Link to Stylesheet-->
+    <script type="text/xml">
+        <!--
+        <template_attributes>
+        <top-level-flag>0</top-level-flag>
+        <status>ACTIVE</status>
+        </template_attributes>
+		-->
+    </script>
+    <!--Link to Stylesheet-->
+    <style type="text/css">
+        body {
+            margin-left:auto;
+            margin-right:auto;
+            max-width: 950px;
+            background: #F7F7F7;
+            padding: 0px 15px 0px 15px;
+            color: #333;
+            border:1px solid #E4E4E4;
+            font-family: sans-serif;
+        }
+
+        td {
+            padding-right: 50px; vertical-align: top;
+        }
+
+        select {
+            border: 1px solid #DADADA;
+            background: #FFF;
+            color: #888;
+            outline: 0 none;
+            padding: 3px 3px 3px 5px;
+            width: 100%;
+        }
+
+        input {
+            border: 1px solid #DADADA;
+            background: #FFF;
+            color: #888;
+            outline: 0 none;
+            padding: 3px 3px 3px 5px;
+        }
+
+        button {
+            background: #E27575;
+            border: none;
+            padding: 5px 25px 5px 25px;
+            color: #FFF;
+            box-shadow: 1px 1px 5px #B6B6B6;
+            border-radius: 3px;
+            text-shadow: 1px 1px 1px #9E3F3F;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #CF7A7A
+        }
+
+        textarea {
+            width: 80%;
+            border: 1px solid #cccccc;
+            padding: 0.5em;
+            font-family: sans-serif;
+        }
+        textarea:focus {
+            background: #FFC;
+        }
+
+        .copyright {
+            font-size: x-small;
+            text-align: right;
+            vertical-align: bottom;
+        }
+        .literature {
+            font-size: small;
+        }
+        a {
+            color: #E27575;
+        }
+        a:hover {
+            color: #CF7A7A;
+        }
+        .logo {
+            float: right;
+            height: 90px;
+        }
+    </style>
+</head>
+
+<body onload="calcPAN()">
+
+<script type="text/javascript">
+
+    function calcPAN () {
+        // initialize Variables
+        PANSum = 0;
+        PANList = "";
+        PANbreak = false;
+
+        var PANimpressions = ["Unauffälliges low-dose Thorax-CT bei COVID-19 (Pan-Score = 0)", "Geringe Lungenveränderungen bei COVID-19 (Pan-Score = ", "Relevante Lungenveränderungen bei COVID-19 (Pan-Score = "];
+
+        if (parseInt(document.getElementById("OL_re").value) != 0) {
+            PANSum += parseInt(document.getElementById("OL_re").value);
+            PANList += "- PAN-Score Oberlappen rechts = " + parseInt(document.getElementById("OL_re").value)  + "\n";
+            if (parseInt(document.getElementById("OL_re").value) > 2) {
+                PANbreak = true;
+            }
+        }
+        if (parseInt(document.getElementById("ML_re").value) != 0) {
+            PANSum += parseInt(document.getElementById("ML_re").value);
+            PANList += "- PAN-Score Mittellappen rechts = " + parseInt(document.getElementById("ML_re").value)  + "\n";
+            if (parseInt(document.getElementById("ML_re").value) > 2) {
+                PANbreak = true;
+            }
+        }
+        if (parseInt(document.getElementById("UL_re").value) != 0) {
+            PANSum += parseInt(document.getElementById("UL_re").value);
+            PANList += "- PAN-Score Unterlappen rechts = " + parseInt(document.getElementById("UL_re").value)  + "\n";
+            if (parseInt(document.getElementById("UL_re").value) > 2) {
+                PANbreak = true;
+            }
+        }
+        if (parseInt(document.getElementById("OL_li").value) != 0) {
+            PANSum += parseInt(document.getElementById("OL_li").value);
+            PANList += "- PAN-Score Oberlappen links = " + parseInt(document.getElementById("OL_li").value)  + "\n";
+            if (parseInt(document.getElementById("OL_li").value) > 2) {
+                PANbreak = true;
+            }
+        }
+        if (parseInt(document.getElementById("UL_li").value) != 0) {
+            PANSum += parseInt(document.getElementById("UL_li").value);
+            PANList += "- PAN-Score Unterlappen links = " + parseInt(document.getElementById("UL_li").value)  + "\n";
+            if (parseInt(document.getElementById("UL_li").value) > 2) {
+                PANbreak = true;
+            }
+        }
+        
+        if (PANSum == 0) {
+            PANList = ""
+            PANimpression = PANimpressions[0]
+        } else if (PANSum > 0 & PANSum <= 5 & !PANbreak) {
+            PANimpression = PANimpressions[1] + PANSum + ")"
+        } else if (PANSum > 5 | PANbreak) {
+            PANimpression = PANimpressions[2] + PANSum + ")"
+        } else {
+            PANimpression = "error"
+        }
+
+        document.getElementById("PAN_summe").value = PANSum;
+        document.getElementById("impr_covid").value = PANimpression
+
+    }
+
+    function copyPAN () {
+        finaltext = "Befund:\n\n";
+        finaltext += "COVID-Lungenveränderungen:\n";
+        finaltext += PANList;
+        finaltext += "PAN-Score Summe: " + PANSum + "\n\n";
+        finaltext += "Lungenraumforderung: " + document.getElementById("RF").value + "\n";
+        finaltext += "Pleura: " + document.getElementById("pleura").value;
+        if (document.getElementById("pleura_text").value != "") {
+            finaltext += " (" + document.getElementById("pleura_text").value + ")" + "\n";
+        } else {
+            finaltext += "\n"
+        }
+        finaltext += "Schilddrüse: " + document.getElementById("thyroid").value;
+        if (document.getElementById("thyroid_text").value != "") {
+            finaltext += " (" + document.getElementById("thyroid_text").value + ")" + "\n";
+        } else {
+            finaltext += "\n"
+        }
+        finaltext += "Lymphknoten: " + document.getElementById("lymph").value;
+        if (document.getElementById("lymph_text").value != "") {
+            finaltext += " (" + document.getElementById("lymph_text").value + ")" + "\n";
+        } else {
+            finaltext += "\n"
+        }
+        finaltext += "Mediastinum: " + document.getElementById("mediast").value;
+        if (document.getElementById("mediast_text").value != "") {
+            finaltext += " (" + document.getElementById("mediast_text").value + ")" + "\n";
+        } else {
+            finaltext += "\n"
+        }
+        finaltext += "Gefäße: " + document.getElementById("vessel").value;
+        if (document.getElementById("vessel_text").value != "") {
+            finaltext += " (" + document.getElementById("vessel_text").value + ")" + "\n";
+        } else {
+            finaltext += "\n"
+        }
+        finaltext += "Herz: " + document.getElementById("cor").value;
+        if (document.getElementById("cor_text").value != "") {
+            finaltext += " (" + document.getElementById("cor_text").value + ")" + "\n";
+        } else {
+            finaltext += "\n"
+        }
+        finaltext += "Skelett: " + document.getElementById("bone").value;
+        if (document.getElementById("bone_text").value != "") {
+            finaltext += " (" + document.getElementById("bone_text").value + ")" + "\n";
+        } else {
+            finaltext += "\n"
+        }
+        finaltext += "\n";
+        finaltext += "Beurteilung:\n\n";
+        finaltext += document.getElementById("impr_covid").value;
+        finaltext += "\n";
+        finaltext += document.getElementById("impr_other").value;
+
+        // Create a dummy input to copy the string array inside it
+        var dummy = document.createElement("textarea");
+        document.body.appendChild(dummy)
+        dummy.value = finaltext
+        dummy.select();
+        dummy.setSelectionRange(0, 99999);
+        document.execCommand("copy");
+        document.body.removeChild(dummy);
+        
+       
+        alert("Text kopiert: \n----------------\n\n" + finaltext);
+    }
+
+</script>
+
+<img src="./racoon.png" class="logo">
+<h1>RACOON Napkon Template</h1>
+
+<h2>Befund</h2>
+
+<table>
+    <tr>
+        <th>COVID Lungenveränderungen</th>
+        <th>Pan-Score</th>
+    </tr>
+    <tr>
+        <td>Oberlappen rechts</td>
+        <td>
+            <select name="OL_re" id="OL_re" onchange="calcPAN()">
+                <option value="0">0 (no involvment)</option>
+                <option value="1">1 (&lt;5% involvment)</option>
+                <option value="2">2 (5-25% involvment)</option>
+                <option value="3">3 (25-50% involvment)</option>
+                <option value="4">4 (50-75% involvment)</option>
+                <option value="5">5 (&gt;75% involvment)</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>Mittellappen rechts</td>
+        <td>
+            <select name="ML_re" id="ML_re" onchange="calcPAN()">
+                <option value="0">0 (no involvment)</option>
+                <option value="1">1 (&lt;5% involvment)</option>
+                <option value="2">2 (5-25% involvment)</option>
+                <option value="3">3 (25-50% involvment)</option>
+                <option value="4">4 (50-75% involvment)</option>
+                <option value="5">5 (&gt;75% involvment)</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>Unterlappen rechts</td>
+        <td>
+            <select name="UL_re" id="UL_re" onchange="calcPAN()">
+                <option value="0">0 (no involvment)</option>
+                <option value="1">1 (&lt;5% involvment)</option>
+                <option value="2">2 (5-25% involvment)</option>
+                <option value="3">3 (25-50% involvment)</option>
+                <option value="4">4 (50-75% involvment)</option>
+                <option value="5">5 (&gt;75% involvment)</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>Oberlappen links</td>
+        <td>
+            <select name="OL_li" id="OL_li" onchange="calcPAN()">
+                <option value="0">0 (no involvment)</option>
+                <option value="1">1 (&lt;5% involvment)</option>
+                <option value="2">2 (5-25% involvment)</option>
+                <option value="3">3 (25-50% involvment)</option>
+                <option value="4">4 (50-75% involvment)</option>
+                <option value="5">5 (&gt;75% involvment)</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>Unterlappen links</td>
+        <td>
+            <select name="UL_li" id="UL_li" onchange="calcPAN()">
+                <option value="0">0 (no involvment)</option>
+                <option value="1">1 (&lt;5% involvment)</option>
+                <option value="2">2 (5-25% involvment)</option>
+                <option value="3">3 (25-50% involvment)</option>
+                <option value="4">4 (50-75% involvment)</option>
+                <option value="5">5 (&gt;75% involvment)</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>Summe</td>
+        <td><input type="number" name="PAN_summe", id="PAN_summe" value="0"></td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <td>Lungenraumforderung</td>
+        <td>
+            <select name="RF" id="RF">
+                <option value="-">-</option>
+                <option value="nein">nein</option>
+                <option value="ja">ja</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>Pleura</td>
+        <td>
+            <select name="pleura" id="pleura">
+                <option value="unauffällig">unauffällig</option>
+                <option value="auffällig">auffällig</option>
+            </select>
+        </td>
+        <td><input type="text" name="pleura_text" id="pleura_text"></td>
+    </tr>
+    <tr>
+        <td>Schilddrüse</td>
+        <td>
+            <select name="thyroid" id="thyroid">
+                <option value="unauffällig">unauffällig</option>
+                <option value="auffällig">auffällig</option>
+            </select>
+        </td>
+        <td><input type="text" name="thyroid_text" id="thyroid_text"></td>
+    </tr>
+    <tr>
+        <td>Lymphknoten</td>
+        <td>
+            <select name="lymph" id="lymph">
+                <option value="unauffällig">unauffällig</option>
+                <option value="auffällig">auffällig</option>
+            </select>
+        </td>
+        <td><input type="text" name="lymph_text" id="lymph_text"></td>
+    </tr>
+    <tr>
+        <td>Mediastinum</td>
+        <td>
+            <select name="mediast" id="mediast">
+                <option value="unauffällig">unauffällig</option>
+                <option value="auffällig">auffällig</option>
+            </select>
+        </td>
+        <td><input type="text" name="mediast_text" id="mediast_text"></td>
+    </tr>
+    <tr>
+        <td>Gefäße</td>
+        <td>
+            <select name="vessel" id="vessel">
+                <option value="unauffällig">unauffällig</option>
+                <option value="auffällig">auffällig</option>
+            </select>
+        </td>
+        <td><input type="text" name="vessel_text" id="vessel_text"></td>
+    </tr>
+    <tr>
+        <td>Herz</td>
+        <td>
+            <select name="cor" id="cor">
+                <option value="unauffällig">unauffällig</option>
+                <option value="auffällig">auffällig</option>
+            </select>
+        </td>
+        <td><input type="text" name="cor_text" id="cor_text"></td>
+    </tr>
+    <tr>
+        <td>Skelett</td>
+        <td>
+            <select name="bone" id="bone">
+                <option value="unauffällig">unauffällig</option>
+                <option value="auffällig">auffällig</option>
+            </select>
+        </td>
+        <td><input type="text" name="bone_text" id="bone_text"></td>
+    </tr>
+</table>
+
+<h2>Beurteilung</h2>
+
+<table>
+    <tr>
+        <td>
+            <input type="text" name="impr_covid" id="impr_covid" style="color: #000; width: 450px" readonly>
+        </td>
+        <td rowspan="2"><button type="button" onclick="copyPAN()">kopieren</button></td>
+    </tr>
+    <tr>
+        <td>
+            <textarea name="impr_other" id="impr_other" style="width: 450px;"></textarea>
+        </td>
+    </tr>
+</table>
+
+<p class="literature">Literatur: <a href="https://pubs.rsna.org/doi/10.1148/radiol.2020200370?url_ver=Z39.88-2003&rfr_id=ori:rid:crossref.org&rfr_dat=cr_pub%20%200pubmed">Time Course of Lung Changes at Chest CT during Recovery from Coronavirus Disease 2019 (COVID-19)</a></p>
+<p class="copyright">&copy; Daniel Pinto dos Santos<br>&copy; Thorsten Persigehl</p>
+
+</body>
