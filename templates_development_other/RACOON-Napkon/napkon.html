@@ -87,8 +87,10 @@
             color: #CF7A7A;
         }
         .logo {
+            padding-right: 1em;
+            padding-top: 1em;
             float: right;
-            height: 90px;
+            width: 300px;
         }
     </style>
 </head>
@@ -224,6 +226,37 @@
         alert("Text kopiert: \n----------------\n\n" + finaltext);
     }
 
+    function downloadPAN () {
+        var jsonString = "[";
+
+        pat_id = prompt("Please enter PatID");
+
+        if (pat_id == "") {
+            return
+        }
+
+        const jsonData = { name: "pat_id", value: pat_id }
+        jsonString += JSON.stringify(jsonData);
+        jsonString += ","
+
+        var elements = document.getElementsByClassName("result");
+        for (let i = 0; i < elements.length; i++) {
+            const jsonData = { name: elements[i].name, value: elements[i].value }
+            jsonString += JSON.stringify(jsonData)
+            if (i != elements.length - 1) {
+                jsonString += ","
+            }
+        }
+
+        jsonString += "]"
+
+        const a = document.createElement("a");
+        const file = new Blob([jsonString], { type: "text/plain" });
+        a.href = URL.createObjectURL(file);
+        a.download = pat_id + "_results.json";
+        a.click();
+    }
+
 </script>
 
 <img src="./racoon.png" class="logo">
@@ -239,7 +272,7 @@
     <tr>
         <td>Oberlappen rechts</td>
         <td>
-            <select name="OL_re" id="OL_re" onchange="calcPAN()">
+            <select class="result" name="OL_re" id="OL_re" onchange="calcPAN()">
                 <option value="0">0 (no involvment)</option>
                 <option value="1">1 (&lt;5% involvment)</option>
                 <option value="2">2 (5-25% involvment)</option>
@@ -252,7 +285,7 @@
     <tr>
         <td>Mittellappen rechts</td>
         <td>
-            <select name="ML_re" id="ML_re" onchange="calcPAN()">
+            <select class="result" class="result" name="ML_re" id="ML_re" onchange="calcPAN()">
                 <option value="0">0 (no involvment)</option>
                 <option value="1">1 (&lt;5% involvment)</option>
                 <option value="2">2 (5-25% involvment)</option>
@@ -265,7 +298,7 @@
     <tr>
         <td>Unterlappen rechts</td>
         <td>
-            <select name="UL_re" id="UL_re" onchange="calcPAN()">
+            <select class="result" name="UL_re" id="UL_re" onchange="calcPAN()">
                 <option value="0">0 (no involvment)</option>
                 <option value="1">1 (&lt;5% involvment)</option>
                 <option value="2">2 (5-25% involvment)</option>
@@ -278,7 +311,7 @@
     <tr>
         <td>Oberlappen links</td>
         <td>
-            <select name="OL_li" id="OL_li" onchange="calcPAN()">
+            <select class="result" name="OL_li" id="OL_li" onchange="calcPAN()">
                 <option value="0">0 (no involvment)</option>
                 <option value="1">1 (&lt;5% involvment)</option>
                 <option value="2">2 (5-25% involvment)</option>
@@ -291,7 +324,7 @@
     <tr>
         <td>Unterlappen links</td>
         <td>
-            <select name="UL_li" id="UL_li" onchange="calcPAN()">
+            <select class="result" name="UL_li" id="UL_li" onchange="calcPAN()">
                 <option value="0">0 (no involvment)</option>
                 <option value="1">1 (&lt;5% involvment)</option>
                 <option value="2">2 (5-25% involvment)</option>
@@ -303,7 +336,7 @@
     </tr>
     <tr>
         <td>Summe</td>
-        <td><input type="number" name="PAN_summe", id="PAN_summe" value="0"></td>
+        <td><input class="result" type="number" name="PAN_summe", id="PAN_summe" value="0"></td>
     </tr>
     <tr>
         <td>&nbsp;</td>
@@ -315,7 +348,7 @@
     <tr>
         <td>Lungenraumforderung</td>
         <td>
-            <select name="RF" id="RF">
+            <select class="result" name="RF" id="RF">
                 <option value="-">-</option>
                 <option value="nein">nein</option>
                 <option value="ja">ja</option>
@@ -325,72 +358,72 @@
     <tr>
         <td>Pleura</td>
         <td>
-            <select name="pleura" id="pleura">
+            <select class="result" name="pleura" id="pleura">
                 <option value="unauffällig">unauffällig</option>
                 <option value="auffällig">auffällig</option>
             </select>
         </td>
-        <td><input type="text" name="pleura_text" id="pleura_text"></td>
+        <td><input class="result" type="text" name="pleura_text" id="pleura_text"></td>
     </tr>
     <tr>
         <td>Schilddrüse</td>
         <td>
-            <select name="thyroid" id="thyroid">
+            <select class="result" name="thyroid" id="thyroid">
                 <option value="unauffällig">unauffällig</option>
                 <option value="auffällig">auffällig</option>
             </select>
         </td>
-        <td><input type="text" name="thyroid_text" id="thyroid_text"></td>
+        <td><input class="result" type="text" name="thyroid_text" id="thyroid_text"></td>
     </tr>
     <tr>
         <td>Lymphknoten</td>
         <td>
-            <select name="lymph" id="lymph">
+            <select class="result" name="lymph" id="lymph">
                 <option value="unauffällig">unauffällig</option>
                 <option value="auffällig">auffällig</option>
             </select>
         </td>
-        <td><input type="text" name="lymph_text" id="lymph_text"></td>
+        <td><input class="result" type="text" name="lymph_text" id="lymph_text"></td>
     </tr>
     <tr>
         <td>Mediastinum</td>
         <td>
-            <select name="mediast" id="mediast">
+            <select class="result" name="mediast" id="mediast">
                 <option value="unauffällig">unauffällig</option>
                 <option value="auffällig">auffällig</option>
             </select>
         </td>
-        <td><input type="text" name="mediast_text" id="mediast_text"></td>
+        <td><input class="result" type="text" name="mediast_text" id="mediast_text"></td>
     </tr>
     <tr>
         <td>Gefäße</td>
         <td>
-            <select name="vessel" id="vessel">
+            <select class="result" name="vessel" id="vessel">
                 <option value="unauffällig">unauffällig</option>
                 <option value="auffällig">auffällig</option>
             </select>
         </td>
-        <td><input type="text" name="vessel_text" id="vessel_text"></td>
+        <td><input class="result" type="text" name="vessel_text" id="vessel_text"></td>
     </tr>
     <tr>
         <td>Herz</td>
         <td>
-            <select name="cor" id="cor">
+            <select class="result" name="cor" id="cor">
                 <option value="unauffällig">unauffällig</option>
                 <option value="auffällig">auffällig</option>
             </select>
         </td>
-        <td><input type="text" name="cor_text" id="cor_text"></td>
+        <td><input class="result" type="text" name="cor_text" id="cor_text"></td>
     </tr>
     <tr>
         <td>Skelett</td>
         <td>
-            <select name="bone" id="bone">
+            <select class="result" name="bone" id="bone">
                 <option value="unauffällig">unauffällig</option>
                 <option value="auffällig">auffällig</option>
             </select>
         </td>
-        <td><input type="text" name="bone_text" id="bone_text"></td>
+        <td><input class="result" type="text" name="bone_text" id="bone_text"></td>
     </tr>
 </table>
 
@@ -399,14 +432,16 @@
 <table>
     <tr>
         <td>
-            <input type="text" name="impr_covid" id="impr_covid" style="color: #000; width: 450px" readonly>
+            <input class="result" type="text" name="impr_covid" id="impr_covid" style="color: #000; width: 450px" readonly>
         </td>
-        <td rowspan="2"><button type="button" onclick="copyPAN()">kopieren</button></td>
+        <!-- <td rowspan="2"><button type="button" onclick="copyPAN()">kopieren</button></td> -->
+        <td><button type="button" onclick="copyPAN()">kopieren</button></td>
     </tr>
     <tr>
         <td>
-            <textarea name="impr_other" id="impr_other" style="width: 450px;"></textarea>
+            <textarea class="result" name="impr_other" id="impr_other" style="width: 450px;"></textarea>
         </td>
+        <td><button type="button" onclick="downloadPAN()">JSON download</button></td>
     </tr>
 </table>
 
