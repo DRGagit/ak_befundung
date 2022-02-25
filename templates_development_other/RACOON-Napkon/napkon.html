@@ -226,8 +226,12 @@
         alert("Text kopiert: \n----------------\n\n" + finaltext);
     }
 
+    function Result(objName, objValue) {
+        this.name = objName;
+        this.value = objValue
+    }
+
     function downloadPAN () {
-        var jsonString = "[";
 
         pat_id = prompt("Please enter PatID");
 
@@ -235,23 +239,17 @@
             return
         }
 
-        const jsonData = { name: "pat_id", value: pat_id }
-        jsonString += JSON.stringify(jsonData);
-        jsonString += ","
+        var jsonArray = []
+
+        jsonArray.push(new Result("pat_id", pat_id))
 
         var elements = document.getElementsByClassName("result");
         for (let i = 0; i < elements.length; i++) {
-            const jsonData = { name: elements[i].name, value: elements[i].value }
-            jsonString += JSON.stringify(jsonData)
-            if (i != elements.length - 1) {
-                jsonString += ","
-            }
+            jsonArray.push(new Result(elements[i].id, elements[i].value));
         }
 
-        jsonString += "]"
-
         const a = document.createElement("a");
-        const file = new Blob([jsonString], { type: "text/plain" });
+        const file = new Blob([JSON.stringify(jsonArray, null, "\t")], { type: "text/plain" });
         a.href = URL.createObjectURL(file);
         a.download = pat_id + "_results.json";
         a.click();
