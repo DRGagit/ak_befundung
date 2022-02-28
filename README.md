@@ -78,6 +78,7 @@ _**Generischer Befund**_ | allgemein | [Link](https://www.befundung.drg.de/de-DE
 ## Zusätzliche Tools
 
 [PCi-Kalkulator für Peritonealkarzinose](https://www.radiolehre.uni-koeln.de/pci_calc/pci_calc.html)
+[RACOON Napkon Template](https://www.radiolehre.uni-koeln.de/racoon-napkon/napkon.html)
 
 [cc-by]: http://creativecommons.org/licenses/by/4.0/
 [cc-by-shield]: https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg
