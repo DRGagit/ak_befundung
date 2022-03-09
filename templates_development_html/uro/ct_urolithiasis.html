@@ -7,7 +7,7 @@
     <meta name="dcterms.abstract" content="Strukturierte Befundvorlage: Urolithiasis" />
     <meta name="dcterms.description" content="CT Urolithiasis" />
     <meta name="dcterms.subject" content="CT; UR;" />
-    <meta name="dcterms.identifier" content="041807.2.2203092131" />
+    <meta name="dcterms.identifier" content="041807.2.2203092150" />
     <meta name="dcterms.type" content="IMAGE_REPORT_TEMPLATE" />
     <meta name="dcterms.language" content="de" />
     <meta name="dcterms.rights" content="Die Deutsche Röntgengesellschaft e. V. (DRG) stellt sämtliche Templates kostenfrei unter der Creative Commons Lizenz CC BY in der Version 4.0 zur Verfügung. Die Lizenz erlaubt Download und Weiterverteilung des Werkes unter Nennung der DRG als Urheber" />
@@ -55,6 +55,7 @@
 
     <!--Link to Stylesheet-->
     <link rel="stylesheet" type="text/css" href="../../templates_final/drg.css" />
+    <style type="text/css">mark.block_mark { display: block; }</style>
 
   </head>
   <body>
@@ -188,7 +189,17 @@
               <tr>
                 <th><label for="other_concrements">Weitere Konkremente:</label></th>
                 <td>
-                  <mark>Nach demselben Schema zu bewerten.</mark><br />
+                  <mark class="block_mark">
+                    Alle weiteren Konkremente ebenfalls nach diesem Schema im nachfolgenden Freitextfeld:<br />
+                    Lage:&nbsp;<br />
+                    Maximaler Durchmesser:&nbsp;<br />
+                    Volumen:&nbsp;<br />
+                    Mittlere Dichte:&nbsp;<br />
+                    Substanz nach Dual-Energy-Analyse:&nbsp;<br />
+                    Soft tissue rim sign:&nbsp;<br />
+                    Zentrale Dichteabsenkung:&nbsp;<br />
+                    Comet tail sign:&nbsp;<br />
+                  </mark>
                   <textarea name="other_concrements" id="other_concrements" data-field-type="TEXTAREA"></textarea>
                 </td>
               </tr>
