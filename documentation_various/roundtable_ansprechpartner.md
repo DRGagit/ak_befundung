@@ -11,10 +11,12 @@ Sectra | Thomas Jumpertz (Thomas.Jumpertz@sectra.com) | vorläufig zugesagt, 30.
 Aycan | Stephan Popp (spopp@aycan.de) | vorläufig zugesagt, 10.01.2020
 Medavis | Thomas Freier (Thomas.Freier@medavis.de) |
 iSolutions | Petra Jansen (petra.janssen@i-solutions.de) |
-AGFA | Marcus Muth (marcus.muth@agfa.com) | vorläufig zugesagt, 10.01.2020
+Dedalus | Marcus Muth (marcus.muth@dedalus.com) | vorläufig zugesagt, 10.01.2020
 GE | NN | NN
-Image Systems | Arpad Bischoff |
+Image Systems | Arpad Bischoff (bischof@image-systems.biz) |
 Siemens | Gerhard Kohl |
-Nexus/Chili | NN | Nach Rückfrage, aktuell keine Möglichkeit HTML zu importieren, steht wohl auch  nicht auf der Agenda
+Visus | stucke-ring@visus.com |
+Nexus/Chili | Uwe Engelmann (u.engelmann@chili-radiology.com) | Nach Rückfrage, aktuell keine Möglichkeit HTML zu importieren, steht wohl auch  nicht auf der Agenda
 Mint Medical | Johannes Kast (J.Kast@mint-medical.de) | (alternativ Tobias Gottmann)
-RadioReport | NN |
+RadioReport | nadine.marks@neo-q.de | oder igor.toker@neo-q.de
+upmedic | Pawel Paczuski (pawel.paczuski@upmedic.io) | interessiert, allerdings evtl. sprachbarriere
