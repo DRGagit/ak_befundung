@@ -17,6 +17,8 @@ Weitere Informationen stehen auch unter www.befundung.drg.de zur Verfügung.
 - Andreas Bucher (Uniklinik Frankfurt)
 - Malte Sieren (Uniklinik Lübeck)
 - Johann Martin Hempel (Uniklink Tübingen)
+- Roman Klöckner (Uniklinik Lübeck)
+- Matthias Fink (Uniklinik Heidelberg)
 
 ### Contact
 
