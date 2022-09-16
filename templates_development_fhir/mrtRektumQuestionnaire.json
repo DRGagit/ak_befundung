@@ -1,0 +1,797 @@
+{
+    "resourceType": "Questionnaire",
+    "identifier": [
+        {
+            "value": "041807.3.2011102112"
+        }
+    ],
+    "title": "MRT Rektum-Ca",
+    "date": "2020-11-10",
+    "publisher": "Deutsche Röntgengesellschaft (DRG)",
+    "description": "Befundungstemplate für Rektumkarzinom",
+    "purpose": "Erstes mit der AG Onkologie abgestimmtes und in einem Konsensusmeeting mit Klinikern besprochenes Template. Das Template enthält alle für Chirurgen und Onkologen wichtigen Items und gibt dem Radiologen einen Leitfaden zu genauen Klassifizierung eines Rektumkarzinoms im TNM-System. Enthält bereits einige RadLex-Terme. Public Comment Phase ausstehend. (L2 - Entwurf zur Abstimmung: AG onkologische Bildgebung - PD Dr. Persigehl, Version 1, kein Javascript)",
+    "copyright": "Die Deutsche Röntgengesellschaft e.V.(DRG) stellt sämtliche Templates kostenfrei unter der Creative Commons Lizenz  CC BY in der Version 4.0 zur Verfügung. Die Lizenz erlaubt Download und Weiterverteilung des Werkes unter Nennung der DRG als Urheber.",
+    "item": [
+        {
+            "linkId": "Clinical information",
+            "text": "Klinische Angaben",
+            "type": "group",
+            "item": [
+                {
+                    "linkId": "mr_rectalca_clininfo",
+                    "code": [
+                        {
+                            "system": "http://radlex.org",
+                            "code": "RID13166",
+                            "display": "Clinical information"
+                        }
+                    ],
+                    "type": "text"
+                },
+                {
+                    "text": "Histologie",
+                    "type": "group",
+                    "item": [
+                        {
+                            "linkId": "mr_rectalca_histol",
+                            "type": "choice",
+                            "answerOption": [
+                                {
+                                    "valueString": "ausstehend"
+                                },
+                                {
+                                    "valueString": "gesichert"
+                                }
+                            ]
+                        },
+                        {
+                            "linkId": "mr_rectalca_histol_info",
+                            "type": "string"
+                        }
+                    ]
+                },
+                {
+                    "text": "neoadjuvante Vorbehandlung",
+                    "type": "group",
+                    "item": [
+                        {
+                            "linkId": "mr_rectalca_postneoadj",
+                            "code": [
+                                {
+                                    "system": "http://radlex.org",
+                                    "code": "RID13166",
+                                    "display": "Clinical information"
+                                }
+                            ],
+                            "type": "choice",
+                            "answerOption": [
+                                {
+                                    "valueString": "nein"
+                                },
+                                {
+                                    "valueString": "ja"
+                                }
+                            ]
+                        },
+                        {
+                            "linkId": "mr_rectalca_postneoadj_info",
+                            "code": [
+                                {
+                                    "system": "http://radlex.org",
+                                    "code": "RID13166",
+                                    "display": "Clinical information"
+                                }
+                            ],
+                            "type": "string"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "linkId": "Clinical question",
+            "text": "Fragestellung",
+            "type": "group",
+            "item": [
+                {
+                    "linkId": "mr_rectalca_Fragestellung",
+                    "type": "text"
+                }
+            ]
+        },
+        {
+            "linkId": "Findings",
+            "text": "Befund",
+            "type": "group",
+            "item": [
+                {
+                    "text": "Vergleichsuntersuchung:",
+                    "type": "group",
+                    "item": [
+                        {
+                            "linkId": "mr_rectalca_comparison",
+                            "code": [
+                                {
+                                    "system": "http://radlex.org",
+                                    "code": "RID28483",
+                                    "display": "Comparison"
+                                }
+                            ],
+                            "type": "choice",
+                            "answerOption": [
+                                {
+                                    "valueString": "keine"
+                                },
+                                {
+                                    "valueString": "vorliegend"
+                                }
+                            ]
+                        },
+                        {
+                            "linkId": "mr_rectalca_comparison_mod",
+                            "type": "choice",
+                            "answerOption": [
+                                {
+                                    "valueString": "-"
+                                },
+                                {
+                                    "valueString": "CT"
+                                },
+                                {
+                                    "valueString": "MR"
+                                }
+                            ]
+                        },
+                        {
+                            "linkId": "mr_rectalca_comparison_date",
+                            "type": "date"
+                        }
+                    ]
+                },
+                {
+                    "text": "Bildqualität:",
+                    "type": "group",
+                    "item": [
+                        {
+                            "linkId": "mr_rectalca_quality",
+                            "type": "choice",
+                            "answerOption": [
+                                {
+                                    "valueString": "exzellent"
+                                },
+                                {
+                                    "valueString": "mittel"
+                                },
+                                {
+                                    "valueString": "schlecht"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "Rektumkarzinom (T)",
+                    "type": "group",
+                    "item": [
+                        {
+                            "text": "Tumorlokalisation",
+                            "type": "group",
+                            "item": [
+                                {
+                                    "linkId": "mr_rectalca_lokalisation",
+                                    "code": [
+                                        {
+                                            "system": "http://radlex.org",
+                                            "code": "RID39038",
+                                            "display": "location"
+                                        }
+                                    ],
+                                    "type": "choice",
+                                    "answerOption": [
+                                        {
+                                            "valueString": "- (keine Angabe)"
+                                        },
+                                        {
+                                            "valueString": "unteres Drittel (0-6cm ab ano)"
+                                        },
+                                        {
+                                            "valueString": "mittleres Drittel (6-12cm ab ano)"
+                                        },
+                                        {
+                                            "valueString": "oberes Drittel (12-16cm ab ano)"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "linkId": "mr_rectalca_lokalisation_info",
+                                    "text": "Ergänzende Informationen (bspw. Serie / Bildnummer)",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Distanz zur Anokutan-Linie",
+                            "type": "group",
+                            "item": [
+                                {
+                                    "extension": [
+                                        {
+                                            "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+                                            "valueInteger": 0
+                                        },
+                                        {
+                                            "url": "http://hl7.org/fhir/StructureDefinition/maxValue",
+                                            "valueInteger": 20
+                                        },
+                                        {
+                                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+                                            "valueCoding": {
+                                                "code": "cm",
+                                                "display": "cm"
+                                            }
+                                        }
+                                    ],
+                                    "linkId": "mr_rectalca_danokutan",
+                                    "text": "Distanz zur Unterkante des Spinkter internus/ Anus",
+                                    "type": "quantity"
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Tumorausdehnung (Länge)",
+                            "type": "group",
+                            "item": [
+                                {
+                                    "extension": [
+                                        {
+                                            "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+                                            "valueInteger": 0
+                                        },
+                                        {
+                                            "url": "http://hl7.org/fhir/StructureDefinition/maxValue",
+                                            "valueInteger": 20
+                                        },
+                                        {
+                                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+                                            "valueCoding": {
+                                                "code": "cm",
+                                                "display": "cm"
+                                            }
+                                        }
+                                    ],
+                                    "linkId": "mr_rectalca_stumor",
+                                    "code": [
+                                        {
+                                            "system": "http://radlex.org",
+                                            "code": "RID39123",
+                                            "display": "length"
+                                        }
+                                    ],
+                                    "type": "quantity"
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Zirkumferenz in SSL",
+                            "type": "group",
+                            "item": [
+                                {
+                                    "extension": [
+                                        {
+                                            "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+                                            "valueInteger": 1
+                                        },
+                                        {
+                                            "url": "http://hl7.org/fhir/StructureDefinition/maxValue",
+                                            "valueInteger": 12
+                                        },
+                                        {
+                                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+                                            "valueCoding": {
+                                                "code": "h SSL",
+                                                "display": "h SSL"
+                                            }
+                                        }
+                                    ],
+                                    "linkId": "mr_rectalca_zirkumvon",
+                                    "text": "von",
+                                    "type": "quantity"
+                                },
+                                {
+                                    "extension": [
+                                        {
+                                            "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+                                            "valueInteger": 1
+                                        },
+                                        {
+                                            "url": "http://hl7.org/fhir/StructureDefinition/maxValue",
+                                            "valueInteger": 12
+                                        },
+                                        {
+                                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+                                            "valueCoding": {
+                                                "code": "h SSL",
+                                                "display": "h SSL"
+                                            }
+                                        }
+                                    ],
+                                    "linkId": "mr_rectalca_zirkumbis",
+                                    "text": "bis",
+                                    "type": "quantity"
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Tumorinfiltration",
+                            "type": "group",
+                            "item": [
+                                {
+                                    "linkId": "mr_rectalca_T",
+                                    "code": [
+                                        {
+                                            "system": "http://radlex.org",
+                                            "code": "RID45684",
+                                            "display": "colorectal cancer"
+                                        }
+                                    ],
+                                    "type": "choice",
+                                    "answerOption": [
+                                        {
+                                            "valueString": "Tx (Tumor nicht beurteilbar)"
+                                        },
+                                        {
+                                            "valueString": "T0 (kein Anhalt für Tumor)"
+                                        },
+                                        {
+                                            "valueString": "T1 (Infiltration Submukosa)"
+                                        },
+                                        {
+                                            "valueString": "T2 (Infiltration Muscularis propria)"
+                                        },
+                                        {
+                                            "valueString": "T3ab (Infiltration Mesorektum &lt;5mm)"
+                                        },
+                                        {
+                                            "valueString": "T3cd (Infiltration Mesorektum &gt;5mm)"
+                                        },
+                                        {
+                                            "valueString": "T4a (Infiltration viszerales Peritoneum)"
+                                        },
+                                        {
+                                            "valueString": "T4b (Infiltration Nachbarorgane)"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "extension": [
+                                        {
+                                            "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+                                            "valueInteger": 1
+                                        },
+                                        {
+                                            "url": "http://hl7.org/fhir/StructureDefinition/maxValue",
+                                            "valueInteger": 12
+                                        },
+                                        {
+                                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+                                            "valueCoding": {
+                                                "code": "h SSL",
+                                                "display": "h SSL"
+                                            }
+                                        }
+                                    ],
+                                    "linkId": "mr_rectalca_T_text_ssl",
+                                    "text": "bei",
+                                    "type": "quantity"
+                                },
+                                {
+                                    "linkId": "mr_rectalca_T_text",
+                                    "text": "Ergänzende Informationen (bspw. Serie / Bildnummer oder bei T4b Infiltration von Dünndarm / Harnblase / Ureter rechts links / Samenblase rechts links / Prostata / Uterus / Ovar/Adnexe rechts links / Vagina / M. obturatorius internus rechts links / M. levator ani rechts links / A.V. iliaca internus rechts links / A.V. iliaca externus rechts links / Os sacrum / Andere)",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Abstand zur mesorektalen Faszie",
+                            "type": "group",
+                            "item": [
+                                {
+                                    "linkId": "mr_rectalca_CRMT",
+                                    "type": "choice",
+                                    "answerOption": [
+                                        {
+                                            "valueString": "CRMx (Resektionsrand nicht beurteilbar)"
+                                        },
+                                        {
+                                            "valueString": "CRM- (&gt; 1mm, nach CTX/RTX &gt; 2mm)"
+                                        },
+                                        {
+                                            "valueString": "CRM+ (&le; 1mm, nach CTX/RTX &le; 2mm)"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "extension": [
+                                        {
+                                            "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+                                            "valueInteger": 1
+                                        },
+                                        {
+                                            "url": "http://hl7.org/fhir/StructureDefinition/maxValue",
+                                            "valueInteger": 12
+                                        },
+                                        {
+                                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+                                            "valueCoding": {
+                                                "code": "h SSL",
+                                                "display": "h SSL"
+                                            }
+                                        }
+                                    ],
+                                    "linkId": "mr_rectalca_CRMT_text_ssl",
+                                    "text": "bei",
+                                    "type": "quantity"
+                                },
+                                {
+                                    "linkId": "mr_rectalca_CRMT_text",
+                                    "text": "Ergänzende Informationen (bspw. Serie / Bildnummer)",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Veneninfiltration",
+                            "type": "group",
+                            "item": [
+                                {
+                                    "linkId": "mr_rectalca_venenT",
+                                    "type": "choice",
+                                    "answerOption": [
+                                        {
+                                            "valueString": "nicht beurteilbar"
+                                        },
+                                        {
+                                            "valueString": "nein"
+                                        },
+                                        {
+                                            "valueString": "ja"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "linkId": "mr_rectalca_venenT_text",
+                                    "text": "Ergänzende Informationen (bspw. Serie / Bildnummer)",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "Lymphknoten lokal (N)",
+                    "type": "group",
+                    "item": [
+                        {
+                            "text": "mesorektal / präsakral / lokal",
+                            "type": "group",
+                            "item": [
+                                {
+                                    "linkId": "mr_rectalca_N",
+                                    "type": "choice",
+                                    "answerOption": [
+                                        {
+                                            "valueString": "Nx (Lymphknoten nicht beurteilbar)"
+                                        },
+                                        {
+                                            "valueString": "N0 (keine suspekten Lymphknoten)"
+                                        },
+                                        {
+                                            "valueString": "N+ (suspekte Lymphknoten mesorektal &lt;3)"
+                                        },
+                                        {
+                                            "valueString": "N+ (suspekte Lymphknoten mesorektal &gt;3)"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "extension": [
+                                        {
+                                            "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+                                            "valueInteger": 0
+                                        },
+                                        {
+                                            "url": "http://hl7.org/fhir/StructureDefinition/maxValue",
+                                            "valueInteger": 10
+                                        },
+                                        {
+                                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+                                            "valueCoding": {
+                                                "code": "cm",
+                                                "display": "cm"
+                                            }
+                                        }
+                                    ],
+                                    "linkId": "imr_rectalca_N_maxD",
+                                    "text": "max",
+                                    "type": "quantity"
+                                },
+                                {
+                                    "extension": [
+                                        {
+                                            "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+                                            "valueInteger": 1
+                                        },
+                                        {
+                                            "url": "http://hl7.org/fhir/StructureDefinition/maxValue",
+                                            "valueInteger": 12
+                                        },
+                                        {
+                                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+                                            "valueCoding": {
+                                                "code": "h SSL",
+                                                "display": "h SSL"
+                                            }
+                                        }
+                                    ],
+                                    "linkId": "imr_rectalca_N_ssl",
+                                    "text": "bei",
+                                    "type": "quantity"
+                                },
+                                {
+                                    "linkId": "mr_rectalca_N_text",
+                                    "text": "Ergänzende Informationen (bspw. Serie / Bildnummer)",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Abstand zur mesorektalen Faszie",
+                            "type": "group",
+                            "item": [
+                                {
+                                    "linkId": "mr_rectalca_CRMN",
+                                    "type": "choice",
+                                    "answerOption": [
+                                        {
+                                            "valueString": "CRMx (Resektionsrand nicht beurteilbar)"
+                                        },
+                                        {
+                                            "valueString": "CRM- (&gt; 1mm, nach CTX/RTX &gt; 2mm)"
+                                        },
+                                        {
+                                            "valueString": "CRM+ (&le; 1mm, nach CTX/RTX &le; 2mm)"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "extension": [
+                                        {
+                                            "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+                                            "valueInteger": 1
+                                        },
+                                        {
+                                            "url": "http://hl7.org/fhir/StructureDefinition/maxValue",
+                                            "valueInteger": 12
+                                        },
+                                        {
+                                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+                                            "valueCoding": {
+                                                "code": "h SSL",
+                                                "display": "h SSL"
+                                            }
+                                        }
+                                    ],
+                                    "linkId": "mr_rectalca_CRMN_text_ssl",
+                                    "text": "bei",
+                                    "type": "quantity"
+                                },
+                                {
+                                    "linkId": "mr_rectalca_CRMN_text",
+                                    "text": "Ergänzende Informationen (bspw. Serie / Bildnummer)",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "Fernmetastasen (M)",
+                    "type": "group",
+                    "item": [
+                        {
+                            "text": "Lymphknoten distant",
+                            "type": "group",
+                            "item": [
+                                {
+                                    "linkId": "mr_rectalca_LKextra",
+                                    "type": "choice",
+                                    "answerOption": [
+                                        {
+                                            "valueString": "- (keine Angaben)"
+                                        },
+                                        {
+                                            "valueString": "nicht suspekt"
+                                        },
+                                        {
+                                            "valueString": "metastasensuspekt (M1)"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "linkId": "mr_rectalca_LKextra_text",
+                                    "text": "Ergänzende Informationen (bspw. Serie / Bildnummer oder hier rechts / links: parailiakal interna / externa / retroperitoneal)",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Aszites",
+                            "type": "group",
+                            "item": [
+                                {
+                                    "linkId": "mr_rectalca_Aszites",
+                                    "type": "choice",
+                                    "answerOption": [
+                                        {
+                                            "valueString": "- (keine Angaben)"
+                                        },
+                                        {
+                                            "valueString": "nein"
+                                        },
+                                        {
+                                            "valueString": "ja"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Peritoneum",
+                            "type": "group",
+                            "item": [
+                                {
+                                    "linkId": "mr_rectalca_Periton",
+                                    "type": "choice",
+                                    "answerOption": [
+                                        {
+                                            "valueString": "- (keine Angaben)"
+                                        },
+                                        {
+                                            "valueString": "normal"
+                                        },
+                                        {
+                                            "valueString": "Peritonealkarzinose (M1c)"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "linkId": "mr_rectalca_Periton_text",
+                                    "text": "Ergänzende Informationen (bspw. Serie / Bildnummer oder hier Lokalisation)",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Beckenstrukturen",
+                            "type": "group",
+                            "item": [
+                                {
+                                    "linkId": "mr_rectalca_becken",
+                                    "type": "choice",
+                                    "answerOption": [
+                                        {
+                                            "valueString": "- (keine Angaben)"
+                                        },
+                                        {
+                                            "valueString": "unauffällig"
+                                        },
+                                        {
+                                            "valueString": "auffällig (siehe unten)"
+                                        },
+                                        {
+                                            "valueString": "metastasensuspekt (M1)"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "text": "Skelett",
+                            "type": "group",
+                            "item": [
+                                {
+                                    "linkId": "mr_rectalca_skelett",
+                                    "type": "choice",
+                                    "answerOption": [
+                                        {
+                                            "valueString": "- (keine Angaben)"
+                                        },
+                                        {
+                                            "valueString": "unauffällig"
+                                        },
+                                        {
+                                            "valueString": "auffällig (siehe unten)"
+                                        },
+                                        {
+                                            "valueString": "metastasensuspekt (M1)"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "text": "Sonstige Befunde",
+                    "type": "group",
+                    "item": [
+                        {
+                            "linkId": "mr_rectalca_sonstiges",
+                            "type": "text"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "linkId": "Beurteilung",
+            "text": "Beurteilung",
+            "type": "group",
+            "item": [
+                {
+                    "linkId": "mr_rectalca_certainty",
+                    "type": "choice",
+                    "answerOption": [
+                        {
+                            "valueString": "-"
+                        },
+                        {
+                            "valueString": "5 - sehr sicher"
+                        },
+                        {
+                            "valueString": "4 - sicher"
+                        },
+                        {
+                            "valueString": "3 - indifferent"
+                        },
+                        {
+                            "valueString": "2 - unsicher"
+                        },
+                        {
+                            "valueString": "1 - sehr unsicher"
+                        }
+                    ]
+                },
+                {
+                    "linkId": "mr_rectalca_Beurteilung",
+                    "type": "text"
+                },
+                {
+                    "linkId": "mr_rectalca_TNM",
+                    "text": "Insgesamt TNM",
+                    "type": "string",
+                    "item": [
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                                "code": "flyover"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "linkId": "help",
+                            "type": "display",
+                            "text": "Bitte Format: mrT__N__M__ (CRM+/-)"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

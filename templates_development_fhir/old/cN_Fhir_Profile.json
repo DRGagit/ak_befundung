@@ -1,0 +1,146 @@
+{
+    "resourceType": "StructureDefinition",
+    "id": "cN",
+    "meta": {
+        "lastUpdated": "2022-06-30T11:22:35.480+00:00"
+    },
+    "url": "https://example.org/fhir/StructureDefinition/cN",
+    "name": "cN Staging (TNM)",
+    "status": "draft",
+    "fhirVersion": "4.0.1",
+    "kind": "resource",
+    "abstract": false,
+    "type": "Observation",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+    "derivation": "constraint",
+    "differential": {
+        "element":  [
+            {
+                "id": "Observation.identfier",
+                "path": "Observation.identifier",
+                "min": 1,
+                "max": "1"
+            },
+            {
+                "id": "Observation.identifier.value",
+                "path": "Observation.identifier.value",
+                "min": 1,
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.identifier.period",
+                "path": "Observation.identifier.period",
+                "min": 1
+            },
+            {
+                "id": "Observation.identifier.assigner",
+                "path": "Observation.identifier.assigner",
+                "fixedString": "Mint Medical GmbH"
+            },
+            {
+                "id": "Observation.code",
+                "path": "Observation.code",
+                "min": 1,
+                "fixedCoding": {
+                    "system": "http://loinc.org",
+                    "code": "67206-3"
+                },
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.subject",
+                "path": "Observation.subject",
+                "min": 1
+            },
+            {
+                "id": "Observation.value[x]",
+                "path": "Observation.value[x]",
+                "min": 1,
+                "type":  [
+                    {
+                        "code": "CodeableConcept"
+                    }
+                ],
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.value[x].coding",
+                "path": "Observation.value[x].coding",
+                "slicing": {
+                    "discriminator":  [
+                        {
+                            "type": "pattern",
+                            "path": "$this"
+                        }
+                    ],
+                    "rules": "open"
+                },
+                "min": 1,
+                "max": "1",
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.value[x].coding:Nx",
+                "path": "Observation.value[x].coding",
+                "sliceName": "Nx",
+                "min": 0,
+                "max": "1",
+                "patternCoding": {
+                    "system": "http://loinc.org",
+                    "code": "LA4745-1",
+                    "display": "Nx"
+                }
+            },
+            {
+                "id": "Observation.value[x].coding:N0",
+                "path": "Observation.value[x].coding",
+                "sliceName": "N0",
+                "min": 0,
+                "max": "1",
+                "patternCoding": {
+                    "system": "http://loinc.org",
+                    "code": "LA4368-2",
+                    "display": "N0"
+                }
+            },
+            {
+                "id": "Observation.value[x].coding:NLowerThan3",
+                "path": "Observation.value[x].coding",
+                "sliceName": "NLowerThan3",
+                "min": 0,
+                "max": "1",
+                "patternCoding": {
+                    "system": "http://loinc.org",
+                    "code": "LA4534-9",
+                    "display": "N+ < 3"
+                }
+            },
+            {
+                "id": "Observation.value[x].coding:NGreaterThan3",
+                "path": "Observation.value[x].coding",
+                "sliceName": "NGreaterThan3",
+                "min": 0,
+                "max": "1",
+                "patternCoding": {
+                    "system": "http://loinc.org",
+                    "code": "LA4545-5",
+                    "display": "N+ > 3"
+                }
+            },
+            {
+                "id": "Observation.derivedFrom",
+                "path": "Observation.derivedFrom",
+                "min": 0,
+                "max": "1",
+                "type":  [
+                    {
+                        "code": "Reference",
+                        "targetProfile":  [
+                            "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse"
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
