@@ -1,0 +1,797 @@
+{
+    "identifier": [
+        {
+            "value": "041807.3.2011102112"
+        }
+    ],
+    "resourceType": "Questionnaire",
+    "title": "FHIR Questionnaire Creator",
+    "description": "Befundungstemplate für Rektumkarzinom",
+    "purpose": "Erstes mit der AG Onkologie abgestimmtes und in einem Konsensusmeeting mit Klinikern besprochenes Template. Das Template enthält alle für Chirurgen und Onkologen wichtigen Items und gibt dem Radiologen einen Leitfaden zu genauen Klassifizierung eines Rektumkarzinoms im TNM-System. Enthält bereits einige RadLex-Terme. Public Comment Phase ausstehend. (L2 - Entwurf zur Abstimmung: AG onkologische Bildgebung - PD Dr. Persigehl, Version 1, kein Javascript)",
+    "publisher": "Deutsche Röntgengesellschaft (DRG)",
+    "copyright": "Die Deutsche Röntgengesellschaft e.V.(DRG) stellt sämtliche Templates kostenfrei unter der Creative Commons Lizenz  CC BY in der Version 4.0 zur Verfügung. Die Lizenz erlaubt Download und Weiterverteilung des Werkes unter Nennung der DRG als Urheber.",
+    "date": "2020-11-10",
+    "item": [
+        {
+            "type": "group",
+            "text": "Klinische Angaben",
+            "item": [
+                {
+                    "type": "text",
+                    "linkId": "mr_rectalca_clininfo",
+                    "code": [
+                        {
+                            "code": "RID13166",
+                            "system": "http://radlex.org",
+                            "display": "Clinical information"
+                        }
+                    ]
+                },
+                {
+                    "type": "group",
+                    "text": "Histologie",
+                    "item": [
+                        {
+                            "type": "choice",
+                            "text": "Status",
+                            "linkId": "mr_rectalca_histol",
+                            "answerOption": [
+                                {
+                                    "valueCoding": {
+                                        "display": "ausstehend",
+                                        "system": "http://drg.de/fhir/ValueSet/template-select-fields",
+                                        "code": "041807.3.2011102112/mr_rectalca_histol/0"
+                                    }
+                                },
+                                {
+                                    "valueCoding": {
+                                        "display": "gesichert",
+                                        "system": "http://drg.de/fhir/ValueSet/template-select-fields",
+                                        "code": "041807.3.2011102112/mr_rectalca_histol/1"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "string",
+                            "text": "Kommentar",
+                            "linkId": "mr_rectalca_histol_info"
+                        }
+                    ]
+                },
+                {
+                    "type": "group",
+                    "text": "neoadjuvante Vorbehandlung",
+                    "item": [
+                        {
+                            "type": "choice",
+                            "text": "Status",
+                            "linkId": "mr_rectalca_postneoadj",
+                            "code": [
+                                {
+                                    "code": "RID13166",
+                                    "system": "http://radlex.org",
+                                    "display": "Clinical information"
+                                },
+                                {
+                                    "code": "RID39252",
+                                    "system": "http://radlex.org",
+                                    "display": "Chemotherapy"
+                                }
+                            ],
+                            "answerOption": [
+                                {
+                                    "valueCoding": {
+                                        "display": "ja",
+                                        "system": "http://drg.de/fhir/ValueSet/template-select-fields",
+                                        "code": "041807.3.2011102112/mr_rectalca_postneoadj/0"
+                                    }
+                                },
+                                {
+                                    "valueCoding": {
+                                        "display": "nein",
+                                        "system": "http://drg.de/fhir/ValueSet/template-select-fields",
+                                        "code": "041807.3.2011102112/mr_rectalca_postneoadj/1"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "string",
+                            "text": "Kommentar",
+                            "linkId": "mr_rectalca_postneoadj_info",
+                            "code": [
+                                {
+                                    "code": "RID13166",
+                                    "system": "http://radlex.org",
+                                    "display": "Clinical information"
+                                },
+                                {
+                                    "code": "RID39252",
+                                    "system": "http://radlex.org",
+                                    "display": "Chemotherapy"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "text",
+            "text": "Fragestellung"
+        },
+        {
+            "type": "group",
+            "text": "Befund",
+            "item": [
+                {
+                    "type": "boolean",
+                    "text": "Vergleichsuntersuchung",
+                    "linkId": "mr_rectalca_comparison",
+                    "code": [
+                        {
+                            "code": "RID28483",
+                            "system": "http://radlex.org",
+                            "display": "Comparison"
+                        }
+                    ],
+                    "item": [
+                        {
+                            "type": "choice",
+                            "text": "Modalität",
+                            "linkId": "mr_rectalca_comparison_mod",
+                            "answerOption": [
+                                {
+                                    "valueCoding": {
+                                        "display": "CT",
+                                        "system": "http://drg.de/fhir/ValueSet/template-select-fields",
+                                        "code": "041807.3.2011102112/mr_rectalca_comparison_mod/0"
+                                    }
+                                },
+                                {
+                                    "valueCoding": {
+                                        "display": "MR",
+                                        "system": "http://drg.de/fhir/ValueSet/template-select-fields",
+                                        "code": "041807.3.2011102112/mr_rectalca_comparison_mod/1"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "date",
+                            "text": "vom",
+                            "linkId": "mr_rectalca_comparison_date",
+                            "code": [
+                                {
+                                    "code": "RID28483",
+                                    "system": "http://radlex.org",
+                                    "display": "Comparison"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "choice",
+                    "text": "Bildqualität",
+                    "linkId": "mr_rectalca_quality",
+                    "answerOption": [
+                        {
+                            "valueCoding": {
+                                "display": "excellent",
+                                "system": "http://drg.de/fhir/ValueSet/template-select-fields",
+                                "code": "041807.3.2011102112/mr_rectalca_quality/0"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "display": "mittel",
+                                "system": "http://drg.de/fhir/ValueSet/template-select-fields",
+                                "code": "041807.3.2011102112/mr_rectalca_quality/1"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "display": "schlecht",
+                                "system": "http://drg.de/fhir/ValueSet/template-select-fields",
+                                "code": "041807.3.2011102112/mr_rectalca_quality/2"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "group",
+                    "text": "Rektumkarzinom (T)",
+                    "item": [
+                        {
+                            "type": "choice",
+                            "text": "Tumorlokalisation",
+                            "linkId": "mr_rectalca_lokalisation",
+                            "code": [
+                                {
+                                    "code": "RID39038",
+                                    "system": "http://radlex.org",
+                                    "display": "location"
+                                }
+                            ],
+                            "answerOption": [
+                                {
+                                    "valueCoding": {
+                                        "display": "- (keine Angabe)",
+                                        "system": "http://drg.de/fhir/ValueSet/template-select-fields",
+                                        "code": "041807.3.2011102112/mr_rectalca_lokalisation/0"
+                                    }
+                                },
+                                {
+                                    "valueCoding": {
+                                        "display": "unteres Drittel (0-6cm ab ano)",
+                                        "system": "http://drg.de/fhir/ValueSet/template-select-fields",
+                                        "code": "041807.3.2011102112/mr_rectalca_lokalisation/1"
+                                    }
+                                },
+                                {
+                                    "valueCoding": {
+                                        "display": "mittleres Drittel (6-12cm ab ano)",
+                                        "system": "http://drg.de/fhir/ValueSet/template-select-fields",
+                                        "code": "041807.3.2011102112/mr_rectalca_lokalisation/2"
+                                    }
+                                },
+                                {
+                                    "valueCoding": {
+                                        "display": "oberes Drittel (12-16cm ab ano)",
+                                        "system": "http://drg.de/fhir/ValueSet/template-select-fields",
+                                        "code": "041807.3.2011102112/mr_rectalca_lokalisation/3"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "string",
+                            "text": "> Kommentar",
+                            "linkId": "mr_rectalca_lokalisation_info"
+                        },
+                        {
+                            "type": "quantity",
+                            "text": "Distanz zur Anokutan-Linie",
+                            "linkId": "mr_rectalca_danokutan"
+                        },
+                        {
+                            "type": "quantity",
+                            "text": "Tumorausdehnung (Länge)",
+                            "linkId": "mr_rectalca_stumor",
+                            "code": [
+                                {
+                                    "code": "RID39123",
+                                    "system": "http://radlex.org",
+                                    "display": "length"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "group",
+                            "text": "Zirkumferenz in SSL",
+                            "item": [
+                                {
+                                    "type": "quantity",
+                                    "text": "von",
+                                    "linkId": "mr_rectalca_zirkumvon"
+                                },
+                                {
+                                    "type": "quantity",
+                                    "text": "bis",
+                                    "linkId": "mr_rectalca_zirkumbis"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "group",
+                            "text": "Tumorinfiltration",
+                            "item": [
+                                {
+                                    "type": "choice",
+                                    "text": "Klassifikation",
+                                    "linkId": "mr_rectalca_T",
+                                    "code": [
+                                        {
+                                            "code": "RID45684",
+                                            "system": "http://radlex.org",
+                                            "display": "colorectal cancer"
+                                        },
+                                        {
+                                            "code": "RID39273",
+                                            "system": "http://radlex.org",
+                                            "display": "tumor stage"
+                                        }
+                                    ],
+                                    "answerOption": [
+                                        {
+                                            "valueCoding": {
+                                                "display": "Tx (Tumor nicht beurteilbar)",
+                                                "system": "http://drg.de/fhir/ValueSet/template-select-fields",
+                                                "code": "041807.3.2011102112/mr_rectalca_T/0"
+                                            }
+                                        },
+                                        {
+                                            "valueCoding": {
+                                                "display": "T0 (kein Anhalt für Tumor)",
+                                                "system": "http://drg.de/fhir/ValueSet/template-select-fields",
+                                                "code": "041807.3.2011102112/mr_rectalca_T/1"
+                                            }
+                                        },
+                                        {
+                                            "valueCoding": {
+                                                "display": "T1 (Infiltration Submukosa)",
+                                                "system": "http://drg.de/fhir/ValueSet/template-select-fields",
+                                                "code": "041807.3.2011102112/mr_rectalca_T/2"
+                                            }
+                                        },
+                                        {
+                                            "valueCoding": {
+                                                "display": "T2 (Infiltration Muscularis propria)",
+                                                "system": "http://drg.de/fhir/ValueSet/template-select-fields",
+                                                "code": "041807.3.2011102112/mr_rectalca_T/3"
+                                            }
+                                        },
+                                        {
+                                            "valueCoding": {
+                                                "display": "T3ab (Infiltration Mesorektum <&lt;>5mm)",
+                                                "system": "http://drg.de/fhir/ValueSet/template-select-fields",
+                                                "code": "041807.3.2011102112/mr_rectalca_T/4"
+                                            }
+                                        },
+                                        {
+                                            "valueCoding": {
+                                                "display": "T3cd (Infiltration Mesorektum >5mm)",
+                                                "system": "http://drg.de/fhir/ValueSet/template-select-fields",
+                                                "code": "041807.3.2011102112/mr_rectalca_T/5"
+                                            }
+                                        },
+                                        {
+                                            "valueCoding": {
+                                                "display": "T4a (Infiltration viszerales Peritoneum)",
+                                                "system": "http://drg.de/fhir/ValueSet/template-select-fields",
+                                                "code": "041807.3.2011102112/mr_rectalca_T/6"
+                                            }
+                                        },
+                                        {
+                                            "valueCoding": {
+                                                "display": "T4b (Infiltration Nachbarorgane)",
+                                                "system": "http://drg.de/fhir/ValueSet/template-select-fields",
+                                                "code": "041807.3.2011102112/mr_rectalca_T/7"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "quantity",
+                                    "text": "bei",
+                                    "linkId": "mr_rectalca_T_text_ssl"
+                                },
+                                {
+                                    "type": "string",
+                                    "text": "Kommentar",
+                                    "linkId": "mr_rectalca_T_text"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "group",
+                            "text": "Abstand zur mesorektalen Faszie",
+                            "item": [
+                                {
+                                    "type": "choice",
+                                    "text": "T Klassifikation",
+                                    "linkId": "mr_rectalca_CRMT",
+                                    "answerOption": [
+                                        {
+                                            "valueCoding": {
+                                                "display": "CRMx (Resektionsrand nicht beurteilbar)",
+                                                "system": "http://drg.de/fhir/ValueSet/template-select-fields",
+                                                "code": "041807.3.2011102112/mr_rectalca_CRMT/0"
+                                            }
+                                        },
+                                        {
+                                            "valueCoding": {
+                                                "display": "CRM- (> 1mm, nach CTX/RTX > 2mm)",
+                                                "system": "http://drg.de/fhir/ValueSet/template-select-fields",
+                                                "code": "041807.3.2011102112/mr_rectalca_CRMT/1"
+                                            }
+                                        },
+                                        {
+                                            "valueCoding": {
+                                                "display": "CRM+ (< 1mm, nach CTX/RTX < 2mm)",
+                                                "system": "http://drg.de/fhir/ValueSet/template-select-fields",
+                                                "code": "041807.3.2011102112/mr_rectalca_CRMT/2"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "quantity",
+                                    "text": "bei",
+                                    "linkId": "mr_rectalca_CRMT_text_ssl"
+                                },
+                                {
+                                    "type": "string",
+                                    "text": "Kommentar",
+                                    "linkId": "mr_rectalca_CRMT_text"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "choice",
+                            "text": "Veneninfiltration",
+                            "linkId": "mr_rectalca_venenT",
+                            "answerOption": [
+                                {
+                                    "valueCoding": {
+                                        "display": "nicht beurteilbar",
+                                        "system": "http://drg.de/fhir/ValueSet/template-select-fields",
+                                        "code": "041807.3.2011102112/mr_rectalca_venenT/0"
+                                    }
+                                },
+                                {
+                                    "valueCoding": {
+                                        "display": "nein",
+                                        "system": "http://drg.de/fhir/ValueSet/template-select-fields",
+                                        "code": "041807.3.2011102112/mr_rectalca_venenT/1"
+                                    }
+                                },
+                                {
+                                    "valueCoding": {
+                                        "display": "ja",
+                                        "system": "http://drg.de/fhir/ValueSet/template-select-fields",
+                                        "code": "041807.3.2011102112/mr_rectalca_venenT/2"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "string",
+                            "text": "> Kommentar",
+                            "linkId": "mr_rectalca_venenT_text"
+                        }
+                    ]
+                },
+                {
+                    "type": "group",
+                    "text": "Lymphknoten lokal (N)",
+                    "item": [
+                        {
+                            "type": "group",
+                            "text": "mesorektal / präsakral / lokal",
+                            "item": [
+                                {
+                                    "type": "choice",
+                                    "text": "N Klassifikation",
+                                    "linkId": "mr_rectalca_N",
+                                    "answerOption": [
+                                        {
+                                            "valueCoding": {
+                                                "display": "Nx (Lymphknoten nicht beurteilbar)",
+                                                "system": "http://drg.de/fhir/ValueSet/template-select-fields",
+                                                "code": "041807.3.2011102112/mr_rectalca_N/0"
+                                            }
+                                        },
+                                        {
+                                            "valueCoding": {
+                                                "display": "N0 (keine suspekten Lymphknoten)",
+                                                "system": "http://drg.de/fhir/ValueSet/template-select-fields",
+                                                "code": "041807.3.2011102112/mr_rectalca_N/1"
+                                            }
+                                        },
+                                        {
+                                            "valueCoding": {
+                                                "display": "N+ (suspekte Lymphknoten mesorektal <3)",
+                                                "system": "http://drg.de/fhir/ValueSet/template-select-fields",
+                                                "code": "041807.3.2011102112/mr_rectalca_N/2"
+                                            }
+                                        },
+                                        {
+                                            "valueCoding": {
+                                                "display": "N+ (suspekte Lymphknoten mesorektal >3)",
+                                                "system": "http://drg.de/fhir/ValueSet/template-select-fields",
+                                                "code": "041807.3.2011102112/mr_rectalca_N/3"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "quantity",
+                                    "text": "max. Durchmesser",
+                                    "linkId": "imr_rectalca_N_maxD"
+                                },
+                                {
+                                    "type": "quantity",
+                                    "text": "bei",
+                                    "linkId": "imr_rectalca_N_ssl"
+                                },
+                                {
+                                    "type": "string",
+                                    "text": "Kommentar",
+                                    "linkId": "mr_rectalca_N_text"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "group",
+                            "text": "Abstand zur mesorektalen Faszie",
+                            "item": [
+                                {
+                                    "type": "choice",
+                                    "text": "CRM Klassifikation",
+                                    "linkId": "mr_rectalca_CRMN",
+                                    "answerOption": [
+                                        {
+                                            "valueCoding": {
+                                                "display": "CRMx (Resektionsrand nicht beurteilbar)",
+                                                "system": "http://drg.de/fhir/ValueSet/template-select-fields",
+                                                "code": "041807.3.2011102112/mr_rectalca_CRMN/0"
+                                            }
+                                        },
+                                        {
+                                            "valueCoding": {
+                                                "display": "CRM- (> 1mm, nach CTX/RTX > 2mm)",
+                                                "system": "http://drg.de/fhir/ValueSet/template-select-fields",
+                                                "code": "041807.3.2011102112/mr_rectalca_CRMN/1"
+                                            }
+                                        },
+                                        {
+                                            "valueCoding": {
+                                                "display": "CRM+ (<= 1mm, nach CTX/RTX <= 2mm)",
+                                                "system": "http://drg.de/fhir/ValueSet/template-select-fields",
+                                                "code": "041807.3.2011102112/mr_rectalca_CRMN/2"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "quantity",
+                                    "text": "bei",
+                                    "linkId": "mr_rectalca_CRMN_text_ssl"
+                                },
+                                {
+                                    "type": "string",
+                                    "text": "Kommentar",
+                                    "linkId": "mr_rectalca_CRMN_text"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "group",
+                    "text": "Fernmetastasen (M)",
+                    "item": [
+                        {
+                            "type": "choice",
+                            "text": "Lymphknoten distant",
+                            "linkId": "mr_rectalca_LKextra",
+                            "answerOption": [
+                                {
+                                    "valueCoding": {
+                                        "display": "- (keine Angaben)",
+                                        "system": "http://drg.de/fhir/ValueSet/template-select-fields",
+                                        "code": "041807.3.2011102112/mr_rectalca_LKextra/0"
+                                    }
+                                },
+                                {
+                                    "valueCoding": {
+                                        "display": "nicht suspekt",
+                                        "system": "http://drg.de/fhir/ValueSet/template-select-fields",
+                                        "code": "041807.3.2011102112/mr_rectalca_LKextra/1"
+                                    }
+                                },
+                                {
+                                    "valueCoding": {
+                                        "display": "metastasensuspekt (M1)",
+                                        "system": "http://drg.de/fhir/ValueSet/template-select-fields",
+                                        "code": "041807.3.2011102112/mr_rectalca_LKextra/2"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "string",
+                            "text": "> Kommentar",
+                            "linkId": "mr_rectalca_LKextra_text"
+                        },
+                        {
+                            "type": "choice",
+                            "text": "Aszitis",
+                            "linkId": "mr_rectalca_Aszites",
+                            "answerOption": [
+                                {
+                                    "valueCoding": {
+                                        "display": "- (keine Angaben)",
+                                        "system": "http://drg.de/fhir/ValueSet/template-select-fields",
+                                        "code": "041807.3.2011102112/mr_rectalca_Aszites/0"
+                                    }
+                                },
+                                {
+                                    "valueCoding": {
+                                        "display": "nein",
+                                        "system": "http://drg.de/fhir/ValueSet/template-select-fields",
+                                        "code": "041807.3.2011102112/mr_rectalca_Aszites/1"
+                                    }
+                                },
+                                {
+                                    "valueCoding": {
+                                        "display": "ja",
+                                        "system": "http://drg.de/fhir/ValueSet/template-select-fields",
+                                        "code": "041807.3.2011102112/mr_rectalca_Aszites/2"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "choice",
+                            "text": "Peritoneum",
+                            "linkId": "mr_rectalca_Periton",
+                            "answerOption": [
+                                {
+                                    "valueCoding": {
+                                        "display": "- (keine Angaben)",
+                                        "system": "http://drg.de/fhir/ValueSet/template-select-fields",
+                                        "code": "041807.3.2011102112/mr_rectalca_Periton/0"
+                                    }
+                                },
+                                {
+                                    "valueCoding": {
+                                        "display": "normal",
+                                        "system": "http://drg.de/fhir/ValueSet/template-select-fields",
+                                        "code": "041807.3.2011102112/mr_rectalca_Periton/1"
+                                    }
+                                },
+                                {
+                                    "valueCoding": {
+                                        "display": "Peritonealkarzinose (M1c)",
+                                        "system": "http://drg.de/fhir/ValueSet/template-select-fields",
+                                        "code": "041807.3.2011102112/mr_rectalca_Periton/2"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "string",
+                            "text": "> Kommentar",
+                            "linkId": "mr_rectalca_Periton_text"
+                        },
+                        {
+                            "type": "choice",
+                            "text": "Beckenstrukturen",
+                            "linkId": "mr_rectalca_becken",
+                            "answerOption": [
+                                {
+                                    "valueCoding": {
+                                        "display": "- (keine Angaben)",
+                                        "system": "http://drg.de/fhir/ValueSet/template-select-fields",
+                                        "code": "041807.3.2011102112/mr_rectalca_becken/0"
+                                    }
+                                },
+                                {
+                                    "valueCoding": {
+                                        "display": "unauffällig",
+                                        "system": "http://drg.de/fhir/ValueSet/template-select-fields",
+                                        "code": "041807.3.2011102112/mr_rectalca_becken/1"
+                                    }
+                                },
+                                {
+                                    "valueCoding": {
+                                        "display": "auffällig (siehe unten)",
+                                        "system": "http://drg.de/fhir/ValueSet/template-select-fields",
+                                        "code": "041807.3.2011102112/mr_rectalca_becken/2"
+                                    }
+                                },
+                                {
+                                    "valueCoding": {
+                                        "display": "metastasensuspekt (M1)",
+                                        "system": "http://drg.de/fhir/ValueSet/template-select-fields",
+                                        "code": "041807.3.2011102112/mr_rectalca_becken/3"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "choice",
+                            "text": "Skelett",
+                            "linkId": "mr_rectalca_skelett",
+                            "answerOption": [
+                                {
+                                    "valueCoding": {
+                                        "display": "- (keine Angaben)",
+                                        "system": "http://drg.de/fhir/ValueSet/template-select-fields",
+                                        "code": "041807.3.2011102112/mr_rectalca_skelett/0"
+                                    }
+                                },
+                                {
+                                    "valueCoding": {
+                                        "display": "unauffällig",
+                                        "system": "http://drg.de/fhir/ValueSet/template-select-fields",
+                                        "code": "041807.3.2011102112/mr_rectalca_skelett/1"
+                                    }
+                                },
+                                {
+                                    "valueCoding": {
+                                        "display": "auffällig (siehe unten)",
+                                        "system": "http://drg.de/fhir/ValueSet/template-select-fields",
+                                        "code": "041807.3.2011102112/mr_rectalca_skelett/2"
+                                    }
+                                },
+                                {
+                                    "valueCoding": {
+                                        "display": "metastasensuspekt (M1)",
+                                        "system": "http://drg.de/fhir/ValueSet/template-select-fields",
+                                        "code": "041807.3.2011102112/mr_rectalca_skelett/3"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "text",
+                    "text": "Sonstige Befunde"
+                }
+            ]
+        },
+        {
+            "type": "group",
+            "text": "Beurteilung",
+            "item": [
+                {
+                    "type": "choice",
+                    "text": "Diagnosesicherheit",
+                    "linkId": "mr_rectalca_certainty",
+                    "answerOption": [
+                        {
+                            "valueCoding": {
+                                "display": "5 - sehr sicher",
+                                "system": "http://drg.de/fhir/ValueSet/template-select-fields",
+                                "code": "041807.3.2011102112/mr_rectalca_certainty/0"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "display": "4 - sicher",
+                                "system": "http://drg.de/fhir/ValueSet/template-select-fields",
+                                "code": "041807.3.2011102112/mr_rectalca_certainty/1"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "display": "3 - indifferent",
+                                "system": "http://drg.de/fhir/ValueSet/template-select-fields",
+                                "code": "041807.3.2011102112/mr_rectalca_certainty/2"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "display": "2 - unsicher",
+                                "system": "http://drg.de/fhir/ValueSet/template-select-fields",
+                                "code": "041807.3.2011102112/mr_rectalca_certainty/3"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "display": "1 - sehr unsicher",
+                                "system": "http://drg.de/fhir/ValueSet/template-select-fields",
+                                "code": "041807.3.2011102112/mr_rectalca_certainty/4"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "text",
+                    "linkId": "mr_rectalca_Beurteilung"
+                },
+                {
+                    "type": "string",
+                    "text": "Insgesamt TNM",
+                    "linkId": "mr_rectalca_TNM"
+                }
+            ]
+        }
+    ]
+}
