@@ -1,0 +1,492 @@
+{
+  "resourceType": "Questionnaire",
+  "title": "Pankreaskarzinom",
+  "status": "draft",
+  "item": [
+    {
+      "text": "Klinische Angaben",
+      "type": "text",
+      "linkId": "9878445154874"
+    },
+    {
+      "text": "Fragestellung",
+      "linkId": "2537825026854",
+      "type": "text"
+    },
+    {
+      "text": "Befund",
+      "linkId": "7726480586727",
+      "type": "group",
+      "repeats": false,
+      "required": false,
+      "readOnly": false,
+      "item": [
+        {
+          "text": "Vergleichsuntersuchung",
+          "linkId": "829385704637",
+          "type": "boolean",
+          "initial": [
+            {
+              "valueBoolean": false
+            }
+          ],
+          "repeats": false,
+          "required": false,
+          "readOnly": false,
+          "item": [
+            {
+              "text": "Modalität",
+              "linkId": "9435077945303",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "-"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "CT"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "MRT"
+                  }
+                }
+              ],
+              "repeats": false,
+              "required": false,
+              "readOnly": false,
+              "enableWhen": [
+                {
+                  "question": "829385704637",
+                  "operator": "=",
+                  "answerBoolean": true
+                }
+              ],
+              "item": [
+                {
+                  "text": "Datum",
+                  "linkId": "6098468061783",
+                  "type": "date",
+                  "repeats": false,
+                  "required": true,
+                  "readOnly": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Histologie",
+          "linkId": "8083159219533",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "-"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "ausstehend"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "nachgewiesen"
+              }
+            }
+          ],
+          "repeats": false,
+          "required": false,
+          "readOnly": false
+        },
+        {
+          "text": "IgG4",
+          "linkId": "797978101208",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "-"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "positiv"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "negativ"
+              }
+            }
+          ]
+        },
+        {
+          "text": "Bildqualität",
+          "linkId": "2187870334574",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "exzellent"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "mittel"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "schlecht"
+              }
+            }
+          ]
+        },
+        {
+          "text": "Pankreaskarzinom",
+          "linkId": "2507229077455",
+          "type": "group",
+          "item": [
+            {
+              "text": "Tumorlokalisation",
+              "linkId": "5570973723536",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "Pankreaskopf"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Pankreaskörper"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Pankreasschwanz"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Proc. uncinatus"
+                  }
+                }
+              ],
+              "repeats": true
+            },
+            {
+              "text": "Tumorgröße",
+              "linkId": "3788927815175",
+              "type": "group",
+              "item": [
+                {
+                  "text": "Dist 1",
+                  "linkId": "5439434235433",
+                  "type": "decimal",
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                      "valueCoding": {
+                        "system": "http://unitsofmeasure.org",
+                        "code": "mm",
+                        "display": "millimeter"
+                      }
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                      "valueCoding": {
+                        "system": "http://unitsofmeasure.org",
+                        "code": "cm",
+                        "display": "centimeter"
+                      }
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                      "valueCoding": {
+                        "system": "http://unitsofmeasure.org",
+                        "code": "cm",
+                        "display": "centimeter"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "text": "Dist 2",
+                  "linkId": "9575189076102",
+                  "type": "decimal",
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                      "valueCoding": {
+                        "system": "http://unitsofmeasure.org",
+                        "code": "cm",
+                        "display": "centimeter"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "text": "Image",
+                  "linkId": "3144918535131",
+                  "type": "integer"
+                },
+                {
+                  "text": "Series",
+                  "linkId": "9282022592244",
+                  "type": "integer"
+                }
+              ]
+            },
+            {
+              "text": "Tumorstadium",
+              "linkId": "5172312824657",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "T1"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "T2"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "T3"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "T4"
+                  }
+                }
+              ],
+              "item": [
+                {
+                  "text": "T1: ≤ 2cm, T2: ≤ 4cm, T3: > 4cm, T4: Gefäßinfiltration",
+                  "type": "display",
+                  "linkId": "5172312824657_helpText",
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "text": "Help-Button",
+                        "coding": [
+                          {
+                            "code": "help",
+                            "display": "Help-Button",
+                            "system": "http://hl7.org/fhir/questionnaire-item-control"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "text": "KM-Enhancement arteriell",
+              "linkId": "5379876698462",
+              "type": "boolean"
+            },
+            {
+              "text": "KM-Enhancement venös",
+              "linkId": "5892695996918",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "text": "Gefäßbezug",
+          "linkId": "505412023305",
+          "type": "group",
+          "item": [
+            {
+              "text": "A. hepatica communis",
+              "linkId": "3526950660714",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "< 180°"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "> 180°"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "360°"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Deformierung"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "A. hepatica propria",
+              "linkId": "4633376476065",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "Nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "< 180°"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "> 180°"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "360°"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Deformierung"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Abdomen",
+          "linkId": "2791658858943",
+          "type": "display"
+        },
+        {
+          "text": "Aszites",
+          "linkId": "8129633788848",
+          "type": "boolean"
+        },
+        {
+          "text": "Milz",
+          "linkId": "4839923302548",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "unauffällig"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "auffällig"
+              }
+            }
+          ],
+          "item": [
+            {
+              "text": "Beschreibung",
+              "linkId": "532802652877",
+              "type": "text",
+              "enableWhen": [
+                {
+                  "question": "4839923302548",
+                  "operator": "=",
+                  "answerCoding": {
+                    "display": "auffällig"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Sonstiges",
+          "linkId": "7091089142081",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "text": "Beurteilung",
+      "linkId": "5650136924582",
+      "type": "group",
+      "item": [
+        {
+          "text": "Text",
+          "linkId": "1022456357674",
+          "type": "text"
+        },
+        {
+          "text": "TNM",
+          "linkId": "4592477478223",
+          "type": "group",
+          "item": [
+            {
+              "text": "T",
+              "linkId": "1149240720600",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "T1"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "T2"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "T3"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "T4"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "N",
+              "linkId": "8664227693463",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "Nx"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "N+"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
