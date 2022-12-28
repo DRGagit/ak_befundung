@@ -1,0 +1,312 @@
+{
+    "pages": [
+        {
+            "name": "page1",
+            "title": "Grundlagen",
+            "elements": [
+                {
+                    "name": "question2",
+                    "type": "rating",
+                    "title": "1: Bildqualität ",
+                    "hideNumber": true,
+                    "rateValues": [
+                        {
+                            "text": "gut",
+                            "value": "item1"
+                        },
+                        {
+                            "text": "reduziert, diagnostisch",
+                            "value": "item2"
+                        },
+                        {
+                            "text": "nicht diagnostisch",
+                            "value": "item3"
+                        }
+                    ]
+                },
+                {
+                    "name": "question3",
+                    "type": "radiogroup",
+                    "title": "2: Extrakardiale Anatomie/ Nebenbefunde",
+                    "choices": [
+                        {
+                            "text": "Normale Anatomie",
+                            "value": "item1"
+                        }
+                    ],
+                    "hasOther": true,
+                    "otherText": "anatomische Anomalie/ Nebenbefund (bitte eintragen)",
+                    "hideNumber": true
+                }
+            ],
+            "description": " "
+        },
+        {
+            "name": "page2",
+            "title": "kardiale Anatomie/ Funktion",
+            "elements": [
+                {
+                    "name": "question1",
+                    "type": "rating",
+                    "title": "3A: Größe linker Ventrikel (LV)",
+                    "hideNumber": true,
+                    "rateValues": [
+                        {
+                            "text": "normal groß",
+                            "value": "item1"
+                        },
+                        {
+                            "text": "dilatiert",
+                            "value": "item2"
+                        }
+                    ]
+                },
+                {
+                    "name": "question4",
+                    "type": "rating",
+                    "title": "3B: Hypertrophie",
+                    "hideNumber": true,
+                    "rateValues": [
+                        {
+                            "text": "Keine",
+                            "value": "item1"
+                        },
+                        {
+                            "text": "fokale Hypertrophie",
+                            "value": "item2"
+                        },
+                        {
+                            "text": "Konzentrische Hypertrophie",
+                            "value": "item3"
+                        }
+                    ]
+                },
+                {
+                    "name": "question5",
+                    "type": "rating",
+                    "title": "3C: Globale LV Funktion",
+                    "hideNumber": true,
+                    "rateValues": [
+                        {
+                            "text": "Normal",
+                            "value": "item1"
+                        },
+                        {
+                            "text": "leichtgradig eingeschränkt",
+                            "value": "item2"
+                        },
+                        {
+                            "text": "mittelgradig eingeschränkt",
+                            "value": "item3"
+                        },
+                        {
+                            "text": "hochgradig eingeschränkt",
+                            "value": "item4"
+                        }
+                    ]
+                },
+                {
+                    "name": "question6",
+                    "type": "rating",
+                    "title": "3D: Segmentale Wandbewegungsstörung",
+                    "hideNumber": true,
+                    "rateValues": [
+                        {
+                            "text": "Keine (Normokinesie)",
+                            "value": "item1"
+                        },
+                        {
+                            "text": "Hypokinesie",
+                            "value": "item2"
+                        },
+                        {
+                            "text": "Akinesie",
+                            "value": "item3"
+                        },
+                        {
+                            "text": "Dyskinesie",
+                            "value": "item4"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "page3",
+            "title": "Gewebeeigenschaften",
+            "elements": [
+                {
+                    "name": "question9",
+                    "type": "rating",
+                    "title": "4A: Vitalität",
+                    "hideNumber": true,
+                    "rateValues": [
+                        {
+                            "text": "Ja: Kein LGE",
+                            "value": "item1"
+                        },
+                        {
+                            "text": "Nein: LGE vom Infarkt-Typ",
+                            "value": "item2"
+                        },
+                        {
+                            "text": "Nein: LGE vom NICHT-Infarkt-Typ",
+                            "value": "item3"
+                        }
+                    ]
+                },
+                {
+                    "name": "question10",
+                    "type": "rating",
+                    "title": "4B: Falls LGE vom Infarkt-Typ: MVO",
+                    "visibleIf": "{question9} = 'item2'",
+                    "hideNumber": true,
+                    "rateValues": [
+                        {
+                            "text": "Nein",
+                            "value": "item1"
+                        },
+                        {
+                            "text": "Ja",
+                            "value": "item2"
+                        }
+                    ]
+                },
+                {
+                    "name": "question7",
+                    "type": "rating",
+                    "title": "5: Perfusionsdefizit (Ischämie)",
+                    "hideNumber": true,
+                    "rateValues": [
+                        {
+                            "text": "Nein",
+                            "value": "item1"
+                        },
+                        {
+                            "text": "Ja",
+                            "value": "item2"
+                        }
+                    ]
+                },
+                {
+                    "name": "question8",
+                    "type": "rating",
+                    "title": "6: Ödem",
+                    "hideNumber": true,
+                    "rateValues": [
+                        {
+                            "text": "Nein",
+                            "value": "item1"
+                        },
+                        {
+                            "text": "Ja",
+                            "value": "item2"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "page4",
+            "title": "Gesamtbeurteilung",
+            "elements": [
+                {
+                    "name": "question11",
+                    "type": "dropdown",
+                    "title": "7: klinische Beurteilungsvorlage (Prosa)",
+                    "choices": [
+                        {
+                            "text": "KHK ohne Ischämie",
+                            "value": "item 1"
+                        },
+                        {
+                            "text": "KHK mit Ischämienachweis",
+                            "value": "item2"
+                        },
+                        {
+                            "text": "KHK mit akutem Infarkt",
+                            "value": "item10"
+                        },
+                        {
+                            "text": "Myokarditis (erworbene Kardiomyopathie)",
+                            "value": "item3"
+                        },
+                        {
+                            "text": "Hypertrophe Kardiomyopathie [H(o)CM]",
+                            "value": "item4"
+                        },
+                        {
+                            "text": "Speichererkrankung",
+                            "value": "item5"
+                        },
+                        {
+                            "text": "Non-Compaction Kardiomyopathie (NCCM)",
+                            "value": "item6"
+                        },
+                        {
+                            "text": "Arrhythmogene Rechtsventrikuläre Kardiomyopathie (ARVC/D)",
+                            "value": "item7"
+                        },
+                        {
+                            "text": "Dilatative Kardiomyopathie (DCM)",
+                            "value": "item9"
+                        }
+                    ],
+                    "allowClear": false,
+                    "hideNumber": true
+                },
+                {
+                    "name": "question12",
+                    "type": "checkbox",
+                    "title": "Befundvorschlag KHK ohne Ischämie:                                                                                                                                            Adenosin/Regadenoson-Stress MRT ohne Nachweis eines Perfusionsdefizits. (Keine) Infarktnarbe mit LGE (Lokalisation). Somit kein Nachweis einer Ischämie. Normal großer LV mit normaler systolischer Funktion. ",
+                    "visibleIf": "{question11} = 'item 1'"
+                },
+                {
+                    "name": "question15",
+                    "type": "checkbox",
+                    "title": "Befundvorschlag KHK - akuter Infarkt:                                                                                                                                            Infarktnarbe mit LGE (Lokalisation) mit assoziiertem Ödemnachweis. Normal großer/dilatierter LV mit normaler/eingeschränkter systolischer Funktion. Nachweis einer Mikrovaskulären Obstruktion, komplikativ: Perikarderguss/Pleuraerguss",
+                    "visibleIf": "{question11} = 'item10'"
+                },
+                {
+                    "name": "question13",
+                    "type": "checkbox",
+                    "title": "Befundvorschlag KHK mit Ischämie:                                                                                                                                             Im Adenosin/Regadenoson-Stress MRT mit belastungsinduziertem Perfusionsdefizit (Lokalisation) als Hinweis auf eine hämodynamisch relevante Koronarstenose im RCA / LAD / LCX Versorgungsgebiet. (Keine) Infarktnarbe mit LGE (Lokalisation), somit Nachweis einer Ischämie. Normal großer LV mit normaler systolischer Funktion. ",
+                    "visibleIf": "{question11} = 'item2'"
+                },
+                {
+                    "name": "question19",
+                    "type": "checkbox",
+                    "title": "Befundvorschlag akute Myokarditis:                                                                                                                                    Hypokinesie (Lokalisation), fokales / globales Ödem (T2-Kriterium: Lokalisation) und subepikardiales / intramyokardiales LGE (T1-Kriterium: Lokalisation); in Zusammenschau mit dem klinischen Befund vereinbar mit einer akuten Myokarditis. Normal großer LV mit normaler systolischer Funktion. ",
+                    "visibleIf": "{question11} = 'item3'"
+                },
+                {
+                    "name": "question14",
+                    "type": "checkbox",
+                    "title": "Befundvorschlag H(o)CM:                                                                                                                                                                       Normal großer, hypertrophierter LV (ggf. Lokalisation) mit normaler systolischer Funktion. LA dilatiert. Flaues intramyokardiales LGE sowie fokales kräftiges LGE an den Insertionsstellen des RV. Der Befund ist insgesamt vereinbar mit einer hypertrophen Kardiomyopathie (HCM). In Ruhe keine Flussbeschleunigung im LVOT. In Ruhe Flussbeschleunigung im LVOT mit / ohne SAM Phänomen, vereinbar mit einer obstruktiven Komponente. ",
+                    "visibleIf": "{question11} = 'item4'"
+                },
+                {
+                    "name": "question16",
+                    "type": "checkbox",
+                    "title": "Befundvorschlag \"Speichererkrankung:                                                                                                                                                             Normal großer, hypertrophierter LV (ggf. Lokalisation) mit global reduzierter systolischer Funktion. Eingeschränkte longitudinale LV Kontraktion (MAPSE), biatrialer Dilatation. Basal betontes LGE vom Nicht-Infarkt-Typ (diffus intramyokardial/zirkulär subendokardial). ",
+                    "visibleIf": "{question11} = 'item5'"
+                },
+                {
+                    "name": "question17",
+                    "type": "checkbox",
+                    "title": "Befundvorschlag NCCM NOCH FEHLEND                                                                                                             Normal dimensioniertes Herz. Normale LV Funktion ohne segmentale Wandbewegungsstörung.   Hypertrophie. Nicht-Infarkt-Typ LGE. Somit passend zu Speichererkrankung.",
+                    "visibleIf": "{question11} = 'item6'"
+                },
+                {
+                    "name": "question18",
+                    "type": "checkbox",
+                    "title": "Befundvorschlag ARVC/D  NOCH FEHLEND                                                                                                         Normal dimensioniertes Herz. Normale LV Funktion ohne segmentale Wandbewegungsstörung.  Majorkriterium Hypertrophie. Nicht-Infarkt-Typ LGE. Somit passend zu Speichererkrankung.",
+                    "visibleIf": "{question11} = 'item7'"
+                }
+            ]
+        }
+    ],
+    "title": "Strukturierte Befundung kardiale MRT",
+    "description": " ",
+    "logoPosition": "right"
+}
