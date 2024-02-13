@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cardio-MRT generisch</title>
+    <meta charset="UTF-8" />
+    <!--Dublin Core metadata elements here-->
+    <meta name="dcterms.title" content="Cardio-MRT generisch" />
+    <meta name="dcterms.abstract" content="Generisches Befundungstemplate für die kardiale MRT">
+    <meta name="dcterms.description" content="Generisches Template zur Befundung von Cardio-MR Untersuchungen.">
+    <meta name="dcterms.subject" content="MR; CARDIO;">
+    <meta name="dcterms.identifier" content="041807.3.2212281954">
+    <meta name="dcterms.type" content="IMAGE_REPORT_TEMPLATE">
+    <meta name="dcterms.language" content="de">
+    <meta name="dcterms.rights" content="Die Deutsche Röntgengesellschaft e.V.(DRG) stellt sämtliche Templates kostenfrei unter der Creative Commons Lizenz  CC BY in der Version 4.0 zur Verfügung. Die Lizenz erlaubt Download und Weiterverteilung des Werkes unter Nennung der DRG als Urheber.">
+    <meta name="dcterms.license" content="https://github.com/DRGagit/ak_befundung/blob/master/LICENSE">
+    <meta name="dcterms.date" content="2022-12-28">
+    <meta name="dcterms.creator" content="AG Herz- und Gefäßdiagnostik">
+    <meta name="dcterms.contributor" content="Pinto dos Santos D (Kodierung)">
+    <meta name="dcterms.contributor" content="Reinartz, Sebastian">
+    <meta name="dcterms.publisher" content="Deutsche Röntgengesellschaft (DRG)">
+    <script type="text/xml">
+        <template_attributes>
+            <top-level-flag>TRUE</top-level-flag>
+            <status>ACTIVE</status>
+        </template_attributes>
+    </script>
+
+    <!--Link to Stylesheet-->
+    <!--<link class="flag" rel="stylesheet" href="../../templates_final/drg.css">-->
+    <style>
+        body {
+            margin-left:auto;
+            margin-right:auto;
+            max-width: 950px;
+            background: #F7F7F7;
+            padding: 0px 15px 0px 15px;
+            color: #333;
+            border:1px solid #E4E4E4;
+            font-family: sans-serif;
+        }
+
+        td {
+            padding-right: 15px;
+            vertical-align: top;
+        }
+
+        select {
+            border: 1px solid #DADADA;
+            background: #FFF;
+            outline: 0 none;
+            padding: 3px 3px 3px 5px;
+        }
+
+        select.long {
+            width: 100%;
+        }
+
+        select.medium {
+            width: 150px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<script>
+    const aha_segments = new Map()
+    aha_segments.set('1', false)
+    aha_segments.set('2', false)
+
+    function test() {
+        var active_segments = []
+
+        if (aha_segments.get('1')) {
+            aha_segments.set('1', false)
+        } else {
+            aha_segments.set('1', true)
+            active_segments.push('1')
+        }
+
+        for (var i = 0; i < active_segments.length; i++) {
+            if (i == 0) {
+                var segments_text = active_segments[i]
+            }
+            if (i > 0 & i < active_segments.length) {
+                segments_text += ", " + active_segments[i]
+            }
+            if (i == active_segments.length) {
+                segments_text += active_segments[i]
+            }
+        }
+
+        console.log(segments_text)
+
+        if (typeof segments_text !== 'undefined') {
+            document.getElementById("segments").value = segments_text
+        } else {
+            document.getElementById("segments").value = ""
+        }
+
+
+    }
+</script>
+
+    <h1>Kardio-Template generisch</h1>
+
+    <h2>Befund</h2>
+
+    <section data-section-name="Befunde">
+        <table>
+            <tr>
+                <td><label for="mr_cardio_generic_comparison">Vergleichsuntersuchung</label></td>
+                <td>
+                    <select name="mr_cardio_generic_comparison" id="mr_cardio_generic_comparison" class="medium">
+                        <option value="keine">keine</option>
+                        <option value="vorliegend">vorliegend</option>
+                    </select>
+                    <input name="mr_cardio_generic_comparison_date" id="mr_cardio_generic_comparison_date" type="date" data-field-type="DATE">
+                </td>
+            </tr>
+            <tr>
+                <td><label for="mr_cardio_generic_qualy">Bildqualität</label></td>
+                <td>
+                    <select name="mr_cardio_generic_qualy" id="mr_cardio_generic_qualy" class="long">
+                        <option value="gut">gut</option>
+                        <option value="reduziert, diagnostisch">reduziert, diagnostisch</option>
+                        <option value="nicht diagnostisch">nicht diagnostisch</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+
+        <h3>Kardiale Anatomie / Funktion</h3>
+
+        <table>
+            <tr>
+                <td><label for="mr_cardio_generic_lv_size">Größe linker Ventrikel</label></td>
+                <td>
+                    <select name="mr_cardio_generic_lv_size" id="mr_cardio_generic_lv_size" class="long">
+                        <option value="normal groß">normal groß</option>
+                        <option value="dilatiert">dilatiert</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="mr_cardio_generic_hypertrophy">Hypertrophie</label></td>
+                <td>
+                    <select name="mr_cardio_generic_hypertrophy" id="mr_cardio_generic_hypertrophy">
+                        <option value="keine">keine</option>
+                        <option value="fokale Hypertrophie">fokale Hypertrophie</option>
+                        <option value="konzentrische Hypertrophie">konzentrische Hypertrophie</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="mr_cardio_generic_lv_func">Globale LV Funktion</label></td>
+                <td>
+                    <select name="mr_cardio_generic_lv_func" id="mr_cardio_generic_lv_func">
+                        <option value="normal">normal</option>
+                        <option value="leichtgradig eingeschränkt">leichtgradig eingeschränkt</option>
+                        <option value="mittelgradig eingeschränkt">mittelgradig eingeschränkt</option>
+                        <option value="hochgradig eingeschränkt">hochgradig eingeschränkt</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="mr_cardio_generic_wallmob">Segmentale Wandbewegungsstörung</label></td>
+                <td>
+                    <select name="mr_cardio_generic_wallmob" id="mr_cardio_generic_wallmob">
+                        <option value="keine">keine</option>
+                        <option value="Hypokinesie">Hypokinesie</option>
+                        <option value="Akinesie">Akinesie</option>
+                        <option value="Dyskinesie">Dyskinesie</option>
+                    </select>
+                    <input type="text" id="segments" readonly>
+                </td>
+            </tr>
+        </table>
+
+        <img src="3618.gif" usemap="#ahamap">
+        <map name="ahamap">
+            <area shape="circle" coords="312,60,22" onclick="test()" href="#">
+        </map>
+
+
+        <h3>Gewebeeigenschaften</h3>
+        <table>
+            <tr>
+                <td>
+                    <table>
+                        <tr>
+                            <td><label for="mr_cardio_generic_vital">Vitalität</label></td>
+                            <td>
+                                <select name="mr_cardio_generic_vital" id="mr_cardio_generic_vital">
+                                    <option value="ja, kein LGE">ja, kein LGE</option>
+                                    <option value="nein, LGE vom Infarkt-Typ">nein, LGE vom Infarkt-Typ</option>
+                                    <option value="nein, LGE vom NICHT-Infarkt-Typ">nein, LGE vom NICHT-Infarkt-Typ</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_cardio_generic_mvo">MVO</label></td>
+                            <td>
+                                <select name="mr_cardio_generic_mvo" id="mr_cardio_generic_mvo">
+                                    <option value="-">-</option>
+                                    <option value="nein">nein</option>
+                                    <option value="ja">ja</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_cardio_generic_perf">Perfusionsdefizit</label></td>
+                            <td>
+                                <select name="mr_cardio_generic_perf" id="mr_cardio_generic_perf">
+                                    <option value="-">-</option>
+                                    <option value="nein">nein</option>
+                                    <option value="ja">ja</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="mr_cardio_generic_edema">Ödem</label></td>
+                            <td>
+                                <select name="mr_cardio_generic_edema" id="mr_cardio_generic_edema">
+                                    <option value="-">-</option>
+                                    <option value="nein">nein</option>
+                                    <option value="ja">ja</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        
+        <h3>Sonstige Auffälligkeiten</h3>
+
+        <table>
+            <tr>
+            </tr>
+            <tr>
+                <td>
+                    <textarea class="ta-middle" name="mr_cardio_generic_other" id="mr_cardio_generic_other"></textarea>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <h2>Beurteilung</h2>
+
+    <section data-section-name="Beurteilung">
+        <table>
+            <tr>
+                <td><label for="mr_cardio_generic_diagnosis">Diagnose:</label></td>
+                <td>
+                    <select name="mr_cardio_generic_diagnosis" id="mr_cardio_generic_diagnosis">
+                        <option value="-">-</option>
+                        <option value="Normalbefund">Normalbefund</option>
+                        <option value="KHK ohne Ischämie">KHK ohne Ischämie</option>
+                        <option value="KHK mit Ischämienachweis">KHK mit Ischämienachweis</option>
+                        <option value="KHK mit akutem Infarkt">KHK mit akutem Infarkt</option>
+                        <option value="Myokarditis (erworbene Kardiomyopathie)">Myokarditis (erworbene Kardiomyopathie)</option>
+                        <option value="Hypertrophe Kardiomyopathie [H(o)CM]">Hypertrophe Kardiomyopathie [H(o)CM]</option>
+                        <option value="Speichererkrankung">Speichererkrankung</option>
+                        <option value="Non-Compaction Kardiomyopathie (NCCM)">Non-Compaction Kardiomyopathie (NCCM)</option>
+                        <option value="Arrhythmogene Rechtsventrikuläre Kardiomyopathie (ARVC/D)">Arrhythmogene Rechtsventrikuläre Kardiomyopathie (ARVC/D)</option>
+                        <option value="Dilatative Kardiomyopathie (DCM)">Dilatative Kardiomyopathie (DCM)</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <p>
+            <textarea name="mr_cardio_generic_beurteilung" id="mr_cardio_generic_beurteilung" data-field-completion-action="ALERT"></textarea>
+        </p>
+    </section>
+</body>
+</html>
