@@ -1,0 +1,1207 @@
+{
+  "resourceType": "Questionnaire",
+  "title": "CT KHK",
+  "status": "draft",
+  "description": "Template zur Befundung von Cardio-CT Untersuchungen zur KHK.",
+  "item": [
+    {
+      "type": "string",
+      "linkId": "7541260693775",
+      "text": "Klinische Angaben",
+      "required": false,
+      "repeats": false,
+      "readOnly": false
+    },
+    {
+      "type": "string",
+      "linkId": "3716464774112",
+      "text": "Fragestellung",
+      "required": false,
+      "repeats": false,
+      "readOnly": false
+    },
+    {
+      "item": [
+        {
+          "type": "string",
+          "linkId": "1115416172675",
+          "text": "Prämedikation",
+          "required": false,
+          "repeats": true,
+          "readOnly": false
+        },
+        {
+          "type": "string",
+          "linkId": "1424829326677",
+          "text": "Aquisitionstechnik",
+          "required": false,
+          "repeats": false,
+          "readOnly": false
+        },
+        {
+          "type": "string",
+          "linkId": "9928875103563",
+          "text": "Rekonstruktion / Nachbearbeitung",
+          "required": false,
+          "repeats": false,
+          "readOnly": false
+        },
+        {
+          "type": "decimal",
+          "linkId": "3165121546975",
+          "text": "DLP",
+          "required": true,
+          "repeats": false,
+          "readOnly": false
+        }
+      ],
+      "type": "group",
+      "linkId": "9996473828651",
+      "text": "Methodik",
+      "required": false,
+      "repeats": false,
+      "readOnly": false
+    },
+    {
+      "item": [
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down",
+                    "display": "Drop down"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "3816337083539",
+          "text": "Geschlecht",
+          "required": true,
+          "repeats": false,
+          "readOnly": false,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "weiblich"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "männlich"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "andere"
+              }
+            }
+          ]
+        },
+        {
+          "type": "decimal",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+              "valueCoding": {
+                "system": "http://unitsofmeasure.org",
+                "code": "kg",
+                "display": "kilogram"
+              }
+            }
+          ],
+          "linkId": "335209616723",
+          "text": "Körpergewicht",
+          "required": true,
+          "repeats": false,
+          "readOnly": false
+        },
+        {
+          "type": "decimal",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+              "valueCoding": {
+                "system": "http://unitsofmeasure.org",
+                "code": "m",
+                "display": "meter"
+              }
+            }
+          ],
+          "linkId": "1093873742603",
+          "text": "Körpergröße",
+          "required": true,
+          "repeats": false,
+          "readOnly": false
+        },
+        {
+          "type": "decimal",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+              "valueCoding": {
+                "system": "http://unitsofmeasure.org",
+                "code": "m2",
+                "display": "square meter"
+              }
+            }
+          ],
+          "linkId": "7748438912982",
+          "text": "Körperoberfläche (BSA)",
+          "required": true,
+          "repeats": false,
+          "readOnly": false
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down",
+                    "display": "Drop down"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "4038019350881",
+          "text": "Herzschrittmacher",
+          "required": true,
+          "repeats": false,
+          "readOnly": false,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "nein"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "ja"
+              }
+            }
+          ]
+        },
+        {
+          "type": "integer",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+              "valueCoding": {
+                "system": "http://unitsofmeasure.org",
+                "code": "/min",
+                "display": "per minute"
+              }
+            }
+          ],
+          "linkId": "4806483091218",
+          "text": "Mittlere Frequenz",
+          "required": true,
+          "repeats": false,
+          "readOnly": false
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down",
+                    "display": "Drop down"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "2573093606104",
+          "text": "Arrythmie",
+          "required": true,
+          "repeats": false,
+          "readOnly": false,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "nein"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "ja"
+              }
+            }
+          ]
+        }
+      ],
+      "type": "group",
+      "linkId": "3690245101019",
+      "text": "Patientencharakteristika",
+      "required": false,
+      "repeats": false,
+      "readOnly": false
+    },
+    {
+      "item": [
+        {
+          "type": "date",
+          "linkId": "3764286576126",
+          "text": "Voruntersuchung:",
+          "required": false,
+          "repeats": false,
+          "readOnly": false
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down",
+                    "display": "Drop down"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "3643655086513",
+          "text": "Eingeschränkte Bildqualität",
+          "required": false,
+          "repeats": false,
+          "readOnly": false,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "nein"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "ja"
+              }
+            }
+          ]
+        },
+        {
+          "type": "integer",
+          "linkId": "6380015589723",
+          "text": "Agatson Score (optional)",
+          "required": false,
+          "repeats": false,
+          "readOnly": false
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down",
+                    "display": "Drop down"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "3510305056670",
+          "text": "Dominanter Versorgungstyp",
+          "required": false,
+          "repeats": false,
+          "readOnly": false,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "rechts"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "links"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "co-dominant"
+              }
+            }
+          ]
+        },
+        {
+          "type": "string",
+          "linkId": "6680082784156",
+          "text": "Besonderheiten Abgang und Verlauf Koronarien",
+          "required": false,
+          "repeats": false,
+          "readOnly": false
+        },
+        {
+          "item": [
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "drop-down",
+                        "display": "Drop down"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "5681428254884",
+              "text": "Plaques",
+              "required": false,
+              "repeats": false,
+              "readOnly": false,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "keine"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "verkalkt"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "nicht-verkalkt"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "mixed"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "drop-down",
+                        "display": "Drop down"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "3064960294919",
+              "text": "Stenosegrad",
+              "required": false,
+              "repeats": false,
+              "readOnly": false,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "keine"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "minimal (1-24%)"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "mild (25-49%)"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "moderat (50-69%)"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "hochgradig (70-99%)"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "verschlossen"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "drop-down",
+                        "display": "Drop down"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "4351320327448",
+              "text": "Stent",
+              "required": false,
+              "repeats": false,
+              "readOnly": false,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "ja"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "linkId": "2201210385285",
+              "text": "Bemerkungen",
+              "required": false,
+              "repeats": false,
+              "readOnly": false
+            }
+          ],
+          "type": "group",
+          "linkId": "3085341040906",
+          "text": "LCA",
+          "required": false,
+          "repeats": false,
+          "readOnly": false
+        },
+        {
+          "text": "RIVA",
+          "type": "group",
+          "item": [
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "drop-down",
+                        "display": "Drop down"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "3448410237754",
+              "text": "Plaques",
+              "required": false,
+              "repeats": false,
+              "readOnly": false,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "keine"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "verkalkt"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "nicht-verkalkt"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "mixed"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "drop-down",
+                        "display": "Drop down"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "19306493749",
+              "text": "Stenosegrad",
+              "required": false,
+              "repeats": false,
+              "readOnly": false,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "keine"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "minimal (1-24%)"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "mild (25-49%)"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "moderat (50-69%)"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "hochgradig (70-99%)"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "verschlossen"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "drop-down",
+                        "display": "Drop down"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "4804035679147",
+              "text": "Stent",
+              "required": false,
+              "repeats": false,
+              "readOnly": false,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "ja"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "linkId": "2313180452802",
+              "text": "Bemerkungen",
+              "required": false,
+              "repeats": false,
+              "readOnly": false
+            }
+          ],
+          "linkId": 1647701059774
+        },
+        {
+          "item": [
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "drop-down",
+                        "display": "Drop down"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "1091042132852",
+              "text": "Plaques",
+              "required": false,
+              "repeats": false,
+              "readOnly": false,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "keine"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "verkalkt"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "nicht-verkalkt"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "mixed"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "drop-down",
+                        "display": "Drop down"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "5142261279913",
+              "text": "Stenosegrad",
+              "required": false,
+              "repeats": false,
+              "readOnly": false,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "keine"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "minimal (1-24%)"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "mild (25-49%)"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "moderat (50-69%)"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "hochgradig (70-99%)"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "verschlossen"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "drop-down",
+                        "display": "Drop down"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "9101478214727",
+              "text": "Stent",
+              "required": false,
+              "repeats": false,
+              "readOnly": false,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "ja"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "linkId": "7596231407026",
+              "text": "Bemerkungen",
+              "required": false,
+              "repeats": false,
+              "readOnly": false
+            }
+          ],
+          "type": "group",
+          "linkId": "7508217097250",
+          "text": "LCx"
+        },
+        {
+          "text": "R. intermedius",
+          "type": "group",
+          "item": [
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "drop-down",
+                        "display": "Drop down"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "3081954173155",
+              "text": "Plaques",
+              "required": false,
+              "repeats": false,
+              "readOnly": false,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "keine"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "verkalkt"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "nicht-verkalkt"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "mixed"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "drop-down",
+                        "display": "Drop down"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "3835659766062",
+              "text": "Stenosegrad",
+              "required": false,
+              "repeats": false,
+              "readOnly": false,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "keine"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "minimal (1-24%)"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "mild (25-49%)"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "moderat (50-69%)"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "hochgradig (70-99%)"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "verschlossen"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "drop-down",
+                        "display": "Drop down"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "5329335471967",
+              "text": "Stent",
+              "required": false,
+              "repeats": false,
+              "readOnly": false,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "ja"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "linkId": "5280909033109",
+              "text": "Bemerkungen",
+              "required": false,
+              "repeats": false,
+              "readOnly": false
+            }
+          ],
+          "linkId": 8099063803452
+        },
+        {
+          "item": [
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "drop-down",
+                        "display": "Drop down"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "3857786288607",
+              "text": "Plaques",
+              "required": false,
+              "repeats": false,
+              "readOnly": false,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "keine"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "verkalkt"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "nicht-verkalkt"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "mixed"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "drop-down",
+                        "display": "Drop down"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "4776617485497",
+              "text": "Stenosegrad",
+              "required": false,
+              "repeats": false,
+              "readOnly": false,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "keine"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "minimal (1-24%)"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "mild (25-49%)"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "moderat (50-69%)"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "hochgradig (70-99%)"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "verschlossen"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "drop-down",
+                        "display": "Drop down"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "2117340196177",
+              "text": "Stent",
+              "required": false,
+              "repeats": false,
+              "readOnly": false,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "ja"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "linkId": "1397720152211",
+              "text": "Bemerkungen",
+              "required": false,
+              "repeats": false,
+              "readOnly": false
+            }
+          ],
+          "type": "group",
+          "linkId": "3664212786156",
+          "text": "RCA"
+        },
+        {
+          "type": "string",
+          "linkId": "8838913033770",
+          "text": "Atria",
+          "required": false,
+          "repeats": false,
+          "readOnly": false,
+          "initial": [
+            {
+              "valueString": "unauffällig"
+            }
+          ]
+        },
+        {
+          "type": "string",
+          "linkId": "1655031685434",
+          "text": "Ventrikel",
+          "required": false,
+          "repeats": false,
+          "readOnly": false,
+          "initial": [
+            {
+              "valueString": "unauffällig"
+            }
+          ]
+        },
+        {
+          "type": "string",
+          "linkId": "2785266167615",
+          "text": "Herzklappen",
+          "required": false,
+          "repeats": false,
+          "readOnly": false,
+          "initial": [
+            {
+              "valueString": "unauffällig"
+            }
+          ]
+        },
+        {
+          "type": "string",
+          "linkId": "5625935987040",
+          "text": "Pulmonalarterien/Aorta",
+          "required": false,
+          "repeats": false,
+          "readOnly": false,
+          "initial": [
+            {
+              "valueString": "unauffällig"
+            }
+          ]
+        },
+        {
+          "type": "string",
+          "linkId": "8012667071711",
+          "text": "Lungenvenen",
+          "required": false,
+          "repeats": false,
+          "readOnly": false,
+          "initial": [
+            {
+              "valueString": "unauffällig"
+            }
+          ]
+        },
+        {
+          "type": "string",
+          "linkId": "5365105584285",
+          "text": "Perikard",
+          "required": false,
+          "repeats": false,
+          "readOnly": false,
+          "initial": [
+            {
+              "valueString": "unauffällig"
+            }
+          ]
+        },
+        {
+          "type": "string",
+          "linkId": "2742777325575",
+          "text": "Sonstige Auffälligkeiten",
+          "required": false,
+          "repeats": false,
+          "readOnly": false,
+          "initial": [
+            {
+              "valueString": "keine"
+            }
+          ]
+        }
+      ],
+      "type": "group",
+      "linkId": "5132763979823",
+      "text": "Befund",
+      "required": false,
+      "repeats": false,
+      "readOnly": false
+    },
+    {
+      "type": "text",
+      "linkId": "6320053995467",
+      "text": "Beurteilung",
+      "required": false,
+      "repeats": false,
+      "readOnly": false
+    },
+    {
+      "type": "string",
+      "linkId": "9168718296564",
+      "text": "Handlungsempfehlungen",
+      "required": false,
+      "repeats": false,
+      "readOnly": false
+    }
+  ]
+}
