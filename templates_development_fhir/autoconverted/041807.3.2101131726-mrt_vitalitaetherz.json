@@ -1,0 +1,849 @@
+{
+  "resourceType": "Questionnaire",
+  "title": "MRT Kardiale Vitalit\u00e4tsdiagnostik",
+  "item": [
+    {
+      "text": "Klinische Angaben",
+      "type": "group",
+      "item": [
+        {
+          "text": "",
+          "type": "string"
+        },
+        {
+          "text": "Patientencharakteristik",
+          "type": "group",
+          "item": [
+            {
+              "text": "Geschlecht:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "W"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "M"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "O"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "K\u00f6rpergr\u00f6\u00dfe:",
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "kg",
+                    "display": "kg"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "m",
+                    "display": "m"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "K\u00f6rperoberfl\u00e4che (BSA):",
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "m2",
+                    "display": "m2"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "2",
+              "type": "group",
+              "item": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Klinische Fragestellung",
+      "type": "string"
+    },
+    {
+      "text": "Methodik",
+      "type": "group",
+      "item": [
+        {
+          "text": "Flussdichte:",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "\u2014"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "1.5 T"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "3 T"
+              }
+            }
+          ]
+        },
+        {
+          "text": "MR-Protokoll:",
+          "type": "string",
+          "initial": [
+            {
+              "valueString": "Sequenzen und Ebenen:"
+            }
+          ]
+        },
+        {
+          "text": "Auswertesoftware:",
+          "type": "string",
+          "initial": [
+            {
+              "valueString": "(Name und Version)"
+            }
+          ]
+        },
+        {
+          "text": "Kontrastmittel",
+          "type": "group",
+          "item": [
+            {
+              "text": "Name:",
+              "type": "string"
+            },
+            {
+              "text": "Menge:",
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "ml",
+                    "display": "ml"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Flussgeschwindigkeit:",
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "ml/s",
+                    "display": "ml/s"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Befund",
+      "type": "group",
+      "item": [
+        {
+          "text": "Vergleichsuntersuchung:",
+          "type": "group",
+          "item": [
+            {
+              "text": "",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "keine"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "vorliegend"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "date"
+            }
+          ]
+        },
+        {
+          "text": "Bildqualit\u00e4t:",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "gut"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "ausreichend"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "eingeschr\u00e4nkt"
+              }
+            }
+          ]
+        },
+        {
+          "text": "Quelle der Normwerte:",
+          "type": "group",
+          "item": [
+            {
+              "text": "van der Ven et al. European Heart Journal \u2013 Cardiovascular Imaging 2020.",
+              "type": "group",
+              "item": [
+                {
+                  "text": "Referenzwerttabelle",
+                  "type": "group",
+                  "item": []
+                }
+              ]
+            },
+            {
+              "text": "Kawel-Boehm et al. J Cardiovasc Magn Reson 22, 87 (2020).",
+              "type": "group",
+              "item": [
+                {
+                  "text": "Referenzwerttabelle linksventrikul\u00e4rer Parameter",
+                  "type": "group",
+                  "item": [
+                    {
+                      "text": "Referenzwerttabelle rechtsventrikul\u00e4rer Parameter",
+                      "type": "group",
+                      "item": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Morphologie und Funktionsanalyse",
+          "type": "group",
+          "item": [
+            {
+              "text": "LV enddiastolischer Diameter (LV EDD):",
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "mm",
+                    "display": "mm"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "LV enddiastolischer Volumenindex (LV EDVi):",
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "ml/m2",
+                    "display": "ml/m2"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "2",
+              "type": "group",
+              "item": []
+            },
+            {
+              "text": "LV endsystolischer Volumenindex (LV ESVi):",
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "ml/m2",
+                    "display": "ml/m2"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "2",
+              "type": "group",
+              "item": []
+            },
+            {
+              "text": "LV Ejektionsfraktion (LV EF):",
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "%",
+                    "display": "%"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "LV ED Masse normiert:",
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "g/m2",
+                    "display": "g/m2"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "2",
+              "type": "group",
+              "item": []
+            },
+            {
+              "text": "LV Regionale Wandbewegungsst\u00f6rung:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "\u2014"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Ja"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "string"
+            },
+            {
+              "text": "Regionale Wandausd\u00fcnnung:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "\u2014"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Ja"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "string"
+            },
+            {
+              "text": "RV enddiastolischer Diameter (RV EDD):",
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "mm",
+                    "display": "mm"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "RV enddiastolischer Volumenindex (RV EDVi):",
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "ml/m2",
+                    "display": "ml/m2"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "2",
+              "type": "group",
+              "item": []
+            },
+            {
+              "text": "RV endsystolischer Volumenindex (RV ESVi):",
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "ml/m2",
+                    "display": "ml/m2"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "2",
+              "type": "group",
+              "item": []
+            },
+            {
+              "text": "RV Ejektionsfraktion:",
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "%",
+                    "display": "%"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "RV Regionale Wandbewegungsst\u00f6rung:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "\u2014"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Ja"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "text": "Vorhofgr\u00f6\u00dfe",
+          "type": "group",
+          "item": [
+            {
+              "text": "Visuell:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "\u2014"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "normal gro\u00df"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "pathologisch"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "string"
+            },
+            {
+              "text": "LA im Vierkammerblick longitudinal:",
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "mm",
+                    "display": "mm"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "LA im Vierkammerblick transversal:",
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "mm",
+                    "display": "mm"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "RA im Vierkammerblick longitudinal:",
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "mm",
+                    "display": "mm"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "RA im Vierkammerblick transversal:",
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "mm",
+                    "display": "mm"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Vorhofseptumstellung:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "\u2014"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "normal"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "abnorm"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "text": "Herzklappenpathologie:",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "nicht untersucht"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "nein"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "ja"
+              }
+            }
+          ]
+        },
+        {
+          "text": "",
+          "type": "string"
+        },
+        {
+          "text": "Intrakavit\u00e4re Thromben:",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "\u2014"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "nein"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "ja"
+              }
+            }
+          ]
+        },
+        {
+          "text": "",
+          "type": "string"
+        },
+        {
+          "text": "Gewebecharakterisierung",
+          "type": "group",
+          "item": [
+            {
+              "text": "Myokard\u00f6dem regional:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "\u2014"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "ja"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "string"
+            },
+            {
+              "text": "Late Gadolinium Enhancement (LGE) Myokard:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "\u2014"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "ja"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Lokalisation/Verteilungsmuster:",
+              "type": "string"
+            },
+            {
+              "text": "Myokard\u00f6dem regional:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "\u2014"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "< 50%"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "> 50%"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Mikrovaskul\u00e4re Obstruktion:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "\u2014"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "ja"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "string"
+            },
+            {
+              "text": "H\u00e4morrhagie:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "\u2014"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "ja"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "string"
+            },
+            {
+              "text": "T2-Mapping:",
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "ms",
+                    "display": "ms"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "T1-Mapping nativ:",
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "ms",
+                    "display": "ms"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "T1-Mapping post KM:",
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "ms",
+                    "display": "ms"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "%",
+                    "display": "%"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Sonstiges:",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "text": "Beurteilung",
+      "type": "string"
+    }
+  ]
+}

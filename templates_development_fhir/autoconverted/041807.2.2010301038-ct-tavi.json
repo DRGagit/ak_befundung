@@ -1,0 +1,434 @@
+{
+  "resourceType": "Questionnaire",
+  "title": "CT TAVI-Evaluation",
+  "item": [
+    {
+      "text": "Klinische Angaben",
+      "type": "group",
+      "item": [
+        {
+          "text": "",
+          "type": "string"
+        },
+        {
+          "text": "EKG",
+          "type": "group",
+          "item": [
+            {
+              "text": "Mittlere Herzfrequenz:",
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "/min",
+                    "display": "/min"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "EKG-Befund/Kommentar:",
+              "type": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Klinische Fragestellung",
+      "type": "string"
+    },
+    {
+      "text": "Methodik",
+      "type": "group",
+      "item": [
+        {
+          "text": "Pr\u00e4medikation",
+          "type": "group",
+          "item": [
+            {
+              "text": "Nitro sublingual:",
+              "type": "decimal",
+              "initial": [
+                {
+                  "valueDecimal": "0"
+                }
+              ]
+            },
+            {
+              "text": "Metoprolol:",
+              "type": "decimal",
+              "initial": [
+                {
+                  "valueDecimal": "0"
+                }
+              ],
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "mg",
+                    "display": "mg"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Sonstiges:",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "text": "Technik:",
+          "type": "string",
+          "initial": [
+            {
+              "valueString": "Standard retrospektives Gating.\nHerzphase:\nNachbearbeitung:\n3D-Rekonstruktion, 4D-Rekonstruktion und separate koronare MPRs."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Befund",
+      "type": "group",
+      "item": [
+        {
+          "text": "Qualit\u00e4t",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "gut"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "ausreichend"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "eingeschr\u00e4nkt"
+              }
+            }
+          ]
+        },
+        {
+          "text": "Herzmorphologie",
+          "type": "group",
+          "item": [
+            {
+              "text": "Rechter Vorhof:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "-"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "normal"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "dilatiert"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "string"
+            },
+            {
+              "text": "Rechter Ventrikel:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "-"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "normal"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "dilatiert"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "string"
+            },
+            {
+              "text": "Linker Vorhof:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "-"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "normal"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "dilatiert"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "string"
+            },
+            {
+              "text": "Linker Ventrikel:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "-"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "normal"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "dilatiert"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "string"
+            },
+            {
+              "text": "",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "-"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "ja"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "text": "Koronararterien:",
+          "type": "string"
+        },
+        {
+          "text": "Thorax:",
+          "type": "string"
+        },
+        {
+          "text": "Abdomen:",
+          "type": "string"
+        },
+        {
+          "text": "Skelett:",
+          "type": "string"
+        },
+        {
+          "text": "Weitere Bemerkungen:",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "text": "Beurteilung",
+      "type": "group",
+      "item": [
+        {
+          "text": "Anulus Messungen:",
+          "type": "group",
+          "item": [
+            {
+              "text": "Annulus:",
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "mm",
+                    "display": "mm"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Mittlerer Durchmesser:",
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "mm",
+                    "display": "mm"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Fl\u00e4che:",
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "mm2",
+                    "display": "mm2"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "2",
+              "type": "group",
+              "item": []
+            },
+            {
+              "text": "Abstand zum Abgang der RCA:",
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "mm",
+                    "display": "mm"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Abstand zum Abgang der LCA:",
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "mm",
+                    "display": "mm"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Annulus Angulation:",
+          "type": "group",
+          "item": [
+            {
+              "text": "RAO:",
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "deg",
+                    "display": "deg"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Caudal:",
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "deg",
+                    "display": "deg"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Arterieller Zugangsweg:",
+          "type": "group",
+          "item": [
+            {
+              "text": "Rechts iliofemoral minimal:",
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "mm",
+                    "display": "mm"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Links iliofemoral minimal:",
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "mm",
+                    "display": "mm"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Sonstiges:",
+          "type": "string"
+        }
+      ]
+    }
+  ]
+}

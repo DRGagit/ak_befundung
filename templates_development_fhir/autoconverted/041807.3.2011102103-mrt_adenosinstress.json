@@ -1,0 +1,383 @@
+{
+  "resourceType": "Questionnaire",
+  "title": "MRT Herz Adenosin-Stress",
+  "item": [
+    {
+      "text": "Klinische Angaben",
+      "type": "group",
+      "item": [
+        {
+          "text": "",
+          "type": "string"
+        },
+        {
+          "text": "Patientencharakteristik",
+          "type": "group",
+          "item": [
+            {
+              "text": "K\u00f6rpergewicht:",
+              "type": "decimal",
+              "initial": [
+                {
+                  "valueDecimal": "0"
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "decimal",
+              "initial": [
+                {
+                  "valueDecimal": "0"
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "decimal",
+              "initial": [
+                {
+                  "valueDecimal": "0"
+                }
+              ]
+            },
+            {
+              "text": "2",
+              "type": "group",
+              "item": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Fragestellung",
+      "type": "string"
+    },
+    {
+      "text": "Methodik",
+      "type": "group",
+      "item": [
+        {
+          "text": "Technik:",
+          "type": "string",
+          "initial": [
+            {
+              "valueString": "T1 BB single shot: axial;\nCine: 2CH, 3CH, 4CH, SAX;\nT2w BB SPIR: 3 Schichten SAX;\nFirst-Pass Perfusion: 3 Schichten SAX unter Adenosin-Stress (140\u03bcg/kg KG/min, Aufnahme 4min nach Infusionsbeginn) und in Ruhe;\nLGE: 2CH, 3CH, 4CH, SAX"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Befund",
+      "type": "group",
+      "item": [
+        {
+          "text": "Vergleichsuntersuchung",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "keine"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "vorliegend"
+              }
+            }
+          ]
+        },
+        {
+          "text": "",
+          "type": "date"
+        },
+        {
+          "text": "Funktionsanalyse LV (blood volume)",
+          "type": "group",
+          "item": [
+            {
+              "text": "LV enddiastolisches Volumen normiert (LV EDV/BSA):",
+              "type": "integer"
+            },
+            {
+              "text": "2",
+              "type": "group",
+              "item": []
+            },
+            {
+              "text": "LV endsystolisches Volumen normiert (LV ESV/BSA):",
+              "type": "integer"
+            },
+            {
+              "text": "2",
+              "type": "group",
+              "item": []
+            },
+            {
+              "text": "LV Ejektions-Fraktion (LV EF):",
+              "type": "integer"
+            },
+            {
+              "text": "LV ED Masse normiert:",
+              "type": "integer"
+            },
+            {
+              "text": "2",
+              "type": "group",
+              "item": []
+            },
+            {
+              "text": "IVSD:",
+              "type": "integer"
+            }
+          ]
+        },
+        {
+          "text": "Anatomie",
+          "type": "string",
+          "initial": [
+            {
+              "valueString": "Normale kardiale Anatomie."
+            }
+          ]
+        },
+        {
+          "text": "Adenosin Stress- und Ruhe-Perfusion",
+          "type": "group",
+          "item": [
+            {
+              "text": "Perfusionsst\u00f6rung unter Adenosin:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "ja"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Segmente",
+              "type": "string"
+            },
+            {
+              "text": "Ruhe-Perfusion:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "normal"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "pathologisch"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Regionale Wandbewegungsst\u00f6rungen LV:",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "keine"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "global"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "regional"
+              }
+            }
+          ]
+        },
+        {
+          "text": "",
+          "type": "string"
+        },
+        {
+          "text": "Weitere kardiale Befunde",
+          "type": "group",
+          "item": [
+            {
+              "text": "Intracavit\u00e4re Thromben:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "ja"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "string"
+            },
+            {
+              "text": "Perikarderguss:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "ja"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "decimal",
+              "initial": [
+                {
+                  "valueDecimal": "0"
+                }
+              ]
+            },
+            {
+              "text": "AV-Klappen:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "kompetent"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "insuffizient"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "string"
+            },
+            {
+              "text": "Trikuspide Aortenklappe:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "ja"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "nicht beurteilbar"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "-"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "kompetent"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "stenosiert"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "insuffizient"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Gewebecharakterisierung",
+          "type": "group",
+          "item": [
+            {
+              "text": "Late Enhancement (LGE):",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "ja, subendokardial < 50%"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "ja, subendokardial \u2265 50%"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "ja, transmural"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Segmente",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "text": "Extrakardiale Auff\u00e4lligkeiten",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "text": "Beurteilung",
+      "type": "string",
+      "initial": [
+        {
+          "valueString": "Im Adenosin-Stress MRT kein Nachweis einer Perfusionsst\u00f6rung.\n\t\t\t\nIm Adenosin-Stress MRT belastungsinduzierte Perfusionsst\u00f6rung __ als Hinweis auf eine h\u00e4modynamisch relevante Koronarstenose im RCA / LAD / RCX Versorgungsgebiet.\n\t\t\t\nMR-tomograpisch Z.n. Myokardinfakt mit \"late enhancement\" __."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,726 @@
+{
+  "resourceType": "Questionnaire",
+  "title": "CT Urolithiasis",
+  "item": [
+    {
+      "text": "Klinische Angaben",
+      "type": "string"
+    },
+    {
+      "text": "Klinische Fragestellung",
+      "type": "string"
+    },
+    {
+      "text": "Befund",
+      "type": "group",
+      "item": [
+        {
+          "text": "Vergleichsuntersuchung:",
+          "type": "group",
+          "item": [
+            {
+              "text": "",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "keine"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "vorliegend"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "date"
+            }
+          ]
+        },
+        {
+          "text": "Bildqualit\u00e4t:",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "gut"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "ausreichend"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "eingeschr\u00e4nkt"
+              }
+            }
+          ]
+        },
+        {
+          "text": "",
+          "type": "string"
+        },
+        {
+          "text": "Urolithiasis:",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "\u2014"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "keine"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Konkrement"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Konkrementkonglomerat"
+              }
+            }
+          ]
+        },
+        {
+          "text": "Lage:",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "\u2014"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Obere Kelchgruppe"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Mittlere Kelchgruppe"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Untere Kelchgruppe"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Nierenbecken"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Proximales Ureterdrittel"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Mittleres Ureterdrittel, suprailiacal"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Mittleres Ureterdrittel, infrailiacal"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Distales Ureterdrittel"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "pr\u00e4vesikal"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "intramural"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "vesikal"
+              }
+            }
+          ]
+        },
+        {
+          "text": "",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "\u2014"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "links"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "rechts"
+              }
+            }
+          ]
+        },
+        {
+          "text": "Maximaler Durchmesser:",
+          "type": "integer",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+              "valueCoding": {
+                "system": "http://unitsofmeasure.org",
+                "code": "mm",
+                "display": "mm"
+              }
+            }
+          ]
+        },
+        {
+          "text": "Volumen:",
+          "type": "integer",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+              "valueCoding": {
+                "system": "http://unitsofmeasure.org",
+                "code": "mm3",
+                "display": "mm3"
+              }
+            }
+          ]
+        },
+        {
+          "text": "3",
+          "type": "group",
+          "item": []
+        },
+        {
+          "text": "Mittlere Dichte:",
+          "type": "integer",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+              "valueCoding": {
+                "system": "http://unitsofmeasure.org",
+                "code": "[hnsf'U]",
+                "display": "[hnsf'U]"
+              }
+            }
+          ]
+        },
+        {
+          "text": "Substanz nach Dual-Energy-Analyse:",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "\u2014"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Calciumkonkrement"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Harns\u00e4urekonkrement"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "anderes"
+              }
+            }
+          ]
+        },
+        {
+          "text": "",
+          "type": "string"
+        },
+        {
+          "text": "Soft tissue rim sign:",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "\u2014"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "positiv"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "negativ"
+              }
+            }
+          ]
+        },
+        {
+          "text": "Ureterwanddicke:",
+          "type": "integer",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+              "valueCoding": {
+                "system": "http://unitsofmeasure.org",
+                "code": "mm",
+                "display": "mm"
+              }
+            }
+          ]
+        },
+        {
+          "text": "Zentrale Dichteabsenkung:",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "\u2014"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "vorhanden"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "nicht vorhanden"
+              }
+            }
+          ]
+        },
+        {
+          "text": "Comet tail sign:",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "\u2014"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "positiv"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "negativ"
+              }
+            }
+          ]
+        },
+        {
+          "text": "Weitere Konkremente:",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "keine"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "1"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "2"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "3"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "4"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "5"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "<5"
+              }
+            }
+          ]
+        },
+        {
+          "text": "",
+          "type": "string"
+        },
+        {
+          "text": "Harntransportst\u00f6rung",
+          "type": "group",
+          "item": [
+            {
+              "text": "Aufweitung des Nierenbeckenkelchsystems",
+              "type": "group",
+              "item": [
+                {
+                  "text": "Links:",
+                  "type": "choice",
+                  "answerOption": [
+                    {
+                      "valueCoding": {
+                        "display": "\u2014"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "display": "keine"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "display": "Grad 1"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "display": "Grad 2"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "display": "Grad 3"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "display": "Grad 4"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "text": "Rechts:",
+                  "type": "choice",
+                  "answerOption": [
+                    {
+                      "valueCoding": {
+                        "display": "\u2014"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "display": "keine"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "display": "Grad 1"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "display": "Grad 2"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "display": "Grad 3"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "display": "Grad 4"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "text": "Aufweitung des Ureters",
+              "type": "group",
+              "item": [
+                {
+                  "text": "Links:",
+                  "type": "choice",
+                  "answerOption": [
+                    {
+                      "valueCoding": {
+                        "display": "\u2014"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "display": "keine"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "display": "Bis auf H\u00f6he des proximalen Drittels"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "display": "Bis auf H\u00f6he des mittleren Drittels"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "display": "Bis auf H\u00f6he des distalen Drittels"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "text": "Max. Durchmesser:",
+                  "type": "integer",
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                      "valueCoding": {
+                        "system": "http://unitsofmeasure.org",
+                        "code": "mm",
+                        "display": "mm"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "text": "Rechts:",
+                  "type": "choice",
+                  "answerOption": [
+                    {
+                      "valueCoding": {
+                        "display": "\u2014"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "display": "keine"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "display": "Bis auf H\u00f6he des proximalen Drittels"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "display": "Bis auf H\u00f6he des mittleren Drittels"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "display": "Bis auf H\u00f6he des distalen Drittels"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "text": "Max. Durchmesser:",
+                  "type": "integer",
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                      "valueCoding": {
+                        "system": "http://unitsofmeasure.org",
+                        "code": "mm",
+                        "display": "mm"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Perirenales \u00d6dem:",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "\u2014"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "keines"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "links"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "rechts"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "beidseits"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "beidseits, links f\u00fchrend"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "beidseits, rechts f\u00fchrend"
+              }
+            }
+          ]
+        },
+        {
+          "text": "Periureterales \u00d6dem",
+          "type": "group",
+          "item": [
+            {
+              "text": "Links:",
+              "type": "group",
+              "item": [
+                {
+                  "text": "im proximalen Drittel",
+                  "type": "boolean"
+                },
+                {
+                  "text": "im mittleren Drittel",
+                  "type": "boolean"
+                },
+                {
+                  "text": "im distalen Drittel",
+                  "type": "boolean"
+                }
+              ]
+            },
+            {
+              "text": "Rechts:",
+              "type": "group",
+              "item": [
+                {
+                  "text": "im proximalen Drittels",
+                  "type": "boolean"
+                },
+                {
+                  "text": "im mittleren Drittel",
+                  "type": "boolean"
+                },
+                {
+                  "text": "im distalen Drittel",
+                  "type": "boolean"
+                }
+              ]
+            },
+            {
+              "text": "Seitenvergleich:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "\u2014"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "links f\u00fchrend"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "rechts f\u00fchrend"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "seitengleich"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Bauchorgane:",
+          "type": "string",
+          "initial": [
+            {
+              "valueString": "unauff\u00e4llig"
+            }
+          ]
+        },
+        {
+          "text": "Gef\u00e4\u00dfe:",
+          "type": "string",
+          "initial": [
+            {
+              "valueString": "unauff\u00e4llig"
+            }
+          ]
+        },
+        {
+          "text": "Lymphknoten:",
+          "type": "string",
+          "initial": [
+            {
+              "valueString": "unauff\u00e4llig"
+            }
+          ]
+        },
+        {
+          "text": "Skelett:",
+          "type": "string",
+          "initial": [
+            {
+              "valueString": "unauff\u00e4llig"
+            }
+          ]
+        },
+        {
+          "text": "Basaler Thorax:",
+          "type": "string",
+          "initial": [
+            {
+              "valueString": "unauff\u00e4llig"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Beurteilung",
+      "type": "string",
+      "initial": [
+        {
+          "valueString": "Z. B.: Keine Urolithiasis und kein Harnaufstau. \nODER\nKalziumhaltiges Konkrement im proximalen Ureter links mit \u2026 mm Maximaldurchmesser und vorgeschalteter Harntransportst\u00f6rung des rechten Nierenbeckenkelchsystems und Harnleiters Grad 2.\nOPTIONAL: Differentialdiagnostisch ist ein Phlebolith/arteriosklerotischer Plaque/eine Papillenspitzenverkalkung m\u00f6glich."
+        }
+      ]
+    }
+  ]
+}
