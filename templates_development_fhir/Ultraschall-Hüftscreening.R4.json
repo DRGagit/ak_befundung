@@ -1,0 +1,406 @@
+{
+  "resourceType": "Questionnaire",
+  "title": "Ultraschall Hüftscreening",
+  "status": "draft",
+  "description": "Befundungstemplate zur Befundung von Untersuchungen im Rahmen des Ultraschallscreenings Hüftdysplasie.",
+  "item": [
+    {
+      "type": "string",
+      "linkId": "1051354180146",
+      "text": "Klinische Angaben",
+      "required": true,
+      "repeats": false,
+      "readOnly": false
+    },
+    {
+      "type": "string",
+      "linkId": "8013894581387",
+      "text": "Fragestellung",
+      "required": true,
+      "repeats": false,
+      "readOnly": false
+    },
+    {
+      "item": [
+        {
+          "text": "rechte Hüfte",
+          "type": "group",
+          "item": [
+            {
+              "type": "decimal",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "deg",
+                    "display": "degree - plane angle"
+                  }
+                }
+              ],
+              "linkId": "5736725746066",
+              "text": "alpha-Winkel",
+              "required": true,
+              "repeats": false,
+              "readOnly": false
+            },
+            {
+              "type": "decimal",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "deg",
+                    "display": "degree - plane angle"
+                  }
+                }
+              ],
+              "linkId": "3532952341260",
+              "text": "beta-Winkel",
+              "required": true,
+              "repeats": false,
+              "readOnly": false
+            }
+          ],
+          "linkId": 598896937907
+        },
+        {
+          "text": "linke Hüfte",
+          "type": "group",
+          "item": [
+            {
+              "type": "decimal",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "deg",
+                    "display": "degree - plane angle"
+                  }
+                }
+              ],
+              "linkId": "2497061363603",
+              "text": "alpha-Winkel",
+              "required": true,
+              "repeats": false,
+              "readOnly": false
+            },
+            {
+              "type": "decimal",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "deg",
+                    "display": "degree - plane angle"
+                  }
+                }
+              ],
+              "linkId": "5731770679175",
+              "text": "beta-Winkel",
+              "required": true,
+              "repeats": false,
+              "readOnly": false
+            }
+          ],
+          "linkId": 2560530991500
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down",
+                    "display": "Drop down"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "3388277039869",
+          "text": "Hüfttyp rechts",
+          "required": true,
+          "repeats": false,
+          "readOnly": false,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "-"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Typ Ia - knöcherne Formgebung gut, knöcherner Erker eckig, knorpliger Erker spitz, kopfübergreifend, echoleer, Hüftkopf zentriert"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Typ Ib - knöcherne Formgebung gut, knöcherner Erker eckig, knorpliger Erker spitz, kopfübergreifend, echoleer, Hüftkopf zentriert"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Typ IIa - Kind jünger 3 Monate, knöcherne Formgebung ausreichend, knöcherner Erker abgerundet, knorpliger Erker verbreitert, kopfübergreifend, echoleer, Hüftkopf zentriert"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Typ IIb - Kind älter 3 Monate, knöcherne Formgebung ausreichend, knöcherner Erker abgerundet, knorpliger Erker verbreitert, kopfübergreifend, echoleer, Hüftkopf zentriert"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Typ IIg - knöcherner Erker abgerundet, knorpliger Erker verbreitert, kopfübergreifend, echoleer, Hüftkopf zentriert"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Typ IId - knöcherne Formgebung hochgradig mangelhaft, knorpliger Erker verdrängt"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Typ IIIa - knöcherner Erker abgeflacht, knorpliger Erker verbreitert, nach kranial verdrängt, echoleer, Hüftkopf dezentriert"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Typ IIIb - knöcherner Erker abgeflacht, knorpliger Erker verbreitert, nach kranial verdrängt, echodicht, Hüftkopf dezentriert"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Typ IV - knöcherner Erker flach, knorpliger Erker aufgebraucht, Hüftkopf luxiert"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down",
+                    "display": "Drop down"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "5347506095250",
+          "text": "Hüfttyp links",
+          "required": true,
+          "repeats": false,
+          "readOnly": false,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "-"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Typ Ia - knöcherne Formgebung gut, knöcherner Erker eckig, knorpliger Erker spitz, kopfübergreifend, echoleer, Hüftkopf zentriert"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Typ Ib - knöcherne Formgebung gut, knöcherner Erker eckig, knorpliger Erker spitz, kopfübergreifend, echoleer, Hüftkopf zentriert"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Typ IIa - Kind jünger 3 Monate, knöcherne Formgebung ausreichend, knöcherner Erker abgerundet, knorpliger Erker verbreitert, kopfübergreifend, echoleer, Hüftkopf zentriert"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Typ IIb - Kind älter 3 Monate, knöcherne Formgebung ausreichend, knöcherner Erker abgerundet, knorpliger Erker verbreitert, kopfübergreifend, echoleer, Hüftkopf zentriert"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Typ IIg - knöcherner Erker abgerundet, knorpliger Erker verbreitert, kopfübergreifend, echoleer, Hüftkopf zentriert"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Typ IId - knöcherne Formgebung hochgradig mangelhaft, knorpliger Erker verdrängt"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Typ IIIa - knöcherner Erker abgeflacht, knorpliger Erker verbreitert, nach kranial verdrängt, echoleer, Hüftkopf dezentriert"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Typ IIIb - knöcherner Erker abgeflacht, knorpliger Erker verbreitert, nach kranial verdrängt, echodicht, Hüftkopf dezentriert"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Typ IV - knöcherner Erker flach, knorpliger Erker aufgebraucht, Hüftkopf luxiert"
+              }
+            }
+          ]
+        }
+      ],
+      "type": "group",
+      "linkId": "8853532864770",
+      "text": "Befund"
+    },
+    {
+      "item": [
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down",
+                    "display": "Drop down"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "2675609757285",
+          "text": "Zusammenfassung",
+          "required": true,
+          "repeats": false,
+          "readOnly": false,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "-"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "normale Hüften"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "kontrollbedürftige Verknöcherungsverzögerung"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "therapiebedürftige Verknöcherungsverzögerung"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Subluxation ohne Knorpelumbau"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Subluxation mit Knorpelumbau"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Luxation"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down",
+                    "display": "Drop down"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "5331924887065",
+          "text": "Ergänzendes Röntgen",
+          "required": true,
+          "repeats": false,
+          "readOnly": false,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "-"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "nicht erforderlich"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "erforderlich"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "bereits erfolgt"
+              }
+            }
+          ]
+        },
+        {
+          "type": "string",
+          "linkId": "8957014543234",
+          "text": "Wiedervorstellung",
+          "required": false,
+          "repeats": false,
+          "readOnly": false,
+          "initial": [
+            {
+              "valueString": "-"
+            }
+          ]
+        },
+        {
+          "type": "string",
+          "linkId": "3679810372410",
+          "text": "Therapievorschlag",
+          "required": false,
+          "repeats": false,
+          "readOnly": false,
+          "initial": [
+            {
+              "valueString": "-"
+            }
+          ]
+        },
+        {
+          "type": "string",
+          "linkId": "499810451380",
+          "text": "Bemerkungen"
+        }
+      ],
+      "type": "group",
+      "linkId": "9227601065419",
+      "text": "Beurteilung"
+    }
+  ]
+}

@@ -1,0 +1,798 @@
+{
+  "description": "Einfaches Template zur Befundung von dopplersonographischen Untersuchungen der Carotiden.",
+  "title": "Ultraschall Carotis",
+  "resourceType": "Questionnaire",
+  "status": "draft",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/3.0/StructureDefinition/Questionnaire"
+    ],
+    "tag": [
+      {
+        "code": "lformsVersion: 34.3.0"
+      }
+    ]
+  },
+  "item": [
+    {
+      "type": "string",
+      "required": true,
+      "linkId": "1618573922838",
+      "text": "Klinische Angaben"
+    },
+    {
+      "type": "string",
+      "required": true,
+      "linkId": "1460070922844",
+      "text": "Fragestellung"
+    },
+    {
+      "type": "group",
+      "required": false,
+      "linkId": "8036493240194",
+      "text": "Befund",
+      "item": [
+        {
+          "type": "date",
+          "required": false,
+          "linkId": "5410842751989",
+          "text": "Voruntersuchung:"
+        },
+        {
+          "type": "group",
+          "required": false,
+          "linkId": "4950654903781",
+          "text": "A. carotis communis rechts",
+          "item": [
+            {
+              "type": "decimal",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "code": "m/s",
+                    "display": "meter per second",
+                    "system": "http://unitsofmeasure.org"
+                  }
+                }
+              ],
+              "required": false,
+              "linkId": "9390958326480",
+              "text": "PSV"
+            },
+            {
+              "type": "decimal",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "code": "m/s",
+                    "display": "meter per second",
+                    "system": "http://unitsofmeasure.org"
+                  }
+                }
+              ],
+              "required": false,
+              "linkId": "8830804958248",
+              "text": "EDV"
+            },
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "drop-down",
+                        "display": "Drop down"
+                      }
+                    ],
+                    "text": "Drop down"
+                  }
+                }
+              ],
+              "required": false,
+              "linkId": "7866884661",
+              "text": "Ergänzung",
+              "option": [
+                {
+                  "valueCoding": {
+                    "display": "-"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "keine Auffälligkeiten"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "atheromatöse Plaques"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "required": false,
+          "linkId": "5923610405829",
+          "text": "A. carotis interna rechts",
+          "item": [
+            {
+              "type": "decimal",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "code": "m/s",
+                    "display": "meter per second",
+                    "system": "http://unitsofmeasure.org"
+                  }
+                }
+              ],
+              "required": false,
+              "linkId": "329868633833",
+              "text": "PSV"
+            },
+            {
+              "type": "decimal",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "code": "m/s",
+                    "display": "meter per second",
+                    "system": "http://unitsofmeasure.org"
+                  }
+                }
+              ],
+              "required": false,
+              "linkId": "7280968320029",
+              "text": "EDV"
+            },
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "drop-down",
+                        "display": "Drop down"
+                      }
+                    ],
+                    "text": "Drop down"
+                  }
+                }
+              ],
+              "required": false,
+              "linkId": "1676115264047",
+              "text": "Ergänzungen",
+              "option": [
+                {
+                  "valueCoding": {
+                    "display": "-"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "keine Auffälligkeiten"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "atheromatöse Plaques"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "required": false,
+          "linkId": "6478747922347",
+          "text": "A. carotis externa rechts",
+          "item": [
+            {
+              "type": "decimal",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "code": "m/s",
+                    "display": "meter per second",
+                    "system": "http://unitsofmeasure.org"
+                  }
+                }
+              ],
+              "required": false,
+              "linkId": "1177174213375",
+              "text": "PSV"
+            },
+            {
+              "type": "decimal",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "code": "m/s",
+                    "display": "meter per second",
+                    "system": "http://unitsofmeasure.org"
+                  }
+                }
+              ],
+              "required": false,
+              "linkId": "8910227988551",
+              "text": "EDV"
+            },
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "drop-down",
+                        "display": "Drop down"
+                      }
+                    ],
+                    "text": "Drop down"
+                  }
+                }
+              ],
+              "required": false,
+              "linkId": "1613558109561",
+              "text": "Ergänzungen",
+              "option": [
+                {
+                  "valueCoding": {
+                    "display": "-"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "keine Auffälligkeiten"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "atheromatöse Plaques"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "required": false,
+          "linkId": "2810134519870",
+          "text": "A. vertebralis rechts",
+          "item": [
+            {
+              "type": "decimal",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "code": "m/s",
+                    "display": "meter per second",
+                    "system": "http://unitsofmeasure.org"
+                  }
+                }
+              ],
+              "required": false,
+              "linkId": "9453543847638",
+              "text": "PSV"
+            },
+            {
+              "type": "decimal",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "code": "m/s",
+                    "display": "meter per second",
+                    "system": "http://unitsofmeasure.org"
+                  }
+                }
+              ],
+              "required": false,
+              "linkId": "4452525892273",
+              "text": "EDV"
+            },
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "drop-down",
+                        "display": "Drop down"
+                      }
+                    ],
+                    "text": "Drop down"
+                  }
+                }
+              ],
+              "required": false,
+              "linkId": "5634471294635",
+              "text": "Ergänzungen",
+              "option": [
+                {
+                  "valueCoding": {
+                    "display": "-"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "kein Fluss"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "antegrader Fluss"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "retrograder Fluss"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "required": false,
+          "linkId": "2470833000596",
+          "text": "A. carotis communis links",
+          "item": [
+            {
+              "type": "decimal",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "code": "m/s",
+                    "display": "meter per second",
+                    "system": "http://unitsofmeasure.org"
+                  }
+                }
+              ],
+              "required": false,
+              "linkId": "3283021666939",
+              "text": "PSV"
+            },
+            {
+              "type": "decimal",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "code": "m/s",
+                    "display": "meter per second",
+                    "system": "http://unitsofmeasure.org"
+                  }
+                }
+              ],
+              "required": false,
+              "linkId": "8981540691350",
+              "text": "EDV"
+            },
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "drop-down",
+                        "display": "Drop down"
+                      }
+                    ],
+                    "text": "Drop down"
+                  }
+                }
+              ],
+              "required": false,
+              "linkId": "5136288437890",
+              "text": "Ergänzungen",
+              "option": [
+                {
+                  "valueCoding": {
+                    "display": "-"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "0"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "1"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "required": false,
+          "linkId": "1502274839509",
+          "text": "A. carotis interna links",
+          "item": [
+            {
+              "type": "decimal",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "code": "m/s",
+                    "display": "meter per second",
+                    "system": "http://unitsofmeasure.org"
+                  }
+                }
+              ],
+              "required": false,
+              "linkId": "4471376614346",
+              "text": "PSV"
+            },
+            {
+              "type": "decimal",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "code": "m/s",
+                    "display": "meter per second",
+                    "system": "http://unitsofmeasure.org"
+                  }
+                }
+              ],
+              "required": false,
+              "linkId": "7018633955971",
+              "text": "EDV"
+            },
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "drop-down",
+                        "display": "Drop down"
+                      }
+                    ],
+                    "text": "Drop down"
+                  }
+                }
+              ],
+              "required": false,
+              "linkId": "8128386644073",
+              "text": "Ergänzungen",
+              "option": [
+                {
+                  "valueCoding": {
+                    "display": "-"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "keine Auffälligkeiten"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "atheromatöse Plaques"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "required": false,
+          "linkId": "3849460103383",
+          "text": "A. carotis externa links",
+          "item": [
+            {
+              "type": "decimal",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "code": "m/s",
+                    "display": "meter per second",
+                    "system": "http://unitsofmeasure.org"
+                  }
+                }
+              ],
+              "required": false,
+              "linkId": "329763769374",
+              "text": "PSV"
+            },
+            {
+              "type": "decimal",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "code": "m/s",
+                    "display": "meter per second",
+                    "system": "http://unitsofmeasure.org"
+                  }
+                }
+              ],
+              "required": false,
+              "linkId": "8427808006093",
+              "text": "EDV"
+            },
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "drop-down",
+                        "display": "Drop down"
+                      }
+                    ],
+                    "text": "Drop down"
+                  }
+                }
+              ],
+              "required": false,
+              "linkId": "7984601910543",
+              "text": "Ergänzungen",
+              "option": [
+                {
+                  "valueCoding": {
+                    "display": "-"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "keine Auffälligkeiten"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "atheromatöse Plaques"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "required": false,
+          "linkId": "749505680194",
+          "text": "A. vertebralis links",
+          "item": [
+            {
+              "type": "decimal",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "code": "m/s",
+                    "display": "meter per second",
+                    "system": "http://unitsofmeasure.org"
+                  }
+                }
+              ],
+              "required": false,
+              "linkId": "8233514082626",
+              "text": "PSV"
+            },
+            {
+              "type": "decimal",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "code": "m/s",
+                    "display": "meter per second",
+                    "system": "http://unitsofmeasure.org"
+                  }
+                }
+              ],
+              "required": false,
+              "linkId": "2584033186860",
+              "text": "EDV"
+            },
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "drop-down",
+                        "display": "Drop down"
+                      }
+                    ],
+                    "text": "Drop down"
+                  }
+                }
+              ],
+              "required": false,
+              "linkId": "6002616383905",
+              "text": "Ergänzungen",
+              "option": [
+                {
+                  "valueCoding": {
+                    "display": "-"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "kein Fluss"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "antegrader Fluss"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "retrograder Fluss"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "required": false,
+      "linkId": "1904438269361",
+      "text": "Beurteilung",
+      "item": [
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down",
+                    "display": "Drop down"
+                  }
+                ],
+                "text": "Drop down"
+              }
+            }
+          ],
+          "required": false,
+          "linkId": "1335956814284",
+          "text": "A. carotis interna rechts",
+          "option": [
+            {
+              "valueCoding": {
+                "display": "-"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "keine relevante Stenose"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "50% bis 59%"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "60% bis 69%"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "über 70%"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "vollständiger Verschluss"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down",
+                    "display": "Drop down"
+                  }
+                ],
+                "text": "Drop down"
+              }
+            }
+          ],
+          "required": false,
+          "linkId": "6822875020383",
+          "text": "A. carotis interna links",
+          "option": [
+            {
+              "valueCoding": {
+                "display": "-"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "keine relevante Stenose"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "50% bis 59%"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "60% bis 69%"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "über 70%"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "vollständiger Verschluss"
+              }
+            }
+          ]
+        },
+        {
+          "type": "string",
+          "required": false,
+          "linkId": "1045065134052",
+          "text": "Bemerkungen"
+        }
+      ]
+    }
+  ]
+}
