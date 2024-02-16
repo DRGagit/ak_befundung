@@ -1,0 +1,643 @@
+{
+  "resourceType": "Questionnaire",
+  "title": "CT TAVI-Evaluation",
+  "status": "draft",
+  "description": "Template zur Befundung von CT TAVI-Evaluationen",
+  "item": [
+    {
+      "item": [
+        {
+          "type": "string",
+          "linkId": "2594305429755",
+          "text": "Angaben Text",
+          "required": true,
+          "repeats": false,
+          "readOnly": false
+        },
+        {
+          "type": "integer",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+              "valueCoding": {
+                "system": "http://unitsofmeasure.org",
+                "code": "/min",
+                "display": "per minute"
+              }
+            }
+          ],
+          "linkId": "2854363800544",
+          "text": "Mittlere Herzfrequenz:",
+          "required": false,
+          "repeats": false,
+          "readOnly": false
+        },
+        {
+          "type": "string",
+          "linkId": "9726821760444",
+          "text": "EKG-Befund/Kommentar:",
+          "required": false,
+          "repeats": false,
+          "readOnly": false
+        }
+      ],
+      "type": "group",
+      "linkId": "2773812218135",
+      "text": "Klinische Angaben",
+      "required": false,
+      "repeats": false,
+      "readOnly": false
+    },
+    {
+      "type": "string",
+      "linkId": "1980646837143",
+      "text": "Klinische Fragestellung",
+      "required": false,
+      "repeats": false,
+      "readOnly": false
+    },
+    {
+      "item": [
+        {
+          "item": [
+            {
+              "type": "decimal",
+              "linkId": "6091681797143",
+              "text": "Nitro sublingual [Hübe]:",
+              "required": true,
+              "repeats": false,
+              "readOnly": false
+            },
+            {
+              "type": "decimal",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "mg",
+                    "display": "milligram"
+                  }
+                }
+              ],
+              "linkId": "8684589581347",
+              "text": "Metoprolol zur Frequenzkontrolle:",
+              "required": false,
+              "repeats": false,
+              "readOnly": false,
+              "initial": [
+                {
+                  "valueDecimal": "0"
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "linkId": "1446984662648",
+              "text": "Sonstiges:",
+              "required": false,
+              "repeats": false,
+              "readOnly": false
+            }
+          ],
+          "type": "group",
+          "linkId": "4634003362131",
+          "text": "Prämedikation",
+          "required": false,
+          "repeats": false,
+          "readOnly": false
+        },
+        {
+          "type": "text",
+          "linkId": "4082947631011",
+          "text": "Technik:",
+          "required": false,
+          "repeats": false,
+          "readOnly": false,
+          "initial": [
+            {
+              "valueString": "Standard retrospektives Gating.\nHerzphase:\nNachbearbeitung:\n3D-Rekonstruktion, 4D-Rekonstruktion und separate koronare MPRs."
+            }
+          ]
+        }
+      ],
+      "type": "group",
+      "linkId": "6959718284422",
+      "text": "Methodik"
+    },
+    {
+      "text": "Befund",
+      "type": "group",
+      "item": [
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down",
+                    "display": "Drop down"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "9233048481105",
+          "text": "Qualität",
+          "required": false,
+          "repeats": false,
+          "readOnly": false,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "gut"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "ausreichend"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "eingeschränkt"
+              }
+            }
+          ]
+        },
+        {
+          "item": [
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "drop-down",
+                        "display": "Drop down"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "1741371109882",
+              "text": "Rechter Vorhof - Morphologie:",
+              "required": false,
+              "repeats": false,
+              "readOnly": false,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "-"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "normal"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "dilatiert"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "linkId": "3140961112893",
+              "text": "Rechter Vorhof - Bemerkungen:",
+              "required": false,
+              "repeats": false,
+              "readOnly": false
+            },
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "drop-down",
+                        "display": "Drop down"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "4728691837738",
+              "text": "Rechter Ventrikel - Morphologie:",
+              "required": false,
+              "repeats": false,
+              "readOnly": false,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "-"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "normal"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "dilatiert"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "linkId": "9977111602856",
+              "text": "Rechter Ventrikel - Bemerkungen:",
+              "required": false,
+              "repeats": false,
+              "readOnly": false
+            },
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "drop-down",
+                        "display": "Drop down"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "3069536620802",
+              "text": "Linker Vorhof - Morphologie:",
+              "required": false,
+              "repeats": false,
+              "readOnly": false,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "-"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "normal"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "dilatiert"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "linkId": "3780646666381",
+              "text": "Linker Vorhof - Bemerkungen",
+              "required": false,
+              "repeats": false,
+              "readOnly": false
+            },
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "drop-down",
+                        "display": "Drop down"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "1249554548532",
+              "text": "Linker Ventrikel - Morphologie:",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "-"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "normal"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "dilatiert"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "linkId": "7106496704889",
+              "text": "Linker Ventrikel - Bemerkungen",
+              "required": false,
+              "repeats": false,
+              "readOnly": false
+            },
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "drop-down",
+                        "display": "Drop down"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "4738437222179",
+              "text": "Herzschrittmacher/ICD",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "-"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "ja"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "linkId": "2711859717694",
+              "text": "Herzschrittmacher/ICD - Bemerkungen",
+              "required": false,
+              "repeats": false,
+              "readOnly": false
+            }
+          ],
+          "type": "group",
+          "linkId": "5396835722733",
+          "text": "Herzmorphologie"
+        },
+        {
+          "type": "string",
+          "linkId": "1619827743345",
+          "text": "Koronararterien:"
+        },
+        {
+          "text": "Thorax:",
+          "type": "string",
+          "linkId": 8236628600297
+        },
+        {
+          "text": "Abdomen:",
+          "type": "string",
+          "linkId": 6719773932210
+        },
+        {
+          "text": "Skelett:",
+          "type": "string",
+          "linkId": 2190462043632
+        },
+        {
+          "text": "Weitere Bemerkungen:",
+          "type": "string",
+          "linkId": 9755558121549
+        }
+      ],
+      "linkId": 5515080471227
+    },
+    {
+      "text": "Beurteilung",
+      "type": "group",
+      "item": [
+        {
+          "item": [
+            {
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "mm",
+                    "display": "mm"
+                  }
+                }
+              ],
+              "linkId": "8812369624469",
+              "text": "Annulus:",
+              "required": true,
+              "repeats": false,
+              "readOnly": false
+            },
+            {
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "mm",
+                    "display": "mm"
+                  }
+                }
+              ],
+              "linkId": "5358822934156",
+              "text": "Mittlerer Durchmesser:",
+              "required": true,
+              "repeats": false,
+              "readOnly": false
+            },
+            {
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "mm2",
+                    "display": "mm2"
+                  }
+                }
+              ],
+              "linkId": "851378402566",
+              "text": "Fläche:",
+              "required": true,
+              "repeats": false,
+              "readOnly": false
+            },
+            {
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "mm",
+                    "display": "mm"
+                  }
+                }
+              ],
+              "linkId": "6377266601611",
+              "text": "Abstand zum Abgang der RCA:",
+              "required": true,
+              "repeats": false,
+              "readOnly": false
+            },
+            {
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "mm",
+                    "display": "mm"
+                  }
+                }
+              ],
+              "linkId": "923781685188",
+              "text": "Abstand zum Abgang der LCA:",
+              "required": true,
+              "repeats": false,
+              "readOnly": false
+            }
+          ],
+          "type": "group",
+          "linkId": "2636380197740",
+          "text": "Anulus Messungen:",
+          "required": false,
+          "repeats": false,
+          "readOnly": false
+        },
+        {
+          "item": [
+            {
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "deg",
+                    "display": "deg"
+                  }
+                }
+              ],
+              "linkId": "7537128539664",
+              "text": "RAO:",
+              "required": true,
+              "repeats": false,
+              "readOnly": false
+            },
+            {
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "deg",
+                    "display": "deg"
+                  }
+                }
+              ],
+              "linkId": "4824057979260",
+              "text": "Caudal:",
+              "required": true,
+              "repeats": false,
+              "readOnly": false
+            }
+          ],
+          "type": "group",
+          "linkId": "6056902115389",
+          "text": "Annulus Angulation:",
+          "required": false,
+          "repeats": false,
+          "readOnly": false
+        },
+        {
+          "item": [
+            {
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "mm",
+                    "display": "mm"
+                  }
+                }
+              ],
+              "linkId": "7906199720672",
+              "text": "Rechts iliofemoral minimal:",
+              "required": true,
+              "repeats": false,
+              "readOnly": false
+            },
+            {
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "mm",
+                    "display": "mm"
+                  }
+                }
+              ],
+              "linkId": "4735712426793",
+              "text": "Links iliofemoral minimal:",
+              "required": true,
+              "repeats": false,
+              "readOnly": false
+            }
+          ],
+          "type": "group",
+          "linkId": "1454434696369",
+          "text": "Arterieller Zugangsweg:",
+          "required": false,
+          "repeats": false,
+          "readOnly": false
+        },
+        {
+          "type": "string",
+          "linkId": "6654656584316",
+          "text": "Sonstiges:",
+          "required": false,
+          "repeats": false,
+          "readOnly": false
+        }
+      ],
+      "linkId": 4343779168983
+    }
+  ]
+}

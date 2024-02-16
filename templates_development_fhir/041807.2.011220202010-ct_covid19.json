@@ -1,0 +1,972 @@
+{
+  "resourceType": "Questionnaire",
+  "title": "CT-Thorax COVID-19",
+  "description": "Template zur Befundung einer CT-Thorax bei COVID-19",
+  "item": [
+    {
+      "item": [
+        {
+          "type": "string",
+          "linkId": "544299715960",
+          "text": "Angaben Text",
+          "required": true,
+          "repeats": false,
+          "readOnly": false
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down",
+                    "display": "Drop down"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "7382707591126",
+          "text": "Aufnahme-Status",
+          "required": true,
+          "repeats": false,
+          "readOnly": false,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Intensivstation"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Stationär"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Notaufnahme"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Ambulant"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Unbekannt"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down",
+                    "display": "Drop down"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "3797435237935",
+          "text": "Intubiert",
+          "required": false,
+          "repeats": false,
+          "readOnly": false,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "nein"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "ja"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down",
+                    "display": "Drop down"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "6329707234844",
+          "text": "COVID-PCR Status",
+          "required": false,
+          "repeats": false,
+          "readOnly": false,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "positiv"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "negativ"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "unbekannt"
+              }
+            }
+          ]
+        },
+        {
+          "type": "date",
+          "linkId": "7631316753593",
+          "text": "COVID-PCR Datum",
+          "required": false,
+          "repeats": false,
+          "readOnly": false
+        }
+      ],
+      "type": "group",
+      "linkId": "3432459875905",
+      "text": "Klinische Angaben",
+      "required": false,
+      "repeats": false,
+      "readOnly": false
+    },
+    {
+      "type": "string",
+      "linkId": "7863071815507",
+      "text": "Fragestellung",
+      "required": true,
+      "repeats": false,
+      "readOnly": false
+    },
+    {
+      "text": "Befund",
+      "type": "group",
+      "item": [
+        {
+          "type": "date",
+          "linkId": "8430659487711",
+          "text": "Vergleichsuntersuchung",
+          "required": false,
+          "repeats": false,
+          "readOnly": false
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down",
+                    "display": "Drop down"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "2078980068533",
+          "text": "CT-Protokoll",
+          "required": true,
+          "repeats": false,
+          "readOnly": false,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "CT Thorax Low-dose ohne KM"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "CT Thorax Full-dose ohne KM"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "CT Thorax nativ und KM"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "CT Thorax mit KM (keine native Phase verfügbar)"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "CT Thorax-Abdomen mit KM (keine native Phase Thorax)"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "CT Thorax-Abdomen nativ"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "CT Thorax Pulmonalisangiographie"
+              }
+            }
+          ]
+        },
+        {
+          "item": [
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "drop-down",
+                        "display": "Drop down"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "1705591257278",
+              "text": "Milchglastrübung",
+              "required": false,
+              "repeats": false,
+              "readOnly": false,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "-"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Keine"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Multiple/Multifokal"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Einzeln"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Diffuse Verteilung"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "drop-down",
+                        "display": "Drop down"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "421829060053",
+              "text": "Dominantes Milchglasmuster",
+              "required": false,
+              "repeats": false,
+              "readOnly": false,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "-"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Mosaikmuster"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Crazy-paving Muster"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Reverse Halo/Atoll-Zeichen"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "nur Milchglas"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "drop-down",
+                        "display": "Drop down"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "2023192936029",
+              "text": "Morphologie der Milchglastrübungen",
+              "required": false,
+              "repeats": false,
+              "readOnly": false,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "-"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "rundlich/geographisch"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "nicht rundlich/geographisch"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "konfluierend/diffus"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "drop-down",
+                        "display": "Drop down"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "2523620285787",
+              "text": "Verteilungsmuster der Milchglastrübungen",
+              "required": false,
+              "repeats": false,
+              "readOnly": false,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "-"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "peripher"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "zentral"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "multifokal ohne spezifische Verteilung"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "multifokal in folgender Verteilung"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "drop-down",
+                        "display": "Drop down"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "7071688267820",
+              "text": "Seiten-Ausprägung der Milchglastrübungen",
+              "required": false,
+              "repeats": false,
+              "readOnly": false,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "-"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "bilateral"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "links"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "rechts"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "drop-down",
+                        "display": "Drop down"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "8492102029431",
+              "text": "Dominates Lungenfeld der Milchglastrübungen",
+              "required": false,
+              "repeats": false,
+              "readOnly": false,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "-"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "kein dominantes Lungenfeld"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "alle Felder vergleichbar betroffen"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "oben"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "mitte"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "unten"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "drop-down",
+                        "display": "Drop down"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "2188552713058",
+              "text": "Ausdehnung/Severity des Lungenbefalls quantitativ",
+              "required": false,
+              "repeats": false,
+              "readOnly": false,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "-"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "leicht (weniger als 3 Milchglasareale, diese kleiner als 3 cm)"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "mittelgradig (mehr als 3 Milchglasareale oder Größe > 3 cm; Konsolidierungen)"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "ausgeprägt (diffuse Milchglasverteilung, organisierende Pneumonie, Coexistenz mit anderen Lungenerkrankungen)"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "drop-down",
+                        "display": "Drop down"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "7869907818146",
+              "text": "Konsolidierungs-Muster",
+              "required": false,
+              "repeats": false,
+              "readOnly": false,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "-"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "keine Konsolidierungen"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Konsolidierungen lobär (Lobärpneumonie)"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Konsolidierungen segmental"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Konsolidierungen peribronchial"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "unspezifische Konsolidierungen"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "drop-down",
+                        "display": "Drop down"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "8942255069386",
+              "text": "Konsolidierungs-Morphologie",
+              "required": false,
+              "repeats": false,
+              "readOnly": false,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "-"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "rundlich"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "sonstige"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "drop-down",
+                        "display": "Drop down"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "5766303235943",
+              "text": "Zentrilobuläre Noduli/Tree in bud",
+              "required": false,
+              "repeats": false,
+              "readOnly": false,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "-"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "ja"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "drop-down",
+                        "display": "Drop down"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "3517986713145",
+              "text": "Lungengerüstveränderungen",
+              "required": false,
+              "repeats": false,
+              "readOnly": false,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "-"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "ja"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "nein"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "linkId": "9052414924249",
+              "text": "Bemerkungen",
+              "required": false,
+              "repeats": false,
+              "readOnly": false
+            }
+          ],
+          "type": "group",
+          "linkId": "5639696142277",
+          "text": "Lungenparenchym/Atemwege",
+          "required": false,
+          "repeats": false,
+          "readOnly": false
+        },
+        {
+          "item": [
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "drop-down",
+                        "display": "Drop down"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "5278752294373",
+              "text": "Pleuraerguss links",
+              "required": false,
+              "repeats": false,
+              "readOnly": false,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "-"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "liegt nicht vor"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "kleinvolumig [≤1cm]"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "großvolumig [>1cm]"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "drop-down",
+                        "display": "Drop down"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "6689436844654",
+              "text": "Pleuraerguss rechts",
+              "required": false,
+              "repeats": false,
+              "readOnly": false,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "-"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "liegt nicht vor"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "kleinvolumig [≤1cm]"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "großvolumig [>1cm]"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "drop-down",
+                        "display": "Drop down"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "6203438191726",
+              "text": "Lymphknoten",
+              "required": false,
+              "repeats": false,
+              "readOnly": false,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "-"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Keine Lymphknotenvergrößerung"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Hiläre Lymphadenopathie"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Mediastinale Lymphadenopathie"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Generalisierte Lymphadenopathie"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "linkId": "6298037404893",
+              "text": "Sonstiges"
+            }
+          ],
+          "type": "group",
+          "linkId": "9912655602530",
+          "text": "Weitere Befunde",
+          "required": false,
+          "repeats": false,
+          "readOnly": false
+        }
+      ],
+      "linkId": 3685765890284
+    },
+    {
+      "item": [
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down",
+                    "display": "Drop down"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "324035663918",
+          "text": "Klassifikation des Lungenbefalls",
+          "required": false,
+          "repeats": false,
+          "readOnly": false,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "-"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "1. [Cov19Typ] CT-Veränderungen suggestiv für COVID-19 Pneumonie (bei hoher lokaler Prävalenz und/oder individueller Prätest-Wahrscheinlichkeit)"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "2. [Cov19Ind] CT-Veränderungen unklar, COVID-19 Pneumonie jedoch möglich"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "3. [Cov19Aty] CT-Veränderungen suggestiv für eine alternative Diagnose (z.B. bakterielles Erregerspektrum)"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "4. [Cov19Neg] CT-morphologisch kein Hinweis auf pneumonische Verdichtungen"
+              }
+            }
+          ]
+        },
+        {
+          "type": "string",
+          "linkId": "124087199125",
+          "text": "Bemerkungen"
+        }
+      ],
+      "type": "group",
+      "linkId": "3575938454975",
+      "text": "Beurteilung"
+    }
+  ]
+}
