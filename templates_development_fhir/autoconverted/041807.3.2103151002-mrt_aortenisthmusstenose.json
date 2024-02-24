@@ -1,0 +1,1382 @@
+{
+  "resourceType": "Questionnaire",
+  "title": "MRT Aortenisthmusstenose",
+  "item": [
+    {
+      "text": "Klinische Angaben",
+      "type": "group",
+      "item": [
+        {
+          "text": "",
+          "type": "string"
+        },
+        {
+          "text": "Patientencharakteristik",
+          "type": "group",
+          "item": [
+            {
+              "text": "Geschlecht:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "W"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "M"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "O"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "K\u00f6rpergr\u00f6\u00dfe:",
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "kg",
+                    "display": "kg"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "m",
+                    "display": "m"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "K\u00f6rperoberfl\u00e4che (BSA):",
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "m2",
+                    "display": "m2"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "2",
+              "type": "group",
+              "item": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Klinische Fragestellung",
+      "type": "string"
+    },
+    {
+      "text": "Methodik",
+      "type": "group",
+      "item": [
+        {
+          "text": "Flussdichte:",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "\u2014"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "1.5 T"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "3 T"
+              }
+            }
+          ]
+        },
+        {
+          "text": "MR-Protokoll:",
+          "type": "string",
+          "initial": [
+            {
+              "valueString": "Sequenzen und Ebenen:"
+            }
+          ]
+        },
+        {
+          "text": "Auswertesoftware:",
+          "type": "string",
+          "initial": [
+            {
+              "valueString": "(Name und Version)"
+            }
+          ]
+        },
+        {
+          "text": "Kontrastmittel",
+          "type": "group",
+          "item": [
+            {
+              "text": "Name:",
+              "type": "string"
+            },
+            {
+              "text": "Menge:",
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "ml",
+                    "display": "ml"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Flussgeschwindigkeit:",
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "ml/s",
+                    "display": "ml/s"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Befund",
+      "type": "group",
+      "item": [
+        {
+          "text": "Vergleichsuntersuchung:",
+          "type": "group",
+          "item": [
+            {
+              "text": "",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "keine"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "vorliegend"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "date"
+            }
+          ]
+        },
+        {
+          "text": "Bildqualit\u00e4t:",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "gut"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "ausreichend"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "eingeschr\u00e4nkt"
+              }
+            }
+          ]
+        },
+        {
+          "text": "",
+          "type": "string"
+        },
+        {
+          "text": "Quelle der Normwerte:",
+          "type": "string"
+        },
+        {
+          "text": "Messwerte Aorta",
+          "type": "group",
+          "item": [
+            {
+              "text": "Sinus valsalvae (2 Ebenen):",
+              "type": "group",
+              "item": [
+                {
+                  "text": "",
+                  "type": "integer",
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                      "valueCoding": {
+                        "system": "http://unitsofmeasure.org",
+                        "code": "mm",
+                        "display": "mm"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "text": "",
+                  "type": "integer",
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                      "valueCoding": {
+                        "system": "http://unitsofmeasure.org",
+                        "code": "mm",
+                        "display": "mm"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "text": "Sinutubul\u00e4rer \u00dcbergang (2 Ebenen):",
+              "type": "group",
+              "item": [
+                {
+                  "text": "",
+                  "type": "integer",
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                      "valueCoding": {
+                        "system": "http://unitsofmeasure.org",
+                        "code": "mm",
+                        "display": "mm"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "text": "",
+                  "type": "integer",
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                      "valueCoding": {
+                        "system": "http://unitsofmeasure.org",
+                        "code": "mm",
+                        "display": "mm"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "text": "Aorta ascendens (H\u00f6he PA-Bifurkation):",
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "mm",
+                    "display": "mm"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Proximaler Aortenbogen (vor TBC)",
+              "type": "group",
+              "item": [
+                {
+                  "text": "min:",
+                  "type": "integer",
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                      "valueCoding": {
+                        "system": "http://unitsofmeasure.org",
+                        "code": "mm",
+                        "display": "mm"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "text": "max:",
+                  "type": "integer",
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                      "valueCoding": {
+                        "system": "http://unitsofmeasure.org",
+                        "code": "mm",
+                        "display": "mm"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "text": "Mittlerer Aortenbogen (TBC \u2013 ACC sin.)",
+              "type": "group",
+              "item": [
+                {
+                  "text": "min:",
+                  "type": "integer",
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                      "valueCoding": {
+                        "system": "http://unitsofmeasure.org",
+                        "code": "mm",
+                        "display": "mm"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "text": "max:",
+                  "type": "integer",
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                      "valueCoding": {
+                        "system": "http://unitsofmeasure.org",
+                        "code": "mm",
+                        "display": "mm"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "text": "Distaler Aortenbogen (ACC sin. \u2013 ASS)",
+              "type": "group",
+              "item": [
+                {
+                  "text": "min:",
+                  "type": "integer",
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                      "valueCoding": {
+                        "system": "http://unitsofmeasure.org",
+                        "code": "mm",
+                        "display": "mm"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "text": "max:",
+                  "type": "integer",
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                      "valueCoding": {
+                        "system": "http://unitsofmeasure.org",
+                        "code": "mm",
+                        "display": "mm"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "text": "Isthmus",
+              "type": "group",
+              "item": [
+                {
+                  "text": "min:",
+                  "type": "integer",
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                      "valueCoding": {
+                        "system": "http://unitsofmeasure.org",
+                        "code": "mm",
+                        "display": "mm"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "text": "max:",
+                  "type": "integer",
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                      "valueCoding": {
+                        "system": "http://unitsofmeasure.org",
+                        "code": "mm",
+                        "display": "mm"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "text": "Aorta descendens (H\u00f6he PA-Bifurkation):",
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "mm",
+                    "display": "mm"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Aorta descendens (H\u00f6he Zwerchfell):",
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "mm",
+                    "display": "mm"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "F\u00fcr die Messungen verwendete Sequenzen:",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "text": "Aorten-Morphologie",
+          "type": "group",
+          "item": [
+            {
+              "text": "Stenose(n):",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "\u2014"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Ja"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "string"
+            },
+            {
+              "text": "Aneurysma:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "\u2014"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Ja"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "string"
+            },
+            {
+              "text": "Dissektionshinweise:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "\u2014"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Ja"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "string"
+            },
+            {
+              "text": "Aortenbogenhypoplasie:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "\u2014"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Ja"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "string"
+            },
+            {
+              "text": "Kinking:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "\u2014"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Ja"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "string"
+            },
+            {
+              "text": "Stent:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "\u2014"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Ja"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "string"
+            },
+            {
+              "text": "Anomalien supraaortaler Gef\u00e4\u00dfe:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "\u2014"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Ja"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "string"
+            },
+            {
+              "text": "PDA (Ductus arteriosus apertus):",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "\u2014"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Ja"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "string"
+            },
+            {
+              "text": "Kollateralen:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "\u2014"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Ja"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "text": "Linksventrikul\u00e4rer Ausflusstrakt und Aortenklappe",
+          "type": "group",
+          "item": [
+            {
+              "text": "LVOT Diameter (2 Ebenen):",
+              "type": "group",
+              "item": [
+                {
+                  "text": "",
+                  "type": "integer",
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                      "valueCoding": {
+                        "system": "http://unitsofmeasure.org",
+                        "code": "mm",
+                        "display": "mm"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "text": "",
+                  "type": "integer",
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                      "valueCoding": {
+                        "system": "http://unitsofmeasure.org",
+                        "code": "mm",
+                        "display": "mm"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "text": "Annulus (2 Ebenen):",
+              "type": "group",
+              "item": [
+                {
+                  "text": "",
+                  "type": "integer",
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                      "valueCoding": {
+                        "system": "http://unitsofmeasure.org",
+                        "code": "mm",
+                        "display": "mm"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "text": "",
+                  "type": "integer",
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                      "valueCoding": {
+                        "system": "http://unitsofmeasure.org",
+                        "code": "mm",
+                        "display": "mm"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "text": "Kollateralen:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "\u2014"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "trikuspide"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "bikuspide"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "string"
+            },
+            {
+              "text": "Aortenklappenfunktion:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "\u2014"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "normal"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "pathologisch"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "text": "(optional)",
+          "type": "group",
+          "item": [
+            {
+              "text": "Aorta ascendens",
+              "type": "group",
+              "item": [
+                {
+                  "text": "Schlagvolumen eff.:",
+                  "type": "integer",
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                      "valueCoding": {
+                        "system": "http://unitsofmeasure.org",
+                        "code": "ml",
+                        "display": "ml"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "text": "Cardiac Index:",
+                  "type": "integer",
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                      "valueCoding": {
+                        "system": "http://unitsofmeasure.org",
+                        "code": "l/min/m2",
+                        "display": "l/min/m2"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "text": "2",
+                  "type": "group",
+                  "item": []
+                },
+                {
+                  "text": "",
+                  "type": "integer",
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                      "valueCoding": {
+                        "system": "http://unitsofmeasure.org",
+                        "code": "m/s",
+                        "display": "m/s"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "text": "Regurgitationsfraktion:",
+                  "type": "integer",
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                      "valueCoding": {
+                        "system": "http://unitsofmeasure.org",
+                        "code": "%",
+                        "display": "%"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "text": "Auf H\u00f6he ISTA",
+              "type": "group",
+              "item": [
+                {
+                  "text": "",
+                  "type": "integer",
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                      "valueCoding": {
+                        "system": "http://unitsofmeasure.org",
+                        "code": "m/s",
+                        "display": "m/s"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "text": "Diastolischer antegrader Fluss:",
+                  "type": "integer",
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                      "valueCoding": {
+                        "system": "http://unitsofmeasure.org",
+                        "code": "l/min",
+                        "display": "l/min"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "text": "Kollateralfluss",
+              "type": "group",
+              "item": [
+                {
+                  "text": "Cardiac Index vor ISTA:",
+                  "type": "integer",
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                      "valueCoding": {
+                        "system": "http://unitsofmeasure.org",
+                        "code": "l/min/m2",
+                        "display": "l/min/m2"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "text": "2",
+                  "type": "group",
+                  "item": []
+                },
+                {
+                  "text": "Cardiac Index auf H\u00f6he Zwechfell:",
+                  "type": "integer",
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                      "valueCoding": {
+                        "system": "http://unitsofmeasure.org",
+                        "code": "l/min/m2",
+                        "display": "l/min/m2"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "text": "2",
+                  "type": "group",
+                  "item": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Morphologie und Funktionsanalyse",
+          "type": "group",
+          "item": [
+            {
+              "text": "LV enddiastolischer Diameter (LV EDD):",
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "mm",
+                    "display": "mm"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "LV enddiastolischer Volumenindex (LV EDVi):",
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "ml/m2",
+                    "display": "ml/m2"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "2",
+              "type": "group",
+              "item": []
+            },
+            {
+              "text": "LV endsystolischer Volumenindex (LV ESVi):",
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "ml/m2",
+                    "display": "ml/m2"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "2",
+              "type": "group",
+              "item": []
+            },
+            {
+              "text": "LV Ejektionsfraktion (LV EF):",
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "%",
+                    "display": "%"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "LV ED Masse normiert:",
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "g/m2",
+                    "display": "g/m2"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "2",
+              "type": "group",
+              "item": []
+            },
+            {
+              "text": "LV Regionale Wandbewegungsst\u00f6rung:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "\u2014"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Ja"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "string"
+            },
+            {
+              "text": "(optional)",
+              "type": "group",
+              "item": []
+            },
+            {
+              "text": "RV enddiastolischer Diameter (RV EDD im 4KB):",
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "mm",
+                    "display": "mm"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "RV enddiastolischer Volumenindex (RV EDVi):",
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "ml/m2",
+                    "display": "ml/m2"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "2",
+              "type": "group",
+              "item": []
+            },
+            {
+              "text": "RV endsystolischer Volumenindex (RV ESVi):",
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "ml/m2",
+                    "display": "ml/m2"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "2",
+              "type": "group",
+              "item": []
+            },
+            {
+              "text": "RV Ejektionsfraktion:",
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "%",
+                    "display": "%"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "RV Regionale Wandbewegungsst\u00f6rung:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "\u2014"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Ja"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "text": "Vorhof",
+          "type": "group",
+          "item": [
+            {
+              "text": "Vorhofgr\u00f6\u00dfe visuell:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "\u2014"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "normal gro\u00df"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "pathologisch"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "string"
+            },
+            {
+              "text": "LA im Vierkammerblick longitudinal:",
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "mm",
+                    "display": "mm"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "LA im Vierkammerblick transversal:",
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "mm",
+                    "display": "mm"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "RA im Vierkammerblick longitudinal:",
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "mm",
+                    "display": "mm"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "RA im Vierkammerblick transversal:",
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "mm",
+                    "display": "mm"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Vorhofseptumstellung:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "\u2014"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "normal"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "abnorm"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "string"
+            },
+            {
+              "text": "Vorhofseptumdefekt/PFO:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "nicht untersucht"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "ja"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "text": "Sonstige Herzklappenpathologie:",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "nicht untersucht"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "nein"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "ja"
+              }
+            }
+          ]
+        },
+        {
+          "text": "",
+          "type": "string"
+        },
+        {
+          "text": "Sonstiges:",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "text": "Beurteilung",
+      "type": "string"
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "resourceType": "Questionnaire",
+  "title": "R\u00f6ntgen-Thorax auf Station",
+  "item": [
+    {
+      "text": "Klinische Angaben",
+      "type": "string"
+    },
+    {
+      "text": "Fragestellung",
+      "type": "string"
+    },
+    {
+      "text": "Befund",
+      "type": "group",
+      "item": [
+        {
+          "text": "",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "keine"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "vorliegend"
+              }
+            }
+          ]
+        },
+        {
+          "text": "Voruntersuchung:",
+          "type": "string"
+        },
+        {
+          "text": "Perikard",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "unauff\u00e4llig"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Perikarderguss"
+              }
+            }
+          ]
+        },
+        {
+          "text": "Pleura",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "unauff\u00e4llig"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Pleuraergu\u00df rechts"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Pleuraergu\u00df links"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Pleuraergu\u00df beidseits"
+              }
+            }
+          ]
+        },
+        {
+          "text": "Morison-Pouch",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "unauff\u00e4llig"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "freie Fl\u00fcssigkeit"
+              }
+            }
+          ]
+        },
+        {
+          "text": "Koller-Pouch",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "unauff\u00e4llig"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "freie Fl\u00fcssigkeit"
+              }
+            }
+          ]
+        },
+        {
+          "text": "Douglas-Raum / Recessus rectovesicalis",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "unauff\u00e4llig"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "freie Fl\u00fcssigkeit"
+              }
+            }
+          ]
+        },
+        {
+          "text": "Sonstiges",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "text": "Beurteilung",
+      "type": "string"
+    }
+  ]
+}

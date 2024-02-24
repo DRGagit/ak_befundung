@@ -1,0 +1,1163 @@
+{
+  "resourceType": "Questionnaire",
+  "title": "CT Pankreasl\u00e4sion (zystisch)",
+  "item": [
+    {
+      "text": "Klinische Angaben",
+      "type": "string"
+    },
+    {
+      "text": "Fragestellung",
+      "type": "string"
+    },
+    {
+      "text": "Befund",
+      "type": "group",
+      "item": [
+        {
+          "text": "Vergleichsuntersuchung:",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "keine"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "vorliegend"
+              }
+            }
+          ]
+        },
+        {
+          "text": "",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "-"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "CT"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "MR"
+              }
+            }
+          ]
+        },
+        {
+          "text": "",
+          "type": "date"
+        },
+        {
+          "text": "Histologie",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "-"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "ausstehend"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "nachgewiesen"
+              }
+            }
+          ]
+        },
+        {
+          "text": "IgG4",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "-"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "positiv"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "negativ"
+              }
+            }
+          ]
+        },
+        {
+          "text": "Bildqualit\u00e4t:",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "exzellent"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "mittel"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "schlecht"
+              }
+            }
+          ]
+        },
+        {
+          "text": "Pankreasparenchym",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "normal"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "lipotroph"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "\u00f6demat\u00f6s"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "chron. Pankreatitis"
+              }
+            }
+          ]
+        },
+        {
+          "text": "Pankreasl\u00e4sion",
+          "type": "group",
+          "item": [
+            {
+              "text": "Tumorlokalisation",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "-"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Pankreaskopf"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Pankreasschwanz"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Pankreask\u00f6rper"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Proc. uncinatus"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "integer"
+            },
+            {
+              "text": "",
+              "type": "integer"
+            },
+            {
+              "text": "Charakterisierung",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "-"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "zystisch"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "mikrozystisch"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "makrozystisch"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "nekrotisch"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Anzahl",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "monozystisch"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "oligozystisch"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "polyzystisch"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "integer"
+            },
+            {
+              "text": "",
+              "type": "integer"
+            },
+            {
+              "text": "Gangassoziation",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "keine"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Hauptgang"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Seitast"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "kombiniert"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Kontur",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "scharf"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "unscharf"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Wand",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "keine"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "d\u00fcnn"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "dick"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Septierungen",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "ja"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "solide Komponente",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "ja - zentral"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "ja - peripher"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "KM-Enhancement",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "ja"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Kalzifikationen",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "ja"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Infiltration",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "ja"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Infiltration",
+              "type": "string"
+            },
+            {
+              "text": "",
+              "type": "integer"
+            },
+            {
+              "text": "",
+              "type": "integer"
+            }
+          ]
+        },
+        {
+          "text": "Gallenwege",
+          "type": "group",
+          "item": [
+            {
+              "text": "Ductus pancreaticus",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "-"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "unauff\u00e4llig"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "dilatiert"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "string"
+            },
+            {
+              "text": "Ductus hepatocholedochus",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "-"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "unauff\u00e4llig"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "dilatiert"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "text": "Gef\u00e4\u00dfbezug (arteriell)",
+          "type": "group",
+          "item": [
+            {
+              "text": "Aorta",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "< 180\u00b0"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "> 180\u00b0"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "360\u00b0"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Deformierung"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Truncus coeliacus",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "< 180\u00b0"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "> 180\u00b0"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "360\u00b0"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Deformierung"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "A. hepatica communis",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "< 180\u00b0"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "> 180\u00b0"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "360\u00b0"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Deformierung"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "A. hepatica propria",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "< 180\u00b0"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "> 180\u00b0"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "360\u00b0"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Deformierung"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "A. gastroduodenalis",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "< 180\u00b0"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "> 180\u00b0"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "360\u00b0"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Deformierung"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "A. mesenterica superior",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "< 180\u00b0"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "> 180\u00b0"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "360\u00b0"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Deformierung"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "A. lienalis",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "< 180\u00b0"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "> 180\u00b0"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "360\u00b0"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Deformierung"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Anatomische Varianten",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "ja"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "text": "Gef\u00e4\u00dfbezug (ven\u00f6s)",
+          "type": "group",
+          "item": [
+            {
+              "text": "V. mesenterica superior",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "< 180\u00b0"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "> 180\u00b0"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "360\u00b0"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Deformierung"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "1. Jejunalast infiltriert"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "V. lienalis",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "< 180\u00b0"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "> 180\u00b0"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "360\u00b0"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Deformierung"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "V. portae",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "< 180\u00b0"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "> 180\u00b0"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "360\u00b0"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Deformierung"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Gef\u00e4\u00dfe (sonstiges)",
+          "type": "group",
+          "item": [
+            {
+              "text": "Atherosklerose Tr. coeliacus",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "ja"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "string"
+            },
+            {
+              "text": "Atherosklerose A. mesenterica superior",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "ja"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "text": "Abdomen",
+          "type": "group",
+          "item": [
+            {
+              "text": "Aszites",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "wenig"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "ausgepr\u00e4gt"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "peritoneale Implantate",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "ja"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "string"
+            },
+            {
+              "text": "Leber",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Lebermetastasen"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "sonstiges"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "L01",
+              "type": "integer"
+            },
+            {
+              "text": "L02",
+              "type": "integer"
+            },
+            {
+              "text": "",
+              "type": "string"
+            },
+            {
+              "text": "Milz",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "unauff\u00e4llig"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "auff\u00e4llig"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "string"
+            },
+            {
+              "text": "Nieren / Ureteren",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "unauff\u00e4llig"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "auff\u00e4llig"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "string"
+            },
+            {
+              "text": "Nebennieren",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "unauff\u00e4llig"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "auff\u00e4llig"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "string"
+            },
+            {
+              "text": "Lymphknoten",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "unauff\u00e4llig"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "auff\u00e4llig"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "string"
+            },
+            {
+              "text": "Darm",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "unauff\u00e4llig"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "auff\u00e4llig"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "string"
+            },
+            {
+              "text": "Beckenorgane",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "unauff\u00e4llig"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "auff\u00e4llig"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "string"
+            },
+            {
+              "text": "Knochen",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "unauff\u00e4llig"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "auff\u00e4llig"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "string"
+            },
+            {
+              "text": "Lunge (soweit miterfasst)",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "unauff\u00e4llig"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "auff\u00e4llig"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "string"
+            },
+            {
+              "text": "sonstiges",
+              "type": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Beurteilung",
+      "type": "group",
+      "item": [
+        {
+          "text": "",
+          "type": "string",
+          "initial": [
+            {
+              "valueString": "V.a. [\u00c4thiologie] im __ / Bek. [\u00c4thiologie] im __\nbspw. zB ser\u00f6ses Zystandenom / muzin\u00f6ses Zystadenom / IPMN Typ: Seitast / Hauptast / Mixed"
+            }
+          ]
+        },
+        {
+          "text": "Insgesamt TNM",
+          "type": "string"
+        },
+        {
+          "text": "",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "-"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "5 - sehr sicher"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "4 - sicher"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "3 - indifferent"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "2 - unsicher"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "1 - sehr unsicher"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "resourceType": "Questionnaire",
+  "title": "CT-Perfusion Hirn",
+  "item": [
+    {
+      "text": "Klinische Angaben",
+      "type": "string",
+      "initial": [
+        {
+          "valueString": "V.a. Schlaganfall"
+        }
+      ]
+    },
+    {
+      "text": "Klinische Fragestellung",
+      "type": "string"
+    },
+    {
+      "text": "Befund",
+      "type": "group",
+      "item": [
+        {
+          "text": "Voruntersuchung:",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "keine"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "vorliegend"
+              }
+            }
+          ]
+        },
+        {
+          "text": "",
+          "type": "date"
+        },
+        {
+          "text": "CT-Perfusion",
+          "type": "group",
+          "item": [
+            {
+              "text": "Verz\u00f6gerte zerebrale Perfusion (MTT, TTP, TTD):",
+              "type": "string"
+            },
+            {
+              "text": "Verminderter zerebraler Blutfluss (CBF):",
+              "type": "string"
+            },
+            {
+              "text": "Vermindertes zerebrales Blutvolumen (CBV):",
+              "type": "string"
+            },
+            {
+              "text": "Fluss (CBF) \u2013 Volumen (CBV) \u2013 Mismatch:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "Nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Ja"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Zeit (MTT/TTP/TTD) \u2013 Volumen (CBV) \u2013 Mismatch:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "Nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Ja"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Zeit (MTT/TTP/TTD) \u2013 Fluss (CBF) \u2013 Mismatch:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "Nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Ja"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Beurteilung",
+      "type": "string",
+      "initial": [
+        {
+          "valueString": "Symmetrische Hirnperfusion ohne Perfusionsdefizit oder relevantes Mismatch."
+        }
+      ]
+    }
+  ]
+}

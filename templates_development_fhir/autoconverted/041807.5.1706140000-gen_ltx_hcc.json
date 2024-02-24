@@ -1,0 +1,1013 @@
+{
+  "resourceType": "Questionnaire",
+  "title": "LTx-Evaluation HCC",
+  "item": [
+    {
+      "text": "function radiobuttonize(boxCalling, boxAffected) {\n            if (document.getElementById(boxCalling).checked) {\n                document.getElementById(boxAffected).checked = false;\n            }\n        }\n\n        function showverf () {\n            document.getElementById(\"zwverfahren\").style.display = \"none\"\n            if ( document.getElementById(\"gen_hccltx_zwverfahren_yes\").checked ) {\n                document.getElementById(\"zwverfahren\").style.display = \"table-row\";\n            } else {\n                document.getElementById(\"zwverfahren\").style.display = \"none\"\n            }\n        }\n\n        function showlesions () {\n            var nlesions = document.getElementById('gen_hccltx_nnodules').value;\n            var nlesions = Number(nlesions);\n\n            document.getElementById(\"lesion1\").style.display = \"none\"\n            document.getElementById(\"lesion2\").style.display = \"none\"\n            document.getElementById(\"lesion3\").style.display = \"none\"\n            document.getElementById(\"lesion4\").style.display = \"none\"\n            document.getElementById(\"lesion5\").style.display = \"none\"\n\n            if ( nlesions <= 0 || nlesions > 6)\n                return;\n            if ( nlesions >= 1 )\n                document.getElementById(\"lesion1\").style.display = \"table\";\n            if ( nlesions >= 2 )\n                document.getElementById(\"lesion2\").style.display = \"table\";\n            if ( nlesions >= 3 )\n                document.getElementById(\"lesion3\").style.display = \"table\";\n            if ( nlesions >= 4 )\n                document.getElementById(\"lesion4\").style.display = \"table\";\n            if ( nlesions >= 5 )\n                document.getElementById(\"lesion5\").style.display = \"table\";\n        }\n\n        function calcMilan () {\n            var Milan = true;\n            // check extrahepatic\n            if ( document.getElementById('gen_hccltx_hcc_ex_yes').checked )\n                Milan = false;\n            // check solitary nodule size\n            if ( Number(document.getElementById('gen_hccltx_nnodules').value) == 1 && Number(document.getElementById('gen_hccltx_l1_dimension').value) > 50 )\n                Milan = false;\n            // check multiple nodules size\n            if ( Number(document.getElementById('gen_hccltx_nnodules').value) > 1 && Number(document.getElementById('gen_hccltx_nnodules').value) <= 3) {\n                if ( Number(document.getElementById('gen_hccltx_l1_dimension').value) <= 30 && Number(document.getElementById('gen_hccltx_l2_dimension').value) <= 30 && Number(document.getElementById('gen_hccltx_l3_dimension').value) <= 30 )\n                    Milan = true;\n                else\n                    Milan = false;\n            }\n            if ( Number(document.getElementById('gen_hccltx_nnodules').value) > 3 )\n                Milan = false;\n            // check vascular invasion\n            if ( document.getElementById('gen_hccltx_l1_lateinvas_yes').checked || document.getElementById('gen_hccltx_l2_lateinvas_yes').checked || document.getElementById('gen_hccltx_l3_lateinvas_yes').checked )\n                Milan = false;\n            //Output\n            if ( Milan )\n                document.getElementById('gen_hccltx_milan_in').selectedIndex = 1;\n            else\n                document.getElementById('gen_hccltx_milan_in').selectedIndex = 2;\n        }\n\n        function enablehelpbutton () {\n            document.getElementById('gen_hccltx_milanhelp').innerHTML += \"&nbsp;<mark><button type='button' onclick='calcMilan()'>Vorschlag</button></mark>\";\n            document.getElementById('gen_hccltx_nnodules').insertAdjacentHTML('afterend', \"&nbsp;<mark><a href=\\\"https://nrdr.acr.org/lirads/\\\" target=\\\"_blank\\\"><button type=\\\"button\\\">LI-RADS Hilfe</button></a></mark>\");\n        }\n\n        if (window.jQuery) {\n            $(document).ready(function(){\n                showlesions();\n                showverf();\n                enablehelpbutton();\n            });\n        }",
+      "type": "group",
+      "item": []
+    },
+    {
+      "text": "Klinische Angaben",
+      "type": "group",
+      "item": [
+        {
+          "text": "",
+          "type": "string"
+        },
+        {
+          "text": "ET-Nummer",
+          "type": "string"
+        },
+        {
+          "text": "initiales HCC",
+          "type": "group",
+          "item": [
+            {
+              "text": "ja",
+              "type": "boolean"
+            },
+            {
+              "text": "nein",
+              "type": "boolean"
+            }
+          ]
+        },
+        {
+          "text": "Verlaufsbericht",
+          "type": "group",
+          "item": [
+            {
+              "text": "ja",
+              "type": "boolean"
+            },
+            {
+              "text": "nein",
+              "type": "boolean"
+            }
+          ]
+        },
+        {
+          "text": "HCC gesichert",
+          "type": "group",
+          "item": [
+            {
+              "text": "ja",
+              "type": "boolean"
+            },
+            {
+              "text": "nein",
+              "type": "boolean"
+            }
+          ]
+        },
+        {
+          "text": "Leberzirrhose gesichert",
+          "type": "group",
+          "item": [
+            {
+              "text": "ja",
+              "type": "boolean"
+            },
+            {
+              "text": "nein",
+              "type": "boolean"
+            }
+          ]
+        },
+        {
+          "text": "aktuell eingesetztes Verfahren",
+          "type": "group",
+          "item": [
+            {
+              "text": "",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "-"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "CT"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "MRT"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "text": "zus\u00e4tzlich zweites Verfahren",
+          "type": "group",
+          "item": [
+            {
+              "text": "ja",
+              "type": "boolean"
+            },
+            {
+              "text": "nein",
+              "type": "boolean"
+            }
+          ]
+        },
+        {
+          "text": "",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "-"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "CT"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "MRT"
+              }
+            }
+          ]
+        },
+        {
+          "text": "",
+          "type": "string"
+        },
+        {
+          "text": "Anzahl HCC-Knoten",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "0"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "1"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "2"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "3"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "4"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "5"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": ">5"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "diffus"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "-"
+              }
+            }
+          ]
+        },
+        {
+          "text": "extrahepatische Manifestation",
+          "type": "group",
+          "item": [
+            {
+              "text": "ja",
+              "type": "boolean"
+            },
+            {
+              "text": "nein",
+              "type": "boolean"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "L\u00e4sionen",
+      "type": "group",
+      "item": [
+        {
+          "text": "L\u00e4sion 1",
+          "type": "group",
+          "item": [
+            {
+              "text": "Gr\u00f6\u00dfe der L\u00e4sion",
+              "type": "string"
+            },
+            {
+              "text": "Segment",
+              "type": "string"
+            },
+            {
+              "text": "Seriennummer",
+              "type": "string"
+            },
+            {
+              "text": "Bildnummer",
+              "type": "string"
+            },
+            {
+              "text": "Kontrastphase der Messung",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "-"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "nativ"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "arteriell"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "portalven\u00f6s"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "verz\u00f6gert"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Verhalten arteriell",
+              "type": "group",
+              "item": [
+                {
+                  "text": "stark anreichernd",
+                  "type": "group",
+                  "item": []
+                },
+                {
+                  "text": "ja",
+                  "type": "boolean"
+                },
+                {
+                  "text": "nein",
+                  "type": "boolean"
+                }
+              ]
+            },
+            {
+              "text": "Verhalten portalven\u00f6s",
+              "type": "group",
+              "item": [
+                {
+                  "text": "fr\u00fch auswaschend",
+                  "type": "group",
+                  "item": []
+                },
+                {
+                  "text": "ja",
+                  "type": "boolean"
+                },
+                {
+                  "text": "nein",
+                  "type": "boolean"
+                }
+              ]
+            },
+            {
+              "text": "Pseudokapsel",
+              "type": "group",
+              "item": [
+                {
+                  "text": "nein",
+                  "type": "boolean"
+                },
+                {
+                  "text": "",
+                  "type": "boolean"
+                }
+              ]
+            },
+            {
+              "text": "Verhalten verz\u00f6gert",
+              "type": "group",
+              "item": [
+                {
+                  "text": "auswaschend",
+                  "type": "group",
+                  "item": []
+                },
+                {
+                  "text": "ja",
+                  "type": "boolean"
+                },
+                {
+                  "text": "nein",
+                  "type": "boolean"
+                }
+              ]
+            },
+            {
+              "text": "Pseudokapsel",
+              "type": "group",
+              "item": [
+                {
+                  "text": "ja",
+                  "type": "boolean"
+                },
+                {
+                  "text": "nein",
+                  "type": "boolean"
+                }
+              ]
+            },
+            {
+              "text": "makrovaskul\u00e4re Invasion",
+              "type": "group",
+              "item": [
+                {
+                  "text": "ja",
+                  "type": "boolean"
+                },
+                {
+                  "text": "nein",
+                  "type": "boolean"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": "L\u00e4sion 2",
+          "type": "group",
+          "item": [
+            {
+              "text": "Gr\u00f6\u00dfe der L\u00e4sion",
+              "type": "string"
+            },
+            {
+              "text": "Segment",
+              "type": "string"
+            },
+            {
+              "text": "Seriennummer",
+              "type": "string"
+            },
+            {
+              "text": "Bildnummer",
+              "type": "string"
+            },
+            {
+              "text": "Kontrastphase der Messung",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "-"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "nativ"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "arteriell"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "portalven\u00f6s"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "verz\u00f6gert"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Verhalten arteriell",
+              "type": "group",
+              "item": [
+                {
+                  "text": "stark anreichernd",
+                  "type": "group",
+                  "item": []
+                },
+                {
+                  "text": "ja",
+                  "type": "boolean"
+                },
+                {
+                  "text": "nein",
+                  "type": "boolean"
+                }
+              ]
+            },
+            {
+              "text": "Verhalten portalven\u00f6s",
+              "type": "group",
+              "item": [
+                {
+                  "text": "fr\u00fch auswaschend",
+                  "type": "group",
+                  "item": []
+                },
+                {
+                  "text": "ja",
+                  "type": "boolean"
+                },
+                {
+                  "text": "nein",
+                  "type": "boolean"
+                }
+              ]
+            },
+            {
+              "text": "Pseudokapsel",
+              "type": "group",
+              "item": [
+                {
+                  "text": "nein",
+                  "type": "boolean"
+                },
+                {
+                  "text": "",
+                  "type": "boolean"
+                }
+              ]
+            },
+            {
+              "text": "Verhalten verz\u00f6gert",
+              "type": "group",
+              "item": [
+                {
+                  "text": "auswaschend",
+                  "type": "group",
+                  "item": []
+                },
+                {
+                  "text": "ja",
+                  "type": "boolean"
+                },
+                {
+                  "text": "nein",
+                  "type": "boolean"
+                }
+              ]
+            },
+            {
+              "text": "Pseudokapsel",
+              "type": "group",
+              "item": [
+                {
+                  "text": "ja",
+                  "type": "boolean"
+                },
+                {
+                  "text": "nein",
+                  "type": "boolean"
+                }
+              ]
+            },
+            {
+              "text": "makrovaskul\u00e4re Invasion",
+              "type": "group",
+              "item": [
+                {
+                  "text": "ja",
+                  "type": "boolean"
+                },
+                {
+                  "text": "nein",
+                  "type": "boolean"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": "L\u00e4sion 3",
+          "type": "group",
+          "item": [
+            {
+              "text": "Gr\u00f6\u00dfe der L\u00e4sion",
+              "type": "string"
+            },
+            {
+              "text": "Segment",
+              "type": "string"
+            },
+            {
+              "text": "Seriennummer",
+              "type": "string"
+            },
+            {
+              "text": "Bildnummer",
+              "type": "string"
+            },
+            {
+              "text": "Kontrastphase der Messung",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "-"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "nativ"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "arteriell"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "portalven\u00f6s"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "verz\u00f6gert"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Verhalten arteriell",
+              "type": "group",
+              "item": [
+                {
+                  "text": "stark anreichernd",
+                  "type": "group",
+                  "item": []
+                },
+                {
+                  "text": "ja",
+                  "type": "boolean"
+                },
+                {
+                  "text": "nein",
+                  "type": "boolean"
+                }
+              ]
+            },
+            {
+              "text": "Verhalten portalven\u00f6s",
+              "type": "group",
+              "item": [
+                {
+                  "text": "fr\u00fch auswaschend",
+                  "type": "group",
+                  "item": []
+                },
+                {
+                  "text": "ja",
+                  "type": "boolean"
+                },
+                {
+                  "text": "nein",
+                  "type": "boolean"
+                }
+              ]
+            },
+            {
+              "text": "Pseudokapsel",
+              "type": "group",
+              "item": [
+                {
+                  "text": "nein",
+                  "type": "boolean"
+                },
+                {
+                  "text": "",
+                  "type": "boolean"
+                }
+              ]
+            },
+            {
+              "text": "Verhalten verz\u00f6gert",
+              "type": "group",
+              "item": [
+                {
+                  "text": "auswaschend",
+                  "type": "group",
+                  "item": []
+                },
+                {
+                  "text": "ja",
+                  "type": "boolean"
+                },
+                {
+                  "text": "nein",
+                  "type": "boolean"
+                }
+              ]
+            },
+            {
+              "text": "Pseudokapsel",
+              "type": "group",
+              "item": [
+                {
+                  "text": "ja",
+                  "type": "boolean"
+                },
+                {
+                  "text": "nein",
+                  "type": "boolean"
+                }
+              ]
+            },
+            {
+              "text": "makrovaskul\u00e4re Invasion",
+              "type": "group",
+              "item": [
+                {
+                  "text": "ja",
+                  "type": "boolean"
+                },
+                {
+                  "text": "nein",
+                  "type": "boolean"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": "L\u00e4sion 4",
+          "type": "group",
+          "item": [
+            {
+              "text": "Gr\u00f6\u00dfe der L\u00e4sion",
+              "type": "string"
+            },
+            {
+              "text": "Segment",
+              "type": "string"
+            },
+            {
+              "text": "Seriennummer",
+              "type": "string"
+            },
+            {
+              "text": "Bildnummer",
+              "type": "string"
+            },
+            {
+              "text": "Kontrastphase der Messung",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "-"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "nativ"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "arteriell"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "portalven\u00f6s"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "verz\u00f6gert"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Verhalten arteriell",
+              "type": "group",
+              "item": [
+                {
+                  "text": "stark anreichernd",
+                  "type": "group",
+                  "item": []
+                },
+                {
+                  "text": "ja",
+                  "type": "boolean"
+                },
+                {
+                  "text": "nein",
+                  "type": "boolean"
+                }
+              ]
+            },
+            {
+              "text": "Verhalten portalven\u00f6s",
+              "type": "group",
+              "item": [
+                {
+                  "text": "fr\u00fch auswaschend",
+                  "type": "group",
+                  "item": []
+                },
+                {
+                  "text": "ja",
+                  "type": "boolean"
+                },
+                {
+                  "text": "nein",
+                  "type": "boolean"
+                }
+              ]
+            },
+            {
+              "text": "Pseudokapsel",
+              "type": "group",
+              "item": [
+                {
+                  "text": "nein",
+                  "type": "boolean"
+                },
+                {
+                  "text": "",
+                  "type": "boolean"
+                }
+              ]
+            },
+            {
+              "text": "Verhalten verz\u00f6gert",
+              "type": "group",
+              "item": [
+                {
+                  "text": "auswaschend",
+                  "type": "group",
+                  "item": []
+                },
+                {
+                  "text": "ja",
+                  "type": "boolean"
+                },
+                {
+                  "text": "nein",
+                  "type": "boolean"
+                }
+              ]
+            },
+            {
+              "text": "Pseudokapsel",
+              "type": "group",
+              "item": [
+                {
+                  "text": "ja",
+                  "type": "boolean"
+                },
+                {
+                  "text": "nein",
+                  "type": "boolean"
+                }
+              ]
+            },
+            {
+              "text": "makrovaskul\u00e4re Invasion",
+              "type": "group",
+              "item": [
+                {
+                  "text": "ja",
+                  "type": "boolean"
+                },
+                {
+                  "text": "nein",
+                  "type": "boolean"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": "L\u00e4sion 5",
+          "type": "group",
+          "item": [
+            {
+              "text": "Gr\u00f6\u00dfe der L\u00e4sion",
+              "type": "string"
+            },
+            {
+              "text": "Segment",
+              "type": "string"
+            },
+            {
+              "text": "Seriennummer",
+              "type": "string"
+            },
+            {
+              "text": "Bildnummer",
+              "type": "string"
+            },
+            {
+              "text": "Kontrastphase der Messung",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "-"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "nativ"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "arteriell"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "portalven\u00f6s"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "verz\u00f6gert"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Verhalten arteriell",
+              "type": "group",
+              "item": [
+                {
+                  "text": "stark anreichernd",
+                  "type": "group",
+                  "item": []
+                },
+                {
+                  "text": "ja",
+                  "type": "boolean"
+                },
+                {
+                  "text": "nein",
+                  "type": "boolean"
+                }
+              ]
+            },
+            {
+              "text": "Verhalten portalven\u00f6s",
+              "type": "group",
+              "item": [
+                {
+                  "text": "fr\u00fch auswaschend",
+                  "type": "group",
+                  "item": []
+                },
+                {
+                  "text": "ja",
+                  "type": "boolean"
+                },
+                {
+                  "text": "nein",
+                  "type": "boolean"
+                }
+              ]
+            },
+            {
+              "text": "Pseudokapsel",
+              "type": "group",
+              "item": [
+                {
+                  "text": "nein",
+                  "type": "boolean"
+                },
+                {
+                  "text": "",
+                  "type": "boolean"
+                }
+              ]
+            },
+            {
+              "text": "Verhalten verz\u00f6gert",
+              "type": "group",
+              "item": [
+                {
+                  "text": "auswaschend",
+                  "type": "group",
+                  "item": []
+                },
+                {
+                  "text": "ja",
+                  "type": "boolean"
+                },
+                {
+                  "text": "nein",
+                  "type": "boolean"
+                }
+              ]
+            },
+            {
+              "text": "Pseudokapsel",
+              "type": "group",
+              "item": [
+                {
+                  "text": "ja",
+                  "type": "boolean"
+                },
+                {
+                  "text": "nein",
+                  "type": "boolean"
+                }
+              ]
+            },
+            {
+              "text": "makrovaskul\u00e4re Invasion",
+              "type": "group",
+              "item": [
+                {
+                  "text": "ja",
+                  "type": "boolean"
+                },
+                {
+                  "text": "nein",
+                  "type": "boolean"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Bemerkungen:",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "text": "Beurteilung",
+      "type": "group",
+      "item": [
+        {
+          "text": "Mailand erf\u00fcllt",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "-"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "ja"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "nein"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,655 @@
+{
+  "resourceType": "Questionnaire",
+  "title": "RECIST 1.1",
+  "item": [
+    {
+      "text": "var NTXarray = [\"gen_recist11_NtL01present\", \"gen_recist11_NtL02present\", \"gen_recist11_NtL03present\", \"gen_recist11_NtL04present\", \"gen_recist11_NtL05present\", \"gen_recist11_NtL06present\", \"gen_recist11_NtL07present\", \"gen_recist11_NtL08present\", \"gen_recist11_NtL09present\", \"gen_recist11_NtL10present\"]\n\n        function templateOnload () {\n            toggelFU();\n            enableRecistButton();\n        }\n\n        function toggelFU () {\n            if ( document.getElementById(\"gen_recist11_BaseOrFollowup\").value == \"Follow-up\" ) {\n                document.getElementById(\"table_PreviousValues\").style.display = \"table\";\n                document.getElementById(\"row_TLrelBase\").style.display = \"table-row\";\n                document.getElementById(\"row_TLrelNadir\").style.display = \"table-row\";\n                document.getElementById(\"row_TLrelLast\").style.display = \"table-row\";\n                document.getElementById(\"row_relEmpty\").style.display = \"table-row\";\n                document.getElementById(\"row_TLresp\").style.display = \"table-row\";\n                document.getElementById(\"row_NTresp\").style.display = \"table-row\";\n                document.getElementById(\"row_OverallResp\").style.display = \"table-row\";\n                document.getElementById(\"gen_recist11_NonTargets\").options[3].style.display = \"initial\";\n                document.getElementById(\"gen_recist11_NonTargets\").options[4].style.display = \"initial\";\n                for ( i = 0; i < NTXarray.length; i++ ) {\n                    document.getElementById(NTXarray[i]).options[2].style.display = \"initial\";\n                    document.getElementById(NTXarray[i]).options[3].style.display = \"initial\";\n                }\n            } else {\n                document.getElementById(\"table_PreviousValues\").style.display = \"none\";\n                document.getElementById(\"row_TLrelBase\").style.display = \"none\";\n                document.getElementById(\"row_TLrelNadir\").style.display = \"none\";\n                document.getElementById(\"row_TLrelLast\").style.display = \"none\";\n                document.getElementById(\"row_relEmpty\").style.display = \"none\";\n                document.getElementById(\"row_TLresp\").style.display = \"none\";\n                document.getElementById(\"row_NTresp\").style.display = \"none\";\n                document.getElementById(\"row_OverallResp\").style.display = \"none\";\n                document.getElementById(\"gen_recist11_NonTargets\").options[3].style.display = \"none\";\n                document.getElementById(\"gen_recist11_NonTargets\").options[4].style.display = \"none\";\n                for ( i = 0; i < NTXarray.length; i++ ) {\n                    document.getElementById(NTXarray[i]).options[2].style.display = \"none\";\n                    document.getElementById(NTXarray[i]).options[3].style.display = \"none\";\n                }\n            }\n        }\n\n        function enableRecistButton () {\n            document.getElementById('cell_relEmpty_Button').innerHTML = \"<mark><button type='button' onclick='calcRECIST()'>Vorschlag</button></mark>\";\n        }\n\n        function calcSums () {\n            // initialize Variables\n            var TargetSum = 0;\n            var BaseSum = document.getElementById(\"gen_recist11_SumBase\").value;\n            var NadirSum = document.getElementById(\"gen_recist11_SumNadir\").value;\n            var LastSum = document.getElementById(\"gen_recist11_SumLast\").value;\n\n            // sum Target Lesions\n            TargetSum = Number(document.getElementById(\"gen_recist11_TL1diam\").value);\n            TargetSum += Number(document.getElementById(\"gen_recist11_TL2diam\").value);\n            TargetSum += Number(document.getElementById(\"gen_recist11_TL3diam\").value);\n            TargetSum += Number(document.getElementById(\"gen_recist11_TL4diam\").value);\n            TargetSum += Number(document.getElementById(\"gen_recist11_TL5diam\").value);\n\n            // display target sum\n            document.getElementById(\"gen_recist11_SumTarget\").value = TargetSum;\n\n            // check for previous values and compute relative differences\n            if ( BaseSum != \"\" ) {\n                document.getElementById(\"gen_recist11_TLrelBase\").value = Number((TargetSum*100 / BaseSum) - 100).toFixed(0);\n            }\n            if ( NadirSum != \"\" ) {\n                document.getElementById(\"gen_recist11_TLrelNadir\").value = Number((TargetSum*100 / NadirSum) - 100).toFixed(0);\n            }\n            if ( LastSum != \"\" ) {\n                document.getElementById(\"gen_recist11_TLrelLast\").value = Number((TargetSum*100 / LastSum) - 100).toFixed(0);\n            }\n        }\n\n        function checkNT () {\n            var NTStatus = 1;\n            for ( i = 0; i < NTXarray.length; i++ ) {\n                if (document.getElementById(NTXarray[i]).value == \"verschwunden\") {\n                    NTStatus = 3;\n                    continue;\n                }\n            }\n            for ( i = 0; i < NTXarray.length; i++ ) {\n                if (document.getElementById(NTXarray[i]).value == \"vorhanden\") {\n                    NTStatus = 2;\n                    break;\n                }\n            }\n            for ( i = 0; i < NTXarray.length; i++ ) {\n                if (document.getElementById(NTXarray[i]).value == \"eindeutig progredient\") {\n                    NTStatus = 4;\n                    break;\n                }\n            }\n            document.getElementById(\"gen_recist11_NonTargets\").options[NTStatus].selected = \"selected\";\n        }\n\n        function calcRECIST () {\n\n            checkNT();\n\n            var TargetSum = document.getElementById(\"gen_recist11_SumTarget\").value;\n            var BaseSum = document.getElementById(\"gen_recist11_SumBase\").value;\n            var NadirSum = document.getElementById(\"gen_recist11_SumNadir\").value;\n\n            if ( NadirSum == \"\" )\n                NadirSum = BaseSum;\n\n            var TargetResponse = \"\";\n            var NonTargetResponse = \"\";\n            //var OverallResponse = \"\";\n\n            if ( TargetSum == \"\" || BaseSum == \"\" ) {\n                //do nothing\n            } else if ( TargetSum == 0 && BaseSum > 0 ) {\n                TargetResponse = \"CR\";\n                document.getElementById(\"gen_recist11_TargetResp\").options[1].selected = \"selected\";\n            } else if ( TargetSum >= NadirSum * 1.2 && TargetSum - NadirSum > 0.5 ) {\n                TargetResponse = \"PD\";\n                document.getElementById(\"gen_recist11_TargetResp\").options[4].selected = \"selected\";\n            } else if ( TargetSum <= BaseSum * 0.7 ) {\n                TargetResponse = \"PR\";\n                document.getElementById(\"gen_recist11_TargetResp\").options[2].selected = \"selected\";\n            } else {\n                TargetResponse = \"SD\";\n                document.getElementById(\"gen_recist11_TargetResp\").options[3].selected = \"selected\";\n            }\n\n            if ( document.getElementById(\"gen_recist11_NonTargets\").selectedIndex <= 1 ) {\n                //do nothing\n            } else if ( document.getElementById(\"gen_recist11_NonTargets\").selectedIndex == 2 ) {\n                NonTargetResponse = \"SD\";\n                document.getElementById(\"gen_recist11_NonTargetResp\").selectedIndex = 2;\n            } else if ( document.getElementById(\"gen_recist11_NonTargets\").selectedIndex == 3 ) {\n                NonTargetResponse = \"CR\";\n                document.getElementById(\"gen_recist11_NonTargetResp\").selectedIndex = 1;\n            } else if ( document.getElementById(\"gen_recist11_NonTargets\").selectedIndex == 4 ) {\n                NonTargetResponse = \"PD\";\n                document.getElementById(\"gen_recist11_NonTargetResp\").selectedIndex = 3;\n            }\n\n            if ( TargetResponse == \"CR\" && NonTargetResponse == \"CR\" ) {\n                //OverallResponse = \"CR\";\n                document.getElementById(\"gen_recist11_OverallResp\").options[1].selected = \"selected\";\n            } else if ( TargetResponse == \"CR\" && NonTargetResponse == \"SD\" ) {\n                //OverallResponse = \"PR\";\n                document.getElementById(\"gen_recist11_OverallResp\").options[2].selected = \"selected\";\n            } else if ( TargetResponse == \"PR\" && NonTargetResponse != \"PD\" ) {\n                //OverallResponse = \"PR\";\n                document.getElementById(\"gen_recist11_OverallResp\").options[2].selected = \"selected\";\n            } else if ( TargetResponse == \"SD\" && NonTargetResponse != \"PD\" ) {\n                //OverallResponse = \"SD\";\n                document.getElementById(\"gen_recist11_OverallResp\").options[3].selected = \"selected\";\n            } else if ( TargetResponse == \"PD\" || NonTargetResponse == \"PD\" ) {\n                //OverallResponse = \"PD\";\n                document.getElementById(\"gen_recist11_OverallResp\").options[4].selected = \"selected\";\n            }\n\n        }",
+      "type": "group",
+      "item": []
+    },
+    {
+      "text": "Befund",
+      "type": "group",
+      "item": [
+        {
+          "text": "Untersuchung:",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "Baseline"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Follow-up"
+              }
+            }
+          ]
+        },
+        {
+          "text": "Summe Baseline",
+          "type": "integer"
+        },
+        {
+          "text": "Summe Nadir",
+          "type": "integer"
+        },
+        {
+          "text": "Summe letzte Messung",
+          "type": "integer"
+        },
+        {
+          "text": "Target-Lesions",
+          "type": "group",
+          "item": [
+            {
+              "text": "ID",
+              "type": "group",
+              "item": [
+                {
+                  "text": "Name",
+                  "type": "group",
+                  "item": []
+                },
+                {
+                  "text": "gr\u00f6\u00dfter Durchmesser",
+                  "type": "group",
+                  "item": []
+                }
+              ]
+            },
+            {
+              "text": "1",
+              "type": "group",
+              "item": [
+                {
+                  "text": "",
+                  "type": "string"
+                },
+                {
+                  "text": "",
+                  "type": "integer"
+                }
+              ]
+            },
+            {
+              "text": "2",
+              "type": "group",
+              "item": [
+                {
+                  "text": "",
+                  "type": "string"
+                },
+                {
+                  "text": "",
+                  "type": "integer"
+                }
+              ]
+            },
+            {
+              "text": "3",
+              "type": "group",
+              "item": [
+                {
+                  "text": "",
+                  "type": "string"
+                },
+                {
+                  "text": "",
+                  "type": "integer"
+                }
+              ]
+            },
+            {
+              "text": "4",
+              "type": "group",
+              "item": [
+                {
+                  "text": "",
+                  "type": "string"
+                },
+                {
+                  "text": "",
+                  "type": "integer"
+                }
+              ]
+            },
+            {
+              "text": "5",
+              "type": "group",
+              "item": [
+                {
+                  "text": "",
+                  "type": "string"
+                },
+                {
+                  "text": "",
+                  "type": "integer"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Non-Target-Lesions",
+          "type": "group",
+          "item": [
+            {
+              "text": "ID",
+              "type": "group",
+              "item": [
+                {
+                  "text": "Name",
+                  "type": "group",
+                  "item": []
+                }
+              ]
+            },
+            {
+              "text": "1",
+              "type": "group",
+              "item": [
+                {
+                  "text": "",
+                  "type": "string"
+                },
+                {
+                  "text": "",
+                  "type": "choice",
+                  "answerOption": [
+                    {
+                      "valueCoding": {
+                        "display": "-"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "display": "vorhanden"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "display": "verschwunden"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "display": "eindeutig progredient"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "text": "2",
+              "type": "group",
+              "item": [
+                {
+                  "text": "",
+                  "type": "string"
+                },
+                {
+                  "text": "",
+                  "type": "choice",
+                  "answerOption": [
+                    {
+                      "valueCoding": {
+                        "display": "-"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "display": "vorhanden"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "display": "verschwunden"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "display": "eindeutig progredient"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "text": "3",
+              "type": "group",
+              "item": [
+                {
+                  "text": "",
+                  "type": "string"
+                },
+                {
+                  "text": "",
+                  "type": "choice",
+                  "answerOption": [
+                    {
+                      "valueCoding": {
+                        "display": "-"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "display": "vorhanden"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "display": "verschwunden"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "display": "eindeutig progredient"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "text": "4",
+              "type": "group",
+              "item": [
+                {
+                  "text": "",
+                  "type": "string"
+                },
+                {
+                  "text": "",
+                  "type": "choice",
+                  "answerOption": [
+                    {
+                      "valueCoding": {
+                        "display": "-"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "display": "vorhanden"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "display": "verschwunden"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "display": "eindeutig progredient"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "text": "5",
+              "type": "group",
+              "item": [
+                {
+                  "text": "",
+                  "type": "string"
+                },
+                {
+                  "text": "",
+                  "type": "choice",
+                  "answerOption": [
+                    {
+                      "valueCoding": {
+                        "display": "-"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "display": "vorhanden"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "display": "verschwunden"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "display": "eindeutig progredient"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "text": "6",
+              "type": "group",
+              "item": [
+                {
+                  "text": "",
+                  "type": "string"
+                },
+                {
+                  "text": "",
+                  "type": "choice",
+                  "answerOption": [
+                    {
+                      "valueCoding": {
+                        "display": "-"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "display": "vorhanden"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "display": "verschwunden"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "display": "eindeutig progredient"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "text": "7",
+              "type": "group",
+              "item": [
+                {
+                  "text": "",
+                  "type": "string"
+                },
+                {
+                  "text": "",
+                  "type": "choice",
+                  "answerOption": [
+                    {
+                      "valueCoding": {
+                        "display": "-"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "display": "vorhanden"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "display": "verschwunden"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "display": "eindeutig progredient"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "text": "8",
+              "type": "group",
+              "item": [
+                {
+                  "text": "",
+                  "type": "string"
+                },
+                {
+                  "text": "",
+                  "type": "choice",
+                  "answerOption": [
+                    {
+                      "valueCoding": {
+                        "display": "-"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "display": "vorhanden"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "display": "verschwunden"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "display": "eindeutig progredient"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "text": "9",
+              "type": "group",
+              "item": [
+                {
+                  "text": "",
+                  "type": "string"
+                },
+                {
+                  "text": "",
+                  "type": "choice",
+                  "answerOption": [
+                    {
+                      "valueCoding": {
+                        "display": "-"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "display": "vorhanden"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "display": "verschwunden"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "display": "eindeutig progredient"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "text": "10",
+              "type": "group",
+              "item": [
+                {
+                  "text": "",
+                  "type": "string"
+                },
+                {
+                  "text": "",
+                  "type": "choice",
+                  "answerOption": [
+                    {
+                      "valueCoding": {
+                        "display": "-"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "display": "vorhanden"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "display": "verschwunden"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "display": "eindeutig progredient"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Beurteilung",
+      "type": "group",
+      "item": [
+        {
+          "text": "Target Summe",
+          "type": "integer"
+        },
+        {
+          "text": "- relativ zur Baseline",
+          "type": "integer"
+        },
+        {
+          "text": "- relativ zum Nadir",
+          "type": "integer"
+        },
+        {
+          "text": "- relativ zur letzten Messung",
+          "type": "integer"
+        },
+        {
+          "text": "Non-Targets",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "-"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "keine"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "vorhanden"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "verschwunden"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "eindeutig progredient"
+              }
+            }
+          ]
+        },
+        {
+          "text": "- Target response",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "-"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Complete Response"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Partial response"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Stable disease"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Progressive disease"
+              }
+            }
+          ]
+        },
+        {
+          "text": "- Non-Target response",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "-"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Complete Response"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Stable disease"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Progressive disease"
+              }
+            }
+          ]
+        },
+        {
+          "text": "Gesamt Response",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "-"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Complete Response"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Partial response"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Stable disease"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Progressive disease"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

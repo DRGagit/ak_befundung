@@ -1,0 +1,646 @@
+{
+  "resourceType": "Questionnaire",
+  "title": "CCT nativ Stroke",
+  "item": [
+    {
+      "text": "Klinische Information",
+      "type": "string",
+      "initial": [
+        {
+          "valueString": "V.a. Schlaganfall"
+        }
+      ]
+    },
+    {
+      "text": "Fragestellung",
+      "type": "string"
+    },
+    {
+      "text": "Befund",
+      "type": "group",
+      "item": [
+        {
+          "text": "Voruntersuchungen:",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "keine"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "vorliegend"
+              }
+            }
+          ]
+        },
+        {
+          "text": "",
+          "type": "date"
+        },
+        {
+          "text": "Stroke",
+          "type": "group",
+          "item": [
+            {
+              "text": "Blutung:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "ja"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Lokalisation:",
+              "type": "string"
+            },
+            {
+              "text": "Hyperdenses Arterienzeichen:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "ja"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Seite:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "\u2014"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "links"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "rechts"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Lokalisation:",
+              "type": "string"
+            },
+            {
+              "text": "Stadium der Isch\u00e4mie:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "\u2014"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Infarktfr\u00fchzeichen"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Hypodenser demarkierter Infarkt"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Mehrzeitiges Infarktgeschehen"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Lokalisation supratentoriell:",
+              "type": "group",
+              "item": [
+                {
+                  "text": "Nucleus caudatus (C):",
+                  "type": "group",
+                  "item": [
+                    {
+                      "text": "rechts",
+                      "type": "boolean"
+                    },
+                    {
+                      "text": "links",
+                      "type": "boolean"
+                    }
+                  ]
+                },
+                {
+                  "text": "Nucleus lentiformis (L):",
+                  "type": "group",
+                  "item": [
+                    {
+                      "text": "rechts",
+                      "type": "boolean"
+                    },
+                    {
+                      "text": "links",
+                      "type": "boolean"
+                    }
+                  ]
+                },
+                {
+                  "text": "Capsula interna (IC):",
+                  "type": "group",
+                  "item": [
+                    {
+                      "text": "rechts",
+                      "type": "boolean"
+                    },
+                    {
+                      "text": "links",
+                      "type": "boolean"
+                    }
+                  ]
+                },
+                {
+                  "text": "Insula (I):",
+                  "type": "group",
+                  "item": [
+                    {
+                      "text": "rechts",
+                      "type": "boolean"
+                    },
+                    {
+                      "text": "links",
+                      "type": "boolean"
+                    }
+                  ]
+                },
+                {
+                  "text": "Mediastromgebiet anterior (M1):",
+                  "type": "group",
+                  "item": [
+                    {
+                      "text": "rechts",
+                      "type": "boolean"
+                    },
+                    {
+                      "text": "links",
+                      "type": "boolean"
+                    }
+                  ]
+                },
+                {
+                  "text": "Mediastromgebiet lateral (M2):",
+                  "type": "group",
+                  "item": [
+                    {
+                      "text": "rechts",
+                      "type": "boolean"
+                    },
+                    {
+                      "text": "links",
+                      "type": "boolean"
+                    }
+                  ]
+                },
+                {
+                  "text": "Mediastromgebiet posterior (M3):",
+                  "type": "group",
+                  "item": [
+                    {
+                      "text": "rechts",
+                      "type": "boolean"
+                    },
+                    {
+                      "text": "links",
+                      "type": "boolean"
+                    }
+                  ]
+                },
+                {
+                  "text": "Mediastromgebiet anterior superior (M4):",
+                  "type": "group",
+                  "item": [
+                    {
+                      "text": "rechts",
+                      "type": "boolean"
+                    },
+                    {
+                      "text": "links",
+                      "type": "boolean"
+                    }
+                  ]
+                },
+                {
+                  "text": "Mediastromgebiet lateral superior (M5):",
+                  "type": "group",
+                  "item": [
+                    {
+                      "text": "rechts",
+                      "type": "boolean"
+                    },
+                    {
+                      "text": "links",
+                      "type": "boolean"
+                    }
+                  ]
+                },
+                {
+                  "text": "Mediastromgebiet posterior superior (M6):",
+                  "type": "group",
+                  "item": [
+                    {
+                      "text": "rechts",
+                      "type": "boolean"
+                    },
+                    {
+                      "text": "links",
+                      "type": "boolean"
+                    }
+                  ]
+                },
+                {
+                  "text": "Thalamus:",
+                  "type": "group",
+                  "item": [
+                    {
+                      "text": "rechts",
+                      "type": "boolean"
+                    },
+                    {
+                      "text": "links",
+                      "type": "boolean"
+                    }
+                  ]
+                },
+                {
+                  "text": "Anteriorstromgebiet:",
+                  "type": "group",
+                  "item": [
+                    {
+                      "text": "rechts",
+                      "type": "boolean"
+                    },
+                    {
+                      "text": "links",
+                      "type": "boolean"
+                    }
+                  ]
+                },
+                {
+                  "text": "Posteriorstromgebiet:",
+                  "type": "group",
+                  "item": [
+                    {
+                      "text": "rechts",
+                      "type": "boolean"
+                    },
+                    {
+                      "text": "links",
+                      "type": "boolean"
+                    }
+                  ]
+                },
+                {
+                  "text": "Vordere Grenzzone (frontoparietal):",
+                  "type": "group",
+                  "item": [
+                    {
+                      "text": "rechts",
+                      "type": "boolean"
+                    },
+                    {
+                      "text": "links",
+                      "type": "boolean"
+                    }
+                  ]
+                },
+                {
+                  "text": "Hintere Grenzzone (parietookzipital):",
+                  "type": "group",
+                  "item": [
+                    {
+                      "text": "rechts",
+                      "type": "boolean"
+                    },
+                    {
+                      "text": "links",
+                      "type": "boolean"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "text": "Lokalisation infratentoriell:",
+              "type": "group",
+              "item": [
+                {
+                  "text": "Mittelhirn",
+                  "type": "boolean"
+                },
+                {
+                  "text": "Pons",
+                  "type": "boolean"
+                },
+                {
+                  "text": "Rechte Kleinhirnhemisph\u00e4re",
+                  "type": "boolean"
+                },
+                {
+                  "text": "Linke Kleinhirnhemisph\u00e4re",
+                  "type": "boolean"
+                }
+              ]
+            },
+            {
+              "text": "ASPECT-Score:",
+              "type": "integer",
+              "initial": [
+                {
+                  "valueInteger": "10"
+                }
+              ]
+            },
+            {
+              "text": "pc-ASPECT-Score:",
+              "type": "integer",
+              "initial": [
+                {
+                  "valueInteger": "10"
+                }
+              ]
+            },
+            {
+              "text": "H\u00e4morrhagische Transformation:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "fokale petechiale Blutungen"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "konfluierende petechiale Blutungen"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "intraparenchymat\u00f6se Einblutung"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Schwellung:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "mit lokaler raumfordernder Wirkung"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "mit Massenverschiebung"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Herniation:",
+              "type": "group",
+              "item": [
+                {
+                  "text": "nein",
+                  "type": "boolean",
+                  "initial": [
+                    {
+                      "valueBoolean": "checked"
+                    }
+                  ]
+                },
+                {
+                  "text": "subfalzine Herniation",
+                  "type": "boolean"
+                },
+                {
+                  "text": "Uncusherniation",
+                  "type": "boolean"
+                },
+                {
+                  "text": "zentrale Herniation",
+                  "type": "boolean"
+                },
+                {
+                  "text": "aszendierende transtentorielle Herniation",
+                  "type": "boolean"
+                },
+                {
+                  "text": "Tonsill\u00e4re Herniation",
+                  "type": "boolean"
+                }
+              ]
+            },
+            {
+              "text": "Alte postisch\u00e4mische Defekte:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "ja"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Lokalisation:",
+              "type": "string"
+            },
+            {
+              "text": "Mikroangiopathische Marklagerver\u00e4nderungen:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "Fazekas 0 (Keine bis vereinzelte unspezifische punktf\u00f6rmige L\u00e4sionen)"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Fazekas 1 (Geringgradig; Mehrere punktf\u00f6rmige L\u00e4sionen)"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Fazekas 2 (Mittelgradig; Fokal konfluierende L\u00e4sionen)"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Fazekas 3 (Hochgradig; Ausgedehnte konfluierende L\u00e4sionen)"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Sonstiges:",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "text": "Liquorr\u00e4ume",
+          "type": "group",
+          "item": [
+            {
+              "text": "Basale Zisternen:",
+              "type": "string",
+              "initial": [
+                {
+                  "valueString": "frei"
+                }
+              ]
+            },
+            {
+              "text": "\u00c4u\u00dfere Liquorr\u00e4ume:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "altersgem\u00e4\u00dfe Konfiguration"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "erweitert"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "reduziert"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "reduziert entlang der Konvexit\u00e4t bei NPH-Aspekt"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Sonstiges:",
+              "type": "string"
+            },
+            {
+              "text": "Innere Liquorr\u00e4ume:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "altersgem\u00e4\u00dfe Konfiguration"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "erweitert"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "reduziert"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "intraventrikul\u00e4re Blutung"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Sonstiges:",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "text": "Extraaxiales Kompartiment",
+          "type": "group",
+          "item": [
+            {
+              "text": "Epiduralraum:",
+              "type": "string"
+            },
+            {
+              "text": "Subduralraum:",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "text": "Oss\u00e4rer Status und erfasstes Viszerokranium",
+          "type": "group",
+          "item": [
+            {
+              "text": "Sch\u00e4delkalotte:",
+              "type": "string"
+            },
+            {
+              "text": "Sch\u00e4delbasis:",
+              "type": "string"
+            },
+            {
+              "text": "Orbitae:",
+              "type": "string"
+            },
+            {
+              "text": "Miterfasster Gesichtssch\u00e4del:",
+              "type": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Beurteilung",
+      "type": "string",
+      "initial": [
+        {
+          "valueString": "Keine Zeichen eines isch\u00e4mischen Schlaganfalls."
+        }
+      ]
+    }
+  ]
+}

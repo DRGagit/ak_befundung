@@ -1,0 +1,544 @@
+{
+  "resourceType": "Questionnaire",
+  "title": "MRT Rektum-Ca",
+  "item": [
+    {
+      "text": "Klinische Angaben",
+      "type": "group",
+      "item": [
+        {
+          "text": "",
+          "type": "string"
+        },
+        {
+          "text": "Histologie",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "ausstehend"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "gesichert"
+              }
+            }
+          ]
+        },
+        {
+          "text": "",
+          "type": "string"
+        },
+        {
+          "text": "neoadjuvante Vorbehandlung",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "nein"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "ja"
+              }
+            }
+          ]
+        },
+        {
+          "text": "",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "text": "Fragestellung",
+      "type": "string"
+    },
+    {
+      "text": "Befund",
+      "type": "group",
+      "item": [
+        {
+          "text": "Vergleichsuntersuchung:",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "keine"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "vorliegend"
+              }
+            }
+          ]
+        },
+        {
+          "text": "",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "-"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "CT"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "MR"
+              }
+            }
+          ]
+        },
+        {
+          "text": "",
+          "type": "date"
+        },
+        {
+          "text": "Bildqualit\u00e4t:",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "exzellent"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "mittel"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "schlecht"
+              }
+            }
+          ]
+        },
+        {
+          "text": "Rektumkarzinom (T)",
+          "type": "group",
+          "item": [
+            {
+              "text": "Tumorlokalisation",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "- (keine Angabe)"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "unteres Drittel (0-6cm ab ano)"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "mittleres Drittel (6-12cm ab ano)"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "oberes Drittel (12-16cm ab ano)"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "string"
+            },
+            {
+              "text": "Distanz zur Anokutan-Linie",
+              "type": "integer"
+            },
+            {
+              "text": "Tumorausdehnung (L\u00e4nge)",
+              "type": "integer"
+            },
+            {
+              "text": "Zirkumferenz in SSL",
+              "type": "integer"
+            },
+            {
+              "text": "",
+              "type": "integer"
+            },
+            {
+              "text": "Tumorinfiltration",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "Tx (Tumor nicht beurteilbar)"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "T0 (kein Anhalt f\u00fcr Tumor)"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "T1 (Infiltration Submukosa)"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "T2 (Infiltration Muscularis propria)"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "T3ab (Infiltration Mesorektum <5mm)"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "T3cd (Infiltration Mesorektum >5mm)"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "T4a (Infiltration viszerales Peritoneum)"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "T4b (Infiltration Nachbarorgane)"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "integer"
+            },
+            {
+              "text": "",
+              "type": "string"
+            },
+            {
+              "text": "Abstand zur mesorektalen Faszie",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "CRMx (Resektionsrand nicht beurteilbar)"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "CRM- (> 1mm, nach CTX/RTX > 2mm)"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "CRM+ (\u2264 1mm, nach CTX/RTX \u2264 2mm)"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "integer"
+            },
+            {
+              "text": "",
+              "type": "string"
+            },
+            {
+              "text": "Veneninfiltration",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "nicht beurteilbar"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "ja"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "text": "Lymphknoten lokal (N)",
+          "type": "group",
+          "item": [
+            {
+              "text": "mesorektal / pr\u00e4sakral / lokal",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "Nx (Lymphknoten nicht beurteilbar)"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "N0 (keine suspekten Lymphknoten)"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "N+ (suspekte Lymphknoten mesorektal \u22643)"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "N+ (suspekte Lymphknoten mesorektal >3)"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "integer"
+            },
+            {
+              "text": "",
+              "type": "integer"
+            },
+            {
+              "text": "",
+              "type": "string"
+            },
+            {
+              "text": "Abstand zur mesorektalen Faszie",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "CRMx (Resektionsrand nicht beurteilbar)"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "CRM- (> 1mm, nach CTX/RTX > 2mm)"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "CRM+ (\u2264 1mm, nach CTX/RTX \u2264 2mm)"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "integer"
+            },
+            {
+              "text": "",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "text": "Fernmetastasen (M)",
+          "type": "group",
+          "item": [
+            {
+              "text": "Lymphknoten distant",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "- (keine Angaben)"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "nicht suspekt"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "metastasensuspekt (M1)"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "string"
+            },
+            {
+              "text": "Aszites",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "- (keine Angaben)"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "ja"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Peritoneum",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "- (keine Angaben)"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "normal"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Peritonealkarzinose (M1c)"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "string"
+            },
+            {
+              "text": "Beckenstrukturen",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "- (keine Angaben)"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "unauff\u00e4llig"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "auff\u00e4llig (siehe unten)"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "metastasensuspekt (M1)"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Skelett",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "- (keine Angaben)"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "unauff\u00e4llig"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "auff\u00e4llig (siehe unten)"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "metastasensuspekt (M1)"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Sonstige Befunde",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "text": "Beurteilung",
+      "type": "group",
+      "item": [
+        {
+          "text": "",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "-"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "5 - sehr sicher"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "4 - sicher"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "3 - indifferent"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "2 - unsicher"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "1 - sehr unsicher"
+              }
+            }
+          ]
+        },
+        {
+          "text": "",
+          "type": "string"
+        },
+        {
+          "text": "Insgesamt TNM",
+          "type": "string"
+        }
+      ]
+    }
+  ]
+}

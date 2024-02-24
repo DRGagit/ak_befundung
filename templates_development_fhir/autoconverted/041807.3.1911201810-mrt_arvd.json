@@ -1,0 +1,532 @@
+{
+  "resourceType": "Questionnaire",
+  "title": "MRT ARVD",
+  "item": [
+    {
+      "text": "Klinische Angaben",
+      "type": "string"
+    },
+    {
+      "text": "Fragestellung",
+      "type": "string"
+    },
+    {
+      "text": "Befund",
+      "type": "group",
+      "item": [
+        {
+          "text": "Vergleichsuntersuchung",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "keine"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "vorliegend"
+              }
+            }
+          ]
+        },
+        {
+          "text": "",
+          "type": "date"
+        },
+        {
+          "text": "Technik",
+          "type": "group",
+          "item": [
+            {
+              "text": "Feldst\u00e4rke",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "1.5 T"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "3 T"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "MR Protokoll",
+              "type": "string"
+            },
+            {
+              "text": "Auswertesoftware",
+              "type": "string"
+            },
+            {
+              "text": "Quelle der Normwerte",
+              "type": "string"
+            },
+            {
+              "text": "KM",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "text": "Patientencharakteristik",
+          "type": "group",
+          "item": [
+            {
+              "text": "Geschlecht",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "m\u00e4nnlich"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "weiblich"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "K\u00f6rpergewicht",
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "kg",
+                    "display": "kg"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "K\u00f6rpergr\u00f6\u00dfe",
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "m",
+                    "display": "m"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "K\u00f6rperoberlf\u00e4che (BSA)",
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "m2",
+                    "display": "m2"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Herz",
+          "type": "group",
+          "item": []
+        },
+        {
+          "text": "Bildqualit\u00e4t",
+          "type": "group",
+          "item": [
+            {
+              "text": "Einschr\u00e4nkung",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "-"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "ja"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "text": "Funktionsanalyse LV",
+          "type": "group",
+          "item": [
+            {
+              "text": "LV enddiastolischer Diameter (LV EDD):",
+              "type": "integer"
+            },
+            {
+              "text": "LV enddiastolischer Volumenindex (LV EDVi):",
+              "type": "integer"
+            },
+            {
+              "text": "LV endsystolischer  Volumenindex (LV ESVi):",
+              "type": "integer"
+            },
+            {
+              "text": "LV Ejektions-Fraktion (LV EF):",
+              "type": "integer"
+            },
+            {
+              "text": "LV ED Masse normiert:",
+              "type": "integer"
+            },
+            {
+              "text": "Regionale Wandbewegungsst\u00f6rungen LV:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "-"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "ja"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "string"
+            },
+            {
+              "text": "Interventrikul\u00e4re Septumdicke (IVSD):",
+              "type": "integer"
+            }
+          ]
+        },
+        {
+          "text": "Funktionsanalyse RV",
+          "type": "group",
+          "item": [
+            {
+              "text": "RV enddiastolischer Diameter (RV EDD):",
+              "type": "integer"
+            },
+            {
+              "text": "RV enddiastolischer Volumenindex (RV EDVi):",
+              "type": "integer"
+            },
+            {
+              "text": "RV endsystolischer  Volumenindex (RV ESVi):",
+              "type": "integer"
+            },
+            {
+              "text": "RV Ejektions-Fraktion (RV EF):",
+              "type": "integer"
+            },
+            {
+              "text": "Weite RVOT4 im 3-Kammerblick*:",
+              "type": "integer"
+            },
+            {
+              "text": "Regionale Wandbewegungsst\u00f6rungen RV:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "-"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "ja"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "string"
+            },
+            {
+              "text": "(Mikro-) aneurysmata RV Wand:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "-"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "ja"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "",
+              "type": "integer"
+            }
+          ]
+        },
+        {
+          "text": "Vorhofgr\u00f6\u00dfe endsystolisch im 4-Kammerblick",
+          "type": "group",
+          "item": [
+            {
+              "text": "RA:",
+              "type": "integer"
+            }
+          ]
+        },
+        {
+          "text": "(longitudinal x transversal)",
+          "type": "group",
+          "item": [
+            {
+              "text": "LA:",
+              "type": "integer"
+            }
+          ]
+        },
+        {
+          "text": "Herzklappenpathologie:",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "-"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "nicht untersucht"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "nein"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "ja"
+              }
+            }
+          ]
+        },
+        {
+          "text": "",
+          "type": "string"
+        },
+        {
+          "text": "Intracavit\u00e4re Thromben:",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "-"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "nein"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "ja"
+              }
+            }
+          ]
+        },
+        {
+          "text": "",
+          "type": "string"
+        },
+        {
+          "text": "Perikarderguss:",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "-"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "nein"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "ja"
+              }
+            }
+          ]
+        },
+        {
+          "text": "",
+          "type": "integer",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+              "valueCoding": {
+                "system": "http://unitsofmeasure.org",
+                "code": "mm",
+                "display": "mm"
+              }
+            }
+          ]
+        },
+        {
+          "text": "Nachweis von Fettsignal im Myokard:",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "-"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "nein"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "ja"
+              }
+            }
+          ]
+        },
+        {
+          "text": "Late Gadolinium Enhancement (LGE):",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "-"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "nein"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "ja"
+              }
+            }
+          ]
+        },
+        {
+          "text": "",
+          "type": "string"
+        },
+        {
+          "text": "Auswertung nach Task Force Kriterien (revised 2010)",
+          "type": "group",
+          "item": [
+            {
+              "text": "Majorkriterium",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "-"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "ja"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Sonstige Auff\u00e4lligkeiten",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "text": "Beurteilung",
+      "type": "group",
+      "item": [
+        {
+          "text": "",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "-"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "nein"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "m\u00f6glich"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "ja"
+              }
+            }
+          ]
+        },
+        {
+          "text": "",
+          "type": "string"
+        }
+      ]
+    }
+  ]
+}

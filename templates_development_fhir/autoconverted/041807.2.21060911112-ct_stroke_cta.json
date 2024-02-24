@@ -1,0 +1,1137 @@
+{
+  "resourceType": "Questionnaire",
+  "title": "CT-Angiographie der hirnversorgenden Gef\u00e4\u00dfe",
+  "item": [
+    {
+      "text": "Klinische Angaben",
+      "type": "string",
+      "initial": [
+        {
+          "valueString": "V.a. Schlaganfall"
+        }
+      ]
+    },
+    {
+      "text": "Klinische Fragestellung",
+      "type": "string"
+    },
+    {
+      "text": "Befund",
+      "type": "group",
+      "item": [
+        {
+          "text": "Voruntersuchung:",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "keine"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "vorliegend"
+              }
+            }
+          ]
+        },
+        {
+          "text": "",
+          "type": "date"
+        },
+        {
+          "text": "Vordere Zirkulation:",
+          "type": "group",
+          "item": [
+            {
+              "text": "Aortenbogen:",
+              "type": "string"
+            },
+            {
+              "text": "ACC rechts:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "unauff\u00e4llig"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Stenose  < 50 %"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Stenose 50 \u2013 70%"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Pseudookklusion"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Okklusion"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Plaquemorphologie:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "\u2014"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Kalkplaques"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "weiche Plaques"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "gemischte Plaques"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Sonstiges:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "\u2014"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "thrombotische Auflagerungen"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Dissektion"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Pseudoaneurysma"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "ACC links:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "unauff\u00e4llig"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Stenose  < 50 %"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Stenose 50 \u2013 70%"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Pseudookklusion"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Okklusion"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Plaquemorphologie:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "\u2014"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Kalkplaques"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "weiche Plaques"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "gemischte Plaques"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Sonstiges:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "\u2014"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "thrombotische Auflagerungen"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Dissektion"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Pseudoaneurysma"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "ACI extrakraniell rechts:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "unauff\u00e4llig"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Stenose  < 50 %"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Stenose 50 \u2013 70%"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Pseudookklusion"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Okklusion"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Plaquemorphologie:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "\u2014"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Kalkplaques"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "weiche Plaques"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "gemischte Plaques"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Sonstiges:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "\u2014"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "thrombotische Auflagerungen"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Dissektion"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Pseudoaneurysma"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "ACI extrakraniell links:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "unauff\u00e4llig"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Stenose  < 50 %"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Stenose 50 \u2013 70%"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Pseudookklusion"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Okklusion"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Plaquemorphologie:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "\u2014"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Kalkplaques"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "weiche Plaques"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "gemischte Plaques"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Sonstiges:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "\u2014"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "thrombotische Auflagerungen"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Dissektion"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Pseudoaneurysma"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "ACI intrakraniell rechts:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "unauff\u00e4llig"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "nicht h\u00e4modynamisch relevante Stenosierung"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "h\u00e4modynamisch relevante Stenose > 70%"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Okklusion"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Plaquemorphologie:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "\u2014"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Kalkplaques"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "weiche Plaques"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "gemischte Plaques"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Sonstiges:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "\u2014"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "infraophthalmisches Aneurysma"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "supraophtalmisches Aneurysma"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Dissektion"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "ACI intrakraniell links:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "unauff\u00e4llig"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "nicht h\u00e4modynamisch relevante Stenosierung"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "h\u00e4modynamisch relevante Stenose > 70%"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Okklusion"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Plaquemorphologie:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "\u2014"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Kalkplaques"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "weiche Plaques"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "gemischte Plaques"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Sonstiges:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "\u2014"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "infraophthalmisches Aneurysma"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "supraophtalmisches Aneurysma"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Dissektion"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "M1/2 rechts:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "unauff\u00e4llig"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Okklusion"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "nicht h\u00e4modynamisch relevante Stenosierung"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "h\u00e4modynamisch relevante Stenose > 70%"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Aneurysma:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "ja"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Sonstiges:",
+              "type": "string"
+            },
+            {
+              "text": "M1/2 links:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "unauff\u00e4llig"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Okklusion"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "nicht h\u00e4modynamisch relevante Stenosierung"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "h\u00e4modynamisch relevante Stenose > 70%"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Aneurysma:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "ja"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Sonstiges:",
+              "type": "string"
+            },
+            {
+              "text": "A1/2 rechts:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "unauff\u00e4llig"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Okklusion"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "nicht h\u00e4modynamisch relevante Stenosierung"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "h\u00e4modynamisch relevante Stenose > 70%"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Aneurysma:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "ja"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Sonstiges:",
+              "type": "string"
+            },
+            {
+              "text": "A1/2 links:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "unauff\u00e4llig"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Okklusion"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "nicht h\u00e4modynamisch relevante Stenosierung"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "h\u00e4modynamisch relevante Stenose > 70%"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Aneurysma:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "ja"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Sonstiges:",
+              "type": "string"
+            },
+            {
+              "text": "Sonstiges:",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "text": "Hintere Zirkulation:",
+          "type": "group",
+          "item": [
+            {
+              "text": "VA rechts:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "unauff\u00e4llig"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "hypoplastisch"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "nicht h\u00e4modynamisch relevante Stenosierung"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "h\u00e4modynamisch relevante Stenose > 70%"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Okklusion"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Plaquemorphologie:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "\u2014"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Kalkplaques"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "weiche Plaques"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "gemischte Plaques"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Sonstiges:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "\u2014"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Dissektion"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Pseudoaneurysma"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Aneurysma"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "VA links:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "unauff\u00e4llig"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "hypoplastisch"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "nicht h\u00e4modynamisch relevante Stenosierung"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "h\u00e4modynamisch relevante Stenose > 70%"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Okklusion"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Plaquemorphologie:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "\u2014"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Kalkplaques"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "weiche Plaques"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "gemischte Plaques"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Sonstiges:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "\u2014"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Dissektion"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Pseudoaneurysma"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Aneurysma"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "BA:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "unauff\u00e4llig"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "nicht h\u00e4modynamisch relevante Stenosierung"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "h\u00e4modynamisch relevante Stenose > 70%"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Okklusion"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Plaquemorphologie:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "\u2014"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Kalkplaques"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "weiche Plaques"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "gemischte Plaques"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Aneurysma:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "ja"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Sonstiges:",
+              "type": "string"
+            },
+            {
+              "text": "P1/2 rechts:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "unauff\u00e4llig"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "nicht h\u00e4modynamisch relevante Stenosierung"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "h\u00e4modynamisch relevante Stenose > 70%"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Okklusion"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Aneurysma:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "ja"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Embryonaler Abgang aus ACI:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "ja"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "P1/2 links:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "unauff\u00e4llig"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "nicht h\u00e4modynamisch relevante Stenosierung"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "h\u00e4modynamisch relevante Stenose > 70%"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Okklusion"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Aneurysma:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "ja"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Embryonaler Abgang aus ACI:",
+              "type": "choice",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "ja"
+                  }
+                }
+              ]
+            },
+            {
+              "text": "Sonstiges:",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "text": "Nebenbefunde:",
+          "type": "group",
+          "item": [
+            {
+              "text": "Kn\u00f6cherner Status:",
+              "type": "string",
+              "initial": [
+                {
+                  "valueString": "Altersgem\u00e4\u00df unauff\u00e4llig"
+                }
+              ]
+            },
+            {
+              "text": "Halsweichteile:",
+              "type": "string",
+              "initial": [
+                {
+                  "valueString": "Unauf\u00e4llig"
+                }
+              ]
+            },
+            {
+              "text": "Obere Thoraxapertur:",
+              "type": "string",
+              "initial": [
+                {
+                  "valueString": "Unauf\u00e4llig"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Beurteilung:",
+      "type": "string",
+      "initial": [
+        {
+          "valueString": "Keine h\u00e4modynamisch relevante Stenose der hirnversorgenden extra- und intrakraniellen Arterien."
+        }
+      ]
+    }
+  ]
+}

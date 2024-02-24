@@ -1,0 +1,372 @@
+{
+  "resourceType": "Questionnaire",
+  "title": "CR H\u00fcftendoprothetik",
+  "item": [
+    {
+      "text": "Klinische Angaben",
+      "type": "string"
+    },
+    {
+      "text": "Klinische Fragestellung",
+      "type": "string"
+    },
+    {
+      "text": "Befund",
+      "type": "group",
+      "item": [
+        {
+          "text": "Bildqualit\u00e4t:",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "gut"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "ausreichend"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "eingeschr\u00e4nkt"
+              }
+            }
+          ]
+        },
+        {
+          "text": "",
+          "type": "string"
+        },
+        {
+          "text": "Beurteiltes H\u00fcftgelenk:",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "rechts"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "links"
+              }
+            }
+          ]
+        },
+        {
+          "text": "Gelenkstellung:",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "\u2014"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "regelrecht"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "gering inkongruent (varisch)"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "mittelgradig inkongruent (varisch)"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "ausgepr\u00e4gt inkongruent (varisch)"
+              }
+            }
+          ]
+        },
+        {
+          "text": "",
+          "type": "string"
+        },
+        {
+          "text": "Subchondrale Sklerosierung:",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "\u2014"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "keine"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "gering"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "mittelgradig"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "ausgepr\u00e4gt"
+              }
+            }
+          ]
+        },
+        {
+          "text": "",
+          "type": "string"
+        },
+        {
+          "text": "Artikul\u00e4re Osteophyten:",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "\u2014"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "keine"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "gering"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "mittelgradig"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "ausgepr\u00e4gt"
+              }
+            }
+          ]
+        },
+        {
+          "text": "",
+          "type": "string"
+        },
+        {
+          "text": "Subchondrale Sklerosierung:",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "\u2014"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "keine"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "gering"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "mittelgradig"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "ausgepr\u00e4gt"
+              }
+            }
+          ]
+        },
+        {
+          "text": "",
+          "type": "string"
+        },
+        {
+          "text": "Spongiosa (zystische Deformierungen in Gelenkpfanne und H\u00fcftkopf):",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "\u2014"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "keine"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "gering"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "mittelgradig"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "ausgepr\u00e4gt"
+              }
+            }
+          ]
+        },
+        {
+          "text": "",
+          "type": "string"
+        },
+        {
+          "text": "Beckenarchitektur (Dysplasien):",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "\u2014"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "nein"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "ja"
+              }
+            }
+          ]
+        },
+        {
+          "text": "",
+          "type": "string"
+        },
+        {
+          "text": "Paraartikul\u00e4re Weichteile (Kalzifikationen):",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "\u2014"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "keine"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "vereinzelt"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "ankylosierend"
+              }
+            }
+          ]
+        },
+        {
+          "text": "",
+          "type": "string"
+        },
+        {
+          "text": "Sonstiges:",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "text": "Beurteilung",
+      "type": "group",
+      "item": [
+        {
+          "text": "Coxarthrose:",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "\u2014"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "keine"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "dysplastisch"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "degenerativ"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "posttraumatisch"
+              }
+            }
+          ]
+        },
+        {
+          "text": "Kellgren-Score:",
+          "type": "choice",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "\u2014"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "0"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "1"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "2"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "3"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "4"
+              }
+            }
+          ]
+        },
+        {
+          "text": "Sonstiges:",
+          "type": "string"
+        }
+      ]
+    }
+  ]
+}
