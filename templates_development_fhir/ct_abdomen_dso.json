@@ -1,0 +1,2090 @@
+{
+  "resourceType": "Questionnaire",
+  "title": "DSO - CT Abdomen",
+  "status": "draft",
+  "description": "Befundung entsprechen DSO Leitfaden (https://dso.de/organspende/fachinformationen/organspendeprozess/leitfaden-für-die-organspende/materialien)",
+  "item": [
+    {
+      "type": "group",
+      "linkId": "9988413087691",
+      "text": "Leber",
+      "item": [
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "5751969053281",
+          "text": "Parenchym",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "unauffällig"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "leicht dichtegemindert"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "deutlich dichtegemindert"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Zirrhose"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "n.b."
+              }
+            }
+          ]
+        },
+        {
+          "type": "quantity",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+              "valueCoding": {
+                "system": "http://unitsofmeasure.org",
+                "code": "cm",
+                "display": "centimeter"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+              "valueCoding": {
+                "system": "http://unitsofmeasure.org",
+                "code": "mm",
+                "display": "millimeter"
+              }
+            }
+          ],
+          "linkId": "3544020325179",
+          "text": "Größe MCL",
+          "initial": [
+            {
+              "valueQuantity": {
+                "unit": "centimeter",
+                "system": "http://unitsofmeasure.org",
+                "code": "cm"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "5044826921775",
+          "text": "falls Größe nicht messbar",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "normal"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "klein"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "groß"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "vergrößert"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "n.b."
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "8986183714211",
+          "text": "Raumforderungen",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "nein"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "ja"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "n.b."
+              }
+            }
+          ]
+        },
+        {
+          "item": [
+            {
+              "type": "string",
+              "linkId": "3105514194112",
+              "text": "Segment"
+            },
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "drop-down",
+                        "display": "Drop down"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "3175400053212",
+              "text": "Art",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "Tumor"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Abszess"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Angiom"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Kontusion"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Hämatom"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Zyste"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "n.b."
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "linkId": "1379151303544",
+              "text": "Details"
+            }
+          ],
+          "type": "group",
+          "linkId": "4614032994099",
+          "text": "Raumforderung",
+          "enableWhen": [
+            {
+              "question": "8986183714211",
+              "operator": "=",
+              "answerCoding": {
+                "display": "ja"
+              }
+            }
+          ],
+          "enableBehavior": "all",
+          "repeats": true
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "7337467129526",
+          "text": "Leberrand",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "scharf"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "abgerundet"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "n.b."
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "9913015482241",
+          "text": "Gallengänge intrahepatisch",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "normal"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "dilatiert"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "n.b."
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "5046790824687",
+          "text": "Gallengänge extrahepatisch",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "normal"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "dilatiert"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Choledocholithiasis"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "n.b."
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "9397810160425",
+          "text": "Pfortader",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "offen"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Thrombose"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "n.b."
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "6018444863864",
+          "text": "Vena cava",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "normal"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "auffällig"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Hypovolämie"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Hypervolämie"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "n.b."
+              }
+            }
+          ]
+        },
+        {
+          "type": "string",
+          "linkId": "1088250164070",
+          "text": "Bemerkung"
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "linkId": "4383599405580",
+      "text": "Gallenblase",
+      "item": [
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down",
+                    "display": "Drop down"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "7985323763653",
+          "text": "Beurteilung",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "unauffällig"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Z.n. Cholezystektomie"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Cholezystolithiasis"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Cholezystitis"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Empyem"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "n.b."
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "7631639585834",
+          "text": "Raumforderungen",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "nein"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "ja"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "n.b."
+              }
+            }
+          ]
+        },
+        {
+          "item": [
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "drop-down",
+                        "display": "Drop down"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "473409255686",
+              "text": "Art",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "Tumor"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Abszess"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Zyste"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "n.b."
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "linkId": "8600477755211",
+              "text": "Details"
+            }
+          ],
+          "type": "group",
+          "linkId": "2138389303290",
+          "text": "Raumforderung",
+          "enableWhen": [
+            {
+              "question": "7631639585834",
+              "operator": "=",
+              "answerCoding": {
+                "display": "ja"
+              }
+            }
+          ],
+          "enableBehavior": "all",
+          "repeats": true
+        }
+      ]
+    },
+    {
+      "item": [
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "5014655224020",
+          "text": "Parenchym",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "unauffällig"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Lipomatosis"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Ödem"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Fibrose"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "n.b."
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "4340409624068",
+          "text": "Verkalkung",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "nein"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "ja"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "n.b."
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "3121776091685",
+          "text": "Pankreatitis",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "nein"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "ja"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "n.b."
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "2028914231580",
+          "text": "Raumforderungen",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "nein"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "ja"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "n.b."
+              }
+            }
+          ]
+        },
+        {
+          "item": [
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "radio-button",
+                        "display": "Radio Button"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "6024014294727",
+              "text": "Lokalisation",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "Kopf"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Korpus"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Schwanz"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "drop-down",
+                        "display": "Drop down"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "8320950428978",
+              "text": "Art",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "Tumor"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Abszess"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Angiom"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Kontusion"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Hämatom"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Zyste"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "n.b."
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "linkId": "8411508662110",
+              "text": "Details"
+            }
+          ],
+          "type": "group",
+          "linkId": "4907048713796",
+          "text": "Raumforderung",
+          "enableWhen": [
+            {
+              "question": "2028914231580",
+              "operator": "=",
+              "answerCoding": {
+                "display": "ja"
+              }
+            }
+          ],
+          "repeats": true
+        },
+        {
+          "type": "string",
+          "linkId": "399400742395",
+          "text": "Bemerkungen"
+        }
+      ],
+      "type": "group",
+      "linkId": "9058225293703",
+      "text": "Pankreas"
+    },
+    {
+      "type": "group",
+      "linkId": "2978590554328",
+      "text": "Milz",
+      "item": [
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "9441240849792",
+          "text": "Beurteilung",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "unauffällig"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "pathologisch"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "n.b."
+              }
+            }
+          ]
+        },
+        {
+          "type": "quantity",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+              "valueCoding": {
+                "system": "http://unitsofmeasure.org",
+                "code": "cm",
+                "display": "centimeter"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+              "valueCoding": {
+                "system": "http://unitsofmeasure.org",
+                "code": "mm",
+                "display": "millimeter"
+              }
+            }
+          ],
+          "linkId": "2292765226247",
+          "text": "Splenomegalie",
+          "enableWhen": [
+            {
+              "question": "9441240849792",
+              "operator": "=",
+              "answerCoding": {
+                "display": "pathologisch"
+              }
+            }
+          ],
+          "enableBehavior": "all",
+          "initial": [
+            {
+              "valueQuantity": {
+                "unit": "centimeter",
+                "system": "http://unitsofmeasure.org",
+                "code": "cm"
+              }
+            }
+          ]
+        },
+        {
+          "type": "quantity",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+              "valueCoding": {
+                "system": "http://unitsofmeasure.org",
+                "code": "cm",
+                "display": "centimeter"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+              "valueCoding": {
+                "system": "http://unitsofmeasure.org",
+                "code": "mm",
+                "display": "millimeter"
+              }
+            }
+          ],
+          "linkId": "2048997057655",
+          "text": "Hämatom",
+          "enableWhen": [
+            {
+              "question": "9441240849792",
+              "operator": "=",
+              "answerCoding": {
+                "display": "pathologisch"
+              }
+            }
+          ],
+          "enableBehavior": "all",
+          "initial": [
+            {
+              "valueQuantity": {
+                "unit": "centimeter",
+                "system": "http://unitsofmeasure.org",
+                "code": "cm"
+              }
+            }
+          ]
+        },
+        {
+          "type": "quantity",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+              "valueCoding": {
+                "system": "http://unitsofmeasure.org",
+                "code": "cm",
+                "display": "centimeter"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+              "valueCoding": {
+                "system": "http://unitsofmeasure.org",
+                "code": "mm",
+                "display": "millimeter"
+              }
+            }
+          ],
+          "linkId": "654912828545",
+          "text": "Flüssigkeitssaum",
+          "enableWhen": [
+            {
+              "question": "9441240849792",
+              "operator": "=",
+              "answerCoding": {
+                "display": "pathologisch"
+              }
+            }
+          ],
+          "enableBehavior": "all",
+          "initial": [
+            {
+              "valueQuantity": {
+                "unit": "cm"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item": [
+        {
+          "type": "quantity",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+              "valueCoding": {
+                "system": "http://unitsofmeasure.org",
+                "code": "cm",
+                "display": "centimeter"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+              "valueCoding": {
+                "system": "http://unitsofmeasure.org",
+                "code": "mm",
+                "display": "millimeter"
+              }
+            }
+          ],
+          "linkId": "1357089168271",
+          "text": "Längsdurchmesser",
+          "initial": [
+            {
+              "valueQuantity": {
+                "unit": "centimeter",
+                "system": "http://unitsofmeasure.org",
+                "code": "cm"
+              }
+            }
+          ]
+        },
+        {
+          "type": "quantity",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+              "valueCoding": {
+                "system": "http://unitsofmeasure.org",
+                "code": "cm",
+                "display": "centimeter"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+              "valueCoding": {
+                "system": "http://unitsofmeasure.org",
+                "code": "mm",
+                "display": "millimeter"
+              }
+            }
+          ],
+          "linkId": "6855038381243",
+          "text": "Querdurchmesser",
+          "initial": [
+            {
+              "valueQuantity": {
+                "unit": "centimeter",
+                "system": "http://unitsofmeasure.org",
+                "code": "cm"
+              }
+            }
+          ]
+        },
+        {
+          "type": "quantity",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+              "valueCoding": {
+                "system": "http://unitsofmeasure.org",
+                "code": "cm",
+                "display": "centimeter"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+              "valueCoding": {
+                "system": "http://unitsofmeasure.org",
+                "code": "mm",
+                "display": "millimeter"
+              }
+            }
+          ],
+          "linkId": "2525027899396",
+          "text": "Parenchymsaum",
+          "initial": [
+            {
+              "valueQuantity": {
+                "unit": "centimeter",
+                "system": "http://unitsofmeasure.org",
+                "code": "cm"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "1195244951056",
+          "text": "Parenchym",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "unauffällig"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "reduziert"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "atrophisch"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Z.n. Nephrektomie"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "n.b."
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "9496251597560",
+          "text": "Nephrolithiasis",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "nein"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "ja"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "n.b."
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "2759579211565",
+          "text": "Harnstau",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "nein"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "ja"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "n.b."
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "4894528046933",
+          "text": "Raumforderungen",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "nein"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "ja"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "n.b."
+              }
+            }
+          ]
+        },
+        {
+          "item": [
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "drop-down",
+                        "display": "Drop down"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "3164129978183",
+              "text": "Lokalisation",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "oberer Pol"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "mittig"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "unterer Pol"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "drop-down",
+                        "display": "Drop down"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "5625162145951",
+              "text": "Art",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "Tumor"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Abszess"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Angiom"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Kontusion"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Hämatom"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Zyste"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "n.b."
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "linkId": "9388265453398",
+              "text": "Details"
+            }
+          ],
+          "type": "group",
+          "linkId": "5207753044921",
+          "text": "Raumforderung",
+          "enableWhen": [
+            {
+              "question": "4894528046933",
+              "operator": "=",
+              "answerCoding": {
+                "display": "ja"
+              }
+            }
+          ],
+          "enableBehavior": "all",
+          "repeats": true
+        },
+        {
+          "type": "string",
+          "linkId": "506463277937",
+          "text": "Bemerkung"
+        }
+      ],
+      "type": "group",
+      "linkId": "4155549516405",
+      "text": "Niere (rechts)"
+    },
+    {
+      "type": "group",
+      "linkId": "1392504319505",
+      "text": "Niere (links)",
+      "item": [
+        {
+          "type": "quantity",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+              "valueCoding": {
+                "system": "http://unitsofmeasure.org",
+                "code": "cm",
+                "display": "centimeter"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+              "valueCoding": {
+                "system": "http://unitsofmeasure.org",
+                "code": "mm",
+                "display": "millimeter"
+              }
+            }
+          ],
+          "linkId": "6668625707625",
+          "text": "Längsdurchmesser",
+          "initial": [
+            {
+              "valueQuantity": {
+                "unit": "centimeter",
+                "system": "http://unitsofmeasure.org",
+                "code": "cm"
+              }
+            }
+          ]
+        },
+        {
+          "type": "quantity",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+              "valueCoding": {
+                "system": "http://unitsofmeasure.org",
+                "code": "cm",
+                "display": "centimeter"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+              "valueCoding": {
+                "system": "http://unitsofmeasure.org",
+                "code": "mm",
+                "display": "millimeter"
+              }
+            }
+          ],
+          "linkId": "846045362378",
+          "text": "Querdurchmesser",
+          "initial": [
+            {
+              "valueQuantity": {
+                "unit": "centimeter",
+                "system": "http://unitsofmeasure.org",
+                "code": "cm"
+              }
+            }
+          ]
+        },
+        {
+          "type": "quantity",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+              "valueCoding": {
+                "system": "http://unitsofmeasure.org",
+                "code": "cm",
+                "display": "centimeter"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+              "valueCoding": {
+                "system": "http://unitsofmeasure.org",
+                "code": "mm",
+                "display": "millimeter"
+              }
+            }
+          ],
+          "linkId": "9220018528719",
+          "text": "Parenchymsaum",
+          "initial": [
+            {
+              "valueQuantity": {
+                "unit": "centimeter",
+                "system": "http://unitsofmeasure.org",
+                "code": "cm"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "6098669671323",
+          "text": "Parenchym",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "unauffällig"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "reduziert"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "atrophisch"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Z.n. Nephrektomie"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "n.b."
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "1618289593500",
+          "text": "Nephrolithiasis",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "nein"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "ja"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "n.b."
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "4311020839608",
+          "text": "Harnstau",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "nein"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "ja"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "n.b."
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "6022324242080",
+          "text": "Raumforderungen",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "nein"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "ja"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "n.b."
+              }
+            }
+          ]
+        },
+        {
+          "item": [
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "drop-down",
+                        "display": "Drop down"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "7206321061646",
+              "text": "Lokalisation",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "oberer Pol"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "mittig"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "unterer Pol"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "choice",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "drop-down",
+                        "display": "Drop down"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "1481628195613",
+              "text": "Art",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "display": "Tumor"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Abszess"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Angiom"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Kontusion"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Hämatom"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "Zyste"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "display": "n.b."
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "linkId": "5503554770229",
+              "text": "Details"
+            }
+          ],
+          "type": "group",
+          "linkId": "6147210424548",
+          "text": "Raumforderung",
+          "enableWhen": [
+            {
+              "question": "6022324242080",
+              "operator": "=",
+              "answerCoding": {
+                "display": "ja"
+              }
+            }
+          ],
+          "repeats": true
+        },
+        {
+          "type": "string",
+          "linkId": "3317230234699",
+          "text": "Bemerkung"
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "linkId": "798041014270",
+      "text": "Freie Flüssigkeit",
+      "item": [
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "7138960657896",
+          "text": "Beurteilung",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "keine"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "minimal"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "ausgeprägt"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "n.b."
+              }
+            }
+          ]
+        },
+        {
+          "type": "string",
+          "linkId": "3028628904246",
+          "text": "Menge / Verteilung"
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "linkId": "4532260120530",
+      "text": "Aorta",
+      "item": [
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "5267575802377",
+          "text": "Beurteilung",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "unauffällig"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "einzelne Plaques"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "schwere Arteriosklerose"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Aneurysma"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "Stenose"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "n.b."
+              }
+            }
+          ]
+        },
+        {
+          "type": "quantity",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+              "valueCoding": {
+                "system": "http://unitsofmeasure.org",
+                "code": "cm",
+                "display": "centimeter"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+              "valueCoding": {
+                "system": "http://unitsofmeasure.org",
+                "code": "mm",
+                "display": "millimeter"
+              }
+            }
+          ],
+          "linkId": "5384177717132",
+          "text": "Diameter",
+          "initial": [
+            {
+              "valueQuantity": {
+                "unit": "centimeter",
+                "system": "http://unitsofmeasure.org",
+                "code": "cm"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "3408823635859",
+          "text": "Lymphknoten paraaortal vergrößert",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "nein"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "ja"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "n.b."
+              }
+            }
+          ]
+        },
+        {
+          "type": "quantity",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+              "valueCoding": {
+                "system": "http://unitsofmeasure.org",
+                "code": "cm",
+                "display": "centimeter"
+              }
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+              "valueCoding": {
+                "system": "http://unitsofmeasure.org",
+                "code": "mm",
+                "display": "millimeter"
+              }
+            }
+          ],
+          "linkId": "2808454437419",
+          "text": "Größe Lymphknoten paraaortal",
+          "enableWhen": [
+            {
+              "question": "3408823635859",
+              "operator": "=",
+              "answerCoding": {
+                "display": "ja"
+              }
+            }
+          ],
+          "initial": [
+            {
+              "valueQuantity": {
+                "unit": "centimeter",
+                "system": "http://unitsofmeasure.org",
+                "code": "cm"
+              }
+            }
+          ]
+        },
+        {
+          "type": "string",
+          "linkId": "1156973339347",
+          "text": "Bemerkung"
+        }
+      ]
+    },
+    {
+      "item": [
+        {
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "2981455277308",
+          "text": "Beurteilung",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "display": "unauffällig"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "pathologisch"
+              }
+            },
+            {
+              "valueCoding": {
+                "display": "n.b."
+              }
+            }
+          ]
+        },
+        {
+          "type": "string",
+          "linkId": "6250070299734",
+          "text": "Bemerkung"
+        }
+      ],
+      "type": "group",
+      "linkId": "7962264143270",
+      "text": "Kleines Becken"
+    }
+  ]
+}
